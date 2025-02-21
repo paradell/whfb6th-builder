@@ -161,6 +161,22 @@ export const NewList = ({ isMobile }) => {
                   <>
                     <span className="new-list__game-name">{name}</span>
                     <p className="new-list__beta">
+                      <FormattedMessage id="new.8th" />
+                    </p>
+                  </>
+                )}
+                {id === "warhammer-fantasy-6th" && (
+                  <>
+                    <span className="new-list__game-name">{name}</span>
+                    <p className="new-list__beta">
+                      <FormattedMessage id="new.6th" />
+                    </p>
+                  </>
+                )}
+                {id === "warhammer-fantasy-mdn" && (
+                  <>
+                    <span className="new-list__game-name">{name}</span>
+                    <p className="new-list__beta">
                       <FormattedMessage id="new.mdn" />
                     </p>
                   </>
