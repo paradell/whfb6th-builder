@@ -35,3 +35,4 @@ yarn-error.log*
 
 # Lock files
 .lock
+package-lock.json
