@@ -8,11 +8,7 @@ import "./Entity.css";
 
 const initialUnitState = {
   name_en: "",
-  name_de: "",
   name_es: "",
-  name_fr: "",
-  name_it: "",
-  name_pl: "",
   id: "",
   points: 1,
   minimum: 0,
@@ -28,19 +24,11 @@ const initialUnitState = {
   lores: [],
   specialRules: {
     name_en: "",
-    name_de: "",
     name_es: "",
-    name_fr: "",
-    name_it: "",
-    name_pl: "",
   },
   notes: {
     name_en: "",
-    name_de: "",
     name_es: "",
-    name_fr: "",
-    name_it: "",
-    name_pl: "",
   },
 };
 const magicItemTypes = [
@@ -131,11 +119,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       ...unit,
       [key]: {
         ...unit[key],
-        name_de: !unit[key].name_de ? value : unit[key].name_de,
         name_es: !unit[key].name_es ? value : unit[key].name_es,
-        name_fr: !unit[key].name_fr ? value : unit[key].name_fr,
-        name_it: !unit[key].name_it ? value : unit[key].name_it,
-        name_pl: !unit[key].name_pl ? value : unit[key].name_pl,
       },
     });
   };
@@ -166,11 +150,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       id: isNew
         ? unit.name_en.toLowerCase().replace(/ /g, "-").replace(/,/g, "")
         : unit.id,
-      name_de: !unit.name_de ? unit.name_en : unit.name_de,
       name_es: !unit.name_es ? unit.name_en : unit.name_es,
-      name_fr: !unit.name_fr ? unit.name_en : unit.name_fr,
-      name_it: !unit.name_it ? unit.name_en : unit.name_it,
-      name_pl: !unit.name_pl ? unit.name_en : unit.name_pl,
     });
   };
   const handleSecondLevelFieldChange = ({ key, field, value, index }) => {
@@ -200,11 +180,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       if (entryIndex === index) {
         return {
           ...entry,
-          name_de: !entry.name_de ? value : entry.name_de,
           name_es: !entry.name_es ? value : entry.name_es,
-          name_fr: !entry.name_fr ? value : entry.name_fr,
-          name_it: !entry.name_it ? value : entry.name_it,
-          name_pl: !entry.name_pl ? value : entry.name_pl,
         };
       }
       return entry;
@@ -282,11 +258,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         ...unit.command,
         {
           name_en: "",
-          name_de: "",
           name_es: "",
-          name_fr: "",
-          name_it: "",
-          name_pl: "",
           points: 1,
           magic: {
             types: [],
@@ -303,11 +275,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         ...unit.equipment,
         {
           name_en: "",
-          name_de: "",
           name_es: "",
-          name_fr: "",
-          name_it: "",
-          name_pl: "",
           points: 1,
           perModel: true,
           active: false,
@@ -322,11 +290,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         ...unit.armor,
         {
           name_en: "",
-          name_de: "",
           name_es: "",
-          name_fr: "",
-          name_it: "",
-          name_pl: "",
           points: 1,
           perModel: true,
           active: false,
@@ -341,11 +305,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         ...unit.options,
         {
           name_en: "",
-          name_de: "",
           name_es: "",
-          name_fr: "",
-          name_it: "",
-          name_pl: "",
           points: 1,
           perModel: true,
           stackable: false,
@@ -362,11 +322,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         ...unit.mounts,
         {
           name_en: "",
-          name_de: "",
           name_es: "",
-          name_fr: "",
-          name_it: "",
-          name_pl: "",
           points: 1,
           active: false,
         },
@@ -380,11 +336,7 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         ...unit.items,
         {
           name_en: "Magic Items",
-          name_de: "Magische Gegenstände",
           name_es: "Objetos mágicos",
-          name_fr: "Objets magiques",
-          name_it: "Oggetti magici",
-          name_pl: "Magiczne przedmioty",
           types: [],
           selected: [],
           maxPoints: 0,
@@ -412,52 +364,12 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
         required
         onBlur={handleNameBlur}
       />
-      <label htmlFor={`name_de-${randomId}`}>Name German</label>
-      <input
-        type="text"
-        id={`name_de-${randomId}`}
-        className="input"
-        value={unit.name_de}
-        onChange={handleFieldChange}
-        autoComplete="off"
-        required
-      />
       <label htmlFor={`name_es-${randomId}`}>Name Spanish</label>
       <input
         type="text"
         id={`name_es-${randomId}`}
         className="input"
         value={unit.name_es}
-        onChange={handleFieldChange}
-        autoComplete="off"
-        required
-      />
-      <label htmlFor={`name_fr-${randomId}`}>Name French</label>
-      <input
-        type="text"
-        id={`name_fr-${randomId}`}
-        className="input"
-        value={unit.name_fr}
-        onChange={handleFieldChange}
-        autoComplete="off"
-        required
-      />
-      <label htmlFor={`name_it-${randomId}`}>Name Italian</label>
-      <input
-        type="text"
-        id={`name_it-${randomId}`}
-        className="input"
-        value={unit.name_it}
-        onChange={handleFieldChange}
-        autoComplete="off"
-        required
-      />
-      <label htmlFor={`name_pl-${randomId}`}>Name Polish</label>
-      <input
-        type="text"
-        id={`name_pl-${randomId}`}
-        className="input"
-        value={unit.name_pl}
         onChange={handleFieldChange}
         autoComplete="off"
         required
@@ -599,22 +511,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           placeholder="e.g. Stubborn, Regiment, etc."
           autoComplete="off"
         />
-        <label htmlFor={`specialRules-de-${randomId}`}>German</label>
-        <input
-          type="text"
-          id={`specialRules-de-${randomId}`}
-          className="input"
-          value={unit.specialRules?.name_de}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_de",
-              key: "specialRules",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. Stubborn, Regiment, etc."
-          autoComplete="off"
-        />
         <label htmlFor={`specialRules-es-${randomId}`}>Spanish</label>
         <input
           type="text"
@@ -624,54 +520,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           onChange={(event) =>
             handleSpecialRulesChange({
               field: "name_es",
-              key: "specialRules",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. Stubborn, Regiment, etc."
-          autoComplete="off"
-        />
-        <label htmlFor={`specialRules-fr-${randomId}`}>French</label>
-        <input
-          type="text"
-          id={`specialRules-fr-${randomId}`}
-          className="input"
-          value={unit.specialRules?.name_fr}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_fr",
-              key: "specialRules",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. Stubborn, Regiment, etc."
-          autoComplete="off"
-        />
-        <label htmlFor={`specialRules-it-${randomId}`}>Italian</label>
-        <input
-          type="text"
-          id={`specialRules-it-${randomId}`}
-          className="input"
-          value={unit.specialRules?.name_it}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_it",
-              key: "specialRules",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. Stubborn, Regiment, etc."
-          autoComplete="off"
-        />
-        <label htmlFor={`specialRules-pl-${randomId}`}>Polish</label>
-        <input
-          type="text"
-          id={`specialRules-pl-${randomId}`}
-          className="input"
-          value={unit.specialRules?.name_pl}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_pl",
               key: "specialRules",
               value: event.target.value,
             })
@@ -703,22 +551,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           placeholder="e.g. '0-1 per 1000 points'"
           autoComplete="off"
         />
-        <label htmlFor={`notes-de-${randomId}`}>German</label>
-        <input
-          type="text"
-          id={`notes-de-${randomId}`}
-          className="input"
-          value={unit.notes?.name_de}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_de",
-              key: "notes",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. '0-1 per 1000 points'"
-          autoComplete="off"
-        />
         <label htmlFor={`notes-es-${randomId}`}>Spanish</label>
         <input
           type="text"
@@ -728,54 +560,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
           onChange={(event) =>
             handleSpecialRulesChange({
               field: "name_es",
-              key: "notes",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. '0-1 per 1000 points'"
-          autoComplete="off"
-        />
-        <label htmlFor={`notes-fr-${randomId}`}>French</label>
-        <input
-          type="text"
-          id={`notes-fr-${randomId}`}
-          className="input"
-          value={unit.notes?.name_fr}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_fr",
-              key: "notes",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. '0-1 per 1000 points'"
-          autoComplete="off"
-        />
-        <label htmlFor={`notes-it-${randomId}`}>Italian</label>
-        <input
-          type="text"
-          id={`notes-it-${randomId}`}
-          className="input"
-          value={unit.notes?.name_it}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_it",
-              key: "notes",
-              value: event.target.value,
-            })
-          }
-          placeholder="e.g. '0-1 per 1000 points'"
-          autoComplete="off"
-        />
-        <label htmlFor={`notes-pl-${randomId}`}>Polish</label>
-        <input
-          type="text"
-          id={`notes-pl-${randomId}`}
-          className="input"
-          value={unit.notes?.name_pl}
-          onChange={(event) =>
-            handleSpecialRulesChange({
-              field: "name_pl",
               key: "notes",
               value: event.target.value,
             })
@@ -820,25 +604,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
-              <label htmlFor={`command-name_de${index}-${randomId}`}>
-                Name German
-              </label>
-              <input
-                type="text"
-                id={`command-name_de${index}-${randomId}`}
-                className="input"
-                value={command.name_de}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "command",
-                    field: "name_de",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-                required
-              />
               <label htmlFor={`command-name_es${index}-${randomId}`}>
                 Name Spanish
               </label>
@@ -852,60 +617,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                     index,
                     key: "command",
                     field: "name_es",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`command-name_fr${index}-${randomId}`}>
-                Name French
-              </label>
-              <input
-                type="text"
-                id={`command-name_fr${index}-${randomId}`}
-                className="input"
-                value={command.name_fr}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "command",
-                    field: "name_fr",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`command-name_it${index}-${randomId}`}>
-                Name Italian
-              </label>
-              <input
-                type="text"
-                id={`command-name_it${index}-${randomId}`}
-                className="input"
-                value={command.name_it}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "command",
-                    field: "name_it",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`command-name_pl${index}-${randomId}`}>
-                Name Polish
-              </label>
-              <input
-                type="text"
-                id={`command-name_pl${index}-${randomId}`}
-                className="input"
-                value={command.name_pl}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "command",
-                    field: "name_pl",
                     value: event.target.value,
                   })
                 }
@@ -1032,25 +743,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`equipment-name_de${index}-${randomId}`}>
-            Name German
-          </label>
-          <input
-            type="text"
-            id={`equipment-name_de${index}-${randomId}`}
-            className="input"
-            value={equipment.name_de}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "equipment",
-                field: "name_de",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-            required
-          />
           <label htmlFor={`equipment-name_es${index}-${randomId}`}>
             Name Spanish
           </label>
@@ -1064,60 +756,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 index,
                 key: "equipment",
                 field: "name_es",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`equipment-name_fr${index}-${randomId}`}>
-            Name French
-          </label>
-          <input
-            type="text"
-            id={`equipment-name_fr${index}-${randomId}`}
-            className="input"
-            value={equipment.name_fr}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "equipment",
-                field: "name_fr",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`equipment-name_it${index}-${randomId}`}>
-            Name Italian
-          </label>
-          <input
-            type="text"
-            id={`equipment-name_it${index}-${randomId}`}
-            className="input"
-            value={equipment.name_it}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "equipment",
-                field: "name_it",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`equipment-name_pl${index}-${randomId}`}>
-            Name Polish
-          </label>
-          <input
-            type="text"
-            id={`equipment-name_pl${index}-${randomId}`}
-            className="input"
-            value={equipment.name_pl}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "equipment",
-                field: "name_pl",
                 value: event.target.value,
               })
             }
@@ -1248,25 +886,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`armor-name_de${index}-${randomId}`}>
-            Name German
-          </label>
-          <input
-            type="text"
-            id={`armor-name_de${index}-${randomId}`}
-            className="input"
-            value={armor.name_de}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "armor",
-                field: "name_de",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-            required
-          />
           <label htmlFor={`armor-name_es${index}-${randomId}`}>
             Name Spanish
           </label>
@@ -1280,60 +899,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 index,
                 key: "armor",
                 field: "name_es",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`armor-name_fr${index}-${randomId}`}>
-            Name French
-          </label>
-          <input
-            type="text"
-            id={`armor-name_fr${index}-${randomId}`}
-            className="input"
-            value={armor.name_fr}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "armor",
-                field: "name_fr",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`armor-name_it${index}-${randomId}`}>
-            Name Italian
-          </label>
-          <input
-            type="text"
-            id={`armor-name_it${index}-${randomId}`}
-            className="input"
-            value={armor.name_it}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "armor",
-                field: "name_it",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`armor-name_pl${index}-${randomId}`}>
-            Name Polish
-          </label>
-          <input
-            type="text"
-            id={`armor-name_pl${index}-${randomId}`}
-            className="input"
-            value={armor.name_pl}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "armor",
-                field: "name_pl",
                 value: event.target.value,
               })
             }
@@ -1462,25 +1027,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
             autoComplete="off"
             required
           />
-          <label htmlFor={`options-name_de${index}-${randomId}`}>
-            Name German
-          </label>
-          <input
-            type="text"
-            id={`options-name_de${index}-${randomId}`}
-            className="input"
-            value={option.name_de}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "options",
-                field: "name_de",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-            required
-          />
           <label htmlFor={`options-name_es${index}-${randomId}`}>
             Name Spanish
           </label>
@@ -1494,60 +1040,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 index,
                 key: "options",
                 field: "name_es",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`options-name_fr${index}-${randomId}`}>
-            Name French
-          </label>
-          <input
-            type="text"
-            id={`options-name_fr${index}-${randomId}`}
-            className="input"
-            value={option.name_fr}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "options",
-                field: "name_fr",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`options-name_it${index}-${randomId}`}>
-            Name Italian
-          </label>
-          <input
-            type="text"
-            id={`options-name_it${index}-${randomId}`}
-            className="input"
-            value={option.name_it}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "options",
-                field: "name_it",
-                value: event.target.value,
-              })
-            }
-            autoComplete="off"
-          />
-          <label htmlFor={`options-name_pl${index}-${randomId}`}>
-            Name Polish
-          </label>
-          <input
-            type="text"
-            id={`options-name_pl${index}-${randomId}`}
-            className="input"
-            value={option.name_pl}
-            onChange={(event) =>
-              handleSecondLevelFieldChange({
-                index,
-                key: "options",
-                field: "name_pl",
                 value: event.target.value,
               })
             }
@@ -1718,25 +1210,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
-              <label htmlFor={`mounts-name_de${index}-${randomId}`}>
-                Name German
-              </label>
-              <input
-                type="text"
-                id={`mounts-name_de${index}-${randomId}`}
-                className="input"
-                value={mount.name_de}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "mounts",
-                    field: "name_de",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-                required
-              />
               <label htmlFor={`mounts-name_es${index}-${randomId}`}>
                 Name Spanish
               </label>
@@ -1750,60 +1223,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                     index,
                     key: "mounts",
                     field: "name_es",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`mounts-name_fr${index}-${randomId}`}>
-                Name French
-              </label>
-              <input
-                type="text"
-                id={`mounts-name_fr${index}-${randomId}`}
-                className="input"
-                value={mount.name_fr}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "mounts",
-                    field: "name_fr",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`mounts-name_it${index}-${randomId}`}>
-                Name Italian
-              </label>
-              <input
-                type="text"
-                id={`mounts-name_it${index}-${randomId}`}
-                className="input"
-                value={mount.name_it}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "mounts",
-                    field: "name_it",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`mounts-name_pl${index}-${randomId}`}>
-                Name Polish
-              </label>
-              <input
-                type="text"
-                id={`mounts-name_pl${index}-${randomId}`}
-                className="input"
-                value={mount.name_pl}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index,
-                    key: "mounts",
-                    field: "name_pl",
                     value: event.target.value,
                   })
                 }
@@ -1906,25 +1325,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                 autoComplete="off"
                 required
               />
-              <label htmlFor={`magic-name_de-${itemIndex}-${randomId}`}>
-                Name German
-              </label>
-              <input
-                type="text"
-                id={`magic-name_de-${itemIndex}-${randomId}`}
-                className="input"
-                value={item.name_de}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index: itemIndex,
-                    key: "items",
-                    field: "name_de",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-                required
-              />
               <label htmlFor={`magic-name_es-${itemIndex}-${randomId}`}>
                 Name Spanish
               </label>
@@ -1938,60 +1338,6 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
                     index: itemIndex,
                     key: "items",
                     field: "name_es",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`magic-name_fr-${itemIndex}-${randomId}`}>
-                Name French
-              </label>
-              <input
-                type="text"
-                id={`magic-name_fr-${itemIndex}-${randomId}`}
-                className="input"
-                value={item.name_fr}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index: itemIndex,
-                    key: "items",
-                    field: "name_fr",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`magic-name_it-${itemIndex}-${randomId}`}>
-                Name Italian
-              </label>
-              <input
-                type="text"
-                id={`magic-name_it-${itemIndex}-${randomId}`}
-                className="input"
-                value={item.name_it}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index: itemIndex,
-                    key: "items",
-                    field: "name_it",
-                    value: event.target.value,
-                  })
-                }
-                autoComplete="off"
-              />
-              <label htmlFor={`magic-name_pl-${itemIndex}-${randomId}`}>
-                Name Polish
-              </label>
-              <input
-                type="text"
-                id={`magic-name_pl-${itemIndex}-${randomId}`}
-                className="input"
-                value={item.name_pl}
-                onChange={(event) =>
-                  handleSecondLevelFieldChange({
-                    index: itemIndex,
-                    key: "items",
-                    field: "name_pl",
                     value: event.target.value,
                   })
                 }
