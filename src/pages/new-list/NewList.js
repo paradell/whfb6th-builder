@@ -213,9 +213,7 @@ export const NewList = ({ isMobile }) => {
                   ...journalArmies.map((journalArmy) => ({
                     id: journalArmy,
                     name_en: nameMap[journalArmy].name_en,
-                    name_de: nameMap[journalArmy].name_de,
                     name_es: nameMap[journalArmy].name_es,
-                    name_fr: nameMap[journalArmy].name_fr,
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
