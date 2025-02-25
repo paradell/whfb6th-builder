@@ -58,16 +58,8 @@ document
   .setAttribute("content", metaDescription[language]);
 
 let messages;
-if (language === "de") {
-  messages = German;
-} else if (language === "es") {
+if (language === "es") {
   messages = Spanish;
-} else if (language === "fr") {
-  messages = French;
-} else if (language === "it") {
-  messages = Italian;
-} else if (language === "pl") {
-  messages = Polish;
 } else {
   messages = English;
 }

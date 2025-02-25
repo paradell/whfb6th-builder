@@ -6,12 +6,8 @@ import { FormattedMessage } from "react-intl";
 
 import { Spinner } from "../../components/spinner";
 import { useLanguage } from "../../utils/useLanguage";
-import germany from "../../assets/germany.svg";
 import usa from "../../assets/usa.svg";
 import spain from "../../assets/spain.svg";
-import france from "../../assets/france.svg";
-import italy from "../../assets/italy.svg";
-import polen from "../../assets/polen.svg";
 
 import "./Page.css";
 
