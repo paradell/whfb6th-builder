@@ -154,7 +154,7 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
-                disabled={id === "warhammer-fantasy"}
+                disabled={false}
               />
               <label htmlFor={id} className="radio__label">
                 {id === "warhammer-fantasy" && (

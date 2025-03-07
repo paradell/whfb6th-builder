@@ -1,14 +1,24 @@
 export const rules = {
   "grand-army": {
-    lords: { maxPercent: 25 },
-    heroes: { maxPercent: 25 },
-    characters: { maxPercent: 50 },
-    core: { minPercent: 25 },
+    lords: {
+      maxPercent: 25,
+      maxSlots: 1 },
+    heroes: {
+      maxPercent: 25,
+      maxSlots: 4 },
+    characters: {
+      maxPercent: 50,
+      maxSlots: 4 },
+    core: {
+      minPercent: 25,
+      minSlots: 3},
     special: {
       maxPercent: 50,
+      maxSlots: 4,
     },
     rare: {
       maxPercent: 25,
+      maxSlots: 2,
     },
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
@@ -1206,8 +1216,11 @@ export const rules = {
     },
   },
   "empire-of-man": {
+    lords: {maxSlots: 1},
+    heroes: {maxSlots: 4},
     characters: {
       maxPercent: 50,
+      maxSlots: 4,
       units: [
         {
           ids: ["general-of-the-empire", "grand-master"],
@@ -1225,6 +1238,7 @@ export const rules = {
     },
     core: {
       minPercent: 25,
+      minSlots: 3,
       units: [
         {
           ids: ["veteran-state-troops"],
@@ -1247,6 +1261,7 @@ export const rules = {
     },
     special: {
       maxPercent: 50,
+      maxSlots: 4,
       units: [
         {
           ids: [
@@ -1306,6 +1321,7 @@ export const rules = {
     },
     rare: {
       maxPercent: 25,
+      maxSlots: 2,
       units: [
         {
           ids: ["helblaster-volley-gun", "helstrom-rocket-battery"],
@@ -2779,5 +2795,43 @@ export const getMinPercentData = ({
     points: Math.floor(minPoints),
     overLimit: points <= minPoints,
     diff: points <= minPoints ? Math.ceil(minPoints - points) : 0,
+  };
+};
+
+export const getMinSlots = ({
+  type,
+  armyPoints,
+  slots,
+  armyComposition,
+}) => {
+  const minSlots = rules[armyComposition]
+    ? rules[armyComposition][type].minSlots
+    : rules["grand-army"][type].minSlots;
+
+  return {
+    points: Math.floor(armyPoints),
+    overLimit: slots <= minSlots,
+    diff: slots <= minSlots ? Math.ceil(minSlots - slots) : 0,
+    slots: slots,
+    minSlots: minSlots
+  };
+};
+
+export const getMaxSlots = ({
+  type,
+  armyPoints,
+  slots,
+  armyComposition,
+}) => {
+  const maxSlots = rules[armyComposition]
+    ? rules[armyComposition][type].maxSlots
+    : rules["grand-army"][type].maxSlots;
+
+  return {
+    points: Math.floor(armyPoints),
+    overLimit: slots <= maxSlots,
+    diff: slots > maxSlots ? Math.ceil(slots - maxSlots) : 0,
+    slots: slots,
+    maxSlots: maxSlots
   };
 };
