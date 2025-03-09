@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import { getMaxPercentData, getMinPercentData, getMinSlots, getMaxSlots } from "../../utils/rules";
+import { getMaxPercentData, getMinPercentData } from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -112,44 +112,44 @@ export const Editor = ({ isMobile }) => {
   const alliesPoints = getPoints({ list, type: "allies" });
   const lordsData =
     list.lords &&
-    getMaxSlots({
+    getMaxPercentData({
       type: "lords",
       armyPoints: list.points,
-      slots: list.lords.length,
+      points: lordsPoints,
       armyComposition,
     });
   const heroesData =
     list.lords &&
-    getMaxSlots({
+    getMaxPercentData({
       type: "heroes",
       armyPoints: list.points,
-      slots: list.heroes.length,
+      points: heroesPoints,
       armyComposition,
     });
   const charactersData =
     list.characters &&
-    getMaxSlots({
+    getMaxPercentData({
       type: "characters",
       armyPoints: list.points,
-      slots: list.characters.length,
+      points: charactersPoints,
       armyComposition,
     });
-  const coreData = getMinSlots({
+  const coreData = getMinPercentData({
     type: "core",
     armyPoints: list.points,
-    slots: list.core.length,
+    points: corePoints,
     armyComposition,
   });
-  const specialData = getMaxSlots({
+  const specialData = getMaxPercentData({
     type: "special",
     armyPoints: list.points,
-    slots: list.special.length,
+    points: specialPoints,
     armyComposition,
   });
-  const rareData = getMaxSlots({
+  const rareData = getMaxPercentData({
     type: "rare",
     armyPoints: list.points,
-    slots: list.rare.length,
+    points: rarePoints,
     armyComposition,
   });
   const mercenariesData =
@@ -314,125 +314,125 @@ export const Editor = ({ isMobile }) => {
           <section className="editor__section">
             <header className="editor__header">
               <h2>
-                <FormattedMessage id="editor.lords"/>
+                <FormattedMessage id="editor.lords" />
               </h2>
               <p className="editor__points">
                 {lordsData.diff > 0 ? (
-                    <>
-                      <strong>{lordsData.diff}</strong>
-                      <FormattedMessage id="editor.tooManySlots"/>
-                      <Icon symbol="error" color="red"/>
-                    </>
+                  <>
+                    <strong>{lordsData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
                 ) : (
-                    <>
-                      <strong>{lordsData.maxSlots - lordsData.slots}</strong>
-                      <FormattedMessage id="editor.availableSlots"/>
-                      <Icon symbol="check"/>
-                    </>
+                  <>
+                    <strong>{lordsData.points - lordsPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
                 )}
               </p>
             </header>
 
             <OrderableUnitList
-                units={list.lords}
-                type="lords"
-                listId={listId}
-                armyComposition={armyComposition}
+              units={list.lords}
+              type="lords"
+              listId={listId}
+              armyComposition={armyComposition}
             />
 
             <Button
-                type="primary"
-                centered
-                to={`/editor/${listId}/add/lords`}
-                icon="add"
-                spaceTop
+              type="primary"
+              centered
+              to={`/editor/${listId}/add/lords`}
+              icon="add"
+              spaceTop
             >
-              <FormattedMessage id="editor.add"/>
+              <FormattedMessage id="editor.add" />
             </Button>
           </section>
         )}
 
         {list.heroes && (
-            <section className="editor__section">
-              <header className="editor__header">
+          <section className="editor__section">
+            <header className="editor__header">
               <h2>
                 <FormattedMessage id="editor.heroes" />
               </h2>
               <p className="editor__points">
                 {heroesData.diff > 0 ? (
-                    <>
-                      <strong>{heroesData.diff}</strong>
-                      <FormattedMessage id="editor.tooManySlots"/>
-                      <Icon symbol="error" color="red"/>
-                    </>
+                  <>
+                    <strong>{heroesData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
                 ) : (
-                    <>
-                      <strong>{heroesData.maxSlots - heroesData.slots}</strong>
-                      <FormattedMessage id="editor.availableSlots"/>
-                      <Icon symbol="check"/>
-                    </>
+                  <>
+                    <strong>{heroesData.points - heroesPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
                 )}
               </p>
             </header>
 
             <OrderableUnitList
-                units={list.heroes}
-                type="heroes"
-                listId={listId}
-                armyComposition={armyComposition}
+              units={list.heroes}
+              type="heroes"
+              listId={listId}
+              armyComposition={armyComposition}
             />
 
             <Button
-                type="primary"
-                centered
-                to={`/editor/${listId}/add/heroes`}
-                icon="add"
-                spaceTop
+              type="primary"
+              centered
+              to={`/editor/${listId}/add/heroes`}
+              icon="add"
+              spaceTop
             >
-              <FormattedMessage id="editor.add"/>
+              <FormattedMessage id="editor.add" />
             </Button>
           </section>
         )}
 
         {list.characters && (
-            <section className="editor__section">
-              <header className="editor__header">
+          <section className="editor__section">
+            <header className="editor__header">
               <h2>
-                <FormattedMessage id="editor.characters"/>
+                <FormattedMessage id="editor.characters" />
               </h2>
               <p className="editor__points">
                 {charactersData.diff > 0 ? (
-                    <>
-                      <strong>{charactersData.diff}</strong>
-                      <FormattedMessage id="editor.tooManySlots"/>
-                      <Icon symbol="error" color="red"/>
-                    </>
+                  <>
+                    <strong>{charactersData.diff}</strong>
+                    <FormattedMessage id="editor.tooManyPoints" />
+                    <Icon symbol="error" color="red" />
+                  </>
                 ) : (
-                    <>
-                      <strong>{charactersData.maxSlots - charactersData.slots}</strong>
-                      <FormattedMessage id="editor.availableSlots"/>
-                      <Icon symbol="check"/>
-                    </>
+                  <>
+                    <strong>{charactersData.points - charactersPoints}</strong>
+                    <FormattedMessage id="editor.availablePoints" />
+                    <Icon symbol="check" />
+                  </>
                 )}
               </p>
             </header>
 
             <OrderableUnitList
-                units={list.characters}
-                type="characters"
-                listId={listId}
-                armyComposition={armyComposition}
+              units={list.characters}
+              type="characters"
+              listId={listId}
+              armyComposition={armyComposition}
             />
 
             {errors
-                .filter(({section}) => section === "characters")
-                .map(({message, name, diff, min, option}, index) => (
-                    <ErrorMessage key={message + index} spaceBefore>
-                      <FormattedMessage
-                          id={message}
-                          values={{
-                            name,
-                            diff,
+              .filter(({ section }) => section === "characters")
+              .map(({ message, name, diff, min, option }, index) => (
+                <ErrorMessage key={message + index} spaceBefore>
+                  <FormattedMessage
+                    id={message}
+                    values={{
+                      name,
+                      diff,
                       min,
                       option,
                     }}
@@ -461,14 +461,14 @@ export const Editor = ({ isMobile }) => {
               {coreData.diff > 0 ? (
                 <>
                   <strong>{coreData.diff}</strong>
-                  <FormattedMessage id="editor.missingSlots" />
+                  <FormattedMessage id="editor.missingPoints" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{coreData.slots}</strong>
-                  {` / ${coreData.minSlots} `}
-                  <FormattedMessage id="app.slots" />
+                  <strong>{corePoints}</strong>
+                  {` / ${coreData.points} `}
+                  <FormattedMessage id="app.points" />
                   <Icon symbol="check" />
                 </>
               )}
@@ -518,13 +518,13 @@ export const Editor = ({ isMobile }) => {
               {specialData.diff > 0 ? (
                 <>
                   <strong>{specialData.diff}</strong>
-                  <FormattedMessage id="editor.tooManySlots" />
+                  <FormattedMessage id="editor.tooManyPoints" />
                   <Icon symbol="error" color="red" />
                 </>
               ) : (
                 <>
-                  <strong>{specialData.maxSlots- specialData.slots}</strong>
-                  <FormattedMessage id="editor.availableSlots" />
+                  <strong>{specialData.points - specialPoints}</strong>
+                  <FormattedMessage id="editor.availablePoints" />
                   <Icon symbol="check" />
                 </>
               )}
@@ -568,43 +568,43 @@ export const Editor = ({ isMobile }) => {
         <section className="editor__section">
           <header className="editor__header">
             <h2>
-              <FormattedMessage id="editor.rare"/>
+              <FormattedMessage id="editor.rare" />
             </h2>
             <p className="editor__points">
               {rareData.diff > 0 ? (
-                  <>
-                    <strong>{rareData.diff}</strong>
-                    <FormattedMessage id="editor.tooManySlots"/>
-                    <Icon symbol="error" color="red"/>
-                  </>
+                <>
+                  <strong>{rareData.diff}</strong>
+                  <FormattedMessage id="editor.tooManyPoints" />
+                  <Icon symbol="error" color="red" />
+                </>
               ) : (
-                  <>
-                    <strong>{rareData.maxSlots - rareData.slots}</strong>
-                    <FormattedMessage id="editor.availableSlots"/>
-                    <Icon symbol="check"/>
-                  </>
+                <>
+                  <strong>{rareData.points - rarePoints}</strong>
+                  <FormattedMessage id="editor.availablePoints" />
+                  <Icon symbol="check" />
+                </>
               )}
             </p>
           </header>
 
           <OrderableUnitList
-              units={list.rare}
-              type="rare"
-              listId={listId}
-              armyComposition={armyComposition}
+            units={list.rare}
+            type="rare"
+            listId={listId}
+            armyComposition={armyComposition}
           />
 
           {errors
-              .filter(({section}) => section === "rare")
-              .map(({message, name, diff, min, option}, index) => (
-                  <ErrorMessage key={message + index} spaceBefore>
-                    <FormattedMessage
-                        id={message}
-                        values={{
-                          name,
-                          diff,
-                          min,
-                          option,
+            .filter(({ section }) => section === "rare")
+            .map(({ message, name, diff, min, option }, index) => (
+              <ErrorMessage key={message + index} spaceBefore>
+                <FormattedMessage
+                  id={message}
+                  values={{
+                    name,
+                    diff,
+                    min,
+                    option,
                   }}
                 />
               </ErrorMessage>
