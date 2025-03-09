@@ -161,7 +161,7 @@ export const NewList = ({ isMobile }) => {
                   <>
                     <span className="new-list__game-name">{name}</span>
                     <p className="new-list__beta">
-                      <FormattedMessage id="new.8th" />
+                      <FormattedMessage id="new.6th" />
                     </p>
                   </>
                 )}

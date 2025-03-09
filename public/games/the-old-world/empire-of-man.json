@@ -252,362 +252,6 @@
       }
     },
     {
-      "name_en": "Captain of the Empire",
-      "name_de": "Captain of the Empire",
-      "name_fr": "Capitaine de l'Empire",
-      "name_es": "Capitán del Imperio",
-      "id": "captain-of-the-empire",
-      "points": 45,
-      "armyComposition": {
-        "empire-of-man": {
-          "category": "characters"
-        },
-        "city-state-of-nuln": {
-          "category": "characters"
-        }
-      },
-      "command": [
-        {
-          "name_en": "General",
-          "name_de": "General",
-          "name_fr": "Général",
-          "name_es": "General",
-          "points": 0
-        },
-        {
-          "name_en": "Battle Standard Bearer",
-          "name_de": "Battle Standard Bearer",
-          "name_fr": "Porteur de la Grande Bannière",
-          "name_es": "Portaestandarte de Batalla",
-          "points": 25,
-          "magic": {
-            "types": ["banner"],
-            "maxPoints": 0
-          }
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_fr": "Arme de base",
-          "name_es": "Arma de mano",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "equippedDefault": true
-        },
-        {
-          "name_en": "Additional hand weapon",
-          "name_de": "Additional hand weapon",
-          "name_fr": "Arme de base additionnelle",
-          "name_es": "Arma de mano adicional",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Great weapon",
-          "name_de": "Great weapon",
-          "name_fr": "Arme lourde",
-          "name_es": "Arma a dos manos",
-          "points": 4,
-          "perModel": true
-        },
-        {
-          "name_en": "Halberd",
-          "name_de": "Halberd",
-          "name_fr": "Hallebarde",
-          "name_es": "Alabarda",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Lance",
-          "name_de": "Lance",
-          "name_fr": "Lance de joute",
-          "name_es": "Lanza de caballería",
-          "points": 4,
-          "perModel": true,
-          "notes": {
-            "name_en": "if appropriately mounted",
-            "name_it": "if appropriately mounted",
-            "name_de": "if appropriately mounted",
-            "name_fr": "si monté",
-            "name_es": "si está montado"
-          }
-        },
-        {
-          "name_en": "Handgun",
-          "name_de": "Handgun",
-          "name_fr": "Arquebuse",
-          "name_es": "Arcabuz",
-          "points": 6,
-          "perModel": true
-        },
-        {
-          "name_en": "Longbow",
-          "name_de": "Longbow",
-          "name_fr": "Arc long",
-          "name_es": "Arco largo",
-          "points": 4,
-          "perModel": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "name_de": "Light armour",
-          "name_fr": "Armure légère",
-          "name_es": "Armadura ligera",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Heavy armour",
-          "name_de": "Heavy armour",
-          "name_fr": "Armure lourde",
-          "name_es": "Armadura pesada",
-          "points": 3,
-          "perModel": true
-        },
-        {
-          "name_en": "Full plate armour",
-          "name_de": "Full plate armour",
-          "name_fr": "Armure de plate complète",
-          "name_es": "Armadura completa",
-          "points": 6,
-          "perModel": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "name_de": "Shield",
-          "name_fr": "Bouclier",
-          "name_es": "Escudo",
-          "points": 2,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Pistol",
-          "name_de": "Pistol",
-          "name_fr": "Pistolet",
-          "name_es": "Pistola",
-          "points": 5,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        },
-        {
-          "name_en": "Brace of pistols",
-          "name_de": "Brace of pistols",
-          "name_fr": "Plusieurs pistolets",
-          "name_es": "Ristra de pistolas",
-          "points": 10,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "À Pied",
-          "name_es": "A pie",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Barded Warhorse",
-          "name_de": "Barded Warhorse",
-          "name_fr": "Destrier Caparaçonné",
-          "name_es": "Caballo de guerra con barda",
-          "points": 16
-        },
-        {
-          "name_en": "Empire warhorse",
-          "name_de": "Empire warhorse",
-          "name_fr": "Destrier de l'Empire",
-          "name_es": "Caballo de guerra",
-          "points": 12
-        },
-        {
-          "name_en": "Pegasus",
-          "name_de": "Pegasus",
-          "name_fr": "Pégase",
-          "name_es": "Pegaso",
-          "points": 30
-        },
-        {
-          "name_en": "Demigryph",
-          "name_de": "Demigryph",
-          "name_fr": "Demigriffon",
-          "name_es": "Semigrifo",
-          "points": 50
-        },
-        {
-          "name_en": "Griffon {empire}",
-          "name_de": "Griffon",
-          "name_fr": "Griffon",
-          "name_es": "Grifo",
-          "points": 130
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "name_fr": "Objets Magiques",
-          "name_es": "Objetos Mágicos",
-          "types": ["weapon", "armor", "talisman", "enchanted-item"],
-          "selected": [],
-          "maxPoints": 50
-        }
-      ],
-      "lores": [],
-      "specialRules": {
-        "name_en": "\"Hold the Line!\", Rallying Cry",
-        "name_de": "",
-        "name_fr": "\"Tenez la Ligne!\", Cri de Ralliement",
-        "name_es": "\"¡Aguantad la línea!\", Grito de Guerra"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_fr": "",
-        "name_es": ""
-      }
-    },
-    {
-      "name_en": "Wizard Lord",
-      "name_de": "Wizard Lord",
-      "name_fr": "Seigneur Sorcier",
-      "name_es": "Gran Hechicero",
-      "id": "wizard-lord",
-      "points": 130,
-      "armyComposition": {
-        "empire-of-man": {
-          "category": "characters"
-        },
-        "knightly-order-morr": {
-          "category": "characters"
-        }
-      },
-      "command": [
-        {
-          "name_en": "General",
-          "name_de": "General",
-          "name_fr": "Général",
-          "name_es": "General",
-          "points": 0
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Hand weapon",
-          "name_de": "Hand weapon",
-          "name_fr": "Arme de base",
-          "name_es": "Arma de mano",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
-      ],
-      "armor": [],
-      "options": [
-        {
-          "name_en": "Level 4 Wizard",
-          "name_de": "Level 4 Wizard",
-          "name_fr": "Sorcier de Niveau 4",
-          "name_es": "Hechicero de Nivel 4",
-          "points": 30,
-          "perModel": true,
-          "minimum": 0,
-          "maximum": 0
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "On foot",
-          "name_de": "On foot",
-          "name_fr": "À Pied",
-          "name_es": "A pie",
-          "points": 0,
-          "active": true
-        },
-        {
-          "name_en": "Empire Warhorse",
-          "name_de": "Empire warhorse",
-          "name_fr": "Destrier de l'Empire",
-          "name_es": "Caballo de guerra",
-          "points": 12
-        },
-        {
-          "name_en": "Pegasus",
-          "name_de": "Pegasus",
-          "name_fr": "Pégase",
-          "name_es": "Pegaso",
-          "points": 30
-        },
-        {
-          "name_en": "Imperial Griffon",
-          "name_de": "Imperial Griffon",
-          "name_fr": "Griffon Impérial",
-          "name_es": "Grifo Imperial",
-          "points": 160,
-          "options": [
-            {
-              "name_en": "Two Heads",
-              "name_fr": "Bicéphale",
-              "name_es": "Dos Cabezas",
-              "points": 20
-            }
-          ]
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "name_fr": "Objets Magiques",
-          "name_es": "Objetos Mágicos",
-          "types": [
-            "weapon",
-            "armor-mages",
-            "talisman",
-            "arcane-item",
-            "enchanted-item"
-          ],
-          "selected": [],
-          "maxPoints": 100
-        }
-      ],
-      "lores": [
-        "daemonology",
-        "dark-magic",
-        "elementalism",
-        "battle-magic",
-        "illusion",
-        "necromancy"
-      ],
-      "specialRules": {
-        "name_en": "Magical Attacks, Magic Resistance (-1)",
-        "name_de": "",
-        "name_fr": "Attaques Magiques, Résistance à la Magie (-1)",
-        "name_es": "Ataques Mágicos, Resistencia a la Magia (-1)"
-      },
-      "notes": {
-        "name_en": "",
-        "name_de": "",
-        "name_fr": "",
-        "name_es": ""
-      }
-    },
-    {
       "name_en": "Master Mage",
       "name_de": "Master Mage",
       "name_fr": "Maître Mage",
@@ -2461,6 +2105,364 @@
         "name_de": "Counter Charge, First Charge, Grand Master of the Knights Panther, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Immune to Psychology, Magic Resistance (-1), Master of Battle, Rallying Cry, Skilled Duellist, Stubborn, Swiftstride, Veteran",
         "name_fr": "Contre-charge, Première Charge, Grand Maître des Chevaliers Panthères, Haine (figurines des Guerriers du Chaos, des Braillehardes Hommes-Bêtes et Démoniaques), Immunisé à la Psychologie, Résistance à la Magie (-1), Maître des Batailles, Cri de Ralliement, Duelliste Chevronné, Obstiné, Rapide, Vétérans",
         "name_es": "Counter Charge, First Charge, Grand Master of the Knights Panther, Hatred (Warriors of Chaos + Beastmen Brayherds + Daemonic models), Immune to Psychology, Magic Resistance (-1), Master of Battle, Rallying Cry, Skilled Duellist, Stubborn, Swiftstride, Veteran"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    }
+  ],
+  "lords": [{
+      "name_en": "Wizard Lord",
+      "name_de": "Wizard Lord",
+      "name_fr": "Seigneur Sorcier",
+      "name_es": "Gran Hechicero",
+      "id": "wizard-lord",
+      "points": 130,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "knightly-order-morr": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Level 4 Wizard",
+          "name_de": "Level 4 Wizard",
+          "name_fr": "Sorcier de Niveau 4",
+          "name_es": "Hechicero de Nivel 4",
+          "points": 30,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "À Pied",
+          "name_es": "A pie",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Empire Warhorse",
+          "name_de": "Empire warhorse",
+          "name_fr": "Destrier de l'Empire",
+          "name_es": "Caballo de guerra",
+          "points": 12
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "name_fr": "Pégase",
+          "name_es": "Pegaso",
+          "points": 30
+        },
+        {
+          "name_en": "Imperial Griffon",
+          "name_de": "Imperial Griffon",
+          "name_fr": "Griffon Impérial",
+          "name_es": "Grifo Imperial",
+          "points": 160,
+          "options": [
+            {
+              "name_en": "Two Heads",
+              "name_fr": "Bicéphale",
+              "name_es": "Dos Cabezas",
+              "points": 20
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": [
+            "weapon",
+            "armor-mages",
+            "talisman",
+            "arcane-item",
+            "enchanted-item"
+          ],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "lores": [
+        "daemonology",
+        "dark-magic",
+        "elementalism",
+        "battle-magic",
+        "illusion",
+        "necromancy"
+      ],
+      "specialRules": {
+        "name_en": "Magical Attacks, Magic Resistance (-1)",
+        "name_de": "",
+        "name_fr": "Attaques Magiques, Résistance à la Magie (-1)",
+        "name_es": "Ataques Mágicos, Resistencia a la Magia (-1)"
+      },
+      "notes": {
+        "name_en": "",
+        "name_de": "",
+        "name_fr": "",
+        "name_es": ""
+      }
+    }
+  ],
+  "heroes": [{
+      "name_en": "Captain of the Empire",
+      "name_de": "Captain of the Empire",
+      "name_fr": "Capitaine de l'Empire",
+      "name_es": "Capitán del Imperio",
+      "id": "captain-of-the-empire",
+      "points": 45,
+      "armyComposition": {
+        "empire-of-man": {
+          "category": "characters"
+        },
+        "city-state-of-nuln": {
+          "category": "characters"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_de": "General",
+          "name_fr": "Général",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_de": "Battle Standard Bearer",
+          "name_fr": "Porteur de la Grande Bannière",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapon",
+          "name_de": "Hand weapon",
+          "name_fr": "Arme de base",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Additional hand weapon",
+          "name_de": "Additional hand weapon",
+          "name_fr": "Arme de base additionnelle",
+          "name_es": "Arma de mano adicional",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_de": "Great weapon",
+          "name_fr": "Arme lourde",
+          "name_es": "Arma a dos manos",
+          "points": 4,
+          "perModel": true
+        },
+        {
+          "name_en": "Halberd",
+          "name_de": "Halberd",
+          "name_fr": "Hallebarde",
+          "name_es": "Alabarda",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Lance",
+          "name_de": "Lance",
+          "name_fr": "Lance de joute",
+          "name_es": "Lanza de caballería",
+          "points": 4,
+          "perModel": true,
+          "notes": {
+            "name_en": "if appropriately mounted",
+            "name_it": "if appropriately mounted",
+            "name_de": "if appropriately mounted",
+            "name_fr": "si monté",
+            "name_es": "si está montado"
+          }
+        },
+        {
+          "name_en": "Handgun",
+          "name_de": "Handgun",
+          "name_fr": "Arquebuse",
+          "name_es": "Arcabuz",
+          "points": 6,
+          "perModel": true
+        },
+        {
+          "name_en": "Longbow",
+          "name_de": "Longbow",
+          "name_fr": "Arc long",
+          "name_es": "Arco largo",
+          "points": 4,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_de": "Light armour",
+          "name_fr": "Armure légère",
+          "name_es": "Armadura ligera",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy armour",
+          "name_de": "Heavy armour",
+          "name_fr": "Armure lourde",
+          "name_es": "Armadura pesada",
+          "points": 3,
+          "perModel": true
+        },
+        {
+          "name_en": "Full plate armour",
+          "name_de": "Full plate armour",
+          "name_fr": "Armure de plate complète",
+          "name_es": "Armadura completa",
+          "points": 6,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "name_de": "Shield",
+          "name_fr": "Bouclier",
+          "name_es": "Escudo",
+          "points": 2,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Pistol",
+          "name_de": "Pistol",
+          "name_fr": "Pistolet",
+          "name_es": "Pistola",
+          "points": 5,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        },
+        {
+          "name_en": "Brace of pistols",
+          "name_de": "Brace of pistols",
+          "name_fr": "Plusieurs pistolets",
+          "name_es": "Ristra de pistolas",
+          "points": 10,
+          "perModel": true,
+          "minimum": 0,
+          "maximum": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_de": "On foot",
+          "name_fr": "À Pied",
+          "name_es": "A pie",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Barded Warhorse",
+          "name_de": "Barded Warhorse",
+          "name_fr": "Destrier Caparaçonné",
+          "name_es": "Caballo de guerra con barda",
+          "points": 16
+        },
+        {
+          "name_en": "Empire warhorse",
+          "name_de": "Empire warhorse",
+          "name_fr": "Destrier de l'Empire",
+          "name_es": "Caballo de guerra",
+          "points": 12
+        },
+        {
+          "name_en": "Pegasus",
+          "name_de": "Pegasus",
+          "name_fr": "Pégase",
+          "name_es": "Pegaso",
+          "points": 30
+        },
+        {
+          "name_en": "Demigryph",
+          "name_de": "Demigryph",
+          "name_fr": "Demigriffon",
+          "name_es": "Semigrifo",
+          "points": 50
+        },
+        {
+          "name_en": "Griffon {empire}",
+          "name_de": "Griffon",
+          "name_fr": "Griffon",
+          "name_es": "Grifo",
+          "points": 130
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "name_de": "Magische Gegenstände",
+          "name_fr": "Objets Magiques",
+          "name_es": "Objetos Mágicos",
+          "types": ["weapon", "armor", "talisman", "enchanted-item"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "lores": [],
+      "specialRules": {
+        "name_en": "\"Hold the Line!\", Rallying Cry",
+        "name_de": "",
+        "name_fr": "\"Tenez la Ligne!\", Cri de Ralliement",
+        "name_es": "\"¡Aguantad la línea!\", Grito de Guerra"
       },
       "notes": {
         "name_en": "",
