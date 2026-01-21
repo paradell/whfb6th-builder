@@ -10,12 +10,6 @@
   margin-bottom: 1rem;
 }
 
-.new-list__beta {
-  /* color: var(--color-error); */
-  /* font-weight: bold; */
-  font-style: italic;
-}
-
 .new-list__quick-actions {
   margin-bottom: 1rem;
 }
@@ -34,4 +28,11 @@
   font-family: "Gideon Roman", serif;
   font-weight: 700;
   font-size: 1.2rem;
+}
+
+.new-list__composition-description {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
 }

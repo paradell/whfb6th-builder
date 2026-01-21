@@ -60,7 +60,8 @@ export const Export = ({ isMobile }) => {
         showCustomNotes,
         intl,
         language,
-        showStats,
+        showStats: showStats,
+        isSimpleList: listType === "simple",
       })
     : "";
   const copyText = () => {
@@ -112,6 +113,8 @@ export const Export = ({ isMobile }) => {
   if (!list) {
     return null;
   }
+
+  const isSimpleList = listType === "simple";
 
   return (
     <>
@@ -175,6 +178,25 @@ export const Export = ({ isMobile }) => {
             <FormattedMessage id="export.compactListDescription" />
           </i>
         </p>
+        <div className="radio export__visible-checkbox">
+          <input
+            type="radio"
+            id="simple"
+            onChange={() => setListType("simple")}
+            checked={listType === "simple"}
+            name="list"
+            value="simple"
+            className="radio__input"
+          />
+          <label htmlFor="simple" className="checkbox__label">
+            <FormattedMessage id="export.minimalistList" />
+          </label>
+        </div>
+        <p className="export__radio-description">
+          <i>
+            <FormattedMessage id="export.minimalistDescription" />
+          </i>
+        </p>
 
         <h3 className="export__sub-subtitle">
           <FormattedMessage id="export.formattingTitle" />
@@ -205,9 +227,6 @@ export const Export = ({ isMobile }) => {
           />
           <label htmlFor="markdown" className="checkbox__label">
             <FormattedMessage id="export.isMarkdownList" />
-            <b>
-              <i>New!</i>
-            </b>
           </label>
         </div>
 
@@ -221,6 +240,7 @@ export const Export = ({ isMobile }) => {
             onChange={() => setShowSpecialRules(!showSpecialRules)}
             checked={showSpecialRules}
             className="checkbox__input"
+            disabled={isSimpleList}
           />
           <label htmlFor="specialRules" className="checkbox__label">
             <FormattedMessage id="export.specialRules" />
@@ -233,6 +253,7 @@ export const Export = ({ isMobile }) => {
             onChange={() => setShowStats(!showStats)}
             checked={showStats}
             className="checkbox__input"
+            disabled={isSimpleList}
           />
           <label htmlFor="showStats" className="checkbox__label">
             <FormattedMessage id="export.showStats" />
@@ -245,6 +266,7 @@ export const Export = ({ isMobile }) => {
             onChange={() => setShowPageNumbers(!showPageNumbers)}
             checked={showPageNumbers}
             className="checkbox__input"
+            disabled={isSimpleList}
           />
           <label htmlFor="showPageNumbers" className="checkbox__label">
             <FormattedMessage id="export.showPageNumbers" />
@@ -257,6 +279,7 @@ export const Export = ({ isMobile }) => {
             onChange={() => setShowCustomNotes(!showCustomNotes)}
             checked={showCustomNotes}
             className="checkbox__input"
+            disabled={isSimpleList}
           />
           <label htmlFor="showCustomNotes" className="checkbox__label">
             <FormattedMessage id="export.showCustomNotes" />
