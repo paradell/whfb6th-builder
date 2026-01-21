@@ -1,5 +1,58 @@
 import { unitHasItem } from "./unit";
 
+// returns the points cost for adding a single model in a unit, given the
+// selected options and equipment
+export const getPointsPerModel = (unit) => {
+  let modelPoints = unit.points;
+
+  if (unit.options) {
+    unit.options.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      } else if (option.active && option.options && option.options.length > 0) {
+        option.options.forEach((subOption) => {
+          if (subOption.active) {
+            if (subOption.perModel) {
+              modelPoints += subOption.points;
+            }
+          }
+        });
+      }
+    });
+  }
+
+  if (unit.equipment) {
+    unit.equipment.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      }
+    });
+  }
+
+  if (unit.armor) {
+    unit.armor.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      }
+    });
+  }
+
+  if (unit?.items && unit?.items.length) {
+    unit.items.forEach((item) => {
+      (item.selected || []).forEach((selected) => {
+        // Units with points per model
+        if (unit.type !== "characters" && selected.perModel) {
+          modelPoints += selected.amount
+            ? selected.amount * selected.perModelPoints
+            : selected.perModelPoints;
+        }
+      });
+    });
+  }
+
+  return modelPoints;
+};
+
 export const getUnitPoints = (unit, settings) => {
   const detachmentActive =
     unit?.options?.length > 0 &&
@@ -15,6 +68,7 @@ export const getUnitPoints = (unit, settings) => {
   } else {
     unitPoints = unit.points;
   }
+
   if (unit.options) {
     unit.options.forEach((option) => {
       if (option.stackable) {
@@ -42,6 +96,7 @@ export const getUnitPoints = (unit, settings) => {
       }
     });
   }
+
   if (unit.equipment) {
     unit.equipment
       .filter(
@@ -57,6 +112,7 @@ export const getUnitPoints = (unit, settings) => {
         }
       });
   }
+
   if (unit.armor) {
     unit.armor
       .filter(
@@ -72,6 +128,7 @@ export const getUnitPoints = (unit, settings) => {
         }
       });
   }
+
   if (unit.command && !detachmentActive) {
     unit.command.forEach((option) => {
       if (option.active) {
@@ -86,13 +143,16 @@ export const getUnitPoints = (unit, settings) => {
       }
       if (option.active && option.options && option.options.length > 0) {
         option.options.forEach((commandOption) => {
-          if (commandOption.active) {
+          if (commandOption.active && commandOption.perModel) {
+            unitPoints += (unit.strength || 1) * commandOption.points;
+          } else if (commandOption.active) {
             unitPoints += commandOption.points;
           }
         });
       }
     });
   }
+
   if (unit.mounts) {
     unit.mounts
       .filter(
@@ -101,27 +161,52 @@ export const getUnitPoints = (unit, settings) => {
           (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem))
       )
       .forEach((option) => {
-        if (option.active) {
+        if (option.active && option.perModel) {
+          unitPoints += (unit.strength || 1) * option.points;
+        } else if (option.active) {
           unitPoints += option.points;
         }
         if (option.active && option.options && option.options.length > 0) {
           option.options.forEach((mountOption) => {
-            if (mountOption.active) {
+            if (mountOption.active && mountOption.perModel) {
+              unitPoints += (unit.strength || 1) * mountOption.points;
+            } else if (mountOption.active) {
               unitPoints += mountOption.points;
             }
           });
         }
       });
   }
+
   if (unit?.items && unit?.items.length) {
     unit.items.forEach((item) => {
       (item.selected || []).forEach((selected) => {
-        unitPoints += selected.amount
-          ? selected.amount * selected.points
-          : selected.points;
+        // Units with points per model
+        if (unit.type !== "characters" && selected.perModel) {
+          unitPoints +=
+            (unit.strength || 1) *
+            (selected.amount
+              ? selected.amount * selected.perModelPoints
+              : selected.perModelPoints);
+        }
+
+        // Units with points per unit
+        else if (unit.type !== "characters" && selected.perUnitPoints) {
+          unitPoints += selected.amount
+            ? selected.amount * selected.perUnitPoints
+            : selected.perUnitPoints;
+        }
+
+        // Characters
+        else {
+          unitPoints += selected.amount
+            ? selected.amount * selected.points
+            : selected.points;
+        }
       });
     });
   }
+
   if (unit.detachments && !settings?.noDetachments) {
     unit.detachments.forEach(
       ({ strength, points, equipment, armor, options }) => {
@@ -129,22 +214,31 @@ export const getUnitPoints = (unit, settings) => {
 
         if (equipment && equipment.length) {
           equipment.forEach((option) => {
-            if (option.active) {
+            if (option.stackable) {
+              unitPoints +=
+                (option.stackableCount || option.minimum || 0) * option.points;
+            } else if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
         if (armor && armor.length) {
           armor.forEach((option) => {
-            if (option.active) {
+            if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
         if (options && options.length) {
           options.forEach((option) => {
-            if (option.active) {
+            if (option.active && option.perModel) {
               unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
             }
           });
         }
@@ -185,9 +279,12 @@ export const getPoints = ({ type, list }) => {
 
   list[type] &&
     list[type].forEach((unit) => {
-      points += getUnitPoints(unit, {
-        armyComposition: list.armyComposition || list.army,
-      });
+      points += getUnitPoints(
+        { ...unit, type },
+        {
+          armyComposition: list.armyComposition || list.army,
+        }
+      );
     });
 
   return points;
