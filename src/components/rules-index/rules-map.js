@@ -50,6 +50,7 @@ const additionalOWBRules = {
   champions: { url: "command-groups/champions" },
   musician: { url: "command-groups/musicians" },
   "standard bearer": { url: "command-groups/standard-bearers" },
+  wizard: { url: "magic/wizards" },
   "level 1 wizard": { url: "magic/levels-of-wizardry" },
   "level 2 wizard": { url: "magic/levels-of-wizardry" },
   "level 3 wizard": { url: "magic/levels-of-wizardry" },
@@ -60,9 +61,63 @@ const additionalOWBRules = {
   "doomseeker dwarfs": {
     url: "special-rules/doomseeker",
   },
+  "armour piercing": {
+    url: "the-shooting-phase/armour-piercing",
+  },
+  "nuln state troops empire": {
+    url: "special-rules/nuln-state-troops",
+  },
+  "crown of horns beastmen": {
+    url: "magic-item/crown-of-horns-beastmen",
+  },
+  "crown of horns cathay": {
+    url: "weapons-of-war/crown-of-horns-grand-cathay",
+  },
+  "engine of the gods renegade": {
+    url: "special-rules/engine-of-the-gods-renegade",
+  },
+  "crown of antlers beastmen": {
+    url: "special-rules/crown-of-antlers",
+  },
+  "crown of antlers wood-elf-realms": {
+    url: "magic-item/crown-of-antlers",
+  },
+  "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
+  "helblaster volley gun weapon": {
+    url: "weapons-of-war/helblaster-volley-gun",
+  },
+  "helstorm rocket battery weapon": {
+    url: "weapons-of-war/helstorm-rocket-battery",
+  },
+  "organ gun weapon": {
+    url: "war-machines/organ-guns",
+  },
+  "screaming skull catapult weapon": {
+    url: "weapons-of-war/screaming-skull-catapult",
+  },
+  "open-war": {
+    url: "matched-play/open-war",
+  },
+  "grand-melee": {
+    url: "matched-play/grand-melee",
+  },
+  "combined-arms": {
+    url: "matched-play/combined-arms",
+  },
+  "grand-melee-combined-arms": {
+    url: "warhammer-armies/army-composition-lists",
+  },
+  "battle-march": {
+    url: "warhammer-armies/battle-march",
+  },
 };
 
 export const synonyms = {
+  "the witch": "suffer not...",
+  "the revenant": "suffer not...",
+  "the mutant": "suffer not...",
+  "the daemon": "suffer not...",
+  "spear of kurnous": "the spear of kurnous",
   warbows: "warbow",
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
@@ -70,6 +125,7 @@ export const synonyms = {
   "gromril great axes": "gromril great axe",
   "bows of avelorn": "bow of avelorn",
   "ceremonial halberds": "ceremonial halberd",
+  "wolf hammers": "wolf hammer",
   shields: "shield",
   bellower: "bellowers & musicians",
   "revered guardian": "battle standard bearer",
@@ -85,6 +141,7 @@ export const synonyms = {
   fanatics: "fanatic",
   "nasty skulkers": "nasty skulker",
   "leadbelcher guns": "leadbelcher gun",
+  "leadbelcher guns renegade": "leadbelcher gun renegade",
   "grimfrost weapons": "grimfrost weapon",
   "tiranoc chariots": "tiranoc chariot",
   "steam tank": "empire steam tank",
@@ -96,6 +153,8 @@ export const synonyms = {
   "marauder horsemaster": "champions",
   "lion guard captain": "champions",
   "chracian captain": "champions",
+  "jade officer": "champions",
+  "jade lancer officer": "champions",
   boss: "champions",
   marksman: "champions",
   preceptor: "champions",
@@ -186,6 +245,9 @@ export const synonyms = {
   deathmask: "champions",
   "plague deacon": "champions",
   fangleader: "champions",
+  watchmaster: "champions",
+  "foe-render": "champions",
+  "splice-horn": "champions",
   clawleader: "champions",
   "master of arms": "champions",
   "master of arrows": "champions",
@@ -202,6 +264,11 @@ export const synonyms = {
   "skin wolf jarl": "champions",
   "first sword": "champions",
   captain: "champions",
+  officer: "champions",
+  "veteran officer": "champions",
+  commander: "champions",
+  "shrine keeper": "champions",
+  "veteran commander": "champions",
   "boar chariot": "orc boar chariot",
   "wolf chariot": "goblin wolf chariot",
   fireglaives: "fireglaive",
@@ -215,7 +282,6 @@ export const synonyms = {
   "expeditionary marksman": "expeditionary marksmen",
   "braces of pistols": "brace of pistols",
   "troll magic": "lore of troll magic",
-  "nuln veteran state troops": "nuln state troops",
   "empire knights panther": "empire knights",
   "empire knights of the white wolf": "empire knights",
   "empire knights of the fiery heart": "empire knights",
@@ -231,6 +297,27 @@ export const synonyms = {
   "demigryph knights of the fiery heart": "demigryph knights",
   "demigryph knights of the blazing sun": "demigryph knights",
   "demigryph knights of morr": "demigryph knights",
+  "ogre pistols": "ogre pistol",
+  "light cannons": "light cannon",
+  "bigger choppier axe": "bigger, choppier axe",
+  orion: "orion, the king in the woods",
+  araloth: "araloth, lord of talsyn",
+  kralmaw: "kralmaw, the prophet of ruin",
+  ghorros: "ghorros warhoof",
+  "primal magic": "lore of primal magic",
+  "a tingle in the air": "herdstones",
+  "dark sorcery": "herdstones",
+  "fearsome edifice": "herdstones",
+  "bestial fury beastmen": "herdstones",
+  "cathayan lances": "cathayan lance",
+  "sky lantern crane guns": "sky lantern crane gun",
+  "iron hail guns": "iron hail gun",
+  warhorses: "warhorse",
+  "barded warhorses": "barded warhorse",
+  "chaos furies of tzeentch": "chaos furies",
+  "chaos furies of nurgle": "chaos furies",
+  "chaos furies of slaanesh": "chaos furies",
+  "chaos furies of khorne": "chaos furies",
 };
 
 export const rulesMap = {
