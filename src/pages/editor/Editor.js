@@ -426,7 +426,7 @@ export const Editor = ({ isMobile }) => {
 
             {errors
                 .filter(({section}) => section === "characters")
-                .map(({message, name, diff, min, option}, index) => (
+                .map(({message, name, diff, min, max, option}, index) => (
                     <ErrorMessage key={message + index} spaceBefore>
                       <FormattedMessage
                           id={message}

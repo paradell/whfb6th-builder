@@ -11,7 +11,7 @@ import { getUnitPoints, getPoints, getAllPoints } from "../../utils/points";
 import { useLanguage } from "../../utils/useLanguage";
 import { getStats, getUnitName } from "../../utils/unit";
 import { nameMap } from "../magic";
-import gameSystems from "../../assets/armies.json";
+import { getGameSystems } from "../../utils/game-systems";
 
 import "./Print.css";
 
@@ -49,7 +49,7 @@ export const Print = () => {
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
   const alliesPoints = getPoints({ list, type: "allies" });
-  const game = gameSystems.find((game) => game.id === list.game);
+  const game = getGameSystems();
   const army = game.armies.find((army) => army.id === list.army);
   const armyName = army[`name_${language}`] || army.name_en;
   const armyCompositionName =
