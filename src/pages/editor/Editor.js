@@ -582,7 +582,7 @@ export const Editor = ({ isMobile }) => {
                 </>
               ) : (
                 <>
-                  <strong>{rareData.maxSlots - rareData.slot}</strong>
+                  <strong>{rareData.maxSlots- rareData.slots}</strong>
                   <FormattedMessage id="editor.availableSlots" />
                   <Icon symbol="check" />
                 </>
