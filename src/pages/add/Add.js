@@ -134,7 +134,7 @@ export const Add = ({ isMobile }) => {
           setAlliesLoaded(index + 1);
         } else {
           fetcher({
-            url: `games/the-old-world/${army}`,
+            url: `games/${list.game}/${army}`,
             onSuccess: (data) => {
               const armyData = getArmyData({
                 data,
@@ -186,7 +186,7 @@ export const Add = ({ isMobile }) => {
             setMercenariesLoaded(index + 1);
           } else {
             fetcher({
-              url: `games/the-old-world/${mercenary.army}`,
+              url: `games/${list.game}/${mercenary.army}`,
               onSuccess: (data) => {
                 const armyData = getArmyData({
                   data,
