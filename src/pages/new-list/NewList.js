@@ -82,6 +82,8 @@ export const NewList = ({ isMobile }) => {
       game: game,
       points: points,
       army: army,
+      lords: [],
+      heroes: [],
       characters: [],
       core: [],
       special: [],

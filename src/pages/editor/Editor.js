@@ -318,7 +318,7 @@ export const Editor = ({ isMobile }) => {
               </ErrorMessage>
             ))}
         </section>
-        {list.lords && (
+        {list.lords && list.game !== "the-old-world" && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
@@ -360,7 +360,7 @@ export const Editor = ({ isMobile }) => {
           </section>
         )}
 
-        {list.heroes && (
+        {list.heroes && list.game !== "the-old-world" && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
@@ -402,7 +402,7 @@ export const Editor = ({ isMobile }) => {
           </section>
         )}
 
-        {list.characters && (
+        {list.characters && list.game === "the-old-world" && (
           <section className="editor__section">
             <header className="editor__header">
               <h2>
