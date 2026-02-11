@@ -1,8 +1,9 @@
 import theOldWorld from "../assets/the-old-world.json";
+import WarhammerFantasy6th from "../assets/warhammer-fantasy-6th.json";
 
 export const getGameSystems = () => {
   const customSystems = JSON.parse(localStorage.getItem("whfb.systems")) || [];
-  const allGameSystems = [theOldWorld, ...customSystems];
+  const allGameSystems = [theOldWorld, WarhammerFantasy6th, ...customSystems];
 
   return allGameSystems;
 };

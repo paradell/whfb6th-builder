@@ -140,6 +140,14 @@ export const NewList = ({ isMobile }) => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  useEffect(() => {
+    // Sincronizar armyComposition cuando cambia el ejército seleccionado
+    const selectedArmy = armies.find(({ id }) => army === id);
+    if (selectedArmy?.armyComposition) {
+      setArmyComposition(selectedArmy.armyComposition[0]);
+    }
+  }, [army, armies]);
+
   return (
     <>
       {redirect && <Redirect to={`/editor/${redirect}`} />}
@@ -191,7 +199,7 @@ export const NewList = ({ isMobile }) => {
             id="army"
             options={armies}
             onChange={handleArmyChange}
-            selected="empire-of-man"
+            selected={army}
             spaceBottom
             required
           />
