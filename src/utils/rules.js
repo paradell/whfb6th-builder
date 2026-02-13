@@ -110,7 +110,6 @@ export const rules = {
         {
           ids: ["paladin"],
           min: 1,
-          max: 5,
         },
       ],
     },
@@ -128,7 +127,10 @@ export const rules = {
       units: [
         {
           ids: ["battle-pilgrims"],
-          min: 0,
+          max: 1
+        },
+        {
+          ids: ["pegasus-knights"],
           max: 1
         },
       ],
@@ -138,7 +140,6 @@ export const rules = {
       units: [
         {
           ids: ["grail-knights"],
-          min: 0,
           max: 1,
         },
       ],

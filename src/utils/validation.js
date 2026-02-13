@@ -702,7 +702,7 @@ export const validateList = ({ list, language, intl }) => {
   const checkRules = ({ ruleUnit, type }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
-        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        ? [...list.characters, ...list.lords,...list.heroes, ...list.core, ...list.special, ...list.rare]
         : (list[type] || [])
     ).filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0]),
@@ -710,7 +710,7 @@ export const validateList = ({ list, language, intl }) => {
     const requiredUnitsInList =
       ruleUnit.requiresType &&
       (ruleUnit.requiresType === "all"
-        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        ? [...list.characters, ...list.lords,...list.heroes, ...list.core, ...list.special, ...list.rare]
         : list[ruleUnit.requiresType]
       ).filter(
         (unit) =>
@@ -839,6 +839,8 @@ export const validateList = ({ list, language, intl }) => {
     if (ruleUnit.requiresIfGeneral && generals.length > 0) {
       const requiredUnitsByGeneralInList = [
         ...list.characters,
+        ...list.lords,
+        ...list.heroes,
         ...list.core,
         ...list.special,
         ...list.rare,
@@ -1012,7 +1014,7 @@ export const validateList = ({ list, language, intl }) => {
   const checkFor0XRules = ({ ruleUnit, type }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
-        ? [...list.characters, ...list.core, ...list.special, ...list.rare]
+        ? [...list.characters, ...list.lords, ...list.heroes, ...list.core, ...list.special, ...list.rare]
         : (list[type] || [])
     ).filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0]),
