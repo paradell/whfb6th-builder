@@ -70,7 +70,7 @@ const hasSharedCombinedArmsLimit = (otherUnit, unitToValidate) => {
 
 export const validateList = ({ list, language, intl }) => {
   const errors = [];
-  const generals = !list?.characters?.length
+  const characterGenerals = !list?.characters?.length
     ? []
     : list.characters.filter(
         (unit) =>
@@ -79,6 +79,26 @@ export const validateList = ({ list, language, intl }) => {
             (command) => command.active && command.name_en === "General",
           ),
       );
+  const lordGenerals = !list?.lords?.length
+      ? []
+      : list.lords.filter(
+          (unit) =>
+              unit.command &&
+              unit.command.find(
+                  (command) => command.active && command.name_en === "General",
+              ),
+      );
+  const heroesGenerals = !list?.heroes?.length
+      ? []
+      : list.heroes.filter(
+          (unit) =>
+              unit.command &&
+              unit.command.find(
+                  (command) => command.active && command.name_en === "General",
+              ),
+      );
+
+  const generals = [...characterGenerals, ...lordGenerals, ...heroesGenerals];
   // The general must be one of the characters with the highest leadership
   let highestLeadership = 0;
   if (list?.characters?.length) {
@@ -106,9 +126,9 @@ export const validateList = ({ list, language, intl }) => {
     });
   }
 
-  const BSBs = !list.characters?.length
+  const BSBs = !list.heroes?.length
     ? []
-    : list.characters.filter(
+    : list.heroes.filter(
         (unit) =>
           unit.command &&
           unit.command.find(
@@ -156,17 +176,23 @@ export const validateList = ({ list, language, intl }) => {
     mercUnits +
     allyUnits;
   const characterUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].characters.units
-    : rules["grand-army"].characters.units;
+    ? rules[list.armyComposition].characters?.units
+    : rules["grand-army"].characters?.units;
+  const lordsUnitsRules = rules[list.armyComposition]
+    ? rules[list.armyComposition].lords?.units
+    : rules["grand-army"].lords?.units;
+  const heroesUnitsRules = rules[list.armyComposition]
+    ? rules[list.armyComposition].heroes?.units
+    : rules["grand-army"].heroes?.units;
   const coreUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].core.units
-    : rules["grand-army"].core.units;
+    ? rules[list.armyComposition].core?.units
+    : rules["grand-army"].core?.units;
   const specialUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].special.units
-    : rules["grand-army"].special.units;
+    ? rules[list.armyComposition].special?.units
+    : rules["grand-army"].special?.units;
   const rareUnitsRules = rules[list.armyComposition]
-    ? rules[list.armyComposition].rare.units
-    : rules["grand-army"].rare.units;
+    ? rules[list.armyComposition].rare?.units
+    : rules["grand-army"].rare?.units;
   const alliesUnitsRules = rules[list.armyComposition]
     ? rules[list.armyComposition]?.allies?.units
     : rules["grand-army"]?.allies?.units;
@@ -217,14 +243,14 @@ export const validateList = ({ list, language, intl }) => {
   generalsCount === 0 &&
     errors.push({
       message: "misc.error.noGeneral",
-      section: "characters",
+      section: "global",
     });
 
   // Multiple generals
   generalsCount > 1 &&
     errors.push({
       message: "misc.error.multipleGenerals",
-      section: "characters",
+      section: "global",
     });
 
   // General doesn't have highest leadership in the army
@@ -236,14 +262,14 @@ export const validateList = ({ list, language, intl }) => {
     unitLeadership < highestLeadership &&
     errors.push({
       message: "misc.error.generalLeadership",
-      section: "characters",
+      section: "global",
     });
 
   // Multiple BSBs
   BSBsCount > 1 &&
     errors.push({
       message: "misc.error.multipleBSBs",
-      section: "characters",
+      section: "global",
     });
 
   // Grand Melee
@@ -617,7 +643,7 @@ export const validateList = ({ list, language, intl }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
         ? [...list.characters, ...list.core, ...list.special, ...list.rare]
-        : list[type]
+        : (list[type] || [])
     ).filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0]),
     );
@@ -927,7 +953,7 @@ export const validateList = ({ list, language, intl }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
         ? [...list.characters, ...list.core, ...list.special, ...list.rare]
-        : list[type]
+        : (list[type] || [])
     ).filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0]),
     );
@@ -947,6 +973,16 @@ export const validateList = ({ list, language, intl }) => {
   characterUnitsRules &&
     characterUnitsRules.forEach((ruleUnit) => {
       checkFor0XRules({ ruleUnit, type: "characters" });
+    });
+
+  lordsUnitsRules &&
+    lordsUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "lords" });
+    });
+
+  heroesUnitsRules &&
+    heroesUnitsRules.forEach((ruleUnit) => {
+      checkFor0XRules({ ruleUnit, type: "heroes" });
     });
 
   coreUnitsRules &&
@@ -977,6 +1013,16 @@ export const validateList = ({ list, language, intl }) => {
   characterUnitsRules &&
     characterUnitsRules.forEach((ruleUnit) => {
       checkRules({ ruleUnit, type: "characters" });
+    });
+
+  lordsUnitsRules &&
+    lordsUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "lords" });
+    });
+
+  heroesUnitsRules &&
+    heroesUnitsRules.forEach((ruleUnit) => {
+      checkRules({ ruleUnit, type: "heroes" });
     });
 
   coreUnitsRules &&

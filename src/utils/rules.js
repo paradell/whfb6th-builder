@@ -97,6 +97,57 @@ export const rules = {
       maxPercent: 25,
     },
   },
+  "bretonnia": {
+    characters: {
+      maxSlots: 5,
+    },
+    lords:{
+      maxSlots: 1,
+    },
+    heroes: {
+      maxSlots: 5,
+      units: [
+        {
+          ids: ["paladin"],
+          min: 1,
+          max: 5,
+        },
+      ],
+    },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["mounted-knights-of-the-realm"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["battle-pilgrims"],
+          min: 0,
+          max: 1
+        },
+      ],
+    },
+    rare: {
+      maxSlots: 2,
+      units: [
+        {
+          ids: ["grail-knights"],
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    mercenaries: { maxSlots: 0 },
+    allies: {
+      maxSlots: 0,
+    },
+  },
   "errantry-crusades": {
     characters: {
       maxPercent: 50,
