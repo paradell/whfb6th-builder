@@ -100,7 +100,7 @@ export const validateList = ({ list, language, intl }) => {
 
   const generals = [...characterGenerals, ...lordGenerals, ...heroesGenerals];
   // The general must be one of the characters with the highest leadership
-  let highestLeadership = 0;
+  let charactersHighestLeadership = 0;
   if (list?.characters?.length) {
     list.characters.forEach((unit) => {
       if (
@@ -119,12 +119,72 @@ export const validateList = ({ list, language, intl }) => {
             : unit.name_en.replace(" {renegade}", "");
         const leadership = getUnitLeadership(unitName);
 
-        if (leadership && leadership > highestLeadership) {
-          highestLeadership = leadership;
+        if (leadership && leadership > charactersHighestLeadership) {
+          charactersHighestLeadership = leadership;
         }
       }
     });
   }
+
+  let lordsHighestLeadership = 0;
+  if (list?.lords?.length) {
+    list.lords.forEach((unit) => {
+      if (
+          unit.command &&
+          unit.command.find(
+              (command) =>
+                  command.name_en === "General" &&
+                  (!command.armyComposition ||
+                      equalsOrIncludes(command.armyComposition, list.armyComposition)),
+          )
+      ) {
+        const unitName =
+            unit.name_en.includes("renegade") &&
+            list.armyComposition?.includes("renegade")
+                ? unit.name_en
+                : unit.name_en.replace(" {renegade}", "");
+        const leadership = getUnitLeadership(unitName);
+
+        if (leadership && leadership > lordsHighestLeadership) {
+          lordsHighestLeadership = leadership;
+        }
+      }
+    });
+  }
+
+  let heroesHighestLeadership = 0;
+  if (list?.heroes?.length) {
+    list.heroes.forEach((unit) => {
+      if (
+          unit.command &&
+          unit.command.find(
+              (command) =>
+                  command.name_en === "General" &&
+                  (!command.armyComposition ||
+                      equalsOrIncludes(command.armyComposition, list.armyComposition)),
+          )
+      ) {
+        const unitName =
+            unit.name_en.includes("renegade") &&
+            list.armyComposition?.includes("renegade")
+                ? unit.name_en
+                : unit.name_en.replace(" {renegade}", "");
+        const leadership = getUnitLeadership(unitName);
+
+        if (leadership && leadership > heroesHighestLeadership) {
+          heroesHighestLeadership = leadership;
+        }
+      }
+    });
+  }
+
+  // highestLeadership should be the highest value between    charactersHighestLeadership, lordsHighestLeadership and heroesHighestLeadership
+    const highestLeadership = Math.max(
+        charactersHighestLeadership,
+        lordsHighestLeadership,
+        heroesHighestLeadership
+    );
+
 
   const BSBs = !list.heroes?.length
     ? []
