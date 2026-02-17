@@ -1063,6 +1063,10 @@
     "url": "special-rules/blessings-of-the-lady",
     "page": "FoF, p. 107"
   },
+  "the blessing of the lady":
+  {
+    "url": "special-rules/the-blessing-of-the-lady"
+  },
   "swallow whole": {
     "url": "special-rules/swallow-whole",
     "page": "RH, p. 110"
@@ -1348,6 +1352,7 @@
     "page": "FoF, p. 176"
   },
   "peasantry": { "url": "special-rules/peasantry", "page": "FoF, p. 107" },
+  "the peasant's duty": {"url":  "special-rules/the-peasants-duty"},
   "indiscriminate hunger": {
     "url": "special-rules/indiscriminate-hunger",
     "page": "AJ:O&GT, p. 38"
