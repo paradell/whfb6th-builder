@@ -1,0 +1,22 @@
+{
+  "id": "warhammer-fantasy-mdn",
+  "name": "Warhammer Fantasy Battles: Manuscritos de Nuth",
+  "armies": [
+    {
+      "id": "bretonnia-mdn",
+      "name_de": "Bretonnia",
+      "name_en": "Bretonnia",
+      "name_cn": "巴托尼亚王国",
+      "name_es": "Bretonia",
+      "name_fr": "Bretonnie",
+      "items": ["general", "bretonnia", "knightly-virtues"],
+      "armyComposition": [
+        "bretonnia-mdn",
+        "errantry-war-mdn"
+      ],
+      "allies": [],
+      "mercenaries": {}
+    }
+
+  ]
+}
