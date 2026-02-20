@@ -17,10 +17,10 @@
       }
     ],
     "armyComposition": {
-      "bretonnia": {
+      "bretonnia-mdn": {
         "category": "lords"
       },
-      "errantry-war": {
+      "errantry-war-mdn": {
         "category": "lords"
       }
     },
@@ -229,7 +229,7 @@
               "name_en": "Barding",
               "name_cn": "马铠",
               "name_fr": "Caparaçon",
-              "points": 15
+              "points": 6
             }
           ]
         },
@@ -239,6 +239,11 @@
           "name_de": "Königspegasus",
           "name_fr": "Pégase Royal",
           "points": 50
+        },
+        {
+          "name_en": "Unicorn",
+          "name_es": "Unicornio",
+          "points": 65
         }
       ],
       "items": [
@@ -266,7 +271,7 @@
         "name_fr": "Aura de la Dame, Bénédiction de la Dame, Domaine de la Dame, Attaques Magiques, Résistance à la Magie (-2), Bouclier de la Dame"
       },
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "lords"
         }
       }
@@ -280,10 +285,10 @@
     "id": "paladin",
     "points": 60,
     "armyComposition": {
-      "bretonnia": {
+      "bretonnia-mdn": {
         "category": "heroes"
       },
-      "errantry-war": {
+      "errantry-war-mdn": {
         "category": "heroes"
       }
     },
@@ -430,10 +435,10 @@
       "id": "damsel",
       "points": 70,
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "heroes"
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
           "category": "heroes"
         }
       },
@@ -597,28 +602,188 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour, Shields",
+          "name_en": "Light armour",
+          "name_es": "Armadura Ligera",
           "name_cn": "轻甲",
           "name_de": "Leichte Rüstung",
           "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 1,
+          "perModel": true
         }
       ],
       "options": [],
       "mounts": [],
       "specialRules": {
         "name_en": "The Peasant's Duty",
+        "name_es": "El Deber del Campesino",
         "name_cn": "紧密阵型, 部群, 炮灰, 农民, 盾墙, 战帮",
         "name_de": "Geschlossene Ränge, Horde, Gesindel, Bauernvolk, Schildwall, Kriegerschar",
         "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
       },
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "core"
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Yeomen",
+      "name_es": "Escuderos",
+      "name_cn": "武装民兵",
+      "name_de": "Landsknechte",
+      "name_fr": "Hommes d’Armes",
+      "id": "yeomen",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_de": "Freisasse",
+          "name_en": "Yeoman (champion)",
+          "name_es": "Oficial Escudero",
+          "name_cn": "自由民(冠军)",
+          "name_fr": "Prévôt (champion)",
+          "points": 10
+        },
+        {
+          "name_de": "Standartenträger",
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "points": 10
+        },
+        {
+          "name_de": "Musiker",
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_fr": "Musicien",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Halberd",
+          "name_cn": "单手武器, 长柄武器, 盾牌",
+          "name_de": "Handwaffe, Stangenwaffe, Schild",
+          "name_fr": "Armes de base, Armes d’hast, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Hand weapons, Spears",
+          "name_cn": "单手武器, 长柄武器, 盾牌",
+          "name_de": "Handwaffe, Stangenwaffe, Schild",
+          "name_fr": "Armes de base, Armes d’hast, Boucliers",
+          "points": 0,
+          "perModel": true
+        },
+        {
+          "name_en": "Hand weapons, Great Weapons",
+          "name_es": "Aramas de mano, Arma a dos manos",
+          "name_cn": "单手武器, 长柄武器, 盾牌",
+          "name_de": "Handwaffe, Stangenwaffe, Schild",
+          "name_fr": "Armes de base, Armes d’hast, Boucliers",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name_es": "Armadura Ligera",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty",
+        "name_es": "El Deber del Campesino",
+        "name_cn": "紧密阵型, 部群, 炮灰, 农民, 盾墙, 战帮",
+        "name_de": "Geschlossene Ränge, Horde, Gesindel, Bauernvolk, Schildwall, Kriegerschar",
+        "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
+      },
+      "armyComposition": {
+        "bretonnia-mdn": {
+          "category": "core"
+        },
+        "errantry-war-mdn": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Brigands",
+      "name_es": "Brigands",
+      "id": "brigands",
+      "points": 3,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_es": "Aramas de mano",
+          "name_cn": "单手武器, 长柄武器, 盾牌",
+          "name_de": "Handwaffe, Stangenwaffe, Schild",
+          "name_fr": "Armes de base, Armes d’hast, Boucliers",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_es": "Arma de mano adicional",
+          "name_cn": "单手武器, 长柄武器, 盾牌",
+          "name_de": "Handwaffe, Stangenwaffe, Schild",
+          "name_fr": "Armes de base, Armes d’hast, Boucliers",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "armor": [
+      ],
+      "options": [{
+        "name_en": "Handgun",
+        "name_es": "Arcabuz",
+        "points": 3,
+        "perModel": true
+      }],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Escoria, Desdén por la Pólvora",
+        "name_es": "Escoria, Desdén por la Pólvora",
+        "name_cn": "紧密阵型, 部群, 炮灰, 农民, 盾墙, 战帮",
+        "name_de": "Geschlossene Ränge, Horde, Gesindel, Bauernvolk, Schildwall, Kriegerschar",
+        "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
+      },
+      "armyComposition": {
+        "bretonnia-mdn": {
           "category": "core"
         }
       }
@@ -695,19 +860,16 @@
           "active": true
         },
         {
+          "name_en": "Mantlets",
+          "name_es": "Manteletes",
+          "points": 0
+        },
+        {
           "name_en": "Burning Braziers",
           "name_cn": "火盆",
           "name_de": "Feuerschalen",
           "name_fr": "Braséros",
           "points": 5
-        },
-        {
-          "name_en": "Skirmishers",
-          "name_cn": "散兵",
-          "name_de": "Plänkler",
-          "name_fr": "Tirailleurs",
-          "points": 1,
-          "perModel": true
         }
       ],
       "mounts": [],
@@ -718,10 +880,198 @@
         "name_fr": "Ordre Serré, Conscrits, Paysannerie"
       },
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "core"
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Hunters",
+      "name_es": "Cazadores",
+      "name_cn": "民兵弓箭手",
+      "name_de": "Bogenschützen",
+      "name_fr": "Paysans Archers",
+      "id": "hunters",
+      "points": 7,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Villein (champion)",
+          "name_cn": "农奴(冠军)",
+          "name_de": "Grundhöriger",
+          "name_fr": "Maître Archer (champion)",
+          "points": 5
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 10
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_fr": "Musicien",
+          "name_de": "Musiker",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Longbows",
+          "name_cn": "单手武器, 长弓",
+          "name_de": "Handwaffen und Langbogen",
+          "name_fr": "Armes de base, Arcs longs",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "keine Rüstung",
+          "name_fr": "Pas d’armure",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Burning Braziers",
+          "name_cn": "火盆",
+          "name_de": "Feuerschalen",
+          "name_fr": "Braséros",
+          "points": 5
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty, Skirmishers",
+        "name_es": "El Deber del Campesino, Hostigadores",
+        "name_cn": "紧密阵型, 炮灰, 农民",
+        "name_de": "Geschlossene Ränge, Gesindel, Bauernvolk",
+        "name_fr": "Ordre Serré, Conscrits, Paysannerie"
+      },
+      "armyComposition": {
+        "bretonnia-mdn": {
+          "category": "core"
+        },
+        "errantry-war-mdn": {
+          "category": "core"
+        }
+      }
+    },
+    {
+      "name_en": "Crossbowmen",
+      "name_es": "Arblastiers",
+      "name_cn": "民兵弓箭手",
+      "name_de": "Bogenschützen",
+      "name_fr": "Arblastiers",
+      "id": "arblastiers",
+      "points": 8,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_en": "Villein (champion)",
+          "name_cn": "农奴(冠军)",
+          "name_de": "Grundhöriger",
+          "name_fr": "Maître Archer (champion)",
+          "points": 5
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 10
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_fr": "Musicien",
+          "name_de": "Musiker",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Crossbows",
+          "name_es": "Armas de mano, Ballestas",
+          "name_cn": "单手武器, 长弓",
+          "name_de": "Handwaffen und Langbogen",
+          "name_fr": "Armes de base, Arcs longs",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "No armour",
+          "name_cn": "无甲",
+          "name_de": "keine Rüstung",
+          "name_fr": "Pas d’armure",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Light armour",
+          "name_cn": "轻甲",
+          "name_de": "Leichte Rüstung",
+          "name_fr": "Armure légère",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Defensive Stakes",
+          "name_cn": "拒马",
+          "name_de": "Pfähle",
+          "name_fr": "Pieux de Défense",
+          "points": 0,
+          "active": true
+        },
+        {
+          "name_en": "Mantlets",
+          "name_es": "Manteletes",
+          "points": 0
+        },
+        {
+          "name_en": "Burning Braziers",
+          "name_cn": "火盆",
+          "name_de": "Feuerschalen",
+          "name_fr": "Braséros",
+          "points": 5
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty",
+        "name_cn": "紧密阵型, 炮灰, 农民",
+        "name_de": "Geschlossene Ränge, Gesindel, Bauernvolk",
+        "name_fr": "Ordre Serré, Conscrits, Paysannerie"
+      },
+      "armyComposition": {
+        "bretonnia-mdn": {
           "category": "core"
         }
       }
@@ -736,7 +1086,7 @@
       "minimum": 5,
       "maximum": 15,
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights of the Realm",
@@ -746,7 +1096,7 @@
             "name_fr": "1+ unité de Chevaliers du Royaume à Pied et/ou de Chevaliers du Royaume Montés"
           }
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
           "category": "core"
         }
       },
@@ -821,10 +1171,10 @@
       "minimum": 5,
       "maximum": 15,
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "core"
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights Errant",
@@ -844,6 +1194,12 @@
           "points": 0,
           "active": true,
           "alwaysActive": true
+        },
+        {
+          "name_en": "Grail Knight (champion)",
+          "name_es": "Caballero del Grial (campeón)",
+          "points": 22,
+          "armyComposition": ["errantry-war-mdn"]
         },
         {
           "name_en": "Standard bearer",
@@ -971,12 +1327,110 @@
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, le Vœu de la Quête"
       },
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "special"
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
           "category": "special"
         }
+      }
+    },
+    {
+      "name_en": "Knights of the Realm on Foot",
+      "name_es": "Caballeros a Pie",
+      "name_cn": "骑马王国骑士",
+      "name_de": "Berittene Ritter des Königs",
+      "name_fr": "Chevaliers du Royaume Montés",
+      "id": "knights-of-the-realm-on-foot",
+      "points": 8,
+      "minimum": 10,
+      "armyComposition": {
+        "bretonnia-mdn": {
+          "category": "special"
+        },
+        "errantry-war-mdn": {
+          "category": "rare"
+        }
+      },
+      "command": [
+        {
+          "name_en": "First Knight (champion)",
+          "name_es": "Caballero Ejemplar",
+          "name_cn": "首席骑士(冠军)",
+          "name_de": "Erster Ritter",
+          "name_fr": "Champion du Royaume (champion)",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Standard bearer",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 10,
+          "magic": {
+            "maxPoints": 50,
+            "types": ["banner"]
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_cn": "乐手",
+          "name_fr": "Musicien",
+          "name_de": "Musiker",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_es": "Armas de mano",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Great weapons",
+          "name_es": "Armas a dos mano",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_es": "Armadura pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true
+        },
+        {
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "options": [{
+        "name_en": "The Knight's Vow",
+        "name_es": "El Voto del Caballero",
+        "points": 0,
+        "perModel": true,
+        "active": true
+      },
+        {
+          "name_en": "The Questing Vow",
+          "name_es": "El Voto de la Búsqueda",
+          "points": 3,
+          "perModel": true
+        }],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Blessing of the Lady",
+        "name_cn": "女神祝福, 紧密阵型, 反制冲锋, 良种战马, 先行冲锋, 枪骑阵型, 快速行进, 骑士誓言",
+        "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Swiftstride, The Knight's Vow",
+        "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, Le Vœu du Chevalier"
       }
     },
     {
@@ -1052,7 +1506,7 @@
       "name_de": "Berittene Freisassen",
       "name_fr": "Sergents montés",
       "id": "mounted-yeomen",
-      "points": 15,
+      "points": 12,
       "minimum": 5,
       "maximum": 0,
       "command": [
@@ -1080,13 +1534,29 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons, Cavalry spear, Shortbows",
-          "name_cn": "单手武器, 骑兵长矛, 短弓",
-          "name_de": "Handwaffen, Kavalleriespeere, Kurzbogen",
-          "name_fr": "Armes de base, Lances de cavalerie, Arcs courts",
+          "name_en": "Hand weapons",
+          "name_es": "Armas de mano",
           "points": 0,
           "perModel": true,
           "active": true
+        },
+        {
+          "name_en": "Spear",
+          "name_es": "Lanza",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Bow",
+          "name_es": "Arco",
+          "points": 2,
+          "perModel": true
+        },
+        {
+          "name_en": "Crossbow",
+          "name_es": "Ballesta",
+          "points": 2,
+          "perModel": true
         }
       ],
       "armor": [
@@ -1126,10 +1596,10 @@
         "name_fr": "Cavalerie Rapide, Tir & Fuite, Conscrits, Ordre Dispersé, Paysannerie, Mouvement de Réserve, Tirailleurs, Rapide"
       },
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "special"
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
           "category": "special"
         }
       }
@@ -1144,7 +1614,7 @@
       "minimum": 6,
       "maximum": 24,
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "special",
           "notes": {
             "name_en": "0-1 units of Battle Pilgrims per army",
@@ -1154,7 +1624,7 @@
             "name_fr": "0-21 unités de Pèlerins du Graal par tranche de 1000 points"
           }
         },
-        "errantry-war": {
+        "errantry-war-mdn": {
           "category": "rare"
         }
       },
@@ -1198,6 +1668,90 @@
         "name_cn": "紧密阵型, 仇恨(所有敌人), 炮灰, 农民, 坚毅",
         "name_de": "Close Order, Hatred (all enemies), Levies, The Peasant's Duty, Stubborn",
         "name_fr": "Ordre Serré, Haine (Tous les ennemis), Conscrits, Paysannerie, Obstiné"
+      }
+    },
+    {
+      "name_en": "Siege Balista",
+      "name_es": "Balista de Asedio",
+      "id": "siege-balista",
+      "points": 35,
+      "minimum": 1,
+      "maximum": 2,
+      "command": [
+        {
+          "name_en": "Capataz",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armyComposition": {
+        "bretonnia-mdn": {
+          "category": "special"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Bolt Thrower",
+          "name_es": "Lanzavirotes",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty",
+        "name_es": "El Deber del Campesino",
+        "name_cn": "炮灰, 农民, 散兵",
+        "name_de": "Bauernvolk, Gesindel, Plänkler",
+        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
+      }
+    },
+    {
+      "name_en": "Pot-de-Feu",
+      "name_es": "Pot-de-Feu",
+      "id": "pot-de-feu",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 2,
+      "command": [
+        {
+          "name_en": "Capataz",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armyComposition": {
+        "bretonnia-mdn": {
+          "category": "special"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Bolt Thrower",
+          "name_es": "Lanzavirotes",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty, Pot-de-Feu",
+        "name_es": "El Deber del Campesino, Pot-de-Feu, Desdén por la Pólvora",
+        "name_cn": "炮灰, 农民, 散兵",
+        "name_de": "Bauernvolk, Gesindel, Plänkler",
+        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
       }
     }
   ],
@@ -1265,7 +1819,7 @@
         "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Saints Vivants, Rapide, Le Vœu du Graal"
       },
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "rare",
           "notes": {
             "name_en": "0-1 units of Grail Knights per army",
@@ -1275,6 +1829,34 @@
             "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
         }
+      }
+    },
+    {
+      "name_en": "Royal Pegasus",
+      "name_es": "Pegaso Real",
+      "id": "royal-pegasus",
+      "points": 50,
+      "command": [
+      ],
+      "armyComposition": {
+        "bretonnia-mdn": {
+          "category": "rare"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Hand weapons",
+          "name_es": "Armas de mano",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Fly",
+        "name_es": "Volar"
       }
     },
     {
@@ -1294,11 +1876,11 @@
         }
       ],
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "rare"
         },
 
-        "errantry-war": {
+        "errantry-war-mdn": {
           "category": "rare",
           "notes": {
             "name_en": "0-1 units of Trebuchet per army",
@@ -1315,6 +1897,50 @@
           "name_cn": "野战投石机, 单手武器",
           "name_de": "Feldtrebuchet, Handwaffen",
           "name_fr": "Trébuchet de Campagne, Armes de base",
+          "points": 0,
+          "active": true
+        }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "The Peasant's Duty",
+        "name_es": "El Deber del Campesino",
+        "name_cn": "炮灰, 农民, 散兵",
+        "name_de": "Bauernvolk, Gesindel, Plänkler",
+        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
+      }
+    },
+    {
+      "name_en": "Bretonnian Cannon",
+      "name_es": "Cañón Bretoniano",
+      "id": "bretonnian-cannon",
+      "points": 70,
+      "command": [
+        {
+          "name_en": "Capataz",
+          "name_cn": "旗手",
+          "name_fr": "Porte-étendard",
+          "name_de": "Standartenträger",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armyComposition": {
+        "bretonnia-mdn": {
+          "category": "rare"
+        },
+
+        "errantry-war-mdn": {
+          "category": "rare"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "Cannon, Breonnian Cannon, Hand weapons",
+          "name_es": "Cañón, Cañón Bretoniano, Armas de mano",
           "points": 0,
           "active": true
         }
