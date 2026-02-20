@@ -363,7 +363,7 @@
   "rename.title": "Renombrar unidad",
   "404.title": "404 - Página no encontrada",
   "changelog.title": "Novedades",
-  "changelog.change0": "Nuevo editor de  {datasets} para hacer más sencillas las contribuciones. Puede expandir la información existente de los ejércitos, añadir traducciones, o crear un nuevo dataset.",
+  "changelog.change0": "Prueba de Concepto para generador de listas de Warhammer Fantasy",
   "changelog.change1": "Ahora es posible imprimir una lista sin puntos ni objetos mágicos.",
   "changelog.change2": "{privacy} añadida. Aunque no recolectamos datos personales, la necesitamos para el próximo lanzamiento de nuestra App móvil.",
   "changelog.change4": "¡La mayoría de <b>ejércitos de Warhammer: The Old World</b> están ya totalmente* <b>disponibles</b> gracias a nuestra gran comunidad!",

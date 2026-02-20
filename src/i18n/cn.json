@@ -363,7 +363,7 @@
   "rename.title": "重命名单位",
   "404.title": "404 - 页面未找到",
   "changelog.title": "新内容",
-  "changelog.change0": "New {datasets} editor for easier contribution. You can expand existing army data, add missing translations or create a new army dataset.",
+  "changelog.change0": "PoC for Warhammer Fantasy 6th Edition",
   "changelog.change1": "Printing a list without points or magic items is now possible.",
   "changelog.change2": "{privacy} added. Although we don't collect any personal data, we need it for the upcoming release of our Android app.",
   "changelog.change4": "Most <b>Warhammer: The Old World armies</b> are already fully* <b>available</b> thanks to our great community!",
