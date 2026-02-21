@@ -7,7 +7,8 @@ import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { Expandable } from "../../components/expandable";
-import theOldWorld from "../../assets/the-old-world.json";
+//import theOldWorld from "../../assets/the-old-world.json";
+import warhammerFantasy6th from "../../assets/warhammer-fantasy-6th.json";
 
 import "./CustomDatasets.css";
 
@@ -28,7 +29,7 @@ export const CustomDatasets = () => {
   const gameFileInput = createRef();
   const allDatasets = [
     ...customDatasets,
-    ...theOldWorld.armies.map((army) => ({
+    ...warhammerFantasy6th.armies.map((army) => ({
       id: army.id,
       name: `${army.id}.json`,
     })),
@@ -152,9 +153,9 @@ export const CustomDatasets = () => {
         <p>Manage and add custom game systems and datasets.</p>
         <p className="unit__notes">
           <Icon symbol="error" className="unit__notes-icon" />
-          Custom game systems also utilize ToW's list validation and magic
-          items. Game systems that are not derived from ToW and have different
-          rules are currently not supported (e.g., Warhammer 40k).
+          Custom game systems also utilize Warhammer Fantasy 6th edition's list validation and magic
+          items. Game systems that are not derived from 6th Edition and have different
+          rules are currently not supported.
         </p>
         <p className="unit__notes">
           <Icon symbol="error" className="unit__notes-icon" />
@@ -174,8 +175,8 @@ export const CustomDatasets = () => {
             <h2>Game systems</h2>
           </header>
           <ul>
-            <li className="list" key={theOldWorld.id}>
-              <div className="list__inner">{theOldWorld.name}</div>
+            <li className="list" key={warhammerFantasy6th.id}>
+              <div className="list__inner">{warhammerFantasy6th.name}</div>
             </li>
             {customGames.map((game) => (
               <Expandable
@@ -278,7 +279,7 @@ export const CustomDatasets = () => {
             <h2>Datasets</h2>
           </header>
           <ul>
-            {theOldWorld.armies.map((game) => (
+            {warhammerFantasy6th.armies.map((game) => (
               <li className="list" key={game.id}>
                 <div className="list__inner">
                   {game.name_en}
