@@ -242,9 +242,9 @@ export const CustomDatasets = () => {
               className="custom__link"
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/nthiebes/old-world-builder/blob/main/src/assets/the-old-world.json"
+              href="https://github.com/paradell/whfb6th-builder/blob/source/src/assets/warhammer-fantasy-6th.json"
             >
-              the-old-world.json
+              warhammer-fantasy-6th.json
             </a>
           </p>
           <form onSubmit={handleGameSubmit}>
@@ -319,7 +319,7 @@ export const CustomDatasets = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://github.com/nthiebes/old-world-builder/blob/main/docs/datasets.md"
+              href="https://github.com/paradell/whfb6th-builder/blob/source/docs/datasets.md"
             >
               Datasets documentation
             </a>

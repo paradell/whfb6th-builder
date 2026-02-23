@@ -14,7 +14,9 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
 
 ```javascript
 {
-  "characters": [],
+  "characters": [], 
+  "lords": [],
+  "heroes": [],
   "core": [],
   "special": [],
   "rare": [],
