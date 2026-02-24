@@ -47,14 +47,16 @@
       "name_en": "Dispell Scroll",
       "points": 25,
       "type": "arcane-item",
-      "name": "dispell scroll"
+      "name": "dispell scroll",
+      "stackable": true
     },
     {
       "name_es": "Piedra de Energía",
       "name_en": "Power Stone",
       "points": 25,
       "type": "arcane-item",
-      "name": "power stone"
+      "name": "power stone",
+      "stackable": true
     },
     {
       "name_es": "Talisman de Protección",

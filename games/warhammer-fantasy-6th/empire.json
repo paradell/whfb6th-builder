@@ -3,10 +3,10 @@
   "lords": [],
   "heroes": [],
   "core": [ {
-      "name_en": "Imperial Soldiers",
-      "name_es": "Soldados Imperiales",
-      "id": "imperial-soldiers",
-      "points": 5,
+      "name_en": "Spearmen",
+      "name_es": "Lanceros",
+      "id": "imperial-spearmen",
+      "points": 6,
       "minimum": 10,
       "maximum": 0,
       "command": [
@@ -28,10 +28,8 @@
       ],
       "equipment": [
         {
-          "name_en": "Hand weapons",
-          "name_cn": "单手武器, 长柄武器, 盾牌",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
+          "name_en": "Hand weapons, Spears",
+          "name_es": "Arma de mano, Lanzas",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -40,19 +38,25 @@
       ],
       "armor": [
         {
-          "name_en": "Light armour, Shields",
-          "name_cn": "轻甲",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
+          "name_en": "Light armour",
+          "name:es": "Armadura ligera",
           "points": 0,
           "perModel": true,
           "active": true,
           "equippedDefault": true
         }
       ],
-      "options": [],
+      "options": [{
+        "name_en": "Shield",
+        "name:es": "Escudo",
+        "points": 1,
+        "perModel": true
+      }],
       "mounts": [],
-      "specialRules": {},
+      "specialRules": {
+        "name_en": "Detachment",
+        "name_es": "Destacamento"
+      },
       "armyComposition": {
         "empire": {
           "category": "core"

@@ -13,6 +13,29 @@
       ],
       "allies": [],
       "mercenaries": {}
+    },
+    {
+      "id": "empire",
+      "name_en": "the Empire",
+      "name_es": "El Imperio",
+      "items": ["general"],
+      "armyComposition": [
+        "empire"
+      ],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "orcs-and-goblins",
+      "name_en": "Orcs and Goblins",
+      "name_es": "Orcos y Goblins",
+      "items": ["general"],
+      "armyComposition": [
+        "orcs-and-goblins"
+      ],
+      "allies": [],
+      "mercenaries": {}
     }
+
   ]
 }
