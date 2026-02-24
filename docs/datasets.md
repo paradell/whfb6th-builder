@@ -168,7 +168,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
 ## Instructions to create custom datasets
 At this moment custom datasets will be created for Warhammer Fantasy 6th edition and its derivatives.
 
-1. From [Custom datasets](https://paradell.github.io/custom-datasets) page, download the [Warhammer Fantasy 6th edition dataset](https://github.com/paradell/whfb6th-builder/blob/source/src/assets/warhammer-fantasy-6th.json).
+1. From [Custom datasets](https://paradell.github.io/custom-datasets) page, download the [Warhammer Fantasy 6th edition dataset](../src/assets/warhammer-fantasy-6th.json).
 2. Edit the file and add a new element in army list with the new army data, following the structure defined above. If you want to add an "Orcs and "
 ```json
     {
@@ -184,7 +184,7 @@ At this moment custom datasets will be created for Warhammer Fantasy 6th edition
       "mercenaries": {}
     }
 ```
-3. Create a new file named `new_army_id.json` with the [dataset format](https://github.com/paradell/whfb6th-builder/blob/source/docs/dataset_template.json).
+3. Create a new file named `new_army_id.json` with the [dataset format](dataset_template.json).
 4. Add Unit options to the new army dataset file, following the structure defined above. You can use existing units as a reference, but make sure to use unique IDs for the new units.
 5. Once you have created the new dataset, you can upload it to the [Custom datasets](https://paradell.github.io/custom-datasets) page, and it will be available in your internet browser.
    1. First upload your edited `warhammer-fantasy-6th.json` file. You should see the new army in the list of available armies, but it will be empty because the new army dataset file is not uploaded yet.
@@ -196,3 +196,38 @@ At this moment custom datasets will be created for Warhammer Fantasy 6th edition
 6. Once the new dataset is ready to publish:
     * either open a new PR with the updated `warhammer-fantasy-6th.json` file and the new army dataset file (`new_army_id.json`), so it can be added to the official datasets.
     * or share the new dataset files with the community, so they can be uploaded as a new dataset.
+
+
+## Instrucciones para crear datasets personalizados (Español)
+En estos momentos, los ficheros de ejército personalizados se crearán para Warhammer Fantasy 6th edition y sus derivados como Manuscritos de Nuth.
+
+1. Desde la página de [Custom datasets](https://paradell.github.io/custom-datasets), descarga el dataset de [Warhammer Fantasy 6th edition](../src/assets/warhammer-fantasy-6th.json).
+2. Edita el archivo y añade un nuevo elemento en la lista de ejércitos con los datos del nuevo ejército, siguiendo la estructura definida más arriba. Si quieres añadir un "Orcs and "
+```json
+    {
+      "id": "new_army_id", // ID único del nuevo ejército, ejemplo: "orc-and-goblin". Debe usarse como referencia para todos los otros ítems en el dataset, p.ej. para las reglas de composición del ejército.
+      "name_en": "New Army Name", // Nombre en inglés (obligatorio)
+      "name_es": "Nombre del nuevo ejército", // Nombre en español (opcional)
+      "items": ["general"],
+      "armyComposition": [
+        "new_army_id", // Obligatorio. Esta será la composición básica del ejército, tal como aparece en el libro oficial de Warhammer 6ª edición
+        "new_army_alternative_list" // Opcional. Será una composición alternativa, como las listas que aparecen en el libro "Storm of Chaos".
+      ],
+      "allies": [],
+      "mercenaries": {}
+    }
+```
+3. Crea un nuevo archivo llamado `new_army_id.json` con el [formato de dataset](dataset_template.json).
+4. Añade las opciones de unidad al nuevo archivo del dataset del ejército, siguiendo la estructura definida más arriba. Puedes usar unidades existentes como referencia, pero asegúrate de usar IDs únicos para las nuevas unidades.
+5. Una vez que hayas creado el nuevo dataset, puedes subirlo a la página de [Custom datasets](https://paradell.github.io/custom-datasets), y estará disponible en tu navegador.
+   1. Primero sube tu archivo `warhammer-fantasy-6th.json` editado. Deberías ver el nuevo ejército en la lista de ejércitos disponibles, pero estará vacío porque el archivo de dataset del nuevo ejército aún no se ha subido.
+![Upload custom Game System](../public/screenshots/upload_custom_game_system.png)
+   2. Después sube el archivo del nuevo dataset del ejército (`new_army_id.json`). Una vez subido, el nuevo ejército debería listarse en la sección del nuevo sistema de juego.
+![Upload custom army dataset](../public/screenshots/upload_custom_dataset.png)
+   3. Si intentas crear una nueva lista para el sistema 'Warhammer Fantasy 6th edition', deberías ver el nuevo ejército en la lista de ejércitos disponibles.
+![New list with new army](../public/screenshots/new_list_custom_dataset.png)
+6. Cuando el nuevo dataset esté listo para publicar:
+    * abre un PR con el archivo `warhammer-fantasy-6th.json` actualizado y el nuevo archivo del dataset (`new_army_id.json`) para que pueda añadirse a los datasets oficiales.
+    * o comparte los archivos del nuevo dataset con la comunidad para que puedan subirse como un nuevo dataset.
+
+
