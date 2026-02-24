@@ -21,6 +21,8 @@ const initialUnitState = {
   detachment: false,
   command: [],
   equipment: [],
+  melee: [],
+  ranged: [],
   armor: [],
   options: [],
   mounts: [],
@@ -296,11 +298,49 @@ export const Entity = ({ onSubmit, type, unit: existingUnit }) => {
       ],
     });
   };
-  const handleNewEquipment = () => {
+  const handleNewEquipment = () => { // TODO
     setUnit({
       ...unit,
       equipment: [
         ...unit.equipment,
+        {
+          name_en: "",
+          name_de: "",
+          name_es: "",
+          name_fr: "",
+          name_it: "",
+          name_pl: "",
+          points: 1,
+          perModel: true,
+          active: false,
+        },
+      ],
+    });
+  };
+  const handleNewMelee = () => {
+    setUnit({
+      ...unit,
+      melee: [
+        ...unit.melee,
+        {
+          name_en: "",
+          name_de: "",
+          name_es: "",
+          name_fr: "",
+          name_it: "",
+          name_pl: "",
+          points: 1,
+          perModel: true,
+          active: false,
+        },
+      ],
+    });
+  };
+  const handleNewRanged= () => {
+    setUnit({
+      ...unit,
+      ranged: [
+        ...unit.ranged,
         {
           name_en: "",
           name_de: "",

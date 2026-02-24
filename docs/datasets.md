@@ -68,7 +68,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       }
     }
   ],
-  "equipment": [ // All weapon options, they are mutually exclusive
+  "equipment": [ // All equipment options, they are mutually exclusive. Can be weapons, but it's recommended to use the "melee" and "ranged" categories for better organization and to allow more specific rules for those categories (e.g. for magic items that can only be taken by ranged weapons)
     {
       "name_en": String,
       "name_es": String,
@@ -83,6 +83,36 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       }
     }
   ],
+   "melee": [ // All melee options, they are mutually exclusive
+      {
+         "name_en": String,
+         "name_es": String,
+         "points": Number,
+         "perModel": Boolean, // Wether the points are counted per model, optional
+         "active": Boolean, // Wether it should be selected by default, optional
+         "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
+         "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+         "notes": { // Optional
+            "name_en": String,
+            "name_es": String
+         }
+      }
+   ],
+   "ranged": [ // All ranged weapons options, they are mutually exclusive
+      {
+         "name_en": String,
+         "name_es": String,
+         "points": Number,
+         "perModel": Boolean, // Wether the points are counted per model, optional
+         "active": Boolean, // Wether it should be selected by default, optional
+         "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
+         "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+         "notes": { // Optional
+            "name_en": String,
+            "name_es": String
+         }
+      }
+   ],
   "armor": [ // All armor options, they are mutually exclusive
     {
       "name_en": String,

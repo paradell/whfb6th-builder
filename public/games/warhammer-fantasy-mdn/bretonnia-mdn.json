@@ -1532,7 +1532,7 @@
           "points": 7
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons",
           "name_es": "Armas de mano",
@@ -1545,6 +1545,16 @@
           "name_es": "Lanza",
           "points": 1,
           "perModel": true
+        }
+      ],
+      "ranged": [
+
+        {
+          "name_en": "None",
+          "name_es": "Ninguno",
+          "points": 0,
+          "perModel": true,
+          "active": true
         },
         {
           "name_en": "Bow",

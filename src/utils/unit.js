@@ -33,6 +33,8 @@ export const getAllOptions = (
   {
     mounts,
     equipment,
+    melee,
+    ranged,
     armor,
     options,
     command,
@@ -96,7 +98,7 @@ export const getAllOptions = (
       }
     });
   }
-  const allEquipment = equipment
+  const allEquipment = equipment // TODO
     ? equipment
         .filter(
           ({ active, equippedDefault, requiredMagicItem }) =>
@@ -108,6 +110,30 @@ export const getAllOptions = (
         )
         .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
     : [];
+  const allMelee = melee
+      ? melee
+          .filter(
+              ({ active, equippedDefault, requiredMagicItem }) =>
+                  (active && !requiredMagicItem) ||
+                  (equippedDefault && !requiredMagicItem) ||
+                  (active &&
+                      requiredMagicItem &&
+                      unitHasItem({ items }, requiredMagicItem)),
+          )
+          .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
+      : [];
+  const allRanged = ranged
+      ? ranged
+          .filter(
+              ({ active, equippedDefault, requiredMagicItem }) =>
+                  (active && !requiredMagicItem) ||
+                  (equippedDefault && !requiredMagicItem) ||
+                  (active &&
+                      requiredMagicItem &&
+                      unitHasItem({ items }, requiredMagicItem)),
+          )
+          .map(({ name_en, ...item }) => item[`name_${language}`] || name_en)
+      : [];
   const allArmor = armor
     ? armor
         .filter(
@@ -212,7 +238,7 @@ export const getAllOptions = (
   const allDetachments = detachments
     ? detachments
         .filter(({ strength }) => strength > 0)
-        .map(({ name_en, strength, equipment, armor, options, ...item }) => {
+        .map(({ name_en, strength, equipment, melee, ranged, armor, options, ...item }) => {
           let equipmentSelection = [];
 
           if (equipment && equipment.length) {
@@ -227,6 +253,38 @@ export const getAllOptions = (
                   equipmentSelection.push(
                     `${option[`name_${language}`]}` || option.name_en,
                   );
+              }
+            });
+          }
+
+          if (melee && melee.length) {
+            melee.forEach((option) => {
+              if (option.stackable && option.stackableCount > 0) {
+                equipmentSelection.push(
+                    `${option.stackableCount}x ${option[`name_${language}`]}` ||
+                    option.name_en,
+                );
+              } else {
+                (option.active || option.equippedDefault) &&
+                equipmentSelection.push(
+                    `${option[`name_${language}`]}` || option.name_en,
+                );
+              }
+            });
+          }
+
+          if (ranged && ranged.length) {
+            ranged.forEach((option) => {
+              if (option.stackable && option.stackableCount > 0) {
+                equipmentSelection.push(
+                    `${option.stackableCount}x ${option[`name_${language}`]}` ||
+                    option.name_en,
+                );
+              } else {
+                (option.active || option.equippedDefault) &&
+                equipmentSelection.push(
+                    `${option[`name_${language}`]}` || option.name_en,
+                );
               }
             });
           }
@@ -271,6 +329,8 @@ export const getAllOptions = (
 
   let allOptionsArray = [
     ...allEquipment,
+    ...allMelee,
+    ...allRanged,
     ...allArmor,
     ...allOptions,
     ...allCommand,

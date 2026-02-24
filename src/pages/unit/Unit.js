@@ -134,6 +134,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       maxDetachmentSize: detachment.maxDetachmentSize,
       scaleWithUnit: detachment.scaleWithUnit,
       equipment: detachment.equipment,
+      melee: detachment.melee,
+      ranged: detachment.ranged,
       armor: detachment.armor,
       options: detachment.options,
       specialRules: detachment.specialRules,
@@ -376,6 +378,46 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         unitId,
         equipment,
       }),
+    );
+  };
+  const handleMeleeChange = ({ id, group }) => {
+    const melee = unit.melee.map((item) => ({
+      ...item,
+      active:
+          item.group === group
+              ? item.id === id
+                  ? !item.active
+                  : false
+              : item.active,
+    }));
+
+    dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          melee,
+        }),
+    );
+  };
+  const handleRangedChange = ({ id, group }) => {
+    const ranged = unit.ranged.map((item) => ({
+      ...item,
+      active:
+          item.group === group
+              ? item.id === id
+                  ? !item.active
+                  : false
+              : item.active,
+    }));
+
+    dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          ranged,
+        }),
     );
   };
   const handleArmorChange = (id) => {
@@ -979,6 +1021,122 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 ),
               )}
           </>
+        )}
+        {unit.melee && unit.melee.length > 0 && (
+            <>
+              <h2 className="unit__subline">
+                <FormattedMessage id="unit.equipment" />
+              </h2>
+              {unit.melee
+                  .filter(
+                      (unitMelee) =>
+                          !unitMelee.armyComposition ||
+                          unitMelee.armyComposition.includes(unitArmyComposition),
+                  )
+                  .filter(({ requiredMagicItem }) =>
+                      requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+                  )
+                  .map(
+                      ({
+                         points,
+                         perModel,
+                         id,
+                         active = false,
+                         notes,
+                         group,
+                         ...melee
+                       }) => (
+                          <Fragment key={id}>
+                            <div className={group ? "checkbox" : "radio"}>
+                              <input
+                                  type={group ? "checkbox" : "radio"}
+                                  id={`equipment-${id}`}
+                                  name="melee"
+                                  value={group || id}
+                                  onChange={() => handleMeleeChange({ id, group })}
+                                  checked={active}
+                                  className={group ? "checkbox__input" : "radio__input"}
+                              />
+                              <label
+                                  htmlFor={`melee-${id}`}
+                                  className={group ? "checkbox__label" : "radio__label"}
+                              >
+                        <span className="unit__label-text">
+                          <RulesWithIcon textObject={melee} />
+                        </span>
+                                <i className="checkbox__points">
+                                  {getPointsText({ points, perModel })}
+                                </i>
+                              </label>
+                            </div>
+                            {getUnitOptionNotes({
+                              notes,
+                              key: `melee-${id}-note`,
+                              className: "unit__option-note",
+                              language,
+                            })}
+                          </Fragment>
+                      ),
+                  )}
+            </>
+        )}
+        {unit.ranged && unit.ranged.length > 0 && (
+            <>
+              <h2 className="unit__subline">
+                <FormattedMessage id="unit.equipment" />
+              </h2>
+              {unit.ranged
+                  .filter(
+                      (unitranged) =>
+                          !unitranged.armyComposition ||
+                          unitranged.armyComposition.includes(unitArmyComposition),
+                  )
+                  .filter(({ requiredMagicItem }) =>
+                      requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+                  )
+                  .map(
+                      ({
+                         points,
+                         perModel,
+                         id,
+                         active = false,
+                         notes,
+                         group,
+                         ...ranged
+                       }) => (
+                          <Fragment key={id}>
+                            <div className={group ? "checkbox" : "radio"}>
+                              <input
+                                  type={group ? "checkbox" : "radio"}
+                                  id={`equipment-${id}`}
+                                  name="ranged"
+                                  value={group || id}
+                                  onChange={() => handleRangedChange({ id, group })}
+                                  checked={active}
+                                  className={group ? "checkbox__input" : "radio__input"}
+                              />
+                              <label
+                                  htmlFor={`ranged-${id}`}
+                                  className={group ? "checkbox__label" : "radio__label"}
+                              >
+                        <span className="unit__label-text">
+                          <RulesWithIcon textObject={ranged} />
+                        </span>
+                                <i className="checkbox__points">
+                                  {getPointsText({ points, perModel })}
+                                </i>
+                              </label>
+                            </div>
+                            {getUnitOptionNotes({
+                              notes,
+                              key: `ranged-${id}-note`,
+                              className: "unit__option-note",
+                              language,
+                            })}
+                          </Fragment>
+                      ),
+                  )}
+            </>
         )}
         {unit.armor && unit.armor.length > 0 && (
           <>
