@@ -16,12 +16,9 @@ import { useLanguage } from "../../utils/useLanguage";
 import { getArmyData } from "../../utils/army";
 import { fetcher } from "../../utils/fetcher";
 import { getGameSystems, getCustomDatasetData } from "../../utils/game-systems";
-
 import { nameMap } from "../magic";
 
 import "./Add.css";
-
-import { isOfficialSystem } from "../../utils/game-systems";
 
 let allAllies = [];
 let allMercenaries = [];
@@ -85,15 +82,14 @@ export const Add = ({ isMobile }) => {
 
   useEffect(() => {
     if (list && !army && type !== "allies") {
-      const isCustom = !isOfficialSystem(game.id);
+      // Always try custom dataset first (army may be custom even in an official game system)
+      const customData = getCustomDatasetData(list.army);
 
-      if (isCustom) {
-        const data = getCustomDatasetData(list.army);
-
+      if (customData) {
         dispatch(
           setArmy(
             getArmyData({
-              data,
+              data: customData,
               armyComposition: list.armyComposition,
             })
           )
@@ -116,8 +112,8 @@ export const Add = ({ isMobile }) => {
     } else if (list && type === "allies" && allAllies.length === 0 && allies) {
       setAlliesLoaded(false);
       allies.forEach(({ army, armyComposition, magicItemsArmy }, index) => {
-        const isCustom = !isOfficialSystem(game.id);
-        const customData = isCustom && getCustomDatasetData(army);
+        // Always try custom dataset first
+        const customData = getCustomDatasetData(army);
 
         if (customData) {
           const armyData = getArmyData({
@@ -166,8 +162,8 @@ export const Add = ({ isMobile }) => {
       setMercenariesLoaded(false);
       mercenaries[list.armyComposition] &&
         mercenaries[list.armyComposition].forEach((mercenary, index) => {
-          const isCustom = !isOfficialSystem(game.id);
-          const customData = isCustom && getCustomDatasetData(mercenary.army);
+          // Always try custom dataset first
+          const customData = getCustomDatasetData(mercenary.army);
 
           if (customData) {
             const armyData = getArmyData({

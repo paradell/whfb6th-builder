@@ -102,17 +102,18 @@ export const NewList = ({ isMobile }) => {
     setRedirect(newId);
   };
   const handleSystemChange = (event) => {
-    dispatch(updateSetting({ key: "selectedGame", value: event.target.value }));
-    setArmy(
-      gameSystems.filter(({ id }) => id === event.target.value)[0].armies[0].id,
-    );
+    const newGameId = event.target.value;
+    const newGameArmies = gameSystems.find(({ id }) => id === newGameId)?.armies || [];
+    const firstArmy = newGameArmies[0];
+    dispatch(updateSetting({ key: "selectedGame", value: newGameId }));
+    setArmy(firstArmy?.id || "");
+    setArmyComposition(firstArmy?.armyComposition?.[0] || firstArmy?.id || "");
     setCompositionRule("open-war");
   };
   const handleArmyChange = (value) => {
+    const selectedArmy = armies.find(({ id }) => value === id);
     setArmy(value);
-    setArmyComposition(
-      armies.find(({ id }) => value === id).armyComposition[0],
-    );
+    setArmyComposition(selectedArmy?.armyComposition?.[0] || value);
     setCompositionRule("open-war");
   };
   const handleArcaneJournalChange = (value) => {
@@ -146,19 +147,12 @@ export const NewList = ({ isMobile }) => {
   useEffect(() => {
     // Sincronizar ejército cuando cambia el sistema de juego
     if (armies && armies.length > 0) {
-      const firstArmy = armies[0].id;
-      setArmy(firstArmy);
+      const firstArmy = armies[0];
+      setArmy(firstArmy.id);
+      setArmyComposition(firstArmy.armyComposition?.[0] || firstArmy.id);
       setCompositionRule("open-war");
     }
-  }, [game, armies]);
-
-  useEffect(() => {
-    // Sincronizar armyComposition cuando cambia el ejército seleccionado
-    const selectedArmy = armies.find(({ id }) => army === id);
-    if (selectedArmy?.armyComposition) {
-      setArmyComposition(selectedArmy.armyComposition[0]);
-    }
-  }, [army, armies]);
+  }, [game]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
@@ -227,8 +221,9 @@ export const NewList = ({ isMobile }) => {
                   ...journalArmies.map((journalArmy) => ({
                     id: journalArmy,
                     name_en:
-                      nameMap[journalArmy][`name_${language}`] ||
-                      nameMap[journalArmy].name_en,
+                      nameMap[journalArmy]?.[`name_${language}`] ||
+                      nameMap[journalArmy]?.name_en ||
+                      "Name not found",
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}
