@@ -29,6 +29,22 @@ export const getPointsPerModel = (unit) => {
     });
   }
 
+  if (unit.melee) {
+    unit.melee.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      }
+    });
+  }
+
+  if (unit.ranged) {
+    unit.ranged.forEach((option) => {
+      if (option.active && option.perModel) {
+        modelPoints += option.points;
+      }
+    });
+  }
+
   if (unit.armor) {
     unit.armor.forEach((option) => {
       if (option.active && option.perModel) {
@@ -113,6 +129,38 @@ export const getUnitPoints = (unit, settings) => {
       });
   }
 
+  if (unit.melee) {
+    unit.melee
+        .filter(
+            ({ active, requiredMagicItem }) =>
+                (active && !requiredMagicItem) ||
+                (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem)),
+        )
+        .forEach((option) => {
+          if (option.active && option.perModel) {
+            unitPoints += (unit.strength || 1) * option.points;
+          } else if (option.active) {
+            unitPoints += option.points;
+          }
+        });
+  }
+
+  if (unit.ranged) {
+    unit.ranged
+        .filter(
+            ({ active, requiredMagicItem }) =>
+                (active && !requiredMagicItem) ||
+                (active && requiredMagicItem && unitHasItem(unit, requiredMagicItem)),
+        )
+        .forEach((option) => {
+          if (option.active && option.perModel) {
+            unitPoints += (unit.strength || 1) * option.points;
+          } else if (option.active) {
+            unitPoints += option.points;
+          }
+        });
+  }
+
   if (unit.armor) {
     unit.armor
       .filter(
@@ -182,7 +230,7 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.detachments && !settings?.noDetachments) {
     unit.detachments.forEach(
-      ({ strength, points, equipment, armor, options }) => {
+      ({ strength, points, equipment, melee, ranged, armor, options }) => {
         unitPoints += strength * points;
 
         if (equipment && equipment.length) {
@@ -190,6 +238,30 @@ export const getUnitPoints = (unit, settings) => {
             if (option.stackable) {
               unitPoints +=
                 (option.stackableCount || option.minimum || 0) * option.points;
+            } else if (option.active && option.perModel) {
+              unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
+            }
+          });
+        }
+        if (melee && melee.length) {
+          melee.forEach((option) => {
+            if (option.stackable) {
+              unitPoints +=
+                  (option.stackableCount || option.minimum || 0) * option.points;
+            } else if (option.active && option.perModel) {
+              unitPoints += strength * option.points;
+            } else if (option.active && !option.perModel) {
+              unitPoints += option.points;
+            }
+          });
+        }
+        if (ranged && ranged.length) {
+          ranged.forEach((option) => {
+            if (option.stackable) {
+              unitPoints +=
+                  (option.stackableCount || option.minimum || 0) * option.points;
             } else if (option.active && option.perModel) {
               unitPoints += strength * option.points;
             } else if (option.active && !option.perModel) {

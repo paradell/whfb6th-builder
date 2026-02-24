@@ -656,14 +656,25 @@
         }
       ],
       "equipment": [
+      ],
+      "melee": [
         {
-          "name_en": "Hand weapons, Longbows",
-          "name_cn": "单手武器, 长弓",
-          "name_de": "Handwaffen und Langbogen",
-          "name_fr": "Armes de base, Arcs longs",
+          "name_en": "Hand weapons",
+          "name_es": "Arma de mano",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Longbow",
+          "name_es": "Arco Largo",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "armor": [

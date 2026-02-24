@@ -19,6 +19,18 @@ export const updateIds = (type = []) => {
             id: equipmentData.id || index,
           }))
         : null,
+      melee: unit.melee
+            ? unit.melee.map((meleeData, index) => ({
+                ...meleeData,
+                id: meleeData.id || index,
+            }))
+            : null,
+      ranged: unit.ranged
+        ? unit.ranged.map((rangedData, index) => ({
+            ...rangedData,
+            id: rangedData.id || index,
+        }))
+        : null,
       armor: unit.armor
         ? unit.armor.map((armorData, index) => ({
             ...armorData,
