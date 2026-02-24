@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/whfb6th-builder/static/css/main.c2e9d420.css",
-    "main.js": "/whfb6th-builder/static/js/main.8bdd2332.js",
+    "main.js": "/whfb6th-builder/static/js/main.163040c9.js",
     "static/js/453.5e19e26f.chunk.js": "/whfb6th-builder/static/js/453.5e19e26f.chunk.js",
     "static/media/spain.svg": "/whfb6th-builder/static/media/spain.fe46f7a778fdc34b4cb31895f52d2247.svg",
     "service-worker.js": "/whfb6th-builder/service-worker.js",
@@ -33,11 +33,11 @@
     "static/media/polen.svg": "/whfb6th-builder/static/media/polen.0882b3e3846c9861e7150d74c94a7ee9.svg",
     "static/media/france.svg": "/whfb6th-builder/static/media/france.bf26b172fbb19d5193a5a0a28e69c4ba.svg",
     "main.c2e9d420.css.map": "/whfb6th-builder/static/css/main.c2e9d420.css.map",
-    "main.8bdd2332.js.map": "/whfb6th-builder/static/js/main.8bdd2332.js.map",
+    "main.163040c9.js.map": "/whfb6th-builder/static/js/main.163040c9.js.map",
     "453.5e19e26f.chunk.js.map": "/whfb6th-builder/static/js/453.5e19e26f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2e9d420.css",
-    "static/js/main.8bdd2332.js"
+    "static/js/main.163040c9.js"
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "id": "warhammer-fantasy-6th",
+  "name": "Warhammer Fantasy Battles: 6th Edition",
+  "armies": [
+    {
+      "id": "bretonnia",
+      "name_en": "Bretonnia",
+      "name_es": "Bretonia",
+      "items": ["general", "bretonnia", "knightly-virtues"],
+      "armyComposition": [
+        "bretonnia",
+        "errantry-war"
+      ],
+      "allies": [],
+      "mercenaries": {}
+    }
+  ]
+}
