@@ -1,0 +1,70 @@
+{
+  "characters" :[],
+  "lords": [],
+  "heroes": [],
+  "core": [ {
+      "name_en": "Spearmen",
+      "name_es": "Lanceros",
+      "id": "imperial-spearmen",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 0,
+      "command": [
+        {
+          "name_es": "Campeón",
+          "name_en": "Champion",
+          "points": 12
+        },
+        {
+          "name_es": "Portestandarte",
+          "name_en": "Standard bearer",
+          "points": 10
+        },
+        {
+          "name_es": "Musico",
+          "name_en": "Musician",
+          "points": 5
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Hand weapons, Spears",
+          "name_es": "Arma de mano, Lanzas",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light armour",
+          "name:es": "Armadura ligera",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "options": [{
+        "name_en": "Shield",
+        "name:es": "Escudo",
+        "points": 1,
+        "perModel": true
+      }],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Detachment",
+        "name_es": "Destacamento"
+      },
+      "armyComposition": {
+        "empire": {
+          "category": "core"
+        }
+      }
+    }],
+  "special": [],
+  "rare": [],
+  "mercenaries": [],
+  "allies": []
+}

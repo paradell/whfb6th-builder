@@ -852,9 +852,11 @@ export const nameMap = {
       name_en: "Errantry War",
       name_es: "Guerra de Caballeros Noveles",
   },
-  "empire":
-      {name_en: "The Empire",
-      name_es: "El Imperio"},
+    "empire":{
+      name_en: "The Empire",
+      name_es: "El Imperio"
+ },
+
   // Warhammer Fantasy MdN
 
   "bretonnia-mdn": {
