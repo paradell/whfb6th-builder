@@ -221,9 +221,9 @@ export const NewList = ({ isMobile }) => {
                   ...journalArmies.map((journalArmy) => ({
                     id: journalArmy,
                     name_en:
-                      nameMap[journalArmy][`name_${language}`] ||
-                      nameMap[journalArmy].name_en ||
-                        journalArmy,
+                      nameMap[journalArmy]?.[`name_${language}`] ||
+                      nameMap[journalArmy]?.name_en ||
+                      "Name not found",
                   })),
                 ]}
                 onChange={handleArcaneJournalChange}

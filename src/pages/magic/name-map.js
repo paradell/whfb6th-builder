@@ -853,7 +853,7 @@ export const nameMap = {
       name_es: "Guerra de Caballeros Noveles",
   },
   "empire":
-      {name_en: "Empire",
+      {name_en: "The Empire",
       name_es: "El Imperio"},
   // Warhammer Fantasy MdN
 
