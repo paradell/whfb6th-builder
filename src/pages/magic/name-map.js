@@ -843,6 +843,13 @@ export const nameMap = {
     name_cn: "咒语卷轴",
     name_fr: "Parchemins d’Incantation",
   },
+  "warriors-of-wind-and-field": {
+    name_de: "Warriors of Wind & Field",
+    name_en: "Warriors of Wind & Field",
+    name_cn: "Warriors of Wind & Field",
+    name_fr: "Warriors of Wind & Field",
+  },
+
   // Warhammer Fantasy 6th
   "bretonnia": {
       name_en: "Bretonnia",
