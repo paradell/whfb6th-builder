@@ -1025,7 +1025,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {unit.melee && unit.melee.length > 0 && (
             <>
               <h2 className="unit__subline">
-                <FormattedMessage id="unit.equipment" />
+                <FormattedMessage id="unit.melee" />
               </h2>
               {unit.melee
                   .filter(
@@ -1083,7 +1083,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {unit.ranged && unit.ranged.length > 0 && (
             <>
               <h2 className="unit__subline">
-                <FormattedMessage id="unit.equipment" />
+                <FormattedMessage id="unit.ranged" />
               </h2>
               {unit.ranged
                   .filter(
