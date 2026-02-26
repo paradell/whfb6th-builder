@@ -3023,6 +3023,64 @@ export const rules = {
     },
     special: {
       maxPercent: 50,
+      units: [
+        {
+          ids: ["bloodcrushers-of-khorne"],
+          requiresGeneral: true,
+          requires: [
+            "bloodthirster",
+            "daemonic-herald-of-khorne",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-khorne",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["beasts-of-nurgle", "plague-drones-of-nurgle"],
+          requiresGeneral: true,
+          requires: [
+            "great-unclean-one",
+            "daemonic-herald-of-nurgle",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-nurgle",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: [
+            "fiends-of-slaanesh",
+            "hellflayer-of-slaanesh",
+            "seeker-chariot-of-slaanesh",
+          ],
+          requiresGeneral: true,
+          requires: [
+            "keeper-of-secrets",
+            "daemonic-herald-of-slaanesh",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-slaanesh",
+            unit: "daemon-prince",
+          },
+        },
+        {
+          ids: ["flamers-of-tzeentch", "screamers-of-tzeentch"],
+          requiresGeneral: true,
+          requires: [
+            "lord-of-change",
+            "daemonic-herald-of-tzeentch",
+            "daemon-prince",
+          ],
+          requiresOption: {
+            id: "daemon-of-tzeentch",
+            unit: "daemon-prince",
+          },
+        },
+      ],
     },
     rare: {
       maxPercent: 25,
@@ -4349,3 +4407,41 @@ export const getMaxSlots = ({
     maxSlots: maxSlots
   };
 };
+
+// Nueva función: cuenta las unidades de tipo 'core' en una lista
+// Excluye las unidades que tienen `no_count_slot: true` en su objeto.
+// También respeta `unit.armyComposition[armyComposition].no_count_slot` si se pasa `armyComposition`.
+// Parámetros:
+// - list: objeto de lista que contiene la propiedad `core` (array de unidades)
+// - options.useStrength: si true suma la propiedad `strength` de cada unidad (por defecto cuenta unidades)
+// - options.armyComposition: id de la composición para comprobar overrides específicos
+export const countCoreUnits = (list, { useStrength = false, armyComposition = null } = {}) => {
+  if (!list || !Array.isArray(list.core)) return 0;
+
+  const countedUnits = list.core.filter((u) => {
+    // defensiva: aceptar que u puede ser nulo/indefinido
+    if (!u) return false;
+
+    // Global no_count_slot on unit
+    if (u.no_count_slot === true) return false;
+
+    // Override per armyComposition (p. ej. unit.armyComposition['errantry-war-mdn'] = { no_count_slot: true })
+    if (
+      armyComposition &&
+      u.armyComposition &&
+      u.armyComposition[armyComposition] &&
+      u.armyComposition[armyComposition].no_count_slot === true
+    ) {
+      return false;
+    }
+
+    return true;
+  });
+
+  if (useStrength) {
+    return countedUnits.reduce((acc, u) => acc + (Number(u.strength) || 1), 0);
+  }
+
+  return countedUnits.length;
+};
+

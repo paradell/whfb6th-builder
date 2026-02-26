@@ -1,4 +1,4 @@
-import { rules } from "./rules";
+import { rules, countCoreUnits } from "./rules";
 import { uniq } from "./collection";
 import { equalsOrIncludes } from "./string";
 import { getUnitPoints } from "./points";
@@ -199,15 +199,15 @@ export const validateList = ({ list, language, intl }) => {
       );
 
   const coreUnits = list?.core?.length
-    ? list.core.filter(filterByTroopType).length
+    ? countCoreUnits({ core: list.core.filter(filterByTroopType) }, { armyComposition: list.armyComposition })
     : 0;
   let coreUnitsDetachmentCount = 0;
 
   if (list?.core?.length) {
     list.core.forEach((unit) => {
       if (unit.detachments && unit.detachments.length) {
-        coreUnitsDetachmentCount +=
-          unit.detachments.filter(filterByTroopType).length;
+        // contar detachments respetando filterByTroopType y no_count_slot por composición
+        coreUnitsDetachmentCount += countCoreUnits({ core: unit.detachments.filter(filterByTroopType) }, { armyComposition: list.armyComposition });
       }
     });
   }
@@ -495,8 +495,14 @@ export const validateList = ({ list, language, intl }) => {
       );
       const coreCount = list.core.filter(
         (core) =>
-          core.id.split(".")[0] === unit.id.split(".")[0] ||
-          hasSharedCombinedArmsLimit(core, unit),
+          (core.id.split(".")[0] === unit.id.split(".")[0] ||
+            hasSharedCombinedArmsLimit(core, unit)) &&
+          // Excluir unidades marcadas con no_count_slot global o por armyComposition
+          core.no_count_slot !== true &&
+          !(list.armyComposition &&
+            core.armyComposition &&
+            core.armyComposition[list.armyComposition] &&
+            core.armyComposition[list.armyComposition].no_count_slot === true),
       ).length;
 
       if (
