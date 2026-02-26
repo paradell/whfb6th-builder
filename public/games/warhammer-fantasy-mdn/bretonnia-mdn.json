@@ -633,7 +633,8 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core",
+          "no_count_slot": true
         }
       }
     },
@@ -732,7 +733,8 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core",
+          "no_count_slot": true
         }
       }
     },
@@ -743,6 +745,7 @@
       "points": 3,
       "minimum": 10,
       "maximum": 0,
+      "no_count_slot": true,
       "command": [
       ],
       "equipment": [
@@ -884,7 +887,8 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core",
+          "no_count_slot": true
         }
       }
     },
@@ -973,7 +977,8 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core",
+          "no_count_slot": true
         }
       }
     },
@@ -1097,7 +1102,8 @@
           }
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core",
+          "no_count_slot": true
         }
       },
       "command": [
