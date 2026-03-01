@@ -270,8 +270,113 @@
           "category": "lords"
         }
       }
-    }
-  ],
+    },
+    {
+      "name_en": "The Green Knight",
+      "name_es": "El Caballero Verde",
+      "id": "the-green-knight",
+      "points": 275,
+      "named": true,
+      "command": [],
+      "melee": [
+        {
+          "name_en": "The Dolorous Blade",
+          "name_es": "Espada del Dolor",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shield, Barding",
+          "name_es": "Armadura pesada, Escudo, Barda",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "Shadow Steed",
+          "name_fr": "Corcel Fantasmal",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Aura of the Fey, The Blessing of the Lady, Ethereal, Guardian of the Sacred Sites, Immune to Psychology, Terror",
+        "name_es": "Inmune a Psicología, Terror, Etéreo, Inestable, Bendición de la Dama, Guardián de los lugares sagrdos, Aura de las Hadas."
+        }
+    },
+    {
+      "name_en": "The Fay Enchantress",
+      "name_es": "El Hada Hechicera",
+      "id": "the-fay-encahntress",
+      "points": 480,
+      "named": true,
+      "command": [],
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "name_es": "Arma de Manp",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "Silvaron",
+          "name_fr": "Silvaron",
+          "points": 65,
+          "active": true,
+          "alwaysActive": true
+        }],
+      "items": [],
+      "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens", "lore-of-death", "lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-light"],
+      "specialRules": {
+        "name_en": "Favour of the Fey, The Blessing of the Lady, Grail Guardians, Spiteful Glance, Supreme Aura of the Lady, The Fay Enchantres (Magic)",
+        "name_es": "Favor de las Hadas, Bendición de la Dama, Guardianes del Grial, Mirada Maliciosa, Aura Suprema de la Dama, El Hada Hechicera (Magia)"
+      }
+    },
+    {
+      "name_en": "Louen Leoncoeur",
+      "name_es": "Louen Leoncoeur",
+      "id": "louen-leoncoeur",
+      "points": 528,
+      "named": true,
+      "command": [],
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "name_es": "Arma de Manp",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "Beauquis",
+          "name_fr": "Beauquis",
+          "points": 200,
+          "active": true,
+          "alwaysActive": true
+        }],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Beloved Son of Bretonnia, the Army of the King, the Grail Vow, the Lady's Champoin, the Puissant Virtue",
+        "name_es": "Favor de las Hadas, Bendición de la Dama, Guardianes del Grial, Mirada Maliciosa, Aura Suprema de la Dama, El Hada Hechicera (Magia)"
+      }
+    }],
   "heroes": [{
     "name_en": "Paladin",
     "name_cn": "圣骑士",
