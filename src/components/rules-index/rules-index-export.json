@@ -1,4 +1,32 @@
 {
+  "beloved son of bretonnia": {
+    "url": "special-rules/beloved-son-of-bretonnia"
+  },
+  "the army of the king": {
+    "url": "special-rules/the-army-of-the-king"
+  },
+  "the lady's champion": {
+    "url": "special-rules/the-ladys-champion"
+  },
+  "the puissant virtue":
+  {
+    "url": "special-rules/the-puissant-virtue"
+  },
+  "favour of the fey": {
+    "url": "special-rules/favour-of-the-fey"
+  },
+  "grail guardians": {
+    "url": "special-rules/grail-guardians"
+  },
+  "spiteful glance": {
+    "url": "special-rules/spiteful-glance"
+  },
+  "supreme aura of the lady": {
+    "url": "special-rules/supreme-aura-of-the-lady"
+  },
+  "the fay enchantres magic": {
+    "url": "special-rules/the-fay-enchantress-magic"
+  },
   "murderous renegade": {
     "url": "special-rules/murderous-renegade",
     "page": "TRLP, p. 18"
@@ -14161,6 +14189,44 @@
     "troopType": "HCh",
     "page": "FoF, p. 172"
   },
+  "louen leoncoeur": {
+    "url": "unit/louen-leoncoeur",
+    "stats": [
+      {
+        "A": "5",
+        "I": "7",
+        "M": "10",
+        "S": "4",
+        "T": "4",
+        "W": "3",
+        "BS": "5",
+        "Ld": "9",
+        "WS": "7",
+        "Name": "Louen Leoncoeur"
+      }
+    ],
+    "troopType": "NChar",
+    "page": "AJ:HER, p. 36"
+  },
+  "beaquis": {
+    "url": "unit/beaquis",
+    "stats": [
+      {
+        "A": "4",
+        "I": "6",
+        "M": "20",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "0",
+        "Ld": "9",
+        "WS": "5",
+        "Name": "Beauquis"
+      }
+    ],
+    "troopType": "HI",
+    "page": "AJ:AoGC, p. 30"
+  },
   "mage": {
     "url": "unit/mage",
     "stats": [
@@ -19725,22 +19791,19 @@
         "Ld": "9",
         "WS": "7",
         "Name": "The Green Knight"
-      },
-      {
-        "A": "1",
-        "I": "4",
-        "M": "8",
-        "S": "4",
-        "T": "-",
-        "W": "-",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "4",
-        "Name": "The Shadow Steed"
       }
     ],
     "troopType": "HCa",
     "page": "AJ:KoB, p. 36"
+  },
+  "shadow steed": {
+    "url": "unit/shadow-steed"
+  },
+  "the fay enchantress": {
+    "url": "unit/the-fay-enchantress"
+  },
+  "silvaron": {
+    "url": "unit/silvaron"
   },
   "thorgrim ulleksson": {
     "url": "unit/thorgrim-ulleksson",
