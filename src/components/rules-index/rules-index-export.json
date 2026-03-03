@@ -5408,6 +5408,31 @@
     "url": "magic-item/the-dolorous-blade",
     "page": "AJ:KoB, p. 37"
   },
+  "the sword of couronne": {
+    "url": "magic-item/the-sword-of-couronne",
+    "page": "AJ:KoB, p. 37"
+  },
+  "the lion's shield": {
+    "url": "magic-item/the-lions-shield",
+    "page": "AJ:HER, p. 47"
+  },
+  "the crown of bretonnia": {
+    "url": "magic-item/the-lions-shield",
+    "page": "AJ:HER, p. 47"
+  },
+  "girdle of gold": {
+    "url": "magic-item/girdle-of-gold",
+    "page": "AJ:HER, p. 47"
+  },
+  "the chalice of potions": {
+    "url": "magic-item/the-chalice-of-potions",
+    "page": "AJ:HER, p. 47"
+  },
+  "power familiar - toad":
+  {
+    "url": "magic-item/power-familiar-toad",
+    "page": "AJ:HER, p. 47"
+  },
   "the fellblade": { "url": "magic-item/the-fellblade", "page": "SK, p. 20" },
   "the fires of nan-gau": {
     "url": "magic-item/the-fires-of-nan-gau",
