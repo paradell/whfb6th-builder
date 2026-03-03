@@ -4224,11 +4224,17 @@ export const rules = {
       units: [
         {
           ids: ["battle-pilgrims"],
+          requiresType: "all",
+          requires: ["louen-leoncoeur", "bretonnian-lord", "paladin", "grail-knights"],
           max: 1
         },
         {
           ids: ["pegasus-knights"],
-          max: 1
+          max: 1,
+          requiresMount: {
+            name: "Royal Pegasus",
+            unit: "bretonnian-lord",
+          },
         },
       ],
     },
@@ -4379,6 +4385,14 @@ export const rules = {
           ids: ["mounted-knights-of-the-realm"],
           min: 1,
         },
+        {
+          ids: ["yeomen"],
+          requires: ["mounted-knights-of-the-realm"],
+          requiresType: "core",
+          perUnit: true,
+          min: 0,
+          max: 1,
+        },
       ],
     },
     special: {
@@ -4417,6 +4431,11 @@ export const rules = {
           ids: ["grail-knights"],
           max: 1,
         },
+        {
+          ids: ["royal-pegasus"],
+          requires: ["prophetess"],
+          requiresType: "lords",
+        },
       ],
     },
     mercenaries: { maxSlots: 0 },
@@ -4446,6 +4465,14 @@ export const rules = {
         {
           ids: ["knights-errant"],
           min: 1,
+        },
+        {
+          ids: ["yeomen"],
+          requires: ["mounted-knights-of-the-realm"],
+          requiresType: "core",
+          perUnit: true,
+          min: 0,
+          max: 1,
         },
       ],
     },
@@ -4508,6 +4535,14 @@ export const rules = {
         {
           ids: ["mounted-knights-of-the-realm"],
           min: 1,
+        },
+        {
+          ids: ["yeomen"],
+          requires: ["mounted-knights-of-the-realm"],
+          requiresType: "core",
+          perUnit: true,
+          min: 0,
+          max: 1,
         },
       ],
     },

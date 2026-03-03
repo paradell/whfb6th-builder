@@ -93,6 +93,7 @@
   "misc.error.requiresMagicItem": "Benötigt General mit {name}",
   "misc.error.requiresMounted": "{name} müssen beritten sein",
   "misc.error.requiresOption": "Benötigt {name} mit {option}",
+  "misc.error.requiresMount": "Benötigt {name} mit {mount} als Reittier",
   "misc.error.requiresCommand": "Benötigt {name} mit {command}",
   "misc.error.grandMelee25": "Max 25% der Punkte für ein Charakter oder eine Einheit",
   "misc.error.grandMeleeLevel3": "0-1 Stufe 3 Zauberer pro 1000 Punkten",

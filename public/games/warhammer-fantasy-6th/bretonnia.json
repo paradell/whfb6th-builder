@@ -4,7 +4,7 @@
     "name_en": "Bretonnian Lord",
     "name_cn": "男爵",
     "name_de": "Lord",
-    "id": "bretonnian lord",
+    "id": "bretonnian-lord",
     "points": 110,
     "command": [
       {
