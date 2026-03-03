@@ -878,4 +878,8 @@ export const nameMap = {
     name_en: "Errantry War - MdN",
     name_es: "Guerra de Caballeros Noveles - MdN",
   },
+  "army-of-the-king-mdn": {
+    name_en: "Army of the King - MdN",
+    name_es: "El Ejército del Rey - MdN",
+  },
 };

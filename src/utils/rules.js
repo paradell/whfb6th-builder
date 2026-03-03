@@ -4307,14 +4307,7 @@ export const rules = {
           max: 1,
         },
         {
-          ids: ["the-fay-encahntress"],
-          min: 0,
-          max: 1,
-        },
-        {
-          ids: ["the-green-knight"],
-          min: 0,
-          max: 1,
+          ids: ["the-fay-encahntress", "the-green-knight"]
         },
       ],
     },
@@ -4364,6 +4357,11 @@ export const rules = {
     },
     lords:{
       maxSlots: 1,
+      units: [
+        {
+          ids: ["louen-leoncoeur", "the-fay-encahntress", "the-green-knight"],
+        },
+      ],
     },
     heroes: {
       maxSlots: 5,
@@ -4381,6 +4379,19 @@ export const rules = {
           ids: ["mounted-knights-of-the-realm"],
           min: 1,
         },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["battle-pilgrims"],
+          max: 1
+        },
+        {
+          ids: ["pegasus-knights"],
+          max: 1
+        },
         {
           ids: ["arblastiers"],
           max: 1,
@@ -4396,19 +4407,6 @@ export const rules = {
         {
           ids: ["brigands"],
           max: 1,
-        },
-      ],
-    },
-    special: {
-      maxSlots: 4,
-      units: [
-        {
-          ids: ["battle-pilgrims"],
-          max: 1
-        },
-        {
-          ids: ["pegasus-knights"],
-          max: 1
         },
       ],
     },
@@ -4472,6 +4470,62 @@ export const rules = {
           max: 1,
         },
       ],
+    },
+    mercenaries: { maxSlots: 0 },
+    allies: {
+      maxSlots: 0,
+    },
+  },
+  "army-of-the-king-mdn": {
+    characters: {
+      maxSlots: 5,
+    },
+    lords:{
+      maxSlots: 1,
+      units: [
+        {
+          ids: ["louen-leoncoeur"],
+          min: 1,
+          max: 1,
+        },
+        {
+          ids: ["the-fay-encahntress", "the-green-knight"]
+        },
+      ],
+    },
+    heroes: {
+      maxSlots: 5,
+      units: [
+        {
+          ids: ["paladin"],
+          min: 1,
+        },
+      ],
+    },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["mounted-knights-of-the-realm"],
+          min: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["battle-pilgrims"],
+          max: 1
+        },
+        {
+          ids: ["pegasus-knights"],
+          max: 1
+        },
+      ],
+    },
+    rare: {
+      maxSlots: 2,
     },
     mercenaries: { maxSlots: 0 },
     allies: {
