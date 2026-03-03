@@ -785,6 +785,26 @@ export const validateList = ({ list, language, intl }) => {
       });
     }
 
+
+    // Duplicated named units - named units can only have max 1 in the list
+    if ( unitsInList.length > 0) {
+      unitsInList.forEach((unit) => {
+        if (unit.named) {
+          const namedUnitCount = unitsInList.filter(
+            (u) => u.named && u.id.split(".")[0] === unit.id.split(".")[0]
+          ).length;
+
+          if (namedUnitCount > 1) {
+            errors.push({
+              message: "misc.error.maxNamed",
+              section: type,
+              name: getUnitName({ unit, language }),
+            });
+          }
+        }
+      });
+    }
+
     // 0-X units check for Battle March
     if (
       (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&

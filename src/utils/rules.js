@@ -4197,19 +4197,7 @@ export const rules = {
       maxSlots: 1,
       units: [
         {
-          ids: ["louen-leoncoeur"],
-          min: 0,
-          max: 1,
-        },
-        {
-          ids: ["the-fay-encahntress"],
-          min: 0,
-          max: 1,
-        },
-        {
-          ids: ["the-green-knight"],
-          min: 0,
-          max: 1,
+          ids: ["louen-leoncoeur", "the-fay-encahntress", "the-green-knight"],
         },
       ],
     },
