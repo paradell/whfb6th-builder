@@ -4195,6 +4195,23 @@ export const rules = {
     },
     lords:{
       maxSlots: 1,
+      units: [
+        {
+          ids: ["louen-leoncoeur"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["the-fay-encahntress"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["the-green-knight"],
+          min: 0,
+          max: 1,
+        },
+      ],
     },
     heroes: {
       maxSlots: 5,
@@ -4299,6 +4316,17 @@ export const rules = {
         {
           ids: ["louen-leoncoeur"],
           min: 1,
+          max: 1,
+        },
+        {
+          ids: ["the-fay-encahntress"],
+          min: 0,
+          max: 1,
+        },
+        {
+          ids: ["the-green-knight"],
+          min: 0,
+          max: 1,
         },
       ],
     },
