@@ -93,6 +93,7 @@
   "misc.error.requiresMagicItem": "Requires general with {name}",
   "misc.error.requiresMounted": "{name}需要拥有坐骑",
   "misc.error.requiresOption": "{name}需要选择{option}",
+  "misc.error.requiresMount": "{name}需要选择{mount}作为坐骑",
   "misc.error.requiresCommand": "需要 {name} 拥有 {command}",
   "misc.error.grandMelee25": "一个人物或单位最多占据你25%的分数",
   "misc.error.grandMeleeLevel3": "每1000分0-1个3级法师",

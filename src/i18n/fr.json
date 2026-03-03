@@ -93,6 +93,7 @@
   "misc.error.requiresMagicItem": "Requires general with {name}",
   "misc.error.requiresMounted": "{name} doit être monté",
   "misc.error.requiresOption": "Requires {name} to have {option}",
+  "misc.error.requiresMount": "Requires {name} to have {mount} as mount",
   "misc.error.requiresCommand": "Requires {name} to have {command}",
   "misc.error.grandMelee25": "Un maximum de 25 % de vos points peut être attribué à un seul personnage ou une seule unité",
   "misc.error.grandMeleeLevel3": "0-1 Level 3 Wizard par tranche de 1000 points",

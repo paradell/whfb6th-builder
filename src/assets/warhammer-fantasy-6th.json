@@ -6,7 +6,7 @@
       "id": "bretonnia",
       "name_en": "Bretonnia",
       "name_es": "Bretonia",
-      "items": ["general", "bretonnia", "knightly-virtues"],
+      "items": ["general", "bretonnia", "knightly-virtues", "repeated-knightly-virtues"],
       "armyComposition": [
         "bretonnia",
         "errantry-war",

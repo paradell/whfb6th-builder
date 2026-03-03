@@ -4,7 +4,7 @@
     "name_en": "Bretonnian Lord",
     "name_cn": "男爵",
     "name_de": "Lord",
-    "id": "bretonnian lord",
+    "id": "bretonnian-lord",
     "points": 110,
     "command": [
       {
@@ -137,7 +137,7 @@
         "name_cn": "魔法物品",
         "name_de": "Magische Gegenstände",
         "name_fr": "Objets Magiques",
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtue"],
         "selected": [],
         "maxPoints": 100
       }
@@ -612,7 +612,7 @@
         "name_cn": "魔法物品",
         "name_de": "Magische Gegenstände",
         "name_fr": "Objets Magiques",
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtues"],
         "selected": [],
         "maxPoints": 50
       }

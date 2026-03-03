@@ -864,6 +864,30 @@ export const validateList = ({ list, language, intl }) => {
       }
     }
 
+    // Unit requires general with specific active mount
+    if (ruleUnit.requiresMount && unitsInList.length > 0) {
+      const generalWithMount = generals
+        .filter(
+          (general) =>
+            ruleUnit.requiresMount.unit === general.id.split(".")[0],
+        )
+        .find((general) =>
+          general.mounts.find(
+            (mount) =>
+              mount.name_en === ruleUnit.requiresMount.name && mount.active,
+          ),
+        );
+
+      if (!generalWithMount) {
+        errors.push({
+          message: "misc.error.requiresMount",
+          section: type,
+          name: intl.formatMessage({ id: ruleUnit.requiresMount.unit }),
+          mount: ruleUnit.requiresMount.name,
+        });
+      }
+    }
+
     // General requires unit (especially for the renegade rules)
     if (ruleUnit.requiresIfGeneral && generals.length > 0) {
       const requiredUnitsByGeneralInList = [
