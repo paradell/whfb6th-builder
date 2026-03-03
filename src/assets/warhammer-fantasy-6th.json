@@ -9,7 +9,8 @@
       "items": ["general", "bretonnia", "knightly-virtues"],
       "armyComposition": [
         "bretonnia",
-        "errantry-war"
+        "errantry-war",
+        "army-of-the-king"
       ],
       "allies": [],
       "mercenaries": {}

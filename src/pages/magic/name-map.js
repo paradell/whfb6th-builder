@@ -859,6 +859,10 @@ export const nameMap = {
       name_en: "Errantry War",
       name_es: "Guerra de Caballeros Noveles",
   },
+  "army-of-the-king": {
+    name_en: "Army of the King",
+    name_es: "El Ejército del Rey",
+  },
     "empire":{
       name_en: "The Empire",
       name_es: "El Imperio"

@@ -22,6 +22,9 @@
       },
       "errantry-war": {
         "category": "lords"
+      },
+      "army-of-the-king": {
+        "category": "lords"
       }
     },
     "equipment": [
@@ -268,6 +271,9 @@
       "armyComposition": {
         "bretonnia": {
           "category": "lords"
+        },
+        "army-of-the-king": {
+          "category": "lords"
         }
       }
     },
@@ -308,7 +314,15 @@
       "specialRules": {
         "name_en": "Aura of the Fey, The Blessing of the Lady, Ethereal, Guardian of the Sacred Sites, Immune to Psychology, Terror",
         "name_es": "Inmune a Psicología, Terror, Etéreo, Inestable, Bendición de la Dama, Guardián de los lugares sagrdos, Aura de las Hadas."
+        },
+      "armyComposition": {
+        "bretonnia": {
+          "category": "lords"
+        },
+        "army-of-the-king": {
+          "category": "lords"
         }
+      }
     },
     {
       "name_en": "The Fay Enchantress",
@@ -341,6 +355,15 @@
       "specialRules": {
         "name_en": "Favour of the Fey, The Blessing of the Lady, Grail Guardians, Spiteful Glance, Supreme Aura of the Lady, The Fay Enchantres Magic",
         "name_es": "Favor de las Hadas, Bendición de la Dama, Guardianes del Grial, Mirada Maliciosa, Aura Suprema de la Dama, El Hada Hechicera Magia"
+      },
+
+      "armyComposition": {
+        "bretonnia": {
+          "category": "lords"
+        },
+        "army-of-the-king": {
+          "category": "lords"
+        }
       }
     },
     {
@@ -349,7 +372,14 @@
       "id": "louen-leoncoeur",
       "points": 528,
       "named": true,
-      "command": [],
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }],
       "melee": [
         {
           "name_en": "Hand Weapon",
@@ -374,6 +404,19 @@
       "specialRules": {
         "name_en": "Beloved Son of Bretonnia, the Army of the King, the Grail Vow, the Lady's Champion, the Puissant Virtue",
         "name_es": "Favor de las Hadas, Bendición de la Dama, Guardianes del Grial, Mirada Maliciosa, Aura Suprema de la Dama, El Hada Hechicera (Magia)"
+      },
+
+      "armyComposition": {
+        "bretonnia": {
+          "category": "lords",
+          "notes": {
+            "name_en": "To use Louen Leoncoeur, you should select The Army of the King composition",
+            "name_es": "Para usar a Louen Leoncoeur, debes seleccionar la composición del Ejército del Rey"
+          }
+        },
+        "army-of-the-king": {
+          "category": "lords"
+        }
       }
     }],
   "heroes": [{
@@ -388,6 +431,9 @@
         "category": "heroes"
       },
       "errantry-war": {
+        "category": "heroes"
+      },
+      "army-of-the-king": {
         "category": "heroes"
       }
     },
@@ -538,6 +584,9 @@
           "category": "heroes"
         },
         "errantry-war": {
+          "category": "heroes"
+        },
+        "army-of-the-king": {
           "category": "heroes"
         }
       },
@@ -724,6 +773,9 @@
         },
         "errantry-war": {
           "category": "core"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       }
     },
@@ -838,6 +890,9 @@
         },
         "errantry-war": {
           "category": "core"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       }
     },
@@ -855,14 +910,18 @@
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights of the Realm",
-            "name_cn": "1个单位以上的步战王国骑士和/或骑马王国骑士",
-            "name_de": "1+ Einheiten Ritter des Königs zu Fuß und/oder Berittene Ritter des Königs",
-            "name_es": "",
-            "name_fr": "1+ unité de Chevaliers du Royaume à Pied et/ou de Chevaliers du Royaume Montés"
+            "name_es": "1+ unidad de Caballeros del Reino a Caballo"
           }
         },
         "errantry-war": {
           "category": "core"
+        },
+        "army-of-the-king": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm",
+            "name_es": "1+ unidad de Caballeros del Reino a Caballo"
+          }
         }
       },
       "command": [
@@ -943,13 +1002,13 @@
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights Errant",
-            "name_cn": "1个单位以上的侠义骑士",
-            "name_de": "1+ Einheiten Fahrende Ritter",
-            "name_es": "1+ unidad de Caballeros Noveles",
-            "name_fr": "1+ unité de Chevaliers Errants"
+            "name_es": "1+ unidad de Caballeros Noveles"
           }
+        },
+        "army-of-the-king": {
+          "category": "core"
         }
-      },
+        },
       "command": [
         {
           "name_en": "Gallant (champion)",
@@ -1090,6 +1149,9 @@
           "category": "special"
         },
         "errantry-war": {
+          "category": "special"
+        },
+        "army-of-the-king": {
           "category": "special"
         }
       }
@@ -1246,6 +1308,9 @@
         },
         "errantry-war": {
           "category": "special"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       }
     },
@@ -1271,6 +1336,9 @@
         },
         "errantry-war": {
           "category": "rare"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       },
       "command": [
@@ -1389,6 +1457,9 @@
             "name_es": "",
             "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
+        },
+        "army-of-the-king": {
+          "category": "rare"
         }
       }
     },
@@ -1412,7 +1483,6 @@
         "bretonnia": {
           "category": "rare"
         },
-
         "errantry-war": {
           "category": "rare",
           "notes": {
@@ -1422,6 +1492,9 @@
             "name_es": "0-1 unidad de Trebuchet por ejército",
             "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
+        },
+        "army-of-the-king": {
+          "category": "rare"
         }
       },
       "equipment": [
