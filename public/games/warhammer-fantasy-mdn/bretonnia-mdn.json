@@ -811,15 +811,14 @@
           "perModel": true,
           "active": true,
           "alwaysActive": true
-        },
-        {
-          "name_en": "Shield",
-          "name_es": "Escudo",
-          "points": 1,
-          "perModel": true
         }
       ],
-      "options": [],
+      "options": [{
+        "name_en": "Shield",
+        "name_es": "Escudo",
+        "points": 1,
+        "perModel": true
+      }],
       "mounts": [],
       "specialRules": {
         "name_en": "The Peasant's Duty",
@@ -914,15 +913,14 @@
           "perModel": true,
           "active": true,
           "alwaysActive": true
-        },
-        {
-          "name_en": "Shield",
-          "name_es": "Escudo",
-          "points": 1,
-          "perModel": true
         }
       ],
-      "options": [],
+      "options": [{
+        "name_en": "Shield",
+        "name_es": "Escudo",
+        "points": 1,
+        "perModel": true
+      }],
       "mounts": [],
       "specialRules": {
         "name_en": "The Peasant's Duty",
@@ -954,7 +952,7 @@
       "no_count_slot": true,
       "command": [
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons",
           "name_es": "Aramas de mano",
@@ -975,14 +973,15 @@
           "perModel": true
         }
       ],
-      "armor": [
-      ],
-      "options": [{
+      "ranged": [{
         "name_en": "Handgun",
         "name_es": "Arcabuz",
         "points": 3,
         "perModel": true
       }],
+      "armor": [
+      ],
+      "options": [],
       "mounts": [],
       "specialRules": {
         "name_en": "Escoria, Desdén por la Pólvora",
