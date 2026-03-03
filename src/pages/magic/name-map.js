@@ -264,9 +264,21 @@ export const nameMap = {
     name_cn: "骑士美德",
     name_fr: "Vertus Chevaleresques",
   },
+  "repeated-knightly-virtues": {
+    name_de: "Repeated Knightly Virtues",
+    name_en: "Repeated Knightly Virtues",
+    name_cn: "骑士美德",
+    name_fr: "Vertu Chevaleresque",
+  },
   "knightly-virtue": {
     name_de: "Knightly Virtue",
     name_en: "Knightly Virtue",
+    name_cn: "骑士美德",
+    name_fr: "Vertu Chevaleresque",
+  },
+  "repeated-knightly-virtue": {
+    name_de: "Knightly Virtue",
+    name_en: "Repeated Knightly Virtue",
     name_cn: "骑士美德",
     name_fr: "Vertu Chevaleresque",
   },

@@ -89,6 +89,7 @@
         "name_cn": "探索誓言",
         "name_de": "Questgelübde",
         "name_fr": "Le Vœu de la Quête",
+        "id": "quest-vow",
         "points": 12
       },
       {
@@ -96,6 +97,7 @@
         "name_cn": "圣杯誓言",
         "name_de": "Gralsgelübde",
         "name_fr": "Le Vœu du Graal",
+        "id": "grail-vow",
         "points": 28
       }
     ],
@@ -137,7 +139,7 @@
         "name_cn": "魔法物品",
         "name_de": "Magische Gegenstände",
         "name_fr": "Objets Magiques",
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtue"],
         "selected": [],
         "maxPoints": 100
       }
@@ -606,7 +608,7 @@
         "name_cn": "魔法物品",
         "name_de": "Magische Gegenstände",
         "name_fr": "Objets Magiques",
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtue"],
         "selected": [],
         "maxPoints": 50
       }

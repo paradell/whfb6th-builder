@@ -9,7 +9,7 @@
       "name_cn": "巴托尼亚王国",
       "name_es": "Bretonia",
       "name_fr": "Bretonnie",
-      "items": ["general", "bretonnia", "knightly-virtues"],
+      "items": ["general", "bretonnia", "knightly-virtues",  "repeated-knightly-virtues"],
       "armyComposition": [
         "bretonnia-mdn",
         "errantry-war-mdn",

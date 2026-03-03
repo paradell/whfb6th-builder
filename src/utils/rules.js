@@ -4224,8 +4224,6 @@ export const rules = {
       units: [
         {
           ids: ["battle-pilgrims"],
-          requiresType: "all",
-          requires: ["louen-leoncoeur", "bretonnian-lord", "paladin", "grail-knights"],
           max: 1
         },
         {

@@ -62,6 +62,7 @@ const magicItemTypes = [
   "runic-tattoos",
   "triptych",
   "knightly-virtue",
+  "repeated-knightly-virtue",
   "chaos-mutation",
   "chaos-mutation-character",
   "chaos-mutation-chieftain",
