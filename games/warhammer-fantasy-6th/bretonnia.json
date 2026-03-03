@@ -4,7 +4,7 @@
     "name_en": "Bretonnian Lord",
     "name_cn": "男爵",
     "name_de": "Lord",
-    "id": "bretonnian lord",
+    "id": "bretonnian-lord",
     "points": 110,
     "command": [
       {
@@ -21,6 +21,9 @@
         "category": "lords"
       },
       "errantry-war": {
+        "category": "lords"
+      },
+      "army-of-the-king": {
         "category": "lords"
       }
     },
@@ -86,6 +89,7 @@
         "name_cn": "探索誓言",
         "name_de": "Questgelübde",
         "name_fr": "Le Vœu de la Quête",
+        "id": "quest-vow",
         "points": 12
       },
       {
@@ -93,6 +97,7 @@
         "name_cn": "圣杯誓言",
         "name_de": "Gralsgelübde",
         "name_fr": "Le Vœu du Graal",
+        "id": "grail-vow",
         "points": 28
       }
     ],
@@ -134,7 +139,7 @@
         "name_cn": "魔法物品",
         "name_de": "Magische Gegenstände",
         "name_fr": "Objets Magiques",
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtue"],
         "selected": [],
         "maxPoints": 100
       }
@@ -268,10 +273,200 @@
       "armyComposition": {
         "bretonnia": {
           "category": "lords"
+        },
+        "army-of-the-king": {
+          "category": "lords"
         }
       }
-    }
-  ],
+    },
+    {
+      "name_en": "The Green Knight",
+      "name_es": "El Caballero Verde",
+      "id": "the-green-knight",
+      "points": 275,
+      "named": true,
+      "command": [],
+      "melee": [
+        {
+          "name_en": "The Dolorous Blade",
+          "name_es": "Espada del Dolor",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour, Shield, Barding",
+          "name_es": "Armadura pesada, Escudo, Barda",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "options": [],
+      "mounts": [
+        {
+          "name_en": "Shadow Steed",
+          "name_es": "Corcel Fantasmal",
+          "points": 200,
+          "active": true,
+          "alwaysActive": true
+        }],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Aura of the Fey, The Blessing of the Lady, Ethereal, Guardian of the Sacred Sites, Immune to Psychology, Terror",
+        "name_es": "Inmune a Psicología, Terror, Etéreo, Inestable, Bendición de la Dama, Guardián de los lugares sagrdos, Aura de las Hadas."
+        },
+      "armyComposition": {
+        "bretonnia": {
+          "category": "lords"
+        },
+        "army-of-the-king": {
+          "category": "lords"
+        }
+      }
+    },
+    {
+      "name_en": "The Fay Enchantress",
+      "name_es": "El Hada Hechicera",
+      "id": "the-fay-encahntress",
+      "points": 480,
+      "named": true,
+      "command": [],
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "name_es": "Arma de Manp",
+          "active": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+      ],
+      "options": [
+        {
+          "name_en": "Girdle of Gold",
+          "name_es": "Cinto de Oro",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0
+        },
+        {
+          "name_en": "The Chalice of Potions",
+          "name_es": "Cáliz de las Pociones",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0
+        },
+        {
+          "name_en": "Power Familiar - Toad",
+          "name_es": "Cáliz de las Pociones",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0
+        }],
+      "mounts": [
+        {
+          "name_en": "Silvaron",
+          "name_fr": "Silvaron",
+          "points": 65,
+          "active": true,
+          "alwaysActive": true
+        }],
+      "items": [],
+      "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens", "lore-of-death", "lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-light"],
+      "specialRules": {
+        "name_en": "Favour of the Fey, The Blessing of the Lady, Grail Guardians, Spiteful Glance, Supreme Aura of the Lady, The Fay Enchantres Magic",
+        "name_es": "Favor de las Hadas, Bendición de la Dama, Guardianes del Grial, Mirada Maliciosa, Aura Suprema de la Dama, El Hada Hechicera Magia"
+      },
+
+      "armyComposition": {
+        "bretonnia": {
+          "category": "lords"
+        },
+        "army-of-the-king": {
+          "category": "lords"
+        }
+      }
+    },
+    {
+      "name_en": "Louen Leoncoeur",
+      "name_es": "Louen Leoncoeur",
+      "id": "louen-leoncoeur",
+      "points": 528,
+      "named": true,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }],
+
+      "melee": [
+        {
+          "name_en": "The Sword of Couronne",
+          "name_es": "La Espada de Couronne",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "name_es": "Armadura pesada",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0
+        }
+      ],
+      "options": [
+        {
+          "name_en": "The Lion's Shield",
+          "name_es": "El Escudo del León",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0
+        },
+
+        {
+          "name_en": "The Crown of Bretonnia",
+          "name_es": "La Corona de Bretonia",
+          "active": true,
+          "alwaysActive": true,
+          "points": 0
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Beaquis",
+          "name_es": "Beaquis",
+          "points": 200,
+          "active": true,
+          "alwaysActive": true
+        }],
+      "items": [],
+      "lores": [],
+      "specialRules": {
+        "name_en": "Beloved Son of Bretonnia, the Army of the King, the Grail Vow, the Lady's Champion, the Puissant Virtue",
+        "name_es": "Hijo Bienamado de Bretonia, el Ejército del Rey, el Voto del Grial, el Campeón de la Dama, la Virtud del Poderoso"
+      },
+
+      "armyComposition": {
+        "bretonnia": {
+          "category": "lords",
+          "notes": {
+            "name_en": "To use Louen Leoncoeur, you should select The Army of the King composition",
+            "name_es": "Para usar a Louen Leoncoeur, debes seleccionar la composición del Ejército del Rey"
+          }
+        },
+        "army-of-the-king": {
+          "category": "lords"
+        }
+      }
+    }],
   "heroes": [{
     "name_en": "Paladin",
     "name_cn": "圣骑士",
@@ -284,6 +479,9 @@
         "category": "heroes"
       },
       "errantry-war": {
+        "category": "heroes"
+      },
+      "army-of-the-king": {
         "category": "heroes"
       }
     },
@@ -410,7 +608,7 @@
         "name_cn": "魔法物品",
         "name_de": "Magische Gegenstände",
         "name_fr": "Objets Magiques",
-        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue"],
+        "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtue"],
         "selected": [],
         "maxPoints": 50
       }
@@ -434,6 +632,9 @@
           "category": "heroes"
         },
         "errantry-war": {
+          "category": "heroes"
+        },
+        "army-of-the-king": {
           "category": "heroes"
         }
       },
@@ -620,6 +821,9 @@
         },
         "errantry-war": {
           "category": "core"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       }
     },
@@ -656,14 +860,25 @@
         }
       ],
       "equipment": [
+      ],
+      "melee": [
         {
-          "name_en": "Hand weapons, Longbows",
-          "name_cn": "单手武器, 长弓",
-          "name_de": "Handwaffen und Langbogen",
-          "name_fr": "Armes de base, Arcs longs",
+          "name_en": "Hand weapons",
+          "name_es": "Arma de mano",
           "points": 0,
           "perModel": true,
-          "active": true
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Longbow",
+          "name_es": "Arco Largo",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "armor": [
@@ -723,6 +938,9 @@
         },
         "errantry-war": {
           "category": "core"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       }
     },
@@ -740,14 +958,18 @@
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights of the Realm",
-            "name_cn": "1个单位以上的步战王国骑士和/或骑马王国骑士",
-            "name_de": "1+ Einheiten Ritter des Königs zu Fuß und/oder Berittene Ritter des Königs",
-            "name_es": "",
-            "name_fr": "1+ unité de Chevaliers du Royaume à Pied et/ou de Chevaliers du Royaume Montés"
+            "name_es": "1+ unidad de Caballeros del Reino a Caballo"
           }
         },
         "errantry-war": {
           "category": "core"
+        },
+        "army-of-the-king": {
+          "category": "core",
+          "notes": {
+            "name_en": "1+ unit of Knights of the Realm",
+            "name_es": "1+ unidad de Caballeros del Reino a Caballo"
+          }
         }
       },
       "command": [
@@ -828,13 +1050,13 @@
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights Errant",
-            "name_cn": "1个单位以上的侠义骑士",
-            "name_de": "1+ Einheiten Fahrende Ritter",
-            "name_es": "1+ unidad de Caballeros Noveles",
-            "name_fr": "1+ unité de Chevaliers Errants"
+            "name_es": "1+ unidad de Caballeros Noveles"
           }
+        },
+        "army-of-the-king": {
+          "category": "core"
         }
-      },
+        },
       "command": [
         {
           "name_en": "Gallant (champion)",
@@ -975,6 +1197,9 @@
           "category": "special"
         },
         "errantry-war": {
+          "category": "special"
+        },
+        "army-of-the-king": {
           "category": "special"
         }
       }
@@ -1131,6 +1356,9 @@
         },
         "errantry-war": {
           "category": "special"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       }
     },
@@ -1156,6 +1384,9 @@
         },
         "errantry-war": {
           "category": "rare"
+        },
+        "army-of-the-king": {
+          "category": "special"
         }
       },
       "command": [
@@ -1274,6 +1505,9 @@
             "name_es": "",
             "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
+        },
+        "army-of-the-king": {
+          "category": "rare"
         }
       }
     },
@@ -1297,7 +1531,6 @@
         "bretonnia": {
           "category": "rare"
         },
-
         "errantry-war": {
           "category": "rare",
           "notes": {
@@ -1307,6 +1540,9 @@
             "name_es": "0-1 unidad de Trebuchet por ejército",
             "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
+        },
+        "army-of-the-king": {
+          "category": "rare"
         }
       },
       "equipment": [

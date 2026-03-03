@@ -432,5 +432,303 @@
       "onePerArmy": false,
       "name": "virtue of empathy"
     }
+  ],
+  "repeated-knightly-virtues": [
+    {
+      "name_en": "Second Virtue of Penitent",
+      "name_es": "Segunda Virtud del Penitente",
+      "points": 80,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of penitent"
+    },
+    {
+      "name_en": "Second Virtue of Knightly Value",
+      "name_es": "Segunda Virtud del Ardor Caballeresco",
+      "points": 80,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of knightly value"
+    },
+    {
+      "name_en": "Second Virtue of Heroism",
+      "name_es": "Segunda Virtud de la Heroicidad",
+      "points": 80,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of heroism"
+    },
+    {
+      "name_en": "Second Virtue of Stoicism",
+      "name_es": "Segunda Virtud del Estoicismo",
+      "points": 70,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of stoicism"
+    },
+    {
+      "name_en": "Second Virtue of the Ideal",
+      "name_es": "Segunda Virtud del Ideal",
+      "points": 70,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of the ideal"
+    },
+    {
+      "name_en": "Second Virtue of Audacity",
+      "name_es": "Segunda Virtud de la Audacia",
+      "points": 60,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of audacity"
+    },
+    {
+      "name_en": "Third Virtue of Audacity",
+      "name_es": "Tercera Virtud de la Audacia",
+      "points": 90,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of audacity"
+    },
+    {
+      "name_en": "Second Virtue of Duty",
+      "name_es": "Segunda Virtud del Deber",
+      "points": 60,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of duty"
+    },
+    {
+      "name_en": "Third Virtue of Duty",
+      "name_es": "Tercera Virtud del Deber",
+      "points": 90,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of duty"
+    },
+    {
+      "name_en": "Second Virtue of the Joust",
+      "name_es": "Segunda Virtud de la Jsuta",
+      "points": 50,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of the joust"
+    },
+    {
+      "name_en": "Third Virtue of the Joust",
+      "name_es": "Tercera Virtud de la Jsuta",
+      "points": 75,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of the joust"
+    },
+    {
+      "name_en": "Fourth Virtue of the Joust",
+      "name_es": "Cuarta Virtud de la Jsuta",
+      "points": 100,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of the joust"
+    },
+    {
+      "name_en": "Second Virtue of the Confidence",
+      "name_es": "Segunda Virtud de la Confianza",
+      "points": 50,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of the confidence"
+    },
+    {
+      "name_en": "Third Virtue of the Confidence",
+      "name_es": "Tercera Virtud de la Confianza",
+      "points": 75,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of the confidence"
+    },
+    {
+      "name_en": "Fourth Virtue of the Confidence",
+      "name_es": "Cuarta Virtud de la Confianza",
+      "points": 100,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of the confidence"
+    },
+    {
+      "name_en": "Second Virtue of Noble Desdain",
+      "name_es": "Segunda Virtud del Noble Desdén",
+      "points": 40,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of noble desdain"
+    },
+    {
+      "name_en": "Third Virtue of Noble Desdain",
+      "name_es": "Tercera Virtud del Noble Desdén",
+      "points": 60,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of noble desdain"
+    },
+    {
+      "name_en": "Fourth Virtue of Noble Desdain",
+      "name_es": "Cuarta Virtud del Noble Desdén",
+      "points": 80,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of noble desdain"
+    },
+    {
+      "name_en": "Fifth Virtue of Noble Desdain",
+      "name_es": "Quinta Virtud del Noble Desdén",
+      "points": 100,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of noble desdain"
+    },
+    {
+      "name_en": "Second Virtue of Purity",
+      "name_es": "Segunda Virtud de la Pureza",
+      "points": 40,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of purity"
+    },
+    {
+      "name_en": "Third Virtue of Purity",
+      "name_es": "Tercera Virtud de la Pureza",
+      "points": 60,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of purity"
+    },
+    {
+      "name_en": "Fourth Virtue of Purity",
+      "name_es": "Cuarta Virtud de la Pureza",
+      "points": 80,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of purity"
+    },
+    {
+      "name_en": "Fifth Virtue of Purity",
+      "name_es": "Quinta Virtud de la Pureza",
+      "points": 100,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of purity"
+    },
+    {
+      "name_en": "Second Virtue of Discipline",
+      "name_es": "Segunda Virtud de la Disciplina",
+      "points": 30,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of discipline"
+    },
+    {
+      "name_en": "Third Virtue of Discipline",
+      "name_es": "Tercera Virtud de la Disciplina",
+      "points": 45,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of discipline"
+    },
+    {
+      "name_en": "Fourth Virtue of Discipline",
+      "name_es": "Cuarta Virtud de la Disciplina",
+      "points": 60,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of discipline"
+    },
+    {
+      "name_en": "Fifth Virtue of Discipline",
+      "name_es": "Quinta Virtud de la Disciplina",
+      "points": 75,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of discipline"
+    },
+    {
+      "name_en": "Sixth Virtue of Discipline",
+      "name_es": "Sexta Virtud de la Disciplina",
+      "points": 90,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of discipline"
+    },
+    {
+      "name_en": "Second Virtue of Empathy",
+      "name_es": "Segunda Virtud de la Empatía",
+      "points": 20,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Third Virtue of Empathy",
+      "name_es": "Tercera Virtud de la Empatía",
+      "points": 30,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Fourth Virtue of Empathy",
+      "name_es": "Cuarta Virtud de la Empatía",
+      "points": 40,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Fifth Virtue of Empathy",
+      "name_es": "Quinta Virtud de la Empatía",
+      "points": 50,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Sixth Virtue of Empathy",
+      "name_es": "Sexta Virtud de la Empatía",
+      "points": 60,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Seventh Virtue of Empathy",
+      "name_es": "Séptima Virtud de la Empatía",
+      "points": 70,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Eighth Virtue of Empathy",
+      "name_es": "Octava Virtud de la Empatía",
+      "points": 80,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Ninth Virtue of Empathy",
+      "name_es": "Novena Virtud de la Empatía",
+      "points": 90,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    },
+    {
+      "name_en": "Tenth Virtue of Empathy",
+      "name_es": "Décima Virtud de la Empatía",
+      "points": 100,
+      "type": "repeated-knightly-virtue",
+      "onePerArmy": true,
+      "name": "virtue of empathy"
+    }
   ]
 }
