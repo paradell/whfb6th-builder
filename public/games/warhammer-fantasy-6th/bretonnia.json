@@ -90,7 +90,8 @@
         "name_de": "Questgelübde",
         "name_fr": "Le Vœu de la Quête",
         "id": "quest-vow",
-        "points": 12
+        "points": 12,
+        "exclusive": true
       },
       {
         "name_en": "The Grail Vow",
@@ -98,7 +99,8 @@
         "name_de": "Gralsgelübde",
         "name_fr": "Le Vœu du Graal",
         "id": "grail-vow",
-        "points": 28
+        "points": 28,
+        "exclusive": true
       }
     ],
     "mounts": [
@@ -642,20 +644,21 @@
         "points": 8
       },
       {
-        "name_en": "The Grail Vow",
-        "name_cn": "圣杯誓言",
-        "name_de": "Gralsgelübde",
-        "name_fr": "Le Vœu du Graal",
-        "points": 21
-      }
-    ],
-    "mounts": [
-      {
-        "name_de": "Zu Fuß",
-        "name_en": "On foot",
-        "name_cn": "步行",
-        "name_fr": "À Pied",
-        "points": 0
+          "name_en": "The Grail Vow",
+          "name_cn": "圣杯誓言",
+          "name_de": "Gralsgelübde",
+          "name_fr": "Le Vœu du Graal",
+          "id": "grail-vow",
+          "points": 21
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_fr": "À Pied",
+          "points": 0
       },
       {
         "name_en": "Bretonnian Warhorse",

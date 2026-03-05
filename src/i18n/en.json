@@ -94,6 +94,7 @@
   "misc.error.requiresMagicItem": "Requires general with {name}",
   "misc.error.requiresMounted": "Requires {name} to be mounted ",
   "misc.error.requiresOption": "Requires {name} to have {option}",
+  "misc.error.requiresAny": "{unit} requires at least one of: {requires}",
   "misc.error.requiresMount": "Requires {name} to have {mount} as mount",
   "misc.error.requiresCommand": "Requires {name} to have {command}",
   "misc.error.grandMelee25": "Max 25% of your points for a single character or unit",
