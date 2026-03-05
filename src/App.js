@@ -67,6 +67,9 @@ export const App = () => {
           <Route path="/editor/:listId/:type/:unitId/magic/:command">
             {<Magic isMobile />}
           </Route>
+          <Route path="/editor/:listId/:type/:unitId/attached/:instanceId/magic/:cmdId">
+            {<Magic isMobile />}
+          </Route>
           <Route path="/editor/:listId/:type/:unitId/rename">
             {<Rename isMobile />}
           </Route>
@@ -129,6 +132,9 @@ export const App = () => {
               <section className="column">
                 <Switch>
                   <Route path="/editor/:listId/:type/:unitId/magic/:command">
+                    <Magic />
+                  </Route>
+                  <Route path="/editor/:listId/:type/:unitId/attached/:instanceId/magic/:cmdId">
                     <Magic />
                   </Route>
                   <Route path="/editor/:listId/:type/:unitId/rename">
