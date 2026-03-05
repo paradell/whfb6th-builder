@@ -1060,13 +1060,22 @@
         },
       "command": [
         {
-          "name_en": "Gallant (champion)",
-          "name_cn": "英勇(冠军)",
-          "name_de": "Heißsporn",
-          "name_fr": "Preux Chevalier (champion)",
+          "name_en": "Errant Paladin (champion)",
+          "name_es": "Paladín Novel (campeón)",
           "points": 0,
           "active": true,
           "alwaysActive": true
+        },
+        {
+          "name_en": "Grail Knight (champion)",
+          "name_es": "Caballero del Grial (campeón)",
+          "points": 22,
+          "active": false,
+          "armyComposition": ["errantry-war"],
+          "notes": {
+            "name_en": "Substitutes the Gallant champion.",
+            "name_es": "Sustituye al campeón Preux Chevalier."
+          }
         },
         {
           "name_en": "Standard bearer",
