@@ -27,7 +27,7 @@
         "category": "lords"
       }
     },
-    "equipment": [
+    "melee": [
       {
         "name_de": "Handwaffe",
         "name_en": "Hand weapon",
@@ -169,14 +169,15 @@
           "points": 0
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapon",
           "name_cn": "单手武器",
           "name_fr": "Arme de base",
           "name_de": "Handwaffe",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "armor": [],
@@ -506,7 +507,7 @@
         }
       }
     ],
-    "equipment": [
+    "melee": [
       {
         "name_de": "Handwaffe",
         "name_en": "Hand weapon",
@@ -648,7 +649,7 @@
           "points": 0
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapon",
           "name_cn": "单手武器",
@@ -1001,7 +1002,7 @@
           "points": 8
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons, Lances, Shields",
           "name_cn": "单手武器, 长枪, 盾牌",
@@ -1086,7 +1087,7 @@
           "points": 7
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons, Lances, Shields",
           "name_cn": "单手武器, 长枪, 盾牌",
@@ -1159,7 +1160,7 @@
           "points": 9
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons, Great weapons, Shields",
           "name_cn": "单手武器, 重型武器, 盾牌",
@@ -1238,7 +1239,7 @@
           "points": 10
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapon, Lances, Shields",
           "name_cn": "单手武器, 长枪, 盾牌",
