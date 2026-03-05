@@ -40,6 +40,15 @@ export const listsSlice = createSlice({
       const newUnit = {
         ...unit,
         strength: unit.minimum,
+        // Ensure attached_units.selected starts empty (not inherited from definition)
+        ...(unit.attached_units
+          ? {
+              attached_units: {
+                ...unit.attached_units,
+                selected: [],
+              },
+            }
+          : {}),
       };
 
       return state.map((list) => {
@@ -110,6 +119,7 @@ export const listsSlice = createSlice({
         detachments,
         activeLore,
         customNote,
+        attached_units,
       } = payload;
       const newValues = {
         strength,
@@ -126,6 +136,7 @@ export const listsSlice = createSlice({
         activeLore,
         name,
         customNote,
+        attached_units,
       };
       const unit = state
         .find(({ id }) => id === listId)

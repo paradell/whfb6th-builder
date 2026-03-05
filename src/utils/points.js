@@ -229,6 +229,59 @@ export const getUnitPoints = (unit, settings) => {
   unitPoints += getUnitMagicPoints({ unit });
 
   if (
+    unit.attached_units &&
+    Array.isArray(unit.attached_units.selected)
+  ) {
+    unit.attached_units.selected.forEach((attached) => {
+      if (!attached) return;
+      const attachedStrength = attached.strength || attached.minimum || 1;
+      unitPoints += attachedStrength * attached.points;
+
+      if (attached.equipment) {
+        attached.equipment.forEach((option) => {
+          if (option.active && option.perModel) {
+            unitPoints += attachedStrength * option.points;
+          } else if (option.active) {
+            unitPoints += option.points;
+          }
+        });
+      }
+      if (attached.armor) {
+        attached.armor.forEach((option) => {
+          if (option.active && option.perModel) {
+            unitPoints += attachedStrength * option.points;
+          } else if (option.active) {
+            unitPoints += option.points;
+          }
+        });
+      }
+      if (attached.options) {
+        attached.options.forEach((option) => {
+          if (option.active && option.perModel) {
+            unitPoints += attachedStrength * option.points;
+          } else if (option.active) {
+            unitPoints += option.points;
+          }
+        });
+      }
+      if (attached.command) {
+        attached.command.forEach((option) => {
+          if (option.active) {
+            unitPoints += option.points;
+            if (option.magic && option.magic.selected && option.magic.selected.length) {
+              option.magic.selected.forEach((selected) => {
+                unitPoints += selected.amount
+                  ? selected.amount * selected.points
+                  : selected.points;
+              });
+            }
+          }
+        });
+      }
+    });
+  }
+
+  if (
     unit.detachments &&
     (!settings.noDetachments || unit.ignoreNoDetachment)
   ) {

@@ -252,6 +252,109 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       }),
     );
   };
+  // ---- Attached Units handlers ----
+  const handleAddAttachedUnit = ({ attachedUnitDef }) => {
+    const existing = unit.attached_units?.selected || [];
+    const newSelected = [
+      ...existing,
+      {
+        ...attachedUnitDef,
+        instanceId: `${attachedUnitDef.id}.${getRandomId()}`,
+        strength: attachedUnitDef.minimum || 1,
+        command: attachedUnitDef.command
+          ? attachedUnitDef.command.map((c) => ({
+              ...c,
+              id: c.id || c.name_en,
+              active: false,
+              magic: c.magic ? { ...c.magic, selected: c.magic.selected || [] } : undefined,
+            }))
+          : [],
+        equipment: attachedUnitDef.equipment
+          ? attachedUnitDef.equipment.map((e) => ({ ...e, id: e.id || e.name_en }))
+          : [],
+        armor: attachedUnitDef.armor
+          ? attachedUnitDef.armor.map((a) => ({ ...a, id: a.id || a.name_en }))
+          : [],
+        options: attachedUnitDef.options
+          ? attachedUnitDef.options.map((o) => ({ ...o, id: o.id || o.name_en }))
+          : [],
+      },
+    ];
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        attached_units: { ...unit.attached_units, selected: newSelected },
+      }),
+    );
+  };
+  const handleRemoveAttachedUnit = ({ instanceId }) => {
+    const newSelected = (unit.attached_units?.selected || []).filter(
+      (a) => a.instanceId !== instanceId,
+    );
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        attached_units: { ...unit.attached_units, selected: newSelected },
+      }),
+    );
+  };
+  const handleAttachedStrengthChange = ({ instanceId, strength }) => {
+    const newSelected = (unit.attached_units?.selected || []).map((a) =>
+      a.instanceId === instanceId ? { ...a, strength } : a,
+    );
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        attached_units: { ...unit.attached_units, selected: newSelected },
+      }),
+    );
+  };
+  const handleAttachedCommandChange = ({ instanceId, commandId }) => {
+    const newSelected = (unit.attached_units?.selected || []).map((a) => {
+      if (a.instanceId !== instanceId) return a;
+      const newCommand = (a.command || []).map((c) => {
+        if (c.id === commandId) return { ...c, active: !c.active };
+        return c;
+      });
+      return { ...a, command: newCommand };
+    });
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        attached_units: { ...unit.attached_units, selected: newSelected },
+      }),
+    );
+  };
+  const handleAttachedEquipmentChange = ({ instanceId, category, itemId, isCheckbox }) => {
+    const newSelected = (unit.attached_units?.selected || []).map((a) => {
+      if (a.instanceId !== instanceId) return a;
+      const newCategory = (a[category] || []).map((item) => {
+        if (isCheckbox) {
+          return item.id === itemId ? { ...item, active: !item.active } : item;
+        }
+        return { ...item, active: item.id === itemId };
+      });
+      return { ...a, [category]: newCategory };
+    });
+    dispatch(
+      editUnit({
+        listId,
+        type,
+        unitId,
+        attached_units: { ...unit.attached_units, selected: newSelected },
+      }),
+    );
+  };
+  // ---- End Attached Units handlers ----
+
   const handleOptionsChange = (id, optionIndex, isRadio) => {
     let newOptions;
 
@@ -1395,6 +1498,327 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   );
                 },
               )}
+          </>
+        )}
+        {unit.attached_units && unit.attached_units.units && unit.attached_units.units.length > 0 && (
+          <>
+            <h2 className="unit__subline unit__detachments-headline">
+              <FormattedMessage id="unit.attachedUnits" />
+            </h2>
+            {unit.attached_units.units.map((attachedUnitDef) => {
+              const selectedInstances = (unit.attached_units.selected || []).filter(
+                (a) => a.id === attachedUnitDef.id,
+              );
+              const maxReached =
+                (unit.attached_units.selected || []).length >= unit.attached_units.maximum;
+
+              return (
+                <Fragment key={attachedUnitDef.id}>
+                  {/* Header row: unit name + Add button (like detachments) */}
+                  <div className="list">
+                    <div className="list__inner unit__detachments-header">
+                      <b className="unit__magic-headline">
+                        {attachedUnitDef[`name_${language}`] || attachedUnitDef.name_en}
+                      </b>
+                      <Button
+                        onClick={() => handleAddAttachedUnit({ attachedUnitDef })}
+                        type="secondary"
+                        icon="add"
+                        label={intl.formatMessage({ id: "editor.add" })}
+                        size="small"
+                        disabled={maxReached}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Each selected instance */}
+                  {selectedInstances.map((attached) => {
+                    const attachedStrength = attached.strength || attached.minimum || 1;
+                    const attachedPointsPerModel = attached.points;
+                    return (
+                      <div className="list unit__detachments-wrapper" key={attached.instanceId}>
+                        <div className="list__inner unit__detachments">
+                          {attached.minimum != null && attached.maximum != null && (
+                            <NumberInput
+                              noError
+                              id={`attached-strength-${attached.instanceId}`}
+                              min={attached.minimum}
+                              max={attached.maximum}
+                              value={attachedStrength}
+                              onChange={(event) =>
+                                handleAttachedStrengthChange({
+                                  instanceId: attached.instanceId,
+                                  strength: Number(event.target.value),
+                                })
+                              }
+                            />
+                          )}
+                          <span>
+                            <b>{attached[`name_${language}`] || attached.name_en} </b>
+                            <i>
+                              {getPointsText({
+                                points: attachedPointsPerModel,
+                                perModel: true,
+                              })}
+                            </i>
+                          </span>
+                          <Button
+                            onClick={() =>
+                              handleRemoveAttachedUnit({ instanceId: attached.instanceId })
+                            }
+                            type="secondary"
+                            icon="close"
+                            label={intl.formatMessage({ id: "misc.remove" })}
+                            size="small"
+                            disabled={
+                              (unit.attached_units.selected || []).length <=
+                              unit.attached_units.minimum
+                            }
+                          />
+                        </div>
+
+                        {/* Expanded config for this attached unit */}
+                        <div className="unit__detachments-section">
+                          {/* Command */}
+                          {attached.command && attached.command.length > 0 && (
+                            <>
+                              <h3 className="unit__subline">
+                                <FormattedMessage id="unit.command" />
+                              </h3>
+                              {attached.command.map((cmd) => {
+                                const cmdMagicPoints =
+                                  cmd.magic && cmd.active
+                                    ? (cmd.magic.selected || []).reduce(
+                                        (sum, s) =>
+                                          sum + (s.amount ? s.amount * s.points : s.points),
+                                        0,
+                                      )
+                                    : 0;
+                                const cmdMaxPoints =
+                                  cmd.magic && cmd.active ? cmd.magic.maxPoints || 0 : 0;
+
+                                return (
+                                  <Fragment key={cmd.name_en}>
+                                    <div className="checkbox">
+                                      <input
+                                        type="checkbox"
+                                        id={`attached-cmd-${attached.instanceId}-${cmd.name_en}`}
+                                        value={cmd.id || cmd.name_en}
+                                        onChange={() =>
+                                          handleAttachedCommandChange({
+                                            instanceId: attached.instanceId,
+                                            commandId: cmd.id || cmd.name_en,
+                                          })
+                                        }
+                                        checked={cmd.active || false}
+                                        className="checkbox__input"
+                                      />
+                                      <label
+                                        htmlFor={`attached-cmd-${attached.instanceId}-${cmd.name_en}`}
+                                        className="checkbox__label"
+                                      >
+                                        <span className="unit__label-text">
+                                          <RulesWithIcon textObject={cmd} />
+                                        </span>
+                                        <i className="checkbox__points">
+                                          {getPointsText({ points: cmd.points })}
+                                        </i>
+                                      </label>
+                                    </div>
+                                    {/* Magic standard link, same as regular command */}
+                                    {cmd.magic?.types &&
+                                      cmd.magic.types.length > 0 &&
+                                      cmd.active && (
+                                        <>
+                                          <hr className="unit__hr" />
+                                          <ListItem
+                                            to={`/editor/${listId}/${type}/${unitId}/attached/${attached.instanceId}/magic/${cmd.id || cmd.name_en}`}
+                                            className="editor__list unit__link unit__command-list"
+                                            active={location.pathname.includes(
+                                              `attached/${attached.instanceId}/magic`,
+                                            )}
+                                          >
+                                            <div className="editor__list-inner">
+                                              <b>
+                                                {cmd.magic.types
+                                                  .map(
+                                                    (itemType) =>
+                                                      nameMap[itemType]?.[`name_${language}`] ||
+                                                      nameMap[itemType]?.name_en ||
+                                                      itemType,
+                                                  )
+                                                  .join(", ")}
+                                              </b>
+                                              <i className="checkbox__points">
+                                                <span
+                                                  className={classNames(
+                                                    cmdMagicPoints > cmdMaxPoints &&
+                                                      cmdMaxPoints > 0 &&
+                                                      "editor__error",
+                                                  )}
+                                                >
+                                                  {cmdMagicPoints}
+                                                </span>
+                                                {cmdMaxPoints > 0 && (
+                                                  <>{` / ${cmdMaxPoints}`}</>
+                                                )}{" "}
+                                                <FormattedMessage id="app.points" />
+                                              </i>
+                                              {cmdMagicPoints > cmdMaxPoints &&
+                                                cmdMaxPoints > 0 && (
+                                                  <Icon
+                                                    symbol="error"
+                                                    color="red"
+                                                    className="unit__magic-icon"
+                                                  />
+                                                )}
+                                            </div>
+                                          </ListItem>
+                                        </>
+                                      )}
+                                  </Fragment>
+                                );
+                              })}
+                            </>
+                          )}
+
+                          {/* Equipment */}
+                          {attached.equipment && attached.equipment.length > 0 && (
+                            <>
+                              <h3 className="unit__subline">
+                                <FormattedMessage id="unit.equipment" />
+                              </h3>
+                              {attached.equipment.map((eq) => (
+                                <div className="radio" key={eq.id || eq.name_en}>
+                                  <input
+                                    type="radio"
+                                    id={`attached-eq-${attached.instanceId}-${eq.id || eq.name_en}`}
+                                    name={`attached-eq-${attached.instanceId}`}
+                                    value={eq.id || eq.name_en}
+                                    onChange={() =>
+                                      handleAttachedEquipmentChange({
+                                        instanceId: attached.instanceId,
+                                        category: "equipment",
+                                        itemId: eq.id || eq.name_en,
+                                      })
+                                    }
+                                    checked={eq.active || false}
+                                    className="radio__input"
+                                  />
+                                  <label
+                                    htmlFor={`attached-eq-${attached.instanceId}-${eq.id || eq.name_en}`}
+                                    className="radio__label"
+                                  >
+                                    <span className="unit__label-text">
+                                      <RulesWithIcon textObject={eq} />
+                                    </span>
+                                    <i className="checkbox__points">
+                                      {getPointsText({ points: eq.points, perModel: eq.perModel })}
+                                    </i>
+                                  </label>
+                                </div>
+                              ))}
+                            </>
+                          )}
+
+                          {/* Armor */}
+                          {attached.armor && attached.armor.length > 0 && (
+                            <>
+                              <h3 className="unit__subline">
+                                <FormattedMessage id="unit.armor" />
+                              </h3>
+                              {attached.armor.map((ar) => (
+                                <div className="radio" key={ar.id || ar.name_en}>
+                                  <input
+                                    type="radio"
+                                    id={`attached-armor-${attached.instanceId}-${ar.id || ar.name_en}`}
+                                    name={`attached-armor-${attached.instanceId}`}
+                                    value={ar.id || ar.name_en}
+                                    onChange={() =>
+                                      handleAttachedEquipmentChange({
+                                        instanceId: attached.instanceId,
+                                        category: "armor",
+                                        itemId: ar.id || ar.name_en,
+                                      })
+                                    }
+                                    checked={ar.active || false}
+                                    className="radio__input"
+                                  />
+                                  <label
+                                    htmlFor={`attached-armor-${attached.instanceId}-${ar.id || ar.name_en}`}
+                                    className="radio__label"
+                                  >
+                                    <span className="unit__label-text">
+                                      <RulesWithIcon textObject={ar} />
+                                    </span>
+                                    <i className="checkbox__points">
+                                      {getPointsText({ points: ar.points, perModel: ar.perModel })}
+                                    </i>
+                                  </label>
+                                </div>
+                              ))}
+                            </>
+                          )}
+
+                          {/* Options */}
+                          {attached.options && attached.options.length > 0 && (
+                            <>
+                              <h3 className="unit__subline">
+                                <FormattedMessage id="unit.options" />
+                              </h3>
+                              {attached.options.map((opt) => (
+                                <Fragment key={opt.id || opt.name_en}>
+                                  <div className="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      id={`attached-opt-${attached.instanceId}-${opt.id || opt.name_en}`}
+                                      value={opt.id || opt.name_en}
+                                      onChange={() =>
+                                        handleAttachedEquipmentChange({
+                                          instanceId: attached.instanceId,
+                                          category: "options",
+                                          itemId: opt.id || opt.name_en,
+                                          isCheckbox: true,
+                                        })
+                                      }
+                                      checked={opt.active || false}
+                                      className="checkbox__input"
+                                    />
+                                    <label
+                                      htmlFor={`attached-opt-${attached.instanceId}-${opt.id || opt.name_en}`}
+                                      className="checkbox__label"
+                                    >
+                                      <span className="unit__label-text">
+                                        <RulesWithIcon textObject={opt} />
+                                      </span>
+                                      <i className="checkbox__points">
+                                        {getPointsText({ points: opt.points, perModel: opt.perModel })}
+                                      </i>
+                                    </label>
+                                  </div>
+                                </Fragment>
+                              ))}
+                            </>
+                          )}
+
+                          {/* Special Rules */}
+                          {attached.specialRules && attached.specialRules.name_en && (
+                            <>
+                              <h3>
+                                <FormattedMessage id="unit.specialRules" />
+                              </h3>
+                              <p className="unit__subline--space-after">
+                                <RulesLinksText textObject={attached.specialRules} />
+                              </p>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Fragment>
+              );
+            })}
           </>
         )}
         {unit.regimentalUnit && (

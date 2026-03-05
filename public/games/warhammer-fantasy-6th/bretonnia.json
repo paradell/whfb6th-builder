@@ -375,6 +375,71 @@
           "alwaysActive": true
         }],
       "items": [],
+      "attached_units": {
+        "minimum": 0,
+        "maximum": 1,
+        "units": [{
+        "id": "grail-guardians",
+        "name_en": "Grail Guardians",
+        "name_es": "Guardianes del Grial",
+        "points": 38,
+        "minimum": 2,
+        "maximum": 8,
+        "command": [
+          {
+            "name_en": "Standard bearer",
+            "name_cn": "旗手",
+            "name_fr": "Porte-étendard",
+            "name_de": "Standartenträger",
+            "points": 20,
+            "magic": {
+              "maxPoints": 50,
+              "types": ["banner"]
+            }
+          },
+          {
+            "name_en": "Musician",
+            "name_cn": "乐手",
+            "name_fr": "Musicien",
+            "name_de": "Musiker",
+            "points": 10
+          }
+        ],
+        "equipment": [
+          {
+            "name_en": "Hand weapons, Lances, Shields",
+            "name_cn": "单手武器, 长枪, 盾牌",
+            "name_de": "Handwaffen, Lanzen, Schilde",
+            "name_fr": "Armes de base, Lances de joute, Boucliers",
+            "points": 0,
+            "perModel": true,
+            "active": true
+          }
+        ],
+        "armor": [
+          {
+            "name_en": "Heavy armour, Barding",
+            "name_cn": "重甲, 马铠",
+            "name_de": "Schwere Rüstung, Rossharnische",
+            "name_fr": "Armure lourde, Caparaçon",
+            "name_es": "Armadura pesada, Barding",
+            "points": 0,
+            "perModel": true,
+            "active": true
+          }
+        ],
+        "options": [],
+        "mounts": [],
+        "items": [
+        ],
+        "specialRules": {
+          "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow",
+          "name_cn": "女神祝福, 紧密阵型, 反制冲锋, 良种战马, 先行冲锋, 枪骑阵型, 活圣人, 快速行进, 圣杯誓言",
+          "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Living Saints, Swiftstride, The Grail Vow",
+          "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Saints Vivants, Rapide, Le Vœu du Graal"
+        }
+      }]
+      },
       "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens", "lore-of-death", "lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-light"],
       "specialRules": {
         "name_en": "Favour of the Fey, The Blessing of the Lady, Grail Guardians, Spiteful Glance, Supreme Aura of the Lady, The Fay Enchantres Magic",

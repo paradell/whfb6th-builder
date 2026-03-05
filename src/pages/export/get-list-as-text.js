@@ -195,6 +195,13 @@ const getUnitsString = ({
           isMarkdownList ? unit.customNote.replace(/\n/g, "") : unit.customNote
         }${isMarkdownList ? "*" : ""}\n`;
       }
+      if (unit.attached_units?.selected?.length) {
+        unit.attached_units.selected.forEach((attached) => {
+          const attachedName = attached[`name_${language}`] || attached.name_en;
+          const size = attached.strength || attached.minimum || 1;
+          optionsString += `${isMarkdownList ? " - " : ""}${intl.formatMessage({ id: "unit.attachedUnits" })}: ${attachedName} (${size})\n`;
+        });
+      }
       if (showStats) {
         const stats = getStats(unit, armyComposition);
 

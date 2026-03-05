@@ -125,13 +125,22 @@ export const Magic = ({ isMobile }) => {
   const location = useLocation();
   const { language } = useLanguage();
   const intl = useIntl();
-  const { listId, type, unitId, command, group } = useParams();
+  const { listId, type, unitId, command, group, instanceId, cmdId } = useParams();
   const dispatch = useDispatch();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
   );
   const units = list ? list[type] : null;
   const unit = units && units.find(({ id }) => id === unitId);
+
+  // --- Attached unit magic support ---
+  const isAttachedMagic = Boolean(instanceId && cmdId);
+  const attachedInstance = isAttachedMagic
+    ? (unit?.attached_units?.selected || []).find((a) => a.instanceId === instanceId)
+    : null;
+  const attachedCmd = attachedInstance
+    ? (attachedInstance.command || []).find((c) => (c.id || c.name_en) === cmdId)
+    : null;
   const armyId = unit?.army || list?.army;
   const gameSystems = getGameSystems();
   let army =
@@ -216,7 +225,12 @@ export const Magic = ({ isMobile }) => {
     const inputType = event.target.type;
 
     if (event.target.checked) {
-      if (isCommand) {
+      if (isAttachedMagic) {
+        magicItems =
+          inputType === "radio"
+            ? [magicItem]
+            : [...(attachedCmd?.magic?.selected || []), magicItem];
+      } else if (isCommand) {
         if (inputType === "radio") {
           magicItems = [magicItem];
         } else {
@@ -233,7 +247,14 @@ export const Magic = ({ isMobile }) => {
         }
       }
     } else {
-      if (isCommand) {
+      if (isAttachedMagic) {
+        magicItems = (attachedCmd?.magic?.selected || []).filter(
+          ({ name_en, name }) =>
+            name
+              ? name !== event.target.value
+              : normalizeRuleName(name_en) !== event.target.value,
+        );
+      } else if (isCommand) {
         magicItems = commandOptions[command].magic.selected.filter(
           ({ name_en, name }) =>
             name
@@ -249,7 +270,24 @@ export const Magic = ({ isMobile }) => {
       }
     }
 
-    if (isCommand) {
+    if (isAttachedMagic) {
+      const newSelected = (unit.attached_units.selected || []).map((a) => {
+        if (a.instanceId !== instanceId) return a;
+        const newCommand = (a.command || []).map((c) => {
+          if ((c.id || c.name_en) !== cmdId) return c;
+          return { ...c, magic: { ...c.magic, selected: magicItems } };
+        });
+        return { ...a, command: newCommand };
+      });
+      dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          attached_units: { ...unit.attached_units, selected: newSelected },
+        }),
+      );
+    } else if (isCommand) {
       const newCommand = commandOptions.map((entry, entryIndex) =>
         entryIndex === Number(command)
           ? {
@@ -292,6 +330,36 @@ export const Magic = ({ isMobile }) => {
   };
   const handleAmountChange = ({ event, parentId, isCommand }) => {
     let magicItems;
+
+    const updateItem = (item) => {
+      if (item.name && item.name === parentId) {
+        return { ...item, amount: event.target.value };
+      } else if (!item.name && normalizeRuleName(item.name_en) === parentId) {
+        return { ...item, amount: event.target.value };
+      }
+      return item;
+    };
+
+    if (isAttachedMagic) {
+      magicItems = (attachedCmd?.magic?.selected || []).map(updateItem);
+      const newSelected = (unit.attached_units.selected || []).map((a) => {
+        if (a.instanceId !== instanceId) return a;
+        const newCommand = (a.command || []).map((c) => {
+          if ((c.id || c.name_en) !== cmdId) return c;
+          return { ...c, magic: { ...c.magic, selected: magicItems } };
+        });
+        return { ...a, command: newCommand };
+      });
+      dispatch(
+        editUnit({
+          listId,
+          type,
+          unitId,
+          attached_units: { ...unit.attached_units, selected: newSelected },
+        }),
+      );
+      return;
+    }
 
     if (isCommand) {
       magicItems = (commandOptions[command].magic.selected || []).map(
@@ -390,25 +458,28 @@ export const Magic = ({ isMobile }) => {
 
   useEffect(() => {
     if (unit && list && unitId) {
-      let items = (unit?.items && unit.items[group || 0]?.selected) || [];
-      if (command) {
+      let items = isAttachedMagic
+        ? (attachedCmd?.magic?.selected || [])
+        : (unit?.items && unit.items[group || 0]?.selected) || [];
+      if (command && !isAttachedMagic) {
         items = items.concat(unit?.command[command]?.magic?.selected || []);
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
 
       const categoryIsComboExclusive = (type) =>
         comboExclusiveCategories.indexOf(type) >= 0;
-      const hasComboExculsiveCategory =
-        (unit?.items &&
-          unit.items[group || 0]?.types?.some(categoryIsComboExclusive)) ||
-        (command &&
-          unit?.command[command]?.magic?.types?.some(categoryIsComboExclusive));
+      const hasComboExculsiveCategory = isAttachedMagic
+        ? attachedCmd?.magic?.types?.some(categoryIsComboExclusive)
+        : (unit?.items &&
+            unit.items[group || 0]?.types?.some(categoryIsComboExclusive)) ||
+          (command &&
+            unit?.command[command]?.magic?.types?.some(categoryIsComboExclusive));
       if (hasComboExculsiveCategory) {
         setComboUsedElsewhere(combosUsedElsewhere(items, list, unitId));
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [unit, list, unitId, command]);
+  }, [unit, list, unitId, command, instanceId, cmdId]);
 
   useEffect(() => {
     army &&
@@ -469,7 +540,7 @@ export const Magic = ({ isMobile }) => {
     isTypeLimitReached,
     usedElsewhereErrors,
   }) => {
-    const isCommand = Boolean(
+    const isCommand = isAttachedMagic || Boolean(
       unit && commandOptions[command]?.magic?.types.length,
     );
 
@@ -586,14 +657,23 @@ export const Magic = ({ isMobile }) => {
         unit.army || list?.armyComposition || list?.army,
       ),
   );
-  const hasCommandMagicItems = Boolean(
-    commandOptions &&
-      commandOptions[command] &&
-      commandOptions[command]?.magic?.types.length,
-  );
+  const hasCommandMagicItems = isAttachedMagic
+    ? Boolean(attachedCmd?.magic?.types?.length)
+    : Boolean(
+        commandOptions &&
+          commandOptions[command] &&
+          commandOptions[command]?.magic?.types.length,
+      );
   const hasMagicItems = Boolean(unit?.items?.length);
 
-  if (hasCommandMagicItems) {
+  if (isAttachedMagic && attachedCmd?.magic) {
+    maxMagicPoints = attachedCmd.magic.maxPoints || 0;
+    unitMagicPoints = (attachedCmd.magic.selected || []).reduce(
+      (sum, s) => sum + (s.amount ? s.amount * s.points : s.points),
+      0,
+    );
+    maxItemsPerCategory = attachedCmd.magic.maxItemsPerCategory || 0;
+  } else if (hasCommandMagicItems) {
     maxMagicPoints =
       (commandOptions[command].magic.armyComposition &&
         commandOptions[command].magic.armyComposition[
@@ -695,17 +775,20 @@ export const Magic = ({ isMobile }) => {
         {items.map((itemGroup, index) => {
           const commandMagicItems = itemGroup.items.filter(
             (item) =>
-              hasCommandMagicItems &&
-              commandOptions[command].magic.types.includes(item.type),
+              isAttachedMagic
+                ? attachedCmd?.magic?.types?.includes(item.type)
+                : hasCommandMagicItems &&
+                  commandOptions[command].magic.types.includes(item.type),
           );
           const magicItems = itemGroup.items.filter(
             (item) =>
               hasMagicItems &&
               !command &&
+              !isAttachedMagic &&
               unit.items[group].types.includes(item.type),
           );
           const itemGroupItems = (
-            hasCommandMagicItems ? commandMagicItems : magicItems
+            hasCommandMagicItems || isAttachedMagic ? commandMagicItems : magicItems
           ).filter(
             (item) =>
               (!maxMagicPoints || item.points <= maxMagicPoints) &&
@@ -721,7 +804,9 @@ export const Magic = ({ isMobile }) => {
             isFirstItemType = false;
           }
 
-          const unitSelectedItems = hasCommandMagicItems
+          const unitSelectedItems = isAttachedMagic
+            ? (attachedCmd?.magic?.selected ?? [])
+            : hasCommandMagicItems
             ? commandOptions[command].magic.selected ?? []
             : unit.items[group].selected ?? [];
 
