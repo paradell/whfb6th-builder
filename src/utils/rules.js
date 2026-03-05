@@ -4650,6 +4650,34 @@ export const getMaxSlots = ({
   };
 };
 
+// Counts how many units from OTHER category lists (lords, heroes, core, etc.)
+// have `extra_categories` containing the given `category` for the active `armyComposition`.
+// For example: if Louen has extra_categories: ["heroes"] in "army-of-the-king",
+// calling countExtraCategories(list, "heroes", "army-of-the-king") returns 1
+// (because Louen is in list.lords but also counts as a heroes slot).
+export const countExtraCategories = (list, category, armyComposition) => {
+  if (!list || !category) return 0;
+  const allTypes = ["lords", "heroes", "characters", "core", "special", "rare", "mercenaries", "allies"];
+  let count = 0;
+  for (const type of allTypes) {
+    if (!Array.isArray(list[type])) continue;
+    for (const unit of list[type]) {
+      if (!unit) continue;
+      // Check armyComposition-specific extra_categories
+      const acData = armyComposition && unit.armyComposition && unit.armyComposition[armyComposition];
+      if (acData && Array.isArray(acData.extra_categories) && acData.extra_categories.includes(category)) {
+        count += 1;
+        continue;
+      }
+      // Fallback: global extra_categories on the unit
+      if (Array.isArray(unit.extra_categories) && unit.extra_categories.includes(category)) {
+        count += 1;
+      }
+    }
+  }
+  return count;
+};
+
 // Nueva función: cuenta las unidades de tipo 'core' en una lista
 // Excluye las unidades que tienen `no_count_slot: true` en su objeto.
 // También respeta `unit.armyComposition[armyComposition].no_count_slot` si se pasa `armyComposition`.

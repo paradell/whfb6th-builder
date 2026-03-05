@@ -398,6 +398,10 @@
       "id": "louen-leoncoeur",
       "points": 528,
       "named": true,
+      "notes": {
+        "name_en": "Counts as one Lord slot and one Hero slot",
+        "name_es": "Cuenta como una selección de Comandante y una de Héroe"
+      },
       "command": [
         {
           "name_en": "General",
@@ -466,7 +470,8 @@
           }
         },
         "army-of-the-king-mdn": {
-          "category": "lords"
+          "category": "lords",
+          "extra_categories": ["heroes"]
         }
       }
     }

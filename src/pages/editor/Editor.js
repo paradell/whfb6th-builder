@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import {getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots, countCoreUnits} from "../../utils/rules";
+import {getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots, countCoreUnits, countExtraCategories} from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -123,7 +123,7 @@ export const Editor = ({ isMobile }) => {
     getMaxSlots({
       type: "lords",
       armyPoints: list.points,
-      slots: list.lords.length,
+      slots: list.lords.length + countExtraCategories(list, "lords", armyComposition),
       armyComposition,
     });
   const heroesData =
@@ -131,7 +131,7 @@ export const Editor = ({ isMobile }) => {
     getMaxSlots({
       type: "heroes",
       armyPoints: list.points,
-      slots: list.heroes.length,
+      slots: list.heroes.length + countExtraCategories(list, "heroes", armyComposition),
       armyComposition,
     });
   const charactersData =
@@ -152,13 +152,13 @@ export const Editor = ({ isMobile }) => {
   const specialData = getMaxSlots({
     type: "special",
     armyPoints: list.points,
-    slots: list.special.length,
+    slots: list.special.length + countExtraCategories(list, "special", armyComposition),
     armyComposition,
   });
   const rareData = getMaxSlots({
     type: "rare",
     armyPoints: list.points,
-    slots: list.rare.length,
+    slots: list.rare.length + countExtraCategories(list, "rare", armyComposition),
     armyComposition,
   });
   const mercenariesData =
