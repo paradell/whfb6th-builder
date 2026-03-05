@@ -4224,7 +4224,16 @@ export const rules = {
       units: [
         {
           ids: ["battle-pilgrims"],
-          max: 1
+          max: 1,
+          // max 1 only if: bretonnian-lord with grail-vow, OR paladin with grail-vow,
+          // OR grail-knights in army, OR fay enchantress has grail-guardians attached
+          requiresAny: [
+            { type: "option", unit: "bretonnian-lord", id: "grail-vow" },
+            { type: "option", unit: "paladin", id: "grail-vow" },
+            { type: "unit", id: "grail-knights" },
+            { type: "unit", id: "louen-leoncoeur" },
+            { type: "attachedUnit", unit: "the-fay-encahntress", id: "grail-guardians" },
+          ],
         },
         {
           ids: ["pegasus-knights"],

@@ -786,6 +786,57 @@ export const validateList = ({ list, language, intl }) => {
     }
 
 
+    // requiresAny: max is as configured only if at least one condition is met, otherwise max is 0
+    if (ruleUnit.requiresAny && unitsInList.length > 0) {
+      const allUnits = [
+        ...list.characters,
+        ...list.lords,
+        ...list.heroes,
+        ...list.core,
+        ...list.special,
+        ...list.rare,
+      ];
+
+      const conditionMet = ruleUnit.requiresAny.some((condition) => {
+        // Condition: a specific unit ID exists in the list
+        if (condition.type === "unit") {
+          return allUnits.some(
+            (u) => u.id.split(".")[0] === condition.id,
+          );
+        }
+        // Condition: a specific unit has a specific option active
+        if (condition.type === "option") {
+          return allUnits.some(
+            (u) =>
+              u.id.split(".")[0] === condition.unit &&
+              (u.options || []).some(
+                (opt) => opt.id === condition.id && opt.active,
+              ),
+          );
+        }
+        // Condition: a specific unit has a specific attached unit selected
+        if (condition.type === "attachedUnit") {
+          return allUnits.some(
+            (u) =>
+              u.id.split(".")[0] === condition.unit &&
+              (u.attached_units?.selected || []).some(
+                (a) => a.id === condition.id,
+              ),
+          );
+        }
+        return false;
+      });
+
+      if (!conditionMet) {
+        errors.push({
+          message: "misc.error.requiresAny",
+          section: type,
+          name: namesInList,
+          diff: unitsInList.length,
+        });
+      }
+    }
+
     // Duplicated named units - named units can only have max 1 in the list
     if ( unitsInList.length > 0) {
       const processedNamedUnits = new Set();
