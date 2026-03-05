@@ -828,11 +828,28 @@ export const validateList = ({ list, language, intl }) => {
       });
 
       if (!conditionMet) {
+        const requiresAnyNames = joinWithOr(
+          ruleUnit.requiresAny.map((condition) => {
+            // For "unit" type, translate the unit id
+            if (condition.type === "unit") {
+              return intl.formatMessage({ id: condition.id });
+            }
+            // For "option" type, translate the option id
+            if (condition.type === "option") {
+              return intl.formatMessage({ id: condition.id });
+            }
+            // For "attachedUnit" type, translate the attached unit id
+            if (condition.type === "attachedUnit") {
+              return intl.formatMessage({ id: condition.id });
+            }
+            return condition.id;
+          }),
+        );
         errors.push({
           message: "misc.error.requiresAny",
           section: type,
-          name: namesInList,
-          diff: unitsInList.length,
+          unit: namesInList,
+          requires: requiresAnyNames,
         });
       }
     }
