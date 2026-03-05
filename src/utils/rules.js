@@ -4663,15 +4663,16 @@ export const countExtraCategories = (list, category, armyComposition) => {
     if (!Array.isArray(list[type])) continue;
     for (const unit of list[type]) {
       if (!unit) continue;
-      // Check armyComposition-specific extra_categories
+      // Check armyComposition-specific extra_categories first
       const acData = armyComposition && unit.armyComposition && unit.armyComposition[armyComposition];
-      if (acData && Array.isArray(acData.extra_categories) && acData.extra_categories.includes(category)) {
-        count += 1;
+      if (acData && Array.isArray(acData.extra_categories)) {
+        // Count each occurrence of category in the array (supports repeated entries)
+        count += acData.extra_categories.filter((c) => c === category).length;
         continue;
       }
       // Fallback: global extra_categories on the unit
-      if (Array.isArray(unit.extra_categories) && unit.extra_categories.includes(category)) {
-        count += 1;
+      if (Array.isArray(unit.extra_categories)) {
+        count += unit.extra_categories.filter((c) => c === category).length;
       }
     }
   }
