@@ -1,4 +1,4 @@
-import { rules, countCoreUnits } from "./rules";
+import { rules, countCoreUnits, countExtraCategories } from "./rules";
 import { uniq } from "./collection";
 import { equalsOrIncludes } from "./string";
 import { getUnitPoints } from "./points";
@@ -282,7 +282,7 @@ export const validateList = ({ list, language, intl }) => {
   // Check total character slots (lords + heroes for non-old-world games)
   if (list.game !== "the-old-world") {
     const lordsSlots = list.lords?.length || 0;
-    const heroesSlots = list.heroes?.length || 0;
+    const heroesSlots = (list.heroes?.length || 0) + countExtraCategories(list, "heroes", list.armyComposition);
     const totalCharacterSlots = lordsSlots + heroesSlots;
 
     const CharactersRules = rules[list.armyComposition]
