@@ -340,7 +340,7 @@
         "name_es": "Inmune a Psicología, Terror, Etéreo, Inestable, Bendición de la Dama, Guardián de los lugares sagrdos, Aura de las Hadas."
       },
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "lords"
         },
         "army-of-the-king-mdn": {
@@ -468,7 +468,7 @@
       },
 
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "lords"
         },
         "army-of-the-king-mdn": {
@@ -546,7 +546,7 @@
       },
 
       "armyComposition": {
-        "bretonnia": {
+        "bretonnia-mdn": {
           "category": "lords",
           "notes": {
             "name_en": "To use Louen Leoncoeur, you should select The Army of the King composition",
