@@ -769,8 +769,50 @@ export const validateList = ({ list, language, intl }) => {
       });
     }
 
+    // exceptIf: the max restriction does not apply if a matching unit is found.
+    // Fields: unit (mandatory, unit id), general (optional bool), mount (optional, mount name_en), option (optional, option id)
+    let exceptIfMet = false;
+    if (ruleUnit.exceptIf) {
+      const condition = ruleUnit.exceptIf;
+      const allUnitsInList = [
+        ...list.characters,
+        ...list.lords,
+        ...list.heroes,
+        ...list.core,
+        ...list.special,
+        ...list.rare,
+      ];
+
+      // Pool to search in: if general:true, only look among generals; otherwise all units
+      const pool = condition.general ? generals : allUnitsInList;
+
+      exceptIfMet = pool.some((unit) => {
+        // Must match the unit id
+        if (unit.id.split(".")[0] !== condition.unit) return false;
+
+        // If mount is specified, the unit must have that mount active (matched by id)
+        if (condition.mount) {
+          const hasMount = (unit.mounts || []).some(
+            (mount) => mount.id === condition.mount && mount.active,
+          );
+          if (!hasMount) return false;
+        }
+
+        // If option is specified, the unit must have that option active
+        if (condition.option) {
+          const hasOption = (unit.options || []).some(
+            (opt) => opt.id === condition.option && opt.active,
+          );
+          if (!hasOption) return false;
+        }
+
+        return true;
+      });
+    }
+
     // Too many units
     if (
+      !exceptIfMet &&
       (!ruleUnit.requires || (ruleUnit.requires && ruleUnit.requiresGeneral)) &&
       unitsInList.length > max &&
       ((list.compositionRule && // Exception for Battle March 0-X units
