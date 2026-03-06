@@ -4238,9 +4238,11 @@ export const rules = {
         {
           ids: ["pegasus-knights"],
           max: 1,
-          requiresMount: {
-            name: "Royal Pegasus",
+          // No max limit if the General is a Bretonnian Lord mounted on a Royal Pegasus
+          exceptIf: {
+            general: true,
             unit: "bretonnian-lord",
+            mount: "royal-pegasus",
           },
         },
       ],
@@ -4289,7 +4291,13 @@ export const rules = {
       units: [
         {
           ids: ["pegasus-knights"],
-          max: 1
+          max: 1,
+          // No max limit if the General is a Bretonnian Lord mounted on a Royal Pegasus
+          exceptIf: {
+            general: true,
+            unit: "bretonnian-lord",
+            mount: "royal-pegasus",
+          },
         },
       ],
     },
@@ -4351,7 +4359,13 @@ export const rules = {
         },
         {
           ids: ["pegasus-knights"],
-          max: 1
+          max: 1,
+          // No max limit if the General is a Bretonnian Lord mounted on a Royal Pegasus
+          exceptIf: {
+            general: true,
+            unit: "bretonnian-lord",
+            mount: "royal-pegasus",
+          },
         },
       ],
     },
@@ -4411,7 +4425,13 @@ export const rules = {
         },
         {
           ids: ["pegasus-knights"],
-          max: 1
+          max: 1,
+          // No max limit if the General is a Bretonnian Lord mounted on a Royal Pegasus
+          exceptIf: {
+            general: true,
+            unit: "bretonnian-lord",
+            mount: "royal-pegasus",
+          },
         },
         {
           ids: ["arblastiers"],
@@ -4488,7 +4508,13 @@ export const rules = {
       units: [
         {
           ids: ["pegasus-knights"],
-          max: 1
+          max: 1,
+          // No max limit if the General is a Bretonnian Lord mounted on a Royal Pegasus
+          exceptIf: {
+            general: true,
+            unit: "bretonnian-lord",
+            mount: "royal-pegasus",
+          },
         },
       ],
     },
@@ -4562,7 +4588,13 @@ export const rules = {
         },
         {
           ids: ["pegasus-knights"],
-          max: 1
+          max: 1,
+          // No max limit if the General is a Bretonnian Lord mounted on a Royal Pegasus
+          exceptIf: {
+            general: true,
+            unit: "bretonnian-lord",
+            mount: "royal-pegasus",
+          },
         },
       ],
     },

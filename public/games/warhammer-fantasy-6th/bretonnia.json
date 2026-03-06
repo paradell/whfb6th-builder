@@ -109,29 +109,37 @@
         "name_en": "On foot",
         "name_cn": "步行",
         "name_fr": "À Pied",
-        "points": 0
+        "points": 0,
+        "id": "on-foot",
+        "exclusive": true
       },
       {
         "name_en": "Bretonnian Warhorse",
         "name_cn": "巴托尼亚战马",
         "name_de": "Bretonisches Schlachtross",
         "name_fr": "Destrier Bretonnien",
+        "id": "bretonnian-warhorse",
         "points": 21,
-        "active": true
+        "active": true,
+        "exclusive": true
       },
       {
         "name_en": "Royal Pegasus",
         "name_cn": "皇家飞马",
         "name_de": "Königspegasus",
         "name_fr": "Pégase Royal",
-        "points": 50
+        "id": "royal-pegasus",
+        "points": 50,
+        "exclusive": true
       },
       {
         "name_de": "Hippogreif",
         "name_en": "Hippogryph",
         "name_cn": "角鹰",
         "name_fr": "Hippogriffe",
+        "id": "hippogryph",
         "points": 200,
+        "exclusive": true,
         "options": []
       }
     ],
@@ -223,14 +231,17 @@
           "name_fr": "À Pied",
           "name_de": "Zu Fuß",
           "points": 0,
-          "active": true
+          "active": true,
+          "exclusive": true
         },
         {
           "name_en": "Bretonnian Warhorse",
           "name_cn": "巴托尼亚战马",
           "name_de": "Bretonisches Schlachtross",
           "name_fr": "Destrier Bretonnien",
+          "id": "bretonnian-warhorse",
           "points": 15,
+          "exclusive": true,
           "options": [
             {
               "name_de": "Rossharnisch",
@@ -246,7 +257,9 @@
           "name_cn": "皇家飞马",
           "name_de": "Königspegasus",
           "name_fr": "Pégase Royal",
-          "points": 50
+          "id": "royal-pegasus",
+          "points": 50,
+          "exclusive": true
         }
       ],
       "items": [
@@ -641,7 +654,9 @@
         "name_cn": "探索誓言",
         "name_de": "Questgelübde",
         "name_fr": "Le Vœu de la Quête",
-        "points": 8
+        "id": "quest-vow",
+        "points": 8,
+        "exclusive": true
       },
       {
           "name_en": "The Grail Vow",
@@ -649,7 +664,8 @@
           "name_de": "Gralsgelübde",
           "name_fr": "Le Vœu du Graal",
           "id": "grail-vow",
-          "points": 21
+          "points": 21,
+        "exclusive": true
         }
       ],
       "mounts": [
@@ -658,7 +674,9 @@
           "name_en": "On foot",
           "name_cn": "步行",
           "name_fr": "À Pied",
-          "points": 0
+          "id": "on-foot",
+          "points": 0,
+          "exclusive": true
       },
       {
         "name_en": "Bretonnian Warhorse",
@@ -666,14 +684,18 @@
         "name_de": "Bretonisches Schlachtross",
         "name_fr": "Destrier Bretonnien",
         "points": 14,
-        "active": true
+        "id": "bretonnian-warhorse",
+        "active": true,
+        "exclusive": true
       },
       {
         "name_en": "Royal Pegasus",
         "name_cn": "皇家飞马",
         "name_de": "Königspegasus",
         "name_fr": "Pégase Royal",
-        "points": 50
+        "id": "royal-pegasus",
+        "points": 50,
+        "exclusive": true
       }
     ],
     "items": [
@@ -773,7 +795,9 @@
           "name_fr": "À Pied",
           "name_de": "Zu Fuß",
           "points": 0,
-          "active": true
+          "id": "on-foot",
+          "active": true,
+          "exclusive": true
         },
         {
           "name_en": "Bretonnian Warhorse",
@@ -781,6 +805,8 @@
           "name_de": "Bretonisches Schlachtross",
           "name_fr": "Destrier Bretonnien",
           "points": 10,
+          "id": "bretonnian-warhorse",
+          "exclusive": true,
           "options": [
             {
               "name_de": "Rossharnisch",
