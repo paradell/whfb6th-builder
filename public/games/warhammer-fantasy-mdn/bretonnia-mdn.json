@@ -109,6 +109,7 @@
         "name_en": "On foot",
         "name_cn": "步行",
         "name_fr": "À Pied",
+        "id": "on-foot",
         "points": 0,
         "exclusive": true
       },
@@ -117,6 +118,7 @@
         "name_cn": "巴托尼亚战马",
         "name_de": "Bretonisches Schlachtross",
         "name_fr": "Destrier Bretonnien",
+        "id": "bretonnian-warhorse",
         "points": 21,
         "active": true,
         "exclusive": true
@@ -126,6 +128,7 @@
         "name_cn": "皇家飞马",
         "name_de": "Königspegasus",
         "name_fr": "Pégase Royal",
+        "id": "royal-pegasus",
         "points": 50,
         "exclusive": true
       },
@@ -134,6 +137,7 @@
         "name_en": "Hippogryph",
         "name_cn": "角鹰",
         "name_fr": "Hippogriffe",
+        "id": "hippogryph",
         "points": 200,
         "exclusive": true
       }
@@ -224,6 +228,7 @@
           "name_cn": "步行",
           "name_fr": "À Pied",
           "name_de": "Zu Fuß",
+          "id": "on-foot",
           "points": 0,
           "active": true,
           "exclusive": true
@@ -234,6 +239,7 @@
           "name_de": "Bretonisches Schlachtross",
           "name_fr": "Destrier Bretonnien",
           "points": 15,
+          "id": "bretonnian-warhorse",
           "exclusive": true,
           "options": [
             {
@@ -250,12 +256,14 @@
           "name_cn": "皇家飞马",
           "name_de": "Königspegasus",
           "name_fr": "Pégase Royal",
+          "id": "royal-pegasus",
           "points": 50,
           "exclusive": true
         },
         {
           "name_en": "Unicorn",
           "name_es": "Unicornio",
+          "id": "unicorn",
           "points": 65,
           "exclusive": true
         }
@@ -673,6 +681,7 @@
         "name_en": "On foot",
         "name_cn": "步行",
         "name_fr": "À Pied",
+        "id": "on-foot",
         "points": 0,
         "exclusive": true
       },
@@ -681,6 +690,7 @@
         "name_cn": "巴托尼亚战马",
         "name_de": "Bretonisches Schlachtross",
         "name_fr": "Destrier Bretonnien",
+        "id": "bretonnian-warhorse",
         "points": 14,
         "active": true,
         "exclusive": true
@@ -690,6 +700,7 @@
         "name_cn": "皇家飞马",
         "name_de": "Königspegasus",
         "name_fr": "Pégase Royal",
+        "id": "royal-pegasus",
         "points": 50,
         "exclusive": true
       }
@@ -790,6 +801,7 @@
           "name_cn": "步行",
           "name_fr": "À Pied",
           "name_de": "Zu Fuß",
+          "id": "on-foot",
           "points": 0,
           "active": true,
           "exclusive": true
@@ -799,6 +811,7 @@
           "name_cn": "巴托尼亚战马",
           "name_de": "Bretonisches Schlachtross",
           "name_fr": "Destrier Bretonnien",
+          "id": "bretonnian-warhorse",
           "points": 10,
           "exclusive": true,
           "options": [
