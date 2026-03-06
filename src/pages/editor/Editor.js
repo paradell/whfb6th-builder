@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import {getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots, countCoreUnits, countExtraCategories} from "../../utils/rules";
+import {getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots, countExtraCategories} from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -146,7 +146,7 @@ export const Editor = ({ isMobile }) => {
   const coreData = getMinSlots({
     type: "core",
     armyPoints: list.points,
-    slots: countCoreUnits(list, armyComposition),
+    slots: list.core.length + countExtraCategories(list, "core", armyComposition),
     armyComposition,
   });
   const specialData = getMaxSlots({

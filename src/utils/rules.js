@@ -4748,6 +4748,8 @@ export const countExtraCategories = (list, category, armyComposition) => {
 // - list: objeto de lista que contiene la propiedad `core` (array de unidades)
 // - options.useStrength: si true suma la propiedad `strength` de cada unidad (por defecto cuenta unidades)
 // - options.armyComposition: id de la composición para comprobar overrides específicos
+
+// Deprecate
 export const countCoreUnits = (list, { useStrength = false, armyComposition = null } = {}) => {
   if (!list || !Array.isArray(list.core)) return 0;
 
