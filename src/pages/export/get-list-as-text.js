@@ -250,6 +250,7 @@ export const getListAsText = ({
   const heroesPoints = getPoints({ list, type: "heroes" });
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
+  const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
@@ -286,6 +287,7 @@ export const getListAsText = ({
       ...(list.lords || []).map((unit) => ({ type: "lords", ...unit })),
       ...(list.heroes || []).map((unit) => ({ type: "heroes", ...unit })),
       ...(list.core || []).map((unit) => ({ type: "core", ...unit })),
+      ...(list.core_not_count || []).map((unit) => ({ type: "core_not_count", ...unit })),
       ...(list.special || []).map((unit) => ({ type: "special", ...unit })),
       ...(list.rare || []).map((unit) => ({ type: "rare", ...unit })),
       ...(list.mercenaries || []).map((unit) => ({
@@ -441,6 +443,33 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
       showStats,
       armyComposition,
       type: "core",
+    })}`;
+  }
+
+  // CORE (NOT COUNTING SLOTS)
+  // prettier-ignore
+  if (list.core_not_count?.length) {
+    listString += `++ ${intl.formatMessage({
+  id: "editor.core_not_count",
+})}${isShowList ? '' : ' [' + coreNotCountPoints + ' ' + intl.formatMessage({
+  id: "app.points",
+}) + ']'} ++
+`
+    listString += isCompactList || isMarkdownList ? "" : "\n";
+
+    listString += `${getUnitsString({
+      isCompactList,
+      showSpecialRules,
+      showPageNumbers,
+      isMarkdownList,
+      showCustomNotes,
+      units: list.core_not_count,
+      isShowList,
+      intl,
+      language,
+      showStats,
+      armyComposition,
+      type: "core_not_count",
     })}`;
   }
 

@@ -122,6 +122,7 @@
   "editor.heroes": "Heroes",
   "editor.characters": "Characters",
   "editor.core": "Core Units",
+  "editor.core_not_count": "Core (not counting slots)",
   "editor.special": "Special Units",
   "editor.rare": "Rare Units",
   "editor.mercenaries": "Mercenaries",

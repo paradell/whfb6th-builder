@@ -122,6 +122,7 @@
   "editor.heroes": "Héroes",
   "editor.characters": "Personajes",
   "editor.core": "Unidades Básicas",
+  "editor.core_not_count": "Básicas (sin contar slots)",
   "editor.special": "Unidades Especiales",
   "editor.rare": "Unidades Singulares",
   "editor.mercenaries": "Mercenarios",

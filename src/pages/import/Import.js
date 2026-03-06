@@ -40,7 +40,11 @@ export const Import = ({ isMobile }) => {
     reader.readAsText(list, "UTF-8");
     reader.onload = (event) => {
       const newId = getRandomId();
-      const importedList = { ...JSON.parse(event.target.result), id: newId };
+      const importedList = {
+        core_not_count: [],
+        ...JSON.parse(event.target.result),
+        id: newId,
+      };
       const newLists = [...lists, importedList];
 
       localStorage.setItem("whfb.lists", JSON.stringify(newLists));

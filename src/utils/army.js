@@ -77,6 +77,11 @@ export const getArmyData = ({ data, armyComposition }) => {
         unit.armyComposition[armyComposition].category === "core") ||
       !unit.armyComposition,
   );
+  const allCoreNotCount = [...core, ...special, ...rare].filter(
+    (unit) =>
+      unit?.armyComposition &&
+      unit.armyComposition[armyComposition].category === "core_not_count",
+  );
   const allSpecial = [...special, ...coreToSpecial, ...rareToSpecial].filter(
     (unit) =>
       (unit?.armyComposition &&
@@ -122,6 +127,7 @@ export const getArmyData = ({ data, armyComposition }) => {
     heroes: updateIds(heroes),
     characters: updateIds(allCharacters),
     core: updateIds(allCore),
+    core_not_count: updateIds(allCoreNotCount),
     special: updateIds(allSpecial),
     rare: updateIds(allRare),
     mercenaries: updateIds(data.mercenaries),
