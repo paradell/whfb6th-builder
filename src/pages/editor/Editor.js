@@ -351,7 +351,7 @@ export const Editor = ({ isMobile }) => {
 
               {errors
                   .filter(({ section }) => section === "lords")
-                  .map(({ message, name, diff, min, max, option, mount, unit, requires }, index) => (
+                  .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
                       <ErrorMessage key={message + index} spaceBefore>
                         <FormattedMessage
                             id={message}
@@ -364,6 +364,7 @@ export const Editor = ({ isMobile }) => {
                               mount,
                               unit,
                               requires,
+                              forbiddenNames,
                             }}
                         />
                       </ErrorMessage>
@@ -413,7 +414,7 @@ export const Editor = ({ isMobile }) => {
 
               {errors
                   .filter(({ section }) => section === "heroes")
-                  .map(({ message, name, diff, min, max, option, mount, unit, requires }, index) => (
+                  .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
                       <ErrorMessage key={message + index} spaceBefore>
                         <FormattedMessage
                             id={message}
@@ -426,6 +427,7 @@ export const Editor = ({ isMobile }) => {
                               mount,
                               unit,
                               requires,
+                              forbiddenNames,
                             }}
                         />
                       </ErrorMessage>
@@ -475,7 +477,7 @@ export const Editor = ({ isMobile }) => {
 
             {errors
               .filter(({ section }) => section === "characters")
-              .map(({ message, name, diff, min, max, option, mount, unit, requires }, index) => (
+              .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
                 <ErrorMessage key={message + index} spaceBefore>
                   <FormattedMessage
                     id={message}
@@ -488,6 +490,7 @@ export const Editor = ({ isMobile }) => {
                       mount,
                       unit,
                       requires,
+                      forbiddenNames,
                     }}
                   />
                 </ErrorMessage>
@@ -537,7 +540,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "core")
-            .map(({ message, name, min, max, diff, option, mount, unit, requires }, index) => (
+            .map(({ message, name, min, max, diff, option, mount, unit, requires, forbiddenNames }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -550,6 +553,7 @@ export const Editor = ({ isMobile }) => {
                     mount,
                     unit,
                     requires,
+                    forbiddenNames,
                   }}
                 />
               </ErrorMessage>
@@ -597,7 +601,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "special")
-            .map(({ message, name, diff, min, max, option, mount, unit, requires }, index) => (
+            .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -610,6 +614,7 @@ export const Editor = ({ isMobile }) => {
                     mount,
                     unit,
                     requires,
+                    forbiddenNames,
                   }}
                 />
               </ErrorMessage>
@@ -657,7 +662,7 @@ export const Editor = ({ isMobile }) => {
 
           {errors
             .filter(({ section }) => section === "rare")
-            .map(({ message, name, diff, min, max, option, mount, unit, requires }, index) => (
+            .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
               <ErrorMessage key={message + index} spaceBefore>
                 <FormattedMessage
                   id={message}
@@ -670,6 +675,7 @@ export const Editor = ({ isMobile }) => {
                     mount,
                     unit,
                     requires,
+                    forbiddenNames,
                   }}
                 />
               </ErrorMessage>
@@ -723,7 +729,7 @@ export const Editor = ({ isMobile }) => {
 
               {errors
                 .filter(({ section }) => section === "mercenaries")
-                .map(({ message, name, diff, min, max, option, mount, unit, requires }, index) => (
+                .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
                   <ErrorMessage key={message + index} spaceBefore>
                     <FormattedMessage
                       id={message}
@@ -736,6 +742,7 @@ export const Editor = ({ isMobile }) => {
                         mount,
                         unit,
                         requires,
+                        forbiddenNames,
                       }}
                     />
                   </ErrorMessage>
@@ -787,7 +794,7 @@ export const Editor = ({ isMobile }) => {
 
               {errors
                 .filter(({ section }) => section === "allies")
-                .map(({ message, name, diff, min, max, option, mount, unit, requires }, index) => (
+                .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
                   <ErrorMessage key={message + index} spaceBefore>
                     <FormattedMessage
                       id={message}
@@ -800,6 +807,7 @@ export const Editor = ({ isMobile }) => {
                         mount,
                         unit,
                         requires,
+                        forbiddenNames,
                       }}
                     />
                   </ErrorMessage>

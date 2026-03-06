@@ -1076,15 +1076,16 @@
           "perModel": true
         }
       ],
-      "ranged": [{
+      "options": [{
         "name_en": "Handgun",
         "name_es": "Arcabuz",
+        "id": "handgun",
         "points": 3,
         "perModel": true
       }],
       "armor": [
       ],
-      "options": [],
+      "ranged": [],
       "mounts": [],
       "specialRules": {
         "name_en": "Escoria, Desdén por la Pólvora",
@@ -2306,9 +2307,6 @@
         },
 
         "errantry-war-mdn": {
-          "category": "rare"
-        },
-        "army-of-the-king-mdn": {
           "category": "rare"
         }
       },

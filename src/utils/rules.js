@@ -4463,6 +4463,18 @@ export const rules = {
           requires: ["prophetess"],
           requiresType: "lords",
         },
+        {
+          ids: ["bretonnian-cannon"],
+          // Cannot be selected if: bretonnian-lord with grail-vow, OR paladin with grail-vow,
+          // OR grail-knights in army, OR louen, OR fay enchantress has grail-guardians attached
+          forbiddenIf: [
+            { type: "option", unit: "bretonnian-lord", id: "grail-vow" },
+            { type: "option", unit: "paladin", id: "grail-vow" },
+            { type: "unit", id: "grail-knights" },
+            { type: "unit", id: "louen-leoncoeur" },
+            { type: "attachedUnit", unit: "the-fay-encahntress", id: "grail-guardians" },
+          ],
+        },
       ],
     },
     mercenaries: { maxSlots: 0 },
@@ -4528,6 +4540,15 @@ export const rules = {
         {
           ids: ["bretonnian-cannon"],
           max: 1,
+          // Cannot be selected if: bretonnian-lord with grail-vow, OR paladin with grail-vow,
+          // OR grail-knights in army, OR louen, OR fay enchantress has grail-guardians attached
+          forbiddenIf: [
+            { type: "option", unit: "bretonnian-lord", id: "grail-vow" },
+            { type: "option", unit: "paladin", id: "grail-vow" },
+            { type: "unit", id: "grail-knights" },
+            { type: "unit", id: "louen-leoncoeur" },
+            { type: "attachedUnit", unit: "the-fay-encahntress", id: "grail-guardians" },
+          ],
         },
       ],
     },
