@@ -38,7 +38,16 @@ export const App = () => {
     const localLists = localStorage.getItem("whfb.lists");
     const localSettings = localStorage.getItem("whfb.settings");
 
-    dispatch(setLists(JSON.parse(localLists)));
+    // Migrate old lists that don't have core_not_count
+    const parsedLists = JSON.parse(localLists);
+    const migratedLists = parsedLists
+      ? parsedLists.map((list) => ({
+          ...list,
+          core_not_count: list.core_not_count || [],
+        }))
+      : parsedLists;
+
+    dispatch(setLists(migratedLists));
     dispatch(setSettings(JSON.parse(localSettings)));
   }, [dispatch]);
 

@@ -708,7 +708,7 @@ export const validateList = ({ list, language, intl }) => {
   const checkRules = ({ ruleUnit, type }) => {
     const unitsInList = (
       ruleUnit?.requiredByType === "all"
-        ? [...list.characters, ...list.lords,...list.heroes, ...list.core, ...list.special, ...list.rare]
+        ? [...list.characters, ...list.lords,...list.heroes, ...list.core, ...(list.core_not_count || []), ...list.special, ...list.rare]
         : (list[type] || [])
     ).filter(
       (unit) => ruleUnit.ids && ruleUnit.ids.includes(unit.id.split(".")[0]),
@@ -716,7 +716,7 @@ export const validateList = ({ list, language, intl }) => {
     const requiredUnitsInList =
       ruleUnit.requiresType &&
       (ruleUnit.requiresType === "all"
-        ? [...list.characters, ...list.lords,...list.heroes, ...list.core, ...list.special, ...list.rare]
+        ? [...list.characters, ...list.lords,...list.heroes, ...list.core, ...(list.core_not_count || []), ...list.special, ...list.rare]
         : list[ruleUnit.requiresType]
       ).filter(
         (unit) =>
@@ -962,6 +962,82 @@ export const validateList = ({ list, language, intl }) => {
           forbiddenNames: forbiddenNames,
         });
       }
+    }
+
+    // forbiddenOptionIf: a specific option on the unit cannot be equipped if any of the conditions are met
+    if (ruleUnit.forbiddenOptionIf && unitsInList.length > 0) {
+      const allUnits = [
+        ...list.characters,
+        ...list.lords,
+        ...list.heroes,
+        ...list.core,
+        ...(list.core_not_count || []),
+        ...list.special,
+        ...list.rare,
+      ];
+
+      ruleUnit.forbiddenOptionIf.forEach((forbiddenOption) => {
+        const { optionId, conditions } = forbiddenOption;
+
+        const unitWithOptionActive = unitsInList.find((unit) => {
+          const hasActiveRangedOption = (unit.ranged || []).some(
+            (opt) => opt.id === optionId && opt.active,
+          );
+          const hasActiveMeleeOption = (unit.melee || []).some(
+            (opt) => opt.id === optionId && opt.active,
+          );
+          const hasActiveOption = (unit.options || []).some(
+            (opt) => opt.id === optionId && opt.active,
+          );
+          return hasActiveRangedOption || hasActiveMeleeOption || hasActiveOption;
+        });
+
+        if (unitWithOptionActive) {
+          const forbiddenConditionMet = conditions.some((condition) => {
+            if (condition.type === "unit") {
+              return allUnits.some((u) => u.id.split(".")[0] === condition.id);
+            }
+            if (condition.type === "option") {
+              return allUnits.some(
+                (u) =>
+                  u.id.split(".")[0] === condition.unit &&
+                  (u.options || []).some(
+                    (opt) => opt.id === condition.id && opt.active,
+                  ),
+              );
+            }
+            if (condition.type === "attachedUnit") {
+              return allUnits.some(
+                (u) =>
+                  u.id.split(".")[0] === condition.unit &&
+                  (u.attached_units?.selected || []).some(
+                    (a) => a.id === condition.id,
+                  ),
+              );
+            }
+            return false;
+          });
+
+          if (forbiddenConditionMet) {
+            const optionName = intl.formatMessage({ id: optionId });
+            const forbiddenNames = joinWithOr(
+              conditions.map((condition) => {
+                if (condition.type === "unit") return intl.formatMessage({ id: condition.id });
+                if (condition.type === "option") return intl.formatMessage({ id: condition.id });
+                if (condition.type === "attachedUnit") return intl.formatMessage({ id: condition.id });
+                return condition.id;
+              }),
+            );
+            errors.push({
+              message: "misc.error.forbiddenOptionIf",
+              section: type,
+              name: namesInList,
+              option: optionName,
+              forbiddenNames: forbiddenNames,
+            });
+          }
+        }
+      });
     }
 
     // Duplicated named units - named units can only have max 1 in the list

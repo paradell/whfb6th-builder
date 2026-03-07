@@ -85,6 +85,7 @@ export const GameView = () => {
   const allPoints = getAllPoints(list);
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
+  const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
@@ -666,6 +667,22 @@ export const GameView = () => {
               </h2>
             </header>
             {getSection({ type: "core" })}
+          </section>
+        )}
+
+        {list.core_not_count?.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.core_not_count" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{coreNotCountPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "core_not_count" })}
           </section>
         )}
 

@@ -446,6 +446,7 @@ export const getAllPoints = (list) => {
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
   const corePoints = getPoints({ list, type: "core" });
+  const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
   const charactersPoints = getPoints({ list, type: "characters" });
@@ -456,6 +457,7 @@ export const getAllPoints = (list) => {
     lordsPoints +
     heroesPoints +
     corePoints +
+    coreNotCountPoints +
     specialPoints +
     rarePoints +
     charactersPoints +

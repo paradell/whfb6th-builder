@@ -86,6 +86,7 @@ export const NewList = ({ isMobile }) => {
       heroes: [],
       characters: [],
       core: [],
+      core_not_count: [],
       special: [],
       rare: [],
       mercenaries: [],

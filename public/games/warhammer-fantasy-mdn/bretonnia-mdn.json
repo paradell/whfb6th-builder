@@ -935,8 +935,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core",
-          "no_count_slot": true
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1037,8 +1036,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core",
-          "no_count_slot": true
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1052,7 +1050,6 @@
       "points": 3,
       "minimum": 10,
       "maximum": 0,
-      "no_count_slot": true,
       "command": [
       ],
       "melee": [
@@ -1096,7 +1093,7 @@
       },
       "armyComposition": {
         "bretonnia-mdn": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1199,8 +1196,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core",
-          "no_count_slot": true
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1292,8 +1288,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core",
-          "no_count_slot": true
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1423,8 +1418,7 @@
           }
         },
         "errantry-war-mdn": {
-          "category": "core",
-          "no_count_slot": true
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "core"

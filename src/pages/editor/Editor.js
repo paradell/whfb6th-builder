@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import {getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots, countCoreUnits, countExtraCategories} from "../../utils/rules";
+import {getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots, countExtraCategories} from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -107,6 +107,7 @@ export const Editor = ({ isMobile }) => {
   const heroesPoints = getPoints({ list, type: "heroes" });
   const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
+  const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
   const rarePoints = getPoints({ list, type: "rare" });
   const mercenariesPoints = getPoints({ list, type: "mercenaries" });
@@ -146,7 +147,7 @@ export const Editor = ({ isMobile }) => {
   const coreData = getMinSlots({
     type: "core",
     armyPoints: list.points,
-    slots: countCoreUnits(list, armyComposition),
+    slots: list.core.length + countExtraCategories(list, "core", armyComposition),
     armyComposition,
   });
   const specialData = getMaxSlots({
@@ -569,6 +570,61 @@ export const Editor = ({ isMobile }) => {
             <FormattedMessage id="editor.add" />
           </Button>
         </section>
+
+        {list.core_not_count && list.core_not_count.length >= 0 && (
+          <section className="editor__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.core_not_count" />
+              </h2>
+              {coreNotCountPoints > 0 && (
+                <p className="editor__points">
+                  <strong>{coreNotCountPoints}</strong>
+                  {` `}
+                  <FormattedMessage id="app.points" />
+                </p>
+              )}
+            </header>
+
+            <OrderableUnitList
+              units={list.core_not_count}
+              type="core_not_count"
+              listId={listId}
+              armyComposition={armyComposition}
+            />
+
+            {errors
+              .filter(({ section }) => section === "core_not_count")
+              .map(({ message, name, min, max, diff, option, mount, unit, requires, forbiddenNames }, index) => (
+                <ErrorMessage key={message + index} spaceBefore>
+                  <FormattedMessage
+                    id={message}
+                    values={{
+                      name,
+                      min,
+                      max,
+                      diff,
+                      option,
+                      mount,
+                      unit,
+                      requires,
+                      forbiddenNames,
+                    }}
+                  />
+                </ErrorMessage>
+              ))}
+
+            <Button
+              type="primary"
+              centered
+              to={`/editor/${listId}/add/core_not_count`}
+              icon="add"
+              spaceTop
+            >
+              <FormattedMessage id="editor.add" />
+            </Button>
+          </section>
+        )}
 
         <section className="editor__section">
           <header className="editor__header">
