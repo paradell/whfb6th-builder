@@ -27,7 +27,7 @@
         "category": "lords"
       }
     },
-    "equipment": [
+    "melee": [
       {
         "name_de": "Handwaffe",
         "name_en": "Hand weapon",
@@ -90,7 +90,8 @@
         "name_de": "Questgelübde",
         "name_fr": "Le Vœu de la Quête",
         "id": "quest-vow",
-        "points": 12
+        "points": 12,
+        "exclusive": true
       },
       {
         "name_en": "The Grail Vow",
@@ -98,7 +99,8 @@
         "name_de": "Gralsgelübde",
         "name_fr": "Le Vœu du Graal",
         "id": "grail-vow",
-        "points": 28
+        "points": 28,
+        "exclusive": true
       }
     ],
     "mounts": [
@@ -107,29 +109,37 @@
         "name_en": "On foot",
         "name_cn": "步行",
         "name_fr": "À Pied",
-        "points": 0
+        "points": 0,
+        "id": "on-foot",
+        "exclusive": true
       },
       {
         "name_en": "Bretonnian Warhorse",
         "name_cn": "巴托尼亚战马",
         "name_de": "Bretonisches Schlachtross",
         "name_fr": "Destrier Bretonnien",
+        "id": "bretonnian-warhorse",
         "points": 21,
-        "active": true
+        "active": true,
+        "exclusive": true
       },
       {
         "name_en": "Royal Pegasus",
         "name_cn": "皇家飞马",
         "name_de": "Königspegasus",
         "name_fr": "Pégase Royal",
-        "points": 50
+        "id": "royal-pegasus",
+        "points": 50,
+        "exclusive": true
       },
       {
         "name_de": "Hippogreif",
         "name_en": "Hippogryph",
         "name_cn": "角鹰",
         "name_fr": "Hippogriffe",
+        "id": "hippogryph",
         "points": 200,
+        "exclusive": true,
         "options": []
       }
     ],
@@ -169,14 +179,15 @@
           "points": 0
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapon",
           "name_cn": "单手武器",
           "name_fr": "Arme de base",
           "name_de": "Handwaffe",
           "points": 0,
-          "active": true
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "armor": [],
@@ -220,14 +231,17 @@
           "name_fr": "À Pied",
           "name_de": "Zu Fuß",
           "points": 0,
-          "active": true
+          "active": true,
+          "exclusive": true
         },
         {
           "name_en": "Bretonnian Warhorse",
           "name_cn": "巴托尼亚战马",
           "name_de": "Bretonisches Schlachtross",
           "name_fr": "Destrier Bretonnien",
+          "id": "bretonnian-warhorse",
           "points": 15,
+          "exclusive": true,
           "options": [
             {
               "name_de": "Rossharnisch",
@@ -243,7 +257,9 @@
           "name_cn": "皇家飞马",
           "name_de": "Königspegasus",
           "name_fr": "Pégase Royal",
-          "points": 50
+          "id": "royal-pegasus",
+          "points": 50,
+          "exclusive": true
         }
       ],
       "items": [
@@ -374,6 +390,71 @@
           "alwaysActive": true
         }],
       "items": [],
+      "attached_units": {
+        "minimum": 0,
+        "maximum": 1,
+        "units": [{
+        "id": "grail-guardians",
+        "name_en": "Grail Guardians",
+        "name_es": "Guardianes del Grial",
+        "points": 38,
+        "minimum": 2,
+        "maximum": 8,
+        "command": [
+          {
+            "name_en": "Standard bearer",
+            "name_cn": "旗手",
+            "name_fr": "Porte-étendard",
+            "name_de": "Standartenträger",
+            "points": 20,
+            "magic": {
+              "maxPoints": 50,
+              "types": ["banner"]
+            }
+          },
+          {
+            "name_en": "Musician",
+            "name_cn": "乐手",
+            "name_fr": "Musicien",
+            "name_de": "Musiker",
+            "points": 10
+          }
+        ],
+        "equipment": [
+          {
+            "name_en": "Hand weapons, Lances, Shields",
+            "name_cn": "单手武器, 长枪, 盾牌",
+            "name_de": "Handwaffen, Lanzen, Schilde",
+            "name_fr": "Armes de base, Lances de joute, Boucliers",
+            "points": 0,
+            "perModel": true,
+            "active": true
+          }
+        ],
+        "armor": [
+          {
+            "name_en": "Heavy armour, Barding",
+            "name_cn": "重甲, 马铠",
+            "name_de": "Schwere Rüstung, Rossharnische",
+            "name_fr": "Armure lourde, Caparaçon",
+            "name_es": "Armadura pesada, Barding",
+            "points": 0,
+            "perModel": true,
+            "active": true
+          }
+        ],
+        "options": [],
+        "mounts": [],
+        "items": [
+        ],
+        "specialRules": {
+          "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow",
+          "name_cn": "女神祝福, 紧密阵型, 反制冲锋, 良种战马, 先行冲锋, 枪骑阵型, 活圣人, 快速行进, 圣杯誓言",
+          "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Living Saints, Swiftstride, The Grail Vow",
+          "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Saints Vivants, Rapide, Le Vœu du Graal"
+        }
+      }]
+      },
       "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens", "lore-of-death", "lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-light"],
       "specialRules": {
         "name_en": "Favour of the Fey, The Blessing of the Lady, Grail Guardians, Spiteful Glance, Supreme Aura of the Lady, The Fay Enchantres Magic",
@@ -395,6 +476,10 @@
       "id": "louen-leoncoeur",
       "points": 528,
       "named": true,
+      "notes": {
+        "name_en": "Counts as one Lord slot and one Hero slot",
+        "name_es": "Cuenta como una selección de Comandante y una de Héroe"
+      },
       "command": [
         {
           "name_en": "General",
@@ -463,7 +548,8 @@
           }
         },
         "army-of-the-king": {
-          "category": "lords"
+          "category": "lords",
+          "extra_categories": ["heroes"]
         }
       }
     }],
@@ -506,7 +592,7 @@
         }
       }
     ],
-    "equipment": [
+    "melee": [
       {
         "name_de": "Handwaffe",
         "name_en": "Hand weapon",
@@ -568,23 +654,29 @@
         "name_cn": "探索誓言",
         "name_de": "Questgelübde",
         "name_fr": "Le Vœu de la Quête",
-        "points": 8
+        "id": "quest-vow",
+        "points": 8,
+        "exclusive": true
       },
       {
-        "name_en": "The Grail Vow",
-        "name_cn": "圣杯誓言",
-        "name_de": "Gralsgelübde",
-        "name_fr": "Le Vœu du Graal",
-        "points": 21
-      }
-    ],
-    "mounts": [
-      {
-        "name_de": "Zu Fuß",
-        "name_en": "On foot",
-        "name_cn": "步行",
-        "name_fr": "À Pied",
-        "points": 0
+          "name_en": "The Grail Vow",
+          "name_cn": "圣杯誓言",
+          "name_de": "Gralsgelübde",
+          "name_fr": "Le Vœu du Graal",
+          "id": "grail-vow",
+          "points": 21,
+        "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_de": "Zu Fuß",
+          "name_en": "On foot",
+          "name_cn": "步行",
+          "name_fr": "À Pied",
+          "id": "on-foot",
+          "points": 0,
+          "exclusive": true
       },
       {
         "name_en": "Bretonnian Warhorse",
@@ -592,14 +684,18 @@
         "name_de": "Bretonisches Schlachtross",
         "name_fr": "Destrier Bretonnien",
         "points": 14,
-        "active": true
+        "id": "bretonnian-warhorse",
+        "active": true,
+        "exclusive": true
       },
       {
         "name_en": "Royal Pegasus",
         "name_cn": "皇家飞马",
         "name_de": "Königspegasus",
         "name_fr": "Pégase Royal",
-        "points": 50
+        "id": "royal-pegasus",
+        "points": 50,
+        "exclusive": true
       }
     ],
     "items": [
@@ -648,7 +744,7 @@
           "points": 0
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapon",
           "name_cn": "单手武器",
@@ -699,7 +795,9 @@
           "name_fr": "À Pied",
           "name_de": "Zu Fuß",
           "points": 0,
-          "active": true
+          "id": "on-foot",
+          "active": true,
+          "exclusive": true
         },
         {
           "name_en": "Bretonnian Warhorse",
@@ -707,6 +805,8 @@
           "name_de": "Bretonisches Schlachtross",
           "name_fr": "Destrier Bretonnien",
           "points": 10,
+          "id": "bretonnian-warhorse",
+          "exclusive": true,
           "options": [
             {
               "name_de": "Rossharnisch",
@@ -820,7 +920,7 @@
           "category": "core"
         },
         "errantry-war": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king": {
           "category": "special"
@@ -937,7 +1037,7 @@
           "category": "core"
         },
         "errantry-war": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king": {
           "category": "special"
@@ -962,7 +1062,7 @@
           }
         },
         "errantry-war": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king": {
           "category": "core",
@@ -1001,7 +1101,7 @@
           "points": 8
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons, Lances, Shields",
           "name_cn": "单手武器, 长枪, 盾牌",
@@ -1059,13 +1159,22 @@
         },
       "command": [
         {
-          "name_en": "Gallant (champion)",
-          "name_cn": "英勇(冠军)",
-          "name_de": "Heißsporn",
-          "name_fr": "Preux Chevalier (champion)",
+          "name_en": "Errant Paladin (champion)",
+          "name_es": "Paladín Novel (campeón)",
           "points": 0,
           "active": true,
           "alwaysActive": true
+        },
+        {
+          "name_en": "Grail Knight (champion)",
+          "name_es": "Caballero del Grial (campeón)",
+          "points": 22,
+          "active": false,
+          "armyComposition": ["errantry-war"],
+          "notes": {
+            "name_en": "Substitutes the Gallant champion.",
+            "name_es": "Sustituye al campeón Preux Chevalier."
+          }
         },
         {
           "name_en": "Standard bearer",
@@ -1086,7 +1195,7 @@
           "points": 7
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons, Lances, Shields",
           "name_cn": "单手武器, 长枪, 盾牌",
@@ -1159,7 +1268,7 @@
           "points": 9
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapons, Great weapons, Shields",
           "name_cn": "单手武器, 重型武器, 盾牌",
@@ -1238,7 +1347,7 @@
           "points": 10
         }
       ],
-      "equipment": [
+      "melee": [
         {
           "name_en": "Hand weapon, Lances, Shields",
           "name_cn": "单手武器, 长枪, 盾牌",
