@@ -920,7 +920,7 @@
           "category": "core"
         },
         "errantry-war": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king": {
           "category": "special"
@@ -1037,7 +1037,7 @@
           "category": "core"
         },
         "errantry-war": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king": {
           "category": "special"
@@ -1062,7 +1062,7 @@
           }
         },
         "errantry-war": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king": {
           "category": "core",

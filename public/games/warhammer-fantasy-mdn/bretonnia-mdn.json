@@ -935,7 +935,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1036,7 +1036,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1196,7 +1196,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1288,7 +1288,7 @@
           "category": "core"
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "special"
@@ -1418,7 +1418,7 @@
           }
         },
         "errantry-war-mdn": {
-          "category": "core"
+          "category": "core_not_count"
         },
         "army-of-the-king-mdn": {
           "category": "core"
