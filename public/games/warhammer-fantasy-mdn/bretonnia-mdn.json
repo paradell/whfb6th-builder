@@ -2,14 +2,11 @@
   "characters": [],
   "lords": [{
     "name_en": "Bretonnian Lord",
-    "name_de": "Lord",
     "id": "bretonnian-lord",
     "points": 110,
     "command": [
       {
         "name_en": "General",
-        "name_de": "General",
-        "name_fr": "Général",
         "name_es": "General",
         "points": 0
       }
@@ -27,66 +24,47 @@
     },
     "equipment": [
       {
-        "name_de": "Handwaffe",
         "name_en": "Hand weapon",
-        "name_fr": "Arme de base",
         "points": 0,
         "active": true,
         "equippedDefault": true
       },
       {
-        "name_de": "Morgenstern",
         "name_en": "Morning star",
-        "name_fr": "Morgenstern",
         "points": 3
       },
       {
-        "name_de": "Zweihandwaffe",
         "name_en": "Great weapon",
-        "name_fr": "Arme lourde",
         "points": 6
       },
       {
-        "name_de": "Lanze",
         "name_en": "Lance",
-        "name_fr": "Lance de joute",
         "points": 6,
         "notes": {
           "name_en": "if appropriately mounted",
-          "name_it": "if appropriately mounted",
-          "name_de": "sofern geeignet beritten",
-          "name_fr": "si monté"
         }
       }
     ],
     "armor": [
       {
         "name_en": "Heavy armour",
-        "name_de": "Schwere Rüstung",
-        "name_fr": "Armure lourde",
         "points": 0,
         "active": true
       }
     ],
     "options": [
       {
-        "name_de": "Schild",
         "name_en": "Shield",
-        "name_fr": "Bouclier",
         "points": 3
       },
       {
         "name_en": "The Questing Vow",
-        "name_de": "Questgelübde",
-        "name_fr": "Le Vœu de la Quête",
         "points": 12,
         "id": "quest-vow",
         "exclusive": true
       },
       {
         "name_en": "The Grail Vow",
-        "name_de": "Gralsgelübde",
-        "name_fr": "Le Vœu du Graal",
         "points": 28,
         "id": "grail-vow",
         "exclusive": true
@@ -94,17 +72,13 @@
     ],
     "mounts": [
       {
-        "name_de": "Zu Fuß",
         "name_en": "On foot",
-        "name_fr": "À Pied",
         "id": "on-foot",
         "points": 0,
         "exclusive": true
       },
       {
         "name_en": "Bretonnian Warhorse",
-        "name_de": "Bretonisches Schlachtross",
-        "name_fr": "Destrier Bretonnien",
         "id": "bretonnian-warhorse",
         "points": 21,
         "active": true,
@@ -112,16 +86,12 @@
       },
       {
         "name_en": "Royal Pegasus",
-        "name_de": "Königspegasus",
-        "name_fr": "Pégase Royal",
         "id": "royal-pegasus",
         "points": 50,
         "exclusive": true
       },
       {
-        "name_de": "Hippogreif",
         "name_en": "Hippogryph",
-        "name_fr": "Hippogriffe",
         "id": "hippogryph",
         "points": 200,
         "exclusive": true
@@ -130,8 +100,6 @@
     "items": [
       {
         "name_en": "Magic Items",
-        "name_de": "Magische Gegenstände",
-        "name_fr": "Objets Magiques",
         "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtue"],
         "selected": [],
         "maxPoints": 100
@@ -139,22 +107,15 @@
     ],
     "specialRules": {
       "name_en": "The Blessing of the Lady, The Knight's Vow",
-      "name_de": "Segen der Herrin, Sammelruf, Rittertugend",
-      "name_fr": "Bénédiction de la Dame, Cri de Ralliement, Le Vœu du Chevalier"
     },
-    "name_fr": "Lord"
   },
     {
       "name_en": "Prophetess",
-      "name_de": "Dame",
-      "name_fr": "Prophétesse",
       "id": "prophetess",
       "points": 190,
       "command": [
         {
           "name_en": "General",
-          "name_de": "General",
-          "name_fr": "Général",
           "name_es": "General",
           "points": 0
         }
@@ -162,8 +123,6 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
-          "name_fr": "Arme de base",
-          "name_de": "Handwaffe",
           "points": 0,
           "active": true
         }
@@ -172,8 +131,6 @@
       "options": [
         {
           "name_en": "Wizard",
-          "name_de": "Wizard",
-          "name_fr": "Sorcier",
           "name_es": "Hechicero",
           "points": 0,
           "active": true,
@@ -181,8 +138,6 @@
           "options": [
             {
               "name_en": "Level 3 Wizard",
-              "name_de": "Level 3 Wizard",
-              "name_fr": "Sorcier de Niveau 3",
               "name_es": "Hechicero de Nivel 3",
               "points": 0,
               "exclusive": true,
@@ -190,8 +145,6 @@
             },
             {
               "name_en": "Level 4 Wizard",
-              "name_de": "Level 4 Wizard",
-              "name_fr": "Sorcier de Niveau 4",
               "name_es": "Hechicero de Nivel 4",
               "points": 35,
               "exclusive": true
@@ -202,8 +155,6 @@
       "mounts": [
         {
           "name_en": "On foot",
-          "name_fr": "À Pied",
-          "name_de": "Zu Fuß",
           "id": "on-foot",
           "points": 0,
           "active": true,
@@ -211,24 +162,18 @@
         },
         {
           "name_en": "Bretonnian Warhorse",
-          "name_de": "Bretonisches Schlachtross",
-          "name_fr": "Destrier Bretonnien",
           "points": 15,
           "id": "bretonnian-warhorse",
           "exclusive": true,
           "options": [
             {
-              "name_de": "Rossharnisch",
               "name_en": "Barding",
-              "name_fr": "Caparaçon",
               "points": 6
             }
           ]
         },
         {
           "name_en": "Royal Pegasus",
-          "name_de": "Königspegasus",
-          "name_fr": "Pégase Royal",
           "id": "royal-pegasus",
           "points": 50,
           "exclusive": true
@@ -244,8 +189,6 @@
       "items": [
         {
           "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "talisman",
@@ -260,8 +203,6 @@
       "specialRules": {
         "name_en": "Aura of the Lady, The Blessing of the Lady, Magic Resistance (-2)",
         "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-2)",
-        "name_de": "Aura der Herrin, Segen der Herrin, Lehre der Herrin, Magische Attacken, Magieresistenz (-2), Schild der Herrin",
-        "name_fr": "Aura de la Dame, Bénédiction de la Dame, Domaine de la Dame, Attaques Magiques, Résistance à la Magie (-2), Bouclier de la Dame"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -361,7 +302,6 @@
       "mounts": [
         {
           "name_en": "Silvaron",
-          "name_fr": "Silvaron",
           "points": 65,
           "active": true,
           "alwaysActive": true
@@ -380,8 +320,6 @@
           "command": [
             {
               "name_en": "Standard bearer",
-              "name_fr": "Porte-étendard",
-              "name_de": "Standartenträger",
               "points": 20,
               "magic": {
                 "maxPoints": 50,
@@ -390,16 +328,12 @@
             },
             {
               "name_en": "Musician",
-              "name_fr": "Musicien",
-              "name_de": "Musiker",
               "points": 10
             }
           ],
           "equipment": [
             {
               "name_en": "Hand weapons, Lances, Shields",
-              "name_de": "Handwaffen, Lanzen, Schilde",
-              "name_fr": "Armes de base, Lances de joute, Boucliers",
               "points": 0,
               "perModel": true,
               "active": true
@@ -408,8 +342,6 @@
           "armor": [
             {
               "name_en": "Heavy armour, Barding",
-              "name_de": "Schwere Rüstung, Rossharnische",
-              "name_fr": "Armure lourde, Caparaçon",
               "name_es": "Armadura pesada, Barding",
               "points": 0,
               "perModel": true,
@@ -422,8 +354,6 @@
           ],
           "specialRules": {
             "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow",
-            "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Living Saints, Swiftstride, The Grail Vow",
-            "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Saints Vivants, Rapide, Le Vœu du Graal"
           }
         }]
       },
@@ -528,8 +458,6 @@
   ],
   "heroes": [{
     "name_en": "Paladin",
-    "name_de": "Paladin",
-    "name_fr": "Paladin",
     "id": "paladin",
     "points": 60,
     "armyComposition": {
@@ -546,15 +474,11 @@
     "command": [
       {
         "name_en": "General",
-        "name_de": "General",
-        "name_fr": "Général",
         "name_es": "General",
         "points": 0
       },
       {
         "name_en": "Battle Standard Bearer",
-        "name_de": "Armeestandartenträger",
-        "name_fr": "Porteur de la Grande Bannière",
         "points": 0,
         "magic": {
           "types": ["banner"],
@@ -564,66 +488,47 @@
     ],
     "equipment": [
       {
-        "name_de": "Handwaffe",
         "name_en": "Hand weapon",
-        "name_fr": "Arme de base",
         "points": 0,
         "active": true,
         "equippedDefault": true
       },
       {
         "name_en": "Morning star",
-        "name_de": "Morgenstern",
-        "name_fr": "Morgenstern",
         "points": 2
       },
       {
-        "name_de": "Zweihandwaffe",
         "name_en": "Great weapon",
-        "name_fr": "Arme lourde",
         "points": 4
       },
       {
-        "name_de": "Lanze",
         "name_en": "Lance",
-        "name_fr": "Lance de joute",
         "points": 6,
         "notes": {
           "name_en": "if appropriately mounted",
-          "name_it": "if appropriately mounted",
-          "name_de": "sofern geeignet beritten",
-          "name_fr": "si monté"
         }
       }
     ],
     "armor": [
       {
         "name_en": "Heavy armour",
-        "name_de": "Schwere Rüstung",
-        "name_fr": "Armure lourde",
         "points": 0,
         "active": true
       }
     ],
     "options": [
       {
-        "name_de": "Schild",
         "name_en": "Shield",
-        "name_fr": "Bouclier",
         "points": 2
       },
       {
         "name_en": "The Questing Vow",
-        "name_de": "Questgelübde",
-        "name_fr": "Le Vœu de la Quête",
         "id": "quest-vow",
         "points": 8,
         "exclusive": true
       },
       {
         "name_en": "The Grail Vow",
-        "name_de": "Gralsgelübde",
-        "name_fr": "Le Vœu du Graal",
         "id": "grail-vow",
         "points": 21,
         "exclusive": true
@@ -631,17 +536,13 @@
     ],
     "mounts": [
       {
-        "name_de": "Zu Fuß",
         "name_en": "On foot",
-        "name_fr": "À Pied",
         "id": "on-foot",
         "points": 0,
         "exclusive": true
       },
       {
         "name_en": "Bretonnian Warhorse",
-        "name_de": "Bretonisches Schlachtross",
-        "name_fr": "Destrier Bretonnien",
         "id": "bretonnian-warhorse",
         "points": 14,
         "active": true,
@@ -649,8 +550,6 @@
       },
       {
         "name_en": "Royal Pegasus",
-        "name_de": "Königspegasus",
-        "name_fr": "Pégase Royal",
         "id": "royal-pegasus",
         "points": 50,
         "exclusive": true
@@ -659,8 +558,6 @@
     "items": [
       {
         "name_en": "Magic Items",
-        "name_de": "Magische Gegenstände",
-        "name_fr": "Objets Magiques",
         "types": ["weapon", "armor", "talisman", "enchanted-item", "knightly-virtue", "repeated-knightly-virtues"],
         "selected": [],
         "maxPoints": 50
@@ -668,14 +565,10 @@
     ],
     "specialRules": {
       "name_en": "The Blessing of the Lady, The Knight's Vow",
-      "name_de": "Segen der Herrin, Sammelruf, Rittergelübde",
-      "name_fr": "Bénédiction de la Dame, Cri de Ralliement, Le Vœu du Chevalier"
     }
   },
     {
       "name_en": "Damsel",
-      "name_de": "Maid",
-      "name_fr": "Damoiselle",
       "id": "damsel",
       "points": 70,
       "armyComposition": {
@@ -692,8 +585,6 @@
       "command": [
         {
           "name_en": "General",
-          "name_de": "General",
-          "name_fr": "Général",
           "name_es": "General",
           "points": 0
         }
@@ -701,8 +592,6 @@
       "equipment": [
         {
           "name_en": "Hand weapon",
-          "name_fr": "Arme de base",
-          "name_de": "Handwaffe",
           "points": 0,
           "active": true
         }
@@ -711,8 +600,6 @@
       "options": [
         {
           "name_en": "Wizard",
-          "name_de": "Wizard",
-          "name_fr": "Sorcier",
           "name_es": "Hechicero",
           "points": 0,
           "active": true,
@@ -720,8 +607,6 @@
           "options": [
             {
               "name_en": "Level 1 Wizard",
-              "name_de": "Level 1 Wizard",
-              "name_fr": "Sorcier de Niveau 1",
               "name_es": "Hechicero de Nivel 1",
               "points": 0,
               "exclusive": true,
@@ -729,8 +614,6 @@
             },
             {
               "name_en": "Level 2 Wizard",
-              "name_de": "Level 2 Wizard",
-              "name_fr": "Sorcier de Niveau 2",
               "name_es": "Hechicero de Nivel 2",
               "points": 35,
               "exclusive": true
@@ -741,8 +624,6 @@
       "mounts": [
         {
           "name_en": "On foot",
-          "name_fr": "À Pied",
-          "name_de": "Zu Fuß",
           "id": "on-foot",
           "points": 0,
           "active": true,
@@ -750,16 +631,12 @@
         },
         {
           "name_en": "Bretonnian Warhorse",
-          "name_de": "Bretonisches Schlachtross",
-          "name_fr": "Destrier Bretonnien",
           "id": "bretonnian-warhorse",
           "points": 10,
           "exclusive": true,
           "options": [
             {
-              "name_de": "Rossharnisch",
               "name_en": "Barding",
-              "name_fr": "Caparaçon",
               "points": 15
             }
           ]
@@ -768,8 +645,6 @@
       "items": [
         {
           "name_en": "Magic Items",
-          "name_de": "Magische Gegenstände",
-          "name_fr": "Objets Magiques",
           "types": [
             "weapon",
             "talisman",
@@ -784,53 +659,39 @@
       "specialRules": {
         "name_en": "Aura of the Lady, The Blessing of the Lady, Magic Resistance (-1)",
         "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-1)",
-        "name_de": "Aura der Herrin, Segen der Herrin, Lehre der Herrin, Magische Attacken, Magieresistenz (-2), Schild der Herrin",
-        "name_fr": "Aura de la Dame, Bénédiction de la Dame, Domaine de la Dame, Attaques Magiques, Résistance à la Magie (-2), Bouclier de la Dame"
       }
     }
   ],
   "core": [
     {
       "name_en": "Men-at-Arms",
-      "name_de": "Landsknechte",
-      "name_fr": "Hommes d’Armes",
       "id": "men-at-arms",
       "points": 5,
       "minimum": 10,
       "maximum": 0,
       "command": [
         {
-          "name_de": "Freisasse",
           "name_en": "Yeoman (champion)",
-          "name_fr": "Prévôt (champion)",
           "points": 12
         },
         {
-          "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
           "points": 10
         },
         {
-          "name_de": "Musiker",
           "name_en": "Musician",
-          "name_fr": "Musicien",
           "points": 5
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Halberd",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_en": "Hand weapons, Spears",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
           "points": 0,
           "perModel": true
         }
@@ -839,8 +700,6 @@
         {
           "name_en": "Light armour",
           "name_es": "Armadura Ligera",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -857,8 +716,6 @@
       "specialRules": {
         "name_en": "The Peasant's Duty",
         "name_es": "El Deber del Campesino",
-        "name_de": "Geschlossene Ränge, Horde, Gesindel, Bauernvolk, Schildwall, Kriegerschar",
-        "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -875,54 +732,40 @@
     {
       "name_en": "Yeomen",
       "name_es": "Escuderos",
-      "name_de": "Landsknechte",
-      "name_fr": "Hommes d’Armes",
       "id": "yeomen",
       "points": 6,
       "minimum": 10,
       "maximum": 0,
       "command": [
         {
-          "name_de": "Freisasse",
           "name_en": "Yeoman (champion)",
           "name_es": "Oficial Escudero",
-          "name_fr": "Prévôt (champion)",
           "points": 10
         },
         {
-          "name_de": "Standartenträger",
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
           "points": 10
         },
         {
-          "name_de": "Musiker",
           "name_en": "Musician",
-          "name_fr": "Musicien",
           "points": 5
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Halberd",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_en": "Hand weapons, Spears",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
           "points": 0,
           "perModel": true
         },
         {
           "name_en": "Hand weapons, Great Weapons",
           "name_es": "Aramas de mano, Arma a dos manos",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
           "points": 1,
           "perModel": true
         }
@@ -931,8 +774,6 @@
         {
           "name_en": "Light armour",
           "name_es": "Armadura Ligera",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true,
@@ -949,8 +790,6 @@
       "specialRules": {
         "name_en": "The Peasant's Duty",
         "name_es": "El Deber del Campesino",
-        "name_de": "Geschlossene Ränge, Horde, Gesindel, Bauernvolk, Schildwall, Kriegerschar",
-        "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -977,8 +816,6 @@
         {
           "name_en": "Hand weapons",
           "name_es": "Aramas de mano",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -986,8 +823,6 @@
         {
           "name_en": "Additional Hand Weapon",
           "name_es": "Arma de mano adicional",
-          "name_de": "Handwaffe, Stangenwaffe, Schild",
-          "name_fr": "Armes de base, Armes d’hast, Boucliers",
           "points": 2,
           "perModel": true
         }
@@ -1006,8 +841,6 @@
       "specialRules": {
         "name_en": "Escoria, Desdén por la Pólvora",
         "name_es": "Escoria, Desdén por la Pólvora",
-        "name_de": "Geschlossene Ränge, Horde, Gesindel, Bauernvolk, Schildwall, Kriegerschar",
-        "name_fr": "Ordre Serré, Horde, Conscrits, Paysannerie, Mur de Boucliers, Bande de Guerre"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -1020,8 +853,6 @@
     },
     {
       "name_en": "Peasant Bowmen",
-      "name_de": "Bogenschützen",
-      "name_fr": "Paysans Archers",
       "id": "peasant-bowmen",
       "points": 6,
       "minimum": 10,
@@ -1029,28 +860,20 @@
       "command": [
         {
           "name_en": "Villein (champion)",
-          "name_de": "Grundhöriger",
-          "name_fr": "Maître Archer (champion)",
           "points": 5
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 10
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 5
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Longbows",
-          "name_de": "Handwaffen und Langbogen",
-          "name_fr": "Armes de base, Arcs longs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1059,16 +882,12 @@
       "armor": [
         {
           "name_en": "No armour",
-          "name_de": "keine Rüstung",
-          "name_fr": "Pas d’armure",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_en": "Light armour",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true
         }
@@ -1076,8 +895,6 @@
       "options": [
         {
           "name_en": "Defensive Stakes",
-          "name_de": "Pfähle",
-          "name_fr": "Pieux de Défense",
           "points": 0,
           "active": true
         },
@@ -1088,16 +905,12 @@
         },
         {
           "name_en": "Burning Braziers",
-          "name_de": "Feuerschalen",
-          "name_fr": "Braséros",
           "points": 5
         }
       ],
       "mounts": [],
       "specialRules": {
         "name_en": "The Peasant's Duty",
-        "name_de": "Geschlossene Ränge, Gesindel, Bauernvolk",
-        "name_fr": "Ordre Serré, Conscrits, Paysannerie"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -1114,8 +927,6 @@
     {
       "name_en": "Hunters",
       "name_es": "Cazadores",
-      "name_de": "Bogenschützen",
-      "name_fr": "Paysans Archers",
       "id": "hunters",
       "points": 7,
       "minimum": 10,
@@ -1123,28 +934,20 @@
       "command": [
         {
           "name_en": "Villein (champion)",
-          "name_de": "Grundhöriger",
-          "name_fr": "Maître Archer (champion)",
           "points": 5
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 10
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 5
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Longbows",
-          "name_de": "Handwaffen und Langbogen",
-          "name_fr": "Armes de base, Arcs longs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1153,16 +956,12 @@
       "armor": [
         {
           "name_en": "No armour",
-          "name_de": "keine Rüstung",
-          "name_fr": "Pas d’armure",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_en": "Light armour",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true
         }
@@ -1170,8 +969,6 @@
       "options": [
         {
           "name_en": "Burning Braziers",
-          "name_de": "Feuerschalen",
-          "name_fr": "Braséros",
           "points": 5
         }
       ],
@@ -1179,8 +976,6 @@
       "specialRules": {
         "name_en": "The Peasant's Duty, Skirmishers",
         "name_es": "El Deber del Campesino, Hostigadores",
-        "name_de": "Geschlossene Ränge, Gesindel, Bauernvolk",
-        "name_fr": "Ordre Serré, Conscrits, Paysannerie"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -1197,8 +992,6 @@
     {
       "name_en": "Crossbowmen",
       "name_es": "Arblastiers",
-      "name_de": "Bogenschützen",
-      "name_fr": "Arblastiers",
       "id": "arblastiers",
       "points": 8,
       "minimum": 10,
@@ -1206,20 +999,14 @@
       "command": [
         {
           "name_en": "Villein (champion)",
-          "name_de": "Grundhöriger",
-          "name_fr": "Maître Archer (champion)",
           "points": 5
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 10
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 5
         }
       ],
@@ -1227,8 +1014,6 @@
         {
           "name_en": "Hand weapons, Crossbows",
           "name_es": "Armas de mano, Ballestas",
-          "name_de": "Handwaffen und Langbogen",
-          "name_fr": "Armes de base, Arcs longs",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1237,16 +1022,12 @@
       "armor": [
         {
           "name_en": "No armour",
-          "name_de": "keine Rüstung",
-          "name_fr": "Pas d’armure",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_en": "Light armour",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
           "points": 1,
           "perModel": true
         }
@@ -1254,8 +1035,6 @@
       "options": [
         {
           "name_en": "Defensive Stakes",
-          "name_de": "Pfähle",
-          "name_fr": "Pieux de Défense",
           "points": 0,
           "active": true
         },
@@ -1266,16 +1045,12 @@
         },
         {
           "name_en": "Burning Braziers",
-          "name_de": "Feuerschalen",
-          "name_fr": "Braséros",
           "points": 5
         }
       ],
       "mounts": [],
       "specialRules": {
         "name_en": "The Peasant's Duty",
-        "name_de": "Geschlossene Ränge, Gesindel, Bauernvolk",
-        "name_fr": "Ordre Serré, Conscrits, Paysannerie"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -1288,8 +1063,6 @@
     },
     {
       "name_en": "Knights of the Realm",
-      "name_de": "Berittene Ritter des Königs",
-      "name_fr": "Chevaliers du Royaume Montés",
       "id": "mounted-knights-of-the-realm",
       "points": 24,
       "minimum": 5,
@@ -1299,9 +1072,7 @@
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights of the Realm",
-            "name_de": "1+ Einheiten Ritter des Königs zu Fuß und/oder Berittene Ritter des Königs",
             "name_es": "",
-            "name_fr": "1+ unité de Chevaliers du Royaume à Pied et/ou de Chevaliers du Royaume Montés"
           }
         },
         "errantry-war-mdn": {
@@ -1314,16 +1085,12 @@
       "command": [
         {
           "name_en": "First Knight (champion)",
-          "name_de": "Erster Ritter",
-          "name_fr": "Champion du Royaume (champion)",
           "points": 0,
           "active": true,
           "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 16,
           "magic": {
             "maxPoints": 25,
@@ -1332,16 +1099,12 @@
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 8
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Lances, Shields",
-          "name_de": "Handwaffe, Lanzen, Schild",
-          "name_fr": "Armes de base, Lances de joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1350,8 +1113,6 @@
       "armor": [
         {
           "name_en": "Heavy armour, Barding",
-          "name_de": "Schwere Rüstung, Rossharnische",
-          "name_fr": "Armure lourde, Caparaçon",
           "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
@@ -1362,14 +1123,10 @@
       "mounts": [],
       "specialRules": {
         "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, The Knight's Vow",
-        "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Swiftstride, The Knight's Vow",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, Le Vœu du Chevalier"
       }
     },
     {
       "name_en": "Knights Errant",
-      "name_de": "Fahrende Ritter",
-      "name_fr": "Chevaliers Errants",
       "id": "knights-errant",
       "points": 20,
       "minimum": 5,
@@ -1382,9 +1139,7 @@
           "category": "core",
           "notes": {
             "name_en": "1+ unit of Knights Errant",
-            "name_de": "1+ Einheiten Fahrende Ritter",
             "name_es": "1+ unidad de Caballeros Noveles",
-            "name_fr": "1+ unité de Chevaliers Errants"
           }
         },
         "army-of-the-king-mdn": {
@@ -1412,8 +1167,6 @@
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 14,
           "magic": {
             "maxPoints": 25,
@@ -1422,16 +1175,12 @@
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 7
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Lances, Shields",
-          "name_de": "Handwaffen, Lanzen, Schild",
-          "name_fr": "Armes de base, Lances de joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1440,8 +1189,6 @@
       "armor": [
         {
           "name_en": "Heavy armour, Barding",
-          "name_de": "Schwere Rüstung, Rossharnische",
-          "name_fr": "Armure lourde, Caparaçon",
           "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
@@ -1453,16 +1200,12 @@
       "mounts": [],
       "specialRules": {
         "name_en": "The Blessing of the Lady, Purebreed Warhorse, Impetuous, Lance Formation, The Knight's Vow",
-        "name_de": "The Blessing of the Lady, Close Order, Purebreed Warhorse, First Charge, Impetuous, Lance Formation, Swiftstride, The Knight's Vow",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Impétueux, Formation en Fer de Lance, Rapide, Le Vœu du Chevalier"
       }
     }
   ],
   "special": [
     {
       "name_en": "Questing Knights",
-      "name_de": "Questritter",
-      "name_fr": "Chevaliers de la Quête",
       "id": "questing-knights",
       "points": 28,
       "minimum": 5,
@@ -1470,16 +1213,12 @@
       "command": [
         {
           "name_en": "Paragon (champion)",
-          "name_de": "Eremit",
-          "name_fr": "Champion de la Quête (champion)",
           "points": 0,
           "active": true,
           "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 18,
           "magic": {
             "maxPoints": 50,
@@ -1488,16 +1227,12 @@
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 9
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Great weapons, Shields",
-          "name_de": "Handwaffen, Zweihandwaffe, Schilde",
-          "name_fr": "Armes de base, Armes lourdes, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1506,8 +1241,6 @@
       "armor": [
         {
           "name_en": "Heavy armour, Barding",
-          "name_de": "Schwere Rüstung, Rossharnische",
-          "name_fr": "Armure lourde, Caparaçon",
           "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
@@ -1520,8 +1253,6 @@
       ],
       "specialRules": {
         "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, the Questing Vow",
-        "name_de": "The Blessing of the Lady, Close Order, Purebreed Warhorse, First Charge, Lance Formation, Swiftstride, the Questing Vow",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, le Vœu de la Quête"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -1538,8 +1269,6 @@
     {
       "name_en": "Knights of the Realm on Foot",
       "name_es": "Caballeros a Pie",
-      "name_de": "Berittene Ritter des Königs",
-      "name_fr": "Chevaliers du Royaume Montés",
       "id": "knights-of-the-realm-on-foot",
       "points": 8,
       "minimum": 10,
@@ -1558,16 +1287,12 @@
         {
           "name_en": "First Knight (champion)",
           "name_es": "Caballero Ejemplar",
-          "name_de": "Erster Ritter",
-          "name_fr": "Champion du Royaume (champion)",
           "points": 0,
           "active": true,
           "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 10,
           "magic": {
             "maxPoints": 50,
@@ -1576,8 +1301,6 @@
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 5
         }
       ],
@@ -1627,14 +1350,10 @@
       "mounts": [],
       "specialRules": {
         "name_en": "The Blessing of the Lady",
-        "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Swiftstride, The Knight's Vow",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Rapide, Le Vœu du Chevalier"
       }
     },
     {
       "name_en": "Pegasus Knights",
-      "name_de": "Pegasusritter",
-      "name_fr": "Chevaliers Pégases",
       "id": "pegasus-knights",
       "points": 55,
       "minimum": 3,
@@ -1642,30 +1361,22 @@
       "command": [
         {
           "name_en": "First Knight (champion)",
-          "name_de": "Erster Ritter",
-          "name_fr": "Champion Pégase (champion)",
           "points": 0,
           "active": true,
           "alwaysActive": true
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 20
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 10
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapon, Lances, Shields",
-          "name_de": "Handwaffen, Lanzen, Schilde",
-          "name_fr": "Arme de base, Lances de joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1674,8 +1385,6 @@
       "armor": [
         {
           "name_en": "Heavy armour",
-          "name_de": "Schwere Rüstung",
-          "name_fr": "Armure lourde",
           "name_es": "Armadura pesada",
           "points": 0,
           "perModel": true,
@@ -1687,14 +1396,10 @@
       "mounts": [],
       "specialRules": {
         "name_en": "The Blessing of the Lady, Flying Cavalry, Skirmishers, The Knight's Vow",
-        "name_de": "The Blessing of the Lady, Counter Charge, Dispersed Formation, First Charge, Fly (10), Furious Charge (Pegasus Knights & First Knight only), Skirmishers, Swiftstride, The Knight's Vow",
-        "name_fr": "Bénédiction de la Dame, Contre-charge, Formation Éparse, Première Charge, Vol (10), Charge Dévastatrice (Chevaliers Pégases & Champion Pégase uniquement), Tirailleurs, Rapide, Le Vœu du Chevalier"
       }
     },
     {
       "name_en": "Mounted Yeomen",
-      "name_de": "Berittene Freisassen",
-      "name_fr": "Sergents montés",
       "id": "mounted-yeomen",
       "points": 12,
       "minimum": 5,
@@ -1702,20 +1407,14 @@
       "command": [
         {
           "name_en": "Warden (champion)",
-          "name_de": "Voigt",
-          "name_fr": "Prévôt (champion)",
           "points": 14
         },
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 14
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 7
         }
       ],
@@ -1759,16 +1458,12 @@
       "armor": [
         {
           "name_en": "No armour",
-          "name_de": "Keine Rüstung",
-          "name_fr": "Pas d’armure",
           "points": 0,
           "perModel": true,
           "active": true
         },
         {
           "name_en": "Light armour",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
           "points": 2,
           "perModel": true
         }
@@ -1776,8 +1471,6 @@
       "options": [
         {
           "name_en": "Shields",
-          "name_de": "Schild",
-          "name_fr": "Boucliers",
           "points": 1,
           "perModel": true
         }
@@ -1785,8 +1478,6 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Fast Cavalry, The Peasant's Duty",
-        "name_de": "Fast Cavalry, Fire & Flee, Levies, Open Order, The Peasant's Duty, Reserve Move, Skirmishers, Swiftstride",
-        "name_fr": "Cavalerie Rapide, Tir & Fuite, Conscrits, Ordre Dispersé, Paysannerie, Mouvement de Réserve, Tirailleurs, Rapide"
       },
       "armyComposition": {
         "bretonnia-mdn": {
@@ -1802,8 +1493,6 @@
     },
     {
       "name_en": "Battle Pilgrims",
-      "name_de": "Gralspilger",
-      "name_fr": "Pèlerins du Graal",
       "id": "battle-pilgrims",
       "points": 9,
       "minimum": 6,
@@ -1813,9 +1502,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 units of Battle Pilgrims per army",
-            "name_de": "0-1 Einheiten Gralspilger pro 1.000 Punkte",
             "name_es": "",
-            "name_fr": "0-21 unités de Pèlerins du Graal par tranche de 1000 points"
           }
         },
         "errantry-war-mdn": {
@@ -1830,8 +1517,6 @@
       "equipment": [
         {
           "name_en": "Hand weapons, Shields",
-          "name_de": "Handwaffen, Schilde",
-          "name_fr": "Armes de base, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1840,8 +1525,6 @@
       "armor": [
         {
           "name_en": "Light armour",
-          "name_de": "Leichte Rüstung",
-          "name_fr": "Armure légère",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1850,8 +1533,6 @@
       "options": [
         {
           "name_en": "Grail Reliquae",
-          "name_de": "Gralsreliquie",
-          "name_fr": "Reliquaire du Graal",
           "points": 64,
           "active": true,
           "alwaysActive": true
@@ -1859,8 +1540,6 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Hatred (all enemies), The Peasant's Duty, Stubborn",
-        "name_de": "Close Order, Hatred (all enemies), Levies, The Peasant's Duty, Stubborn",
-        "name_fr": "Ordre Serré, Haine (Tous les ennemis), Conscrits, Paysannerie, Obstiné"
       }
     },
     {
@@ -1873,8 +1552,6 @@
       "command": [
         {
           "name_en": "Capataz",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 0,
           "active": true,
           "alwaysActive": true
@@ -1902,8 +1579,6 @@
       "specialRules": {
         "name_en": "The Peasant's Duty",
         "name_es": "El Deber del Campesino",
-        "name_de": "Bauernvolk, Gesindel, Plänkler",
-        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
       }
     },
     {
@@ -1916,8 +1591,6 @@
       "command": [
         {
           "name_en": "Capataz",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 0,
           "active": true,
           "alwaysActive": true
@@ -1945,16 +1618,12 @@
       "specialRules": {
         "name_en": "The Peasant's Duty, Pot-de-Feu",
         "name_es": "El Deber del Campesino, Pot-de-Feu, Desdén por la Pólvora",
-        "name_de": "Bauernvolk, Gesindel, Plänkler",
-        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
       }
     }
   ],
   "rare": [
     {
       "name_en": "Grail Knights",
-      "name_de": "Gralsritter",
-      "name_fr": "Chevaliers du Graal",
       "id": "grail-knights",
       "points": 38,
       "minimum": 3,
@@ -1962,8 +1631,6 @@
       "command": [
         {
           "name_en": "Standard bearer",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 20,
           "magic": {
             "maxPoints": 50,
@@ -1972,16 +1639,12 @@
         },
         {
           "name_en": "Musician",
-          "name_fr": "Musicien",
-          "name_de": "Musiker",
           "points": 10
         }
       ],
       "equipment": [
         {
           "name_en": "Hand weapons, Lances, Shields",
-          "name_de": "Handwaffen, Lanzen, Schilde",
-          "name_fr": "Armes de base, Lances de joute, Boucliers",
           "points": 0,
           "perModel": true,
           "active": true
@@ -1990,8 +1653,6 @@
       "armor": [
         {
           "name_en": "Heavy armour, Barding",
-          "name_de": "Schwere Rüstung, Rossharnische",
-          "name_fr": "Armure lourde, Caparaçon",
           "name_es": "Armadura pesada, Barding",
           "points": 0,
           "perModel": true,
@@ -2004,17 +1665,13 @@
       ],
       "specialRules": {
         "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow",
-        "name_de": "The Blessing of the Lady, Close Order, Counter Charge, Purebreed Warhorse, First Charge, Lance Formation, Living Saints, Swiftstride, The Grail Vow",
-        "name_fr": "Bénédiction de la Dame, Ordre Serré, Contre-charge, Destriers Supérieurs, Première Charge, Formation en Fer de Lance, Saints Vivants, Rapide, Le Vœu du Graal"
       },
       "armyComposition": {
         "bretonnia-mdn": {
           "category": "rare",
           "notes": {
             "name_en": "0-1 units of Grail Knights per army",
-            "name_de": "0-1 Einheiten Gralspilger pro 1.000 Punkte",
             "name_es": "",
-            "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
         },
         "army-of-the-king-mdn": {
@@ -2055,15 +1712,11 @@
     },
     {
       "name_en": "Field Trebuchet",
-      "name_de": "Feldtrebuchet",
-      "name_fr": "Trébuchet de Campagne",
       "id": "field-trebuchet",
       "points": 90,
       "command": [
         {
           "name_en": "Capataz",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 10
         }
       ],
@@ -2076,9 +1729,7 @@
           "category": "rare",
           "notes": {
             "name_en": "0-1 units of Trebuchet per army",
-            "name_de": "0-1 Einheiten Gralspilger pro 1.000 Punkte",
             "name_es": "0-1 unidad de Trebuchet por ejército",
-            "name_fr": "0-1 unités de Pèlerins du Graal par tranche de 1000 points"
           }
         },
         "army-of-the-king-mdn": {
@@ -2088,8 +1739,6 @@
       "equipment": [
         {
           "name_en": "Field Trebuchet, Hand weapons",
-          "name_de": "Feldtrebuchet, Handwaffen",
-          "name_fr": "Trébuchet de Campagne, Armes de base",
           "points": 0,
           "active": true
         }
@@ -2100,8 +1749,6 @@
       "specialRules": {
         "name_en": "The Peasant's Duty",
         "name_es": "El Deber del Campesino",
-        "name_de": "Bauernvolk, Gesindel, Plänkler",
-        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
       }
     },
     {
@@ -2112,8 +1759,6 @@
       "command": [
         {
           "name_en": "Capataz",
-          "name_fr": "Porte-étendard",
-          "name_de": "Standartenträger",
           "points": 0,
           "active": true,
           "alwaysActive": true
@@ -2142,8 +1787,6 @@
       "specialRules": {
         "name_en": "The Peasant's Duty",
         "name_es": "El Deber del Campesino",
-        "name_de": "Bauernvolk, Gesindel, Plänkler",
-        "name_fr": "Conscrits, Paysannerie, Tirailleurs"
       }
     }
   ],
