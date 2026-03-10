@@ -4,10 +4,8 @@
   "armies": [
     {
       "id": "bretonnia-mdn",
-      "name_de": "Bretonnia",
       "name_en": "Bretonnia",
       "name_es": "Bretonia",
-      "name_fr": "Bretonnie",
       "items": ["general", "bretonnia", "knightly-virtues",  "repeated-knightly-virtues"],
       "armyComposition": [
         "bretonnia-mdn",

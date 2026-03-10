@@ -4,10 +4,8 @@
   "armies": [
     {
       "id": "renegade-crowns",
-      "name_de": "Renegade Crowns",
       "name_en": "Renegade Crowns",
       "name_es": "Renegade Crowns",
-      "name_fr": "Couronnes Renégates",
       "items": ["general"],
       "armyComposition": ["renegade-crowns"],
       "mercenaries": {
@@ -40,10 +38,8 @@
     },
     {
       "id": "empire-of-man",
-      "name_de": "Empire of Man",
       "name_en": "Empire of Man",
       "name_es": "Empire of Man",
-      "name_fr": "Empire de l'Homme",
       "items": ["general", "empire-of-man"],
       "armyComposition": [
         "empire-of-man",
@@ -141,10 +137,8 @@
     },
     {
       "id": "orc-and-goblin-tribes",
-      "name_de": "Orc & Goblin Tribes",
       "name_en": "Orc & Goblin Tribes",
       "name_es": "Orc & Goblin Tribes",
-      "name_fr": "Tribus des Orques & Gobelins",
       "items": ["general", "orc-and-goblin-tribes"],
       "armyComposition": [
         "orc-and-goblin-tribes",
@@ -193,10 +187,8 @@
     },
     {
       "id": "dwarfen-mountain-holds",
-      "name_de": "Dwarfen Mountain Holds",
       "name_en": "Dwarfen Mountain Holds",
       "name_es": "Dwarfen Mountain Holds",
-      "name_fr": "Forteresses Naines",
       "items": ["dwarfen-mountain-holds"],
       "armyComposition": [
         "dwarfen-mountain-holds",
@@ -281,10 +273,8 @@
     },
     {
       "id": "warriors-of-chaos",
-      "name_de": "Warriors of Chaos",
       "name_en": "Warriors of Chaos",
       "name_es": "Warriors of Chaos",
-      "name_fr": "Guerriers du Chaos",
       "items": [
         "general",
         "warriors-of-chaos",
@@ -339,10 +329,8 @@
     },
     {
       "id": "kingdom-of-bretonnia",
-      "name_de": "Kingdom of Bretonnia",
       "name_en": "Kingdom of Bretonnia",
       "name_es": "Kingdom of Bretonnia",
-      "name_fr": "Royaume de Bretonnie",
       "items": ["general", "kingdom-of-bretonnia", "knightly-virtues"],
       "armyComposition": [
         "kingdom-of-bretonnia",
@@ -400,10 +388,8 @@
     },
     {
       "id": "beastmen-brayherds",
-      "name_de": "Beastmen Brayherds",
       "name_en": "Beastmen Brayherds",
       "name_es": "Beastmen Brayherds",
-      "name_fr": "Braillehardes Hommes-bêtes",
       "items": [
         "general",
         "beastmen-brayherds",
@@ -445,10 +431,8 @@
     },
     {
       "id": "wood-elf-realms",
-      "name_de": "Wood Elf Realms",
       "name_en": "Wood Elf Realms",
       "name_es": "Wood Elf Realms",
-      "name_fr": "Royaumes Elfes Sylvains",
       "items": ["general", "wood-elf-realms", "forest-spites", "kindreds"],
       "armyComposition": [
         "wood-elf-realms",
@@ -488,10 +472,8 @@
     },
     {
       "id": "tomb-kings-of-khemri",
-      "name_de": "Tomb Kings of Khemri",
       "name_en": "Tomb Kings of Khemri",
       "name_es": "Tomb Kings of Khemri",
-      "name_fr": "Rois des Tombes de Khemri",
       "items": ["general", "tomb-kings-of-khemri", "incantation-scrolls"],
       "armyComposition": [
         "tomb-kings-of-khemri",
@@ -528,10 +510,8 @@
     },
     {
       "id": "high-elf-realms",
-      "name_de": "High Elf Realms",
       "name_en": "High Elf Realms",
       "name_es": "High Elf Realms",
-      "name_fr": "Royaumes Hauts Elfes",
       "items": ["general", "high-elf-realms", "elven-honours"],
       "armyComposition": [
         "high-elf-realms",
@@ -571,10 +551,8 @@
     },
     {
       "id": "dark-elves",
-      "name_de": "Dark Elves",
       "name_en": "Dark Elves",
       "name_es": "Dark Elves",
-      "name_fr": "Elfes Noirs",
       "items": [
         "general",
         "dark-elves",
@@ -604,10 +582,8 @@
     },
     {
       "id": "skaven",
-      "name_de": "Skaven",
       "name_en": "Skaven",
       "name_es": "Skaven",
-      "name_fr": "Skavens",
       "items": ["general", "skaven"],
       "armyComposition": ["skaven", "sk-renegade"],
       "allies": [
@@ -632,10 +608,8 @@
     },
     {
       "id": "vampire-counts",
-      "name_de": "Vampire Counts",
       "name_en": "Vampire Counts",
       "name_es": "Vampire Counts",
-      "name_fr": "Comtes Vampires",
       "items": ["general", "vampire-counts", "vampiric-powers"],
       "armyComposition": ["vampire-counts", "vc-renegade"],
       "allies": [
@@ -646,10 +620,8 @@
     },
     {
       "id": "daemons-of-chaos",
-      "name_de": "Daemons of Chaos",
       "name_en": "Daemons of Chaos",
       "name_es": "Daemons of Chaos",
-      "name_fr": "Démons du Chaos",
       "armyComposition": ["daemons-of-chaos", "doc-renegade"],
       "items": [
         "general",
@@ -667,10 +639,8 @@
     },
     {
       "id": "ogre-kingdoms",
-      "name_de": "Ogre Kingdoms",
       "name_en": "Ogre Kingdoms",
       "name_es": "Ogre Kingdoms",
-      "name_fr": "Royaumes Ogres",
       "items": ["general", "ogre-kingdoms", "big-names"],
       "armyComposition": ["ogre-kingdoms", "ok-renegade"],
       "allies": [
@@ -699,10 +669,8 @@
     },
     {
       "id": "lizardmen",
-      "name_de": "Lizardmen",
       "name_en": "Lizardmen",
       "name_es": "Lizardmen",
-      "name_fr": "Hommes-Lézards",
       "items": ["general", "lizardmen", "disciplines-old-ones"],
       "armyComposition": ["lizardmen", "lm-renegade"],
       "allies": [
@@ -727,10 +695,8 @@
     },
     {
       "id": "chaos-dwarfs",
-      "name_de": "Chaos Dwarfs",
       "name_en": "Chaos Dwarfs",
       "name_es": "Chaos Dwarfs",
-      "name_fr": "Nains du Chaos",
       "items": ["general", "chaos-dwarfs"],
       "armyComposition": ["chaos-dwarfs", "cd-renegade"],
       "allies": [
@@ -764,10 +730,8 @@
     },
     {
       "id": "grand-cathay",
-      "name_de": "Grand Cathay",
       "name_en": "Grand Cathay",
       "name_es": "Grand Cathay",
-      "name_fr": "Grand Cathay",
       "items": ["general", "grand-cathay"],
       "armyComposition": [
         "grand-cathay",
