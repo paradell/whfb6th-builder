@@ -31,7 +31,6 @@ export const namesForSpread = (obj) => ({
   name_en: obj.name_en,
   name_de: obj.name_de,
   name_fr: obj.name_fr,
-  name_cn: obj.name_cn,
   name_es: obj.name_es,
   name_it: obj.name_it,
   name_pl: obj.name_pl,
