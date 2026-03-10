@@ -84,6 +84,8 @@ export const GameView = () => {
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
   const charactersPoints = getPoints({ list, type: "characters" });
+  const lordsPoints = getPoints({ list, type: "lords" });
+  const heroesPoints = getPoints({ list, type: "heroes" });
   const corePoints = getPoints({ list, type: "core" });
   const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
@@ -651,6 +653,38 @@ export const GameView = () => {
               </h2>
             </header>
             {getSection({ type: "characters" })}
+          </section>
+        )}
+
+        {list.lords?.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.lords" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{lordsPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "lords" })}
+          </section>
+        )}
+
+        {list.heroes?.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.heroes" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{heroesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "heroes" })}
           </section>
         )}
 
