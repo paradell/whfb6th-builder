@@ -110,7 +110,7 @@ export const GameView = () => {
         }
       }
     }
-    allPoints += unitVictoryPoints ? unitVictoryPoints["25"] : 0;
+    allPoints += unitVictoryPoints ? unitVictoryPoints["50"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["dead"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["fleeing"] : 0;
     allPoints += detachmentsSum;
@@ -445,7 +445,7 @@ export const GameView = () => {
     let unitPoints = victoryPoints[unit.id] || {
       dead: 0,
       fleeing: 0,
-      25: 0,
+      50: 0,
       detachments: {},
     };
     const isGeneral = Boolean(
@@ -477,7 +477,7 @@ export const GameView = () => {
                 },
               ),
           fleeing: 0,
-          25: 0,
+          50: 0,
         };
         if (isGeneral) {
           setGeneralDead(Boolean(unitPoints.dead));
@@ -500,7 +500,7 @@ export const GameView = () => {
                     noDetachments: true,
                     armyComposition,
                   },
-                ) / 2,
+                ),
               ),
           25: 0,
         };
@@ -512,12 +512,12 @@ export const GameView = () => {
         }
         break;
       }
-      case "25": {
+      case "50": {
         unitPoints = {
           ...unitPoints,
           dead: 0,
           fleeing: 0,
-          25: unitPoints["25"]
+          50: unitPoints["50"]
             ? 0
             : Math.round(
                 getUnitPoints(
@@ -580,11 +580,11 @@ export const GameView = () => {
         </Button>
         <Button
           className="game-view__victory-button"
-          type={victoryPoints[unit.id]?.["25"] ? "secondary" : "tertiary"}
+          type={victoryPoints[unit.id]?.["50"] ? "secondary" : "tertiary"}
           spaceTop
-          onClick={() => updateVictoryPoints({ unit, value: "25" })}
+          onClick={() => updateVictoryPoints({ unit, value: "50" })}
         >
-          {"<25%"}
+          {"<50%"}
         </Button>
         {unit.detachments &&
           !unit.ignoreNoDetachment &&
@@ -655,7 +655,7 @@ export const GameView = () => {
             {getSection({ type: "characters" })}
           </section>
         )}
-
+f
         {list.lords?.length > 0 && (
           <section className="game-view__section">
             <header className="editor__header">
