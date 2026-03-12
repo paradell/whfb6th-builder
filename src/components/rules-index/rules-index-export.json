@@ -14913,7 +14913,45 @@
     "page": "RH, p. 128"
   },
   "knights of the realm": {
-    "url": "unit/knight-of-the-realm"
+    "url": "unit/knight-of-the-realm",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "-",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "2",
+        "Ld": "8",
+        "WS": "4",
+        "Name": "Knight of the Realm"
+      },
+      {
+        "A": "2",
+        "I": "3",
+        "M": "-",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "2",
+        "Ld": "8",
+        "WS": "4",
+        "Name": "First Knight"
+      },
+      {
+        "A": "1",
+        "I": "3",
+        "M": "20",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "BS": "-",
+        "Ld": "-",
+        "WS": "3",
+        "Name": "Bretonnian Warhorse"
+      }
+    ]
   },
   "mounted knights of the realm": {
     "url": "unit/mounted-knights-of-the-realm",
