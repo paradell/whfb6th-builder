@@ -45,6 +45,7 @@ export const GameView = () => {
     showGeneratedSpells,
   } = settings;
   const [banners, setBanners] = useState(0);
+  const [quadrants, setQuadrants] = useState(0);
   const [scenarioPoints, setScenarioPoints] = useState(0);
   const [generalDead, setGeneralDead] = useState(false);
   const [BSBDead, setBSBDead] = useState(false);
@@ -119,7 +120,8 @@ export const GameView = () => {
   };
   const getAllVictoryPoints = () => {
     let allVictoryPoints =
-      banners * 100 +
+      banners * 50 +
+      quadrants * 100 +
       scenarioPoints +
       (generalDead ? 100 : 0) +
       (BSBDead ? 100 : 0);
@@ -807,6 +809,18 @@ f
                   setBanners(event.target.value);
                 }}
               />
+              <label htmlFor="quadrants">
+                <FormattedMessage id="misc.quadrants" />
+              </label>
+              <NumberInput
+                id="quadrants"
+                min={0}
+                max={4}
+                value={quadrants}
+                onChange={(event) => {
+                  setQuadrants(event.target.value);
+                }}
+              />
               <label htmlFor="scenarioPoints">
                 <FormattedMessage id="misc.scenarioPoints" />
               </label>
@@ -827,6 +841,17 @@ f
                     </i>
                   </b>
                   {banners * 100}
+                </p>
+              )}
+              {quadrants > 0 && (
+                <p>
+                  <b>
+                    <i>
+                      <FormattedMessage id="misc.quadrants" />
+                      {": "}
+                    </i>
+                  </b>
+                  {quadrants * 100}
                 </p>
               )}
               {generalDead && (
