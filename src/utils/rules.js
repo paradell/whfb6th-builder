@@ -2440,7 +2440,7 @@ export const rules = {
       ],
     },
   },
-  "chaos-dwarfs": {
+  "chaos-dwarfs-ow": {
     characters: {
       maxPercent: 50,
       units: [
@@ -3121,7 +3121,7 @@ export const rules = {
       ],
     },
   },
-  "dark-elves": {
+  "dark-elves-ow": {
     characters: {
       maxPercent: 50,
       units: [
@@ -3273,7 +3273,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  lizardmen: {
+  "lizardmen-ow": {
     characters: {
       maxPercent: 50,
       units: [
@@ -3390,7 +3390,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "ogre-kingdoms": {
+  "ogre-kingdoms-ow": {
     characters: {
       maxPercent: 50,
       units: [
@@ -3517,7 +3517,7 @@ export const rules = {
     mercenaries: { maxPercent: 20 },
     allies: { maxPercent: 25 },
   },
-  "vampire-counts": {
+  "vampire-counts-ow": {
     characters: {
       maxPercent: 50,
       units: [
@@ -3747,7 +3747,7 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
-  skaven: {
+  "skaven-ow": {
     characters: {
       maxPercent: 50,
       units: [
@@ -4376,6 +4376,126 @@ export const rules = {
     allies: {
       maxSlots: 0,
     },
+  },
+  "beasts-of-chaos": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "chaos-dwarfs": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "dark-elves": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "dwarfs": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "high-elves": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "lizardmen": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "ogre-kingdoms": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "orcs-and-goblins": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "skaven": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "tomb-kings": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "vampire-counts": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+  "wood-elves": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
   },
   // Warhammer Fantasy MdN
   "bretonnia-mdn": {

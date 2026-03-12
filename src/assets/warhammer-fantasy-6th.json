@@ -3,6 +3,15 @@
   "name": "Warhammer Fantasy Battles: 6th Edition",
   "armies": [
     {
+      "id": "beasts-of-chaos",
+      "name_en": "Beasts of Chaos",
+      "name_es": "Bestias del Caos",
+      "items": ["general"],
+      "armyComposition": ["beasts-of-chaos"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
       "id": "bretonnia",
       "name_en": "Bretonnia",
       "name_es": "Bretonia",
@@ -15,17 +24,115 @@
       "allies": [],
       "mercenaries": {}
     },
-        {
-        "id": "empire",
-        "name_en": "the Empire",
-        "name_es": "El Imperio",
-        "items": ["general"],
-        "armyComposition": [
-            "empire"
-        ],
-        "allies": [],
-        "mercenaries": {}
-        }
-
+    {
+      "id": "chaos-dwarfs",
+      "name_en": "Chaos Dwarfs",
+      "name_es": "Enanos del Caos",
+      "items": ["general"],
+      "armyComposition": ["chaos-dwarfs"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "dark-elves",
+      "name_en": "Dark Elves",
+      "name_es": "Elfos Oscuros",
+      "items": ["general"],
+      "armyComposition": ["dark-elves"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "dwarfs",
+      "name_en": "Dwarfs",
+      "name_es": "Enanos",
+      "items": ["general"],
+      "armyComposition": ["dwarfs"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "the-empire",
+      "name_en": "the Empire",
+      "name_es": "El Imperio",
+      "items": ["general"],
+      "armyComposition": [
+        "the-empire"
+      ],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "high-elves",
+      "name_en": "High Elves",
+      "name_es": "Altos Elfos",
+      "items": ["general"],
+      "armyComposition": ["high-elves"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "lizardmen",
+      "name_en": "Lizardmen",
+      "name_es": "Hombres Lagarto",
+      "items": ["general"],
+      "armyComposition": ["lizardmen"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "ogre-kingdoms",
+      "name_en": "Ogre Kingdoms",
+      "name_es": "Reinos Ogros",
+      "items": ["general"],
+      "armyComposition": ["ogre-kingdoms"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "orcs-and-goblins",
+      "name_en": "Orcs and Goblins",
+      "name_es": "Orcos y Goblins",
+      "items": ["general"],
+      "armyComposition": ["orcs-and-goblins"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "skaven",
+      "name_en": "Skaven",
+      "name_es": "Skaven",
+      "items": ["general"],
+      "armyComposition": ["skaven"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "tomb-kings",
+      "name_en": "Tomb Kings",
+      "name_es": "Reyes Sepulcrales",
+      "items": ["general"],
+      "armyComposition": ["tomb-kings"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "vampire-counts",
+      "name_en": "Vampire Counts",
+      "name_es": "Condes Vampiro",
+      "items": ["general"],
+      "armyComposition": ["vampire-counts"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "wood-elves",
+      "name_en": "Wood Elves",
+      "name_es": "Elfos Silvanos",
+      "items": ["general"],
+      "armyComposition": ["wood-elves"],
+      "allies": [],
+      "mercenaries": {}
+    }
   ]
 }

@@ -6,7 +6,7 @@
     "id": "example-lord",
     "points": 110,
     "armyComposition": {
-      "dataset_template": { // rename this key to match the actual faction key.
+      "beasts-of-chaos": { // rename this key to match the actual faction key.
         "category": "lords"
       }
     },
@@ -94,7 +94,7 @@
       "id": "example-magic-lord",
       "points": 190,
       "armyComposition": {
-        "dataset_template": { // rename this key to match the actual faction key.
+        "beasts-of-chaos": { // rename this key to match the actual faction key.
           "category": "lords"
         }
       },
@@ -194,7 +194,7 @@
     "id": "example-hero",
     "points": 60,
     "armyComposition": {
-      "dataset_template": { // rename this key to match the actual faction key.
+      "beasts-of-chaos": { // rename this key to match the actual faction key.
         "category": "heroes"
       }
     },
@@ -301,7 +301,7 @@
       "id": "example-magic-hero",
       "points": 70,
       "armyComposition": {
-        "dataset_template": { // rename this key to match the actual faction key.
+        "beasts-of-chaos": { // rename this key to match the actual faction key.
           "category": "heroes"
         }
       },
@@ -451,7 +451,7 @@
         "name_es": "Ejemplo de Regla Especial"
       },
       "armyComposition": {
-        "dataset_template": { // rename this key to match the actual faction key.
+        "beasts-of-chaos": { // rename this key to match the actual faction key.
           "category": "core"
         }
       }
@@ -526,7 +526,7 @@
         "name_es": "Ejemplo de Regla Especial"
       },
       "armyComposition": {
-        "dataset_template": { // rename this key to match the actual faction key.
+        "beasts-of-chaos": { // rename this key to match the actual faction key.
           "category": "core"
         }
       }
@@ -539,7 +539,7 @@
       "minimum": 5,
       "maximum": 15,
       "armyComposition": {
-        "dataset_template": { // rename this key to match the actual faction key.
+        "beasts-of-chaos": { // rename this key to match the actual faction key.
           "category": "core"
         }
       },
@@ -675,7 +675,7 @@
         "name_es": "Caballería Rápida, Ejemplo de Regla Especial"
       },
       "armyComposition": {
-        "dataset_template": { // rename this key to match the actual faction key.
+        "beasts-of-chaos": { // rename this key to match the actual faction key.
           "category": "special"
         }
       }
@@ -694,7 +694,7 @@
         }
       ],
       "armyComposition": {
-        "dataset_template": { // rename this key to match the actual faction key.
+        "beasts-of-chaos": { // rename this key to match the actual faction key.
           "category": "rare"
         }
       },
@@ -716,5 +716,5 @@
   ],
   "mercenaries": [],
   "allies": []
-
 }
+
