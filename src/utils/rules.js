@@ -3747,7 +3747,7 @@ export const rules = {
     },
     allies: { maxPercent: 25 },
   },
-  skaven: {
+  "skaven-ow": {
     characters: {
       maxPercent: 50,
       units: [
