@@ -45,6 +45,7 @@ export const GameView = () => {
     showGeneratedSpells,
   } = settings;
   const [banners, setBanners] = useState(0);
+  const [quadrants, setQuadrants] = useState(0);
   const [scenarioPoints, setScenarioPoints] = useState(0);
   const [generalDead, setGeneralDead] = useState(false);
   const [BSBDead, setBSBDead] = useState(false);
@@ -84,6 +85,8 @@ export const GameView = () => {
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
   const charactersPoints = getPoints({ list, type: "characters" });
+  const lordsPoints = getPoints({ list, type: "lords" });
+  const heroesPoints = getPoints({ list, type: "heroes" });
   const corePoints = getPoints({ list, type: "core" });
   const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
@@ -108,7 +111,7 @@ export const GameView = () => {
         }
       }
     }
-    allPoints += unitVictoryPoints ? unitVictoryPoints["25"] : 0;
+    allPoints += unitVictoryPoints ? unitVictoryPoints["50"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["dead"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["fleeing"] : 0;
     allPoints += detachmentsSum;
@@ -118,9 +121,10 @@ export const GameView = () => {
   const getAllVictoryPoints = () => {
     let allVictoryPoints =
       banners * 50 +
+      quadrants * 100 +
       scenarioPoints +
       (generalDead ? 100 : 0) +
-      (BSBDead ? 50 : 0);
+      (BSBDead ? 100 : 0);
 
     Object.keys(victoryPoints).forEach((unitId) => {
       allVictoryPoints += getUnitVictoryPoints(unitId);
@@ -443,7 +447,7 @@ export const GameView = () => {
     let unitPoints = victoryPoints[unit.id] || {
       dead: 0,
       fleeing: 0,
-      25: 0,
+      50: 0,
       detachments: {},
     };
     const isGeneral = Boolean(
@@ -475,7 +479,7 @@ export const GameView = () => {
                 },
               ),
           fleeing: 0,
-          25: 0,
+          50: 0,
         };
         if (isGeneral) {
           setGeneralDead(Boolean(unitPoints.dead));
@@ -498,7 +502,7 @@ export const GameView = () => {
                     noDetachments: true,
                     armyComposition,
                   },
-                ) / 2,
+                ),
               ),
           25: 0,
         };
@@ -510,12 +514,12 @@ export const GameView = () => {
         }
         break;
       }
-      case "25": {
+      case "50": {
         unitPoints = {
           ...unitPoints,
           dead: 0,
           fleeing: 0,
-          25: unitPoints["25"]
+          50: unitPoints["50"]
             ? 0
             : Math.round(
                 getUnitPoints(
@@ -578,11 +582,11 @@ export const GameView = () => {
         </Button>
         <Button
           className="game-view__victory-button"
-          type={victoryPoints[unit.id]?.["25"] ? "secondary" : "tertiary"}
+          type={victoryPoints[unit.id]?.["50"] ? "secondary" : "tertiary"}
           spaceTop
-          onClick={() => updateVictoryPoints({ unit, value: "25" })}
+          onClick={() => updateVictoryPoints({ unit, value: "50" })}
         >
-          {"<25%"}
+          {"<50%"}
         </Button>
         {unit.detachments &&
           !unit.ignoreNoDetachment &&
@@ -651,6 +655,38 @@ export const GameView = () => {
               </h2>
             </header>
             {getSection({ type: "characters" })}
+          </section>
+        )}
+f
+        {list.lords?.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.lords" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{lordsPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "lords" })}
+          </section>
+        )}
+
+        {list.heroes?.length > 0 && (
+          <section className="game-view__section">
+            <header className="editor__header">
+              <h2>
+                <FormattedMessage id="editor.heroes" />{" "}
+                {showPoints && (
+                  <span className="game-view__points">
+                    [{heroesPoints} <FormattedMessage id="app.points" />]
+                  </span>
+                )}
+              </h2>
+            </header>
+            {getSection({ type: "heroes" })}
           </section>
         )}
 
@@ -773,6 +809,18 @@ export const GameView = () => {
                   setBanners(event.target.value);
                 }}
               />
+              <label htmlFor="quadrants">
+                <FormattedMessage id="misc.quadrants" />
+              </label>
+              <NumberInput
+                id="quadrants"
+                min={0}
+                max={4}
+                value={quadrants}
+                onChange={(event) => {
+                  setQuadrants(event.target.value);
+                }}
+              />
               <label htmlFor="scenarioPoints">
                 <FormattedMessage id="misc.scenarioPoints" />
               </label>
@@ -784,6 +832,28 @@ export const GameView = () => {
                   setScenarioPoints(event.target.value);
                 }}
               />
+              {banners > 0 && (
+                <p>
+                  <b>
+                    <i>
+                      <FormattedMessage id="misc.banners" />
+                      {": "}
+                    </i>
+                  </b>
+                  {banners * 100}
+                </p>
+              )}
+              {quadrants > 0 && (
+                <p>
+                  <b>
+                    <i>
+                      <FormattedMessage id="misc.quadrants" />
+                      {": "}
+                    </i>
+                  </b>
+                  {quadrants * 100}
+                </p>
+              )}
               {generalDead && (
                 <p>
                   <b>
@@ -803,7 +873,7 @@ export const GameView = () => {
                       {": "}
                     </i>
                   </b>
-                  50
+                  100
                 </p>
               )}
               {Object.keys(victoryPoints).map((unitId) => {
