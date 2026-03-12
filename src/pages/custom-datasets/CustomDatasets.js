@@ -289,7 +289,7 @@ export const CustomDatasets = () => {
                     color="dark"
                     download={`${game.id}.json`}
                     label="Download dataset"
-                    href={`/games/the-old-world/${game.id}.json`}
+                    href={`/games/warhammer-fantasy-6th/${game.id}.json`}
                   ></Button>
                 </div>
               </li>
