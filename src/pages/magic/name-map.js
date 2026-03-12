@@ -237,13 +237,13 @@ export const nameMap = {
   "heralds-of-darkness": {
     name_en: "Heralds of Darkness",
   },
-  "chaos-dwarfs": {
+  "chaos-dwarfs-ow": {
     name_en: "Chaos Dwarfs",
   },
   "cd-renegade": {
     name_en: "Renegade",
   },
-  "vampire-counts": {
+  "vampire-counts-ow": {
     name_en: "Vampire Counts",
   },
   "vc-renegade": {
@@ -255,13 +255,13 @@ export const nameMap = {
   "vampiric-power": {
     name_en: "Vampiric Power",
   },
-  "dark-elves": {
+  "dark-elves-ow": {
     name_en: "Dark Elves",
   },
   "de-renegade": {
     name_en: "Renegade",
   },
-  skaven: {
+  "skaven-ow": {
     name_en: "Skaven",
   },
   "sk-renegade": {
@@ -345,7 +345,7 @@ export const nameMap = {
   "gift-of-khaine": {
     name_en: "Gift of Khaine",
   },
-  "ogre-kingdoms": {
+  "ogre-kingdoms-ow": {
     name_en: "Ogre Kingdoms",
   },
   "ok-renegade": {
@@ -363,7 +363,7 @@ export const nameMap = {
   "discipline-old-ones": {
     name_en: "Discipline of the Old Ones",
   },
-  lizardmen: {
+  "lizardmen-ow": {
     name_en: "Lizardmen",
   },
   "lm-renegade": {
@@ -465,6 +465,54 @@ export const nameMap = {
       name_en: "The Empire",
       name_es: "El Imperio"
  },
+  "beasts-of-chaos": {
+    name_en: "Beasts of Chaos",
+    name_es: "Bestias del Caos",
+  },
+  "chaos-dwarfs": {
+    name_en: "Chaos Dwarfs",
+    name_es: "Enanos del Caos",
+  },
+  "dark-elves": {
+    name_en: "Dark Elves",
+    name_es: "Elfos Oscuros",
+  },
+  "dwarfs-6th": {
+    name_en: "Dwarfs",
+    name_es: "Enanos",
+  },
+  "high-elves": {
+    name_en: "High Elves",
+    name_es: "Altos Elfos",
+  },
+  "lizardmen": {
+    name_en: "Lizardmen",
+    name_es: "Hombres Lagarto",
+  },
+  "ogre-kingdoms": {
+    name_en: "Ogre Kingdoms",
+    name_es: "Reinos Ogros",
+  },
+  "orcs-and-goblins": {
+    name_en: "Orcs and Goblins",
+    name_es: "Orcos y Goblins",
+  },
+  "skaven": {
+    name_en: "Skaven",
+    name_es: "Skaven",
+  },
+  "tomb-kings": {
+    name_en: "Tomb Kings",
+    name_es: "Reyes Sepulcrales",
+  },
+  "vampire-counts": {
+    name_en: "Vampire Counts",
+    name_es: "Condes Vampiro",
+  },
+  "wood-elves": {
+    name_en: "Wood Elves",
+    name_es: "Elfos Silvanos",
+  },
 
   // Warhammer Fantasy MdN
 
