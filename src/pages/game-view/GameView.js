@@ -119,10 +119,10 @@ export const GameView = () => {
   };
   const getAllVictoryPoints = () => {
     let allVictoryPoints =
-      banners * 50 +
+      banners * 100 +
       scenarioPoints +
       (generalDead ? 100 : 0) +
-      (BSBDead ? 50 : 0);
+      (BSBDead ? 100 : 0);
 
     Object.keys(victoryPoints).forEach((unitId) => {
       allVictoryPoints += getUnitVictoryPoints(unitId);
@@ -818,6 +818,17 @@ f
                   setScenarioPoints(event.target.value);
                 }}
               />
+              {banners > 0 && (
+                <p>
+                  <b>
+                    <i>
+                      <FormattedMessage id="misc.banners" />
+                      {": "}
+                    </i>
+                  </b>
+                  {banners * 100}
+                </p>
+              )}
               {generalDead && (
                 <p>
                   <b>
@@ -837,7 +848,7 @@ f
                       {": "}
                     </i>
                   </b>
-                  50
+                  100
                 </p>
               )}
               {Object.keys(victoryPoints).map((unitId) => {
