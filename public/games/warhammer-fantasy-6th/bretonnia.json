@@ -41,7 +41,7 @@
         "name_en": "Lance",
         "points": 6,
         "notes": {
-          "name_en": "if appropriately mounted",
+          "name_en": "if appropriately mounted"
         }
       }
     ],
@@ -107,8 +107,8 @@
       }
     ],
     "specialRules": {
-      "name_en": "The Blessing of the Lady, The Knight's Vow",
-    },
+      "name_en": "The Blessing of the Lady, The Knight's Vow"
+    }
   },
     {
       "name_en": "Prophetess",
@@ -196,7 +196,7 @@
       "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens"],
       "specialRules": {
         "name_en": "Aura of the Lady, The Blessing of the Lady, Magic Resistance (-2)",
-        "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-2)",
+        "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-2)"
       },
       "armyComposition": {
         "bretonnia": {
@@ -347,7 +347,7 @@
         "items": [
         ],
         "specialRules": {
-          "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow",
+          "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow"
         }
       }]
       },
@@ -498,7 +498,7 @@
         "name_en": "Lance",
         "points": 6,
         "notes": {
-          "name_en": "if appropriately mounted",
+          "name_en": "if appropriately mounted"
         }
       }
     ],
@@ -557,7 +557,7 @@
       }
     ],
     "specialRules": {
-      "name_en": "The Blessing of the Lady, The Knight's Vow",
+      "name_en": "The Blessing of the Lady, The Knight's Vow"
     }
   },
     {
@@ -651,7 +651,7 @@
       "lores": ["lore-of-life", "lore-of-beasts"],
       "specialRules": {
         "name_en": "Aura of the Lady, The Blessing of the Lady, Magic Resistance (-1)",
-        "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-1)",
+        "name_es": "Aura de la Dama, Bendición de la Dama, Resistencia a la Magia (-1)"
       }
     }
   ],
@@ -700,7 +700,7 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "The Peasant's Duty",
+        "name_en": "The Peasant's Duty"
       },
       "armyComposition": {
         "bretonnia": {
@@ -787,7 +787,7 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "The Peasant's Duty",
+        "name_en": "The Peasant's Duty"
       },
       "armyComposition": {
         "bretonnia": {
@@ -866,7 +866,7 @@
       "options": [],
       "mounts": [],
       "specialRules": {
-        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, The Knight's Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, The Knight's Vow"
       }
     },
     {
@@ -943,7 +943,7 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Impetuous, Lance Formation, The Knight's Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Impetuous, Lance Formation, The Knight's Vow"
       }
     }
   ],
@@ -996,7 +996,7 @@
       "items": [
       ],
       "specialRules": {
-        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, the Questing Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, the Questing Vow"
       },
       "armyComposition": {
         "bretonnia": {
@@ -1053,7 +1053,7 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "The Blessing of the Lady, Flying Cavalry, Skirmishers, The Knight's Vow",
+        "name_en": "The Blessing of the Lady, Flying Cavalry, Skirmishers, The Knight's Vow"
       }
     },
     {
@@ -1106,7 +1106,7 @@
       ],
       "mounts": [],
       "specialRules": {
-        "name_en": "Fast Cavalry, The Peasant's Duty",
+        "name_en": "Fast Cavalry, The Peasant's Duty"
       },
       "armyComposition": {
         "bretonnia": {
@@ -1131,7 +1131,7 @@
           "category": "special",
           "notes": {
             "name_en": "0-1 units of Battle Pilgrims per army",
-            "name_es": "",
+            "name_es": ""
           }
         },
         "errantry-war": {
@@ -1168,7 +1168,7 @@
         }],
       "mounts": [],
       "specialRules": {
-        "name_en": "Hatred (all enemies), The Peasant's Duty, Stubborn",
+        "name_en": "Hatred (all enemies), The Peasant's Duty, Stubborn"
       }
     }
   ],
@@ -1215,14 +1215,14 @@
       "items": [
       ],
       "specialRules": {
-        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow",
+        "name_en": "The Blessing of the Lady, Purebreed Warhorse, Lance Formation, Living Saints, The Grail Vow"
       },
       "armyComposition": {
         "bretonnia": {
           "category": "rare",
           "notes": {
             "name_en": "0-1 units of Grail Knights per army",
-            "name_es": "",
+            "name_es": ""
           }
         },
         "army-of-the-king": {
@@ -1248,7 +1248,7 @@
           "category": "rare",
           "notes": {
             "name_en": "0-1 units of Trebuchet per army",
-            "name_es": "0-1 unidad de Trebuchet por ejército",
+            "name_es": "0-1 unidad de Trebuchet por ejército"
           }
         },
         "army-of-the-king": {
@@ -1267,7 +1267,7 @@
       "mounts": [],
       "specialRules": {
         "name_en": "The Peasant's Duty",
-        "name_es": "El Deber del Campesino",
+        "name_es": "El Deber del Campesino"
       }
     }
   ],
