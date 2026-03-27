@@ -461,7 +461,7 @@ export const nameMap = {
     name_en: "Army of the King",
     name_es: "El Ejército del Rey",
   },
-    "empire":{
+  "empire":{
       name_en: "The Empire",
       name_es: "El Imperio"
  },

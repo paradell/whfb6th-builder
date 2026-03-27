@@ -1,0 +1,319 @@
+{
+  "characters": [],
+  "lords": [
+    {
+      "name_en": "Elector Count",
+      "name_es": "Conde Elector",
+      "id": "elector-count",
+      "points": 80,
+      "armyComposition": {
+        "empire": { "category": "lords" }
+      },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Flail", "points": 6 },
+        { "name_en": "Great Weapon", "points": 6 },
+        { "name_en": "Spear", "points": 6 },
+        { "name_en": "Halberd", "points": 6 },
+        { "name_en": "White Wolf Hammer", "points": 6 },
+        { "name_en": "Lance", "points": 6 }
+      ],
+      "ranged": [
+        { "name_en": "Long bow", "points": 15 },
+        { "name_en": "Pistol", "points": 10 },
+        { "name_en": "Empire Handgun", "points": 15 }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 3 },
+        { "name_en": "Heavy armour", "points": 6 },
+        { "name_en": "Plate armour", "points": 12 }
+      ],
+      "options": [{ "name_en": "Shield", "points": 3 }],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "War Horse", "id": "warhorse", "points": 15, "exclusive": true },
+        { "name_en": "Barded War Horse", "id": "barded-warhorse", "points": 21, "exclusive": true },
+        { "name_en": "Pegasus", "id": "pegasus", "points": 50, "exclusive": true },
+        { "name_en": "Griffin", "id": "griffin", "points": 50, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
+      "specialRules": { "name_en": "Magic Banner", "name_es": "Estandarte Mágico" }
+    },
+    {
+      "name_en": "Grand Master",
+      "name_es": "Gran Maestre",
+      "id": "grand-master",
+      "points": 160,
+      "armyComposition": { "empire": { "category": "lords" } },
+      "command": [{ "name_en": "General", "points": 0 }],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Lance", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 3 },
+        { "name_en": "Heavy armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "options": [{ "name_en": "Shield", "points": 3 }],
+      "mounts": [{ "name_en": "Barded War Horse", "id": "barded-warhorse", "points": 0, "active": true, "alwaysActive": true }],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
+      "specialRules": { "name_en": "Great Master", "name_es": "Gran Maestre" }
+    },
+    {
+      "name_en": "Wizard Lord",
+      "name_es": "Maestro Hechicero",
+      "id": "wizard-lord",
+      "points": 175,
+      "armyComposition": { "empire": { "category": "lords" } },
+      "command": [{ "name_en": "General", "points": 0 }],
+      "options": [
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true,
+          "options": [
+            { "name_en": "Level 3 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 4 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "War Horse", "id": "warhorse", "points": 15, "exclusive": true },
+        { "name_en": "Barded War Horse", "id": "barded-warhorse", "points": 21, "exclusive": true },
+        { "name_en": "Pegasus", "id": "pegasus", "points": 50, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
+      "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens", "lore-of-death", "lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-light"]
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Captain",
+      "name_es": "Capitán Imperial",
+      "id": "captain",
+      "points": 50,
+      "armyComposition": { "empire": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Flail", "points": 4 },
+        { "name_en": "Great Weapon", "points": 4 },
+        { "name_en": "Spear", "points": 4 },
+        { "name_en": "Halberd", "points": 4 },
+        { "name_en": "White Wolf Hammer", "points": 4 },
+        { "name_en": "Lance", "points": 4 },
+        { "name_en": "Pair of Pistols", "points": 12 }
+      ],
+      "ranged": [
+        { "name_en": "Long bow", "points": 10 },
+        { "name_en": "Pistol", "points": 7 },
+        { "name_en": "Empire Handgun", "points": 10 }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 2 },
+        { "name_en": "Heavy armour", "points": 4 },
+        { "name_en": "Plate armour", "points": 8 }
+      ],
+      "options": [{ "name_en": "Shield", "points": 2 }],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "War Horse", "id": "warhorse", "points": 10, "exclusive": true },
+        { "name_en": "Barded War Horse", "id": "barded-warhorse", "points": 14, "exclusive": true },
+        { "name_en": "Pegasus", "id": "pegasus", "points": 50, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }]
+    },
+    {
+      "name_en": "Warrior Priest",
+      "name_es": "Sacerdote Guerrero",
+      "id": "warrior-priest",
+      "points": 95,
+      "armyComposition": { "empire": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Great Weapon", "points": 4 }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 2 },
+        { "name_en": "Heavy armour", "points": 4 }
+      ],
+      "options": [{ "name_en": "Shield", "points": 2 }],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "War Horse", "id": "warhorse", "points": 15, "exclusive": true },
+        { "name_en": "Barded War Horse", "id": "barded-warhorse", "points": 21, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
+      "specialRules": { "name_en": "Blessings of Sigmar", "name_es": "Bendiciones de Sigmar" }
+    },
+    {
+      "name_en": "Battle Wizard",
+      "name_es": "Mago de Batalla",
+      "id": "battle-wizard",
+      "points": 60,
+      "armyComposition": { "empire": { "category": "heroes" } },
+      "command": [{ "name_en": "General", "points": 0 }],
+      "options": [
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true,
+          "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "War Horse", "id": "warhorse", "points": 10, "exclusive": true },
+        { "name_en": "Barded War Horse", "id": "barded-warhorse", "points": 14, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
+      "lores": ["lore-of-life", "lore-of-beasts", "lore-of-the-heavens", "lore-of-death", "lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-light"]
+    },
+    {
+      "name_en": "Master Engineer",
+      "name_es": "Maestro Ingeniero",
+      "id": "master-engineer",
+      "points": 55,
+      "armyComposition": { "empire": { "category": "heroes" } },
+      "command": [{ "name_en": "General", "points": 0 }],
+      "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
+      "ranged": [
+        { "name_en": "Repeater Pistol", "points": 10 },
+        { "name_en": "Repeater Handgun", "points": 15 },
+        { "name_en": "Hochland Long Rifle", "points": 20 }
+      ],
+      "armor": [{ "name_en": "Light armour", "points": 2 }],
+      "options": [{ "name_en": "Shield", "points": 2 }],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "War Horse", "id": "warhorse", "points": 10, "exclusive": true },
+        { "name_en": "Barded War Horse", "id": "barded-warhorse", "points": 14, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
+      "specialRules": { "name_en": "Master of Ballistics, Extra Crewman", "name_es": "Master of Ballistics, Extra Crewman" }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Swordsman", "name_es": "Espadachines", "id": "swordsman", "points": 7, "minimum": 10, "maximum": 0,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [{ "name_en": "Champion", "points": 10 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
+      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true }]
+    },
+    {
+      "name_en": "Spearman", "name_es": "Lanceros", "id": "empire-spearman", "points": 6, "minimum": 10, "maximum": 0,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [{ "name_en": "Champion", "points": 10 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
+      "melee": [{ "name_en": "Spears", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }]
+    },
+    {
+      "name_en": "Archers", "name_es": "Arqueros", "id": "empire-archers", "points": 8, "minimum": 10, "maximum": 20,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [{ "name_en": "Champion", "points": 5 }, { "name_en": "Musician", "points": 5 }],
+      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "ranged": [{ "name_en": "Bow", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "No armour", "points": 0, "perModel": true, "active": true }, { "name_en": "Light armour", "points": 1, "perModel": true }]
+    },
+    {
+      "name_en": "Crossbowman", "name_es": "Ballesteros", "id": "empire-crossbowman", "points": 8, "minimum": 10, "maximum": 0,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [{ "name_en": "Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
+      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "ranged": [{ "name_en": "Crossbow", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "No armour", "points": 0, "perModel": true, "active": true }, { "name_en": "Light armour", "points": 1, "perModel": true }]
+    },
+    {
+      "name_en": "Handgunner", "name_es": "Aracabuceros", "id": "empire-handgunner", "points": 8, "minimum": 10, "maximum": 0,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [{ "name_en": "Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
+      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "ranged": [{ "name_en": "Empire Handgun", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "No armour", "points": 0, "perModel": true, "active": true }, { "name_en": "Light armour", "points": 1, "perModel": true }]
+    },
+    {
+      "name_en": "Imperial Cavalry", "name_es": "Caballería Imperial", "id": "imperial-cavalry", "points": 23, "minimum": 5, "maximum": 0,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 8 },
+        { "name_en": "Standard bearer", "points": 16, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 8 }
+      ],
+      "melee": [{ "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }, { "name_en": "Lance", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "Full Plate Armour, Shields", "points": 0, "perModel": true, "active": true }],
+      "options": [{ "name_en": "Inner Circle", "points": 3, "perModel": true }, { "name_en": "Knights of the White Wolf", "id": "white-wolf", "points": 2, "perModel": true, "exclusive": true }]
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Pistolier", "name_es": "Herreruelos", "id": "pistolier", "points": 19, "minimum": 5, "maximum": 0,
+      "armyComposition": { "empire": { "category": "special" } },
+      "command": [{ "name_en": "Marksman", "points": 7 }],
+      "melee": [{ "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "ranged": [{ "name_en": "Two pistols", "points": 0, "perModel": true, "active": true }],
+      "armor": [{ "name_en": "Light Armour", "points": 0, "perModel": true, "active": true }],
+      "mounts": [{ "name_en": "Warhorse", "points": 0, "perModel": true, "active": true }],
+      "specialRules": { "name_en": "Fast Cavalry, Fusillade", "name_es": "Caballería Rápida, Descarga Cerrada" }
+    },
+    {
+      "name_en": "Greatsword", "name_es": "Grandes Espaderos", "id": "greatsword", "points": 12, "minimum": 10, "maximum": 0,
+      "armyComposition": { "empire": { "category": "special" } },
+      "command": [
+        { "name_en": "Champion", "points": 12 },
+        { "name_en": "Standard bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "melee": [{ "name_en": "Great Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "Full Plate Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "specialRules": { "name_en": "Stubborn", "name_es": "Tozudos" }
+    },
+    {
+      "name_en": "Great Cannon", "name_es": "Gran Cañón", "id": "great-cannon", "points": 100,
+      "armyComposition": { "empire": { "category": "special" } },
+      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
+      "specialRules": { "name_en": "Great Cannon", "name_es": "Gran Cañón" }
+    },
+    {
+      "name_en": "Mortar", "name_es": "Mortero", "id": "mortar", "points": 75,
+      "armyComposition": { "empire": { "category": "special" } },
+      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
+      "specialRules": { "name_en": "Mortar", "name_es": "Mortero" }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Flagellant", "name_es": "Flagelantes", "id": "flagellant", "points": 11, "minimum": 5, "maximum": 30,
+      "armyComposition": { "empire": { "category": "rare" } },
+      "command": [{ "name_en": "Prophet of Doom", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
+      "melee": [{ "name_en": "Flail", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "specialRules": { "name_en": "Crazed", "name_es": "Enajenados Mentales" }
+    },
+    {
+      "name_en": "Hellblaster Volley Gun", "name_es": "Cañón de Salvas", "id": "hellblaster-volley-gun", "points": 125,
+      "armyComposition": { "empire": { "category": "rare" } },
+      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
+      "specialRules": { "name_en": "Hellblaster Volley Gun", "name_es": "Disparando el Cañón de Salvas" }
+    },
+    {
+      "name_en": "Steam Tank", "name_es": "Tanque a Vapor", "id": "steam-tank", "points": 125,
+      "armyComposition": { "empire": { "category": "rare" } },
+      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
+      "specialRules": {
+        "name_en": "Steam Tank, Large Target, Terror, Unbreakable, Steam Tank Tinker Chart, Unit Strength 10",
+        "name_es": "Tanque a Vapor, Objetivo Grande, Terror, Indesmoralizable, Puntos de Estructura, Potencia de Unidad 10"
+      }
+    }
+  ],
+  "mercenaries": [],
+  "allies": []
+}

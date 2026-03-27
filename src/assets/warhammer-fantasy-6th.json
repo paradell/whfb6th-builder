@@ -52,12 +52,12 @@
       "mercenaries": {}
     },
     {
-      "id": "the-empire",
+      "id": "empire",
       "name_en": "the Empire",
       "name_es": "El Imperio",
       "items": ["general"],
       "armyComposition": [
-        "the-empire"
+        "empire"
       ],
       "allies": [],
       "mercenaries": {}
