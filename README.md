@@ -2,7 +2,7 @@
 
 The "Warhammer Fantasy Builder" is an army builder for the [Games Workshop](https://www.games-workshop.com) tabletop game Warhammer Fantasy Battle 6th edition.
 
-You can visit the site here: [WHFB6th Builder Home Page](https://whfb6th-builder-git-source-aleix-paradells-projects.vercel.app/)
+You can visit the site here: [WHFB6th Builder Home Page](https://whfb6th-builder.vercel.app/)
 
 ## Contribution
 
