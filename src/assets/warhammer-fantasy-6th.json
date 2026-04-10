@@ -55,7 +55,7 @@
       "id": "empire",
       "name_en": "the Empire",
       "name_es": "El Imperio",
-      "items": ["general"],
+      "items": ["general", "empire"],
       "armyComposition": [
         "empire"
       ],
