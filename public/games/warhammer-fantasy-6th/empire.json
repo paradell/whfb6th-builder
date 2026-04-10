@@ -207,15 +207,701 @@
       "armyComposition": { "empire": { "category": "core" } },
       "command": [{ "name_en": "Champion", "points": 10 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
       "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "armor": [{ "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true }]
+      "armor": [{ "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true }],
+      "attached_units": {
+        "minimum": 0,
+        "maximum": 2,
+        "units": [{
+          "id": "swordsman",
+          "name_en": "Swordsman",
+          "name_es": "Espadachines",
+          "points": 7,
+          "minimum": 5,
+          "maximum": 0,
+          "command": [
+          ],
+          "equipment": [
+            {
+              "name_en": "Hand weapons",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "armor": [
+            {
+              "name_en": "Light armour, Shields",
+              "name_es": "Armadura pesada, Escudo",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "options": [],
+          "mounts": [],
+          "items": [
+          ]
+        },
+          {
+            "id": "empire-spearman",
+            "name_en": "Spearman",
+            "name_es": "Lanceros",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Spears",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour, Shields",
+                "name_es": "Armadura pesada, Escudo",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-halberdier",
+            "name_en": "Halberdier",
+            "name_es": "Alabardero",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Halberd",
+                "name_es": "Arma de mano, Alabarda",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour",
+                "name_es": "Armadura ligera",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-archers",
+            "name_en": "Archers",
+            "name_es": "Arqueros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Bow",
+                "name_es": "Arma de mano, Arco",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-crossbowman",
+            "name_en": "Crossbowman",
+            "name_es": "Ballesteros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Crossbow",
+                "name_es": "Arma de mano, Ballesta",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-handgunner",
+            "name_en": "Handgunner",
+            "name_es": "Aracabuceros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Empire Handgun",
+                "name_es": "Arma de mano, Arcabuz imperial",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "free-company-fighter",
+            "name_en": "Free Company Fighter",
+            "name_es": "Compañías Libres",
+            "points": 5,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Additional Hand weapon",
+                "name_es": "Arma de mano, Arma de mano adicional",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          }],
+        "notes": {
+          "name_en": "Every detachment can only have a maximum of models equal to the half of the number of the main unit.",
+          "name_es": "Cada destacamento sólo puede tener un máximo de modelos igual a la mitad del número de la unidad principal."
+        }
+      }
+    },
+    {
+      "name_en": "Halberdier", "name_es": "Alabarderos", "id": "empire-halberdier", "points": 6, "minimum": 10, "maximum": 0,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [{ "name_en": "Champion", "points": 10 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
+      "melee": [{ "name_en": "Hand Weapons, Halberd", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "Light armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }],
+      "attached_units": {
+        "minimum": 0,
+        "maximum": 2,
+        "units": [{
+          "id": "swordsman",
+          "name_en": "Swordsman",
+          "name_es": "Espadachines",
+          "points": 7,
+          "minimum": 5,
+          "maximum": 0,
+          "command": [
+          ],
+          "equipment": [
+            {
+              "name_en": "Hand weapons",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "armor": [
+            {
+              "name_en": "Light armour, Shields",
+              "name_es": "Armadura pesada, Escudo",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "options": [],
+          "mounts": [],
+          "items": [
+          ]
+        },
+          {
+            "id": "empire-spearman",
+            "name_en": "Spearman",
+            "name_es": "Lanceros",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Spears",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour, Shields",
+                "name_es": "Armadura pesada, Escudo",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-halberdier",
+            "name_en": "Halberdier",
+            "name_es": "Alabardero",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Halberd",
+                "name_es": "Arma de mano, Alabarda",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour",
+                "name_es": "Armadura ligera",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-archers",
+            "name_en": "Archers",
+            "name_es": "Arqueros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Bow",
+                "name_es": "Arma de mano, Arco",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-crossbowman",
+            "name_en": "Crossbowman",
+            "name_es": "Ballesteros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Crossbow",
+                "name_es": "Arma de mano, Ballesta",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-handgunner",
+            "name_en": "Handgunner",
+            "name_es": "Aracabuceros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Empire Handgun",
+                "name_es": "Arma de mano, Arcabuz imperial",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "free-company-fighter",
+            "name_en": "Free Company Fighter",
+            "name_es": "Compañías Libres",
+            "points": 5,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Additional Hand weapon",
+                "name_es": "Arma de mano, Arma de mano adicional",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          }],
+        "notes": {
+          "name_en": "Every detachment can only have a maximum of models equal to the half of the number of the main unit.",
+          "name_es": "Cada destacamento sólo puede tener un máximo de modelos igual a la mitad del número de la unidad principal."
+        }
+      }
     },
     {
       "name_en": "Spearman", "name_es": "Lanceros", "id": "empire-spearman", "points": 6, "minimum": 10, "maximum": 0,
       "armyComposition": { "empire": { "category": "core" } },
       "command": [{ "name_en": "Champion", "points": 10 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
       "melee": [{ "name_en": "Spears", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "armor": [{ "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }]
+      "armor": [{ "name_en": "Light armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }],
+      "attached_units": {
+        "minimum": 0,
+        "maximum": 2,
+        "units": [{
+          "id": "swordsman",
+          "name_en": "Swordsman",
+          "name_es": "Espadachines",
+          "points": 7,
+          "minimum": 5,
+          "maximum": 0,
+          "command": [
+          ],
+          "equipment": [
+            {
+              "name_en": "Hand weapons",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "armor": [
+            {
+              "name_en": "Light armour, Shields",
+              "name_es": "Armadura pesada, Escudo",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "options": [],
+          "mounts": [],
+          "items": [
+          ]
+        },
+          {
+            "id": "empire-spearman",
+            "name_en": "Spearman",
+            "name_es": "Lanceros",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Spears",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour, Shields",
+                "name_es": "Armadura pesada, Escudo",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-halberdier",
+            "name_en": "Halberdier",
+            "name_es": "Alabardero",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Halberd",
+                "name_es": "Arma de mano, Alabarda",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour",
+                "name_es": "Armadura ligera",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-archers",
+            "name_en": "Archers",
+            "name_es": "Arqueros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Bow",
+                "name_es": "Arma de mano, Arco",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-crossbowman",
+            "name_en": "Crossbowman",
+            "name_es": "Ballesteros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Crossbow",
+                "name_es": "Arma de mano, Ballesta",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-handgunner",
+            "name_en": "Handgunner",
+            "name_es": "Aracabuceros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Empire Handgun",
+                "name_es": "Arma de mano, Arcabuz imperial",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "free-company-fighter",
+            "name_en": "Free Company Fighter",
+            "name_es": "Compañías Libres",
+            "points": 5,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Additional Hand weapon",
+                "name_es": "Arma de mano, Arma de mano adicional",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          }],
+        "notes": {
+          "name_en": "Every detachment can only have a maximum of models equal to the half of the number of the main unit.",
+          "name_es": "Cada destacamento sólo puede tener un máximo de modelos igual a la mitad del número de la unidad principal."
+        }
+      }
+    },
+
+    {
+      "name_en": "Free Company", "name_es": "Compañías Libres", "id": "free-company-fighter", "points": 5, "minimum": 10, "maximum": 0,
+      "armyComposition": { "empire": { "category": "core" } },
+      "command": [],
+      "melee": [{ "name_en": "Spears", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "armor": [{ "name_en": "Light armour", "points": 1, "perModel": true}],
+      "options": []
     },
     {
       "name_en": "Archers", "name_es": "Arqueros", "id": "empire-archers", "points": 8, "minimum": 10, "maximum": 20,
@@ -239,7 +925,230 @@
       "command": [{ "name_en": "Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
       "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
       "ranged": [{ "name_en": "Empire Handgun", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "armor": [{ "name_en": "No armour", "points": 0, "perModel": true, "active": true }, { "name_en": "Light armour", "points": 1, "perModel": true }]
+      "armor": [{ "name_en": "No armour", "points": 0, "perModel": true, "active": true }, { "name_en": "Light armour", "points": 1, "perModel": true }],
+      "attached_units": {
+        "minimum": 0,
+        "maximum": 2,
+        "units": [{
+          "id": "swordsman",
+          "name_en": "Swordsman",
+          "name_es": "Espadachines",
+          "points": 7,
+          "minimum": 5,
+          "maximum": 0,
+          "command": [
+          ],
+          "equipment": [
+            {
+              "name_en": "Hand weapons",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "armor": [
+            {
+              "name_en": "Light armour, Shields",
+              "name_es": "Armadura pesada, Escudo",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "options": [],
+          "mounts": [],
+          "items": [
+          ]
+        },
+          {
+            "id": "empire-spearman",
+            "name_en": "Spearman",
+            "name_es": "Lanceros",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Spears",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour, Shields",
+                "name_es": "Armadura pesada, Escudo",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-halberdier",
+            "name_en": "Halberdier",
+            "name_es": "Alabardero",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Halberd",
+                "name_es": "Arma de mano, Alabarda",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour",
+                "name_es": "Armadura ligera",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-archers",
+            "name_en": "Archers",
+            "name_es": "Arqueros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Bow",
+                "name_es": "Arma de mano, Arco",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-crossbowman",
+            "name_en": "Crossbowman",
+            "name_es": "Ballesteros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Crossbow",
+                "name_es": "Arma de mano, Ballesta",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-handgunner",
+            "name_en": "Handgunner",
+            "name_es": "Aracabuceros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Empire Handgun",
+                "name_es": "Arma de mano, Arcabuz imperial",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "free-company-fighter",
+            "name_en": "Free Company Fighter",
+            "name_es": "Compañías Libres",
+            "points": 5,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Additional Hand weapon",
+                "name_es": "Arma de mano, Arma de mano adicional",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          }],
+        "notes": {
+          "name_en": "Every detachment can only have a maximum of models equal to the half of the number of the main unit.",
+          "name_es": "Cada destacamento sólo puede tener un máximo de modelos igual a la mitad del número de la unidad principal."
+        }
+      }
     },
     {
       "name_en": "Imperial Cavalry", "name_es": "Caballería Imperial", "id": "imperial-cavalry", "points": 23, "minimum": 5, "maximum": 0,
@@ -275,6 +1184,229 @@
       ],
       "melee": [{ "name_en": "Great Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
       "armor": [{ "name_en": "Full Plate Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
+      "attached_units": {
+        "minimum": 0,
+        "maximum": 2,
+        "units": [{
+          "id": "swordsman",
+          "name_en": "Swordsman",
+          "name_es": "Espadachines",
+          "points": 7,
+          "minimum": 5,
+          "maximum": 0,
+          "command": [
+          ],
+          "equipment": [
+            {
+              "name_en": "Hand weapons",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "armor": [
+            {
+              "name_en": "Light armour, Shields",
+              "name_es": "Armadura pesada, Escudo",
+              "points": 0,
+              "perModel": true,
+              "active": true
+            }
+          ],
+          "options": [],
+          "mounts": [],
+          "items": [
+          ]
+        },
+          {
+            "id": "empire-spearman",
+            "name_en": "Spearman",
+            "name_es": "Lanceros",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Spears",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour, Shields",
+                "name_es": "Armadura pesada, Escudo",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-halberdier",
+            "name_en": "Halberdier",
+            "name_es": "Alabardero",
+            "points": 6,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Halberd",
+                "name_es": "Arma de mano, Alabarda",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "Light armour",
+                "name_es": "Armadura ligera",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-archers",
+            "name_en": "Archers",
+            "name_es": "Arqueros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Bow",
+                "name_es": "Arma de mano, Arco",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-crossbowman",
+            "name_en": "Crossbowman",
+            "name_es": "Ballesteros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Crossbow",
+                "name_es": "Arma de mano, Ballesta",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "empire-handgunner",
+            "name_en": "Handgunner",
+            "name_es": "Aracabuceros",
+            "points": 8,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Empire Handgun",
+                "name_es": "Arma de mano, Arcabuz imperial",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+              {
+                "name_en": "No armour",
+                "name_es": "Sin armadura",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          },
+          {
+            "id": "free-company-fighter",
+            "name_en": "Free Company Fighter",
+            "name_es": "Compañías Libres",
+            "points": 5,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+            ],
+            "equipment": [
+              {
+                "name_en": "Hand weapons, Additional Hand weapon",
+                "name_es": "Arma de mano, Arma de mano adicional",
+                "points": 0,
+                "perModel": true,
+                "active": true
+              }
+            ],
+            "armor": [
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [
+            ]
+          }],
+        "notes": {
+          "name_en": "Every detachment can only have a maximum of models equal to the half of the number of the main unit.",
+          "name_es": "Cada destacamento sólo puede tener un máximo de modelos igual a la mitad del número de la unidad principal."
+        }
+      },
       "specialRules": { "name_en": "Stubborn", "name_es": "Tozudos" }
     },
     {
