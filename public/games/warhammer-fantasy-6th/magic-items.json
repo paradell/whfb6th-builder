@@ -730,5 +730,290 @@
       "onePerArmy": true,
       "name": "virtue of empathy"
     }
+  ],
+  "empire": [
+    {
+      "name_en": "Runefang",
+      "name_es": "Colmillo Rúnico",
+      "points": 100,
+      "type": "weapon",
+      "name": "runefang"
+    },
+    {
+      "name_en": "The Mace of Helstrum",
+      "points": 65,
+      "type": "weapon",
+      "name": "the mace of helstrum"
+    },
+    {
+      "name_en": "Sword of Fate",
+      "points": 50,
+      "type": "weapon",
+      "name": "sword of fate"
+    },
+    {
+      "name_en": "Sword of Sigismund",
+      "points": 50,
+      "type": "weapon",
+      "name": "sword of sigismund"
+    },
+    {
+      "name_en": "Sword of Righteous Steel",
+      "points": 45,
+      "type": "weapon",
+      "name": "sword of righteous steel"
+    },
+    {
+      "name_en": "Sword of Power",
+      "points": 40,
+      "type": "weapon",
+      "name": "sword of power"
+    },
+    {
+      "name_en": "Hammer of Judgement",
+      "points": 35,
+      "type": "weapon",
+      "name": "hammer of judgement"
+    },
+    {
+      "name_en": "Dragon Bow",
+      "points": 30,
+      "type": "weapon",
+      "name": "dragon bow"
+    },
+    {
+      "name_en": "Sword of Justice",
+      "points": 25,
+      "type": "weapon",
+      "name": "sword of justice"
+    },
+    {
+      "name_en": "Wyrmslayer Sword",
+      "points": 20,
+      "type": "weapon",
+      "name": "wyrmslayer sword"
+    },
+    {
+      "name_en": "The Gilded Armour",
+      "points": 50,
+      "type": "armor",
+      "name": "the gilded armour"
+    },
+    {
+      "name_en": "Dawn Armour",
+      "points": 40,
+      "type": "armor",
+      "name": "dawn armour"
+    },
+    {
+      "name_en": "Armour of Tarnus",
+      "points": 35,
+      "type": "armor",
+      "name": "armour of tarnus"
+    },
+    {
+      "name_en": "Shield of the Gorgon",
+      "points": 35,
+      "type": "armor",
+      "name": "shield of the gorgon"
+    },
+    {
+      "name_en": "Armour of Meteoric Iron",
+      "points": 30,
+      "type": "armor",
+      "name": "armour of meteoric iron"
+    },
+    {
+      "name_en": "Bronze Shield",
+      "points": 25,
+      "type": "armor",
+      "name": "bronze shield"
+    },
+    {
+      "name_en": "Helm of the Skaven Slayer",
+      "points": 20,
+      "type": "armor",
+      "name": "helm of the skaven slayer"
+    },
+    {
+      "name_en": "Shroud of Magnus",
+      "points": 60,
+      "type": "talisman",
+      "name": "shroud of magnus"
+    },
+    {
+      "name_en": "Jade Amulet",
+      "points": 50,
+      "type": "talisman",
+      "name": "jade amulet"
+    },
+    {
+      "name_en": "Holy Relic",
+      "points": 45,
+      "type": "talisman",
+      "name": "holy relic"
+    },
+    {
+      "name_en": "The White Cloak",
+      "points": 30,
+      "type": "talisman",
+      "name": "the white cloak"
+    },
+    {
+      "name_en": "The Crimson Amulet",
+      "points": 20,
+      "type": "talisman",
+      "name": "the crimson amulet"
+    },
+    {
+      "name_en": "Sigil of Sigmar",
+      "points": 20,
+      "type": "talisman",
+      "name": "sigil of sigmar"
+    },
+    {
+      "name_en": "Hexstaff",
+      "points": 55,
+      "type": "arcane-item",
+      "name": "hexstaff"
+    },
+    {
+      "name_en": "Grey Wand",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "grey wand"
+    },
+    {
+      "name_en": "Seal of Destruction",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "seal of destruction"
+    },
+    {
+      "name_en": "Rod of Power",
+      "points": 45,
+      "type": "arcane-item",
+      "name": "rod of power"
+    },
+    {
+      "name_en": "Crystal Ball",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "crystal ball"
+    },
+    {
+      "name_en": "Luckstone",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "luckstone"
+    },
+    {
+      "name_en": "Wizard's Staff",
+      "points": 15,
+      "type": "arcane-item",
+      "name": "wizard's staff"
+    },
+    {
+      "name_en": "Laurels of Victory",
+      "points": 70,
+      "type": "enchanted-item",
+      "name": "laurels of victory"
+    },
+    {
+      "name_en": "Rod of Command",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "rod of command"
+    },
+    {
+      "name_en": "The Silver Horn",
+      "points": 45,
+      "type": "enchanted-item",
+      "name": "the silver horn"
+    },
+    {
+      "name_en": "The Orb of Thunder",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "the orb of thunder"
+    },
+    {
+      "name_en": "Aldred's Casket of Sorcery",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "aldred's casket of sorcery"
+    },
+    {
+      "name_en": "Icon of Magnus",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "icon of magnus"
+    },
+    {
+      "name_en": "Ring of Volans",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "ring of volans"
+    },
+    {
+      "name_en": "Doomfire Ring",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "doomfire ring"
+    },
+    {
+      "name_en": "Van Horstmann's Speculum",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "van horstmann's speculum"
+    },
+    {
+      "name_en": "Imperial Banner",
+      "points": 100,
+      "type": "banner",
+      "name": "imperial banner"
+    },
+    {
+      "name_en": "Banner of Sigismund",
+      "points": 60,
+      "type": "banner",
+      "name": "banner of sigismund"
+    },
+    {
+      "name_en": "Banner of Ulric",
+      "points": 50,
+      "type": "banner",
+      "name": "banner of ulric"
+    },
+    {
+      "name_en": "Griffon Standard",
+      "points": 50,
+      "type": "banner",
+      "name": "griffon standard"
+    },
+    {
+      "name_en": "Banner of Valour",
+      "points": 40,
+      "type": "banner",
+      "name": "banner of valour"
+    },
+    {
+      "name_en": "Standard of Arcane Warding",
+      "points": 40,
+      "type": "banner",
+      "name": "standard of arcane warding"
+    },
+    {
+      "name_en": "Steel Standard",
+      "points": 25,
+      "type": "banner",
+      "name": "steel standard"
+    },
+    {
+      "name_en": "Banner of Duty",
+      "points": 10,
+      "type": "banner",
+      "name": "banner of duty"
+    }
   ]
 }
