@@ -37,7 +37,7 @@
       "id": "dark-elves",
       "name_en": "Dark Elves",
       "name_es": "Elfos Oscuros",
-      "items": ["general"],
+      "items": ["general", "dark-elves"],
       "armyComposition": ["dark-elves"],
       "allies": [],
       "mercenaries": {}
