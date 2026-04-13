@@ -1015,5 +1015,308 @@
       "type": "banner",
       "name": "banner of duty"
     }
+  ],
+  "dark-elves": [
+    {
+      "name_en": "Executioner's Axe",
+      "points": 80,
+      "type": "weapon",
+      "name": "executioner's axe"
+    },
+    {
+      "name_en": "Venom Sword",
+      "points": 75,
+      "type": "weapon",
+      "name": "venom sword"
+    },
+    {
+      "name_en": "Gauntlet of Power",
+      "points": 60,
+      "type": "weapon",
+      "name": "gauntlet of power"
+    },
+    {
+      "name_en": "Blade of Ruin",
+      "points": 50,
+      "type": "weapon",
+      "name": "blade of ruin"
+    },
+    {
+      "name_en": "Draich of Dark Power",
+      "points": 50,
+      "type": "weapon",
+      "name": "draich of dark power"
+    },
+    {
+      "name_en": "Hydra Blade",
+      "points": 50,
+      "type": "weapon",
+      "name": "hydra blade"
+    },
+    {
+      "name_en": "Crimson Death",
+      "points": 35,
+      "type": "weapon",
+      "name": "crimson death"
+    },
+    {
+      "name_en": "Lifetaker",
+      "points": 30,
+      "type": "weapon",
+      "name": "lifetaker"
+    },
+    {
+      "name_en": "Blade of Spite",
+      "points": 25,
+      "type": "weapon",
+      "name": "blade of spite"
+    },
+    {
+      "name_en": "Chill Blade",
+      "points": 25,
+      "type": "weapon",
+      "name": "chill blade"
+    },
+    {
+      "name_en": "Heartseeker",
+      "points": 25,
+      "type": "weapon",
+      "name": "heartseeker"
+    },
+    {
+      "name_en": "Web of Shadows",
+      "points": 25,
+      "type": "weapon",
+      "name": "web of shadows"
+    },
+    {
+      "name_en": "Dark Sword",
+      "points": 15,
+      "type": "weapon",
+      "name": "dark sword"
+    },
+    {
+      "name_en": "Armour of Living Death",
+      "points": 100,
+      "type": "armor",
+      "name": "armour of living death"
+    },
+    {
+      "name_en": "Armour of Eternal Servitude",
+      "points": 60,
+      "type": "armor",
+      "name": "armour of eternal servitude"
+    },
+    {
+      "name_en": "Shield of Ghrond",
+      "points": 30,
+      "type": "armor",
+      "name": "shield of ghrond"
+    },
+    {
+      "name_en": "Armour of Darkness",
+      "points": 25,
+      "type": "armor",
+      "name": "armour of darkness"
+    },
+    {
+      "name_en": "Blood Armour",
+      "points": 20,
+      "type": "armor",
+      "name": "blood armour"
+    },
+    {
+      "name_en": "Black Amulet",
+      "points": 50,
+      "type": "talisman",
+      "name": "black amulet"
+    },
+    {
+      "name_en": "Deathmask",
+      "points": 50,
+      "type": "talisman",
+      "name": "deathmask"
+    },
+    {
+      "name_en": "Heart-stone of Darkness",
+      "points": 45,
+      "type": "talisman",
+      "name": "heart-stone of darkness"
+    },
+    {
+      "name_en": "Mystic Shield of Light",
+      "points": 40,
+      "type": "talisman",
+      "name": "mystic shield of light"
+    },
+    {
+      "name_en": "Crown of Black Iron",
+      "points": 35,
+      "type": "talisman",
+      "name": "crown of black iron"
+    },
+    {
+      "name_en": "Seal of Ghrond",
+      "points": 25,
+      "type": "talisman",
+      "name": "seal of ghrond"
+    },
+    {
+      "name_en": "Ring of Hotek",
+      "points": 20,
+      "type": "talisman",
+      "name": "ring of hotek"
+    },
+    {
+      "name_en": "Soulstone",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "soulstone"
+    },
+    {
+      "name_en": "Black Staff",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "black staff"
+    },
+    {
+      "name_en": "Darkstar Cloak",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "darkstar cloak"
+    },
+    {
+      "name_en": "Tome of Furion",
+      "points": 15,
+      "type": "arcane-item",
+      "name": "tome of furion"
+    },
+    {
+      "name_en": "Rubric of Dark Dimensions",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "rubric of dark dimensions"
+    },
+    {
+      "name_en": "Ring of Darkness",
+      "points": 45,
+      "type": "enchanted-item",
+      "name": "ring of darkness"
+    },
+    {
+      "name_en": "Wand of the Kharaidon",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "wand of the kharaidon"
+    },
+    {
+      "name_en": "The Cloak of Dark Souls",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "the cloak of dark souls"
+    },
+    {
+      "name_en": "Crystal of Midnight",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "crystal of midnight"
+    },
+    {
+      "name_en": "Divine Eye",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "divine eye"
+    },
+    {
+      "name_en": "Banner of Nagarythe",
+      "points": 150,
+      "type": "banner",
+      "name": "banner of nagarythe"
+    },
+    {
+      "name_en": "Hydra Banner",
+      "points": 80,
+      "type": "banner",
+      "name": "hydra banner"
+    },
+    {
+      "name_en": "Dread Banner",
+      "points": 75,
+      "type": "banner",
+      "name": "dread banner"
+    },
+    {
+      "name_en": "Soul Shadows Standard",
+      "points": 50,
+      "type": "banner",
+      "name": "soul shadows standard"
+    },
+    {
+      "name_en": "Banner of Murder",
+      "points": 45,
+      "type": "banner",
+      "name": "banner of murder"
+    },
+    {
+      "name_en": "Standard of Slaughter",
+      "points": 35,
+      "type": "banner",
+      "name": "standard of slaughter"
+    }
+  ],
+  "poisons": [
+    {
+      "name_en": "Black Lotus",
+      "points": 25,
+      "type": "poison",
+      "name": "black lotus"
+    },{
+      "name_en": "Manbane",
+      "points": 25,
+      "type": "poison",
+      "name": "manbane"
+    },{
+      "name_en": "Dark Venom",
+      "points": 10,
+      "type": "poison",
+      "name": "dark venom"
+    }],
+  "artefacts-and-skills": [
+    {
+      "name_en": "Dance of Doom",
+      "points": 30,
+      "type": "artifact-and-skill",
+      "name": "dance of doom"
+    },
+    {
+      "name_en": "Touch of Death",
+      "points": 30,
+      "type": "artifact-and-skill",
+      "name": "touch of death"
+    },
+    {
+        "name_en": "Hand of Khaine",
+        "points": 25,
+        "type": "artifact-and-skill",
+        "name": "hand of khaine artefact and skill"
+    },
+    {
+        "name_en": "Rune of Khaine",
+        "points": 25,
+        "type": "artifact-and-skill",
+        "name": "rune of khaine"
+    },
+    {
+        "name_en": "Witchbrew",
+        "points": 25,
+        "type": "artifact-and-skill",
+        "name": "witchbrew"
+    },
+    {
+        "name_en": "Cry of War",
+        "points": 10,
+        "type": "artifact-and-skill",
+        "name": "cry of war"
+    }
   ]
 }
