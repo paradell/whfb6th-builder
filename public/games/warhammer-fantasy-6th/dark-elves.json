@@ -1,182 +1,378 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord", "name_es": "Ejemplo de Señor", "id": "example-lord", "points": 110,
-    "armyComposition": { "dark-elves": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord", "name_es": "Ejemplo de Señor Mágico", "id": "example-magic-lord", "points": 190,
-    "armyComposition": { "dark-elves": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero", "name_es": "Ejemplo de Héroe", "id": "example-hero", "points": 60,
-    "armyComposition": { "dark-elves": { "category": "heroes" } },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero", "name_es": "Ejemplo de Héroe Mágico", "id": "example-magic-hero", "points": 70,
-    "armyComposition": { "dark-elves": { "category": "heroes" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+  "lords": [
+    {
+      "name_en": "Dark Elf Highborn", "name_es": "Alto Señor Elfo Oscuro", "id": "dark-elf-highborn", "points": 125,
+      "armyComposition": { "dark-elves": { "category": "lords" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapon", "id": "highborn-addl-hw", "points": 6, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "highborn-gw", "points": 6, "exclusive": true },
+        { "name_en": "Halberd", "id": "highborn-halberd", "points": 6, "exclusive": true },
+        { "name_en": "Lance", "id": "highborn-lance", "points": 6, "exclusive": true, "notes": { "name_en": "if mounted" } }
+      ],
+      "ranged": [
+        { "name_en": "Repeater Crossbow", "points": 15 }
+      ],
+      "armor": [
+        { "name_en": "Sea Dragon Cloak", "points": 9 },
+        { "name_en": "Light Armour", "id": "highborn-light-armour", "points": 3, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "highborn-heavy-armour", "points": 6, "exclusive": true },
+        { "name_en": "Shield", "points": 3 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Dark Steed", "id": "dark-steed", "points": 18, "exclusive": true },
+        { "name_en": "Cold One", "id": "cold-one", "points": 39, "exclusive": true },
+        { "name_en": "Dark Pegasus", "id": "dark-pegasus", "points": 55, "exclusive": true },
+        { "name_en": "Manticore", "id": "manticore", "points": 190, "exclusive": true },
+        { "name_en": "Black Dragon", "id": "black-dragon", "points": 320, "exclusive": true },
+        { "name_en": "Cold One Chariot", "id": "cold-one-chariot-lord", "points": 95, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
+      "specialRules": { "name_en": "Hate High Elves", "name_es": "Odio a los Altos Elfos" }
+    },
+    {
+      "name_en": "High Sorceress", "name_es": "Alta Hechicera", "id": "high-sorceress", "points": 215,
+      "armyComposition": { "dark-elves": { "category": "lords" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [{ "name_en": "Hand Weapon", "points": 0, "active": true, "alwaysActive": true }],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicera", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 3 Wizard", "name_es": "Hechicera de Nivel 3", "points": 0, "exclusive": true, "active": true },
+          { "name_en": "Level 4 Wizard", "name_es": "Hechicera de Nivel 4", "points": 40, "exclusive": true }
+        ]}
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Dark Steed", "id": "dark-steed", "points": 18, "exclusive": true },
+        { "name_en": "Cold One", "id": "cold-one", "points": 39, "exclusive": true },
+        { "name_en": "Dark Pegasus", "id": "dark-pegasus", "points": 55, "exclusive": true },
+        { "name_en": "Manticore", "id": "manticore", "points": 190, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
+      "lores": ["dark-magic"],
+      "specialRules": { "name_en": "Hate High Elves, Sect Enmity", "name_es": "Odio a los Altos Elfos, Enemistad de Secta" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Dark Elf Noble", "name_es": "Noble Elfo Oscuro", "id": "dark-elf-noble", "points": 70,
+      "armyComposition": { "dark-elves": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 25, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapon", "id": "noble-addl-hw", "points": 4, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "noble-gw", "points": 4, "exclusive": true },
+        { "name_en": "Halberd", "id": "noble-halberd", "points": 4, "exclusive": true },
+        { "name_en": "Lance", "id": "noble-lance", "points": 4, "exclusive": true, "notes": { "name_en": "if mounted" } }
+      ],
+      "ranged": [
+        { "name_en": "Repeater Crossbow", "points": 10 }
+      ],
+      "armor": [
+        { "name_en": "Sea Dragon Cloak", "points": 6 },
+        { "name_en": "Light Armour", "id": "noble-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "noble-heavy-armour", "points": 4, "exclusive": true },
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Dark Steed", "id": "dark-steed", "points": 12, "exclusive": true },
+        { "name_en": "Cold One", "id": "cold-one", "points": 26, "exclusive": true },
+        { "name_en": "Dark Pegasus", "id": "dark-pegasus", "points": 55, "exclusive": true },
+        { "name_en": "Cold One Chariot", "id": "cold-one-chariot-hero", "points": 95, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
+      "specialRules": { "name_en": "Hate High Elves", "name_es": "Odio a los Altos Elfos" }
+    },
+    {
+      "name_en": "Sorceress", "name_es": "Hechicera", "id": "sorceress", "points": 90,
+      "armyComposition": { "dark-elves": { "category": "heroes" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [{ "name_en": "Hand Weapon", "points": 0, "active": true, "alwaysActive": true }],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicera", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 1 Wizard", "name_es": "Hechicera de Nivel 1", "points": 0, "exclusive": true, "active": true },
+          { "name_en": "Level 2 Wizard", "name_es": "Hechicera de Nivel 2", "points": 40, "exclusive": true }
+        ]}
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Dark Steed", "id": "dark-steed", "points": 12, "exclusive": true },
+        { "name_en": "Cold One", "id": "cold-one", "points": 26, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
+      "lores": ["dark-magic"],
+      "specialRules": { "name_en": "Hate High Elves, Sect Enmity", "name_es": "Odio a los Altos Elfos, Enemistad de Secta" }
+    },
+    {
+      "name_en": "Beastmaster", "name_es": "Domador de Bestias", "id": "beastmaster", "points": 40,
+      "armyComposition": { "dark-elves": { "category": "heroes" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [
+        { "name_en": "Hand Weapon (Whip)", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapon", "points": 4 },
+        { "name_en": "Lance", "points": 4, "notes": { "name_en": "if mounted" } }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "points": 2 },
+        { "name_en": "Sea Dragon Cloak", "points": 6 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Dark Steed", "id": "dark-steed", "points": 12, "exclusive": true },
+        { "name_en": "Cold One", "id": "cold-one", "points": 26, "exclusive": true },
+        { "name_en": "Dark Pegasus", "id": "dark-pegasus", "points": 55, "exclusive": true },
+        { "name_en": "Manticore", "id": "manticore", "points": 190, "exclusive": true }
+      ],
+      "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 25 }],
+      "specialRules": { "name_en": "Hate High Elves, Beastmaster", "name_es": "Odio a los Altos Elfos, Domador de Bestias" }
+    },
+    {
+      "name_en": "Assassin", "name_es": "Asesino", "id": "assassin", "points": 125,
+      "armyComposition": { "dark-elves": { "category": "heroes" } },
+      "command": [],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapon", "points": 4 }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [{ "name_en": "Magic Items & Artifacts", "types": ["weapon", "talisman", "enchanted-item", "poisons", "artefacts-and-skills"], "selected": [], "maxPoints": 50 }],
+      "specialRules": { "name_en": "Scouts", "name_es": "Exploradores" }
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "dark-elves": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "dark-elves": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Dark Elf Warriors", "name_es": "Guerreros Elfos Oscuros", "id": "dark-elf-warriors",
+      "points": 7, "minimum": 10, "maximum": 0,
       "armyComposition": { "dark-elves": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Lordling", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
       ],
       "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "armor": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Spears", "id": "warriors-spears", "points": 0, "perModel": true, "exclusive": true, "active": true },
+        { "name_en": "Repeater Crossbows", "id": "warriors-crossbows", "points": 4, "perModel": true, "exclusive": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves", "name_es": "Odio a los Altos Elfos" }
+    },
+    {
+      "name_en": "Corsairs", "name_es": "Corsarios", "id": "corsairs",
+      "points": 10, "minimum": 10, "maximum": 0,
+      "armyComposition": { "dark-elves": { "category": "core" } },
+      "command": [
+        { "name_en": "Reaver", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Sea Dragon Cloak, Two Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves", "name_es": "Odio a los Altos Elfos" }
+    },
+    {
+      "name_en": "Dark Riders", "name_es": "Jinetes Oscuros", "id": "dark-riders",
+      "points": 18, "minimum": 5, "maximum": 0,
+      "armyComposition": { "dark-elves": { "category": "core" } },
+      "command": [
+        { "name_en": "Herald", "points": 14 },
+        { "name_en": "Standard Bearer", "points": 14 },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "equipment": [
+        { "name_en": "Light Armour, Spears", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [
+        { "name_en": "Repeater Crossbows", "points": 6, "perModel": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves, Fast Cavalry", "name_es": "Odio a los Altos Elfos, Caballería Rápida" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 14 }, { "name_en": "Standard bearer", "points": 14 }, { "name_en": "Musician", "points": 7 }],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+      "name_en": "Cold One Chariots", "name_es": "Carros de Gélidos", "id": "cold-one-chariots",
+      "points": 95, "minimum": 1, "maximum": 2,
+      "armyComposition": { "dark-elves": { "category": "special" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Repeater Crossbow", "points": 10 },
+        { "name_en": "Spears", "points": 2 }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
-      ],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }, { "name_en": "Example Option", "points": 5 }],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "dark-elves": { "category": "special" } }
+      "specialRules": { "name_en": "Fear, Stupidity, Hate High Elves", "name_es": "Miedo, Estupidez, Odio a los Altos Elfos" }
+    },
+    {
+      "name_en": "Shades", "name_es": "Sombras", "id": "shades",
+      "points": 14, "minimum": 5, "maximum": 15,
+      "armyComposition": { "dark-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Bloodshade", "points": 12 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapon, Repeater Crossbow", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "points": 1, "perModel": true }
+      ],
+      "melee": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves, Skirmishers, Scouts", "name_es": "Odio a los Altos Elfos, Tiradores, Exploradores" }
+    },
+    {
+      "name_en": "Witch Elves", "name_es": "Elfas Brujas", "id": "witch-elves",
+      "points": 13, "minimum": 10, "maximum": 0,
+      "armyComposition": { "dark-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Hag", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Two Poisoned Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Frenzy, Hate High Elves, Sect Enmity, Poisoned Attacks", "name_es": "Frenesí, Odio a los Altos Elfos, Enemistad de Secta, Ataques Envenenados" }
+    },
+    {
+      "name_en": "Cold One Knights", "name_es": "Jinetes de Gélidos", "id": "cold-one-knights",
+      "points": 29, "minimum": 5, "maximum": 0,
+      "armyComposition": { "dark-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Dread Knight", "points": 18 },
+        { "name_en": "Standard Bearer", "points": 18, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 9 }
+      ],
+      "equipment": [
+        { "name_en": "Heavy Armour, Shield, Lance", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves, Stupidity, Fear", "name_es": "Odio a los Altos Elfos, Estupidez, Miedo" }
+    },
+    {
+      "name_en": "Executioners", "name_es": "Ejecutores", "id": "executioners",
+      "points": 11, "minimum": 10, "maximum": 0,
+      "armyComposition": { "dark-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Draich-Master", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Draich (Great Weapon), Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves, Killing Blow", "name_es": "Odio a los Altos Elfos, Golpe Mortal" }
+    },
+    {
+      "name_en": "Harpies", "name_es": "Arpías", "id": "harpies",
+      "points": 13, "minimum": 5, "maximum": 20,
+      "armyComposition": { "dark-elves": { "category": "special" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Claws (Two Hand Weapons)", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fly, Beasts", "name_es": "Volar, Bestias" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
-      "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "name_en": "War Hydra", "name_es": "Hidra de Guerra", "id": "war-hydra",
+      "points": 220,
       "armyComposition": { "dark-elves": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [],
+      "equipment": [
+        { "name_en": "War Hydra", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Terror, Large Target, Scaly Skin (4+), Breathe Fire", "name_es": "Terror, Objetivo Grande, Escamas (4+), Aliento de Fuego" }
+    },
+    {
+      "name_en": "Cauldron of Blood", "name_es": "Caldero de Sangre", "id": "cauldron-of-blood",
+      "points": 205,
+      "armyComposition": { "dark-elves": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Cauldron of Blood, Hag Queen", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves, Terror, Frenzy, Poisoned Attacks", "name_es": "Odio a los Altos Elfos, Terror, Frenesí, Ataques Envenenados" }
+    },
+    {
+      "name_en": "Black Guard", "name_es": "Guardia Negra", "id": "black-guard",
+      "points": 16, "minimum": 10, "maximum": 0,
+      "armyComposition": { "dark-elves": { "category": "rare" } },
+      "command": [
+        { "name_en": "Master", "points": 14 },
+        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 75 } },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "equipment": [
+        { "name_en": "Halberd, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Stubborn, Hatred", "name_es": "Tozudez, Odio" }
+    },
+    {
+      "name_en": "Reaper Bolt Thrower", "name_es": "Ballesta Segadora", "id": "reaper-bolt-thrower",
+      "points": 100,
+      "armyComposition": { "dark-elves": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Reaper Bolt Thrower", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Hate High Elves", "name_es": "Odio a los Altos Elfos" }
     }
   ],
   "mercenaries": [],
