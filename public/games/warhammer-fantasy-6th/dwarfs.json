@@ -185,57 +185,257 @@
   "heroes": [
     {
       "name_en": "Thane",
+      "name_es": "Señor del Clan",
       "id": "thane",
-      "points": 4,
+      "points": 65,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "points": 0,
+          "magic": {
+            "types": ["banner"],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand weapon",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_es": "Arma a dos manos",
+          "points": 4
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Pistol",
+          "name_es": "Pistola",
+          "points": 5
+        },
+        {
+          "name_en": "Crossbow",
+          "name_es": "Ballesta",
+          "points": 5
+        },
+        {
+          "name_en": "Dwarf Handgun",
+          "name_es": "Arcabuz Enano",
+          "points": 10
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Gromril Armour",
+          "name_es": "Armadura de Gromril",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stone",
+          "name_es": "Piedra del Juramento",
+          "points": 20
+        },
+        {
+          "id": "shield",
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 2
+        }
+      ],
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
         }
       },
-      "minimum": 1,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_es": "Agravio Ancestral, Firmeza, Avance Imparable"
+      }
     },
     {
       "name_en": "Rune Smith",
       "id": "rune-smith",
-      "points": 2,
+      "points": 70,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand weapon",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_es": "Arma a dos manos",
+          "points": 4
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "options": [
+        {
+          "id": "shield",
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 2
+        }
+      ],
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
         }
       },
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Señor de las Runas"
+      }
     },
     {
       "name_en": "Engineer",
+      "name_es": "Maestro Ingeniero",
       "id": "engineer",
-      "points": 14,
+      "points": 70,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand weapon",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_es": "Arma a dos manos",
+          "points": 4
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Pistol",
+          "name_es": "Pistola",
+          "points": 5
+        },
+        {
+          "name_en": "Pair of Pistols",
+          "name_es": "Par de Pistolas",
+          "points": 10
+        },
+        {
+          "name_en": "Dwarf Handgun",
+          "name_es": "Arcabuz Enano",
+          "points": 10
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Gromril Armour",
+          "name_es": "Armadura de Gromril",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman"],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "options": [],
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
         }
       },
-      "ranged": [
-        {
-          "name_en": "Brace Of Pistols",
-          "points": 14,
-          "exclusive": true
-        }
-      ],
-      "minimum": 1,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Artillery Master, Extra Crewman",
+        "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Maestro  Artillero, Artillero adicional"
+      }
     },
     {
       "name_en": "Dragon Slayer",
+      "name_es": "Matadragones",
       "id": "dragon-slayer",
-      "points": 4,
+      "points": 50,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Slayer Axes",
+          "name_es": "Hachas de Matador",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon"],
+          "selected": [],
+          "maxPoints": 75
+        }
+      ],
+      "options": [
+      ],
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
         }
       },
-      "minimum": 1,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner",
+        "name_es": "Agravio Ancestral, Firmeza, Avance imparable, Inmune a Desmoralización, Matador, Solitario."
+      }
     }
   ],
   "core": [
