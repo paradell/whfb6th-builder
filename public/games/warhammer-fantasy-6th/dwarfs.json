@@ -1,42 +1,187 @@
 {
-  "characters": [
+  "characters": [],
+  "lords": [
     {
       "name_en": "Dwarf Lord",
       "id": "dwarf-lord",
-      "points": 6,
+      "points": 145,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand weapon",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_es": "Arma a dos manos",
+          "points": 6
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Pistol",
+          "name_es": "Pistola",
+          "points": 10
+        },
+        {
+          "name_en": "Crossbow",
+          "name_es": "Ballesta",
+          "points": 10
+        },
+        {
+          "name_en": "Dwarf Handgun",
+          "name_es": "Arcabuz Enano",
+          "points": 15
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Gromril Armour",
+          "name_es": "Armadura de Gromril",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman"],
+          "selected": [],
+          "maxPoints": 125
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Stone",
+          "name_es": "Piedra del Juramento",
+          "points": 30
+        },
+        {
+          "id": "shield",
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 3
+        }
+      ],
       "armyComposition": {
         "dwarfs": {
-          "category": "characters"
+          "category": "lords"
         }
       },
-      "minimum": 1,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Sangre Real"
+      }
     },
     {
       "name_en": "Rune Lord",
+      "name_es": "Señor de las Runas",
       "id": "rune-lord",
-      "points": 3,
+      "points": 140,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand weapon",
+          "name_es": "Arma de mano",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        },
+        {
+          "name_en": "Great weapon",
+          "name_es": "Arma a dos manos",
+          "points": 6
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon", "armor", "talisman"],
+          "selected": [],
+          "maxPoints": 150
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Anvil of Doom",
+          "name_es": "Yunque Rúnico",
+          "points": 175,
+          "extra_categories": ["heroes"]
+        },
+        {
+          "id": "shield",
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 3
+        }
+      ],
       "armyComposition": {
         "dwarfs": {
-          "category": "characters"
+          "category": "lords"
         }
       },
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Señor de las Runas"
+      }
     },
     {
       "name_en": "Daemon Slayer",
       "id": "daemon-slayer",
-      "points": 6,
+      "points": 110,
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Slayer Axes",
+          "name_es": "Hachas de Matador",
+          "points": 0,
+          "active": true,
+          "equippedDefault": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items",
+          "types": ["weapon"],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "options": [
+      ],
       "armyComposition": {
         "dwarfs": {
-          "category": "characters"
+          "category": "lords"
         }
       },
-      "minimum": 1,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner",
+        "name_es": "Agravio Ancestral, Firmeza, Avance imparable, Inmune a Desmoralización, Matador, Solitario."
+      }
     }
   ],
-  "lords": [],
   "heroes": [
     {
       "name_en": "Thane",
