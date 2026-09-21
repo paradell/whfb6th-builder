@@ -1318,5 +1318,26 @@
         "type": "artifact-and-skill",
         "name": "cry of war"
     }
-  ]
+  ],
+  "weapon-runes": [
+    {
+    "name_en": "Master Rune of Skalf Blackhammer",
+    "name_es": "Runa Magistral de Skalf Martillonegro",
+    "points": 75,
+    "type": "weapon-rune",
+    "onePerArmy": true,
+    "name": "master rune of skalf blackhammer"
+  }],
+  "armor-runes": [
+  ],
+  "talismanic-runes": [],
+  "banner-runes": [
+    {
+      "name_en": "Errantry Banner",
+      "points": 10,
+      "type": "banner-rune",
+      "name": "errantry banner"
+    }
+  ],
+  "engineering-runes": []
 }

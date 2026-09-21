@@ -3,6 +3,7 @@
   "lords": [
     {
       "name_en": "Dwarf Lord",
+      "name_es": "Señor de los Enanos",
       "id": "dwarf-lord",
       "points": 145,
       "command": [
@@ -54,8 +55,9 @@
       ],
       "items": [
         {
-          "name_en": "Magic Items",
-          "types": ["weapon", "armor", "talisman"],
+          "name_en": "Runes",
+          "name_es": "Runas",
+          "types": ["weapon-runes", "armor-runes", "talisman-runes"],
           "selected": [],
           "maxPoints": 125
         }
@@ -109,10 +111,20 @@
           "points": 6
         }
       ],
+      "armor": [
+        {
+          "name_en": "Gromril Armour",
+          "name_es": "Armadura de Gromril",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
       "items": [
         {
-          "name_en": "Magic Items",
-          "types": ["weapon", "armor", "talisman"],
+          "name_en": "Runes",
+          "name_es": "Runas",
+          "types": ["weapon-runes", "armor-runes", "talisman-runes"],
           "selected": [],
           "maxPoints": 150
         }
@@ -143,6 +155,7 @@
     },
     {
       "name_en": "Daemon Slayer",
+      "name_es": "Matademonios",
       "id": "daemon-slayer",
       "points": 110,
       "command": [
@@ -163,8 +176,9 @@
       ],
       "items": [
         {
-          "name_en": "Magic Items",
-          "types": ["weapon"],
+          "name_en": "Runes",
+          "name_es": "Runas",
+          "types": ["weapon-runes"],
           "selected": [],
           "maxPoints": 100
         }
