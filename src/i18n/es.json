@@ -86,6 +86,7 @@
   "misc.error.noGeneral": "Un general requerido",
   "misc.error.multipleGenerals": "Sólo se admite un general",
   "misc.error.multipleBSBs": "Only one Battle Standard Bearer allowed",
+  "misc.error.sameOptionInArmy": "Todas las unidades deben elegir la misma opción de {option} ({name})",
   "misc.error.tooManyCharacterSlots": "Too many character slots (Lords + Heroes exceed maximum)",
   "misc.error.maxUnits": "{diff} unidades {name} de más",
   "misc.error.maxNamed": "Unidad {name} única ya seleccionada",

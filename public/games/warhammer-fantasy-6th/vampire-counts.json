@@ -20,7 +20,7 @@
       ],
       "options": [
         {
-          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "options": [
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
             { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true },
             { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true },
             { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true },
@@ -71,7 +71,7 @@
       ],
       "options": [
         {
-          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "options": [
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
             { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true },
             { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true },
             { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true },
@@ -158,7 +158,7 @@
       ],
       "options": [
         {
-          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "options": [
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
             { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true },
             { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true },
             { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true },
