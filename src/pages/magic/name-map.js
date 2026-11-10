@@ -149,9 +149,15 @@ export const nameMap = {
   },
   "elven-honours": {
     name_en: "Elven Honours",
+    name_es: "Honores Élficos",
   },
   "elven-honour": {
     name_en: "Elven Honour",
+    name_es: "Honor Élfico",
+  },
+  "elven-honour-mage": {
+    name_en: "Elven Honour (Mages)",
+    name_es: "Honor Élfico (Magos)",
   },
   none: {
     name_en: "None",

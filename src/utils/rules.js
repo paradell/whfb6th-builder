@@ -4455,9 +4455,41 @@ export const rules = {
     characters: { maxSlots: 4 },
     lords: { maxSlots: 1 },
     heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["lothern-sea-guard"],
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["dragon-princes-of-caledor"],
+          max: 1,
+        },
+        {
+          ids: ["swordmasters-of-hoeth"],
+          max: 1,
+        },
+      ],
+    },
+    rare: {
+      maxSlots: 2,
+      units: [
+        {
+          ids: ["phoenix-guard"],
+          max: 1,
+        },
+        {
+          ids: ["white-lions"],
+          max: 1,
+        },
+      ],
+    },
     mercenaries: { maxSlots: 0 },
     allies: { maxSlots: 0 },
   },

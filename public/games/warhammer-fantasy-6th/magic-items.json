@@ -2152,5 +2152,433 @@
       "type": "strigoi-power",
       "name": "iron sinews"
     }
+  ],
+  "high-elves": [
+    {
+      "name_en": "Blade of Leaping Gold",
+      "name_es": "Hoja de Oro Saltarina",
+      "points": 60,
+      "type": "weapon",
+      "name": "blade of leaping gold"
+    },
+    {
+      "name_en": "Bow of the Seafarer",
+      "name_es": "Arco del Navegante",
+      "points": 60,
+      "type": "weapon",
+      "name": "bow of the seafarer"
+    },
+    {
+      "name_en": "Sword of Hoeth",
+      "name_es": "Espada de Hoeth",
+      "points": 60,
+      "type": "weapon",
+      "name": "sword of hoeth"
+    },
+    {
+      "name_en": "Blade of Darting Steel",
+      "name_es": "Hoja de Acero Veloz",
+      "points": 45,
+      "type": "weapon",
+      "name": "blade of darting steel"
+    },
+    {
+      "name_en": "Reaver Bow",
+      "name_es": "Arco del Jinete",
+      "points": 40,
+      "type": "weapon",
+      "name": "reaver bow"
+    },
+    {
+      "name_en": "Blade of Sea Gold",
+      "name_es": "Hoja de Oro Marino",
+      "points": 40,
+      "type": "weapon",
+      "name": "blade of sea gold"
+    },
+    {
+      "name_en": "Foe Bane",
+      "name_es": "Azote de Enemigos",
+      "points": 25,
+      "type": "weapon",
+      "name": "foe bane"
+    },
+    {
+      "name_en": "Sword of Striking",
+      "name_es": "Espada Veloz",
+      "points": 25,
+      "type": "weapon",
+      "name": "sword of striking"
+    },
+    {
+      "name_en": "Sword of Battle",
+      "name_es": "Espada de Batalla",
+      "points": 20,
+      "type": "weapon",
+      "name": "sword of battle"
+    },
+    {
+      "name_en": "Sword of Might",
+      "name_es": "Espada de Poder",
+      "points": 15,
+      "type": "weapon",
+      "name": "sword of might"
+    },
+    {
+      "name_en": "Biting Blade",
+      "name_es": "Mordisco de Acero",
+      "points": 10,
+      "type": "weapon",
+      "name": "biting blade"
+    },
+    {
+      "name_en": "Armour of Protection",
+      "name_es": "Armadura de Protección",
+      "points": 40,
+      "type": "armor",
+      "name": "armour of protection"
+    },
+    {
+      "name_en": "Golden Shield",
+      "name_es": "Escudo Dorado",
+      "points": 35,
+      "type": "armor",
+      "name": "golden shield"
+    },
+    {
+      "name_en": "Armour of Stars",
+      "name_es": "Armadura de las Estrellas",
+      "points": 30,
+      "type": "armor",
+      "name": "armour of stars"
+    },
+    {
+      "name_en": "Armour of Heroes",
+      "name_es": "Armadura de los Héroes",
+      "points": 25,
+      "type": "armor",
+      "name": "armour of heroes"
+    },
+    {
+      "name_en": "Shadow Armour",
+      "name_es": "Armadura Sombría",
+      "points": 25,
+      "type": "armor",
+      "name": "shadow armour"
+    },
+    {
+      "name_en": "Helm of Fortune",
+      "name_es": "Yelmo de la Fortuna",
+      "points": 25,
+      "type": "armor",
+      "name": "helm of fortune"
+    },
+    {
+      "name_en": "Dragonscale Shield",
+      "name_es": "Escudo de Escamas de Dragón",
+      "points": 20,
+      "type": "armor",
+      "name": "dragonscale shield"
+    },
+    {
+      "name_en": "Enchanted Shield",
+      "name_es": "Escudo Hechizado",
+      "points": 10,
+      "type": "armor",
+      "name": "enchanted shield"
+    },
+    {
+      "name_en": "Vambraces of Defence",
+      "name_es": "Brazales de Defensa",
+      "points": 55,
+      "type": "talisman",
+      "name": "vambraces of defence"
+    },
+    {
+      "name_en": "Golden Crown of Atrazar",
+      "name_es": "Corona Dorada de Atrazar",
+      "points": 40,
+      "type": "talisman",
+      "name": "golden crown of atrazar"
+    },
+    {
+      "name_en": "Loremaster's Cloak",
+      "name_es": "Capa del Maestro del Saber",
+      "points": 40,
+      "type": "talisman",
+      "name": "loremaster's cloak"
+    },
+    {
+      "name_en": "Talisman of Saphery",
+      "name_es": "Talismán de Saphery",
+      "points": 35,
+      "type": "talisman",
+      "name": "talisman of saphery"
+    },
+    {
+      "name_en": "Sacred Incense",
+      "name_es": "Incienso Sagrado",
+      "points": 30,
+      "type": "talisman",
+      "name": "sacred incense"
+    },
+    {
+      "name_en": "Guardian Phoenix",
+      "name_es": "Fénix Guardián",
+      "points": 25,
+      "type": "talisman",
+      "name": "guardian phoenix"
+    },
+    {
+      "name_en": "Amulet of Fire",
+      "name_es": "Amuleto de Fuego",
+      "points": 20,
+      "type": "talisman",
+      "name": "amulet of fire"
+    },
+    {
+      "name_en": "Talisman of Protection",
+      "name_es": "Talismán de Protección",
+      "points": 10,
+      "type": "talisman",
+      "name": "talisman of protection"
+    },
+    {
+      "name_en": "Book of Hoeth",
+      "name_es": "Libro de Hoeth",
+      "points": 100,
+      "type": "arcane-item",
+      "name": "book of hoeth"
+    },
+    {
+      "name_en": "Staff of Sorcery",
+      "name_es": "Báculo del Hechicero",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "staff of sorcery"
+    },
+    {
+      "name_en": "Annulian Crystal",
+      "name_es": "Cristal Annuliano",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "annulian crystal"
+    },
+    {
+      "name_en": "Sigil of Asuryan",
+      "name_es": "Sello de Asuryan",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "sigil of asuryan"
+    },
+    {
+      "name_en": "Starwood Staff",
+      "name_es": "Báculo de Madera Estelar",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "starwood staff"
+    },
+    {
+      "name_en": "Dispel Scroll",
+      "name_es": "Pergamino de Dispersión",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "dispel scroll",
+      "stackable": true
+    },
+    {
+      "name_en": "Power Stone",
+      "name_es": "Piedra de Energía",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "power stone",
+      "stackable": true
+    },
+    {
+      "name_en": "Staff of Solidity",
+      "name_es": "Báculo de Solidez",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "staff of solidity"
+    },
+    {
+      "name_en": "Jewel of the Dusk",
+      "name_es": "Joya del Crepúsculo",
+      "points": 15,
+      "type": "arcane-item",
+      "name": "jewel of the dusk"
+    },
+    {
+      "name_en": "Silver Wand",
+      "name_es": "Varita de Plata",
+      "points": 10,
+      "type": "arcane-item",
+      "name": "silver wand"
+    },
+    {
+      "name_en": "Null Stone",
+      "name_es": "Piedra Nula",
+      "points": 80,
+      "type": "enchanted-item",
+      "name": "null stone"
+    },
+    {
+      "name_en": "Healing Potion",
+      "name_es": "Poción Curativa",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "healing potion"
+    },
+    {
+      "name_en": "Radiant Gem of Hoeth",
+      "name_es": "Gema Radiante de Hoeth",
+      "points": 45,
+      "type": "enchanted-item",
+      "name": "radiant gem of hoeth"
+    },
+    {
+      "name_en": "Cloak of Beards",
+      "name_es": "Capa de Barbas",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "cloak of beards"
+    },
+    {
+      "name_en": "Ring of Corin",
+      "name_es": "Anillo de Corin",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "ring of corin"
+    },
+    {
+      "name_en": "Ring of Fury",
+      "name_es": "Anillo de Furia",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "ring of fury"
+    },
+    {
+      "name_en": "Blessed Tome",
+      "name_es": "Tomo Bendito",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "blessed tome"
+    },
+    {
+      "name_en": "Amulet of the Purifying Flame",
+      "name_es": "Amuleto de la Llama Purificadora",
+      "points": 15,
+      "type": "enchanted-item",
+      "name": "amulet of the purifying flame"
+    },
+    {
+      "name_en": "Battle Banner",
+      "name_es": "Estandarte de Batalla",
+      "points": 80,
+      "type": "banner",
+      "name": "battle banner"
+    },
+    {
+      "name_en": "Banner of the World Dragon",
+      "name_es": "Estandarte del Dragón del Mundo",
+      "points": 60,
+      "type": "banner",
+      "name": "banner of the world dragon"
+    },
+    {
+      "name_en": "Banner of Sorcery",
+      "name_es": "Estandarte de Hechicería",
+      "points": 50,
+      "type": "banner",
+      "name": "banner of sorcery"
+    },
+    {
+      "name_en": "Standard of Balance",
+      "name_es": "Estandarte del Equilibrio",
+      "points": 45,
+      "type": "banner",
+      "name": "standard of balance"
+    },
+    {
+      "name_en": "Banner of Arcane Protection",
+      "name_es": "Estandarte de Protección Arcana",
+      "points": 40,
+      "type": "banner",
+      "name": "banner of arcane protection"
+    },
+    {
+      "name_en": "Lion Standard",
+      "name_es": "Estandarte del León",
+      "points": 25,
+      "type": "banner",
+      "name": "lion standard"
+    },
+    {
+      "name_en": "War Banner",
+      "name_es": "Estandarte de Guerra",
+      "points": 20,
+      "type": "banner",
+      "name": "war banner"
+    },
+    {
+      "name_en": "Banner of Ellyrion",
+      "name_es": "Estandarte de Ellyrion",
+      "points": 15,
+      "type": "banner",
+      "name": "banner of ellyrion"
+    }
+  ],
+  "elven-honours": [
+    {
+      "name_en": "Pure of Heart",
+      "name_es": "Puro de Corazón",
+      "points": 0,
+      "type": "elven-honour",
+      "name": "pure of heart",
+      "onePerArmy": true
+    },
+    {
+      "name_en": "Lion Guard",
+      "name_es": "Guardia del León",
+      "points": 45,
+      "type": "elven-honour",
+      "name": "lion guard"
+    },
+    {
+      "name_en": "Swordmaster",
+      "name_es": "Maestro de la Espada",
+      "points": 40,
+      "type": "elven-honour",
+      "name": "swordmaster"
+    },
+    {
+      "name_en": "Loremaster",
+      "name_es": "Maestro del Saber",
+      "points": 40,
+      "type": "elven-honour",
+      "name": "loremaster"
+    },
+    {
+      "name_en": "Pure of Heart",
+      "name_es": "Puro de Corazón",
+      "points": 0,
+      "type": "elven-honour-mage",
+      "name": "pure of heart",
+      "onePerArmy": true
+    },
+    {
+      "name_en": "Seer",
+      "name_es": "Vidente",
+      "points": 30,
+      "type": "elven-honour-mage",
+      "name": "seer"
+    },
+    {
+      "name_en": "Channeler",
+      "name_es": "Canalizador",
+      "points": 10,
+      "type": "elven-honour-mage",
+      "name": "channeler"
+    }
   ]
 }
