@@ -143,6 +143,8 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       "requiredMagicItem": String, // Name of a required magic item
       "requiredOption": String | [String], // Optional. Ids of options or sub-options; the entry is only shown and counted when one of them is active. Also works on "equipment", "melee", "ranged", "armor", "mounts" and "items" entries (e.g. Vampire Counts bloodlines)
       "sameInArmy": Boolean, // Optional. For options with sub-options: every unit in the list with this option must choose the same sub-option (e.g. Vampire Counts bloodlines)
+      "maxActive": Number, // Optional. For options with non-exclusive sub-options: maximum number of sub-options that can be selected at the same time (e.g. Saurus Oldblood Blessed Spawnings)
+      "categoryByActiveCount": [String], // Optional. For options with sub-options: category the unit moves to depending on how many sub-options are active (index = number of active sub-options, the last entry is used for higher counts). E.g. ["core", "special", "rare"] for Lizardmen Saurus Warriors with Blessed Spawnings
       "notes": { // Optional
         "name_en": String,
         "name_es": String

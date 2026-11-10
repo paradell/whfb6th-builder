@@ -56,7 +56,7 @@
       "options": [
         { "name_en": "Shield", "points": 3 },
         {
-          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Up to three" }, "options": [
+          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "maxActive": 3, "options": [
             { "name_en": "Blessed Mark of the Old Ones", "id": "blessed-mark-of-the-old-ones", "points": 35, "notes": { "name_en": "One character per army" } },
             { "name_en": "Blessed Spawning of Chotec", "id": "spawning-of-chotec", "points": 15 },
             { "name_en": "Blessed Spawning of Huanchi", "id": "spawning-of-huanchi", "points": 20 },
@@ -151,7 +151,7 @@
       "options": [
         { "name_en": "Shield", "points": 2 },
         {
-          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Up to two" }, "options": [
+          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "maxActive": 2, "options": [
             { "name_en": "Blessed Mark of the Old Ones", "id": "blessed-mark-of-the-old-ones", "points": 35, "notes": { "name_en": "One character per army" } },
             { "name_en": "Blessed Spawning of Chotec", "id": "spawning-of-chotec", "points": 15 },
             { "name_en": "Blessed Spawning of Huanchi", "id": "spawning-of-huanchi", "points": 20 },
@@ -273,7 +273,19 @@
         { "name_en": "Spears", "points": 2, "perModel": true }
       ],
       "armor": [],
-      "options": [],
+      "options": [
+        {
+          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "maxActive": 2, "categoryByActiveCount": ["core", "special", "rare"], "notes": { "name_en": "One spawning: Special choice. Two spawnings: Rare choice" }, "options": [
+            { "name_en": "Blessed Spawning of Chotec", "points": 20 },
+            { "name_en": "Blessed Spawning of Huanchi", "points": 25 },
+            { "name_en": "Blessed Spawning of Quetzl", "points": 30 },
+            { "name_en": "Blessed Spawning of Sotek", "points": 30 },
+            { "name_en": "Blessed Spawning of Tepok", "points": 30 },
+            { "name_en": "Blessed Spawning of Tlazcotl", "points": 20 },
+            { "name_en": "Blessed Spawning of Tzunki", "points": 10 }
+          ]
+        }
+      ],
       "mounts": [],
       "specialRules": { "name_en": "Cold Blooded, Scaly Skin (6+), Predatory Fighters" }
     },
@@ -340,42 +352,6 @@
     }
   ],
   "special": [
-    {
-      "name_en": "Saurus Warriors (one Blessed Spawning)",
-      "id": "saurus-warriors-one-spawning",
-      "points": 12,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": { "lizardmen": { "category": "special" } },
-      "command": [
-        { "name_en": "Spawning Champion", "points": 12 },
-        { "name_en": "Standard Bearer", "points": 12 },
-        { "name_en": "Musician", "points": 6 }
-      ],
-      "equipment": [
-        { "name_en": "Shields", "points": 0, "perModel": true, "active": true }
-      ],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Spears", "points": 2, "perModel": true }
-      ],
-      "armor": [],
-      "options": [
-        {
-          "name_en": "Blessed Spawning", "points": 0, "active": true, "alwaysActive": true, "options": [
-            { "name_en": "Blessed Spawning of Chotec", "points": 20, "exclusive": true, "active": true },
-            { "name_en": "Blessed Spawning of Huanchi", "points": 25, "exclusive": true },
-            { "name_en": "Blessed Spawning of Quetzl", "points": 30, "exclusive": true },
-            { "name_en": "Blessed Spawning of Sotek", "points": 30, "exclusive": true },
-            { "name_en": "Blessed Spawning of Tepok", "points": 30, "exclusive": true },
-            { "name_en": "Blessed Spawning of Tlazcotl", "points": 20, "exclusive": true },
-            { "name_en": "Blessed Spawning of Tzunki", "points": 10, "exclusive": true }
-          ]
-        }
-      ],
-      "mounts": [],
-      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (6+), Predatory Fighters" }
-    },
     {
       "name_en": "Cold One Riders",
       "id": "cold-one-riders",
@@ -459,42 +435,6 @@
     }
   ],
   "rare": [
-    {
-      "name_en": "Saurus Warriors (two Blessed Spawnings)",
-      "id": "saurus-warriors-two-spawnings",
-      "points": 12,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": { "lizardmen": { "category": "rare" } },
-      "command": [
-        { "name_en": "Spawning Champion", "points": 12 },
-        { "name_en": "Standard Bearer", "points": 12 },
-        { "name_en": "Musician", "points": 6 }
-      ],
-      "equipment": [
-        { "name_en": "Shields", "points": 0, "perModel": true, "active": true }
-      ],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Spears", "points": 2, "perModel": true }
-      ],
-      "armor": [],
-      "options": [
-        {
-          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Choose two" }, "options": [
-            { "name_en": "Blessed Spawning of Chotec", "points": 20 },
-            { "name_en": "Blessed Spawning of Huanchi", "points": 25 },
-            { "name_en": "Blessed Spawning of Quetzl", "points": 30 },
-            { "name_en": "Blessed Spawning of Sotek", "points": 30 },
-            { "name_en": "Blessed Spawning of Tepok", "points": 30 },
-            { "name_en": "Blessed Spawning of Tlazcotl", "points": 20 },
-            { "name_en": "Blessed Spawning of Tzunki", "points": 10 }
-          ]
-        }
-      ],
-      "mounts": [],
-      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (6+), Predatory Fighters" }
-    },
     {
       "name_en": "Stegadon",
       "id": "stegadon",
