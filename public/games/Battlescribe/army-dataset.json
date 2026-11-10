@@ -1,0 +1,789 @@
+{
+  "characters": [
+    {
+      "name_en": "Dark Elf Highborn",
+      "id": "dark-elf-highborn",
+      "points": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        }
+      },
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "points": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Halberd",
+          "points": 6
+        },
+        {
+          "name_en": "Great Weapon",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Lance",
+          "points": 6
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Repeater Crossbow",
+          "points": 15,
+          "exclusive": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "points": 3,
+          "exclusive": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "points": 6,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Light Amour",
+          "points": 3,
+          "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Sea Dragon Cloak",
+          "points": 9,
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items & Runes",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "High Soceress",
+      "id": "high-soceress",
+      "points": 40,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "characters"
+        }
+      },
+      "options": [
+        {
+          "name_en": "Upgrade to Level 4",
+          "points": 40,
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items & Runes",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 100
+        }
+      ],
+      "maximum": 1
+    }
+  ],
+  "lords": [],
+  "heroes": [
+    {
+      "name_en": "Dark Elf Noble",
+      "id": "dark-elf-noble",
+      "points": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "heroes"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Battle Standard Bearer",
+          "points": 25,
+          "exclusive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "points": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "points": 4,
+          "exclusive": true
+        },
+        {
+          "name_en": "Halberd",
+          "points": 4
+        },
+        {
+          "name_en": "Great Weapon",
+          "points": 4,
+          "exclusive": true
+        },
+        {
+          "name_en": "Lance",
+          "points": 4
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Repeater Crossbow",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "points": 2,
+          "exclusive": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "points": 4,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Light Amour",
+          "points": 2,
+          "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Sea Dragon Cloak",
+          "points": 6,
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items & Runes",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "Sorceress",
+      "id": "sorceress",
+      "points": 40,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "heroes"
+        }
+      },
+      "options": [
+        {
+          "name_en": "Level 2",
+          "points": 40,
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items & Runes",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "maximum": 1
+    },
+    {
+      "name_en": "Beastmaster",
+      "id": "beastmaster",
+      "points": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "heroes"
+        }
+      },
+      "melee": [
+        {
+          "name_en": "Hand Weapon (Whip)",
+          "points": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "points": 4,
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items & Runes",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "Assassin",
+      "id": "assassin",
+      "points": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "heroes"
+        }
+      },
+      "melee": [
+        {
+          "name_en": "Hand Weapon ",
+          "points": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "points": 4,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Manbane",
+          "points": 25,
+          "exclusive": true
+        },
+        {
+          "name_en": "Black Lotus",
+          "points": 25,
+          "exclusive": true
+        },
+        {
+          "name_en": "Dark Venom",
+          "points": 10,
+          "exclusive": true
+        },
+        {
+          "name_en": "Dance of Doom",
+          "points": 30,
+          "exclusive": true
+        },
+        {
+          "name_en": "Touch of Death",
+          "points": 30,
+          "exclusive": true
+        },
+        {
+          "name_en": "Hand of Khaine",
+          "points": 25,
+          "exclusive": true
+        },
+        {
+          "name_en": "Cry of War",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items & Runes",
+          "types": [
+            "weapon",
+            "armor",
+            "talisman",
+            "enchanted-item",
+            "arcane-item"
+          ],
+          "selected": [],
+          "maxPoints": 50
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Dark Elf Warriors",
+      "id": "dark-elf-warriors",
+      "points": 7,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 10,
+          "exclusive": true
+        },
+        {
+          "name_en": "Lordling",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Spears",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Repeater Crossbow",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shield",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Corsairs",
+      "id": "corsairs",
+      "points": 10,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 10,
+          "exclusive": true
+        },
+        {
+          "name_en": "Reaver",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "Sea Dragon Coat",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Dark Riders",
+      "id": "dark-riders",
+      "points": 18,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 7,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 14,
+          "exclusive": true
+        },
+        {
+          "name_en": "Herald",
+          "points": 14,
+          "exclusive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Spears",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Repeater Crossbow",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Cold One Chariots",
+      "id": "cold-one-chariots",
+      "points": 10,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
+      "melee": [
+        {
+          "name_en": "Spears",
+          "points": 2,
+          "exclusive": true
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Repeater Crossbow",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "minimum": 1,
+      "maximum": 2
+    },
+    {
+      "name_en": "Shades",
+      "id": "shades",
+      "points": 14,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
+      "ranged": [
+        {
+          "name_en": "Repeater Crossbow",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Handweapon",
+          "points": 0,
+          "exclusive": true
+        },
+        {
+          "name_en": "Bloodshade",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 5,
+      "maximum": 15
+    },
+    {
+      "name_en": "Witch Elves Of Kaine",
+      "id": "witch-elves-of-kaine",
+      "points": 13,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Two Poisoned Hand Weapons",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Hag",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 1
+    },
+    {
+      "name_en": "Cold One Knights",
+      "id": "cold-one-knights",
+      "points": 29,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 9,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 18,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Dread Knight",
+          "points": 18,
+          "exclusive": true
+        }
+      ],
+      "minimum": 5,
+      "maximum": 0
+    },
+    {
+      "name_en": "Executioners",
+      "id": "executioners",
+      "points": 11,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        },
+        {
+          "name_en": "Draich-Master",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Harpies",
+      "id": "harpies",
+      "points": 13,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "special"
+        }
+      },
+      "melee": [
+        {
+          "name_en": "Claws (counts as two hand weapons)",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "minimum": 5,
+      "maximum": 1
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "War Hydra",
+      "id": "war-hydra",
+      "points": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Beastmaster Apprentices",
+          "points": 0
+        }
+      ],
+      "options": [
+        {
+          "name_en": "War Hydra",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "Cauldron Of Blood",
+      "id": "cauldron-of-blood",
+      "points": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
+      "options": [
+        {
+          "name_en": "Witch Elves",
+          "points": 0
+        },
+        {
+          "name_en": "Hag",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "minimum": 2,
+      "maximum": 1
+    },
+    {
+      "name_en": "Black Guard",
+      "id": "black-guard",
+      "points": 16,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 7,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 14,
+          "exclusive": true
+        },
+        {
+          "name_en": "Master",
+          "points": 14,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Reaper Bolt Thrower",
+      "id": "reaper-bolt-thrower",
+      "points": 0,
+      "armyComposition": {
+        "dark-elves": {
+          "category": "rare"
+        }
+      },
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "points": 0
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Crew",
+          "points": 0
+        },
+        {
+          "name_en": "Reaper",
+          "points": 0
+        }
+      ],
+      "minimum": 1,
+      "maximum": 2
+    }
+  ],
+  "mercenaries": [],
+  "allies": []
+}

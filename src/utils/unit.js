@@ -100,6 +100,9 @@ export const getAllOptions = (
   }
   const allEquipment = equipment // TODO
     ? equipment
+        .filter(({ requiredOption }) =>
+          hasRequiredOption({ options }, requiredOption),
+        )
         .filter(
           ({ active, equippedDefault, requiredMagicItem }) =>
             (active && !requiredMagicItem) ||
@@ -112,6 +115,9 @@ export const getAllOptions = (
     : [];
   const allMelee = melee
       ? melee
+          .filter(({ requiredOption }) =>
+            hasRequiredOption({ options }, requiredOption),
+          )
           .filter(
               ({ active, equippedDefault, requiredMagicItem }) =>
                   (active && !requiredMagicItem) ||
@@ -124,6 +130,9 @@ export const getAllOptions = (
       : [];
   const allRanged = ranged
       ? ranged
+          .filter(({ requiredOption }) =>
+            hasRequiredOption({ options }, requiredOption),
+          )
           .filter(
               ({ active, equippedDefault, requiredMagicItem }) =>
                   (active && !requiredMagicItem) ||
@@ -136,6 +145,9 @@ export const getAllOptions = (
       : [];
   const allArmor = armor
     ? armor
+        .filter(({ requiredOption }) =>
+          hasRequiredOption({ options }, requiredOption),
+        )
         .filter(
           ({ active, requiredMagicItem }) =>
             (active && !requiredMagicItem) ||
@@ -156,8 +168,12 @@ export const getAllOptions = (
         options: subOptions,
         stackableCount,
         requiredMagicItem,
+        requiredOption,
         ...entry
       }) => {
+        if (!hasRequiredOption({ options }, requiredOption)) {
+          return;
+        }
         if (
           (alwaysActive && unitArmyComposition === armyComposition) ||
           (active && !requiredMagicItem) ||
@@ -192,6 +208,9 @@ export const getAllOptions = (
 
   if (mounts) {
     mounts
+      .filter(({ requiredOption }) =>
+        hasRequiredOption({ options }, requiredOption),
+      )
       .filter(
         ({ active, equippedDefault, requiredMagicItem }) =>
           (active && !requiredMagicItem) ||
@@ -224,7 +243,11 @@ export const getAllOptions = (
 
   const allItems = [];
   if (items?.length) {
-    items.forEach((item) => {
+    items
+      .filter(({ requiredOption }) =>
+        hasRequiredOption({ options }, requiredOption),
+      )
+      .forEach((item) => {
       (item.selected || []).forEach((selectedItem) => {
         allItems.push(
           selectedItem.amount > 1
@@ -486,6 +509,82 @@ export const findAllOptions = (
  * Returns true if a unit is equipped with given itemName (not case sensitive),
  * false otherwise.
  */
+/**
+ * Checks if the unit has an active option, or sub-option, with one of the given ids.
+ * Used by entries with "requiredOption", e.g. equipment only available to a bloodline.
+ *
+ * @param {object} unit
+ * @param {string|string[]} optionIds
+ * @returns {boolean}
+ */
+export const unitHasOption = (unit, optionIds) => {
+  const ids = [].concat(optionIds);
+
+  return Boolean(
+    unit.options?.some(
+      (option) =>
+        (option.active && ids.includes(option.id)) ||
+        option.options?.some(
+          (subOption) => subOption.active && ids.includes(subOption.id),
+        ),
+    ),
+  );
+};
+
+export const hasRequiredOption = (unit, requiredOption) =>
+  !requiredOption || unitHasOption(unit, requiredOption);
+
+/**
+ * After the unit options change, deselects the entries whose "requiredOption" is no
+ * longer active, so hidden equipment, mounts or magic items don't stay in the list.
+ * Always active entries that become available again are reactivated.
+ *
+ * @param {object} unit The unit with its new options
+ * @returns {object} The changed unit fields, to be passed to editUnit
+ */
+export const getRequiredOptionCleanup = (unit) => {
+  const isAvailable = ({ requiredOption }) =>
+    hasRequiredOption(unit, requiredOption);
+  const updateActive = (entries) =>
+    entries?.map((entry) => {
+      if (!entry.requiredOption) {
+        return entry;
+      }
+
+      return {
+        ...entry,
+        active:
+          isAvailable(entry) && Boolean(entry.active || entry.alwaysActive),
+      };
+    });
+  let mounts = unit.mounts;
+
+  if (mounts?.some((mount) => mount.active && !isAvailable(mount))) {
+    const fallbackMount = mounts.find(isAvailable);
+
+    mounts = mounts.map((mount) => ({
+      ...mount,
+      active: mount === fallbackMount,
+      options:
+        mount === fallbackMount
+          ? mount.options
+          : mount.options?.map((option) => ({ ...option, active: false })),
+    }));
+  }
+
+  return {
+    options: updateActive(unit.options),
+    equipment: updateActive(unit.equipment),
+    melee: updateActive(unit.melee),
+    ranged: updateActive(unit.ranged),
+    armor: updateActive(unit.armor),
+    mounts,
+    items: unit.items?.map((item) =>
+      isAvailable(item) ? item : { ...item, selected: [] },
+    ),
+  };
+};
+
 export const unitHasItem = (unit, itemName) => {
   if (unit.items) {
     for (const itemCategory of unit.items) {

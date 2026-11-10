@@ -1,0 +1,475 @@
+{
+  "characters": [
+    {
+      "name_en": "Dwarf Lord",
+      "name_es": "Señor de los Enanos",
+      "id": "dwarf-lord",
+      "points": 6,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "characters"
+        }
+      },
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "Rune Lord",
+      "id": "rune-lord",
+      "points": 3,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "characters"
+        }
+      },
+      "maximum": 1
+    },
+    {
+      "name_en": "Daemon Slayer",
+      "id": "daemon-slayer",
+      "points": 6,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "characters"
+        }
+      },
+      "minimum": 1,
+      "maximum": 1
+    }
+  ],
+  "lords": [],
+  "heroes": [
+    {
+      "name_en": "Thane",
+      "id": "thane",
+      "points": 4,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "heroes"
+        }
+      },
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "Rune Smith",
+      "id": "rune-smith",
+      "points": 2,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "heroes"
+        }
+      },
+      "maximum": 1
+    },
+    {
+      "name_en": "Engineer",
+      "id": "engineer",
+      "points": 14,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "heroes"
+        }
+      },
+      "ranged": [
+        {
+          "name_en": "Brace Of Pistols",
+          "points": 14,
+          "exclusive": true
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "Dragon Slayer",
+      "id": "dragon-slayer",
+      "points": 4,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "heroes"
+        }
+      },
+      "minimum": 1,
+      "maximum": 1
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Warriors",
+      "id": "warriors",
+      "points": 7,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 10,
+          "exclusive": true
+        },
+        {
+          "name_en": "Veteran",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Crossbowmen",
+      "id": "crossbowmen",
+      "points": 12,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 10,
+          "exclusive": true
+        },
+        {
+          "name_en": "Veteran",
+          "points": 10,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Thunderers",
+      "id": "thunderers",
+      "points": 14,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 5,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 10,
+          "exclusive": true
+        },
+        {
+          "name_en": "Veteran",
+          "points": 2,
+          "exclusive": true
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Brace of Pistols",
+          "points": 2,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Miners",
+      "id": "miners",
+      "points": 12,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Prospector",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 1
+    },
+    {
+      "name_en": "Rangers",
+      "id": "rangers",
+      "points": 12,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        },
+        {
+          "name_en": "Veteran",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 1
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Hammerers",
+      "id": "hammerers",
+      "points": 14,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Gate Keeper",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 1
+    },
+    {
+      "name_en": "Longbeards",
+      "id": "longbeards",
+      "points": 14,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Greatbeard",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Ironbreakers",
+      "id": "ironbreakers",
+      "points": 13,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Ironbeard",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "minimum": 10,
+      "maximum": 0
+    },
+    {
+      "name_en": "Slayers",
+      "id": "slayers",
+      "points": 6,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Musician",
+          "points": 6,
+          "exclusive": true
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 12,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Giant Slayer",
+          "points": 26
+        },
+        {
+          "name_en": "Troll Slayer",
+          "points": 11
+        }
+      ],
+      "minimum": 10,
+      "maximum": 1
+    },
+    {
+      "name_en": "Cannon",
+      "id": "cannon",
+      "points": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "special"
+        }
+      },
+      "minimum": 3,
+      "maximum": 3
+    },
+    {
+      "name_en": "Bolt Throwers",
+      "id": "bolt-throwers",
+      "points": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "special"
+        }
+      },
+      "minimum": 1,
+      "maximum": 2
+    },
+    {
+      "name_en": "Stone Thrower",
+      "id": "stone-thrower",
+      "points": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "special"
+        }
+      },
+      "minimum": 3,
+      "maximum": 3
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Organ Gun",
+      "id": "organ-gun",
+      "points": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "rare"
+        }
+      },
+      "minimum": 3,
+      "maximum": 3
+    },
+    {
+      "name_en": "Gyrocoptor",
+      "id": "gyrocoptor",
+      "points": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "rare"
+        }
+      },
+      "armor": [
+        {
+          "name_en": "Armour Save:4+",
+          "points": 0,
+          "exclusive": true
+        }
+      ],
+      "minimum": 1,
+      "maximum": 1
+    },
+    {
+      "name_en": "Flame Cannon",
+      "id": "flame-cannon",
+      "points": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "rare"
+        }
+      },
+      "minimum": 3,
+      "maximum": 3
+    },
+    {
+      "name_en": "Dogs Of War",
+      "id": "dogs-of-war",
+      "points": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "rare"
+        }
+      }
+    }
+  ],
+  "mercenaries": [],
+  "allies": []
+}

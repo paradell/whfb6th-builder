@@ -36,6 +36,8 @@ import {
   getUnitName,
   getUnitOptionNotes,
   unitHasItem,
+  hasRequiredOption,
+  getRequiredOptionCleanup,
   isWizard,
 } from "../../utils/unit";
 import {getGameSystems, getCustomDatasetData, isOfficialSystem} from "../../utils/game-systems";
@@ -405,6 +407,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         type,
         unitId,
         options: newOptions,
+        ...getRequiredOptionCleanup({ ...unit, options: newOptions }),
       }),
     );
   };
@@ -1067,7 +1070,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               )}
           </>
         )}
-        {unit.equipment && unit.equipment.length > 0 && (
+        {unit.equipment?.some(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        ) && (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.equipment" />
@@ -1078,8 +1083,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   !unitEquipment.armyComposition ||
                   unitEquipment.armyComposition.includes(unitArmyComposition),
               )
-              .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+              .filter(({ requiredMagicItem, requiredOption }) =>
+                (requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true) &&
+                hasRequiredOption(unit, requiredOption),
               )
               .map(
                 ({
@@ -1125,7 +1131,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               )}
           </>
         )}
-        {unit.melee && unit.melee.length > 0 && (
+        {unit.melee?.some(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        ) && (
             <>
               <h2 className="unit__subline">
                 <FormattedMessage id="unit.melee" />
@@ -1136,8 +1144,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           !unitMelee.armyComposition ||
                           unitMelee.armyComposition.includes(unitArmyComposition),
                   )
-                  .filter(({ requiredMagicItem }) =>
-                      requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+                  .filter(({ requiredMagicItem, requiredOption }) =>
+                      (requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true) &&
+                      hasRequiredOption(unit, requiredOption),
                   )
                   .map(
                       ({
@@ -1183,7 +1192,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   )}
             </>
         )}
-        {unit.ranged && unit.ranged.length > 0 && (
+        {unit.ranged?.some(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        ) && (
             <>
               <h2 className="unit__subline">
                 <FormattedMessage id="unit.ranged" />
@@ -1194,8 +1205,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           !unitranged.armyComposition ||
                           unitranged.armyComposition.includes(unitArmyComposition),
                   )
-                  .filter(({ requiredMagicItem }) =>
-                      requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+                  .filter(({ requiredMagicItem, requiredOption }) =>
+                      (requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true) &&
+                      hasRequiredOption(unit, requiredOption),
                   )
                   .map(
                       ({
@@ -1241,7 +1253,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   )}
             </>
         )}
-        {unit.armor && unit.armor.length > 0 && (
+        {unit.armor?.some(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        ) && (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.armor" />
@@ -1252,8 +1266,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   !unitArmor.armyComposition ||
                   unitArmor.armyComposition.includes(unitArmyComposition),
               )
-              .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+              .filter(({ requiredMagicItem, requiredOption }) =>
+                (requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true) &&
+                hasRequiredOption(unit, requiredOption),
               )
               .map(
                 ({
@@ -1307,7 +1322,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               )}
           </>
         )}
-        {unit.options && unit.options.length > 0 && (
+        {unit.options?.some(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        ) && (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.options" />
@@ -1318,8 +1335,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   !unitOption.armyComposition ||
                   unitOption.armyComposition.includes(unitArmyComposition),
               )
-              .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+              .filter(({ requiredMagicItem, requiredOption }) =>
+                (requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true) &&
+                hasRequiredOption(unit, requiredOption),
               )
               .map(
                 ({
@@ -2208,7 +2226,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               ))}
           </>
         )}
-        {unit.mounts && unit.mounts.length > 0 && (
+        {unit.mounts?.some(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        ) && (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.mount" />
@@ -2219,8 +2239,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   !armyComposition ||
                   armyComposition.includes(unitArmyComposition),
               )
-              .filter(({ requiredMagicItem }) =>
-                requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true,
+              .filter(({ requiredMagicItem, requiredOption }) =>
+                (requiredMagicItem ? unitHasItem(unit, requiredMagicItem) : true) &&
+                hasRequiredOption(unit, requiredOption),
               )
               .map(
                 ({
@@ -2424,6 +2445,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                 (item.armyComposition &&
                   item.armyComposition[unitArmyComposition]?.maxPoints) ||
                 item.maxPoints;
+
+              if (!hasRequiredOption(unit, item.requiredOption)) {
+                return null;
+              }
 
               if (
                 item.armyComposition &&

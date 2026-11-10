@@ -257,6 +257,7 @@ export const nameMap = {
   },
   "vampiric-powers": {
     name_en: "Vampiric Powers",
+    name_es: "Poderes Vampíricos",
   },
   "vampiric-power": {
     name_en: "Vampiric Power",
@@ -514,6 +515,26 @@ export const nameMap = {
   "vampire-counts": {
     name_en: "Vampire Counts",
     name_es: "Condes Vampiro",
+  },
+  "von-carstein-power": {
+    name_en: "Von Carstein Powers",
+    name_es: "Poderes Von Carstein",
+  },
+  "blood-dragon-power": {
+    name_en: "Blood Dragon Powers",
+    name_es: "Poderes de los Dragones Sangrientos",
+  },
+  "lahmia-power": {
+    name_en: "Lahmia Powers",
+    name_es: "Poderes de Lahmia",
+  },
+  "necrarch-power": {
+    name_en: "Necrarch Powers",
+    name_es: "Poderes Necrarcas",
+  },
+  "strigoi-power": {
+    name_en: "Strigoi Powers",
+    name_es: "Poderes Strigoi",
   },
   "wood-elves": {
     name_en: "Wood Elves",
