@@ -1700,5 +1700,457 @@
       "type": "engineering-runes",
       "name": "rune of burning"
     }
+  ],
+  "vampire-counts": [
+    {
+      "name_en": "Frostblade",
+      "name_es": "Hoja Gélida",
+      "points": 100,
+      "type": "weapon",
+      "name": "frostblade"
+    },
+    {
+      "name_en": "Blood Drinker (Vampires only)",
+      "name_es": "Bebedora de Sangre (solo Vampiros)",
+      "points": 50,
+      "type": "weapon",
+      "name": "blood drinker (vampires only)"
+    },
+    {
+      "name_en": "Black Axe of Krell",
+      "name_es": "Hacha Negra de Krell",
+      "points": 50,
+      "type": "weapon",
+      "name": "black axe of krell"
+    },
+    {
+      "name_en": "Sword of Unholy Power",
+      "name_es": "Espada del Poder Impío",
+      "points": 40,
+      "type": "weapon",
+      "name": "sword of unholy power"
+    },
+    {
+      "name_en": "Tomb Blade",
+      "name_es": "Hoja Sepulcral",
+      "points": 35,
+      "type": "weapon",
+      "name": "tomb blade"
+    },
+    {
+      "name_en": "Asp Bow (Lahmia only)",
+      "name_es": "Arco Áspid (solo Lahmia)",
+      "points": 30,
+      "type": "weapon",
+      "name": "asp bow (lahmia only)"
+    },
+    {
+      "name_en": "Sword of the Kings (Wight Lord only)",
+      "name_es": "Espada de los Reyes (solo Señor de los Túmulos)",
+      "points": 25,
+      "type": "weapon",
+      "name": "sword of the kings (wight lord only)"
+    },
+    {
+      "name_en": "Wailing Helm",
+      "name_es": "Yelmo Aullante",
+      "points": 50,
+      "type": "armor",
+      "name": "wailing helm"
+    },
+    {
+      "name_en": "Armour of Bone",
+      "name_es": "Armadura de Hueso",
+      "points": 50,
+      "type": "armor",
+      "name": "armour of bone"
+    },
+    {
+      "name_en": "The Flayed Hauberk",
+      "name_es": "La Cota Desollada",
+      "points": 30,
+      "type": "armor",
+      "name": "the flayed hauberk"
+    },
+    {
+      "name_en": "The Cursed Shield of Mousillon",
+      "name_es": "El Escudo Maldito de Mousillon",
+      "points": 25,
+      "type": "armor",
+      "name": "the cursed shield of mousillon"
+    },
+    {
+      "name_en": "The Carstein Ring (Von Carstein only)",
+      "name_es": "El Anillo de los Carstein (solo Von Carstein)",
+      "points": 100,
+      "type": "talisman",
+      "name": "the carstein ring (von carstein only)"
+    },
+    {
+      "name_en": "Obsidian Amulet",
+      "name_es": "Amuleto de Obsidiana",
+      "points": 45,
+      "type": "talisman",
+      "name": "obsidian amulet"
+    },
+    {
+      "name_en": "Crown of the Damned",
+      "name_es": "Corona de los Condenados",
+      "points": 35,
+      "type": "talisman",
+      "name": "crown of the damned"
+    },
+    {
+      "name_en": "Wristbands of Black Gold",
+      "name_es": "Brazaletes de Oro Negro",
+      "points": 30,
+      "type": "talisman",
+      "name": "wristbands of black gold"
+    },
+    {
+      "name_en": "Ring of the Night",
+      "name_es": "Anillo de la Noche",
+      "points": 30,
+      "type": "talisman",
+      "name": "ring of the night"
+    },
+    {
+      "name_en": "The Gem of Blood",
+      "name_es": "La Gema de Sangre",
+      "points": 25,
+      "type": "talisman",
+      "name": "the gem of blood"
+    },
+    {
+      "name_en": "Rod of Flaming Death",
+      "name_es": "Vara de la Muerte Llameante",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "rod of flaming death"
+    },
+    {
+      "name_en": "Cursed Book",
+      "name_es": "Libro Maldito",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "cursed book"
+    },
+    {
+      "name_en": "Cloak of Mist and Shadows",
+      "name_es": "Capa de Niebla y Sombras",
+      "points": 45,
+      "type": "enchanted-item",
+      "name": "cloak of mist and shadows"
+    },
+    {
+      "name_en": "Talon of Death",
+      "name_es": "Garra de la Muerte",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "talon of death"
+    },
+    {
+      "name_en": "Casket of Ages",
+      "name_es": "Cofre de las Eras",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "casket of ages"
+    },
+    {
+      "name_en": "Power Familiar (not Blood Dragons)",
+      "name_es": "Familiar de Poder (no Dragones Sangrientos)",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "power familiar (not blood dragons)"
+    },
+    {
+      "name_en": "Skull Staff",
+      "name_es": "Báculo Calavera",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "skull staff"
+    },
+    {
+      "name_en": "Staff of Damnation",
+      "name_es": "Báculo de la Condenación",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "staff of damnation"
+    },
+    {
+      "name_en": "Warrior Familiar",
+      "name_es": "Familiar Guerrero",
+      "points": 30,
+      "type": "arcane-item",
+      "name": "warrior familiar"
+    },
+    {
+      "name_en": "Book of Arkhan",
+      "name_es": "Libro de Arkhan",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "book of arkhan"
+    },
+    {
+      "name_en": "Black Periapt",
+      "name_es": "Periapto Negro",
+      "points": 15,
+      "type": "arcane-item",
+      "name": "black periapt"
+    },
+    {
+      "name_en": "Spell Familiar",
+      "name_es": "Familiar Hechicero",
+      "points": 15,
+      "type": "arcane-item",
+      "name": "spell familiar"
+    },
+    {
+      "name_en": "Hell Banner",
+      "name_es": "Estandarte Infernal",
+      "points": 65,
+      "type": "banner",
+      "name": "hell banner"
+    },
+    {
+      "name_en": "Banner of Doom",
+      "name_es": "Estandarte de la Perdición",
+      "points": 50,
+      "type": "banner",
+      "name": "banner of doom"
+    },
+    {
+      "name_en": "Banner of the Barrows",
+      "name_es": "Estandarte de los Túmulos",
+      "points": 45,
+      "type": "banner",
+      "name": "banner of the barrows"
+    },
+    {
+      "name_en": "Screaming Banner",
+      "name_es": "Estandarte Aullante",
+      "points": 40,
+      "type": "banner",
+      "name": "screaming banner"
+    },
+    {
+      "name_en": "Banner of the Dead Legion",
+      "name_es": "Estandarte de la Legión Muerta",
+      "points": 25,
+      "type": "banner",
+      "name": "banner of the dead legion"
+    }
+  ],
+  "vampiric-powers": [
+    {
+      "name_en": "Summon Bats",
+      "name_es": "Invocar Murciélagos",
+      "points": 65,
+      "type": "von-carstein-power",
+      "name": "summon bats"
+    },
+    {
+      "name_en": "Call Winds",
+      "name_es": "Invocar Vientos",
+      "points": 55,
+      "type": "von-carstein-power",
+      "name": "call winds"
+    },
+    {
+      "name_en": "Walking Death",
+      "name_es": "Muerte Andante",
+      "points": 35,
+      "type": "von-carstein-power",
+      "name": "walking death"
+    },
+    {
+      "name_en": "Summon Wolves",
+      "name_es": "Invocar Lobos",
+      "points": 25,
+      "type": "von-carstein-power",
+      "name": "summon wolves"
+    },
+    {
+      "name_en": "Aura of Dark Majesty",
+      "name_es": "Aura de Majestad Oscura",
+      "points": 25,
+      "type": "von-carstein-power",
+      "name": "aura of dark majesty"
+    },
+    {
+      "name_en": "Wolf Form",
+      "name_es": "Forma de Lobo",
+      "points": 20,
+      "type": "von-carstein-power",
+      "name": "wolf form"
+    },
+    {
+      "name_en": "Red Fury",
+      "name_es": "Furia Roja",
+      "points": 30,
+      "type": "blood-dragon-power",
+      "name": "red fury"
+    },
+    {
+      "name_en": "Blademaster",
+      "name_es": "Maestro de la Espada",
+      "points": 30,
+      "type": "blood-dragon-power",
+      "name": "blademaster"
+    },
+    {
+      "name_en": "Heart Piercing",
+      "name_es": "Perforar Corazones",
+      "points": 25,
+      "type": "blood-dragon-power",
+      "name": "heart piercing"
+    },
+    {
+      "name_en": "Master Strike",
+      "name_es": "Golpe Maestro",
+      "points": 25,
+      "type": "blood-dragon-power",
+      "name": "master strike"
+    },
+    {
+      "name_en": "Strength of Steel",
+      "name_es": "Fuerza de Acero",
+      "points": 15,
+      "type": "blood-dragon-power",
+      "name": "strength of steel"
+    },
+    {
+      "name_en": "Honour or Death",
+      "name_es": "Honor o Muerte",
+      "points": 10,
+      "type": "blood-dragon-power",
+      "name": "honour or death"
+    },
+    {
+      "name_en": "Seduction",
+      "name_es": "Seducción",
+      "points": 55,
+      "type": "lahmia-power",
+      "name": "seduction"
+    },
+    {
+      "name_en": "Domination",
+      "name_es": "Dominación",
+      "points": 40,
+      "type": "lahmia-power",
+      "name": "domination"
+    },
+    {
+      "name_en": "Quickblood",
+      "name_es": "Sangre Veloz",
+      "points": 30,
+      "type": "lahmia-power",
+      "name": "quickblood"
+    },
+    {
+      "name_en": "Innocence Lost",
+      "name_es": "Inocencia Perdida",
+      "points": 25,
+      "type": "lahmia-power",
+      "name": "innocence lost"
+    },
+    {
+      "name_en": "Transfix",
+      "name_es": "Hechizar",
+      "points": 20,
+      "type": "lahmia-power",
+      "name": "transfix"
+    },
+    {
+      "name_en": "Beguile",
+      "name_es": "Embelesar",
+      "points": 10,
+      "type": "lahmia-power",
+      "name": "beguile"
+    },
+    {
+      "name_en": "Nehekhara's Noble Blood",
+      "name_es": "Sangre Noble de Nehekhara",
+      "points": 45,
+      "type": "necrarch-power",
+      "name": "nehekhara's noble blood"
+    },
+    {
+      "name_en": "The Awakening",
+      "name_es": "El Despertar",
+      "points": 25,
+      "type": "necrarch-power",
+      "name": "the awakening"
+    },
+    {
+      "name_en": "Dark Acolyte",
+      "name_es": "Acólito Oscuro",
+      "points": 25,
+      "type": "necrarch-power",
+      "name": "dark acolyte"
+    },
+    {
+      "name_en": "Unholy Cynosure",
+      "name_es": "Foco Impío",
+      "points": 20,
+      "type": "necrarch-power",
+      "name": "unholy cynosure"
+    },
+    {
+      "name_en": "Master of the Black Arts",
+      "name_es": "Maestro de las Artes Oscuras",
+      "points": 20,
+      "type": "necrarch-power",
+      "name": "master of the black arts"
+    },
+    {
+      "name_en": "Forbidden Lore",
+      "name_es": "Saber Prohibido",
+      "points": 15,
+      "type": "necrarch-power",
+      "name": "forbidden lore"
+    },
+    {
+      "name_en": "Curse of the Revenant",
+      "name_es": "Maldición del Aparecido",
+      "points": 55,
+      "type": "strigoi-power",
+      "name": "curse of the revenant"
+    },
+    {
+      "name_en": "Massive Monstrosity",
+      "name_es": "Monstruosidad Descomunal",
+      "points": 50,
+      "type": "strigoi-power",
+      "name": "massive monstrosity"
+    },
+    {
+      "name_en": "Bat Form",
+      "name_es": "Forma de Murciélago",
+      "points": 45,
+      "type": "strigoi-power",
+      "name": "bat form"
+    },
+    {
+      "name_en": "Infinite Hatred",
+      "name_es": "Odio Infinito",
+      "points": 30,
+      "type": "strigoi-power",
+      "name": "infinite hatred"
+    },
+    {
+      "name_en": "Summon Ghouls",
+      "name_es": "Invocar Necrófagos",
+      "points": 25,
+      "type": "strigoi-power",
+      "name": "summon ghouls"
+    },
+    {
+      "name_en": "Iron Sinews",
+      "name_es": "Tendones de Hierro",
+      "points": 20,
+      "type": "strigoi-power",
+      "name": "iron sinews"
+    }
   ]
 }

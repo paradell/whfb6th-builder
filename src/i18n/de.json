@@ -86,6 +86,7 @@
   "misc.error.noGeneral": "Du brauchst einen General",
   "misc.error.multipleGenerals": "Nur ein General erlaubt",
   "misc.error.multipleBSBs": "Nur ein Armeestandartenträger erlaubt",
+  "misc.error.sameOptionInArmy": "All units must choose the same {option} ({name})",
   "misc.error.tooManyCharacterSlots": "Too many character slots (Lords + Heroes exceed maximum)",
   "misc.error.maxUnits": "{diff} {name} zu viel",
   "misc.error.minUnits": "Mindestens {min} {name} benötigt",

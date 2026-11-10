@@ -141,6 +141,8 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       "maximum": Number, // Maximum number of this option
       "armyComposition": [army composition IDs], // Optional
       "requiredMagicItem": String, // Name of a required magic item
+      "requiredOption": String | [String], // Optional. Ids of options or sub-options; the entry is only shown and counted when one of them is active. Also works on "equipment", "melee", "ranged", "armor", "mounts" and "items" entries (e.g. Vampire Counts bloodlines)
+      "sameInArmy": Boolean, // Optional. For options with sub-options: every unit in the list with this option must choose the same sub-option (e.g. Vampire Counts bloodlines)
       "notes": { // Optional
         "name_en": String,
         "name_es": String
@@ -181,6 +183,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
       "name_es": String,
       "types": [String],
       "maxPoints": Number, // Optional
+      "requiredOption": String | [String], // Optional. Only shown when one of these option ids is active, see "options"
       "notes": { // Optional
         "name_en": String,
         "name_es": String

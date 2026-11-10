@@ -120,7 +120,7 @@
       "id": "vampire-counts",
       "name_en": "Vampire Counts",
       "name_es": "Condes Vampiro",
-      "items": ["general"],
+      "items": ["general", "vampire-counts", "vampiric-powers"],
       "armyComposition": ["vampire-counts"],
       "allies": [],
       "mercenaries": {}

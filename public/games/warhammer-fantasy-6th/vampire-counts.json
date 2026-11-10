@@ -1,185 +1,476 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord", "name_es": "Ejemplo de Señor", "id": "example-lord", "points": 110,
-    "armyComposition": { "vampire-counts": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord", "name_es": "Ejemplo de Señor Mágico", "id": "example-magic-lord", "points": 190,
-    "armyComposition": { "vampire-counts": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero", "name_es": "Ejemplo de Héroe", "id": "example-hero", "points": 60,
-    "armyComposition": { "vampire-counts": { "category": "heroes" } },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero", "name_es": "Ejemplo de Héroe Mágico", "id": "example-magic-hero", "points": 70,
-    "armyComposition": { "vampire-counts": { "category": "heroes" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+  "lords": [
+    {
+      "name_en": "Vampire Lord",
+      "id": "vampire-lord",
+      "points": 285,
+      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great weapon", "points": 6, "requiredOption": ["von-carstein", "blood-dragon"] },
+        { "name_en": "Additional hand weapon", "points": 6, "requiredOption": ["von-carstein", "blood-dragon"] },
+        { "name_en": "Lance", "points": 6, "notes": { "name_en": "if mounted" }, "requiredOption": ["von-carstein", "blood-dragon"] }
+      ],
+      "armor": [
+        { "name_en": "Full plate armour", "points": 0, "alwaysActive": true, "requiredOption": ["blood-dragon"] }
+      ],
+      "options": [
+        {
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
+            { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true },
+            { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true },
+            { "name_en": "Necrarch", "id": "necrarch", "points": 0, "exclusive": true },
+            { "name_en": "Strigoi", "id": "strigoi", "points": 0, "exclusive": true }
+          ]
+        },
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 2 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 3 Wizard", "points": 50, "exclusive": true }
+          ]
+        },
+        { "name_en": "Shield", "points": 6, "requiredOption": ["blood-dragon"] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }], "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
+        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] }
+      ],
+      "items": [
+        { "name_en": "Magic Items and Von Carstein Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "von-carstein-power"], "selected": [], "maxPoints": 100, "requiredOption": ["von-carstein"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
+        { "name_en": "Magic Items and Blood Dragon Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "blood-dragon-power"], "selected": [], "maxPoints": 100, "requiredOption": ["blood-dragon"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
+        { "name_en": "Magic Items and Lahmia Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "lahmia-power"], "selected": [], "maxPoints": 100, "requiredOption": ["lahmia"], "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No Skull Staff" } },
+        { "name_en": "Magic Items and Necrarch Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "necrarch-power"], "selected": [], "maxPoints": 100, "requiredOption": ["necrarch"], "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No Skull Staff" } },
+        { "name_en": "Strigoi Powers", "types": ["strigoi-power"], "selected": [], "maxPoints": 100, "requiredOption": ["strigoi"], "notes": { "name_en": "Strigoi cannot take magic items" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead, Bloodlines" }
+    },
+    {
+      "name_en": "Vampire Count",
+      "id": "vampire-count",
+      "points": 205,
+      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great weapon", "points": 6, "requiredOption": ["von-carstein", "blood-dragon"] },
+        { "name_en": "Additional hand weapon", "points": 6, "requiredOption": ["von-carstein", "blood-dragon"] },
+        { "name_en": "Lance", "points": 6, "notes": { "name_en": "if mounted" }, "requiredOption": ["von-carstein", "blood-dragon"] }
+      ],
+      "armor": [
+        { "name_en": "Full plate armour", "points": 0, "alwaysActive": true, "requiredOption": ["blood-dragon"] }
+      ],
+      "options": [
+        {
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
+            { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true },
+            { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true },
+            { "name_en": "Necrarch", "id": "necrarch", "points": 0, "exclusive": true },
+            { "name_en": "Strigoi", "id": "strigoi", "points": 0, "exclusive": true }
+          ]
+        },
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        },
+        { "name_en": "Shield", "points": 6, "requiredOption": ["blood-dragon"] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }], "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
+        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] }
+      ],
+      "items": [
+        { "name_en": "Magic Items and Von Carstein Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "von-carstein-power"], "selected": [], "maxPoints": 100, "requiredOption": ["von-carstein"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
+        { "name_en": "Magic Items and Blood Dragon Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "blood-dragon-power"], "selected": [], "maxPoints": 100, "requiredOption": ["blood-dragon"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
+        { "name_en": "Magic Items and Lahmia Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "lahmia-power"], "selected": [], "maxPoints": 100, "requiredOption": ["lahmia"], "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No familiars (Spell, Power or Warrior Familiar)" } },
+        { "name_en": "Magic Items and Necrarch Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "necrarch-power"], "selected": [], "maxPoints": 100, "requiredOption": ["necrarch"], "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No Skull Staff" } },
+        { "name_en": "Strigoi Powers", "types": ["strigoi-power"], "selected": [], "maxPoints": 100, "requiredOption": ["strigoi"], "notes": { "name_en": "Strigoi cannot take magic items" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead, Bloodlines" }
+    },
+    {
+      "name_en": "Master Necromancer",
+      "id": "master-necromancer",
+      "points": 185,
+      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 3 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 4 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true },
+        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "arcane-item", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Magic weapons: only Frostblade, Sword of Unholy Power or Tomb Blade. Magic armour: only Wailing Helm or Armour of Bone" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Vampire Thrall",
+      "id": "vampire-thrall",
+      "points": 80,
+      "armyComposition": { "vampire-counts": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "points": 25, "magic": { "types": ["banner"], "maxPoints": 50 } }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great weapon", "points": 4, "requiredOption": ["von-carstein", "blood-dragon"] },
+        { "name_en": "Additional hand weapon", "points": 4, "requiredOption": ["von-carstein", "blood-dragon"] },
+        { "name_en": "Lance", "points": 4, "notes": { "name_en": "if mounted" }, "requiredOption": ["von-carstein", "blood-dragon"] }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 2, "requiredOption": ["von-carstein", "blood-dragon"] },
+        { "name_en": "Heavy armour", "points": 4, "requiredOption": ["von-carstein", "blood-dragon"] }
+      ],
+      "options": [
+        {
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
+            { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true },
+            { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true },
+            { "name_en": "Necrarch", "id": "necrarch", "points": 0, "exclusive": true },
+            { "name_en": "Strigoi", "id": "strigoi", "points": 0, "exclusive": true }
+          ]
+        },
+        { "name_en": "Shield", "points": 4, "requiredOption": ["von-carstein", "blood-dragon"] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 8, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 2 }], "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] }
+      ],
+      "items": [
+        { "name_en": "Magic Items and Von Carstein Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "von-carstein-power"], "selected": [], "maxPoints": 50, "requiredOption": ["von-carstein"], "notes": { "name_en": "No Skull Staff" } },
+        { "name_en": "Magic Items and Blood Dragon Powers", "types": ["weapon", "armor", "talisman", "enchanted-item", "blood-dragon-power"], "selected": [], "maxPoints": 50, "requiredOption": ["blood-dragon"] },
+        { "name_en": "Magic Items and Lahmia Powers", "types": ["weapon", "armor", "talisman", "enchanted-item", "lahmia-power"], "selected": [], "maxPoints": 50, "requiredOption": ["lahmia"] },
+        { "name_en": "Magic Items and Necrarch Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "necrarch-power"], "selected": [], "maxPoints": 50, "requiredOption": ["necrarch"], "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No Skull Staff" } },
+        { "name_en": "Strigoi Powers", "types": ["strigoi-power"], "selected": [], "maxPoints": 50, "requiredOption": ["strigoi"], "notes": { "name_en": "Strigoi cannot take magic items" } }
+      ],
+      "specialRules": { "name_en": "Undead, Bloodlines" }
+    },
+    {
+      "name_en": "Necromancer",
+      "id": "necromancer",
+      "points": 65,
+      "armyComposition": { "vampire-counts": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 8, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 4 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "arcane-item", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Magic weapons: only Frostblade, Sword of Unholy Power or Tomb Blade. Magic armour: only Armour of Bone" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead" }
+    },
+    {
+      "name_en": "Wight Lord",
+      "id": "wight-lord",
+      "points": 60,
+      "armyComposition": { "vampire-counts": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 50 } }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great weapon", "points": 4 },
+        { "name_en": "Lance", "points": 4, "notes": { "name_en": "if mounted" } },
+        { "name_en": "Halberd", "points": 4 }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 2 },
+        { "name_en": "Heavy armour", "points": 4 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 8, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 2 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "specialRules": { "name_en": "Undead, Wight Blades (Killing Blow)" }
+    },
+    {
+      "name_en": "Wraith",
+      "id": "wraith",
+      "points": 90,
+      "armyComposition": { "vampire-counts": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Great weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 8, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 2 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "specialRules": { "name_en": "Ethereal, Terror" }
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "vampire-counts": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "vampire-counts": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Skeletons",
+      "id": "skeletons",
+      "points": 8,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": { "vampire-counts": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Skeleton Captain", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Shield", "points": 0, "perModel": true, "active": true }
       ],
       "melee": [
         { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+        { "name_en": "Spears", "points": 1, "perModel": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "armor": [
+        { "name_en": "Light armour", "points": 2, "perModel": true }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead" }
+    },
+    {
+      "name_en": "Zombies",
+      "id": "zombies",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 40,
+      "armyComposition": { "vampire-counts": { "category": "core" } },
+      "command": [
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Braindead (always strike last)" }
+    },
+    {
+      "name_en": "Ghouls",
+      "id": "ghouls",
+      "points": 8,
+      "minimum": 5,
+      "maximum": 20,
+      "armyComposition": { "vampire-counts": { "category": "core" } },
+      "command": [
+        { "name_en": "Ghast", "points": 10 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Alive!, Poisoned Attacks, Scavengers (Skirmishers), Fear" }
+    },
+    {
+      "name_en": "Dire Wolves",
+      "id": "dire-wolves",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 20,
+      "armyComposition": { "vampire-counts": { "category": "core" } },
+      "command": [
+        { "name_en": "Doom Wolf", "points": 10 }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Slavering Charge (S4 on charge), Fast Cavalry" }
+    },
+    {
+      "name_en": "Bat Swarm",
+      "id": "bat-swarm",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 5,
+      "armyComposition": { "vampire-counts": { "category": "core" } },
+      "command": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Alive!, Flying Unit (10\"), Fear, Swarm" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 14 }, { "name_en": "Standard bearer", "points": 14 }, { "name_en": "Musician", "points": 7 }],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
+      "name_en": "Grave Guard",
+      "id": "grave-guard",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 30,
+      "armyComposition": { "vampire-counts": { "category": "special" } },
+      "command": [
+        { "name_en": "Crypt Keeper", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Heavy armour", "points": 0, "perModel": true, "active": true }
+      ],
       "melee": [
         { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+        { "name_en": "Halberds", "points": 2, "perModel": true }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
       ],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }, { "name_en": "Example Option", "points": 5 }],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "vampire-counts": { "category": "special" } }
+      "specialRules": { "name_en": "Undead, Wight Blades (Killing Blow)" }
+    },
+    {
+      "name_en": "Black Knights",
+      "id": "black-knights",
+      "points": 23,
+      "minimum": 5,
+      "maximum": 20,
+      "armyComposition": { "vampire-counts": { "category": "special" } },
+      "command": [
+        { "name_en": "Hell Knight", "points": 16 },
+        { "name_en": "Standard Bearer", "points": 16, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 8 }
+      ],
+      "equipment": [
+        { "name_en": "Heavy armour, Shield, Lance", "points": 0, "perModel": true, "active": true }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Barding", "points": 2, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Wight Blades (Killing Blow)" }
+    },
+    {
+      "name_en": "Fell Bats",
+      "id": "fell-bats",
+      "points": 20,
+      "minimum": 3,
+      "maximum": 10,
+      "armyComposition": { "vampire-counts": { "category": "special" } },
+      "command": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Fly" }
+    },
+    {
+      "name_en": "Spirit Host",
+      "id": "spirit-host",
+      "points": 65,
+      "minimum": 1,
+      "maximum": 5,
+      "armyComposition": { "vampire-counts": { "category": "special" } },
+      "command": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Ethereal, Swarm" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
+      "name_en": "Banshee",
+      "id": "banshee",
       "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "minimum": 1,
+      "maximum": 1,
       "armyComposition": { "vampire-counts": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Ethereal, Ghostly Howl" }
+    },
+    {
+      "name_en": "Black Coach",
+      "id": "black-coach",
+      "points": 200,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "vampire-counts": { "category": "rare" } },
+      "command": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Terror, Ward Save 5+, Chariot (4+ save), Large Target, Evocation of Death" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-

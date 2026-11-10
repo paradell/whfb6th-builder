@@ -69,6 +69,11 @@ const magicItemTypes = [
   "gift-of-chaos",
   "forest-spite",
   "vampiric-power",
+  "von-carstein-power",
+  "blood-dragon-power",
+  "lahmia-power",
+  "necrarch-power",
+  "strigoi-power",
   "daemonic-gift",
 ];
 const loresOfMagic = [

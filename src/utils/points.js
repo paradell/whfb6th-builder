@@ -1,4 +1,4 @@
-import { unitHasItem } from "./unit";
+import { unitHasItem, hasRequiredOption } from "./unit";
 
 // returns the points cost for adding a single model in a unit, given the
 // selected options and equipment
@@ -87,6 +87,9 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.options) {
     unit.options.forEach((option) => {
+      if (!hasRequiredOption(unit, option.requiredOption)) {
+        return;
+      }
       if (option.stackable) {
         unitPoints +=
           (option.stackableCount || option.minimum || 0) * option.points;
@@ -115,6 +118,9 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.equipment) {
     unit.equipment
+      .filter(({ requiredOption }) =>
+        hasRequiredOption(unit, requiredOption),
+      )
       .filter(
         ({ active, requiredMagicItem }) =>
           (active && !requiredMagicItem) ||
@@ -131,6 +137,9 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.melee) {
     unit.melee
+        .filter(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        )
         .filter(
             ({ active, requiredMagicItem }) =>
                 (active && !requiredMagicItem) ||
@@ -147,6 +156,9 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.ranged) {
     unit.ranged
+        .filter(({ requiredOption }) =>
+          hasRequiredOption(unit, requiredOption),
+        )
         .filter(
             ({ active, requiredMagicItem }) =>
                 (active && !requiredMagicItem) ||
@@ -163,6 +175,9 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.armor) {
     unit.armor
+      .filter(({ requiredOption }) =>
+        hasRequiredOption(unit, requiredOption),
+      )
       .filter(
         ({ active, requiredMagicItem }) =>
           (active && !requiredMagicItem) ||
@@ -203,6 +218,9 @@ export const getUnitPoints = (unit, settings) => {
 
   if (unit.mounts) {
     unit.mounts
+      .filter(({ requiredOption }) =>
+        hasRequiredOption(unit, requiredOption),
+      )
       .filter(
         ({ active, requiredMagicItem }) =>
           (active && !requiredMagicItem) ||
@@ -384,6 +402,9 @@ export const getUnitMagicPoints = ({ unit, item }) => {
     });
   } else if (unit?.items && unit?.items.length) {
     unit.items.forEach((item) => {
+      if (!hasRequiredOption(unit, item.requiredOption)) {
+        return;
+      }
       (item.selected || []).forEach((selected) => {
         unitPoints += getMagicItemPoints({ item: selected, unit });
       });

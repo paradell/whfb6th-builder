@@ -314,9 +314,9 @@ export const Editor = ({ isMobile }) => {
         <section>
           {errors
             .filter(({ section }) => section === "global")
-            .map(({ message }) => (
+            .map(({ message, section, ...values }) => (
               <ErrorMessage key={message} spaceAfter spaceBefore={isMobile}>
-                <FormattedMessage id={message} />
+                <FormattedMessage id={message} values={values} />
               </ErrorMessage>
             ))}
         </section>

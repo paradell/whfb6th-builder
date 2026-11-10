@@ -325,6 +325,49 @@ export const validateList = ({ list, language, intl }) => {
       section: "global",
     });
 
+  // Options that must be the same in the whole army (e.g. Vampire Counts bloodlines)
+  const sameInArmyChoices = {};
+  [
+    "characters",
+    "lords",
+    "heroes",
+    "core",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ].forEach((category) => {
+    (list?.[category] || []).forEach((unit) => {
+      (unit.options || [])
+        .filter((option) => option.sameInArmy)
+        .forEach((option) => {
+          const choice = option.options?.find((subOption) => subOption.active);
+
+          if (choice) {
+            sameInArmyChoices[option.name_en] = sameInArmyChoices[
+              option.name_en
+            ] || {
+              option: option[`name_${language}`] || option.name_en,
+              names: [],
+            };
+            const choiceName = choice[`name_${language}`] || choice.name_en;
+
+            !sameInArmyChoices[option.name_en].names.includes(choiceName) &&
+              sameInArmyChoices[option.name_en].names.push(choiceName);
+          }
+        });
+    });
+  });
+  Object.values(sameInArmyChoices).forEach(({ option, names }) => {
+    names.length > 1 &&
+      errors.push({
+        message: "misc.error.sameOptionInArmy",
+        section: "global",
+        option,
+        name: names.join(", "),
+      });
+  });
+
   // Multiple BSBs
   BSBsCount > 1 &&
     errors.push({
