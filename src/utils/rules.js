@@ -4497,8 +4497,32 @@ export const rules = {
     characters: { maxSlots: 4 },
     lords: { maxSlots: 1 },
     heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["jungle-swarms"],
+          max: 1,
+        },
+        {
+          ids: ["temple-guard"],
+          min: 0,
+          max: 1,
+          requiresType: "lords",
+          requires: ["slann-mage-priest", "lord-kroak"],
+          perUnit: true,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["chameleon-skinks"],
+          max: 1,
+        },
+      ],
+    },
     rare: { maxSlots: 2 },
     mercenaries: { maxSlots: 0 },
     allies: { maxSlots: 0 },

@@ -502,6 +502,14 @@ export const nameMap = {
     name_en: "Lizardmen",
     name_es: "Hombres Lagarto",
   },
+  "sacred-plaques": {
+    name_en: "Sacred Plaques",
+    name_es: "Placas Sagradas",
+  },
+  "sacred-plaque": {
+    name_en: "Sacred Plaque",
+    name_es: "Placa Sagrada",
+  },
   "ogre-kingdoms": {
     name_en: "Ogre Kingdoms",
     name_es: "Reinos Ogros",

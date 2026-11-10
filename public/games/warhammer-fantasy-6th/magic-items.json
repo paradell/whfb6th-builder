@@ -2580,5 +2580,207 @@
       "type": "elven-honour-mage",
       "name": "channeler"
     }
+  ],
+  "lizardmen": [
+    {
+      "name_en": "Blade of Revered Tzunki",
+      "points": 65,
+      "type": "weapon",
+      "name": "blade of revered tzunki"
+    },
+    {
+      "name_en": "Scimitar of the Sun Resplendent",
+      "points": 50,
+      "type": "weapon",
+      "name": "scimitar of the sun resplendent"
+    },
+    {
+      "name_en": "The Blade of Realities",
+      "points": 35,
+      "type": "weapon",
+      "name": "the blade of realities"
+    },
+    {
+      "name_en": "Piranha Blade",
+      "points": 35,
+      "type": "weapon",
+      "name": "piranha blade"
+    },
+    {
+      "name_en": "Staff of the Lost Sun",
+      "points": 35,
+      "type": "weapon",
+      "name": "staff of the lost sun"
+    },
+    {
+      "name_en": "Burning Blade of Chotec",
+      "points": 25,
+      "type": "weapon",
+      "name": "burning blade of chotec"
+    },
+    {
+      "name_en": "Dagger of Sotek",
+      "points": 25,
+      "type": "weapon",
+      "name": "dagger of sotek"
+    },
+    {
+      "name_en": "Sword of the Hornet",
+      "points": 25,
+      "type": "weapon",
+      "name": "sword of the hornet"
+    },
+    {
+      "name_en": "Sacred Stegadon Helm",
+      "points": 40,
+      "type": "armor",
+      "name": "sacred stegadon helm"
+    },
+    {
+      "name_en": "Shield of the Mirrored Pool",
+      "points": 35,
+      "type": "armor",
+      "name": "shield of the mirrored pool"
+    },
+    {
+      "name_en": "The Maiming Shield",
+      "points": 30,
+      "type": "armor",
+      "name": "the maiming shield"
+    },
+    {
+      "name_en": "Amulet of Itzl",
+      "points": 40,
+      "type": "talisman",
+      "name": "amulet of itzl"
+    },
+    {
+      "name_en": "Aura of Quetzl",
+      "points": 30,
+      "type": "talisman",
+      "name": "aura of quetzl"
+    },
+    {
+      "name_en": "Glyph Necklace",
+      "points": 30,
+      "type": "talisman",
+      "name": "glyph necklace"
+    },
+    {
+      "name_en": "Cube of Darkness",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "cube of darkness"
+    },
+    {
+      "name_en": "Diadem of Power",
+      "points": 35,
+      "type": "arcane-item",
+      "name": "diadem of power"
+    },
+    {
+      "name_en": "Rod of the Storm",
+      "points": 35,
+      "type": "arcane-item",
+      "name": "rod of the storm"
+    },
+    {
+      "name_en": "Gleaming Pendant of Chotec",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "gleaming pendant of chotec"
+    },
+    {
+      "name_en": "Blood Statuette of Spite",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "blood statuette of spite"
+    },
+    {
+      "name_en": "Cloak of Feathers",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "cloak of feathers"
+    },
+    {
+      "name_en": "Charm of the Jaguar Warrior",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "charm of the jaguar warrior"
+    },
+    {
+      "name_en": "Curse-charm of Tepok",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "curse-charm of tepok"
+    },
+    {
+      "name_en": "Bane Head",
+      "points": 15,
+      "type": "enchanted-item",
+      "name": "bane head"
+    },
+    {
+      "name_en": "Dragonfly of Quicksilver",
+      "points": 15,
+      "type": "enchanted-item",
+      "name": "dragonfly of quicksilver"
+    },
+    {
+      "name_en": "Venom of the Firefly Frog",
+      "points": 15,
+      "type": "enchanted-item",
+      "name": "venom of the firefly frog"
+    },
+    {
+      "name_en": "Totem of Prophecy",
+      "points": 75,
+      "type": "banner",
+      "name": "totem of prophecy"
+    },
+    {
+      "name_en": "Huanchi's Blessed Totem",
+      "points": 40,
+      "type": "banner",
+      "name": "huanchi's blessed totem"
+    },
+    {
+      "name_en": "Sun Standard of Chotec",
+      "points": 40,
+      "type": "banner",
+      "name": "sun standard of chotec"
+    },
+    {
+      "name_en": "Jaguar Standard",
+      "points": 25,
+      "type": "banner",
+      "name": "jaguar standard"
+    }
+  ],
+  "sacred-plaques": [
+    {
+      "name_en": "Cupped Hands of the Old Ones",
+      "points": 50,
+      "type": "sacred-plaque",
+      "name": "cupped hands of the old ones"
+    },
+    {
+      "name_en": "The Divine Plaque of Protection",
+      "points": 50,
+      "type": "sacred-plaque",
+      "name": "the divine plaque of protection"
+    },
+    {
+      "name_en": "Plaque of Dominion",
+      "points": 50,
+      "type": "sacred-plaque",
+      "name": "plaque of dominion"
+    },
+    {
+      "name_en": "Plaque of Tepok",
+      "points": 15,
+      "type": "sacred-plaque",
+      "name": "plaque of tepok"
+    }
   ]
 }

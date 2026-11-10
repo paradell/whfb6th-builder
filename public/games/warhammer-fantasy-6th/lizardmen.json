@@ -1,185 +1,535 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord", "name_es": "Ejemplo de Señor", "id": "example-lord", "points": 110,
-    "armyComposition": { "lizardmen": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord", "name_es": "Ejemplo de Señor Mágico", "id": "example-magic-lord", "points": 190,
-    "armyComposition": { "lizardmen": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero", "name_es": "Ejemplo de Héroe", "id": "example-hero", "points": 60,
-    "armyComposition": { "lizardmen": { "category": "heroes" } },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero", "name_es": "Ejemplo de Héroe Mágico", "id": "example-magic-hero", "points": 70,
-    "armyComposition": { "lizardmen": { "category": "heroes" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+  "lords": [
+    {
+      "name_en": "Slann Mage-Priest",
+      "id": "slann-mage-priest",
+      "points": 325,
+      "armyComposition": { "lizardmen": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "points": 25, "magic": { "types": ["banner"], "maxPoints": 100 } }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 4 Wizard", "points": 0, "exclusive": true, "active": true }
+          ]
+        },
+        {
+          "name_en": "Generation", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Fifth Generation", "id": "fifth-generation", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Fourth Generation", "id": "fourth-generation", "points": 40, "exclusive": true },
+            { "name_en": "Third Generation", "id": "third-generation", "points": 85, "exclusive": true, "notes": { "name_en": "Uses an extra Hero choice" } },
+            { "name_en": "Second Generation", "id": "second-generation", "points": 135, "exclusive": true, "notes": { "name_en": "Uses an extra Hero choice and an extra Rare choice" } }
+          ]
+        }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items and Sacred Plaques", "types": ["talisman", "arcane-item", "enchanted-item", "sacred-plaque"], "selected": [], "maxPoints": 100 }
+      ],
+      "lores": ["lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-beasts", "lore-of-the-heavens", "lore-of-light", "lore-of-life", "lore-of-death"],
+      "specialRules": { "name_en": "Cold Blooded, Large Target, Palanquin, Unit Strength 5, Contemplation, Telepathy, Shield of the Old Ones, Wisdom of the Old Ones" }
+    },
+    {
+      "name_en": "Saurus Oldblood",
+      "id": "saurus-oldblood",
+      "points": 145,
+      "armyComposition": { "lizardmen": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great weapon", "points": 6 },
+        { "name_en": "Spear", "points": 6 },
+        { "name_en": "Halberd", "points": 6 }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 3 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 },
+        {
+          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Up to three" }, "options": [
+            { "name_en": "Blessed Mark of the Old Ones", "id": "blessed-mark-of-the-old-ones", "points": 35, "notes": { "name_en": "One character per army" } },
+            { "name_en": "Blessed Spawning of Chotec", "id": "spawning-of-chotec", "points": 15 },
+            { "name_en": "Blessed Spawning of Huanchi", "id": "spawning-of-huanchi", "points": 20 },
+            { "name_en": "Blessed Spawning of Itzl", "id": "spawning-of-itzl", "points": 5 },
+            { "name_en": "Blessed Spawning of Quetzl", "id": "spawning-of-quetzl", "points": 15 },
+            { "name_en": "Blessed Spawning of Sotek", "id": "spawning-of-sotek", "points": 20 },
+            { "name_en": "Blessed Spawning of Tepok", "id": "spawning-of-tepok", "points": 20 },
+            { "name_en": "Blessed Spawning of Tlazcotl", "id": "spawning-of-tlazcotl", "points": 20 },
+            { "name_en": "Blessed Spawning of Tzunki", "id": "spawning-of-tzunki", "points": 5 }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Cold One", "points": 37, "id": "cold-one", "exclusive": true, "requiredOption": ["spawning-of-itzl"] },
+        { "name_en": "Carnosaur", "points": 210, "id": "carnosaur", "exclusive": true, "requiredOption": ["spawning-of-itzl"] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }
+      ],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (5+)" }
+    },
+    {
+      "name_en": "Lord Kroak",
+      "id": "lord-kroak",
+      "points": 1225,
+      "named": true,
+      "armyComposition": { "lizardmen": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Ceremonial Mace of Malachite, Golden Death Mask, Amulet of Itza, Standard of the Sacred Serpent & the Glyph of Potec", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 4 Wizard", "points": 0, "exclusive": true, "active": true }
+          ]
+        }
+      ],
+      "mounts": [],
+      "lores": ["lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-beasts", "lore-of-the-heavens", "lore-of-light", "lore-of-life", "lore-of-death"],
+      "specialRules": { "name_en": "Cold Blooded, Large Target, Palanquin, Unit Strength 5, Contemplation, Shield of the Old Ones, First Generation Spawning" }
+    },
+    {
+      "name_en": "Kroq-Gar",
+      "id": "kroq-gar",
+      "points": 573,
+      "named": true,
+      "armyComposition": { "lizardmen": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Revered Spear of Tlanxla, Hand of Gods", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "options": [],
+      "mounts": [
+        { "name_en": "Grymloq (Carnosaur)", "points": 0, "id": "grymloq", "active": true, "exclusive": true }
+      ],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (5+), Attuned to the Beast, Army of Kroq-Gar, Sacred Spawning of Xhotl, Blessed Spawning of Quetzl, Blessed Spawning of Itzl" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Saurus Scar-Veteran",
+      "id": "saurus-scar-veteran",
+      "points": 85,
+      "armyComposition": { "lizardmen": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "points": 25, "magic": { "types": ["banner"], "maxPoints": 50 } }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great weapon", "points": 4 },
+        { "name_en": "Spear", "points": 4 },
+        { "name_en": "Halberd", "points": 4 }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 2 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 },
+        {
+          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Up to two" }, "options": [
+            { "name_en": "Blessed Mark of the Old Ones", "id": "blessed-mark-of-the-old-ones", "points": 35, "notes": { "name_en": "One character per army" } },
+            { "name_en": "Blessed Spawning of Chotec", "id": "spawning-of-chotec", "points": 15 },
+            { "name_en": "Blessed Spawning of Huanchi", "id": "spawning-of-huanchi", "points": 20 },
+            { "name_en": "Blessed Spawning of Itzl", "id": "spawning-of-itzl", "points": 5 },
+            { "name_en": "Blessed Spawning of Quetzl", "id": "spawning-of-quetzl", "points": 15 },
+            { "name_en": "Blessed Spawning of Sotek", "id": "spawning-of-sotek", "points": 20 },
+            { "name_en": "Blessed Spawning of Tepok", "id": "spawning-of-tepok", "points": 20 },
+            { "name_en": "Blessed Spawning of Tlazcotl", "id": "spawning-of-tlazcotl", "points": 20 },
+            { "name_en": "Blessed Spawning of Tzunki", "id": "spawning-of-tzunki", "points": 5 }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Cold One", "points": 23, "id": "cold-one", "exclusive": true, "requiredOption": ["spawning-of-itzl"] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (5+)" }
+    },
+    {
+      "name_en": "Skink Chief",
+      "id": "skink-chief",
+      "points": 55,
+      "armyComposition": { "lizardmen": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional hand weapon", "points": 4 },
+        { "name_en": "Spear", "points": 4 }
+      ],
+      "ranged": [
+        { "name_en": "Javelin", "points": 8 },
+        { "name_en": "Blowpipe", "points": 8 }
+      ],
+      "armor": [
+        { "name_en": "Light armour", "points": 2 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 },
+        { "name_en": "Scout", "points": 10 },
+        {
+          "name_en": "Blessed Spawning", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "None", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Blessed Mark of the Old Ones", "id": "blessed-mark-of-the-old-ones", "points": 35, "exclusive": true, "notes": { "name_en": "One character per army" } },
+            { "name_en": "Blessed Spawning of Sotek", "id": "spawning-of-sotek", "points": 20, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Stegadon", "points": 235, "id": "stegadon", "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "specialRules": { "name_en": "Cold Blooded, Aquatic" }
+    },
+    {
+      "name_en": "Skink Priest",
+      "id": "skink-priest",
+      "points": 65,
+      "armyComposition": { "lizardmen": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        },
+        { "name_en": "Scout", "points": 10 },
+        {
+          "name_en": "Blessed Spawning", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "None", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Blessed Mark of the Old Ones", "id": "blessed-mark-of-the-old-ones", "points": 35, "exclusive": true, "notes": { "name_en": "One character per army" } },
+            { "name_en": "Blessed Spawning of Sotek", "id": "spawning-of-sotek", "points": 20, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Stegadon", "points": 235, "id": "stegadon", "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "lores": ["lore-of-the-heavens"],
+      "specialRules": { "name_en": "Cold Blooded, Aquatic" }
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "lizardmen": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "lizardmen": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Saurus Warriors",
+      "id": "saurus-warriors",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": { "lizardmen": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Spawning Champion", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12 },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Shields", "points": 0, "perModel": true, "active": true }
       ],
       "melee": [
         { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+        { "name_en": "Spears", "points": 2, "perModel": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (6+), Predatory Fighters" }
+    },
+    {
+      "name_en": "Skink Skirmishers",
+      "id": "skink-skirmishers",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 25,
+      "armyComposition": { "lizardmen": { "category": "core" } },
+      "command": [
+        { "name_en": "Skink Brave", "points": 5 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [
+        { "name_en": "Blowpipes", "points": 0, "perModel": true, "active": true },
+        { "name_en": "Javelins and Shields", "points": 0, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Scouts", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Aquatic, Skirmishers, Skirmish Screen" }
+    },
+    {
+      "name_en": "Jungle Swarms",
+      "id": "jungle-swarms",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 6,
+      "armyComposition": { "lizardmen": { "category": "core" } },
+      "command": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Swarm, Small, Skirmishers, Poisoned Attacks" }
+    },
+    {
+      "name_en": "Temple Guard",
+      "id": "temple-guard",
+      "points": 17,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "lizardmen": { "category": "core" } },
+      "command": [
+        { "name_en": "Revered Guardian", "points": 14 },
+        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Halberds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (5+), Sacred Duty" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 14 }, { "name_en": "Standard bearer", "points": 14 }, { "name_en": "Musician", "points": 7 }],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
+      "name_en": "Saurus Warriors (one Blessed Spawning)",
+      "id": "saurus-warriors-one-spawning",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "lizardmen": { "category": "special" } },
+      "command": [
+        { "name_en": "Spawning Champion", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12 },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Shields", "points": 0, "perModel": true, "active": true }
+      ],
       "melee": [
         { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+        { "name_en": "Spears", "points": 2, "perModel": true }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Blessed Spawning", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Blessed Spawning of Chotec", "points": 20, "exclusive": true, "active": true },
+            { "name_en": "Blessed Spawning of Huanchi", "points": 25, "exclusive": true },
+            { "name_en": "Blessed Spawning of Quetzl", "points": 30, "exclusive": true },
+            { "name_en": "Blessed Spawning of Sotek", "points": 30, "exclusive": true },
+            { "name_en": "Blessed Spawning of Tepok", "points": 30, "exclusive": true },
+            { "name_en": "Blessed Spawning of Tlazcotl", "points": 20, "exclusive": true },
+            { "name_en": "Blessed Spawning of Tzunki", "points": 10, "exclusive": true }
+          ]
+        }
       ],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }, { "name_en": "Example Option", "points": 5 }],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "lizardmen": { "category": "special" } }
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (6+), Predatory Fighters" }
+    },
+    {
+      "name_en": "Cold One Riders",
+      "id": "cold-one-riders",
+      "points": 35,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "lizardmen": { "category": "special" } },
+      "command": [
+        { "name_en": "Spawning Champion", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Spears, Shields", "points": 0, "perModel": true, "active": true }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (6+), Fear, Stupidity, Thick Skinned" }
+    },
+    {
+      "name_en": "Kroxigor",
+      "id": "kroxigor",
+      "points": 58,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "lizardmen": { "category": "special" } },
+      "command": [
+        { "name_en": "Kroxigor Ancient", "points": 20 }
+      ],
+      "melee": [
+        { "name_en": "Great weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (4+), Fear, Aquatic, Skirmish Screen" }
+    },
+    {
+      "name_en": "Chameleon Skinks",
+      "id": "chameleon-skinks",
+      "points": 15,
+      "minimum": 5,
+      "maximum": 10,
+      "armyComposition": { "lizardmen": { "category": "special" } },
+      "command": [
+        { "name_en": "Stalker", "points": 6 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [
+        { "name_en": "Blowpipes", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Aquatic, Skirmishers, Scouts, Expert Hunters, Chameleons, Poisoned Attacks" }
+    },
+    {
+      "name_en": "Terradons",
+      "id": "terradons",
+      "points": 35,
+      "minimum": 3,
+      "maximum": 10,
+      "armyComposition": { "lizardmen": { "category": "special" } },
+      "command": [
+        { "name_en": "Terradon & Brave", "points": 10 }
+      ],
+      "ranged": [
+        { "name_en": "Javelins", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Mounted, Flying Unit, Hit-and-Run Attack, Poisoned Attacks" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
-      "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "name_en": "Saurus Warriors (two Blessed Spawnings)",
+      "id": "saurus-warriors-two-spawnings",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": { "lizardmen": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [
+        { "name_en": "Spawning Champion", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12 },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Shields", "points": 0, "perModel": true, "active": true }
+      ],
+      "melee": [
+        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Spears", "points": 2, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Choose two" }, "options": [
+            { "name_en": "Blessed Spawning of Chotec", "points": 20 },
+            { "name_en": "Blessed Spawning of Huanchi", "points": 25 },
+            { "name_en": "Blessed Spawning of Quetzl", "points": 30 },
+            { "name_en": "Blessed Spawning of Sotek", "points": 30 },
+            { "name_en": "Blessed Spawning of Tepok", "points": 30 },
+            { "name_en": "Blessed Spawning of Tlazcotl", "points": 20 },
+            { "name_en": "Blessed Spawning of Tzunki", "points": 10 }
+          ]
+        }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (6+), Predatory Fighters" }
+    },
+    {
+      "name_en": "Stegadon",
+      "id": "stegadon",
+      "points": 235,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "lizardmen": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Giant Bow, Skink Crew with Javelins", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Ridden Monster, Scaly Skin (4+), Terror, Large Target, Unit Strength 8, Impact Hits, Howdah, Mixed Weapons, Giant Bow, Stubborn, Immune to Panic" }
+    },
+    {
+      "name_en": "Salamander Hunting Pack",
+      "id": "salamander-hunting-pack",
+      "points": 65,
+      "minimum": 1,
+      "maximum": 3,
+      "armyComposition": { "lizardmen": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Skink Handlers with goads", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Cold Blooded, Scaly Skin (5+), Skirmishers, Aquatic, Fear, Controlled Creature, Spout Flames" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-

@@ -75,7 +75,7 @@
       "id": "lizardmen",
       "name_en": "Lizardmen",
       "name_es": "Hombres Lagarto",
-      "items": ["general"],
+      "items": ["general", "lizardmen", "sacred-plaques"],
       "armyComposition": ["lizardmen"],
       "allies": [],
       "mercenaries": {}
