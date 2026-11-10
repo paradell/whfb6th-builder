@@ -46,7 +46,7 @@
       "id": "dwarfs",
       "name_en": "Dwarfs",
       "name_es": "Enanos",
-      "items": ["general"],
+      "items": ["weapon-runes", "armor-runes", "talismanic-runes", "banner-runes", "engineering-runes"],
       "armyComposition": ["dwarfs"],
       "allies": [],
       "mercenaries": {}
