@@ -4493,6 +4493,16 @@ export const rules = {
     mercenaries: { maxSlots: 0 },
     allies: { maxSlots: 0 },
   },
+  "hordes-of-chaos": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: { maxSlots: 4 },
+    core: { minSlots: 3 },
+    special: { maxSlots: 4 },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
   "lizardmen": {
     characters: { maxSlots: 4 },
     lords: { maxSlots: 1 },

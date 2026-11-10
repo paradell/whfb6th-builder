@@ -1,0 +1,764 @@
+{
+  "characters": [],
+  "lords": [
+    {
+      "name_en": "Lord of Chaos",
+      "id": "lord-of-chaos",
+      "points": 210,
+      "armyComposition": { "hordes-of-chaos": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Chaos Armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "lord-great-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Flail", "id": "lord-flail", "points": 3, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "lord-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Halberd", "id": "lord-halberd", "points": 6, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shield", "points": 3 },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "lord-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "lord-mark-of-khorne", "points": 40, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "lord-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "lord-mark-of-slaanesh", "points": 25, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 4 Wizard)", "id": "lord-mark-of-tzeentch-level-4-wizard", "points": 140, "exclusive": true }] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Chaos Steed", "id": "chaos-steed", "points": 24, "exclusive": true, "notes": { "name_en": "barding included" } },
+        { "name_en": "Daemonic Mount", "id": "daemonic-mount", "points": 50, "exclusive": true },
+        { "name_en": "Chaos Dragon", "id": "chaos-dragon", "points": 360, "exclusive": true },
+        { "name_en": "Chaos Chariot", "id": "chaos-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Chaos Chariot must be bought as a Core choice; the character replaces one of its crew" } },
+        { "name_en": "Disc of Tzeentch", "id": "disc-of-tzeentch", "points": 45, "exclusive": true, "notes": { "name_en": "Mark of Tzeentch only" } },
+        { "name_en": "Juggernaut of Khorne", "id": "juggernaut-of-khorne", "points": 55, "exclusive": true, "notes": { "name_en": "Mark of Khorne only" } },
+        { "name_en": "Steed of Slaanesh", "id": "steed-of-slaanesh", "points": 40, "exclusive": true, "notes": { "name_en": "Mark of Slaanesh only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Arcane items only with the Mark of Tzeentch. God-specific items need the matching Mark (Khorne: Axe of Khorne, Spelleater Shield, Collar of Khorne, Banner of Rage; Nurgle: Filth Mace, Rod of Corruption, Death's Head, Plague Banner; Slaanesh: Whip of Pleasure, Beguiling Gem, Bindings of Slaanesh, Sceptre of Domination, Pendant of Slaanesh, Rapturous Standard; Tzeentch: Staff of Change, Golden Eye of Tzeentch, Mirror of Knowledge, Blasted Standard; Undivided: Banner of the Gods). Chaos Daemon Sword: any Mark except Undivided. Book of Secrets: not Khorne, non-sorcerers only" } }
+      ],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Chaos Armour, Mark of Chaos" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
+    },
+    {
+      "name_en": "Exalted Sorcerer",
+      "id": "exalted-sorcerer",
+      "points": 235,
+      "armyComposition": { "hordes-of-chaos": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Chaos Armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "exalted-sorcerer-great-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Flail", "id": "exalted-sorcerer-flail", "points": 3, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "exalted-sorcerer-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Halberd", "id": "exalted-sorcerer-halberd", "points": 6, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }] },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "exalted-sorcerer-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Nurgle", "id": "exalted-sorcerer-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "exalted-sorcerer-mark-of-slaanesh", "points": 25, "exclusive": true }] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Chaos Steed", "id": "chaos-steed", "points": 24, "exclusive": true, "notes": { "name_en": "barding included" } },
+        { "name_en": "Daemonic Mount", "id": "daemonic-mount", "points": 50, "exclusive": true },
+        { "name_en": "Chaos Chariot", "id": "chaos-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Chaos Chariot must be bought as a Core choice; the character replaces one of its crew" } },
+        { "name_en": "Steed of Slaanesh", "id": "steed-of-slaanesh", "points": 40, "exclusive": true, "notes": { "name_en": "Mark of Slaanesh only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Magic armour: Armour of Damnation, Armour of Tortured Souls or Crimson Armour of Dargan only. God-specific items need the matching Mark (Khorne: Axe of Khorne, Spelleater Shield, Collar of Khorne, Banner of Rage; Nurgle: Filth Mace, Rod of Corruption, Death's Head, Plague Banner; Slaanesh: Whip of Pleasure, Beguiling Gem, Bindings of Slaanesh, Sceptre of Domination, Pendant of Slaanesh, Rapturous Standard; Tzeentch: Staff of Change, Golden Eye of Tzeentch, Mirror of Knowledge, Blasted Standard; Undivided: Banner of the Gods). Chaos Daemon Sword: any Mark except Undivided. Book of Secrets: not Khorne, non-sorcerers only" } }
+      ],
+      "lores": ["lore-of-fire", "lore-of-shadow", "lore-of-death", "the-lore-of-nurgle", "the-lore-of-slaanesh"],
+      "specialRules": { "name_en": "Chaos Armour, Mark of Chaos" },
+      "notes": { "name_en": "Chaos Undivided: Fire, Shadow or Death; Mark of Nurgle or Slaanesh: that god's lore" }
+    },
+    {
+      "name_en": "Daemon Prince",
+      "id": "daemon-prince",
+      "points": 300,
+      "armyComposition": { "hordes-of-chaos": { "category": "lords", "notes": { "name_en": "Also takes one Hero choice" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Daemonic Attacks", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "prince-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "prince-mark-of-khorne", "points": 35, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "prince-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "prince-mark-of-slaanesh", "points": 25, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 4 Wizard)", "id": "prince-mark-of-tzeentch-level-4-wizard", "points": 150, "exclusive": true }] },
+        { "name_en": "Chaos Sorcerer", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Not with the Mark of Khorne or Tzeentch (the Mark of Tzeentch already sets the level)" }, "options": [{ "name_en": "No sorcery", "id": "prince-no-sorcery", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 1 Wizard", "id": "prince-level-1-wizard", "points": 40, "exclusive": true },{ "name_en": "Level 2 Wizard", "id": "prince-level-2-wizard", "points": 80, "exclusive": true },{ "name_en": "Level 3 Wizard", "id": "prince-level-3-wizard", "points": 120, "exclusive": true },{ "name_en": "Level 4 Wizard", "id": "prince-level-4-wizard", "points": 160, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Daemonic Gifts", "types": ["daemonic-gift"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Each gift once per army. God gifts need the matching Mark. Axe of Khorne and Plague Flail cannot be combined with Blade of the Ether. Master of Mortals: only if the Daemon is the General" } }
+      ],
+      "lores": ["lore-of-fire", "lore-of-shadow", "lore-of-death", "the-lore-of-nurgle", "the-lore-of-slaanesh", "the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Terror, Fly, Unit Strength 3" },
+      "notes": { "name_en": "Chaos Undivided: Fire, Shadow or Death; Mark of Nurgle or Slaanesh: that god's lore; Mark of Tzeentch: Lore of Tzeentch" }
+    },
+    {
+      "name_en": "Bloodthirster",
+      "id": "bloodthirster",
+      "points": 650,
+      "armyComposition": { "hordes-of-chaos": { "category": "lords", "notes": { "name_en": "Also takes one Hero and one Rare choice" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Axe of Khorne, Armour of Khorne, Might of Khorne", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Terror, Fly, Large Target, Frenzy, Magic Resistance (2), Mark of Khorne" }
+    },
+    {
+      "name_en": "Keeper of Secrets",
+      "id": "keeper-of-secrets",
+      "points": 625,
+      "armyComposition": { "hordes-of-chaos": { "category": "lords", "notes": { "name_en": "Also takes one Hero and one Rare choice" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Aura of Slaanesh, Soporific Musk", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 0, "exclusive": true, "active": true }] }
+      ],
+      "mounts": [],
+      "lores": ["the-lore-of-slaanesh"],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Terror, Large Target, Mark of Slaanesh" }
+    },
+    {
+      "name_en": "Lord of Change",
+      "id": "lord-of-change",
+      "points": 665,
+      "armyComposition": { "hordes-of-chaos": { "category": "lords", "notes": { "name_en": "Also takes one Hero and one Rare choice" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Tzeentch's Will, Spell Destroyer, Master of Sorcery", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 0, "exclusive": true, "active": true }] }
+      ],
+      "mounts": [],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Terror, Large Target, Fly, Mark of Tzeentch" }
+    },
+    {
+      "name_en": "Great Unclean One",
+      "id": "great-unclean-one",
+      "points": 600,
+      "armyComposition": { "hordes-of-chaos": { "category": "lords", "notes": { "name_en": "Also takes one Hero and one Rare choice" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Stream of Corruption, Cloud of Flies", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 0, "exclusive": true, "active": true }] }
+      ],
+      "mounts": [],
+      "lores": ["the-lore-of-nurgle"],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Terror, Large Target, Mark of Nurgle" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Exalted Champion",
+      "id": "exalted-champion",
+      "points": 100,
+      "armyComposition": { "hordes-of-chaos": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "equipment": [
+        { "name_en": "Chaos Armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "exalted-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Flail", "id": "exalted-flail", "points": 2, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "exalted-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Halberd", "id": "exalted-halberd", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shield", "points": 2 },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "exalted-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "exalted-mark-of-khorne", "points": 35, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "exalted-mark-of-nurgle", "points": 40, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "exalted-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 2 Wizard)", "id": "exalted-mark-of-tzeentch-level-2-wizard", "points": 70, "exclusive": true }] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Chaos Steed", "id": "chaos-steed", "points": 24, "exclusive": true, "notes": { "name_en": "barding included" } },
+        { "name_en": "Daemonic Mount", "id": "daemonic-mount", "points": 50, "exclusive": true },
+        { "name_en": "Chaos Dragon", "id": "chaos-dragon", "points": 360, "exclusive": true },
+        { "name_en": "Chaos Chariot", "id": "chaos-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Chaos Chariot must be bought as a Core choice; the character replaces one of its crew" } },
+        { "name_en": "Disc of Tzeentch", "id": "disc-of-tzeentch", "points": 45, "exclusive": true, "notes": { "name_en": "Mark of Tzeentch only" } },
+        { "name_en": "Juggernaut of Khorne", "id": "juggernaut-of-khorne", "points": 55, "exclusive": true, "notes": { "name_en": "Mark of Khorne only" } },
+        { "name_en": "Steed of Slaanesh", "id": "steed-of-slaanesh", "points": 40, "exclusive": true, "notes": { "name_en": "Mark of Slaanesh only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Arcane items only with the Mark of Tzeentch. God-specific items need the matching Mark (Khorne: Axe of Khorne, Spelleater Shield, Collar of Khorne, Banner of Rage; Nurgle: Filth Mace, Rod of Corruption, Death's Head, Plague Banner; Slaanesh: Whip of Pleasure, Beguiling Gem, Bindings of Slaanesh, Sceptre of Domination, Pendant of Slaanesh, Rapturous Standard; Tzeentch: Staff of Change, Golden Eye of Tzeentch, Mirror of Knowledge, Blasted Standard; Undivided: Banner of the Gods). Chaos Daemon Sword: any Mark except Undivided. Book of Secrets: not Khorne, non-sorcerers only" } }
+      ],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Chaos Armour, Mark of Chaos" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
+    },
+    {
+      "name_en": "Aspiring Champion",
+      "id": "aspiring-champion",
+      "points": 80,
+      "armyComposition": { "hordes-of-chaos": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0, "notes": { "name_en": "only if the army has no Lord-level character" } },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 25, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "equipment": [
+        { "name_en": "Chaos Armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "aspiring-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Flail", "id": "aspiring-flail", "points": 2, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "aspiring-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Halberd", "id": "aspiring-halberd", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shield", "points": 2 },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "aspiring-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "aspiring-mark-of-khorne", "points": 35, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "aspiring-mark-of-nurgle", "points": 40, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "aspiring-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 2 Wizard)", "id": "aspiring-mark-of-tzeentch-level-2-wizard", "points": 70, "exclusive": true }] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Chaos Steed", "id": "chaos-steed", "points": 16, "exclusive": true, "notes": { "name_en": "barding included" } },
+        { "name_en": "Chaos Chariot", "id": "chaos-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Chaos Chariot must be bought as a Core choice; the character replaces one of its crew" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Arcane items only with the Mark of Tzeentch. God-specific items need the matching Mark (Khorne: Axe of Khorne, Spelleater Shield, Collar of Khorne, Banner of Rage; Nurgle: Filth Mace, Rod of Corruption, Death's Head, Plague Banner; Slaanesh: Whip of Pleasure, Beguiling Gem, Bindings of Slaanesh, Sceptre of Domination, Pendant of Slaanesh, Rapturous Standard; Tzeentch: Staff of Change, Golden Eye of Tzeentch, Mirror of Knowledge, Blasted Standard; Undivided: Banner of the Gods). Chaos Daemon Sword: any Mark except Undivided. Book of Secrets: not Khorne, non-sorcerers only" } }
+      ],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Chaos Armour, Mark of Chaos" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
+    },
+    {
+      "name_en": "Sorcerer",
+      "id": "sorcerer",
+      "points": 85,
+      "armyComposition": { "hordes-of-chaos": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0, "notes": { "name_en": "only if the army has no Lord-level character" } }
+      ],
+      "equipment": [
+        { "name_en": "Chaos Armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }] },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "sorcerer-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Nurgle", "id": "sorcerer-mark-of-nurgle", "points": 40, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "sorcerer-mark-of-slaanesh", "points": 20, "exclusive": true }] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Chaos Steed", "id": "chaos-steed", "points": 24, "exclusive": true, "notes": { "name_en": "barding included" } },
+        { "name_en": "Daemonic Mount", "id": "daemonic-mount", "points": 50, "exclusive": true },
+        { "name_en": "Chaos Chariot", "id": "chaos-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Chaos Chariot must be bought as a Core choice; the character replaces one of its crew" } },
+        { "name_en": "Steed of Slaanesh", "id": "steed-of-slaanesh", "points": 40, "exclusive": true, "notes": { "name_en": "Mark of Slaanesh only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Magic armour: Armour of Damnation, Armour of Tortured Souls or Crimson Armour of Dargan only. God-specific items need the matching Mark (Khorne: Axe of Khorne, Spelleater Shield, Collar of Khorne, Banner of Rage; Nurgle: Filth Mace, Rod of Corruption, Death's Head, Plague Banner; Slaanesh: Whip of Pleasure, Beguiling Gem, Bindings of Slaanesh, Sceptre of Domination, Pendant of Slaanesh, Rapturous Standard; Tzeentch: Staff of Change, Golden Eye of Tzeentch, Mirror of Knowledge, Blasted Standard; Undivided: Banner of the Gods). Chaos Daemon Sword: any Mark except Undivided. Book of Secrets: not Khorne, non-sorcerers only" } }
+      ],
+      "lores": ["lore-of-fire", "lore-of-shadow", "lore-of-death", "the-lore-of-nurgle", "the-lore-of-slaanesh"],
+      "specialRules": { "name_en": "Chaos Armour, Mark of Chaos" },
+      "notes": { "name_en": "Chaos Undivided: Fire, Shadow or Death; Mark of Nurgle or Slaanesh: that god's lore" }
+    },
+    {
+      "name_en": "Exalted Daemon",
+      "id": "exalted-daemon",
+      "points": 230,
+      "armyComposition": { "hordes-of-chaos": { "category": "heroes", "notes": { "name_en": "Takes two Hero choices" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Daemonic Attacks", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "exalted-daemon-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "exalted-daemon-mark-of-khorne", "points": 30, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "exalted-daemon-mark-of-nurgle", "points": 40, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "exalted-daemon-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 2 Wizard)", "id": "exalted-daemon-mark-of-tzeentch-level-2-wizard", "points": 75, "exclusive": true }] },
+        { "name_en": "Chaos Sorcerer", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "Not with the Mark of Khorne or Tzeentch (the Mark of Tzeentch already sets the level)" }, "options": [{ "name_en": "No sorcery", "id": "exalted-daemon-no-sorcery", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 1 Wizard", "id": "exalted-daemon-level-1-wizard", "points": 40, "exclusive": true },{ "name_en": "Level 2 Wizard", "id": "exalted-daemon-level-2-wizard", "points": 80, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Daemonic Gifts", "types": ["daemonic-gift"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Each gift once per army. God gifts need the matching Mark. Axe of Khorne and Plague Flail cannot be combined with Blade of the Ether. Master of Mortals: only if the Daemon is the General" } }
+      ],
+      "lores": ["lore-of-fire", "lore-of-shadow", "lore-of-death", "the-lore-of-nurgle", "the-lore-of-slaanesh", "the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Fly, Terror, Unit Strength 3" },
+      "notes": { "name_en": "Chaos Undivided: Fire, Shadow or Death; Mark of Nurgle or Slaanesh: that god's lore; Mark of Tzeentch: Lore of Tzeentch" }
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Chaos Warriors",
+      "id": "chaos-warriors",
+      "points": 14,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Halberds", "id": "warriors-halberds", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Additional Hand Weapons", "id": "warriors-additional-hand-weapons", "points": 3, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "warriors-great-weapons", "points": 2, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true },
+        { "name_en": "Chosen (+1 Attack, Chaos Armour)", "points": 6, "perModel": true },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "warriors-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "warriors-mark-of-khorne", "points": 45, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "warriors-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "warriors-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch", "id": "warriors-mark-of-tzeentch", "points": 20, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Mark of Chaos" }
+    },
+    {
+      "name_en": "Chaos Knights",
+      "id": "chaos-knights",
+      "points": 33,
+      "minimum": 4,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Heavy Armour, Shields, barded Chaos Steeds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Chosen (+1 Attack, Chaos Armour)", "points": 12, "perModel": true },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "knights-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "knights-mark-of-khorne", "points": 45, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "knights-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "knights-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch", "id": "knights-mark-of-tzeentch", "points": 20, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Mark of Chaos" }
+    },
+    {
+      "name_en": "Marauders",
+      "id": "marauders",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core" } },
+      "command": [
+        { "name_en": "Marauder Chieftain", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Flails", "id": "marauders-flails", "points": 1, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "marauders-great-weapons", "points": 2, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 1, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": []
+    },
+    {
+      "name_en": "Marauder Horsemen",
+      "id": "marauder-horsemen",
+      "points": 13,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core" } },
+      "command": [
+        { "name_en": "Marauder Chieftain", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12 },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Horses", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Flails", "id": "horsemen-flails", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Spears", "id": "horsemen-spears", "points": 1, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [
+        { "name_en": "Throwing Axes", "id": "horsemen-throwing-axes", "points": 4, "exclusive": true, "perModel": true },
+        { "name_en": "Javelins", "id": "horsemen-javelins", "points": 4, "exclusive": true, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 2, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fast Cavalry" }
+    },
+    {
+      "name_en": "Chaos Chariot",
+      "id": "chaos-chariot",
+      "points": 120,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "hordes-of-chaos": { "category": "core" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Two Chaos Warrior crew with halberds, two barded Chaos Steeds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "chariot-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "chariot-mark-of-khorne", "points": 30, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "chariot-mark-of-nurgle", "points": 15, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "chariot-mark-of-slaanesh", "points": 10, "exclusive": true },{ "name_en": "Mark of Tzeentch", "id": "chariot-mark-of-tzeentch", "points": 20, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Chariot, Mark of Chaos" }
+    },
+    {
+      "name_en": "Chaos Warhounds",
+      "id": "chaos-warhounds",
+      "points": 6,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Beastmen Ambush" }
+    },
+    {
+      "name_en": "Chaos Furies",
+      "id": "chaos-furies",
+      "points": 15,
+      "minimum": 5,
+      "maximum": 20,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic. 0-1" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Flying Unit, Mark of Chaos Undivided" }
+    },
+    {
+      "name_en": "Bloodletters",
+      "id": "bloodletters",
+      "points": 16,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic" } } },
+      "command": [
+        { "name_en": "Bloodhowler", "points": 14 },
+        { "name_en": "Standard Bearer", "points": 14 },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Frenzy, Magic Resistance (1), Mark of Khorne" }
+    },
+    {
+      "name_en": "Flesh Hounds",
+      "id": "flesh-hounds",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Frenzy, Fast Cavalry, Mark of Khorne" }
+    },
+    {
+      "name_en": "Plaguebearers",
+      "id": "plaguebearers",
+      "points": 16,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Cloud of Flies, Stream of Corruption, Mark of Nurgle" }
+    },
+    {
+      "name_en": "Nurglings",
+      "id": "nurglings",
+      "points": 40,
+      "minimum": 1,
+      "maximum": 5,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic. 0-1" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Swarm, Cloud of Flies, Mark of Nurgle" }
+    },
+    {
+      "name_en": "Daemonettes",
+      "id": "daemonettes",
+      "points": 15,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Aura of Slaanesh, Mark of Slaanesh" }
+    },
+    {
+      "name_en": "Mounted Daemonettes",
+      "id": "mounted-daemonettes",
+      "points": 30,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Aura of Slaanesh, Mount of Slaanesh, Tongue Attack, Fast Cavalry, Mark of Slaanesh" }
+    },
+    {
+      "name_en": "Horrors",
+      "id": "horrors",
+      "points": 15,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic. Spells: Fire of Tzeentch, Coruscation of Energy, Uncontrollable Mutation" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Flamers", "points": 25, "stackable": true, "minimum": 0, "maximum": 4 }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Spellcasters, Flames of Tzeentch, Mark of Tzeentch" }
+    },
+    {
+      "name_en": "Screamers",
+      "id": "screamers",
+      "points": 33,
+      "minimum": 3,
+      "maximum": 20,
+      "armyComposition": { "hordes-of-chaos": { "category": "core", "notes": { "name_en": "Special choice unless the General is Daemonic. 0-1" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Daemonic, Daemonic Attacks, Flying Unit, Slashing Attack, Mark of Tzeentch" }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Chaos Ogres",
+      "id": "chaos-ogres",
+      "points": 35,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "special" } },
+      "command": [
+        { "name_en": "Big Chaos Ogre", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapons", "id": "ogres-additional-hand-weapons", "points": 4, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "ogres-great-weapons", "points": 6, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Heavy Armour", "points": 3, "perModel": true, "notes": { "name_en": "replaces the light armour" } }
+      ],
+      "options": [
+        { "name_en": "Shields", "points": 3, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear" }
+    },
+    {
+      "name_en": "Chaos Trolls",
+      "id": "chaos-trolls",
+      "points": 55,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "special" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Regeneration, Stupidity, Troll Vomit" }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Chaos Spawn",
+      "id": "chaos-spawn",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 2,
+      "armyComposition": { "hordes-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Beast of Nurgle", "id": "spawn-beast-of-nurgle", "points": 15, "exclusive": true, "perModel": true },
+        { "name_en": "Bloodbeast of Khorne", "id": "spawn-bloodbeast-of-khorne", "points": 15, "exclusive": true, "perModel": true },
+        { "name_en": "Fiend of Slaanesh", "id": "spawn-fiend-of-slaanesh", "points": 15, "exclusive": true, "perModel": true },
+        { "name_en": "Firewyrm of Tzeentch", "id": "spawn-firewyrm-of-tzeentch", "points": 15, "exclusive": true, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Unbreakable, Unit Strength 3, Special Movement, Special Attacks" }
+    },
+    {
+      "name_en": "Chaos Giant",
+      "id": "chaos-giant",
+      "points": 205,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "hordes-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Mutant Monstrosity", "points": 20 }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Large Target, Terror, Giant Special Attacks, Fall Over" }
+    },
+    {
+      "name_en": "Dragon Ogres",
+      "id": "dragon-ogres",
+      "points": 70,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "hordes-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapons", "id": "dragon-ogres-additional-hand-weapons", "points": 4, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "dragon-ogres-great-weapons", "points": 6, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3, "perModel": true }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Scaly Skin (5+), Storm Rage" }
+    },
+    {
+      "name_en": "Dragon Ogre Shaggoth",
+      "id": "dragon-ogre-shaggoth",
+      "points": 295,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "hordes-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Hand Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapon", "id": "shaggoth-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "shaggoth-great-weapon", "points": 8, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3 }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Terror, Large Target, Scaly Skin (4+), Immune to Psychology, Storm Rage" }
+    }
+  ],
+  "mercenaries": [],
+  "allies": []
+}

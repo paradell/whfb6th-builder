@@ -4054,5 +4054,539 @@
       "type": "spite",
       "name": "an annoyance of netlings"
     }
+  ],
+  "hordes-of-chaos": [
+    {
+      "name_en": "Chaos Daemon Sword",
+      "points": 85,
+      "type": "weapon",
+      "name": "chaos daemon sword"
+    },
+    {
+      "name_en": "Hellfire Sword",
+      "points": 75,
+      "type": "weapon",
+      "name": "hellfire sword"
+    },
+    {
+      "name_en": "Sword of Change",
+      "points": 75,
+      "type": "weapon",
+      "name": "sword of change"
+    },
+    {
+      "name_en": "Chaos Runesword",
+      "points": 70,
+      "type": "weapon",
+      "name": "chaos runesword"
+    },
+    {
+      "name_en": "Whip of Pleasure",
+      "points": 50,
+      "type": "weapon",
+      "name": "whip of pleasure"
+    },
+    {
+      "name_en": "Berserker Sword",
+      "points": 40,
+      "type": "weapon",
+      "name": "berserker sword"
+    },
+    {
+      "name_en": "Rending Sword",
+      "points": 40,
+      "type": "weapon",
+      "name": "rending sword"
+    },
+    {
+      "name_en": "Blade of Blood",
+      "points": 35,
+      "type": "weapon",
+      "name": "blade of blood"
+    },
+    {
+      "name_en": "Filth Mace",
+      "points": 35,
+      "type": "weapon",
+      "name": "filth mace"
+    },
+    {
+      "name_en": "Soul Cleaver",
+      "points": 30,
+      "type": "weapon",
+      "name": "soul cleaver"
+    },
+    {
+      "name_en": "Axe of Khorne",
+      "points": 25,
+      "type": "weapon",
+      "name": "axe of khorne"
+    },
+    {
+      "name_en": "Spelleater Shield",
+      "points": 75,
+      "type": "armor",
+      "name": "spelleater shield"
+    },
+    {
+      "name_en": "Chaos Runeshield",
+      "points": 50,
+      "type": "armor",
+      "name": "chaos runeshield"
+    },
+    {
+      "name_en": "Armour of Tortured Souls",
+      "points": 40,
+      "type": "armor",
+      "name": "armour of tortured souls"
+    },
+    {
+      "name_en": "Armour of Damnation",
+      "points": 30,
+      "type": "armor",
+      "name": "armour of damnation"
+    },
+    {
+      "name_en": "Bane Shield",
+      "points": 30,
+      "type": "armor",
+      "name": "bane shield"
+    },
+    {
+      "name_en": "Crimson Armour of Dargan",
+      "points": 20,
+      "type": "armor",
+      "name": "crimson armour of dargan"
+    },
+    {
+      "name_en": "Beguiling Gem",
+      "points": 75,
+      "type": "talisman",
+      "name": "beguiling gem"
+    },
+    {
+      "name_en": "Crown of Everlasting Conquest",
+      "points": 50,
+      "type": "talisman",
+      "name": "crown of everlasting conquest"
+    },
+    {
+      "name_en": "Amulet of Chaos",
+      "points": 45,
+      "type": "talisman",
+      "name": "amulet of chaos"
+    },
+    {
+      "name_en": "Gaze of the Gods",
+      "points": 30,
+      "type": "talisman",
+      "name": "gaze of the gods"
+    },
+    {
+      "name_en": "Golden Eye of Tzeentch",
+      "points": 30,
+      "type": "talisman",
+      "name": "golden eye of tzeentch"
+    },
+    {
+      "name_en": "Collar of Khorne",
+      "points": 25,
+      "type": "talisman",
+      "name": "collar of khorne"
+    },
+    {
+      "name_en": "Staff of Change",
+      "points": 65,
+      "type": "arcane-item",
+      "name": "staff of change"
+    },
+    {
+      "name_en": "Power Familiar",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "power familiar"
+    },
+    {
+      "name_en": "Skull of Katam",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "skull of katam"
+    },
+    {
+      "name_en": "Warrior Familiar",
+      "points": 30,
+      "type": "arcane-item",
+      "name": "warrior familiar"
+    },
+    {
+      "name_en": "Spell Familiar",
+      "points": 15,
+      "type": "arcane-item",
+      "name": "spell familiar"
+    },
+    {
+      "name_en": "Rod of Corruption",
+      "points": 75,
+      "type": "enchanted-item",
+      "name": "rod of corruption"
+    },
+    {
+      "name_en": "Bindings of Slaanesh",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "bindings of slaanesh"
+    },
+    {
+      "name_en": "Book of Secrets",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "book of secrets"
+    },
+    {
+      "name_en": "Chalice of Chaos",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "chalice of chaos"
+    },
+    {
+      "name_en": "Death's Head",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "death's head"
+    },
+    {
+      "name_en": "Helm of Many Eyes",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "helm of many eyes"
+    },
+    {
+      "name_en": "Sceptre of Domination",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "sceptre of domination"
+    },
+    {
+      "name_en": "Mirror of Knowledge",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "mirror of knowledge"
+    },
+    {
+      "name_en": "Pendant of Slaanesh",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "pendant of slaanesh"
+    },
+    {
+      "name_en": "Banner of the Gods",
+      "points": 125,
+      "type": "banner",
+      "name": "banner of the gods"
+    },
+    {
+      "name_en": "Banner of Rage",
+      "points": 50,
+      "type": "banner",
+      "name": "banner of rage"
+    },
+    {
+      "name_en": "Banner of Wrath",
+      "points": 50,
+      "type": "banner",
+      "name": "banner of wrath"
+    },
+    {
+      "name_en": "Blasted Standard",
+      "points": 50,
+      "type": "banner",
+      "name": "blasted standard"
+    },
+    {
+      "name_en": "Plague Banner",
+      "points": 50,
+      "type": "banner",
+      "name": "plague banner"
+    },
+    {
+      "name_en": "Rapturous Standard",
+      "points": 50,
+      "type": "banner",
+      "name": "rapturous standard"
+    }
+  ],
+  "daemonic-gifts": [
+    {
+      "name_en": "Chaos Disruption",
+      "points": 50,
+      "type": "daemonic-gift",
+      "name": "chaos disruption"
+    },
+    {
+      "name_en": "Blade of Ether",
+      "points": 45,
+      "type": "daemonic-gift",
+      "name": "blade of ether"
+    },
+    {
+      "name_en": "Radiance of Dark Glory",
+      "points": 40,
+      "type": "daemonic-gift",
+      "name": "radiance of dark glory"
+    },
+    {
+      "name_en": "Soul Hunger",
+      "points": 25,
+      "type": "daemonic-gift",
+      "name": "soul hunger"
+    },
+    {
+      "name_en": "Spell Breaker",
+      "points": 25,
+      "type": "daemonic-gift",
+      "name": "spell breaker"
+    },
+    {
+      "name_en": "Diabolical Splendour",
+      "points": 20,
+      "type": "daemonic-gift",
+      "name": "diabolical splendour"
+    },
+    {
+      "name_en": "Master of Mortals",
+      "points": 5,
+      "type": "daemonic-gift",
+      "name": "master of mortals"
+    },
+    {
+      "name_en": "Collar of Khorne (Daemonic Gift)",
+      "points": 40,
+      "type": "daemonic-gift",
+      "name": "collar of khorne (daemonic gift)"
+    },
+    {
+      "name_en": "Armour of Khorne",
+      "points": 25,
+      "type": "daemonic-gift",
+      "name": "armour of khorne"
+    },
+    {
+      "name_en": "Axe of Khorne (Daemonic Gift)",
+      "points": 25,
+      "type": "daemonic-gift",
+      "name": "axe of khorne (daemonic gift)"
+    },
+    {
+      "name_en": "Might of Khorne",
+      "points": 20,
+      "type": "daemonic-gift",
+      "name": "might of khorne"
+    },
+    {
+      "name_en": "Tzeentch's Will",
+      "points": 75,
+      "type": "daemonic-gift",
+      "name": "tzeentch's will"
+    },
+    {
+      "name_en": "Spell Destroyer",
+      "points": 50,
+      "type": "daemonic-gift",
+      "name": "spell destroyer"
+    },
+    {
+      "name_en": "Master of Sorcery",
+      "points": 15,
+      "type": "daemonic-gift",
+      "name": "master of sorcery"
+    },
+    {
+      "name_en": "Power Vortex",
+      "points": 10,
+      "type": "daemonic-gift",
+      "name": "power vortex"
+    },
+    {
+      "name_en": "Cloud of Flies",
+      "points": 40,
+      "type": "daemonic-gift",
+      "name": "cloud of flies"
+    },
+    {
+      "name_en": "Stream of Corruption",
+      "points": 30,
+      "type": "daemonic-gift",
+      "name": "stream of corruption"
+    },
+    {
+      "name_en": "Plague Flail",
+      "points": 15,
+      "type": "daemonic-gift",
+      "name": "plague flail"
+    },
+    {
+      "name_en": "Aura of Slaanesh",
+      "points": 30,
+      "type": "daemonic-gift",
+      "name": "aura of slaanesh"
+    },
+    {
+      "name_en": "Soporific Musk",
+      "points": 30,
+      "type": "daemonic-gift",
+      "name": "soporific musk"
+    },
+    {
+      "name_en": "Gaze of Acquiescence",
+      "points": 20,
+      "type": "daemonic-gift",
+      "name": "gaze of acquiescence"
+    },
+    {
+      "name_en": "Unliving Idol",
+      "points": 10,
+      "type": "daemonic-gift",
+      "name": "unliving idol"
+    }
+  ],
+  "beasts-of-chaos": [
+    {
+      "name_en": "Axes of Khorgor",
+      "points": 65,
+      "type": "weapon",
+      "name": "axes of khorgor"
+    },
+    {
+      "name_en": "The Black Maul",
+      "points": 60,
+      "type": "weapon",
+      "name": "the black maul"
+    },
+    {
+      "name_en": "Bonecrusher Mace",
+      "points": 55,
+      "type": "weapon",
+      "name": "bonecrusher mace"
+    },
+    {
+      "name_en": "Great Fang",
+      "points": 50,
+      "type": "weapon",
+      "name": "great fang"
+    },
+    {
+      "name_en": "Slaughter's Blade",
+      "points": 40,
+      "type": "weapon",
+      "name": "slaughter's blade"
+    },
+    {
+      "name_en": "Scimitar of Skultar",
+      "points": 15,
+      "type": "weapon",
+      "name": "scimitar of skultar"
+    },
+    {
+      "name_en": "Pelt of the Dark Young",
+      "points": 25,
+      "type": "armor",
+      "name": "pelt of the dark young"
+    },
+    {
+      "name_en": "Trollhide Armour",
+      "points": 20,
+      "type": "armor",
+      "name": "trollhide armour"
+    },
+    {
+      "name_en": "The Fur of Sharrgu",
+      "points": 15,
+      "type": "armor",
+      "name": "the fur of sharrgu"
+    },
+    {
+      "name_en": "Chaos Armour (Beastmen)",
+      "points": 10,
+      "type": "armor",
+      "name": "chaos armour (beastmen)"
+    },
+    {
+      "name_en": "Bloodhunt Horn",
+      "points": 30,
+      "type": "talisman",
+      "name": "bloodhunt horn"
+    },
+    {
+      "name_en": "Crown of Horns",
+      "points": 30,
+      "type": "talisman",
+      "name": "crown of horns"
+    },
+    {
+      "name_en": "Horn of the Great Hunt",
+      "points": 30,
+      "type": "talisman",
+      "name": "horn of the great hunt"
+    },
+    {
+      "name_en": "Rune of the True Beast",
+      "points": 30,
+      "type": "talisman",
+      "name": "rune of the true beast"
+    },
+    {
+      "name_en": "The Dark Heart",
+      "points": 25,
+      "type": "talisman",
+      "name": "the dark heart"
+    },
+    {
+      "name_en": "The Plague Chalice",
+      "points": 30,
+      "type": "arcane-item",
+      "name": "the plague chalice"
+    },
+    {
+      "name_en": "The Goretooth",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "the goretooth"
+    },
+    {
+      "name_en": "Staff of Darkoth",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "staff of darkoth"
+    },
+    {
+      "name_en": "The Beast Banner",
+      "points": 60,
+      "type": "banner",
+      "name": "the beast banner"
+    },
+    {
+      "name_en": "The Flesh Banner",
+      "points": 50,
+      "type": "banner",
+      "name": "the flesh banner"
+    },
+    {
+      "name_en": "The Gore Banner",
+      "points": 25,
+      "type": "banner",
+      "name": "the gore banner"
+    },
+    {
+      "name_en": "Preyseeker",
+      "points": 25,
+      "type": "banner",
+      "name": "preyseeker"
+    },
+    {
+      "name_en": "Vitrolic Totem",
+      "points": 25,
+      "type": "banner",
+      "name": "vitrolic totem"
+    }
   ]
 }

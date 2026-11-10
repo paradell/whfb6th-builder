@@ -6,7 +6,7 @@
       "id": "beasts-of-chaos",
       "name_en": "Beasts of Chaos",
       "name_es": "Bestias del Caos",
-      "items": ["general"],
+      "items": ["general", "beasts-of-chaos", "hordes-of-chaos", "daemonic-gifts"],
       "armyComposition": ["beasts-of-chaos"],
       "allies": [],
       "mercenaries": {}
@@ -68,6 +68,15 @@
       "name_es": "Altos Elfos",
       "items": ["high-elves", "elven-honours"],
       "armyComposition": ["high-elves"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "hordes-of-chaos",
+      "name_en": "Hordes of Chaos",
+      "name_es": "Hordas del Caos",
+      "items": ["general", "hordes-of-chaos", "daemonic-gifts"],
+      "armyComposition": ["hordes-of-chaos"],
       "allies": [],
       "mercenaries": {}
     },

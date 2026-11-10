@@ -189,6 +189,15 @@ export const nameMap = {
   "the-lore-of-athel-loren": {
     name_en: "The Lore of Athel Loren",
   },
+  "the-lore-of-nurgle": {
+    name_en: "The Lore of Nurgle",
+  },
+  "the-lore-of-tzeentch": {
+    name_en: "The Lore of Tzeentch",
+  },
+  "the-lore-of-slaanesh": {
+    name_en: "The Lore of Slaanesh",
+  },
   "lore-of-fire": {
     name_en: "Lore of Fire",
     name_es: "Saber del Fuego",
@@ -394,6 +403,12 @@ export const nameMap = {
   spite: {
     name_en: "Spite",
   },
+  "daemonic-gifts": {
+    name_en: "Daemonic Gifts",
+  },
+  "daemonic-gift": {
+    name_en: "Daemonic Gift",
+  },
   "disciplines-old-ones": {
     name_en: "Disciplines of the Old Ones",
   },
@@ -521,6 +536,10 @@ export const nameMap = {
   "high-elves": {
     name_en: "High Elves",
     name_es: "Altos Elfos",
+  },
+  "hordes-of-chaos": {
+    name_en: "Hordes of Chaos",
+    name_es: "Hordas del Caos",
   },
   "lizardmen": {
     name_en: "Lizardmen",
