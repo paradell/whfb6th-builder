@@ -275,7 +275,7 @@
       "armor": [],
       "options": [
         {
-          "name_en": "Blessed Spawnings", "points": 0, "active": true, "alwaysActive": true, "maxActive": 2, "categoryByActiveCount": ["core", "special", "rare"], "notes": { "name_en": "One spawning: Special choice. Two spawnings: Rare choice" }, "options": [
+          "name_en": "Blessed Spawnings: one spawning makes the unit a Special choice, two spawnings make it a Rare choice", "points": 0, "active": true, "alwaysActive": true, "maxActive": 2, "categoryByActiveCount": ["core", "special", "rare"], "options": [
             { "name_en": "Blessed Spawning of Chotec", "points": 20 },
             { "name_en": "Blessed Spawning of Huanchi", "points": 25 },
             { "name_en": "Blessed Spawning of Quetzl", "points": 30 },

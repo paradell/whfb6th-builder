@@ -1394,30 +1394,36 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       alwaysActive;
                     return (
                       <Fragment key={id}>
-                        <div className="checkbox">
-                          <input
-                            type="checkbox"
-                            id={`options-${id}`}
-                            value={id}
-                            onChange={() =>
-                              !alwaysActive && handleOptionsChange(id)
-                            }
-                            checked={alwaysActive || active}
-                            className="checkbox__input"
-                            disabled={isDisabled}
-                          />
-                          <label
-                            htmlFor={`options-${id}`}
-                            className="checkbox__label"
-                          >
-                            <span className="unit__label-text">
-                              <RulesWithIcon textObject={equipment} />
-                            </span>
-                            <i className="checkbox__points">
-                              {getPointsText({ points, perModel })}
-                            </i>
-                          </label>
-                        </div>
+                        {categoryByActiveCount ? (
+                          <p className="unit__option-info">
+                            <RulesWithIcon textObject={equipment} />
+                          </p>
+                        ) : (
+                          <div className="checkbox">
+                            <input
+                              type="checkbox"
+                              id={`options-${id}`}
+                              value={id}
+                              onChange={() =>
+                                !alwaysActive && handleOptionsChange(id)
+                              }
+                              checked={alwaysActive || active}
+                              className="checkbox__input"
+                              disabled={isDisabled}
+                            />
+                            <label
+                              htmlFor={`options-${id}`}
+                              className="checkbox__label"
+                            >
+                              <span className="unit__label-text">
+                                <RulesWithIcon textObject={equipment} />
+                              </span>
+                              <i className="checkbox__points">
+                                {getPointsText({ points, perModel })}
+                              </i>
+                            </label>
+                          </div>
+                        )}
                         {getUnitOptionNotes({
                           notes,
                           key: `options-${id}-note`,
