@@ -649,5 +649,47 @@
     "trollguts": {
       "index": "6"
     }
+  },
+
+  "little-waaagh": {
+    "gaze-of-mork": {
+      "index": "1"
+    },
+    "fists-of-gork": {
+      "index": "2"
+    },
+    "eadbutt": {
+      "index": "3"
+    },
+    "brain-bursta": {
+      "index": "4"
+    },
+    "ere-we-go": {
+      "index": "5"
+    },
+    "the-hand-of-gork": {
+      "index": "6"
+    }
+  },
+
+  "big-waaagh": {
+    "mork-save-uz": {
+      "index": "1"
+    },
+    "gorkll-fix-it": {
+      "index": "2"
+    },
+    "bash-em-ladz": {
+      "index": "3"
+    },
+    "the-foot-of-gork": {
+      "index": "4"
+    },
+    "gorks-warpath": {
+      "index": "5"
+    },
+    "waaagh": {
+      "index": "6"
+    }
   }
 }

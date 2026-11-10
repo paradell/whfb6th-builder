@@ -3339,6 +3339,14 @@
     "url": "the-lores-of-magic/lore-of-the-great-maw-renegade",
     "page": "TRLP, p. 17"
   },
+  "spells of the little waaagh!": {
+    "url": "spell-lists/spells-of-the-little-waaagh",
+    "page": "O&G, p. 28"
+  },
+  "spells of the big waaagh!": {
+    "url": "spell-lists/spells-of-the-big-waaagh",
+    "page": "O&G, p. 29"
+  },
   "gut magic": {
     "url": "spell-lists/gut-magic",
     "page": "OK, p. 61"
@@ -21749,6 +21757,14 @@
   "blue fire": { "url": "spell/blue-fire", "page": "RH, p. 83" },
   "brain bursta": { "url": "spell/brain-bursta", "page": "RH, p. 47" },
   "bloodgruel": { "url": "spell/bloodgruel", "page": "OK, p. 61" },
+  "gaze of mork": { "url": "spell/gaze-of-mork", "page": "O&G, p. 28" },
+  "fists of gork": { "url": "spell/fists-of-gork", "page": "O&G, p. 28" },
+  "the hand of gork": { "url": "spell/the-hand-of-gork", "page": "O&G, p. 28" },
+  "mork save uz!": { "url": "spell/mork-save-uz", "page": "O&G, p. 29" },
+  "gork'll fix it": { "url": "spell/gorkll-fix-it", "page": "O&G, p. 29" },
+  "bash 'em ladz": { "url": "spell/bash-em-ladz", "page": "O&G, p. 29" },
+  "the foot of gork": { "url": "spell/the-foot-of-gork", "page": "O&G, p. 29" },
+  "gork's warpath": { "url": "spell/gorks-warpath", "page": "O&G, p. 29" },
   "braingobbler": { "url": "spell/braingobbler", "page": "OK, p. 61" },
   "bullgorger": { "url": "spell/bullgorger", "page": "OK, p. 61" },
   "bonecruncher": { "url": "spell/bonecruncher", "page": "OK, p. 61" },

@@ -3015,5 +3015,271 @@
       "type": "big-name",
       "name": "mawseeker"
     }
+  ],
+  "orcs-and-goblins": [
+    {
+      "name_en": "Battleaxe of the Last Waaagh!",
+      "points": 75,
+      "type": "weapon",
+      "name": "battleaxe of the last waaagh!"
+    },
+    {
+      "name_en": "Kleeva's Cleaver of Cleavage",
+      "points": 75,
+      "type": "weapon",
+      "name": "kleeva's cleaver of cleavage"
+    },
+    {
+      "name_en": "Basha's Big Axe of Bashin'",
+      "points": 50,
+      "type": "weapon",
+      "name": "basha's big axe of bashin'"
+    },
+    {
+      "name_en": "Krumpa's Club of Crumpin'",
+      "points": 50,
+      "type": "weapon",
+      "name": "krumpa's club of crumpin'"
+    },
+    {
+      "name_en": "Hacka's Sword of Hackin'",
+      "points": 45,
+      "type": "weapon",
+      "name": "hacka's sword of hackin'"
+    },
+    {
+      "name_en": "Fumpa's Club of Fumpin'",
+      "points": 40,
+      "type": "weapon",
+      "name": "fumpa's club of fumpin'"
+    },
+    {
+      "name_en": "Kurbog's Curmudgeonly Clobbera",
+      "points": 40,
+      "type": "weapon",
+      "name": "kurbog's curmudgeonly clobbera"
+    },
+    {
+      "name_en": "Porko's Pigstikka",
+      "points": 40,
+      "type": "weapon",
+      "name": "porko's pigstikka"
+    },
+    {
+      "name_en": "Ulag's Akk'rit Axe",
+      "points": 35,
+      "type": "weapon",
+      "name": "ulag's akk'rit axe"
+    },
+    {
+      "name_en": "Duffa's Club of Duffin'",
+      "points": 30,
+      "type": "weapon",
+      "name": "duffa's club of duffin'"
+    },
+    {
+      "name_en": "Owzat's Club of Smackin'",
+      "points": 25,
+      "type": "weapon",
+      "name": "owzat's club of smackin'"
+    },
+    {
+      "name_en": "Wollopa's One Hit Wunda",
+      "points": 10,
+      "type": "weapon",
+      "name": "wollopa's one hit wunda"
+    },
+    {
+      "name_en": "Armour of Protectyness",
+      "points": 60,
+      "type": "armor",
+      "name": "armour of protectyness"
+    },
+    {
+      "name_en": "Armour of Mork",
+      "points": 50,
+      "type": "armor",
+      "name": "armour of mork"
+    },
+    {
+      "name_en": "Ironskin Shield",
+      "points": 50,
+      "type": "armor",
+      "name": "ironskin shield"
+    },
+    {
+      "name_en": "Armour of Gork",
+      "points": 35,
+      "type": "armor",
+      "name": "armour of gork"
+    },
+    {
+      "name_en": "Drog's Dead 'Ard Armour",
+      "points": 30,
+      "type": "armor",
+      "name": "drog's dead 'ard armour"
+    },
+    {
+      "name_en": "Ugbrag's Lucky Shield",
+      "points": 30,
+      "type": "armor",
+      "name": "ugbrag's lucky shield"
+    },
+    {
+      "name_en": "Nobbla's 'Elmet",
+      "points": 20,
+      "type": "armor",
+      "name": "nobbla's 'elmet"
+    },
+    {
+      "name_en": "Sizzla's Shiny Baubles",
+      "points": 35,
+      "type": "talisman",
+      "name": "sizzla's shiny baubles"
+    },
+    {
+      "name_en": "Warboss Umm's Best Big Boss's 'At",
+      "points": 30,
+      "type": "talisman",
+      "name": "warboss umm's best big boss's 'at"
+    },
+    {
+      "name_en": "Magical Warpaint",
+      "points": 25,
+      "type": "talisman",
+      "name": "magical warpaint"
+    },
+    {
+      "name_en": "Glowy Green Amulet",
+      "points": 20,
+      "type": "talisman",
+      "name": "glowy green amulet"
+    },
+    {
+      "name_en": "The Collar of Zorga",
+      "points": 15,
+      "type": "talisman",
+      "name": "the collar of zorga"
+    },
+    {
+      "name_en": "Buzgob's Knobbly Staff",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "buzgob's knobbly staff"
+    },
+    {
+      "name_en": "Staff of Baduumm",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "staff of baduumm"
+    },
+    {
+      "name_en": "Dangly Wotnotz",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "dangly wotnotz"
+    },
+    {
+      "name_en": "Ditto's Double Doin' Doo-Dahs",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "ditto's double doin' doo-dahs"
+    },
+    {
+      "name_en": "Staff of Sneaky Stealin'",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "staff of sneaky stealin'"
+    },
+    {
+      "name_en": "Warboss Imbad's Iron Gnashas",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "warboss imbad's iron gnashas"
+    },
+    {
+      "name_en": "Bigged's 'Ed Kickin Boots",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "bigged's 'ed kickin boots"
+    },
+    {
+      "name_en": "Effigy of Mork",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "effigy of mork"
+    },
+    {
+      "name_en": "Guzzla's Backbone Brew",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "guzzla's backbone brew"
+    },
+    {
+      "name_en": "Mad Cap Mushrooms",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "mad cap mushrooms"
+    },
+    {
+      "name_en": "'Edbuttin' 'At",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "'edbuttin' 'at"
+    },
+    {
+      "name_en": "Nibbla's 'Itty Ring",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "nibbla's 'itty ring"
+    },
+    {
+      "name_en": "Mork's Spirit-Totem",
+      "points": 75,
+      "type": "banner",
+      "name": "mork's spirit-totem"
+    },
+    {
+      "name_en": "Rowdy Grott's Big Red Raggedy Banner",
+      "points": 75,
+      "type": "banner",
+      "name": "rowdy grott's big red raggedy banner"
+    },
+    {
+      "name_en": "Bad Moon Banner",
+      "points": 60,
+      "type": "banner",
+      "name": "bad moon banner"
+    },
+    {
+      "name_en": "Night Banner",
+      "points": 40,
+      "type": "banner",
+      "name": "night banner"
+    },
+    {
+      "name_en": "Gork's Waaagh! Banner",
+      "points": 30,
+      "type": "banner",
+      "name": "gork's waaagh! banner"
+    },
+    {
+      "name_en": "Guff's Flag",
+      "points": 25,
+      "type": "banner",
+      "name": "guff's flag"
+    },
+    {
+      "name_en": "Nogg's Banner of Butchery",
+      "points": 25,
+      "type": "banner",
+      "name": "nogg's banner of butchery"
+    },
+    {
+      "name_en": "The Bashin' Flag of Bork",
+      "points": 10,
+      "type": "banner",
+      "name": "the bashin' flag of bork"
+    }
   ]
 }
