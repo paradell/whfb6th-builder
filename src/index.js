@@ -11,12 +11,8 @@ import { App } from "./App";
 import store from "./store";
 
 import English from "./i18n/en.json";
-import German from "./i18n/de.json";
 import Spanish from "./i18n/es.json";
-import French from "./i18n/fr.json";
-import Italian from "./i18n/it.json";
-import Polish from "./i18n/pl.json";
-import Chinese from "./i18n/cn.json";
+import Catalan from "./i18n/ct.json";
 
 // Sentry error tracking
 if (process.env.NODE_ENV !== "development") {
@@ -29,13 +25,9 @@ if (process.env.NODE_ENV !== "development") {
 }
 
 const metaDescription = {
-  de: "Armeebauer für Warhammer: The Old World.",
   en: "Army builder for Warhammer: The Old World.",
-  fr: "Un créateur de liste d'armée pour les jeux Games Workshop 'Warhammer: The Old World'.",
   es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World.",
-  it: "Costruttore di eserciti per Warhammer: The Old World.",
-  pl: "Konstruktor armii dla Warhammer: The Old World.",
-  cn: "《战锤：旧世界》的军队建造者。",
+  ct: "Creador de llistes d'exèrcit per a Warhammer: The Old World.",
 };
 
 try {
@@ -48,7 +40,7 @@ try {
 } catch {}
 
 // Language detection
-const supportedLanguages = ["en", "de", "fr", "es", "it", "pl", "cn"];
+const supportedLanguages = ["en", "es", "ct"];
 const localStorageLanguage = localStorage.getItem("lang");
 const locale = (
   localStorageLanguage ||
@@ -64,18 +56,10 @@ document
   .setAttribute("content", metaDescription[language]);
 
 let messages;
-if (language === "de") {
-  messages = German;
-} else if (language === "es") {
+if (language === "es") {
   messages = Spanish;
-} else if (language === "fr") {
-  messages = French;
-} else if (language === "it") {
-  messages = Italian;
-} else if (language === "pl") {
-  messages = Polish;
-} else if (language === "cn") {
-  messages = Chinese;
+} else if (language === "ct") {
+  messages = Catalan;
 } else {
   messages = English;
 }
