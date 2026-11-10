@@ -4411,8 +4411,32 @@ export const rules = {
     characters: { maxSlots: 4 },
     lords: { maxSlots: 1 },
     heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["miners"],
+          max: 1,
+        },
+        {
+          ids: ["rangers"],
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["hammerers"],
+          max: 1,
+        },
+        {
+          ids: ["slayers"],
+          max: 1,
+        },
+      ],
+    },
     rare: { maxSlots: 2 },
     mercenaries: { maxSlots: 0 },
     allies: { maxSlots: 0 },

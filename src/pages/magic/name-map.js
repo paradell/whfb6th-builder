@@ -54,6 +54,12 @@ export const nameMap = {
   "talismanic-runes": {
     name_en: "Talismanic Runes",
   },
+  "lord-talismanic-runes": {
+    name_en: "Talismanic Runes (Lord and Thane only)",
+  },
+  "runesmith-talismanic-runes": {
+    name_en: "Talismanic Runes (Runesmiths only)",
+  },
   "engineering-runes": {
     name_en: "Engineering Runes",
   },
