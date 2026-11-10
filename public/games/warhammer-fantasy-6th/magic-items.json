@@ -3738,5 +3738,321 @@
       "type": "banner",
       "name": "standard of the cursing word"
     }
+  ],
+  "wood-elves": [
+    {
+      "name_en": "The Spirit Sword",
+      "points": 55,
+      "type": "weapon",
+      "name": "the spirit sword"
+    },
+    {
+      "name_en": "Daith's Reaper",
+      "points": 50,
+      "type": "weapon",
+      "name": "daith's reaper"
+    },
+    {
+      "name_en": "Blades of Loec",
+      "points": 35,
+      "type": "weapon",
+      "name": "blades of loec"
+    },
+    {
+      "name_en": "The Bow of Loren",
+      "points": 35,
+      "type": "weapon",
+      "name": "the bow of loren"
+    },
+    {
+      "name_en": "The Dawnspear",
+      "points": 35,
+      "type": "weapon",
+      "name": "the dawnspear"
+    },
+    {
+      "name_en": "The Spear of Twilight",
+      "points": 30,
+      "type": "weapon",
+      "name": "the spear of twilight"
+    },
+    {
+      "name_en": "The Callach's Claw",
+      "points": 25,
+      "type": "weapon",
+      "name": "the callach's claw"
+    },
+    {
+      "name_en": "The Hunter's Talon",
+      "points": 25,
+      "type": "weapon",
+      "name": "the hunter's talon"
+    },
+    {
+      "name_en": "The Sword of a Thousand Winters",
+      "points": 20,
+      "type": "weapon",
+      "name": "the sword of a thousand winters"
+    },
+    {
+      "name_en": "Asyendi's Bane",
+      "points": 10,
+      "type": "weapon",
+      "name": "asyendi's bane"
+    },
+    {
+      "name_en": "Rageth's Wildfire Blades",
+      "points": 10,
+      "type": "weapon",
+      "name": "rageth's wildfire blades"
+    },
+    {
+      "name_en": "The Oaken Armour",
+      "points": 50,
+      "type": "armor",
+      "name": "the oaken armour"
+    },
+    {
+      "name_en": "Railarian's Mantle",
+      "points": 50,
+      "type": "armor",
+      "name": "railarian's mantle"
+    },
+    {
+      "name_en": "Armour of the Fey",
+      "points": 35,
+      "type": "armor",
+      "name": "armour of the fey"
+    },
+    {
+      "name_en": "The Helm of the Hunt",
+      "points": 20,
+      "type": "armor",
+      "name": "the helm of the hunt"
+    },
+    {
+      "name_en": "Briarsheath",
+      "points": 15,
+      "type": "armor",
+      "name": "briarsheath"
+    },
+    {
+      "name_en": "The Rhymer's Harp",
+      "points": 75,
+      "type": "talisman",
+      "name": "the rhymer's harp"
+    },
+    {
+      "name_en": "Amaranthine Brooch",
+      "points": 35,
+      "type": "talisman",
+      "name": "amaranthine brooch"
+    },
+    {
+      "name_en": "Amber Pendant",
+      "points": 35,
+      "type": "talisman",
+      "name": "amber pendant"
+    },
+    {
+      "name_en": "Glamourweave",
+      "points": 30,
+      "type": "talisman",
+      "name": "glamourweave"
+    },
+    {
+      "name_en": "Stone of Rebirth",
+      "points": 30,
+      "type": "talisman",
+      "name": "stone of rebirth"
+    },
+    {
+      "name_en": "Stone of the Crystal Mere",
+      "points": 30,
+      "type": "talisman",
+      "name": "stone of the crystal mere"
+    },
+    {
+      "name_en": "The Fimbulwinter Shard",
+      "points": 25,
+      "type": "talisman",
+      "name": "the fimbulwinter shard"
+    },
+    {
+      "name_en": "Merciw's Locus",
+      "points": 20,
+      "type": "talisman",
+      "name": "merciw's locus"
+    },
+    {
+      "name_en": "Wand of Wych Elm",
+      "points": 55,
+      "type": "arcane-item",
+      "name": "wand of wych elm"
+    },
+    {
+      "name_en": "Calaingor's Stave",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "calaingor's stave"
+    },
+    {
+      "name_en": "The Deepwood Sphere",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "the deepwood sphere"
+    },
+    {
+      "name_en": "Divination Orb",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "divination orb"
+    },
+    {
+      "name_en": "Ranu's Heartstone",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "ranu's heartstone"
+    },
+    {
+      "name_en": "Wraithstone",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "wraithstone"
+    },
+    {
+      "name_en": "Hagbane Arrows",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "hagbane arrows"
+    },
+    {
+      "name_en": "Moonstone of the Hidden Ways",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "moonstone of the hidden ways"
+    },
+    {
+      "name_en": "Hail of Doom Arrow",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "hail of doom arrow"
+    },
+    {
+      "name_en": "Arcane Bodkins",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "arcane bodkins"
+    },
+    {
+      "name_en": "The Horn of the Asrai",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "the horn of the asrai"
+    },
+    {
+      "name_en": "Starfire Arrows",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "starfire arrows"
+    },
+    {
+      "name_en": "Dragontooth Arrows",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "dragontooth arrows"
+    },
+    {
+      "name_en": "Elynett's Brooch",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "elynett's brooch"
+    },
+    {
+      "name_en": "Gwythere's Horn",
+      "points": 15,
+      "type": "enchanted-item",
+      "name": "gwythere's horn"
+    },
+    {
+      "name_en": "The Royal Standard of Ariel",
+      "points": 100,
+      "type": "banner",
+      "name": "the royal standard of ariel"
+    },
+    {
+      "name_en": "Faoghir - the Banner of Dwindling",
+      "points": 50,
+      "type": "banner",
+      "name": "faoghir - the banner of dwindling"
+    },
+    {
+      "name_en": "Gaemrath - the Banner of Midwinter",
+      "points": 50,
+      "type": "banner",
+      "name": "gaemrath - the banner of midwinter"
+    },
+    {
+      "name_en": "Aech - the Banner of Springtide",
+      "points": 25,
+      "type": "banner",
+      "name": "aech - the banner of springtide"
+    },
+    {
+      "name_en": "Saemrath - the Banner of the Zenith",
+      "points": 25,
+      "type": "banner",
+      "name": "saemrath - the banner of the zenith"
+    }
+  ],
+  "spites": [
+    {
+      "name_en": "A Blight of Terrors",
+      "points": 50,
+      "type": "spite",
+      "name": "a blight of terrors"
+    },
+    {
+      "name_en": "A Befuddlement of Mischiefs",
+      "points": 25,
+      "type": "spite",
+      "name": "a befuddlement of mischiefs"
+    },
+    {
+      "name_en": "A Cluster of Radiants",
+      "points": 25,
+      "type": "spite",
+      "name": "a cluster of radiants"
+    },
+    {
+      "name_en": "A Lamentation of Despairs",
+      "points": 25,
+      "type": "spite",
+      "name": "a lamentation of despairs"
+    },
+    {
+      "name_en": "A Murder of Spites",
+      "points": 25,
+      "type": "spite",
+      "name": "a murder of spites"
+    },
+    {
+      "name_en": "A Muster of Malevolents",
+      "points": 25,
+      "type": "spite",
+      "name": "a muster of malevolents"
+    },
+    {
+      "name_en": "A Resplendence of Luminescents",
+      "points": 25,
+      "type": "spite",
+      "name": "a resplendence of luminescents"
+    },
+    {
+      "name_en": "An Annoyance of Netlings",
+      "points": 25,
+      "type": "spite",
+      "name": "an annoyance of netlings"
+    }
   ]
 }

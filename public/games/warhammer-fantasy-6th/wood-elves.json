@@ -1,185 +1,437 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord", "name_es": "Ejemplo de Señor", "id": "example-lord", "points": 110,
-    "armyComposition": { "wood-elves": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord", "name_es": "Ejemplo de Señor Mágico", "id": "example-magic-lord", "points": 190,
-    "armyComposition": { "wood-elves": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero", "name_es": "Ejemplo de Héroe", "id": "example-hero", "points": 60,
-    "armyComposition": { "wood-elves": { "category": "heroes" } },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero", "name_es": "Ejemplo de Héroe Mágico", "id": "example-magic-hero", "points": 70,
-    "armyComposition": { "wood-elves": { "category": "heroes" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+  "lords": [
+    {
+      "name_en": "Highborn",
+      "id": "highborn",
+      "points": 145,
+      "armyComposition": { "wood-elves": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "highborn-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "highborn-great-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Spear", "id": "highborn-spear", "points": 3, "exclusive": true }
+      ],
+      "ranged": [
+        { "name_en": "Longbow", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 },
+        { "name_en": "Wardancer Kindred", "id": "highborn-wardancer-kindred", "points": 50, "exclusive": true, "notes": { "name_en": "loses longbow; no armour; on foot only" } },
+        { "name_en": "Eternal Kindred", "id": "highborn-eternal-kindred", "points": 10, "exclusive": true, "notes": { "name_en": "loses Eternal Guard Fighting Style with magic weapons or armour" } },
+        { "name_en": "Alter Kindred", "id": "highborn-alter-kindred", "points": 35, "exclusive": true, "notes": { "name_en": "on foot only; may not be the General or join units" } },
+        { "name_en": "Scout Kindred", "id": "highborn-scout-kindred", "points": 25, "exclusive": true, "notes": { "name_en": "on foot only; no great weapon" } },
+        { "name_en": "Wild Rider Kindred", "id": "highborn-wild-rider-kindred", "points": 50, "exclusive": true, "notes": { "name_en": "spear and light armour; must ride an Elven Steed or Great Stag" } },
+        { "name_en": "Waywatcher Kindred", "id": "highborn-waywatcher-kindred", "points": 45, "exclusive": true, "notes": { "name_en": "no armour, shield or great weapon; on foot only" } }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Elven Steed", "id": "elven-steed", "points": 18, "exclusive": true },
+        { "name_en": "Great Eagle", "id": "great-eagle", "points": 50, "exclusive": true, "notes": { "name_en": "not with Wild Rider Kindred" } },
+        { "name_en": "Forest Dragon", "id": "forest-dragon", "points": 320, "exclusive": true, "notes": { "name_en": "not with Wild Rider Kindred" } },
+        { "name_en": "Great Stag", "id": "great-stag", "points": 65, "exclusive": true, "notes": { "name_en": "Wild Rider Kindred only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item", "spite"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Spites count towards the magic item allowance; one Spite per character. A Cluster of Radiants: Treemen Ancients and Branchwraiths only. Blades of Loec: Wardancer Kindred only" } }
+      ],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery" }
+    },
+    {
+      "name_en": "Spellweaver",
+      "id": "spellweaver",
+      "points": 215,
+      "armyComposition": { "wood-elves": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }] },
+        { "name_en": "Glamourweave Kindred", "points": 20, "notes": { "name_en": "must ride an Elven Steed or Unicorn" } }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Elven Steed", "id": "elven-steed", "points": 18, "exclusive": true },
+        { "name_en": "Great Eagle", "id": "great-eagle", "points": 50, "exclusive": true, "notes": { "name_en": "not with Glamourweave Kindred" } },
+        { "name_en": "Unicorn", "id": "unicorn", "points": 65, "exclusive": true, "notes": { "name_en": "Glamourweave Kindred only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item", "spite"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Spites count towards the magic item allowance; one Spite per character. A Cluster of Radiants: Treemen Ancients and Branchwraiths only. Blades of Loec: Wardancer Kindred only" } }
+      ],
+      "lores": ["the-lore-of-athel-loren", "lore-of-beasts", "lore-of-life"],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery" }
+    },
+    {
+      "name_en": "Treeman Ancient",
+      "id": "treeman-ancient",
+      "points": 325,
+      "armyComposition": { "wood-elves": { "category": "lords", "notes": { "name_en": "The catalogue also counts it as a Rare choice" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Gnarled Fists", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        { "name_en": "Spites", "types": ["spite"], "selected": [], "maxPoints": 100, "notes": { "name_en": "May take any number of different Spites" } }
+      ],
+      "specialRules": { "name_en": "Forest Walker, Forest Spirit, Large Target, Terror, Scaly Skin (3+), Stubborn, Strangle-root Attack, Tree Singing, Flammable" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Noble",
+      "id": "noble",
+      "points": 75,
+      "armyComposition": { "wood-elves": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 15, "magic": { "types": ["banner"], "maxPoints": 0 }, "notes": { "name_en": "may not be the General" } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "noble-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "noble-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Spear", "id": "noble-spear", "points": 2, "exclusive": true }
+      ],
+      "ranged": [
+        { "name_en": "Longbow", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "points": 2 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 },
+        { "name_en": "Wardancer Kindred", "id": "noble-wardancer-kindred", "points": 30, "exclusive": true, "notes": { "name_en": "loses longbow; no armour; on foot only" } },
+        { "name_en": "Eternal Kindred", "id": "noble-eternal-kindred", "points": 5, "exclusive": true, "notes": { "name_en": "loses Eternal Guard Fighting Style with magic weapons or armour" } },
+        { "name_en": "Alter Kindred", "id": "noble-alter-kindred", "points": 25, "exclusive": true, "notes": { "name_en": "on foot only; may not be the General or join units" } },
+        { "name_en": "Scout Kindred", "id": "noble-scout-kindred", "points": 15, "exclusive": true, "notes": { "name_en": "on foot only; no great weapon" } },
+        { "name_en": "Wild Rider Kindred", "id": "noble-wild-rider-kindred", "points": 35, "exclusive": true, "notes": { "name_en": "spear and light armour; must ride an Elven Steed or Great Stag" } },
+        { "name_en": "Waywatcher Kindred", "id": "noble-waywatcher-kindred", "points": 35, "exclusive": true, "notes": { "name_en": "no armour, shield or great weapon; on foot only" } }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Elven Steed", "id": "elven-steed", "points": 18, "exclusive": true },
+        { "name_en": "Great Eagle", "id": "great-eagle", "points": 50, "exclusive": true, "notes": { "name_en": "not with Wild Rider Kindred" } },
+        { "name_en": "Great Stag", "id": "great-stag", "points": 65, "exclusive": true, "notes": { "name_en": "Wild Rider Kindred only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item", "spite"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Spites count towards the magic item allowance; one Spite per character. A Cluster of Radiants: Treemen Ancients and Branchwraiths only. Blades of Loec: Wardancer Kindred only" } }
+      ],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery" }
+    },
+    {
+      "name_en": "Spellsinger",
+      "id": "spellsinger",
+      "points": 90,
+      "armyComposition": { "wood-elves": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }] },
+        { "name_en": "Glamourweave Kindred", "points": 20, "notes": { "name_en": "must ride an Elven Steed or Unicorn" } }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Elven Steed", "id": "elven-steed", "points": 12, "exclusive": true },
+        { "name_en": "Great Eagle", "id": "great-eagle", "points": 50, "exclusive": true, "notes": { "name_en": "not with Glamourweave Kindred" } },
+        { "name_en": "Unicorn", "id": "unicorn", "points": 65, "exclusive": true, "notes": { "name_en": "Glamourweave Kindred only" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item", "spite"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Spites count towards the magic item allowance; one Spite per character. A Cluster of Radiants: Treemen Ancients and Branchwraiths only. Blades of Loec: Wardancer Kindred only" } }
+      ],
+      "lores": ["the-lore-of-athel-loren"],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery" }
+    },
+    {
+      "name_en": "Branchwraith",
+      "id": "branchwraith",
+      "points": 65,
+      "armyComposition": { "wood-elves": { "category": "heroes", "notes": { "name_en": "The catalogue also counts it as a Rare choice" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Level 1 Wizard", "points": 50 }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Spites", "types": ["spite"], "selected": [], "maxPoints": 50, "notes": { "name_en": "May take any number of different Spites" } }
+      ],
+      "lores": ["the-lore-of-athel-loren"],
+      "specialRules": { "name_en": "Forest Walker, Forest Spirit, Fear" }
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "wood-elves": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "wood-elves": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Glade Guard",
+      "id": "glade-guard",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": { "wood-elves": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Lord's Bowman", "points": 6 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 25 }, "notes": { "name_en": "War Banner, Gaemrath, Saemrath or Aech only" } },
+        { "name_en": "Musician", "points": 5 }
       ],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+      "equipment": [
+        { "name_en": "Hand Weapons, Longbows", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery" }
+    },
+    {
+      "name_en": "Glade Guard Scouts",
+      "id": "glade-guard-scouts",
+      "points": 17,
+      "minimum": 5,
+      "maximum": 10,
+      "armyComposition": { "wood-elves": { "category": "core", "notes": { "name_en": "One unit per unit of Glade Guard or Glade Riders" } } },
+      "command": [
+        { "name_en": "Lord's Bowman", "points": 6 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 25 }, "notes": { "name_en": "War Banner, Gaemrath, Saemrath or Aech only" } },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Longbows", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery, Scouts, Skirmishers" }
+    },
+    {
+      "name_en": "Glade Riders",
+      "id": "glade-riders",
+      "points": 24,
+      "minimum": 5,
+      "maximum": 10,
+      "armyComposition": { "wood-elves": { "category": "core" } },
+      "command": [
+        { "name_en": "Horsemaster", "points": 9 },
+        { "name_en": "Standard Bearer", "points": 18 },
+        { "name_en": "Musician", "points": 9 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Spears, Longbows, Elven Steeds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery, Fast Cavalry" }
+    },
+    {
+      "name_en": "Dryads",
+      "id": "dryads",
+      "points": 12,
+      "minimum": 8,
+      "maximum": 20,
+      "armyComposition": { "wood-elves": { "category": "core" } },
+      "command": [
+        { "name_en": "Branch Nymph", "points": 12 }
+      ],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Skirmishers, Forest Spirit, Fear" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 14 }, { "name_en": "Standard bearer", "points": 14 }, { "name_en": "Musician", "points": 7 }],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+      "name_en": "Eternal Guard",
+      "id": "eternal-guard",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "wood-elves": { "category": "special", "notes": { "name_en": "Counts as a Core choice if the General is a Highborn" } } },
+      "command": [
+        { "name_en": "Guardian", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
+      "equipment": [
+        { "name_en": "Hand Weapons, Spears, Light Armour, Shields", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }, { "name_en": "Example Option", "points": 5 }],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "wood-elves": { "category": "special" } }
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery, Eternal Guard Fighting Style, Bodyguard" }
+    },
+    {
+      "name_en": "Wardancers",
+      "id": "wardancers",
+      "points": 18,
+      "minimum": 5,
+      "maximum": 15,
+      "armyComposition": { "wood-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Bladesinger", "points": 14 },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "equipment": [
+        { "name_en": "Wardancer Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Skirmishers, Shadow Dances of Loec, Immune to Psychology, Talismanic Tattoos" }
+    },
+    {
+      "name_en": "Wild Riders",
+      "id": "wild-riders",
+      "points": 26,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "wood-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Wild Hunter", "points": 18 },
+        { "name_en": "Standard Bearer", "points": 18, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 0, "active": true }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Spears, Light Armour, Elven Steeds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Fast Cavalry, Forest Spirit, The Wild Hunt, The Fury of Kurnous, Talismanic Tattoos" }
+    },
+    {
+      "name_en": "Warhawk Riders",
+      "id": "warhawk-riders",
+      "points": 40,
+      "minimum": 3,
+      "maximum": 12,
+      "armyComposition": { "wood-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Wind Rider", "points": 20 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Spears, Longbows", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery, Flying Cavalry, Hit-and-Run" }
+    },
+    {
+      "name_en": "Tree Kin",
+      "id": "tree-kin",
+      "points": 65,
+      "minimum": 3,
+      "maximum": 12,
+      "armyComposition": { "wood-elves": { "category": "special" } },
+      "command": [
+        { "name_en": "Tree Kin Elder", "points": 20 }
+      ],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Forest Spirit, Scaly Skin (4+), Flammable, Fear" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
-      "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "name_en": "Waywatchers",
+      "id": "waywatchers",
+      "points": 24,
+      "minimum": 5,
+      "maximum": 10,
       "armyComposition": { "wood-elves": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [
+        { "name_en": "Shadow Sentinel", "points": 8 }
+      ],
+      "equipment": [
+        { "name_en": "Two Hand Weapons, Longbows", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Asrai Archery, Skirmishers, Lethal Shot, Forest Stalkers" }
+    },
+    {
+      "name_en": "Treeman",
+      "id": "treeman",
+      "points": 285,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "wood-elves": { "category": "rare" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Forest Walker, Forest Spirit, Terror, Large Target, Scaly Skin (3+), Stubborn, Strangle-root Attack, Tree Singing, Flammable" }
+    },
+    {
+      "name_en": "Great Eagle",
+      "id": "great-eagle",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "wood-elves": { "category": "rare" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fly" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-

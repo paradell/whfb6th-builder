@@ -727,5 +727,26 @@
     "mankaras-incantation-of-urgency": {
       "index": "4"
     }
+  },
+
+  "the-lore-of-athel-loren": {
+    "tree-singing": {
+      "index": "1"
+    },
+    "fury-of-the-forest": {
+      "index": "2"
+    },
+    "the-hidden-path": {
+      "index": "3"
+    },
+    "the-twilight-host": {
+      "index": "4"
+    },
+    "ariels-blessing": {
+      "index": "5"
+    },
+    "the-call-of-the-hunt": {
+      "index": "6"
+    }
   }
 }

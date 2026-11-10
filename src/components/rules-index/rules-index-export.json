@@ -3359,6 +3359,10 @@
     "url": "spell-lists/incantations",
     "page": "TK, p. 35"
   },
+  "the lore of athel loren": {
+    "url": "spell-lists/the-lore-of-athel-loren",
+    "page": "WE, p. 79"
+  },
   "lore of the great maw": {
     "url": "the-lores-of-magic/lore-of-the-great-maw",
     "page": "OK, p. 25"
@@ -21963,6 +21967,10 @@
   "horekhah's incantation of righteous smiting": { "url": "spell/horekhahs-incantation-of-righteous-smiting", "page": "TK, p. 35" },
   "diedra's incantation of summoning": { "url": "spell/diedras-incantation-of-summoning", "page": "TK, p. 35" },
   "mankara's incantation of urgency": { "url": "spell/mankaras-incantation-of-urgency", "page": "TK, p. 35" },
+  "fury of the forest": { "url": "spell/fury-of-the-forest", "page": "WE, p. 79" },
+  "the hidden path": { "url": "spell/the-hidden-path", "page": "WE, p. 79" },
+  "the twilight host": { "url": "spell/the-twilight-host", "page": "WE, p. 79" },
+  "the call of the hunt": { "url": "spell/the-call-of-the-hunt", "page": "WE, p. 79" },
   "soul eater": { "url": "spell/soul-eater", "page": "RB, p. 325" },
   "spectral doppelganger": {
     "url": "spell/spectral-doppelganger",

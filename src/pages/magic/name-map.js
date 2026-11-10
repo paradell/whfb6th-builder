@@ -186,6 +186,9 @@ export const nameMap = {
   incantations: {
     name_en: "Incantations",
   },
+  "the-lore-of-athel-loren": {
+    name_en: "The Lore of Athel Loren",
+  },
   "lore-of-fire": {
     name_en: "Lore of Fire",
     name_es: "Saber del Fuego",
@@ -384,6 +387,12 @@ export const nameMap = {
   },
   "big-name": {
     name_en: "Big Name",
+  },
+  spites: {
+    name_en: "Spites",
+  },
+  spite: {
+    name_en: "Spite",
   },
   "disciplines-old-ones": {
     name_en: "Disciplines of the Old Ones",

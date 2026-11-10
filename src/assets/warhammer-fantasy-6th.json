@@ -129,7 +129,7 @@
       "id": "wood-elves",
       "name_en": "Wood Elves",
       "name_es": "Elfos Silvanos",
-      "items": ["general"],
+      "items": ["general", "wood-elves", "spites"],
       "armyComposition": ["wood-elves"],
       "allies": [],
       "mercenaries": {}
