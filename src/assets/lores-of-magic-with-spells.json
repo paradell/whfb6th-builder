@@ -712,5 +712,20 @@
     "plague": {
       "index": "6"
     }
+  },
+
+  "incantations": {
+    "sekhubis-incantation-of-vengeance": {
+      "index": "1"
+    },
+    "horekhahs-incantation-of-righteous-smiting": {
+      "index": "2"
+    },
+    "diedras-incantation-of-summoning": {
+      "index": "3"
+    },
+    "mankaras-incantation-of-urgency": {
+      "index": "4"
+    }
   }
 }

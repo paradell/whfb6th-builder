@@ -183,6 +183,9 @@ export const nameMap = {
   "skaven-magic": {
     name_en: "Skaven Magic",
   },
+  incantations: {
+    name_en: "Incantations",
+  },
   "lore-of-fire": {
     name_en: "Lore of Fire",
     name_es: "Saber del Fuego",

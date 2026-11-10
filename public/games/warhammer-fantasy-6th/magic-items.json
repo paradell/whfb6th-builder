@@ -3526,5 +3526,217 @@
       "type": "banner",
       "name": "banner of the swarm"
     }
+  ],
+  "tomb-kings": [
+    {
+      "name_en": "Destroyer of Eternities",
+      "points": 70,
+      "type": "weapon",
+      "name": "destroyer of eternities"
+    },
+    {
+      "name_en": "The Blade of Mourning",
+      "points": 50,
+      "type": "weapon",
+      "name": "the blade of mourning"
+    },
+    {
+      "name_en": "Blade of Setep",
+      "points": 50,
+      "type": "weapon",
+      "name": "blade of setep"
+    },
+    {
+      "name_en": "Crook & Flail of Radiance",
+      "points": 50,
+      "type": "weapon",
+      "name": "crook & flail of radiance"
+    },
+    {
+      "name_en": "Flail of Skulls",
+      "points": 45,
+      "type": "weapon",
+      "name": "flail of skulls"
+    },
+    {
+      "name_en": "Spear of Antarhak",
+      "points": 35,
+      "type": "weapon",
+      "name": "spear of antarhak"
+    },
+    {
+      "name_en": "Serpent Staff",
+      "points": 25,
+      "type": "weapon",
+      "name": "serpent staff"
+    },
+    {
+      "name_en": "Armour of Eternity",
+      "points": 70,
+      "type": "armor",
+      "name": "armour of eternity"
+    },
+    {
+      "name_en": "Scorpion Armour",
+      "points": 40,
+      "type": "armor",
+      "name": "scorpion armour"
+    },
+    {
+      "name_en": "Armour of the Ages",
+      "points": 35,
+      "type": "armor",
+      "name": "armour of the ages"
+    },
+    {
+      "name_en": "Shield of Ptra",
+      "points": 15,
+      "type": "armor",
+      "name": "shield of ptra"
+    },
+    {
+      "name_en": "Golden Ankhra",
+      "points": 45,
+      "type": "talisman",
+      "name": "golden ankhra"
+    },
+    {
+      "name_en": "Amulet of Pha-stah",
+      "points": 40,
+      "type": "talisman",
+      "name": "amulet of pha-stah"
+    },
+    {
+      "name_en": "Crown of Kings",
+      "points": 40,
+      "type": "talisman",
+      "name": "crown of kings"
+    },
+    {
+      "name_en": "Collar of Shapesh",
+      "points": 25,
+      "type": "talisman",
+      "name": "collar of shapesh"
+    },
+    {
+      "name_en": "Golden Eye of Rah-nutt",
+      "points": 25,
+      "type": "talisman",
+      "name": "golden eye of rah-nutt"
+    },
+    {
+      "name_en": "Staff of Ravening",
+      "points": 45,
+      "type": "arcane-item",
+      "name": "staff of ravening"
+    },
+    {
+      "name_en": "Staff of Mastery",
+      "points": 40,
+      "type": "arcane-item",
+      "name": "staff of mastery"
+    },
+    {
+      "name_en": "Neferra's Plaques of Mighty Incantations",
+      "points": 30,
+      "type": "arcane-item",
+      "name": "neferra's plaques of mighty incantations"
+    },
+    {
+      "name_en": "Hieratic Jar",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "hieratic jar"
+    },
+    {
+      "name_en": "Enkhil's Kanopi",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "enkhil's kanopi"
+    },
+    {
+      "name_en": "Blue Khepra",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "blue khepra"
+    },
+    {
+      "name_en": "Death Mask of Kharnut",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "death mask of kharnut"
+    },
+    {
+      "name_en": "Brooch of the Great Desert",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "brooch of the great desert"
+    },
+    {
+      "name_en": "Chariot of Fire",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "chariot of fire"
+    },
+    {
+      "name_en": "Cloak of the Dunes",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "cloak of the dunes"
+    },
+    {
+      "name_en": "Icon of Rulership",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "icon of rulership"
+    },
+    {
+      "name_en": "Vambraces of the Sun",
+      "points": 15,
+      "type": "enchanted-item",
+      "name": "vambraces of the sun"
+    },
+    {
+      "name_en": "Standard of the Sands",
+      "points": 75,
+      "type": "banner",
+      "name": "standard of the sands"
+    },
+    {
+      "name_en": "Banner of the Hidden Dead",
+      "points": 60,
+      "type": "banner",
+      "name": "banner of the hidden dead"
+    },
+    {
+      "name_en": "Icon of the Sacred Eye",
+      "points": 50,
+      "type": "banner",
+      "name": "icon of the sacred eye"
+    },
+    {
+      "name_en": "Icon of Rakaph",
+      "points": 40,
+      "type": "banner",
+      "name": "icon of rakaph"
+    },
+    {
+      "name_en": "Mirage Standard",
+      "points": 40,
+      "type": "banner",
+      "name": "mirage standard"
+    },
+    {
+      "name_en": "Banner of the Undying Legion",
+      "points": 25,
+      "type": "banner",
+      "name": "banner of the undying legion"
+    },
+    {
+      "name_en": "Standard of the Cursing Word",
+      "points": 25,
+      "type": "banner",
+      "name": "standard of the cursing word"
+    }
   ]
 }

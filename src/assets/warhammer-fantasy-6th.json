@@ -111,7 +111,7 @@
       "id": "tomb-kings",
       "name_en": "Tomb Kings",
       "name_es": "Reyes Sepulcrales",
-      "items": ["general"],
+      "items": ["general", "tomb-kings"],
       "armyComposition": ["tomb-kings"],
       "allies": [],
       "mercenaries": {}
