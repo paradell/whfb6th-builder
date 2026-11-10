@@ -6,13 +6,9 @@ import { FormattedMessage } from "react-intl";
 
 import { Spinner } from "../../components/spinner";
 import { useLanguage } from "../../utils/useLanguage";
-import germany from "../../assets/germany.svg";
 import usa from "../../assets/usa.svg";
 import spain from "../../assets/spain.svg";
-import france from "../../assets/france.svg";
-import italy from "../../assets/italy.svg";
-import polen from "../../assets/polen.svg";
-import china from "../../assets/china.svg";
+import catalonia from "../../assets/catalonia.svg";
 
 import { InstallPWA } from "../install-pwa";
 import "./Page.css";
@@ -85,50 +81,6 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <div className="radio">
               <input
                 type="radio"
-                id="deutsch"
-                name="languages"
-                value="de"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "de"}
-                className="radio__input"
-                disabled
-              />
-              <label htmlFor="deutsch" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={germany}
-                  className="footer__language-icon"
-                />
-                Deutsch
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
-                id="french"
-                name="languages"
-                value="fr"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "fr"}
-                className="radio__input"
-                disabled
-              />
-              <label htmlFor="french" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={france}
-                  className="footer__language-icon"
-                />
-                Français
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
                 id="spanish"
                 name="languages"
                 value="es"
@@ -150,67 +102,23 @@ export const Main = ({ className, children, isDesktop, compact, loading }) => {
             <div className="radio">
               <input
                 type="radio"
-                id="italian"
+                id="catalan"
                 name="languages"
-                value="it"
+                value="ct"
                 onChange={handleLanguageChange}
-                defaultChecked={language === "it"}
+                defaultChecked={language === "ct"}
                 className="radio__input"
                 disabled
               />
-              <label htmlFor="italian" className="radio__label">
+              <label htmlFor="catalan" className="radio__label">
                 <img
                   width="24"
                   height="19"
                   alt=""
-                  src={italy}
+                  src={catalonia}
                   className="footer__language-icon"
                 />
-                Italiano
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
-                id="polish"
-                name="languages"
-                value="pl"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "pl"}
-                className="radio__input"
-                disabled
-              />
-              <label htmlFor="polish" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={polen}
-                  className="footer__language-icon"
-                />
-                Polski
-              </label>
-            </div>
-            <div className="radio">
-              <input
-                type="radio"
-                id="chinese"
-                name="languages"
-                value="cn"
-                onChange={handleLanguageChange}
-                defaultChecked={language === "cn"}
-                className="radio__input"
-                disabled
-              />
-              <label htmlFor="chinese" className="radio__label">
-                <img
-                  width="24"
-                  height="19"
-                  alt=""
-                  src={china}
-                  className="footer__language-icon"
-                />
-                简体中文
+                Català
               </label>
             </div>
           </div>

@@ -811,7 +811,7 @@ export const Magic = ({ isMobile }) => {
             : unit.items[group].selected ?? [];
 
           return (
-            <Fragment key={itemGroup.name_de}>
+            <Fragment key={itemGroup.name_en}>
               {itemGroupItems.length > 0 && (
                 <h2 className="unit__subline">
                   {itemGroup[`name_${language}`] || itemGroup.name_en}
