@@ -102,7 +102,7 @@
       "id": "skaven",
       "name_en": "Skaven",
       "name_es": "Skaven",
-      "items": ["general"],
+      "items": ["general", "skaven"],
       "armyComposition": ["skaven"],
       "allies": [],
       "mercenaries": {}

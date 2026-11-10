@@ -180,6 +180,9 @@ export const nameMap = {
   "gut-magic": {
     name_en: "Gut Magic",
   },
+  "skaven-magic": {
+    name_en: "Skaven Magic",
+  },
   "lore-of-fire": {
     name_en: "Lore of Fire",
     name_es: "Saber del Fuego",

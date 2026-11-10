@@ -691,5 +691,26 @@
     "waaagh": {
       "index": "6"
     }
+  },
+
+  "skaven-magic": {
+    "skitterleap": {
+      "index": "1"
+    },
+    "warp-lightning": {
+      "index": "2"
+    },
+    "vermintide": {
+      "index": "3"
+    },
+    "pestilent-breath": {
+      "index": "4"
+    },
+    "death-frenzy": {
+      "index": "5"
+    },
+    "plague": {
+      "index": "6"
+    }
   }
 }

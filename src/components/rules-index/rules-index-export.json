@@ -3351,6 +3351,10 @@
     "url": "spell-lists/gut-magic",
     "page": "OK, p. 61"
   },
+  "skaven magic": {
+    "url": "spell-lists/skaven-magic",
+    "page": "SK, p. 35"
+  },
   "lore of the great maw": {
     "url": "the-lores-of-magic/lore-of-the-great-maw",
     "page": "OK, p. 25"
@@ -21947,6 +21951,10 @@
     "page": "RB, p. 331"
   },
   "skitterleap": { "url": "spell/skitterleap", "page": "SK, p. 24" },
+  "vermintide": { "url": "spell/vermintide", "page": "SK, p. 24" },
+  "pestilent breath": { "url": "spell/pestilent-breath", "page": "SK, p. 24" },
+  "death frenzy": { "url": "spell/death-frenzy", "page": "SK, p. 24" },
+  "plague": { "url": "spell/plague", "page": "SK, p. 24" },
   "soul eater": { "url": "spell/soul-eater", "page": "RB, p. 325" },
   "spectral doppelganger": {
     "url": "spell/spectral-doppelganger",

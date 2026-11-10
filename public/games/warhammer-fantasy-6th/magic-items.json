@@ -3281,5 +3281,250 @@
       "type": "banner",
       "name": "the bashin' flag of bork"
     }
+  ],
+  "skaven": [
+    {
+      "name_en": "Fellblade",
+      "points": 85,
+      "type": "weapon",
+      "name": "fellblade"
+    },
+    {
+      "name_en": "Blade of Black Fury",
+      "points": 50,
+      "type": "weapon",
+      "name": "blade of black fury"
+    },
+    {
+      "name_en": "The Gouger",
+      "points": 50,
+      "type": "weapon",
+      "name": "the gouger"
+    },
+    {
+      "name_en": "Warpstone Stars",
+      "points": 50,
+      "type": "weapon",
+      "name": "warpstone stars"
+    },
+    {
+      "name_en": "Cursed Blade of Delirium",
+      "points": 45,
+      "type": "weapon",
+      "name": "cursed blade of delirium"
+    },
+    {
+      "name_en": "Weeping Blade",
+      "points": 45,
+      "type": "weapon",
+      "name": "weeping blade"
+    },
+    {
+      "name_en": "Desolate Blade",
+      "points": 40,
+      "type": "weapon",
+      "name": "desolate blade"
+    },
+    {
+      "name_en": "Headsplitter",
+      "points": 40,
+      "type": "weapon",
+      "name": "headsplitter"
+    },
+    {
+      "name_en": "Dwarf-slayer",
+      "points": 35,
+      "type": "weapon",
+      "name": "dwarf-slayer"
+    },
+    {
+      "name_en": "Blade of Corruption",
+      "points": 30,
+      "type": "weapon",
+      "name": "blade of corruption"
+    },
+    {
+      "name_en": "Languisher Sword",
+      "points": 25,
+      "type": "weapon",
+      "name": "languisher sword"
+    },
+    {
+      "name_en": "Blade of Nurglitch",
+      "points": 20,
+      "type": "weapon",
+      "name": "blade of nurglitch"
+    },
+    {
+      "name_en": "Death Globes",
+      "points": 20,
+      "type": "weapon",
+      "name": "death globes"
+    },
+    {
+      "name_en": "Things-catcher",
+      "points": 20,
+      "type": "weapon",
+      "name": "things-catcher"
+    },
+    {
+      "name_en": "Rust Armour",
+      "points": 50,
+      "type": "armor",
+      "name": "rust armour"
+    },
+    {
+      "name_en": "Warpstone Armour",
+      "points": 35,
+      "type": "armor",
+      "name": "warpstone armour"
+    },
+    {
+      "name_en": "Cautious Shield",
+      "points": 25,
+      "type": "armor",
+      "name": "cautious shield"
+    },
+    {
+      "name_en": "Twisted Crown of the Horned Rat",
+      "points": 50,
+      "type": "talisman",
+      "name": "twisted crown of the horned rat"
+    },
+    {
+      "name_en": "The Foul Pendant",
+      "points": 30,
+      "type": "talisman",
+      "name": "the foul pendant"
+    },
+    {
+      "name_en": "Tenebrous Cloak",
+      "points": 30,
+      "type": "talisman",
+      "name": "tenebrous cloak"
+    },
+    {
+      "name_en": "Ring of Darkness",
+      "points": 25,
+      "type": "talisman",
+      "name": "ring of darkness"
+    },
+    {
+      "name_en": "Warpstone Amulet",
+      "points": 25,
+      "type": "talisman",
+      "name": "warpstone amulet"
+    },
+    {
+      "name_en": "Warpstorm Scroll",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "warpstorm scroll",
+      "stackable": true
+    },
+    {
+      "name_en": "Warp Scroll",
+      "points": 30,
+      "type": "arcane-item",
+      "name": "warp scroll",
+      "stackable": true
+    },
+    {
+      "name_en": "Eye of the Horned Rat",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "eye of the horned rat"
+    },
+    {
+      "name_en": "Storm Daemon",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "storm daemon"
+    },
+    {
+      "name_en": "Warpstone Token",
+      "points": 10,
+      "type": "arcane-item",
+      "name": "warpstone token",
+      "stackable": true
+    },
+    {
+      "name_en": "Brass Orb",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "brass orb"
+    },
+    {
+      "name_en": "Cloak of Shadows",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "cloak of shadows"
+    },
+    {
+      "name_en": "Skalm",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "skalm"
+    },
+    {
+      "name_en": "Skavenbrew",
+      "points": 50,
+      "type": "enchanted-item",
+      "name": "skavenbrew"
+    },
+    {
+      "name_en": "Liber Bubonicus",
+      "points": 40,
+      "type": "enchanted-item",
+      "name": "liber bubonicus"
+    },
+    {
+      "name_en": "Bands of Power",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "bands of power"
+    },
+    {
+      "name_en": "Warpstone Charm",
+      "points": 25,
+      "type": "enchanted-item",
+      "name": "warpstone charm"
+    },
+    {
+      "name_en": "Sacred Standard of the Horned Rat",
+      "points": 75,
+      "type": "banner",
+      "name": "sacred standard of the horned rat"
+    },
+    {
+      "name_en": "Storm Banner",
+      "points": 75,
+      "type": "banner",
+      "name": "storm banner"
+    },
+    {
+      "name_en": "Umbranner",
+      "points": 35,
+      "type": "banner",
+      "name": "umbranner"
+    },
+    {
+      "name_en": "Banner of the Four Black Winds",
+      "points": 30,
+      "type": "banner",
+      "name": "banner of the four black winds"
+    },
+    {
+      "name_en": "Banner of Burning Hatred",
+      "points": 25,
+      "type": "banner",
+      "name": "banner of burning hatred"
+    },
+    {
+      "name_en": "Banner of the Swarm",
+      "points": 20,
+      "type": "banner",
+      "name": "banner of the swarm"
+    }
   ]
 }
