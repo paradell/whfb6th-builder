@@ -628,5 +628,26 @@
     "the-comet-of-casandora": {
       "index": "6"
     }
+  },
+
+  "gut-magic": {
+    "bloodgruel": {
+      "index": "1"
+    },
+    "braingobbler": {
+      "index": "2"
+    },
+    "bullgorger": {
+      "index": "3"
+    },
+    "bonecruncher": {
+      "index": "4"
+    },
+    "toothcracker": {
+      "index": "5"
+    },
+    "trollguts": {
+      "index": "6"
+    }
   }
 }

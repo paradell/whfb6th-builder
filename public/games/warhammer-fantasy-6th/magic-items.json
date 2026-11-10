@@ -2782,5 +2782,238 @@
       "type": "sacred-plaque",
       "name": "plaque of tepok"
     }
+  ],
+  "ogre-kingdoms": [
+    {
+      "name_en": "Thundermace",
+      "points": 55,
+      "type": "weapon",
+      "name": "thundermace"
+    },
+    {
+      "name_en": "The Tenderiser",
+      "points": 50,
+      "type": "weapon",
+      "name": "the tenderiser"
+    },
+    {
+      "name_en": "Siegebreaker",
+      "points": 30,
+      "type": "weapon",
+      "name": "siegebreaker"
+    },
+    {
+      "name_en": "Skullplucker",
+      "points": 30,
+      "type": "weapon",
+      "name": "skullplucker"
+    },
+    {
+      "name_en": "Bloodcleaver",
+      "points": 25,
+      "type": "weapon",
+      "name": "bloodcleaver"
+    },
+    {
+      "name_en": "Mastodon Armour",
+      "points": 50,
+      "type": "armor",
+      "name": "mastodon armour"
+    },
+    {
+      "name_en": "Greatskull",
+      "points": 35,
+      "type": "armor",
+      "name": "greatskull"
+    },
+    {
+      "name_en": "Bullgut",
+      "points": 30,
+      "type": "armor",
+      "name": "bullgut"
+    },
+    {
+      "name_en": "Gut Maw",
+      "points": 30,
+      "type": "armor",
+      "name": "gut maw"
+    },
+    {
+      "name_en": "Greedy Fist",
+      "points": 20,
+      "type": "armor",
+      "name": "greedy fist"
+    },
+    {
+      "name_en": "Cathayan Jet",
+      "points": 30,
+      "type": "talisman",
+      "name": "cathayan jet"
+    },
+    {
+      "name_en": "Spangleshard",
+      "points": 30,
+      "type": "talisman",
+      "name": "spangleshard"
+    },
+    {
+      "name_en": "Wyrdstone Necklace",
+      "points": 20,
+      "type": "talisman",
+      "name": "wyrdstone necklace"
+    },
+    {
+      "name_en": "Gnoblar Thiefstone",
+      "points": 15,
+      "type": "talisman",
+      "name": "gnoblar thiefstone",
+      "maximum": 3
+    },
+    {
+      "name_en": "Hellheart",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "hellheart"
+    },
+    {
+      "name_en": "Grut's Sickle",
+      "points": 35,
+      "type": "arcane-item",
+      "name": "grut's sickle"
+    },
+    {
+      "name_en": "Bangstick",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "bangstick"
+    },
+    {
+      "name_en": "Halfling Cookbook",
+      "points": 25,
+      "type": "arcane-item",
+      "name": "halfling cookbook"
+    },
+    {
+      "name_en": "Skullmantle",
+      "points": 20,
+      "type": "arcane-item",
+      "name": "skullmantle"
+    },
+    {
+      "name_en": "Brahmir Statue",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "brahmir statue"
+    },
+    {
+      "name_en": "Daemon-Killer Scars",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "daemon-killer scars"
+    },
+    {
+      "name_en": "Greyback Pelt",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "greyback pelt"
+    },
+    {
+      "name_en": "Jade Lion",
+      "points": 30,
+      "type": "enchanted-item",
+      "name": "jade lion"
+    },
+    {
+      "name_en": "Rock Eye",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "rock eye"
+    },
+    {
+      "name_en": "Fistful of Laurels",
+      "points": 15,
+      "type": "enchanted-item",
+      "name": "fistful of laurels"
+    },
+    {
+      "name_en": "Dragonhide",
+      "points": 60,
+      "type": "banner",
+      "name": "dragonhide"
+    },
+    {
+      "name_en": "Ragbanner",
+      "points": 35,
+      "type": "banner",
+      "name": "ragbanner"
+    },
+    {
+      "name_en": "Cannibal Totem",
+      "points": 25,
+      "type": "banner",
+      "name": "cannibal totem"
+    },
+    {
+      "name_en": "Bull Standard",
+      "points": 20,
+      "type": "banner",
+      "name": "bull standard"
+    },
+    {
+      "name_en": "Rune Maw",
+      "points": 20,
+      "type": "banner",
+      "name": "rune maw"
+    }
+  ],
+  "big-names": [
+    {
+      "name_en": "Kineater",
+      "points": 35,
+      "type": "big-name",
+      "name": "kineater"
+    },
+    {
+      "name_en": "Giantbreaker",
+      "points": 25,
+      "type": "big-name",
+      "name": "giantbreaker"
+    },
+    {
+      "name_en": "Longstrider",
+      "points": 25,
+      "type": "big-name",
+      "name": "longstrider"
+    },
+    {
+      "name_en": "Mountaineater",
+      "points": 25,
+      "type": "big-name",
+      "name": "mountaineater"
+    },
+    {
+      "name_en": "Deathcheater",
+      "points": 20,
+      "type": "big-name",
+      "name": "deathcheater"
+    },
+    {
+      "name_en": "Beastkiller",
+      "points": 15,
+      "type": "big-name",
+      "name": "beastkiller"
+    },
+    {
+      "name_en": "Wallcrusher",
+      "points": 15,
+      "type": "big-name",
+      "name": "wallcrusher"
+    },
+    {
+      "name_en": "Mawseeker",
+      "points": 10,
+      "type": "big-name",
+      "name": "mawseeker"
+    }
   ]
 }

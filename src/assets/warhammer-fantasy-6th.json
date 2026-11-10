@@ -84,7 +84,7 @@
       "id": "ogre-kingdoms",
       "name_en": "Ogre Kingdoms",
       "name_es": "Reinos Ogros",
-      "items": ["general"],
+      "items": ["general", "ogre-kingdoms", "big-names"],
       "armyComposition": ["ogre-kingdoms"],
       "allies": [],
       "mercenaries": {}

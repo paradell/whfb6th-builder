@@ -171,6 +171,9 @@ export const nameMap = {
   elementalism: {
     name_en: "Elementalism",
   },
+  "gut-magic": {
+    name_en: "Gut Magic",
+  },
   "lore-of-fire": {
     name_en: "Lore of Fire",
     name_es: "Saber del Fuego",

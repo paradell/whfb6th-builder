@@ -3339,6 +3339,10 @@
     "url": "the-lores-of-magic/lore-of-the-great-maw-renegade",
     "page": "TRLP, p. 17"
   },
+  "gut magic": {
+    "url": "spell-lists/gut-magic",
+    "page": "OK, p. 61"
+  },
   "lore of the great maw": {
     "url": "the-lores-of-magic/lore-of-the-great-maw",
     "page": "OK, p. 25"
@@ -21744,6 +21748,10 @@
   },
   "blue fire": { "url": "spell/blue-fire", "page": "RH, p. 83" },
   "brain bursta": { "url": "spell/brain-bursta", "page": "RH, p. 47" },
+  "bloodgruel": { "url": "spell/bloodgruel", "page": "OK, p. 61" },
+  "braingobbler": { "url": "spell/braingobbler", "page": "OK, p. 61" },
+  "bullgorger": { "url": "spell/bullgorger", "page": "OK, p. 61" },
+  "bonecruncher": { "url": "spell/bonecruncher", "page": "OK, p. 61" },
   "burning gaze": { "url": "spell/burning-gaze", "page": "FoF, p. 109" },
   "cacophonic hymn": { "url": "spell/cacophonic-hymn", "page": "DoC, p. 34" },
   "call of the wild": {
