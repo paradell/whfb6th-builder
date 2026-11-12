@@ -28,7 +28,7 @@
       "id": "chaos-dwarfs",
       "name_en": "Chaos Dwarfs",
       "name_es": "Enanos del Caos",
-      "items": ["general"],
+      "items": ["general", "chaos-dwarfs"],
       "armyComposition": ["chaos-dwarfs"],
       "allies": [],
       "mercenaries": {}

@@ -4588,5 +4588,67 @@
       "type": "banner",
       "name": "vitrolic totem"
     }
+  ],
+  "chaos-dwarfs": [
+    {
+      "name_en": "Obsidian Blade",
+      "points": 100,
+      "type": "weapon",
+      "name": "obsidian blade"
+    },
+    {
+      "name_en": "Dark Mace of Death",
+      "points": 70,
+      "type": "weapon",
+      "name": "dark mace of death"
+    },
+    {
+      "name_en": "Black Hammer of Hashut",
+      "points": 45,
+      "type": "weapon",
+      "name": "black hammer of hashut"
+    },
+    {
+      "name_en": "Armour of the Furnace",
+      "points": 45,
+      "type": "armor",
+      "name": "armour of the furnace"
+    },
+    {
+      "name_en": "Armour of Gazrakh",
+      "points": 30,
+      "type": "armor",
+      "name": "armour of gazrakh"
+    },
+    {
+      "name_en": "Talisman of Obsidian",
+      "points": 100,
+      "type": "talisman",
+      "name": "talisman of obsidian"
+    },
+    {
+      "name_en": "Chalice of Darkness",
+      "points": 50,
+      "type": "arcane-item",
+      "name": "chalice of darkness"
+    },
+    {
+      "name_en": "Black Gem of Gnar",
+      "points": 35,
+      "type": "enchanted-item",
+      "name": "black gem of gnar"
+    },
+    {
+      "name_en": "Gauntlets of Bazhrakk the Cruel",
+      "points": 20,
+      "type": "enchanted-item",
+      "name": "gauntlets of bazhrakk the cruel"
+    },
+    {
+      "name_en": "Banner of Slavery",
+      "points": 50,
+      "type": "banner",
+      "name": "banner of slavery"
+    }
   ]
 }

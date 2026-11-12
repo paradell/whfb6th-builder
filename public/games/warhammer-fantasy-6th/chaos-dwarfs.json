@@ -1,230 +1,512 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord",
-    "name_es": "Ejemplo de Señor",
-    "id": "example-lord",
-    "points": 110,
-    "armyComposition": {
-      "chaos-dwarfs": { // rename this key to match the actual faction key.
-        "category": "lords"
-      }
+  "lords": [
+    {
+      "name_en": "Chaos Dwarf Lord",
+      "id": "chaos-dwarf-lord",
+      "points": 120,
+      "armyComposition": { "chaos-dwarfs": { "category": "lords", "notes": { "name_en": "0-1" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "chaos-dwarf-lord-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "chaos-dwarf-lord-great-weapon", "points": 6, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "chaos-dwarf-lord-light-armour", "points": 3, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "chaos-dwarf-lord-heavy-armour", "points": 6, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Great Taurus", "id": "great-taurus", "points": 230, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }
+      ],
+      "specialRules": { "name_en": "Resolute, Ignore Panic" }
     },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord",
-    "name_es": "Ejemplo de Señor Mágico",
-    "id": "example-magic-lord",
-    "points": 190,
-    "armyComposition": {
-      "chaos-dwarfs": { // rename this key to match the actual faction key.
-        "category": "lords"
-      }
+    {
+      "name_en": "Chaos Dwarf Sorcerer Lord",
+      "id": "chaos-dwarf-sorcerer-lord",
+      "points": 190,
+      "armyComposition": { "chaos-dwarfs": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
+          { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
+        ] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Lammasu", "id": "lammasu", "points": 200, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }
+      ],
+      "lores": ["lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-death"],
+      "specialRules": { "name_en": "Resolute, Ignore Panic" }
     },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero",
-    "name_es": "Ejemplo de Héroe",
-    "id": "example-hero",
-    "points": 60,
-    "armyComposition": {
-      "chaos-dwarfs": { // rename this key to match the actual faction key.
-        "category": "heroes"
-      }
+    {
+      "name_en": "Bull Centaur Lord",
+      "id": "bull-centaur-lord",
+      "points": 170,
+      "armyComposition": { "chaos-dwarfs": { "category": "lords", "notes": { "name_en": "0-1" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "bull-centaur-lord-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "bull-centaur-lord-great-weapon", "points": 6, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "bull-centaur-lord-light-armour", "points": 3, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "bull-centaur-lord-heavy-armour", "points": 6, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }
+      ],
+      "specialRules": { "name_en": "Ignore Panic" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Chaos Dwarf Hero",
+      "id": "chaos-dwarf-hero",
+      "points": 60,
+      "armyComposition": { "chaos-dwarfs": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 25, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "chaos-dwarf-hero-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "chaos-dwarf-hero-great-weapon", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "chaos-dwarf-hero-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "chaos-dwarf-hero-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "specialRules": { "name_en": "Resolute, Ignore Panic" }
     },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero",
-    "name_es": "Ejemplo de Héroe Mágico",
-    "id": "example-magic-hero",
-    "points": 70,
-    "armyComposition": {
-      "chaos-dwarfs": { // rename this key to match the actual faction key.
-        "category": "heroes"
-      }
+    {
+      "name_en": "Chaos Dwarf Sorcerer",
+      "id": "chaos-dwarf-sorcerer",
+      "points": 65,
+      "armyComposition": { "chaos-dwarfs": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
+          { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
+        ] }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "lores": ["lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-death"],
+      "specialRules": { "name_en": "Resolute, Ignore Panic" }
     },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+    {
+      "name_en": "Bull Centaur Hero",
+      "id": "bull-centaur-hero",
+      "points": 100,
+      "armyComposition": { "chaos-dwarfs": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 25, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "bull-centaur-hero-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "bull-centaur-hero-great-weapon", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "bull-centaur-hero-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "bull-centaur-hero-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "specialRules": { "name_en": "Ignore Panic" }
+    },
+    {
+      "name_en": "Hobgoblin Hero",
+      "id": "hobgoblin-hero",
+      "points": 40,
+      "armyComposition": { "chaos-dwarfs": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "hobgoblin-hero-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "hobgoblin-hero-great-weapon", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "hobgoblin-hero-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "hobgoblin-hero-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Wolf", "id": "wolf", "points": 12, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }
+      ]
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
+      "name_en": "Chaos Dwarf Warriors",
+      "id": "chaos-dwarf-warriors",
+      "points": 9,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "chaos-dwarfs": { "category": "core", "notes": { "name_en": "At least 2 units (3 at 2000-2999 pts, +1 per additional 1000 pts)" } } },
       "command": [
-        { "name_en": "Example Champion", "points": 12 },
-        { "name_en": "Standard bearer", "points": 10 },
-        { "name_en": "Musician", "points": 5 }
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
       "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "id": "chaos-dwarf-warriors-shields", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Great Axes", "id": "chaos-dwarf-warriors-great-axes", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Blunderbusses", "id": "chaos-dwarf-warriors-blunderbusses", "points": 3, "exclusive": true, "perModel": true }
       ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
       "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "chaos-dwarfs": { "category": "core" } }
+      "specialRules": { "name_en": "Resolute, Ignore Panic" }
     },
     {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [
-        { "name_en": "Example Champion", "points": 5 },
-        { "name_en": "Standard bearer", "points": 10 },
-        { "name_en": "Musician", "points": 5 }
-      ],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "chaos-dwarfs": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Hobgoblins",
+      "id": "hobgoblins",
+      "points": 2,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": { "chaos-dwarfs": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Boss", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
       ],
+      "equipment": [],
       "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "ranged": [
+        { "name_en": "Bows", "points": 3, "perModel": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "points": 1, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Animosity" }
+    },
+    {
+      "name_en": "Hobgoblin Wolf Riders",
+      "id": "hobgoblin-wolf-riders",
+      "points": 11,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "chaos-dwarfs": { "category": "core" } },
+      "command": [
+        { "name_en": "Boss", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [
+        { "name_en": "Bows", "points": 3, "perModel": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "points": 1, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Animosity, Fast Cavalry" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
+      "name_en": "Death Rocket",
+      "id": "death-rocket",
+      "points": 110,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "chaos-dwarfs": { "category": "special" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Crew: 2 Chaos Dwarfs", "points": 0, "active": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "War Machine, Death Rockets" }
+    },
+    {
+      "name_en": "Hobgoblin Bolt Thrower",
+      "id": "hobgoblin-bolt-thrower",
+      "points": 30,
+      "minimum": 1,
+      "maximum": 2,
+      "armyComposition": { "chaos-dwarfs": { "category": "special", "notes": { "name_en": "1-2 Bolt Throwers per Special choice" } } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Crew: 3 Hobgoblins", "points": 0, "active": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "War Machine, Bolt Thrower" }
+    },
+    {
+      "name_en": "Goblins",
+      "id": "goblins",
+      "points": 2,
+      "minimum": 20,
+      "maximum": 0,
+      "armyComposition": { "chaos-dwarfs": { "category": "special" } },
       "command": [
-        { "name_en": "Example Champion", "points": 14 },
-        { "name_en": "Standard bearer", "points": 14 },
-        { "name_en": "Musician", "points": 7 }
+        { "name_en": "Boss", "points": 8 },
+        { "name_en": "Standard Bearer", "points": 8 },
+        { "name_en": "Musician", "points": 4 }
       ],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
+      "equipment": [],
       "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
+      "ranged": [],
       "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
+        { "name_en": "Light Armour", "points": 1, "perModel": true }
       ],
       "options": [
-        { "name_en": "Shields", "points": 1, "perModel": true },
-        { "name_en": "Example Option", "points": 5 }
+        { "name_en": "Shields", "id": "goblins-shields", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Spears and Shields", "id": "goblins-spears", "points": 1, "exclusive": true, "perModel": true },
+        { "name_en": "Short Bows", "id": "goblins-bows", "points": 1, "exclusive": true, "perModel": true }
       ],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "chaos-dwarfs": { "category": "special" } }
+      "specialRules": { "name_en": "Animosity, Fear Elves" }
+    },
+    {
+      "name_en": "Orc Boyz",
+      "id": "orc-boyz",
+      "points": 5,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "chaos-dwarfs": { "category": "special" } },
+      "command": [
+        { "name_en": "Boss", "points": 13 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Choppas, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapons", "id": "orc-boyz-additional-hand-weapons", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Spears", "id": "orc-boyz-spears", "points": 2, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Animosity, Choppa, Ignore Goblin Panic" }
+    },
+    {
+      "name_en": "Orc Big 'Uns",
+      "id": "orc-big-uns",
+      "points": 7,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "chaos-dwarfs": { "category": "special", "notes": { "name_en": "0-1" } } },
+      "command": [
+        { "name_en": "Boss", "points": 13 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Choppas, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapons", "id": "orc-big-uns-additional-hand-weapons", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Spears", "id": "orc-big-uns-spears", "points": 2, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Animosity, Choppa, Ignore Goblin Panic" }
+    },
+    {
+      "name_en": "Black Orcs",
+      "id": "black-orcs",
+      "points": 10,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "chaos-dwarfs": { "category": "special", "notes": { "name_en": "0-1" } } },
+      "command": [
+        { "name_en": "Boss", "points": 15 },
+        { "name_en": "Standard Bearer", "points": 12 },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Choppas, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapons", "id": "black-orcs-additional-hand-weapons", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "black-orcs-great-weapons", "points": 2, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Choppa, Ignore Greenskin Panic, Quell Animosity" }
+    },
+    {
+      "name_en": "Sneaky Gits",
+      "id": "sneaky-gits",
+      "points": 5,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "chaos-dwarfs": { "category": "special" } },
+      "command": [
+        { "name_en": "Boss", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Animosity, Poisoned Attacks, Sneaky Gits" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
-      "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "name_en": "Bull Centaurs",
+      "id": "bull-centaurs",
+      "points": 20,
+      "minimum": 5,
+      "maximum": 0,
       "armyComposition": { "chaos-dwarfs": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Great Weapons", "id": "bull-centaurs-great-weapons", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Additional Hand Weapons", "id": "bull-centaurs-additional-hand-weapons", "points": 0, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "bull-centaurs-light-armour", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Heavy Armour", "id": "bull-centaurs-heavy-armour", "points": 1, "exclusive": true, "perModel": true }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Ignore Panic" }
+    },
+    {
+      "name_en": "Earthshaker Cannon",
+      "id": "earthshaker-cannon",
+      "points": 110,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "chaos-dwarfs": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Crew: 3 Chaos Dwarfs", "points": 0, "active": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "War Machine, Earthshaker Cannon" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-
