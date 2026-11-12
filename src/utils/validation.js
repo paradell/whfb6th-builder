@@ -1,4 +1,4 @@
-import { rules, countCoreUnits, countExtraCategories } from "./rules";
+import { rules, countCoreUnits, countExtraCategories, getMaxSlots } from "./rules";
 import { uniq } from "./collection";
 import { equalsOrIncludes } from "./string";
 import { getUnitPoints } from "./points";
@@ -285,11 +285,14 @@ export const validateList = ({ list, language, intl }) => {
     const heroesSlots = (list.heroes?.length || 0) + countExtraCategories(list, "heroes", list.armyComposition);
     const totalCharacterSlots = lordsSlots + heroesSlots;
 
-    const CharactersRules = rules[list.armyComposition]
-      ? rules[list.armyComposition].characters
-      : rules["grand-army"].characters;
-
-    const totalMaxCharacterSlots = CharactersRules?.maxSlots || 0;
+    const totalMaxCharacterSlots =
+      getMaxSlots({
+        type: "characters",
+        game: list.game,
+        armyPoints: list.points,
+        armyComposition: list.armyComposition || list.army,
+        slots: totalCharacterSlots,
+      }).maxSlots || 0;
 
     if (totalCharacterSlots > totalMaxCharacterSlots) {
       errors.push({

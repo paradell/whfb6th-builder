@@ -126,6 +126,7 @@ export const Editor = ({ isMobile }) => {
       armyPoints: list.points,
       slots: list.lords.length + countExtraCategories(list, "lords", armyComposition),
       armyComposition,
+      game: list.game,
     });
   const heroesData =
     list.heroes &&
@@ -134,6 +135,7 @@ export const Editor = ({ isMobile }) => {
       armyPoints: list.points,
       slots: list.heroes.length + countExtraCategories(list, "heroes", armyComposition),
       armyComposition,
+      game: list.game,
     });
   const charactersData =
     list.characters &&
@@ -142,6 +144,7 @@ export const Editor = ({ isMobile }) => {
       armyPoints: list.points,
       slots: list.characters.length,
       armyComposition,
+      game: list.game,
     });
 
   const coreData = getMinSlots({
@@ -149,18 +152,21 @@ export const Editor = ({ isMobile }) => {
     armyPoints: list.points,
     slots: list.core.length + countExtraCategories(list, "core", armyComposition),
     armyComposition,
+    game: list.game,
   });
   const specialData = getMaxSlots({
     type: "special",
     armyPoints: list.points,
     slots: list.special.length + countExtraCategories(list, "special", armyComposition),
     armyComposition,
+    game: list.game,
   });
   const rareData = getMaxSlots({
     type: "rare",
     armyPoints: list.points,
     slots: list.rare.length + countExtraCategories(list, "rare", armyComposition),
     armyComposition,
+    game: list.game,
   });
   const mercenariesData =
     list.mercenaries &&

@@ -93,3 +93,38 @@ describe("validateList sameInArmy options", () => {
     expect(getBloodlineErrors(getList([vampire('lord', 'Lahmia')], []))).toEqual([]);
   });
 });
+
+describe("validateList character slots", () => {
+  beforeEach(() => {
+    getUnitRuleData.mockReturnValue({ troopType: 'MCa' });
+  });
+
+  const hero = (id) => ({ id, name_en: id });
+  const getCharacterSlotErrors = (heroesCount) =>
+    validateList({
+      list: {
+        game: 'warhammer-fantasy-6th',
+        army: 'dwarfs',
+        armyComposition: 'dwarfs',
+        points: 3000,
+        characters: [],
+        lords: [],
+        heroes: Array.from({ length: heroesCount }, (_, i) => hero(`hero-${i}`)),
+        core: [],
+        special: [],
+        rare: [],
+        mercenaries: [],
+        allies: [],
+      },
+      language: 'en',
+      intl: { formatMessage: (o) => o.id },
+    }).filter((e) => e.message === 'misc.error.tooManyCharacterSlots');
+
+  test("6 characters are allowed at 3000 points", () => {
+    expect(getCharacterSlotErrors(6)).toHaveLength(0);
+  });
+
+  test("7 characters are too many at 3000 points", () => {
+    expect(getCharacterSlotErrors(7)).toHaveLength(1);
+  });
+});

@@ -4188,13 +4188,12 @@ export const rules = {
       maxPercent: 25,
     },
   },
-  // Warhammer Fantasy 6th
+  // Warhammer Fantasy 6th edition
+  // Slot limits are not set here: they scale with the army points (see `slotsByPoints`).
+  // Use `minSlotsModifier`/`maxSlotsModifier` for armies with extra slots.
   "bretonnia": {
-    characters: {
-      maxSlots: 5,
-    },
-    lords:{
-      maxSlots: 1,
+    characters: { maxSlotsModifier: 1 },
+    lords: {
       units: [
         {
           ids: ["louen-leoncoeur", "the-fay-encahntress", "the-green-knight"],
@@ -4202,7 +4201,7 @@ export const rules = {
       ],
     },
     heroes: {
-      maxSlots: 5,
+      maxSlotsModifier: 1,
       units: [
         {
           ids: ["paladin"],
@@ -4211,7 +4210,6 @@ export const rules = {
       ],
     },
     core: {
-      minSlots: 3,
       units: [
         {
           ids: ["mounted-knights-of-the-realm"],
@@ -4220,7 +4218,6 @@ export const rules = {
       ],
     },
     special: {
-      maxSlots: 4,
       units: [
         {
           ids: ["battle-pilgrims"],
@@ -4248,7 +4245,6 @@ export const rules = {
       ],
     },
     rare: {
-      maxSlots: 2,
       units: [
         {
           ids: ["grail-knights"],
@@ -4256,20 +4252,11 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxSlots: 0 },
-    allies: {
-      maxSlots: 0,
-    },
   },
   "errantry-war": {
-    characters: {
-      maxSlots: 5,
-    },
-    lords:{
-      maxSlots: 1,
-    },
+    characters: { maxSlotsModifier: 1 },
     heroes: {
-      maxSlots: 5,
+      maxSlotsModifier: 1,
       units: [
         {
           ids: ["paladin"],
@@ -4278,7 +4265,6 @@ export const rules = {
       ],
     },
     core: {
-      minSlots: 3,
       units: [
         {
           ids: ["knights-errant"],
@@ -4287,7 +4273,6 @@ export const rules = {
       ],
     },
     special: {
-      maxSlots: 4,
       units: [
         {
           ids: ["pegasus-knights"],
@@ -4302,7 +4287,6 @@ export const rules = {
       ],
     },
     rare: {
-      maxSlots: 2,
       units: [
         {
           ids: ["field-trebuchet"],
@@ -4310,17 +4294,10 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxSlots: 0 },
-    allies: {
-      maxSlots: 0,
-    },
   },
   "army-of-the-king": {
-    characters: {
-      maxSlots: 5,
-    },
-    lords:{
-      maxSlots: 1,
+    characters: { maxSlotsModifier: 1 },
+    lords: {
       units: [
         {
           ids: ["louen-leoncoeur"],
@@ -4333,7 +4310,7 @@ export const rules = {
       ],
     },
     heroes: {
-      maxSlots: 5,
+      maxSlotsModifier: 1,
       units: [
         {
           ids: ["paladin"],
@@ -4342,7 +4319,6 @@ export const rules = {
       ],
     },
     core: {
-      minSlots: 3,
       units: [
         {
           ids: ["mounted-knights-of-the-realm"],
@@ -4351,7 +4327,6 @@ export const rules = {
       ],
     },
     special: {
-      maxSlots: 4,
       units: [
         {
           ids: ["battle-pilgrims"],
@@ -4369,49 +4344,12 @@ export const rules = {
         },
       ],
     },
-    rare: {
-      maxSlots: 2,
-    },
-    mercenaries: { maxSlots: 0 },
-    allies: {
-      maxSlots: 0,
-    },
   },
-  "beasts-of-chaos": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
-  "chaos-dwarfs": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
-  "dark-elves": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
+  "beasts-of-chaos": {},
+  "chaos-dwarfs": {},
+  "dark-elves": {},
   "dogs-of-war": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
     heroes: {
-      maxSlots: 4,
       units: [
         {
           ids: ["paymaster"],
@@ -4421,7 +4359,6 @@ export const rules = {
       ],
     },
     core: {
-      minSlots: 3,
       units: [
         {
           ids: ["pirazzos-lost-legion"],
@@ -4454,7 +4391,6 @@ export const rules = {
       ],
     },
     special: {
-      maxSlots: 4,
       units: [
         {
           ids: ["paymasters-bodyguard"],
@@ -4462,16 +4398,9 @@ export const rules = {
         },
       ],
     },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
   },
   "dwarfs": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
     core: {
-      minSlots: 3,
       units: [
         {
           ids: ["miners"],
@@ -4484,7 +4413,6 @@ export const rules = {
       ],
     },
     special: {
-      maxSlots: 4,
       units: [
         {
           ids: ["hammerers"],
@@ -4496,26 +4424,10 @@ export const rules = {
         },
       ],
     },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
   },
-  "empire": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
+  "empire": {},
   "high-elves": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
     core: {
-      minSlots: 3,
       units: [
         {
           ids: ["lothern-sea-guard"],
@@ -4524,7 +4436,6 @@ export const rules = {
       ],
     },
     special: {
-      maxSlots: 4,
       units: [
         {
           ids: ["dragon-princes-of-caledor"],
@@ -4537,7 +4448,6 @@ export const rules = {
       ],
     },
     rare: {
-      maxSlots: 2,
       units: [
         {
           ids: ["phoenix-guard"],
@@ -4549,25 +4459,10 @@ export const rules = {
         },
       ],
     },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
   },
-  "hordes-of-chaos": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
+  "hordes-of-chaos": {},
   "lizardmen": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
     core: {
-      minSlots: 3,
       units: [
         {
           ids: ["jungle-swarms"],
@@ -4584,7 +4479,6 @@ export const rules = {
       ],
     },
     special: {
-      maxSlots: 4,
       units: [
         {
           ids: ["chameleon-skinks"],
@@ -4592,70 +4486,13 @@ export const rules = {
         },
       ],
     },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
   },
-  "ogre-kingdoms": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
-  "orcs-and-goblins": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
-  "skaven": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
-  "tomb-kings": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
-  "vampire-counts": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
-  "wood-elves": {
-    characters: { maxSlots: 4 },
-    lords: { maxSlots: 1 },
-    heroes: { maxSlots: 4 },
-    core: { minSlots: 3 },
-    special: { maxSlots: 4 },
-    rare: { maxSlots: 2 },
-    mercenaries: { maxSlots: 0 },
-    allies: { maxSlots: 0 },
-  },
+  "ogre-kingdoms": {},
+  "orcs-and-goblins": {},
+  "skaven": {},
+  "tomb-kings": {},
+  "vampire-counts": {},
+  "wood-elves": {},
   // Warhammer Fantasy MdN
   "bretonnia-mdn": {
     characters: {
@@ -4950,21 +4787,71 @@ export const getMinPercentData = ({
   };
 };
 
+// Slot limits that scale with the army points, per game system.
+// `below2000` applies under 2000 pts, `base` from 2000 to 2999 pts,
+// and each further full 1000 pts adds `per1000`. A plain number is a fixed limit.
+export const slotsByPoints = {
+  "warhammer-fantasy-6th": {
+    characters: { maxSlots: { below2000: 3, base: 4, per1000: 2 } },
+    lords: { maxSlots: { below2000: 0, base: 1, per1000: 1 } },
+    heroes: { maxSlots: { below2000: 3, base: 4, per1000: 2 } },
+    core: { minSlots: { below2000: 2, base: 3, per1000: 1 } },
+    special: { maxSlots: { below2000: 3, base: 4, per1000: 1 } },
+    rare: { maxSlots: { below2000: 1, base: 2, per1000: 1 } },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
+};
+
+const scaleSlots = (scale, armyPoints) => {
+  if (typeof scale === "number") {
+    return scale;
+  }
+
+  const points = Number(armyPoints) || 0;
+
+  if (points < 2000) {
+    return scale.below2000;
+  }
+
+  return scale.base + Math.floor((points - 2000) / 1000) * scale.per1000;
+};
+
+// Resolves `minSlots` or `maxSlots` (`key`) for a category.
+// An explicit value in `rules` wins; otherwise it is calculated from `slotsByPoints`
+// plus the optional `minSlotsModifier`/`maxSlotsModifier` of the army composition.
+const resolveSlots = ({ game, type, armyComposition, armyPoints, key }) => {
+  const gameSlots = slotsByPoints[game];
+  const compositionRules =
+    rules[armyComposition] || (gameSlots ? {} : rules["grand-army"]);
+  const categoryRules = compositionRules[type] || {};
+
+  if (categoryRules[key] !== undefined) {
+    return categoryRules[key];
+  }
+
+  const scale = gameSlots?.[type]?.[key];
+
+  if (scale === undefined) {
+    return undefined;
+  }
+
+  return scaleSlots(scale, armyPoints) + (categoryRules[`${key}Modifier`] || 0);
+};
+
 export const getMinSlots = ({
                               type,
                               armyPoints,
                               slots,
                               armyComposition,
+                              game,
                             }) => {
-  // TODO, calculate here the minSlots value depending on the armyPoints
-  const minSlots = rules[armyComposition]
-      ? rules[armyComposition][type].minSlots
-      : rules["grand-army"][type].minSlots;
+  const minSlots = resolveSlots({ game, type, armyComposition, armyPoints, key: "minSlots" });
 
   return {
     points: Math.floor(armyPoints),
-    overLimit: slots <= minSlots,
-    diff: slots <= minSlots ? Math.ceil(minSlots - slots) : 0,
+    overLimit: slots < minSlots,
+    diff: slots < minSlots ? Math.ceil(minSlots - slots) : 0,
     slots: slots,
     minSlots: minSlots
   };
@@ -4975,16 +4862,13 @@ export const getMaxSlots = ({
                               armyPoints,
                               slots,
                               armyComposition,
+                              game,
                             }) => {
-
-  // TODO, calculate here the maxSlots value depending on the armyPoints
-  const maxSlots = rules[armyComposition]
-      ? rules[armyComposition][type].maxSlots
-      : rules["grand-army"][type].maxSlots;
+  const maxSlots = resolveSlots({ game, type, armyComposition, armyPoints, key: "maxSlots" });
 
   return {
     points: Math.floor(armyPoints),
-    overLimit: slots <= maxSlots,
+    overLimit: slots > maxSlots,
     diff: slots > maxSlots ? Math.ceil(slots - maxSlots) : 0,
     slots: slots,
     maxSlots: maxSlots
