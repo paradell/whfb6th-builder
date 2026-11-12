@@ -35,3 +35,7 @@ yarn-error.log*
 
 # copilot Markdown files
 /.copilot
+
+# Claude
+CLAUDE.md
+/.claude
