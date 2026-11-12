@@ -4407,6 +4407,65 @@ export const rules = {
     mercenaries: { maxSlots: 0 },
     allies: { maxSlots: 0 },
   },
+  "dogs-of-war": {
+    characters: { maxSlots: 4 },
+    lords: { maxSlots: 1 },
+    heroes: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["paymaster"],
+          min: 1,
+          max: 1,
+        },
+      ],
+    },
+    core: {
+      minSlots: 3,
+      units: [
+        {
+          ids: ["pirazzos-lost-legion"],
+          max: 1,
+        },
+        {
+          ids: ["riccos-republican-guard"],
+          max: 1,
+        },
+        {
+          ids: ["leopolds-leopard-company"],
+          max: 1,
+        },
+        {
+          ids: ["the-alcatani-fellowship"],
+          max: 1,
+        },
+        {
+          ids: ["vesperos-vendetta"],
+          max: 1,
+        },
+        {
+          ids: ["marksmen-of-miragliano"],
+          max: 1,
+        },
+        {
+          ids: ["al-muktars-desert-dogs"],
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      maxSlots: 4,
+      units: [
+        {
+          ids: ["paymasters-bodyguard"],
+          max: 1,
+        },
+      ],
+    },
+    rare: { maxSlots: 2 },
+    mercenaries: { maxSlots: 0 },
+    allies: { maxSlots: 0 },
+  },
   "dwarfs": {
     characters: { maxSlots: 4 },
     lords: { maxSlots: 1 },

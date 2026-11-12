@@ -43,6 +43,15 @@
       "mercenaries": {}
     },
     {
+      "id": "dogs-of-war",
+      "name_en": "Dogs of War",
+      "name_es": "Perros de Guerra",
+      "items": ["general"],
+      "armyComposition": ["dogs-of-war"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
       "id": "dwarfs",
       "name_en": "Dwarfs",
       "name_es": "Enanos",

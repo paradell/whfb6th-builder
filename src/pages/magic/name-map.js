@@ -529,6 +529,10 @@ export const nameMap = {
     name_en: "Dark Elves",
     name_es: "Elfos Oscuros",
   },
+  "dogs-of-war": {
+    name_en: "Dogs of War",
+    name_es: "Perros de Guerra",
+  },
   "dwarfs-6th": {
     name_en: "Dwarfs",
     name_es: "Enanos",
