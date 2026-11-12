@@ -1,4 +1,4 @@
-import { countCoreUnits } from "../rules";
+import { countCoreUnits, getMinSlots, getMaxSlots } from "../rules";
 
 describe("countCoreUnits", () => {
   const baseUnit = (id, opts = {}) => ({ id, strength: opts.strength, no_count_slot: opts.no_count_slot, armyComposition: opts.armyComposition });
@@ -27,3 +27,61 @@ describe("countCoreUnits", () => {
   });
 });
 
+
+describe("slot limits by army points", () => {
+  const game = "warhammer-fantasy-6th";
+  const minSlots = (type, armyPoints, armyComposition = "dwarfs") =>
+    getMinSlots({ type, armyPoints, slots: 0, armyComposition, game }).minSlots;
+  const maxSlots = (type, armyPoints, armyComposition = "dwarfs") =>
+    getMaxSlots({ type, armyPoints, slots: 0, armyComposition, game }).maxSlots;
+
+  test("core minimum grows by 1 every 1000 points from 2000", () => {
+    expect(minSlots("core", 1999)).toBe(2);
+    expect(minSlots("core", 2000)).toBe(3);
+    expect(minSlots("core", 2999)).toBe(3);
+    expect(minSlots("core", 3000)).toBe(4);
+    expect(minSlots("core", 4500)).toBe(5);
+  });
+
+  test("characters, lords, heroes, special and rare maximums scale with points", () => {
+    expect(maxSlots("characters", 1500)).toBe(3);
+    expect(maxSlots("characters", 3000)).toBe(6);
+    expect(maxSlots("heroes", 1500)).toBe(3);
+    expect(maxSlots("heroes", 3000)).toBe(6);
+    expect(maxSlots("lords", 1500)).toBe(0);
+    expect(maxSlots("lords", 4000)).toBe(3);
+    expect(maxSlots("special", 1500)).toBe(3);
+    expect(maxSlots("special", 3000)).toBe(5);
+    expect(maxSlots("rare", 1500)).toBe(1);
+    expect(maxSlots("rare", 3000)).toBe(3);
+    expect(maxSlots("mercenaries", 3000)).toBe(0);
+  });
+
+  test("army modifiers are added to the scaled value", () => {
+    expect(maxSlots("heroes", 2000, "bretonnia")).toBe(5);
+    expect(maxSlots("characters", 3000, "army-of-the-king")).toBe(7);
+  });
+
+  test("armies without rules entry still scale", () => {
+    expect(minSlots("core", 3000, "unknown-army")).toBe(4);
+  });
+
+  test("explicit values in other game systems are kept", () => {
+    expect(
+      getMaxSlots({ type: "heroes", armyPoints: 3000, slots: 0, armyComposition: "bretonnia-mdn", game: "warhammer-fantasy-mdn" }).maxSlots
+    ).toBe(5);
+    expect(
+      getMinSlots({ type: "core", armyPoints: 1000, slots: 0, armyComposition: "grand-army", game: "the-old-world" }).minSlots
+    ).toBe(3);
+  });
+
+  test("overLimit and diff at the boundaries", () => {
+    const max = (slots) => getMaxSlots({ type: "rare", armyPoints: 2000, slots, armyComposition: "dwarfs", game });
+    expect(max(2)).toMatchObject({ overLimit: false, diff: 0 });
+    expect(max(3)).toMatchObject({ overLimit: true, diff: 1 });
+
+    const min = (slots) => getMinSlots({ type: "core", armyPoints: 2000, slots, armyComposition: "dwarfs", game });
+    expect(min(3)).toMatchObject({ overLimit: false, diff: 0 });
+    expect(min(1)).toMatchObject({ overLimit: true, diff: 2 });
+  });
+});
