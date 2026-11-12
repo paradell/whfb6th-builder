@@ -1,132 +1,579 @@
 {
-  "characters": [
-    {
-      "name_en": "Archmage",
-      "id": "archmage",
-      "points": 0,
-      "armyComposition": {
-        "high-elves": {
-          "category": "characters"
-        }
-      },
-      "items": [
-        {
-          "name_en": "Magic Items & Runes",
-          "types": [
-            "weapon",
-            "armor",
-            "talisman",
-            "enchanted-item",
-            "arcane-item"
-          ],
-          "selected": [],
-          "maxPoints": 100
-        }
-      ],
-      "minimum": 1,
-      "maximum": 1
-    }
-  ],
-  "lords": [],
-  "heroes": [
+  "characters": [],
+  "lords": [
     {
       "name_en": "Prince",
+      "name_es": "Príncipe",
       "id": "prince",
-      "points": 0,
+      "points": 125,
       "armyComposition": {
         "high-elves": {
-          "category": "heroes"
+          "category": "lords"
         }
       },
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "name_es": "Arma de Mano",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_es": "Arma de Mano Adicional",
+          "points": 6,
+          "id": "prince-additional-hand-weapon",
+          "exclusive": true
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_es": "Arma a Dos Manos",
+          "points": 6,
+          "id": "prince-great-weapon",
+          "exclusive": true
+        },
+        {
+          "name_en": "Halberd",
+          "name_es": "Alabarda",
+          "points": 6,
+          "id": "prince-halberd",
+          "exclusive": true
+        },
+        {
+          "name_en": "Spear",
+          "name_es": "Lanza",
+          "points": 6,
+          "id": "prince-spear",
+          "exclusive": true
+        },
+        {
+          "name_en": "Lance",
+          "name_es": "Lanza de Caballería",
+          "points": 6,
+          "id": "prince-lance",
+          "exclusive": true,
+          "notes": {
+            "name_en": "if mounted",
+            "name_es": "si va montado"
+          }
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Longbow",
+          "name_es": "Arco Largo",
+          "points": 15
+        }
+      ],
       "armor": [
         {
           "name_en": "Light Armour",
+          "name_es": "Armadura Ligera",
           "points": 3,
+          "id": "prince-light-armour",
           "exclusive": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_es": "Armadura Pesada",
+          "points": 6,
+          "id": "prince-heavy-armour",
+          "exclusive": true
+        },
+        {
+          "name_en": "Dragon Armour",
+          "name_es": "Armadura de Dragón",
+          "points": 8,
+          "id": "prince-dragon-armour",
+          "exclusive": true
+        },
+        {
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 3
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_es": "A pie",
+          "points": 0,
+          "id": "on-foot",
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_es": "Corcel Élfico",
+          "points": 18,
+          "id": "elven-steed",
+          "exclusive": true
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_es": "Corcel Élfico con Barda",
+          "points": 26,
+          "id": "barded-elven-steed",
+          "exclusive": true
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_es": "Gran Águila",
+          "points": 50,
+          "id": "great-eagle",
+          "exclusive": true
+        },
+        {
+          "name_en": "Griffon",
+          "name_es": "Grifo",
+          "points": 200,
+          "id": "griffon",
+          "exclusive": true
+        },
+        {
+          "name_en": "Dragon",
+          "name_es": "Dragón",
+          "points": 320,
+          "id": "dragon",
+          "exclusive": true,
+          "notes": {
+            "name_en": "Breath fire",
+            "name_es": "Aliento de fuego"
+          }
         }
       ],
       "items": [
         {
-          "name_en": "Magic Items & Runes",
+          "name_en": "Magic Items and Honours",
+          "name_es": "Objetos Mágicos y Honores",
           "types": [
             "weapon",
             "armor",
             "talisman",
             "enchanted-item",
-            "arcane-item"
+            "elven-honour"
           ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 100,
+          "notes": {
+            "name_en": "Honours count towards the magic item allowance. Swordmaster: may not take a magic weapon",
+            "name_es": "Los Honores cuentan para el límite de objetos mágicos. Maestro de la Espada: no puede llevar arma mágica"
+          }
         }
       ],
-      "minimum": 1,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Stoic",
+        "name_es": "Estoicos"
+      }
     },
     {
-      "name_en": "Commander",
-      "id": "commander",
-      "points": 0,
+      "name_en": "Archmage",
+      "name_es": "Archimago",
+      "id": "archmage",
+      "points": 220,
       "armyComposition": {
         "high-elves": {
-          "category": "heroes"
+          "category": "lords"
         }
       },
-      "armor": [
+      "command": [
         {
-          "name_en": "Light Armour",
-          "points": 2,
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "name_es": "Arma de Mano",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_es": "Mago",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 3 Wizard",
+              "name_es": "Mago de Nivel 3",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 4 Wizard",
+              "name_es": "Mago de Nivel 4",
+              "points": 35,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_es": "A pie",
+          "points": 0,
+          "id": "on-foot",
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_es": "Corcel Élfico",
+          "points": 18,
+          "id": "elven-steed",
+          "exclusive": true
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_es": "Corcel Élfico con Barda",
+          "points": 26,
+          "id": "barded-elven-steed",
+          "exclusive": true
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_es": "Gran Águila",
+          "points": 50,
+          "id": "great-eagle",
           "exclusive": true
         }
       ],
       "items": [
         {
-          "name_en": "Magic Items & Runes",
+          "name_en": "Magic Items and Honours",
+          "name_es": "Objetos Mágicos y Honores",
+          "types": [
+            "weapon",
+            "talisman",
+            "arcane-item",
+            "enchanted-item",
+            "elven-honour-mage"
+          ],
+          "selected": [],
+          "maxPoints": 100,
+          "notes": {
+            "name_en": "Honours count towards the magic item allowance",
+            "name_es": "Los Honores cuentan para el límite de objetos mágicos"
+          }
+        }
+      ],
+      "lores": [
+        "lore-of-life",
+        "lore-of-beasts",
+        "lore-of-the-heavens",
+        "lore-of-death",
+        "lore-of-fire",
+        "lore-of-metal",
+        "lore-of-shadow",
+        "lore-of-light"
+      ],
+      "specialRules": {
+        "name_en": "Stoic",
+        "name_es": "Estoicos"
+      }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Commander",
+      "name_es": "Noble",
+      "id": "commander",
+      "points": 70,
+      "armyComposition": {
+        "high-elves": {
+          "category": "heroes"
+        }
+      },
+      "command": [
+        {
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
+        },
+        {
+          "name_en": "Battle Standard Bearer",
+          "name_es": "Portaestandarte de Batalla",
+          "points": 25,
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 0
+          }
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "name_es": "Arma de Mano",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Additional Hand Weapon",
+          "name_es": "Arma de Mano Adicional",
+          "points": 4,
+          "id": "commander-additional-hand-weapon",
+          "exclusive": true
+        },
+        {
+          "name_en": "Great Weapon",
+          "name_es": "Arma a Dos Manos",
+          "points": 4,
+          "id": "commander-great-weapon",
+          "exclusive": true
+        },
+        {
+          "name_en": "Halberd",
+          "name_es": "Alabarda",
+          "points": 4,
+          "id": "commander-halberd",
+          "exclusive": true
+        },
+        {
+          "name_en": "Spear",
+          "name_es": "Lanza",
+          "points": 4,
+          "id": "commander-spear",
+          "exclusive": true
+        },
+        {
+          "name_en": "Lance",
+          "name_es": "Lanza de Caballería",
+          "points": 4,
+          "id": "commander-lance",
+          "exclusive": true,
+          "notes": {
+            "name_en": "if mounted",
+            "name_es": "si va montado"
+          }
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Longbow",
+          "name_es": "Arco Largo",
+          "points": 10
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_es": "Armadura Ligera",
+          "points": 2,
+          "id": "commander-light-armour",
+          "exclusive": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_es": "Armadura Pesada",
+          "points": 4,
+          "id": "commander-heavy-armour",
+          "exclusive": true
+        },
+        {
+          "name_en": "Dragon Armour",
+          "name_es": "Armadura de Dragón",
+          "points": 6,
+          "id": "commander-dragon-armour",
+          "exclusive": true
+        },
+        {
+          "name_en": "Shield",
+          "name_es": "Escudo",
+          "points": 2
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_es": "A pie",
+          "points": 0,
+          "id": "on-foot",
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_es": "Corcel Élfico",
+          "points": 12,
+          "id": "elven-steed",
+          "exclusive": true
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_es": "Corcel Élfico con Barda",
+          "points": 17,
+          "id": "barded-elven-steed",
+          "exclusive": true
+        },
+        {
+          "name_en": "Great Eagle",
+          "name_es": "Gran Águila",
+          "points": 50,
+          "id": "great-eagle",
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items and Honours",
+          "name_es": "Objetos Mágicos y Honores",
           "types": [
             "weapon",
             "armor",
             "talisman",
             "enchanted-item",
-            "arcane-item"
+            "elven-honour"
           ],
           "selected": [],
-          "maxPoints": 50
+          "maxPoints": 50,
+          "notes": {
+            "name_en": "Honours count towards the magic item allowance. Swordmaster: may not take a magic weapon",
+            "name_es": "Los Honores cuentan para el límite de objetos mágicos. Maestro de la Espada: no puede llevar arma mágica"
+          }
         }
       ],
-      "minimum": 1,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Stoic",
+        "name_es": "Estoicos"
+      }
     },
     {
       "name_en": "Mage",
+      "name_es": "Mago",
       "id": "mage",
-      "points": 0,
+      "points": 95,
       "armyComposition": {
         "high-elves": {
           "category": "heroes"
         }
       },
-      "items": [
+      "command": [
         {
-          "name_en": "Magic Items & Runes",
-          "types": [
-            "weapon",
-            "armor",
-            "talisman",
-            "enchanted-item",
-            "arcane-item"
-          ],
-          "selected": [],
-          "maxPoints": 50
+          "name_en": "General",
+          "name_es": "General",
+          "points": 0
         }
       ],
-      "minimum": 1,
-      "maximum": 1
+      "melee": [
+        {
+          "name_en": "Hand Weapon",
+          "name_es": "Arma de Mano",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Wizard",
+          "name_es": "Mago",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true,
+          "options": [
+            {
+              "name_en": "Level 1 Wizard",
+              "name_es": "Mago de Nivel 1",
+              "points": 0,
+              "exclusive": true,
+              "active": true
+            },
+            {
+              "name_en": "Level 2 Wizard",
+              "name_es": "Mago de Nivel 2",
+              "points": 35,
+              "exclusive": true
+            }
+          ]
+        }
+      ],
+      "mounts": [
+        {
+          "name_en": "On foot",
+          "name_es": "A pie",
+          "points": 0,
+          "id": "on-foot",
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Elven Steed",
+          "name_es": "Corcel Élfico",
+          "points": 12,
+          "id": "elven-steed",
+          "exclusive": true
+        },
+        {
+          "name_en": "Barded Elven Steed",
+          "name_es": "Corcel Élfico con Barda",
+          "points": 17,
+          "id": "barded-elven-steed",
+          "exclusive": true
+        }
+      ],
+      "items": [
+        {
+          "name_en": "Magic Items and Honours",
+          "name_es": "Objetos Mágicos y Honores",
+          "types": [
+            "weapon",
+            "talisman",
+            "arcane-item",
+            "enchanted-item",
+            "elven-honour-mage"
+          ],
+          "selected": [],
+          "maxPoints": 50,
+          "notes": {
+            "name_en": "Honours count towards the magic item allowance",
+            "name_es": "Los Honores cuentan para el límite de objetos mágicos"
+          }
+        }
+      ],
+      "lores": [
+        "lore-of-life",
+        "lore-of-beasts",
+        "lore-of-the-heavens",
+        "lore-of-death",
+        "lore-of-fire",
+        "lore-of-metal",
+        "lore-of-shadow",
+        "lore-of-light"
+      ],
+      "specialRules": {
+        "name_en": "Stoic",
+        "name_es": "Estoicos"
+      }
     }
   ],
   "core": [
     {
       "name_en": "Archers",
+      "name_es": "Arqueros",
       "id": "archers",
       "points": 12,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": {
         "high-elves": {
           "category": "core"
@@ -134,64 +581,61 @@
       },
       "command": [
         {
-          "name_en": "Musician",
-          "points": 6,
-          "exclusive": true
+          "name_en": "Champion",
+          "name_es": "Campeón",
+          "points": 12
         },
         {
           "name_en": "Standard Bearer",
-          "points": 12,
-          "exclusive": true
+          "name_es": "Portaestandarte",
+          "points": 12
         },
         {
-          "name_en": "Champion",
-          "points": 12,
-          "exclusive": true
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "ranged": [
+        {
+          "name_en": "Longbows",
+          "name_es": "Arcos Largos",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "armor": [
         {
           "name_en": "Light Armour",
-          "points": 0,
-          "exclusive": true
+          "name_es": "Armadura Ligera",
+          "points": 1,
+          "perModel": true
         }
       ],
-      "minimum": 10,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Stoic",
+        "name_es": "Estoicos"
+      }
     },
     {
       "name_en": "Spearmen",
+      "name_es": "Lanceros",
       "id": "spearmen",
       "points": 11,
-      "armyComposition": {
-        "high-elves": {
-          "category": "core"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Musician",
-          "points": 6,
-          "exclusive": true
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 12,
-          "exclusive": true
-        },
-        {
-          "name_en": "Champion",
-          "points": 12,
-          "exclusive": true
-        }
-      ],
       "minimum": 10,
-      "maximum": 1
-    },
-    {
-      "name_en": "Lothern Sea Guard",
-      "id": "lothern-sea-guard",
-      "points": 15,
+      "maximum": 0,
       "armyComposition": {
         "high-elves": {
           "category": "core"
@@ -199,220 +643,240 @@
       },
       "command": [
         {
-          "name_en": "Musician",
-          "points": 7,
-          "exclusive": true
+          "name_en": "Champion",
+          "name_es": "Campeón",
+          "points": 12
         },
         {
           "name_en": "Standard Bearer",
-          "points": 14,
-          "exclusive": true
+          "name_es": "Portaestandarte",
+          "points": 12,
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 25,
+            "notes": {
+              "name_en": "Only if the unit is First Among Equals",
+              "name_es": "Solo si la unidad es Primeros entre Iguales"
+            }
+          }
         },
         {
-          "name_en": "Champion",
-          "points": 14,
-          "exclusive": true
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 6
         }
       ],
-      "minimum": 10,
-      "maximum": 1
-    },
-    {
-      "name_en": "Silver Helms",
-      "id": "silver-helms",
-      "points": 19,
-      "armyComposition": {
-        "high-elves": {
-          "category": "core"
-        }
-      },
-      "command": [
+      "equipment": [
         {
-          "name_en": "Musician",
-          "points": 7,
-          "exclusive": true
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 14,
-          "exclusive": true
-        },
-        {
-          "name_en": "Champion",
-          "points": 14,
-          "exclusive": true
-        }
-      ],
-      "minimum": 5,
-      "maximum": 1
-    }
-  ],
-  "special": [
-    {
-      "name_en": "Ellryian Reavers",
-      "id": "ellryian-reavers",
-      "points": 18,
-      "armyComposition": {
-        "high-elves": {
-          "category": "special"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Musician",
-          "points": 7,
-          "exclusive": true
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 14,
-          "exclusive": true
+          "name_en": "Spear, Light Armour, Shield",
+          "name_es": "Lanza, Armadura Ligera, Escudo",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "melee": [
         {
-          "name_en": "Spears",
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
           "points": 0,
-          "exclusive": true
-        }
-      ],
-      "ranged": [
-        {
-          "name_en": "Spears and Bows",
-          "points": 0,
-          "exclusive": true
-        },
-        {
-          "name_en": "Bows",
-          "points": 0,
-          "exclusive": true
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "options": [
         {
-          "name_en": "Harbinger",
-          "points": 14,
-          "exclusive": true
+          "name_en": "First Among Equals",
+          "name_es": "Primeros entre Iguales",
+          "points": 0,
+          "id": "first-among-equals",
+          "notes": {
+            "name_en": "The Standard Bearer may carry a magic banner worth up to 25 points",
+            "name_es": "El Portaestandarte puede llevar un estandarte mágico de hasta 25 puntos"
+          }
         }
       ],
-      "minimum": 5,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Fight in Three Ranks, Stoic",
+        "name_es": "Luchar en Tres Filas, Estoicos"
+      }
     },
     {
-      "name_en": "Dragon Princes of Caledor",
-      "id": "dragon-princes-of-caledor",
-      "points": 26,
-      "armyComposition": {
-        "high-elves": {
-          "category": "special"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Musician",
-          "points": 9,
-          "exclusive": true
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 18,
-          "exclusive": true
-        },
-        {
-          "name_en": "Drakemaster",
-          "points": 18,
-          "exclusive": true
-        }
-      ],
-      "minimum": 5,
-      "maximum": 1
-    },
-    {
-      "name_en": "Swordmasters of Hoeth",
-      "id": "swordmasters-of-hoeth",
-      "points": 13,
-      "armyComposition": {
-        "high-elves": {
-          "category": "special"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Musician",
-          "points": 6,
-          "exclusive": true
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 12,
-          "exclusive": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Bladelord",
-          "points": 12,
-          "exclusive": true
-        }
-      ],
-      "minimum": 10,
-      "maximum": 1
-    },
-    {
-      "name_en": "Shadow Warriors",
-      "id": "shadow-warriors",
+      "name_en": "Lothern Sea Guard",
+      "name_es": "Guardia del Mar de Lothern",
+      "id": "lothern-sea-guard",
       "points": 15,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": {
         "high-elves": {
-          "category": "special"
+          "category": "core"
         }
       },
-      "options": [
+      "command": [
         {
-          "name_en": "Shadow Walker",
-          "points": 14,
-          "exclusive": true
-        }
-      ],
-      "minimum": 5,
-      "maximum": 1
-    },
-    {
-      "name_en": "Tiranoc Chariot",
-      "id": "tiranoc-chariot",
-      "points": 0,
-      "armyComposition": {
-        "high-elves": {
-          "category": "special"
-        }
-      },
-      "armor": [
+          "name_en": "Champion",
+          "name_es": "Campeón",
+          "points": 14
+        },
         {
-          "name_en": "Armour Save 5+",
-          "points": 0,
-          "exclusive": true
-        }
-      ],
-      "options": [
+          "name_en": "Standard Bearer",
+          "name_es": "Portaestandarte",
+          "points": 14
+        },
         {
-          "name_en": "Crew",
-          "points": 0,
-          "exclusive": true
-        }
-      ],
-      "mounts": [
-        {
-          "name_en": "Elven Steed",
+          "name_en": "Musician",
+          "name_es": "Músico",
           "points": 7
         }
       ],
-      "minimum": 1,
-      "maximum": 2
+      "equipment": [
+        {
+          "name_en": "Spear, Longbow, Light Armour",
+          "name_es": "Lanza, Arco Largo, Armadura Ligera",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Shields",
+          "name_es": "Escudos",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "specialRules": {
+        "name_en": "Fight in Three Ranks, Stoic",
+        "name_es": "Luchar en Tres Filas, Estoicos"
+      }
     },
     {
-      "name_en": "Phoenix Guard",
-      "id": "phoenix-guard",
-      "points": 15,
+      "name_en": "Silver Helms",
+      "name_es": "Yelmos Plateados",
+      "id": "silver-helms",
+      "points": 19,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "high-elves": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Champion",
+          "name_es": "Campeón",
+          "points": 14
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_es": "Portaestandarte",
+          "points": 14,
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 25,
+            "notes": {
+              "name_en": "Only if the unit is First Among Equals",
+              "name_es": "Solo si la unidad es Primeros entre Iguales"
+            }
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lance, Barded Elven Steed",
+          "name_es": "Lanza de Caballería, Corcel Élfico con Barda",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "armor": [
+        {
+          "name_en": "Light Armour",
+          "name_es": "Armadura Ligera",
+          "points": 0,
+          "id": "silver-helms-light-armour",
+          "perModel": true,
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Heavy Armour",
+          "name_es": "Armadura Pesada",
+          "points": 2,
+          "id": "silver-helms-heavy-armour",
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Shields",
+          "name_es": "Escudos",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "First Among Equals",
+          "name_es": "Primeros entre Iguales",
+          "points": 0,
+          "id": "first-among-equals",
+          "notes": {
+            "name_en": "The Standard Bearer may carry a magic banner worth up to 25 points",
+            "name_es": "El Portaestandarte puede llevar un estandarte mágico de hasta 25 puntos"
+          }
+        }
+      ],
+      "specialRules": {
+        "name_en": "Stoic",
+        "name_es": "Estoicos"
+      }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Ellyrian Reavers",
+      "name_es": "Jinetes de Ellyrion",
+      "id": "ellyrian-reavers",
+      "points": 18,
+      "minimum": 5,
+      "maximum": 0,
       "armyComposition": {
         "high-elves": {
           "category": "special"
@@ -420,51 +884,308 @@
       },
       "command": [
         {
-          "name_en": "Musician",
-          "points": 7,
-          "exclusive": true
+          "name_en": "Harbinger",
+          "name_es": "Heraldo",
+          "points": 14
         },
         {
           "name_en": "Standard Bearer",
-          "points": 14,
-          "exclusive": true
+          "name_es": "Portaestandarte",
+          "points": 14
+        },
+        {
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Light Armour, Elven Steed",
+          "name_es": "Armadura Ligera, Corcel Élfico",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
       "options": [
         {
-          "name_en": "Keeper of the Flame",
-          "points": 14,
+          "name_en": "Spears",
+          "name_es": "Lanzas",
+          "points": 0,
+          "id": "reavers-spears",
+          "perModel": true,
+          "exclusive": true,
+          "active": true
+        },
+        {
+          "name_en": "Bows",
+          "name_es": "Arcos",
+          "points": 5,
+          "id": "reavers-bows",
+          "perModel": true,
+          "exclusive": true
+        },
+        {
+          "name_en": "Spears and Bows",
+          "name_es": "Lanzas y Arcos",
+          "points": 6,
+          "id": "reavers-spears-and-bows",
+          "perModel": true,
           "exclusive": true
         }
       ],
+      "specialRules": {
+        "name_en": "Fast Cavalry, Stoic",
+        "name_es": "Caballería Rápida, Estoicos"
+      }
+    },
+    {
+      "name_en": "Dragon Princes of Caledor",
+      "name_es": "Príncipes Dragón de Caledor",
+      "id": "dragon-princes-of-caledor",
+      "points": 26,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "high-elves": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Drakemaster",
+          "name_es": "Maestro Dragón",
+          "points": 18,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_es": "Portaestandarte",
+          "points": 18,
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 9
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Lance, Dragon Armour, Shield, Barded Elven Steed",
+          "name_es": "Lanza de Caballería, Armadura de Dragón, Escudo, Corcel Élfico con Barda",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "specialRules": {
+        "name_en": "Dragon Armour, Stoic",
+        "name_es": "Armadura de Dragón, Estoicos"
+      }
+    },
+    {
+      "name_en": "Swordmasters of Hoeth",
+      "name_es": "Maestros de la Espada de Hoeth",
+      "id": "swordmasters-of-hoeth",
+      "points": 13,
       "minimum": 10,
-      "maximum": 1
+      "maximum": 0,
+      "armyComposition": {
+        "high-elves": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Bladelord",
+          "name_es": "Señor de la Espada",
+          "points": 12,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_es": "Portaestandarte",
+          "points": 12,
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 6
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Great Weapon, Heavy Armour",
+          "name_es": "Arma a Dos Manos, Armadura Pesada",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "specialRules": {
+        "name_en": "Swordmasters, Stoic",
+        "name_es": "Maestros de la Espada, Estoicos"
+      }
+    },
+    {
+      "name_en": "Shadow Warriors",
+      "name_es": "Guerreros Sombríos",
+      "id": "shadow-warriors",
+      "points": 15,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": {
+        "high-elves": {
+          "category": "special"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Shadow Walker",
+          "name_es": "Caminante Sombrío",
+          "points": 14
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Longbow, Light Armour",
+          "name_es": "Arco Largo, Armadura Ligera",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "specialRules": {
+        "name_en": "Scouts, Skirmishers, Hate Dark Elves, Stoic",
+        "name_es": "Exploradores, Hostigadores, Odio a los Elfos Oscuros, Estoicos"
+      }
+    },
+    {
+      "name_en": "Tiranoc Chariot",
+      "name_es": "Carro de Tiranoc",
+      "id": "tiranoc-chariot",
+      "points": 85,
+      "minimum": 1,
+      "maximum": 2,
+      "armyComposition": {
+        "high-elves": {
+          "category": "special"
+        }
+      },
+      "equipment": [
+        {
+          "name_en": "2 Crew with Hand Weapons, Spears and Bows; 2 Elven Steeds",
+          "name_es": "2 Tripulantes con Armas de Mano, Lanzas y Arcos; 2 Corceles Élficos",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Third Elven Steed",
+          "name_es": "Tercer Corcel Élfico",
+          "points": 7,
+          "id": "chariot-third-steed",
+          "perModel": true
+        },
+        {
+          "name_en": "Fourth Elven Steed",
+          "name_es": "Cuarto Corcel Élfico",
+          "points": 7,
+          "id": "chariot-fourth-steed",
+          "perModel": true,
+          "requiredOption": "chariot-third-steed"
+        }
+      ],
+      "specialRules": {
+        "name_en": "Stoic",
+        "name_es": "Estoicos"
+      }
     }
   ],
   "rare": [
     {
-      "name_en": "Repeater Bolt Thrower",
-      "id": "repeater-bolt-thrower",
-      "points": 0,
-      "armyComposition": {
-        "high-elves": {
-          "category": "rare"
-        }
-      },
-      "options": [
-        {
-          "name_en": "Crew",
-          "points": 0,
-          "exclusive": true
-        }
-      ],
-      "minimum": 1,
-      "maximum": 2
-    },
-    {
-      "name_en": "White Lions",
-      "id": "white-lions",
-      "points": 13,
+      "name_en": "Phoenix Guard",
+      "name_es": "Guardia Fénix",
+      "id": "phoenix-guard",
+      "points": 15,
+      "minimum": 10,
+      "maximum": 0,
       "armyComposition": {
         "high-elves": {
           "category": "rare"
@@ -472,53 +1193,175 @@
       },
       "command": [
         {
-          "name_en": "Musician",
-          "points": 7,
-          "exclusive": true
+          "name_en": "Keeper of the Flame",
+          "name_es": "Guardián de la Llama",
+          "points": 14,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
         },
         {
           "name_en": "Standard Bearer",
+          "name_es": "Portaestandarte",
           "points": 14,
-          "exclusive": true
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 7
         }
       ],
-      "armor": [
+      "equipment": [
         {
-          "name_en": "Lion Cloak",
+          "name_en": "Halberd, Heavy Armour",
+          "name_es": "Alabarda, Armadura Pesada",
           "points": 0,
-          "exclusive": true
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
-      "options": [
+      "melee": [
         {
-          "name_en": "Guardian",
-          "points": 14,
-          "exclusive": true
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
         }
       ],
-      "minimum": 10,
-      "maximum": 1
+      "specialRules": {
+        "name_en": "Cause Fear, Stoic",
+        "name_es": "Causan Miedo, Estoicos"
+      }
     },
     {
-      "name_en": "Great Eagle",
-      "id": "great-eagle",
-      "points": 50,
+      "name_en": "Repeater Bolt Thrower",
+      "name_es": "Lanzavirotes de Repetición",
+      "id": "repeater-bolt-thrower",
+      "points": 100,
+      "minimum": 1,
+      "maximum": 2,
       "armyComposition": {
         "high-elves": {
           "category": "rare"
         }
       },
-      "minimum": 1,
-      "maximum": 2
+      "equipment": [
+        {
+          "name_en": "2 Crew with Hand Weapons and Light Armour",
+          "name_es": "2 Tripulantes con Armas de Mano y Armadura Ligera",
+          "points": 0,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "specialRules": {
+        "name_en": "Repeater Bolt Thrower, Stoic",
+        "name_es": "Lanzavirotes de Repetición, Estoicos"
+      }
     },
     {
-      "name_en": "Dogs of War",
-      "id": "dogs-of-war",
-      "points": 0,
+      "name_en": "White Lions",
+      "name_es": "Leones Blancos",
+      "id": "white-lions",
+      "points": 13,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": {
+        "high-elves": {
+          "category": "rare",
+          "notes": {
+            "name_en": "Special choice if the army includes a character with the Lion Guard honour",
+            "name_es": "Opción Especial si el ejército incluye un personaje con el honor Guardia del León"
+          }
+        }
+      },
+      "command": [
+        {
+          "name_en": "Guardian",
+          "name_es": "Guardián",
+          "points": 14,
+          "magic": {
+            "types": [
+              "weapon",
+              "armor",
+              "talisman",
+              "enchanted-item"
+            ],
+            "maxPoints": 25
+          }
+        },
+        {
+          "name_en": "Standard Bearer",
+          "name_es": "Portaestandarte",
+          "points": 14,
+          "magic": {
+            "types": [
+              "banner"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "name_es": "Músico",
+          "points": 7
+        }
+      ],
+      "equipment": [
+        {
+          "name_en": "Great Weapon, Light Armour, Lion Cloak",
+          "name_es": "Arma a Dos Manos, Armadura Ligera, Capa de León",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "melee": [
+        {
+          "name_en": "Hand Weapons",
+          "name_es": "Armas de Mano",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        }
+      ],
+      "specialRules": {
+        "name_en": "Bodyguard, Woodsmen, Stoic",
+        "name_es": "Guardaespaldas, Leñadores, Estoicos"
+      }
+    },
+    {
+      "name_en": "Great Eagle",
+      "name_es": "Gran Águila",
+      "id": "great-eagle",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 2,
       "armyComposition": {
         "high-elves": {
           "category": "rare"
         }
+      },
+      "specialRules": {
+        "name_en": "Fly",
+        "name_es": "Volar"
       }
     }
   ],

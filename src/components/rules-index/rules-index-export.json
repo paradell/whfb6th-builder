@@ -3339,6 +3339,42 @@
     "url": "the-lores-of-magic/lore-of-the-great-maw-renegade",
     "page": "TRLP, p. 17"
   },
+  "spells of the little waaagh!": {
+    "url": "spell-lists/spells-of-the-little-waaagh",
+    "page": "O&G, p. 28"
+  },
+  "spells of the big waaagh!": {
+    "url": "spell-lists/spells-of-the-big-waaagh",
+    "page": "O&G, p. 29"
+  },
+  "gut magic": {
+    "url": "spell-lists/gut-magic",
+    "page": "OK, p. 61"
+  },
+  "skaven magic": {
+    "url": "spell-lists/skaven-magic",
+    "page": "SK, p. 35"
+  },
+  "incantations": {
+    "url": "spell-lists/incantations",
+    "page": "TK, p. 35"
+  },
+  "the lore of athel loren": {
+    "url": "spell-lists/the-lore-of-athel-loren",
+    "page": "WE, p. 79"
+  },
+  "the lore of nurgle": {
+    "url": "spell-lists/the-lore-of-nurgle",
+    "page": "HoC, p. 43"
+  },
+  "the lore of tzeentch": {
+    "url": "spell-lists/the-lore-of-tzeentch",
+    "page": "HoC, p. 44"
+  },
+  "the lore of slaanesh": {
+    "url": "spell-lists/the-lore-of-slaanesh",
+    "page": "HoC, p. 45"
+  },
   "lore of the great maw": {
     "url": "the-lores-of-magic/lore-of-the-great-maw",
     "page": "OK, p. 25"
@@ -21744,6 +21780,18 @@
   },
   "blue fire": { "url": "spell/blue-fire", "page": "RH, p. 83" },
   "brain bursta": { "url": "spell/brain-bursta", "page": "RH, p. 47" },
+  "bloodgruel": { "url": "spell/bloodgruel", "page": "OK, p. 61" },
+  "gaze of mork": { "url": "spell/gaze-of-mork", "page": "O&G, p. 28" },
+  "fists of gork": { "url": "spell/fists-of-gork", "page": "O&G, p. 28" },
+  "the hand of gork": { "url": "spell/the-hand-of-gork", "page": "O&G, p. 28" },
+  "mork save uz!": { "url": "spell/mork-save-uz", "page": "O&G, p. 29" },
+  "gork'll fix it": { "url": "spell/gorkll-fix-it", "page": "O&G, p. 29" },
+  "bash 'em ladz": { "url": "spell/bash-em-ladz", "page": "O&G, p. 29" },
+  "the foot of gork": { "url": "spell/the-foot-of-gork", "page": "O&G, p. 29" },
+  "gork's warpath": { "url": "spell/gorks-warpath", "page": "O&G, p. 29" },
+  "braingobbler": { "url": "spell/braingobbler", "page": "OK, p. 61" },
+  "bullgorger": { "url": "spell/bullgorger", "page": "OK, p. 61" },
+  "bonecruncher": { "url": "spell/bonecruncher", "page": "OK, p. 61" },
   "burning gaze": { "url": "spell/burning-gaze", "page": "FoF, p. 109" },
   "cacophonic hymn": { "url": "spell/cacophonic-hymn", "page": "DoC, p. 34" },
   "call of the wild": {
@@ -21923,6 +21971,36 @@
     "page": "RB, p. 331"
   },
   "skitterleap": { "url": "spell/skitterleap", "page": "SK, p. 24" },
+  "vermintide": { "url": "spell/vermintide", "page": "SK, p. 24" },
+  "pestilent breath": { "url": "spell/pestilent-breath", "page": "SK, p. 24" },
+  "death frenzy": { "url": "spell/death-frenzy", "page": "SK, p. 24" },
+  "plague": { "url": "spell/plague", "page": "SK, p. 24" },
+  "sekhubi's incantation of vengeance": { "url": "spell/sekhubis-incantation-of-vengeance", "page": "TK, p. 35" },
+  "horekhah's incantation of righteous smiting": { "url": "spell/horekhahs-incantation-of-righteous-smiting", "page": "TK, p. 35" },
+  "diedra's incantation of summoning": { "url": "spell/diedras-incantation-of-summoning", "page": "TK, p. 35" },
+  "mankara's incantation of urgency": { "url": "spell/mankaras-incantation-of-urgency", "page": "TK, p. 35" },
+  "fury of the forest": { "url": "spell/fury-of-the-forest", "page": "WE, p. 79" },
+  "the hidden path": { "url": "spell/the-hidden-path", "page": "WE, p. 79" },
+  "the twilight host": { "url": "spell/the-twilight-host", "page": "WE, p. 79" },
+  "the call of the hunt": { "url": "spell/the-call-of-the-hunt", "page": "WE, p. 79" },
+  "magnificent buboes": { "url": "spell/magnificent-buboes", "page": "HoC, p. 43" },
+  "favoured poxes": { "url": "spell/favoured-poxes", "page": "HoC, p. 43" },
+  "effulgent boils": { "url": "spell/effulgent-boils", "page": "HoC, p. 43" },
+  "glistening scabs": { "url": "spell/glistening-scabs", "page": "HoC, p. 43" },
+  "glorious afflictions": { "url": "spell/glorious-afflictions", "page": "HoC, p. 43" },
+  "sumptuous pestilence": { "url": "spell/sumptuous-pestilence", "page": "HoC, p. 43" },
+  "red fire": { "url": "spell/red-fire", "page": "HoC, p. 44" },
+  "orange fire": { "url": "spell/orange-fire", "page": "HoC, p. 44" },
+  "yellow fire": { "url": "spell/yellow-fire", "page": "HoC, p. 44" },
+  "green fire": { "url": "spell/green-fire", "page": "HoC, p. 44" },
+  "indigo fire": { "url": "spell/indigo-fire", "page": "HoC, p. 44" },
+  "violet fire": { "url": "spell/violet-fire", "page": "HoC, p. 44" },
+  "blissful throes": { "url": "spell/blissful-throes", "page": "HoC, p. 45" },
+  "luxurious torment": { "url": "spell/luxurious-torment", "page": "HoC, p. 45" },
+  "titillating delusions": { "url": "spell/titillating-delusions", "page": "HoC, p. 45" },
+  "delectable torture": { "url": "spell/delectable-torture", "page": "HoC, p. 45" },
+  "enrapturing spasms": { "url": "spell/enrapturing-spasms", "page": "HoC, p. 45" },
+  "delicious excruciation": { "url": "spell/delicious-excruciation", "page": "HoC, p. 45" },
   "soul eater": { "url": "spell/soul-eater", "page": "RB, p. 325" },
   "spectral doppelganger": {
     "url": "spell/spectral-doppelganger",

@@ -1,185 +1,477 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord", "name_es": "Ejemplo de Señor", "id": "example-lord", "points": 110,
-    "armyComposition": { "skaven": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord", "name_es": "Ejemplo de Señor Mágico", "id": "example-magic-lord", "points": 190,
-    "armyComposition": { "skaven": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero", "name_es": "Ejemplo de Héroe", "id": "example-hero", "points": 60,
-    "armyComposition": { "skaven": { "category": "heroes" } },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero", "name_es": "Ejemplo de Héroe Mágico", "id": "example-magic-hero", "points": 70,
-    "armyComposition": { "skaven": { "category": "heroes" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+  "lords": [
+    {
+      "name_en": "Warlord",
+      "id": "warlord",
+      "points": 90,
+      "armyComposition": { "skaven": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "warlord-great-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Halberd", "id": "warlord-halberd", "points": 6, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "warlord-additional-hand-weapon", "points": 6, "exclusive": true }
+      ],
+      "ranged": [
+        { "name_en": "Warplock Pistol", "points": 15 }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "warlord-light-armour", "points": 3, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "warlord-heavy-armour", "points": 6, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Not available: Warpstone Stars, Cloak of Shadows (Clan Eshin only); Blade of Corruption, Liber Bubonicus (Clan Pestilens only); Death Globes, Storm Daemon (Warlock Engineers only); Things-catcher (Clan Moulder only)" } }
+      ],
+      "specialRules": { "name_en": "He Who Runs Away Lives To Fight Another Day!, Life is Cheap, Lead from the Back" }
+    },
+    {
+      "name_en": "Grey Seer",
+      "id": "grey-seer",
+      "points": 235,
+      "armyComposition": { "skaven": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 0, "exclusive": true, "active": true }] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Screaming Bell", "id": "screaming-bell", "points": 200, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Not available: Warpstone Stars, Cloak of Shadows (Clan Eshin only); Blade of Corruption, Liber Bubonicus (Clan Pestilens only); Death Globes, Storm Daemon (Warlock Engineers only); Things-catcher (Clan Moulder only)" } }
+      ],
+      "lores": ["skaven-magic"],
+      "specialRules": { "name_en": "He Who Runs Away Lives To Fight Another Day!, Life is Cheap, Lead from the Back, Warpstone Tokens" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Chieftain",
+      "id": "chieftain",
+      "points": 45,
+      "armyComposition": { "skaven": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 25, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "chieftain-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Halberd", "id": "chieftain-halberd", "points": 4, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "chieftain-additional-hand-weapon", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "chieftain-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "chieftain-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2, "notes": { "name_en": "not if Battle Standard Bearer" } }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Not available: Warpstone Stars, Cloak of Shadows (Clan Eshin only); Blade of Corruption, Liber Bubonicus (Clan Pestilens only); Death Globes, Storm Daemon (Warlock Engineers only); Things-catcher (Clan Moulder only). A Battle Standard Bearer with a magic banner may not take other magic items" } }
+      ],
+      "specialRules": { "name_en": "He Who Runs Away Lives To Fight Another Day!, Life is Cheap, Lead from the Back" }
+    },
+    {
+      "name_en": "Plague Priest",
+      "id": "plague-priest",
+      "points": 70,
+      "armyComposition": { "skaven": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Flail", "id": "priest-flail", "points": 4, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "priest-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Plague Censer", "id": "priest-plague-censer", "points": 16, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Not available: Warpstone Stars, Cloak of Shadows (Clan Eshin only); Death Globes, Storm Daemon (Warlock Engineers only); Things-catcher (Clan Moulder only). With the Liber Bubonicus he may also take an Arcane item" } }
+      ],
+      "specialRules": { "name_en": "He Who Runs Away Lives To Fight Another Day!, Life is Cheap, Lead from the Back, Frenzy" }
+    },
+    {
+      "name_en": "Master Moulder",
+      "id": "master-moulder",
+      "points": 65,
+      "armyComposition": { "skaven": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "moulder-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Whip", "id": "moulder-whip", "points": 6, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 2 }
+      ],
+      "options": [],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Not available: Warpstone Stars, Cloak of Shadows (Clan Eshin only); Blade of Corruption, Liber Bubonicus (Clan Pestilens only); Death Globes, Storm Daemon (Warlock Engineers only)" } }
+      ],
+      "specialRules": { "name_en": "He Who Runs Away Lives To Fight Another Day!, Life is Cheap, Lead from the Back, Beastmaster" }
+    },
+    {
+      "name_en": "Warlock Engineer",
+      "id": "warlock-engineer",
+      "points": 45,
+      "armyComposition": { "skaven": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [
+        { "name_en": "Warplock Pistol", "points": 10 }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true }] },
+        { "name_en": "Warp-blades", "points": 15 },
+        { "name_en": "Upgraded Warp-energy Condenser", "points": 10 },
+        { "name_en": "Supercharged Warp-power Accumulator", "points": 15 }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Not available: Warpstone Stars, Cloak of Shadows (Clan Eshin only); Blade of Corruption, Liber Bubonicus (Clan Pestilens only); Things-catcher (Clan Moulder only)" } }
+      ],
+      "lores": ["skaven-magic"],
+      "specialRules": { "name_en": "He Who Runs Away Lives To Fight Another Day!, Life is Cheap, Lead from the Back, Warlock Engineers, Warpstone Tokens" }
+    },
+    {
+      "name_en": "Assassin",
+      "id": "assassin",
+      "points": 105,
+      "armyComposition": { "skaven": { "category": "heroes" } },
+      "command": [],
+      "melee": [
+        { "name_en": "Two Hand Weapons", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [
+        { "name_en": "Throwing Stars", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Smoke Bombs", "points": 20 }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Not available: Blade of Corruption, Liber Bubonicus (Clan Pestilens only); Death Globes, Storm Daemon (Warlock Engineers only); Things-catcher (Clan Moulder only)" } }
+      ],
+      "specialRules": { "name_en": "He Who Runs Away Lives To Fight Another Day!, Life is Cheap, Lead from the Back, Poisoned Attacks, Hidden, Scouts, Leadership" }
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "skaven": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "skaven": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Clanrats",
+      "id": "clanrats",
+      "points": 5,
+      "minimum": 20,
+      "maximum": 0,
       "armyComposition": { "skaven": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Clawleader", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Light Armour, Shields", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
       "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+        { "name_en": "Spears", "points": 1, "perModel": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Ratling Gun Team", "id": "clanrats-ratling-gun-team", "points": 60, "exclusive": true, "notes": { "name_en": "max. one weapon team per unit" } },
+        { "name_en": "Warpfire Thrower Team", "id": "clanrats-warpfire-thrower-team", "points": 75, "exclusive": true, "notes": { "name_en": "max. one weapon team per unit" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Strength in Numbers, Mainstay Unit" }
+    },
+    {
+      "name_en": "Stormvermin",
+      "id": "stormvermin",
+      "points": 8,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "skaven": { "category": "core", "notes": { "name_en": "0-1" } } },
+      "command": [
+        { "name_en": "Fangleader", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Halberds, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true },
+        { "name_en": "Ratling Gun Team", "id": "stormvermin-ratling-gun-team", "points": 60, "exclusive": true, "notes": { "name_en": "max. one weapon team per unit" } },
+        { "name_en": "Warpfire Thrower Team", "id": "stormvermin-warpfire-thrower-team", "points": 75, "exclusive": true, "notes": { "name_en": "max. one weapon team per unit" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Strength in Numbers" }
+    },
+    {
+      "name_en": "Clanrat Slaves",
+      "id": "clanrat-slaves",
+      "points": 2,
+      "minimum": 20,
+      "maximum": 0,
+      "armyComposition": { "skaven": { "category": "core", "notes": { "name_en": "One unit per unit of Clanrats" } } },
+      "command": [
+        { "name_en": "Pawleader", "points": 8 },
+        { "name_en": "Musician", "points": 4 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Spears", "points": 1, "perModel": true }
+      ],
+      "ranged": [
+        { "name_en": "Slings", "points": 2, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Strength in Numbers, Expendable" }
+    },
+    {
+      "name_en": "Giant Rats",
+      "id": "giant-rats",
+      "points": 30,
+      "minimum": 1,
+      "maximum": 0,
+      "armyComposition": { "skaven": { "category": "core", "notes": { "name_en": "One unit per unit of Clanrats. Points are per pack of 6 Giant Rats and 1 Packmaster" } } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Packmasters: Hand Weapon, Whip, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Packmaster, Mixed Units, Loss of Packmasters" }
+    },
+    {
+      "name_en": "Rat Swarms",
+      "id": "rat-swarms",
+      "points": 45,
+      "minimum": 1,
+      "maximum": 5,
+      "armyComposition": { "skaven": { "category": "core", "notes": { "name_en": "0-1" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Plague Rats", "points": 20, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Swarm, Expendable, Skirmishers, Small" }
+    },
+    {
+      "name_en": "Night Runners",
+      "id": "night-runners",
+      "points": 5,
+      "minimum": 5,
+      "maximum": 20,
+      "armyComposition": { "skaven": { "category": "core", "notes": { "name_en": "One unit per unit of Clanrats" } } },
+      "command": [
+        { "name_en": "Nightleader", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapons", "points": 2, "perModel": true }
+      ],
+      "ranged": [
+        { "name_en": "Slings", "points": 4, "perModel": true },
+        { "name_en": "Throwing Stars", "points": 2, "perModel": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Skirmishers" }
+    },
+    {
+      "name_en": "Poisoned Wind Globadiers",
+      "id": "poisoned-wind-globadiers",
+      "points": 10,
+      "minimum": 2,
+      "maximum": 10,
+      "armyComposition": { "skaven": { "category": "core", "notes": { "name_en": "One unit per unit of Clanrats" } } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Hand Weapons, Poisoned Wind Globes", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Skirmishers, Poisoned Wind Globes" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 14 }, { "name_en": "Standard bearer", "points": 14 }, { "name_en": "Musician", "points": 7 }],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+      "name_en": "Gutter Runners",
+      "id": "gutter-runners",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 15,
+      "armyComposition": { "skaven": { "category": "special", "notes": { "name_en": "One unit per unit of Clanrats" } } },
+      "command": [
+        { "name_en": "Black Skaven", "points": 12 }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
+      "equipment": [
+        { "name_en": "Two Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }, { "name_en": "Example Option", "points": 5 }],
+      "melee": [],
+      "ranged": [
+        { "name_en": "Slings", "points": 5, "perModel": true },
+        { "name_en": "Throwing Stars", "points": 3, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Poisoned Hand Weapons", "points": 2, "perModel": true },
+        { "name_en": "Poisoned Throwing Stars", "points": 1, "perModel": true, "notes": { "name_en": "requires Throwing Stars" } },
+        { "name_en": "Tunnelling Team", "points": 3, "perModel": true, "notes": { "name_en": "unit size 3-10" } }
+      ],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "skaven": { "category": "special" } }
+      "specialRules": { "name_en": "Skirmishers, Scouts" }
+    },
+    {
+      "name_en": "Warplock Jezzails",
+      "id": "warplock-jezzails",
+      "points": 20,
+      "minimum": 3,
+      "maximum": 10,
+      "armyComposition": { "skaven": { "category": "special", "notes": { "name_en": "One unit per unit of Clanrats" } } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Hand Weapons, Warplock Jezzails, Pavises", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Skirmishers, Pavise, Reliable, Cavalry Base" }
+    },
+    {
+      "name_en": "Plague Monks",
+      "id": "plague-monks",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "skaven": { "category": "special", "notes": { "name_en": "One unit per unit of Clanrats" } } },
+      "command": [
+        { "name_en": "Plague Deacon", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapons", "points": 2, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Strength in Numbers, Frenzy" }
+    },
+    {
+      "name_en": "Rat Ogres",
+      "id": "rat-ogres",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 0,
+      "armyComposition": { "skaven": { "category": "special", "notes": { "name_en": "One unit per unit of Clanrats. Points are per pack of 1 Rat Ogre and 1 Packmaster" } } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Packmasters: Hand Weapon, Whip, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Packmaster, Mixed Units, Loss of Packmasters, Fear" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
-      "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "name_en": "Plague Censer Bearers",
+      "id": "plague-censer-bearers",
+      "points": 17,
+      "minimum": 5,
+      "maximum": 10,
+      "armyComposition": { "skaven": { "category": "rare", "notes": { "name_en": "One unit per unit of Plague Monks" } } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Plague Censers", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Skirmishers, Frenzy, Hatred, Disciples" }
+    },
+    {
+      "name_en": "Warp Lightning Cannon",
+      "id": "warp-lightning-cannon",
+      "points": 100,
+      "minimum": 1,
+      "maximum": 1,
       "armyComposition": { "skaven": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Warp-lightning Cannon" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-

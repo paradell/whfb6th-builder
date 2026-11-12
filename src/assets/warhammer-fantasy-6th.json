@@ -6,7 +6,7 @@
       "id": "beasts-of-chaos",
       "name_en": "Beasts of Chaos",
       "name_es": "Bestias del Caos",
-      "items": ["general"],
+      "items": ["general", "beasts-of-chaos", "hordes-of-chaos", "daemonic-gifts"],
       "armyComposition": ["beasts-of-chaos"],
       "allies": [],
       "mercenaries": {}
@@ -28,7 +28,7 @@
       "id": "chaos-dwarfs",
       "name_en": "Chaos Dwarfs",
       "name_es": "Enanos del Caos",
-      "items": ["general"],
+      "items": ["general", "chaos-dwarfs"],
       "armyComposition": ["chaos-dwarfs"],
       "allies": [],
       "mercenaries": {}
@@ -39,6 +39,15 @@
       "name_es": "Elfos Oscuros",
       "items": ["general", "dark-elves"],
       "armyComposition": ["dark-elves"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "dogs-of-war",
+      "name_en": "Dogs of War",
+      "name_es": "Perros de Guerra",
+      "items": ["general"],
+      "armyComposition": ["dogs-of-war"],
       "allies": [],
       "mercenaries": {}
     },
@@ -66,8 +75,17 @@
       "id": "high-elves",
       "name_en": "High Elves",
       "name_es": "Altos Elfos",
-      "items": ["general"],
+      "items": ["high-elves", "elven-honours"],
       "armyComposition": ["high-elves"],
+      "allies": [],
+      "mercenaries": {}
+    },
+    {
+      "id": "hordes-of-chaos",
+      "name_en": "Hordes of Chaos",
+      "name_es": "Hordas del Caos",
+      "items": ["general", "hordes-of-chaos", "daemonic-gifts"],
+      "armyComposition": ["hordes-of-chaos"],
       "allies": [],
       "mercenaries": {}
     },
@@ -75,7 +93,7 @@
       "id": "lizardmen",
       "name_en": "Lizardmen",
       "name_es": "Hombres Lagarto",
-      "items": ["general"],
+      "items": ["general", "lizardmen", "sacred-plaques"],
       "armyComposition": ["lizardmen"],
       "allies": [],
       "mercenaries": {}
@@ -84,7 +102,7 @@
       "id": "ogre-kingdoms",
       "name_en": "Ogre Kingdoms",
       "name_es": "Reinos Ogros",
-      "items": ["general"],
+      "items": ["general", "ogre-kingdoms", "big-names"],
       "armyComposition": ["ogre-kingdoms"],
       "allies": [],
       "mercenaries": {}
@@ -93,7 +111,7 @@
       "id": "orcs-and-goblins",
       "name_en": "Orcs and Goblins",
       "name_es": "Orcos y Goblins",
-      "items": ["general"],
+      "items": ["general", "orcs-and-goblins"],
       "armyComposition": ["orcs-and-goblins"],
       "allies": [],
       "mercenaries": {}
@@ -102,7 +120,7 @@
       "id": "skaven",
       "name_en": "Skaven",
       "name_es": "Skaven",
-      "items": ["general"],
+      "items": ["general", "skaven"],
       "armyComposition": ["skaven"],
       "allies": [],
       "mercenaries": {}
@@ -111,7 +129,7 @@
       "id": "tomb-kings",
       "name_en": "Tomb Kings",
       "name_es": "Reyes Sepulcrales",
-      "items": ["general"],
+      "items": ["general", "tomb-kings"],
       "armyComposition": ["tomb-kings"],
       "allies": [],
       "mercenaries": {}
@@ -129,7 +147,7 @@
       "id": "wood-elves",
       "name_en": "Wood Elves",
       "name_es": "Elfos Silvanos",
-      "items": ["general"],
+      "items": ["general", "wood-elves", "spites"],
       "armyComposition": ["wood-elves"],
       "allies": [],
       "mercenaries": {}

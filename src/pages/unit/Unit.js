@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useState, useEffect, Fragment } from "react";
-import { useParams, useLocation, Redirect } from "react-router-dom";
+import { useParams, useLocation, useHistory, Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
@@ -25,7 +25,12 @@ import {
   RuleWithIcon,
 } from "../../components/rules-index";
 import { nameMap } from "../magic";
-import { editUnit, removeUnit, duplicateUnit } from "../../state/lists";
+import {
+  editUnit,
+  changeUnitType,
+  removeUnit,
+  duplicateUnit,
+} from "../../state/lists";
 import { setArmy } from "../../state/army";
 import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
@@ -53,6 +58,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const { language } = useLanguage();
   const [redirect, setRedirect] = useState(null);
   const location = useLocation();
+  const history = useHistory();
   const intl = useIntl();
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
@@ -401,15 +407,34 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       });
     }
 
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        options: newOptions,
-        ...getRequiredOptionCleanup({ ...unit, options: newOptions }),
-      }),
+    const changes = {
+      listId,
+      unitId,
+      options: newOptions,
+      ...getRequiredOptionCleanup({ ...unit, options: newOptions }),
+    };
+
+    // Some units change category depending on how many sub-options are active
+    // (e.g. Lizardmen Saurus Warriors with Blessed Spawnings)
+    const categoryOption = newOptions.find(
+      (option) => option.categoryByActiveCount?.length,
     );
+    const categories = categoryOption?.categoryByActiveCount;
+    const newType =
+      categories &&
+      categories[
+        Math.min(
+          categoryOption.options.filter((option) => option.active).length,
+          categories.length - 1,
+        )
+      ];
+
+    if (newType && newType !== type) {
+      dispatch(changeUnitType({ ...changes, fromType: type, toType: newType }));
+      history.replace(`/editor/${listId}/${newType}/${unitId}`);
+    } else {
+      dispatch(editUnit({ ...changes, type }));
+    }
   };
   const handleCommandChange = (id, optionIndex) => {
     let magicItems = unit.magic?.items || [];
@@ -1354,6 +1379,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                   options,
                   useCheckboxes,
                   alwaysActive,
+                  maxActive,
+                  categoryByActiveCount,
                   ...equipment
                 }) => {
                   const exclusiveUnitCheckedOption = unit.options.find(
@@ -1367,30 +1394,36 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                       alwaysActive;
                     return (
                       <Fragment key={id}>
-                        <div className="checkbox">
-                          <input
-                            type="checkbox"
-                            id={`options-${id}`}
-                            value={id}
-                            onChange={() =>
-                              !alwaysActive && handleOptionsChange(id)
-                            }
-                            checked={alwaysActive || active}
-                            className="checkbox__input"
-                            disabled={isDisabled}
-                          />
-                          <label
-                            htmlFor={`options-${id}`}
-                            className="checkbox__label"
-                          >
-                            <span className="unit__label-text">
-                              <RulesWithIcon textObject={equipment} />
-                            </span>
-                            <i className="checkbox__points">
-                              {getPointsText({ points, perModel })}
-                            </i>
-                          </label>
-                        </div>
+                        {categoryByActiveCount ? (
+                          <p className="unit__option-info">
+                            <RulesWithIcon textObject={equipment} />
+                          </p>
+                        ) : (
+                          <div className="checkbox">
+                            <input
+                              type="checkbox"
+                              id={`options-${id}`}
+                              value={id}
+                              onChange={() =>
+                                !alwaysActive && handleOptionsChange(id)
+                              }
+                              checked={alwaysActive || active}
+                              className="checkbox__input"
+                              disabled={isDisabled}
+                            />
+                            <label
+                              htmlFor={`options-${id}`}
+                              className="checkbox__label"
+                            >
+                              <span className="unit__label-text">
+                                <RulesWithIcon textObject={equipment} />
+                              </span>
+                              <i className="checkbox__points">
+                                {getPointsText({ points, perModel })}
+                              </i>
+                            </label>
+                          </div>
+                        )}
                         {getUnitOptionNotes({
                           notes,
                           key: `options-${id}-note`,
@@ -1417,6 +1450,10 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 const allOptionsExclusive = useCheckboxes
                                   ? false
                                   : options.every((opt) => opt.exclusive);
+                                const maxActiveReached =
+                                  maxActive &&
+                                  options.filter((opt) => opt.active).length >=
+                                    maxActive;
                                 return (
                                   <Fragment key={option.name_en}>
                                     <div className="checkbox checkbox--conditional">
@@ -1442,6 +1479,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                           (exclusiveCheckedOption &&
                                             !allOptionsExclusive &&
                                             option.exclusive &&
+                                            !option.active) ||
+                                          (maxActiveReached &&
                                             !option.active) ||
                                           option.alwaysActive
                                         }

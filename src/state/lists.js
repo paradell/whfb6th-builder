@@ -169,6 +169,28 @@ export const listsSlice = createSlice({
         return list;
       });
     },
+    changeUnitType: (state, { payload }) => {
+      const { listId, fromType, toType, unitId, ...newValues } = payload;
+      const unit = state
+        .find(({ id }) => id === listId)
+        [fromType].find(({ id }) => id === unitId);
+
+      Object.keys(newValues).forEach((key) =>
+        newValues[key] === undefined ? delete newValues[key] : {}
+      );
+
+      return state.map((list) => {
+        if (listId === list.id) {
+          return {
+            ...list,
+            [fromType]: list[fromType].filter(({ id }) => id !== unitId),
+            [toType]: [...(list[toType] || []), { ...unit, ...newValues }],
+          };
+        }
+
+        return list;
+      });
+    },
     removeUnit: (state, { payload }) => {
       const { listId, type, unitId } = payload;
 
@@ -212,6 +234,7 @@ export const {
   addUnit,
   moveUnit,
   editUnit,
+  changeUnitType,
   removeUnit,
   duplicateUnit,
   updateList,

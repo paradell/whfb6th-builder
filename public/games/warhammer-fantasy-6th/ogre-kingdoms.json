@@ -1,185 +1,320 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord", "name_es": "Ejemplo de Señor", "id": "example-lord", "points": 110,
-    "armyComposition": { "ogre-kingdoms": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord", "name_es": "Ejemplo de Señor Mágico", "id": "example-magic-lord", "points": 190,
-    "armyComposition": { "ogre-kingdoms": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero", "name_es": "Ejemplo de Héroe", "id": "example-hero", "points": 60,
-    "armyComposition": { "ogre-kingdoms": { "category": "heroes" } },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero", "name_es": "Ejemplo de Héroe Mágico", "id": "example-magic-hero", "points": 70,
-    "armyComposition": { "ogre-kingdoms": { "category": "heroes" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+  "lords": [
+    {
+      "name_en": "Tyrant", "id": "tyrant", "points": 200,
+      "armyComposition": { "ogre-kingdoms": { "category": "lords" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [
+        { "name_en": "Ogre Club", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "tyrant-gw", "points": 14, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "tyrant-addl-hw", "points": 10, "exclusive": true },
+        { "name_en": "Cathayan Longsword", "id": "tyrant-longsword", "points": 10, "exclusive": true },
+        { "name_en": "Ogre Ironfist", "id": "tyrant-ironfist", "points": 12, "exclusive": true }
+      ],
+      "ranged": [
+        { "name_en": "Brace of Handguns", "points": 12 }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "tyrant-light-armour", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "tyrant-heavy-armour", "points": 6, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Luck Gnoblar", "points": 5 },
+        { "name_en": "Sword Gnoblar", "points": 5, "stackable": true, "minimum": 0, "maximum": 2 }
+      ],
+      "mounts": [],
+      "items": [{ "name_en": "Magic Items and Big Names", "types": ["weapon", "armor", "talisman", "enchanted-item", "big-name"], "selected": [], "maxPoints": 100, "notes": { "name_en": "One Big Name of any value" } }],
+      "specialRules": { "name_en": "Fear, Bull Charge, Ogre Club" }
+    },
+    {
+      "name_en": "Slaughtermaster", "id": "slaughtermaster", "points": 200,
+      "armyComposition": { "ogre-kingdoms": { "category": "lords" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [{ "name_en": "Ogre Club", "points": 0, "active": true, "equippedDefault": true }],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 0, "exclusive": true, "active": true }
+        ]},
+        { "name_en": "Luck Gnoblar", "points": 5 },
+        { "name_en": "Tooth Gnoblar", "points": 5, "stackable": true, "minimum": 0, "maximum": 3 }
+      ],
+      "mounts": [],
+      "items": [{ "name_en": "Magic Items and Big Names", "types": ["weapon", "talisman", "arcane-item", "enchanted-item", "big-name"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Big Name up to 25 points. No Beastkiller" } }],
+      "lores": ["gut-magic"],
+      "specialRules": { "name_en": "Fear, Bull Charge, Immune to Poison" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Bruiser", "id": "bruiser", "points": 130,
+      "armyComposition": { "ogre-kingdoms": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 0, "magic": { "types": ["banner"], "maxPoints": 50 } }
+      ],
+      "melee": [
+        { "name_en": "Ogre Club", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "bruiser-gw", "points": 8, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "bruiser-addl-hw", "points": 8, "exclusive": true },
+        { "name_en": "Cathayan Longsword", "id": "bruiser-longsword", "points": 8, "exclusive": true },
+        { "name_en": "Ogre Ironfist", "id": "bruiser-ironfist", "points": 10, "exclusive": true }
+      ],
+      "ranged": [
+        { "name_en": "Brace of Handguns", "points": 12 }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "bruiser-light-armour", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "bruiser-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Luck Gnoblar", "points": 5 },
+        { "name_en": "Sword Gnoblar", "points": 5, "stackable": true, "minimum": 0, "maximum": 2 }
+      ],
+      "mounts": [],
+      "items": [{ "name_en": "Magic Items and Big Names", "types": ["weapon", "armor", "talisman", "enchanted-item", "big-name"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Big Name up to 25 points. Beastkiller: Hunters and Tyrants only" } }],
+      "specialRules": { "name_en": "Fear, Bull Charge, Ogre Club" }
+    },
+    {
+      "name_en": "Hunter", "id": "hunter", "points": 145,
+      "armyComposition": { "ogre-kingdoms": { "category": "heroes" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [{ "name_en": "Ogre Club", "points": 0, "active": true, "equippedDefault": true }],
+      "ranged": [
+        { "name_en": "Harpoon Crossbow", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "points": 0, "active": true, "alwaysActive": true }
+      ],
+      "options": [
+        { "name_en": "Sabretusk", "points": 20, "stackable": true, "minimum": 0, "maximum": 2 }
+      ],
+      "mounts": [],
+      "items": [{ "name_en": "Magic Items and Big Names", "types": ["weapon", "armor", "talisman", "enchanted-item", "big-name"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Big Name up to 25 points. No Daemon-Killer Scars" } }],
+      "specialRules": { "name_en": "Fear, Bull Charge, Harpoon Launcher, Sic 'em boys, Loner" }
+    },
+    {
+      "name_en": "Butcher", "id": "butcher", "points": 130,
+      "armyComposition": { "ogre-kingdoms": { "category": "heroes" } },
+      "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
+      "melee": [{ "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 0, "exclusive": true, "active": true }
+        ]},
+        { "name_en": "Luck Gnoblar", "points": 5 },
+        { "name_en": "Tooth Gnoblar", "points": 5, "stackable": true, "minimum": 0, "maximum": 2 }
+      ],
+      "mounts": [],
+      "items": [{ "name_en": "Magic Items and Big Names", "types": ["weapon", "talisman", "arcane-item", "enchanted-item", "big-name"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Big Name up to 25 points. No Beastkiller" } }],
+      "lores": ["gut-magic"],
+      "specialRules": { "name_en": "Fear, Bull Charge, Immune to Poison" }
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "ogre-kingdoms": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "ogre-kingdoms": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Ogre Bulls", "id": "ogre-bulls",
+      "points": 35, "minimum": 3, "maximum": 0,
       "armyComposition": { "ogre-kingdoms": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Crusher", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20 },
+        { "name_en": "Bellower", "points": 10 }
       ],
+      "equipment": [],
       "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+        { "name_en": "Ogre Clubs", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapons", "id": "bulls-addl-hw", "points": 4, "perModel": true, "exclusive": true },
+        { "name_en": "Ogre Ironfists", "id": "bulls-ironfists", "points": 5, "perModel": true, "exclusive": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "armor": [
+        { "name_en": "Light Armour", "points": 3, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Look-Out Gnoblar", "points": 5, "notes": { "name_en": "Standard Bearer only" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bull Charge, Dogs of War, Ogre Club" }
+    },
+    {
+      "name_en": "Ironguts", "id": "ironguts",
+      "points": 48, "minimum": 3, "maximum": 16,
+      "armyComposition": { "ogre-kingdoms": { "category": "core" } },
+      "command": [
+        { "name_en": "Gutlord", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Bellower", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Great Weapons, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Look-Out Gnoblar", "points": 5, "notes": { "name_en": "Standard Bearer only" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bull Charge, Dogs of War" }
+    },
+    {
+      "name_en": "Gnoblar Fighters", "id": "gnoblar-fighters",
+      "points": 2, "minimum": 20, "maximum": 0,
+      "armyComposition": { "ogre-kingdoms": { "category": "core", "notes": { "name_en": "One unit per unit of Ogre Bulls" } } },
+      "command": [
+        { "name_en": "Groinbiter", "points": 2 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Sharp Stuff", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Largely Insignificant, Bicker" }
+    },
+    {
+      "name_en": "Gnoblar Trappers", "id": "gnoblar-trappers",
+      "points": 6, "minimum": 8, "maximum": 0,
+      "armyComposition": { "ogre-kingdoms": { "category": "core", "notes": { "name_en": "0-1, plus one more unit per unit of Ogre Bulls" } } },
+      "command": [
+        { "name_en": "Snarefinger", "points": 4 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Sharp Stuff", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Largely Insignificant, Bicker, Entourage, Scouts, Skirmishers" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 14 }, { "name_en": "Standard bearer", "points": 14 }, { "name_en": "Musician", "points": 7 }],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+      "name_en": "Leadbelchers", "id": "leadbelchers",
+      "points": 55, "minimum": 2, "maximum": 5,
+      "armyComposition": { "ogre-kingdoms": { "category": "special" } },
+      "command": [
+        { "name_en": "Thunderfist", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 20 },
+        { "name_en": "Bellower", "points": 10 }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
+      "equipment": [
+        { "name_en": "Leadbelcher Cannons, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }, { "name_en": "Example Option", "points": 5 }],
+      "melee": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Look-Out Gnoblar", "points": 5, "notes": { "name_en": "Standard Bearer only" } }
+      ],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "ogre-kingdoms": { "category": "special" } }
+      "specialRules": { "name_en": "Fear, Bull Charge, Dogs of War, Leadbelcher Cannon" }
+    },
+    {
+      "name_en": "Yhetees", "id": "yhetees",
+      "points": 65, "minimum": 3, "maximum": 0,
+      "armyComposition": { "ogre-kingdoms": { "category": "special", "notes": { "name_en": "Not allowed if a character has the Greyback Pelt" } } },
+      "command": [
+        { "name_en": "Greyback", "points": 20 }
+      ],
+      "equipment": [
+        { "name_en": "Ice Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Aura of Frost, Scale Terrain, Ice Weapons" }
+    },
+    {
+      "name_en": "Gnoblar Scraplauncher", "id": "gnoblar-scraplauncher",
+      "points": 165, "minimum": 1, "maximum": 1,
+      "armyComposition": { "ogre-kingdoms": { "category": "special", "notes": { "name_en": "One per unit of Gnoblar Fighters or Gnoblar Trappers" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Chariot, Stone Thrower, Bad Tempered, Unit Strength 5" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
-      "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "name_en": "Maneaters", "id": "maneaters",
+      "points": 80, "minimum": 1, "maximum": 0,
       "armyComposition": { "ogre-kingdoms": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Ogre Clubs", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "maneaters-light-armour", "points": 0, "perModel": true, "active": true, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "maneaters-heavy-armour", "points": 4, "perModel": true, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Cathayan Longsword", "points": 6, "stackable": true, "minimum": 0, "notes": { "name_en": "One weapon option per model" } },
+        { "name_en": "Great Weapon", "points": 6, "stackable": true, "minimum": 0, "notes": { "name_en": "One weapon option per model" } },
+        { "name_en": "Brace of Handguns", "points": 6, "stackable": true, "minimum": 0, "notes": { "name_en": "One weapon option per model" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bull Charge, Dogs of War, Ogre Club, Immune to Psychology, Stubborn" }
+    },
+    {
+      "name_en": "Gorger", "id": "gorger",
+      "points": 75, "minimum": 1, "maximum": 1,
+      "armyComposition": { "ogre-kingdoms": { "category": "rare" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Unbreakable, Killing Blow, Bloodscent, Ravenous" }
+    },
+    {
+      "name_en": "Slavegiant", "id": "slavegiant",
+      "points": 175, "minimum": 1, "maximum": 1,
+      "armyComposition": { "ogre-kingdoms": { "category": "rare", "notes": { "name_en": "Required if any character has the Giantbreaker Big Name" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Terror, Large Target, Ignore Little 'Un Panic, Broken, Slavegiant Special Attacks" }
+    },
+    {
+      "name_en": "Rhinox Riders", "id": "rhinox-riders",
+      "points": 100, "minimum": 1, "maximum": 3,
+      "armyComposition": { "ogre-kingdoms": { "category": "rare", "notes": { "name_en": "Takes up one Special and one Rare slot" } } },
+      "command": [
+        { "name_en": "Thunderlord", "points": 24 },
+        { "name_en": "Standard Bearer", "points": 24, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 12 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Ogre Clubs", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapons", "id": "rhinox-addl-hw", "points": 8, "perModel": true, "exclusive": true },
+        { "name_en": "Ogre Ironfists", "id": "rhinox-ironfists", "points": 10, "perModel": true, "exclusive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "rhinox-light-armour", "points": 0, "perModel": true, "active": true, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "rhinox-heavy-armour", "points": 6, "perModel": true, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Bull Rhinox", "points": 45, "stackable": true, "minimum": 0, "maximum": 3 }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Terror, Large Target, Bad Tempered, Thunderous Charge, Single Minded" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-

@@ -149,9 +149,15 @@ export const nameMap = {
   },
   "elven-honours": {
     name_en: "Elven Honours",
+    name_es: "Honores Élficos",
   },
   "elven-honour": {
     name_en: "Elven Honour",
+    name_es: "Honor Élfico",
+  },
+  "elven-honour-mage": {
+    name_en: "Elven Honour (Mages)",
+    name_es: "Honor Élfico (Magos)",
   },
   none: {
     name_en: "None",
@@ -164,6 +170,33 @@ export const nameMap = {
   },
   elementalism: {
     name_en: "Elementalism",
+  },
+  "little-waaagh": {
+    name_en: "Spells of the Little Waaagh!",
+  },
+  "big-waaagh": {
+    name_en: "Spells of the Big Waaagh!",
+  },
+  "gut-magic": {
+    name_en: "Gut Magic",
+  },
+  "skaven-magic": {
+    name_en: "Skaven Magic",
+  },
+  incantations: {
+    name_en: "Incantations",
+  },
+  "the-lore-of-athel-loren": {
+    name_en: "The Lore of Athel Loren",
+  },
+  "the-lore-of-nurgle": {
+    name_en: "The Lore of Nurgle",
+  },
+  "the-lore-of-tzeentch": {
+    name_en: "The Lore of Tzeentch",
+  },
+  "the-lore-of-slaanesh": {
+    name_en: "The Lore of Slaanesh",
   },
   "lore-of-fire": {
     name_en: "Lore of Fire",
@@ -364,6 +397,18 @@ export const nameMap = {
   "big-name": {
     name_en: "Big Name",
   },
+  spites: {
+    name_en: "Spites",
+  },
+  spite: {
+    name_en: "Spite",
+  },
+  "daemonic-gifts": {
+    name_en: "Daemonic Gifts",
+  },
+  "daemonic-gift": {
+    name_en: "Daemonic Gift",
+  },
   "disciplines-old-ones": {
     name_en: "Disciplines of the Old Ones",
   },
@@ -484,6 +529,10 @@ export const nameMap = {
     name_en: "Dark Elves",
     name_es: "Elfos Oscuros",
   },
+  "dogs-of-war": {
+    name_en: "Dogs of War",
+    name_es: "Perros de Guerra",
+  },
   "dwarfs-6th": {
     name_en: "Dwarfs",
     name_es: "Enanos",
@@ -492,9 +541,21 @@ export const nameMap = {
     name_en: "High Elves",
     name_es: "Altos Elfos",
   },
+  "hordes-of-chaos": {
+    name_en: "Hordes of Chaos",
+    name_es: "Hordas del Caos",
+  },
   "lizardmen": {
     name_en: "Lizardmen",
     name_es: "Hombres Lagarto",
+  },
+  "sacred-plaques": {
+    name_en: "Sacred Plaques",
+    name_es: "Placas Sagradas",
+  },
+  "sacred-plaque": {
+    name_en: "Sacred Plaque",
+    name_es: "Placa Sagrada",
   },
   "ogre-kingdoms": {
     name_en: "Ogre Kingdoms",

@@ -628,5 +628,191 @@
     "the-comet-of-casandora": {
       "index": "6"
     }
+  },
+
+  "gut-magic": {
+    "bloodgruel": {
+      "index": "1"
+    },
+    "braingobbler": {
+      "index": "2"
+    },
+    "bullgorger": {
+      "index": "3"
+    },
+    "bonecruncher": {
+      "index": "4"
+    },
+    "toothcracker": {
+      "index": "5"
+    },
+    "trollguts": {
+      "index": "6"
+    }
+  },
+
+  "little-waaagh": {
+    "gaze-of-mork": {
+      "index": "1"
+    },
+    "fists-of-gork": {
+      "index": "2"
+    },
+    "eadbutt": {
+      "index": "3"
+    },
+    "brain-bursta": {
+      "index": "4"
+    },
+    "ere-we-go": {
+      "index": "5"
+    },
+    "the-hand-of-gork": {
+      "index": "6"
+    }
+  },
+
+  "big-waaagh": {
+    "mork-save-uz": {
+      "index": "1"
+    },
+    "gorkll-fix-it": {
+      "index": "2"
+    },
+    "bash-em-ladz": {
+      "index": "3"
+    },
+    "the-foot-of-gork": {
+      "index": "4"
+    },
+    "gorks-warpath": {
+      "index": "5"
+    },
+    "waaagh": {
+      "index": "6"
+    }
+  },
+
+  "skaven-magic": {
+    "skitterleap": {
+      "index": "1"
+    },
+    "warp-lightning": {
+      "index": "2"
+    },
+    "vermintide": {
+      "index": "3"
+    },
+    "pestilent-breath": {
+      "index": "4"
+    },
+    "death-frenzy": {
+      "index": "5"
+    },
+    "plague": {
+      "index": "6"
+    }
+  },
+
+  "incantations": {
+    "sekhubis-incantation-of-vengeance": {
+      "index": "1"
+    },
+    "horekhahs-incantation-of-righteous-smiting": {
+      "index": "2"
+    },
+    "diedras-incantation-of-summoning": {
+      "index": "3"
+    },
+    "mankaras-incantation-of-urgency": {
+      "index": "4"
+    }
+  },
+
+  "the-lore-of-athel-loren": {
+    "tree-singing": {
+      "index": "1"
+    },
+    "fury-of-the-forest": {
+      "index": "2"
+    },
+    "the-hidden-path": {
+      "index": "3"
+    },
+    "the-twilight-host": {
+      "index": "4"
+    },
+    "ariels-blessing": {
+      "index": "5"
+    },
+    "the-call-of-the-hunt": {
+      "index": "6"
+    }
+  },
+
+  "the-lore-of-nurgle": {
+    "magnificent-buboes": {
+      "index": "1"
+    },
+    "favoured-poxes": {
+      "index": "2"
+    },
+    "effulgent-boils": {
+      "index": "3"
+    },
+    "glistening-scabs": {
+      "index": "4"
+    },
+    "glorious-afflictions": {
+      "index": "5"
+    },
+    "sumptuous-pestilence": {
+      "index": "6"
+    }
+  },
+
+  "the-lore-of-tzeentch": {
+    "red-fire": {
+      "index": "0"
+    },
+    "orange-fire": {
+      "index": "1"
+    },
+    "yellow-fire": {
+      "index": "2"
+    },
+    "green-fire": {
+      "index": "3"
+    },
+    "blue-fire": {
+      "index": "4"
+    },
+    "indigo-fire": {
+      "index": "5"
+    },
+    "violet-fire": {
+      "index": "6"
+    }
+  },
+
+  "the-lore-of-slaanesh": {
+    "blissful-throes": {
+      "index": "1"
+    },
+    "luxurious-torment": {
+      "index": "2"
+    },
+    "titillating-delusions": {
+      "index": "3"
+    },
+    "delectable-torture": {
+      "index": "4"
+    },
+    "enrapturing-spasms": {
+      "index": "5"
+    },
+    "delicious-excruciation": {
+      "index": "6"
+    }
   }
 }

@@ -1,0 +1,743 @@
+{
+  "characters": [],
+  "lords": [
+    {
+      "name_en": "Mercenary General",
+      "id": "mercenary-general",
+      "points": 90,
+      "armyComposition": { "dogs-of-war": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Halberd", "id": "mercenary-general-halberd", "points": 6, "exclusive": true },
+        { "name_en": "Morning Star", "id": "mercenary-general-morning-star", "points": 3, "exclusive": true },
+        { "name_en": "Spear", "id": "mercenary-general-spear", "points": 3, "exclusive": true, "notes": { "name_en": "if mounted" } },
+        { "name_en": "Lance", "id": "mercenary-general-lance", "points": 6, "exclusive": true, "notes": { "name_en": "if mounted" } }
+      ],
+      "ranged": [
+        { "name_en": "Pistol", "id": "mercenary-general-pistol", "points": 10, "exclusive": true },
+        { "name_en": "Brace of Pistols", "id": "mercenary-general-brace-of-pistols", "points": 20, "exclusive": true },
+        { "name_en": "Longbow", "id": "mercenary-general-longbow", "points": 15, "exclusive": true },
+        { "name_en": "Crossbow", "id": "mercenary-general-crossbow", "points": 15, "exclusive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "mercenary-general-light-armour", "points": 3, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "mercenary-general-heavy-armour", "points": 6, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Warhorse", "id": "warhorse", "points": 15, "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
+        { "name_en": "Pegasus", "id": "pegasus", "points": 50, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman"], "selected": [], "maxPoints": 100 }
+      ]
+    },
+    {
+      "name_en": "Hireling Wizard Lord",
+      "id": "hireling-wizard-lord",
+      "points": 175,
+      "armyComposition": { "dogs-of-war": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
+          { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
+        ] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Warhorse", "id": "warhorse", "points": 15, "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
+        { "name_en": "Pegasus", "id": "pegasus", "points": 50, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["talisman", "arcane-item"], "selected": [], "maxPoints": 100 }
+      ],
+      "lores": ["lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-beasts", "lore-of-the-heavens", "lore-of-light", "lore-of-life", "lore-of-death"]
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Paymaster",
+      "name_es": "Pagador",
+      "id": "paymaster",
+      "points": 55,
+      "armyComposition": { "dogs-of-war": { "category": "heroes", "notes": { "name_en": "Compulsory, 0-1" } } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "paymaster-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "paymaster-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Halberd", "id": "paymaster-halberd", "points": 4, "exclusive": true },
+        { "name_en": "Morning Star", "id": "paymaster-morning-star", "points": 2, "exclusive": true },
+        { "name_en": "Spear", "id": "paymaster-spear", "points": 2, "exclusive": true, "notes": { "name_en": "if mounted" } },
+        { "name_en": "Lance", "id": "paymaster-lance", "points": 4, "exclusive": true, "notes": { "name_en": "if mounted" } }
+      ],
+      "ranged": [
+        { "name_en": "Pistol", "id": "paymaster-pistol", "points": 7, "exclusive": true },
+        { "name_en": "Brace of Pistols", "id": "paymaster-brace-of-pistols", "points": 14, "exclusive": true },
+        { "name_en": "Longbow", "id": "paymaster-longbow", "points": 10, "exclusive": true },
+        { "name_en": "Crossbow", "id": "paymaster-crossbow", "points": 10, "exclusive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "paymaster-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "paymaster-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Warhorse", "id": "warhorse", "points": 10, "exclusive": true, "options": [{ "name_en": "Barding", "points": 4 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman"], "selected": [], "maxPoints": 50 }
+      ],
+      "specialRules": { "name_en": "Paymaster" }
+    },
+    {
+      "name_en": "Mercenary Captain",
+      "id": "mercenary-captain",
+      "points": 50,
+      "armyComposition": { "dogs-of-war": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "mercenary-captain-additional-hand-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "mercenary-captain-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Halberd", "id": "mercenary-captain-halberd", "points": 4, "exclusive": true },
+        { "name_en": "Morning Star", "id": "mercenary-captain-morning-star", "points": 2, "exclusive": true },
+        { "name_en": "Spear", "id": "mercenary-captain-spear", "points": 2, "exclusive": true, "notes": { "name_en": "if mounted" } },
+        { "name_en": "Lance", "id": "mercenary-captain-lance", "points": 4, "exclusive": true, "notes": { "name_en": "if mounted" } }
+      ],
+      "ranged": [
+        { "name_en": "Pistol", "id": "mercenary-captain-pistol", "points": 7, "exclusive": true },
+        { "name_en": "Brace of Pistols", "id": "mercenary-captain-brace-of-pistols", "points": 14, "exclusive": true },
+        { "name_en": "Longbow", "id": "mercenary-captain-longbow", "points": 10, "exclusive": true },
+        { "name_en": "Crossbow", "id": "mercenary-captain-crossbow", "points": 10, "exclusive": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "mercenary-captain-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "mercenary-captain-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Warhorse", "id": "warhorse", "points": 10, "exclusive": true, "options": [{ "name_en": "Barding", "points": 4 }] },
+        { "name_en": "Pegasus", "id": "pegasus", "points": 50, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman"], "selected": [], "maxPoints": 50 }
+      ]
+    },
+    {
+      "name_en": "Hireling Wizard",
+      "id": "hireling-wizard",
+      "points": 60,
+      "armyComposition": { "dogs-of-war": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
+          { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
+          { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
+        ] }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Warhorse", "id": "warhorse", "points": 10, "exclusive": true, "options": [{ "name_en": "Barding", "points": 4 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["talisman", "arcane-item"], "selected": [], "maxPoints": 50 }
+      ],
+      "lores": ["lore-of-fire", "lore-of-metal", "lore-of-shadow", "lore-of-beasts", "lore-of-the-heavens", "lore-of-light", "lore-of-life", "lore-of-death"]
+    }
+  ],
+  "core": [
+    {
+      "name_en": "Pikemen",
+      "id": "pikemen",
+      "points": 10,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Pikes", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "pikemen-light-armour", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Heavy Armour", "id": "pikemen-heavy-armour", "points": 1, "exclusive": true, "perModel": true }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Pikes" }
+    },
+    {
+      "name_en": "Crossbowmen",
+      "id": "crossbowmen",
+      "points": 8,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [
+        { "name_en": "Crossbows", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "armor": [],
+      "options": [],
+      "mounts": []
+    },
+    {
+      "name_en": "Duellists",
+      "id": "duellists",
+      "points": 5,
+      "minimum": 8,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [
+        { "name_en": "Throwing Stars/Knives", "points": 2, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "id": "duellists-shields", "points": 1, "exclusive": true, "perModel": true },
+        { "name_en": "Additional Hand Weapons", "id": "duellists-additional-hand-weapons", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Pistols", "id": "duellists-pistols", "points": 4, "exclusive": true, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Skirmishers" }
+    },
+    {
+      "name_en": "Light Cavalry",
+      "id": "light-cavalry",
+      "points": 11,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 15 },
+        { "name_en": "Standard Bearer", "points": 15 },
+        { "name_en": "Musician", "points": 15 }
+      ],
+      "equipment": [
+        { "name_en": "Warhorses", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Spears", "points": 1, "perModel": true }
+      ],
+      "ranged": [
+        { "name_en": "Bows", "points": 4, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 2, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fast Cavalry" }
+    },
+    {
+      "name_en": "Heavy Cavalry",
+      "id": "heavy-cavalry",
+      "points": 19,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 15 },
+        { "name_en": "Standard Bearer", "points": 15 },
+        { "name_en": "Musician", "points": 15 }
+      ],
+      "equipment": [
+        { "name_en": "Lances, Heavy Armour, Warhorses", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Barding", "points": 2, "perModel": true }
+      ],
+      "mounts": []
+    },
+    {
+      "name_en": "Pirazzo's Lost Legion",
+      "id": "pirazzos-lost-legion",
+      "points": 10,
+      "minimum": 5,
+      "maximum": 0,
+      "named": true,
+      "armyComposition": { "dogs-of-war": { "category": "core", "notes": { "name_en": "Regiment of Renown, 0-1. Points are per Pikeman" } } },
+      "command": [
+        { "name_en": "Pirazzo, Standard Bearer and Musician", "points": 65, "active": true, "alwaysActive": true }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Pikes", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Crossbowmen", "points": 9, "stackable": true, "minimum": 5, "notes": { "name_en": "Hand weapon, crossbow, light armour" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Pikes, Mixed Formation" }
+    },
+    {
+      "name_en": "Ricco's Republican Guard",
+      "id": "riccos-republican-guard",
+      "points": 12,
+      "minimum": 9,
+      "maximum": 0,
+      "named": true,
+      "armyComposition": { "dogs-of-war": { "category": "core", "notes": { "name_en": "Regiment of Renown, 0-1" } } },
+      "command": [
+        { "name_en": "Ragged Ricco, Standard Bearer and Musician", "points": 72, "active": true, "alwaysActive": true }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Pikes", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Pikes" }
+    },
+    {
+      "name_en": "Leopold's Leopard Company",
+      "id": "leopolds-leopard-company",
+      "points": 12,
+      "minimum": 5,
+      "maximum": 0,
+      "named": true,
+      "armyComposition": { "dogs-of-war": { "category": "core", "notes": { "name_en": "Regiment of Renown, 0-1" } } },
+      "command": [
+        { "name_en": "Leopold, Standard Bearer and Musician", "points": 150, "active": true, "alwaysActive": true }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Pikes", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Pikes, Immune to Psychology" }
+    },
+    {
+      "name_en": "The Alcatani Fellowship",
+      "id": "the-alcatani-fellowship",
+      "points": 9,
+      "minimum": 5,
+      "maximum": 0,
+      "named": true,
+      "armyComposition": { "dogs-of-war": { "category": "core", "notes": { "name_en": "Regiment of Renown, 0-1" } } },
+      "command": [
+        { "name_en": "Roderigo, Standard Bearer and Musician", "points": 80, "active": true, "alwaysActive": true }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Pikes, Crossbows, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Pikes, Mixed Formation" }
+    },
+    {
+      "name_en": "Vespero's Vendetta",
+      "id": "vesperos-vendetta",
+      "points": 10,
+      "minimum": 4,
+      "maximum": 0,
+      "named": true,
+      "armyComposition": { "dogs-of-war": { "category": "core", "notes": { "name_en": "Regiment of Renown, 0-1" } } },
+      "command": [
+        { "name_en": "Vespero (Grimacing Death Mask), Standard Bearer and Musician", "points": 85, "active": true, "alwaysActive": true }
+      ],
+      "equipment": [
+        { "name_en": "Additional Hand Weapons, Throwing Stars/Knives, Cloaks", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Skirmishers, Cloak and Dagger, Grimacing Death Mask" }
+    },
+    {
+      "name_en": "Marksmen of Miragliano",
+      "id": "marksmen-of-miragliano",
+      "points": 10,
+      "minimum": 9,
+      "maximum": 0,
+      "named": true,
+      "armyComposition": { "dogs-of-war": { "category": "core", "notes": { "name_en": "Regiment of Renown, 0-1" } } },
+      "command": [
+        { "name_en": "Maximillian, Standard Bearer and Musician", "points": 90, "active": true, "alwaysActive": true }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Crossbows, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": []
+    },
+    {
+      "name_en": "Al Muktar's Desert Dogs",
+      "id": "al-muktars-desert-dogs",
+      "points": 13,
+      "minimum": 2,
+      "maximum": 0,
+      "named": true,
+      "armyComposition": { "dogs-of-war": { "category": "core", "notes": { "name_en": "Regiment of Renown, 0-1" } } },
+      "command": [
+        { "name_en": "Sheikh Sufti (Scimitar of Dakisir), Ibn the Blind (Black Banner of Muktarhin) and Musician", "points": 219, "active": true, "alwaysActive": true }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Shields, Horses", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fast Cavalry, Scimitar of Dakisir, Black Banner of Muktarhin" }
+    }
+  ],
+  "special": [
+    {
+      "name_en": "Halflings",
+      "id": "halflings",
+      "points": 6,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Bows", "id": "halflings-bows", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Spears, Shields and Light Armour", "id": "halflings-spears", "points": 0, "exclusive": true, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Halflings" }
+    },
+    {
+      "name_en": "Dwarfs",
+      "id": "dwarfs",
+      "points": 7,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Great Weapons", "points": 2, "perModel": true }
+      ],
+      "ranged": [
+        { "name_en": "Crossbows", "points": 5, "perModel": true }
+      ],
+      "armor": [
+        { "name_en": "Light Armour", "id": "dwarfs-light-armour", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Heavy Armour", "id": "dwarfs-heavy-armour", "points": 1, "exclusive": true, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Shields", "points": 0, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Resolute, Ancestral Grudge, Relentless" }
+    },
+    {
+      "name_en": "Norse Marauders",
+      "id": "norse-marauders",
+      "points": 7,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Flails", "id": "norse-marauders-flails", "points": 1, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "norse-marauders-great-weapons", "points": 2, "exclusive": true, "perModel": true },
+        { "name_en": "Additional Hand Weapons", "id": "norse-marauders-additional-hand-weapons", "points": 2, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 0, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Frenzy" }
+    },
+    {
+      "name_en": "Ogres",
+      "id": "ogres",
+      "points": 35,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapons", "id": "ogres-additional-hand-weapons", "points": 6, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "ogres-great-weapons", "points": 6, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3, "perModel": true }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear" }
+    },
+    {
+      "name_en": "Paymaster's Bodyguard",
+      "id": "paymasters-bodyguard",
+      "points": 9,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "special", "notes": { "name_en": "0-1" } } },
+      "command": [
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Halberds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "paymasters-bodyguard-light-armour", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Heavy Armour", "id": "paymasters-bodyguard-heavy-armour", "points": 1, "exclusive": true, "perModel": true }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Paymaster's Bodyguard" }
+    },
+    {
+      "name_en": "Ogre Bulls",
+      "id": "ogre-bulls",
+      "points": 35,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [
+        { "name_en": "Crusher", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20 },
+        { "name_en": "Bellower", "points": 10 }
+      ],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Ogre Clubs", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
+        { "name_en": "Additional Hand Weapons", "id": "bulls-addl-hw", "points": 4, "perModel": true, "exclusive": true },
+        { "name_en": "Ogre Ironfists", "id": "bulls-ironfists", "points": 5, "perModel": true, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Look-Out Gnoblar", "points": 5, "notes": { "name_en": "Standard Bearer only" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bull Charge, Ogre Club" }
+    },
+    {
+      "name_en": "Ironguts",
+      "id": "ironguts",
+      "points": 48,
+      "minimum": 3,
+      "maximum": 16,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [
+        { "name_en": "Crusher", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20 },
+        { "name_en": "Bellower", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Great Weapons, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Look-Out Gnoblar", "points": 5, "notes": { "name_en": "Standard Bearer only" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bull Charge" }
+    },
+    {
+      "name_en": "Leadbelchers",
+      "id": "leadbelchers",
+      "points": 55,
+      "minimum": 2,
+      "maximum": 5,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [
+        { "name_en": "Thunderfist", "points": 10 },
+        { "name_en": "Bellower", "points": 10 }
+      ],
+      "equipment": [
+        { "name_en": "Leadbelcher Cannons, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bull Charge, Leadbelcher Cannon" }
+    },
+    {
+      "name_en": "Maneaters",
+      "id": "maneaters",
+      "points": 80,
+      "minimum": 1,
+      "maximum": 0,
+      "armyComposition": { "dogs-of-war": { "category": "special" } },
+      "command": [],
+      "equipment": [],
+      "melee": [
+        { "name_en": "Ogre Clubs", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "maneaters-light-armour", "points": 0, "perModel": true, "active": true, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "maneaters-heavy-armour", "points": 4, "perModel": true, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Cathayan Longsword", "points": 6, "stackable": true, "minimum": 0, "notes": { "name_en": "One weapon option per model" } },
+        { "name_en": "Great Weapon", "points": 6, "stackable": true, "minimum": 0, "notes": { "name_en": "One weapon option per model" } },
+        { "name_en": "Brace of Handguns", "points": 6, "stackable": true, "minimum": 0, "notes": { "name_en": "One weapon option per model" } }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bull Charge, Ogre Club, Immune to Psychology, Stubborn" }
+    }
+  ],
+  "rare": [
+    {
+      "name_en": "Halfling Hot Pot",
+      "id": "halfling-hot-pot",
+      "points": 50,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "dogs-of-war": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Crew: 3 Halflings", "points": 0, "active": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "War Machine, Halfling Hot Pot" }
+    },
+    {
+      "name_en": "Cannon",
+      "id": "cannon",
+      "points": 85,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "dogs-of-war": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Crew: 3", "points": 0, "active": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "War Machine, Cannon" }
+    }
+  ],
+  "mercenaries": [],
+  "allies": []
+}

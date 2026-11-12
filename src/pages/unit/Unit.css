@@ -233,6 +233,13 @@
   font-style: italic;
 }
 
+.unit__option-info {
+  margin: 0 0 0.5rem;
+  line-height: normal;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
 .unit__option-note--stackable {
   margin-left: 1rem;
   margin-right: 2.2rem;

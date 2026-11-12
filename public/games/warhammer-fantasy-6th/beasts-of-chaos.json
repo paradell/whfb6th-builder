@@ -1,720 +1,492 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord",
-    "name_es": "Ejemplo de Señor",
-    "id": "example-lord",
-    "points": 110,
-    "armyComposition": {
-      "beasts-of-chaos": { // rename this key to match the actual faction key.
-        "category": "lords"
-      }
-    },
-    "command": [
-      {
-        "name_en": "General",
-        "name_es": "General",
-        "points": 0
-      }
-    ],
-    "melee": [
-      {
-        "name_en": "Hand weapon",
-        "points": 0,
-        "active": true,
-        "alwaysActive": true
-      },
-      {
-        "name_en": "Example Melee Option",
-        "points": 3
-      }
-    ],
-    "armor": [
-      {
-        "name_en": "Heavy armour",
-        "points": 0,
-        "active": true
-      }
-    ],
-    "options": [
-      {
-        "name_en": "Shield",
-        "points": 3
-      },
-      {
-        "name_en": "Example Exclusive Option",
-        "id": "example-exclusive-option",
-        "points": 12,
-        "exclusive": true
-      },
-      {
-        "name_en": "Example Exclusive Option 2",
-        "id": "example-exclusive-option-2",
-        "points": 28,
-        "exclusive": true
-      }
-    ],
-    "mounts": [
-      {
-        "name_en": "On foot",
-        "points": 0,
-        "id": "on-foot",
-        "exclusive": true
-      },
-      {
-        "name_en": "Example Mount",
-        "id": "example-mount",
-        "points": 21,
-        "active": true,
-        "exclusive": true
-      },
-      {
-        "name_en": "Example Flying Mount",
-        "id": "example-flying-mount",
-        "points": 50,
-        "exclusive": true
-      }
-    ],
-    "items": [
-      {
-        "name_en": "Magic Items",
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "selected": [],
-        "maxPoints": 100
-      }
-    ],
-    "specialRules": {
-      "name_en": "Example Special Rule",
-      "name_es": "Ejemplo de Regla Especial"
-    }
-  },
+  "lords": [
     {
-      "name_en": "Example Magic Lord",
-      "name_es": "Ejemplo de Señor Mágico",
-      "id": "example-magic-lord",
-      "points": 190,
-      "armyComposition": {
-        "beasts-of-chaos": { // rename this key to match the actual faction key.
-          "category": "lords"
-        }
-      },
+      "name_en": "Beastlord",
+      "id": "beastlord",
+      "points": 95,
+      "armyComposition": { "beasts-of-chaos": { "category": "lords" } },
       "command": [
-        {
-          "name_en": "General",
-          "name_es": "General",
-          "points": 0
-        }
+        { "name_en": "General", "name_es": "General", "points": 0 }
       ],
       "melee": [
-        {
-          "name_en": "Hand weapon",
-          "points": 0,
-          "active": true,
-          "alwaysActive": true
-        }
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "beastlord-great-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "beastlord-additional-hand-weapon", "points": 4, "exclusive": true }
       ],
-      "armor": [],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "beastlord-light-armour", "points": 3, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "beastlord-heavy-armour", "points": 6, "exclusive": true }
+      ],
       "options": [
-        {
-          "name_en": "Wizard",
-          "name_es": "Hechicero",
-          "points": 0,
-          "active": true,
-          "alwaysActive": true,
-          "options": [
-            {
-              "name_en": "Level 3 Wizard",
-              "name_es": "Hechicero de Nivel 3",
-              "points": 0,
-              "exclusive": true,
-              "active": true
-            },
-            {
-              "name_en": "Level 4 Wizard",
-              "name_es": "Hechicero de Nivel 4",
-              "points": 35,
-              "exclusive": true
-            }
-          ]
-        },
-        {
-          "name_en": "Example Option",
-          "points": 10
-        }
+        { "name_en": "Shield", "points": 3 },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "beastlord-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "beastlord-mark-of-khorne", "points": 40, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "beastlord-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "beastlord-mark-of-slaanesh", "points": 25, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 4 Wizard)", "id": "beastlord-mark-of-tzeentch-level-4-wizard", "points": 140, "exclusive": true }] }
       ],
       "mounts": [
-        {
-          "name_en": "On foot",
-          "points": 0,
-          "id": "on-foot",
-          "active": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Example Mount",
-          "points": 15,
-          "id": "example-mount",
-          "exclusive": true,
-          "options": [
-            {
-              "name_en": "Example Mount Option",
-              "points": 15
-            }
-          ]
-        },
-        {
-          "name_en": "Example Flying Mount",
-          "id": "example-flying-mount",
-          "points": 50,
-          "exclusive": true
-        }
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Tuskgor Chariot", "id": "tuskgor-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Tuskgor Chariot must be bought as a Core choice; the character replaces one of its crew" } }
       ],
       "items": [
-        {
-          "name_en": "Magic Items",
-          "types": [
-            "weapon",
-            "talisman",
-            "arcane-item",
-            "enchanted-item"
-          ],
-          "selected": [],
-          "maxPoints": 100
-        }
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Arcane items only with the Mark of Tzeentch. No enchanted items. Hordes of Chaos artifacts allowed except enchanted items; god-specific items need the matching Mark. Horn of the Great Hunt: Beastlords and Wargors who are the General only. Plague Chalice: Mark of Nurgle only" } }
       ],
-      "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-      "specialRules": {
-        "name_en": "Example Special Rule",
-        "name_es": "Ejemplo de Regla Especial"
-      }
-    }],
-  "heroes": [{
-    "name_en": "Example Hero",
-    "name_es": "Ejemplo de Héroe",
-    "id": "example-hero",
-    "points": 60,
-    "armyComposition": {
-      "beasts-of-chaos": { // rename this key to match the actual faction key.
-        "category": "heroes"
-      }
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Raiders, Beastmen Ambush" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
     },
-    "command": [
-      {
-        "name_en": "General",
-        "name_es": "General",
-        "points": 0
-      },
-      {
-        "name_en": "Battle Standard Bearer",
-        "points": 0,
-        "magic": {
-          "types": ["banner"],
-          "maxPoints": 0
-        }
-      }
-    ],
-    "melee": [
-      {
-        "name_en": "Hand weapon",
-        "points": 0,
-        "active": true,
-        "alwaysActive": true
-      },
-      {
-        "name_en": "Example Melee Option",
-        "points": 2
-      },
-      {
-        "name_en": "Example Melee Option 2",
-        "points": 4
-      },
-      {
-        "name_en": "Example Mounted Melee Option",
-        "points": 6,
-        "notes": {
-          "name_en": "if appropriately mounted"
-        }
-      }
-    ],
-    "armor": [
-      {
-        "name_en": "Heavy armour",
-        "points": 0,
-        "active": true
-      }
-    ],
-    "options": [
-      {
-        "name_en": "Shield",
-        "points": 2
-      },
-      {
-        "name_en": "Example Exclusive Option",
-        "id": "example-exclusive-option",
-        "points": 8,
-        "exclusive": true
-      },
-      {
-        "name_en": "Example Exclusive Option 2",
-        "id": "example-exclusive-option-2",
-        "points": 21,
-        "exclusive": true
-      }
-    ],
-    "mounts": [
-      {
-        "name_en": "On foot",
-        "id": "on-foot",
-        "points": 0,
-        "exclusive": true
-      },
-      {
-        "name_en": "Example Mount",
-        "id": "example-mount",
-        "points": 14,
-        "active": true,
-        "exclusive": true
-      },
-      {
-        "name_en": "Example Flying Mount",
-        "id": "example-flying-mount",
-        "points": 50,
-        "exclusive": true
-      }
-    ],
-    "items": [
-      {
-        "name_en": "Magic Items",
-        "types": ["weapon", "armor", "talisman", "enchanted-item"],
-        "selected": [],
-        "maxPoints": 50
-      }
-    ],
-    "specialRules": {
-      "name_en": "Example Special Rule",
-      "name_es": "Ejemplo de Regla Especial"
-    }
-  },
     {
-      "name_en": "Example Magic Hero",
-      "name_es": "Ejemplo de Héroe Mágico",
-      "id": "example-magic-hero",
-      "points": 70,
-      "armyComposition": {
-        "beasts-of-chaos": { // rename this key to match the actual faction key.
-          "category": "heroes"
-        }
-      },
+      "name_en": "Doombull",
+      "id": "doombull",
+      "points": 180,
+      "armyComposition": { "beasts-of-chaos": { "category": "lords" } },
       "command": [
-        {
-          "name_en": "General",
-          "name_es": "General",
-          "points": 0
-        }
+        { "name_en": "General", "name_es": "General", "points": 0 }
       ],
       "melee": [
-        {
-          "name_en": "Hand weapon",
-          "points": 0,
-          "active": true,
-          "alwaysActive": true
-        }
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "doombull-great-weapon", "points": 8, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "doombull-additional-hand-weapon", "points": 6, "exclusive": true }
       ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "doombull-light-armour", "points": 3, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "doombull-heavy-armour", "points": 6, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "doombull-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "doombull-mark-of-khorne", "points": 40, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "doombull-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "doombull-mark-of-slaanesh", "points": 25, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 2 Wizard)", "id": "doombull-mark-of-tzeentch-level-2-wizard", "points": 80, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Arcane items only with the Mark of Tzeentch. No enchanted items. Hordes of Chaos artifacts allowed except enchanted items; god-specific items need the matching Mark. Horn of the Great Hunt: Beastlords and Wargors who are the General only. Plague Chalice: Mark of Nurgle only" } }
+      ],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Fear, Bloodgreed" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
+    },
+    {
+      "name_en": "Great Bray-Shaman",
+      "id": "great-bray-shaman",
+      "points": 180,
+      "armyComposition": { "beasts-of-chaos": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Braystaff", "id": "great-shaman-braystaff", "points": 8, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "great-shaman-additional-hand-weapon", "points": 6, "exclusive": true }
+      ],
+      "ranged": [],
       "armor": [],
       "options": [
-        {
-          "name_en": "Wizard",
-          "name_es": "Hechicero",
-          "points": 0,
-          "active": true,
-          "alwaysActive": true,
-          "options": [
-            {
-              "name_en": "Level 1 Wizard",
-              "name_es": "Hechicero de Nivel 1",
-              "points": 0,
-              "exclusive": true,
-              "active": true
-            },
-            {
-              "name_en": "Level 2 Wizard",
-              "name_es": "Hechicero de Nivel 2",
-              "points": 35,
-              "exclusive": true
-            }
-          ]
-        },
-        {
-          "name_en": "Example Option",
-          "points": 10
-        }
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }] },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "great-shaman-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Nurgle", "id": "great-shaman-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "great-shaman-mark-of-slaanesh", "points": 25, "exclusive": true }] }
       ],
       "mounts": [
-        {
-          "name_en": "On foot",
-          "points": 0,
-          "id": "on-foot",
-          "active": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Example Mount",
-          "points": 10,
-          "id": "example-mount",
-          "exclusive": true,
-          "options": [
-            {
-              "name_en": "Example Mount Option",
-              "points": 15
-            }
-          ]
-        }
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Tuskgor Chariot", "id": "tuskgor-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Tuskgor Chariot must be bought as a Core choice; the character replaces one of its crew" } }
       ],
       "items": [
-        {
-          "name_en": "Magic Items",
-          "types": [
-            "weapon",
-            "talisman",
-            "arcane-item",
-            "enchanted-item"
-          ],
-          "selected": [],
-          "maxPoints": 50
-        }
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Magic armour: Chaos Armour (Beastmen), Pelt of the Dark Young or The Fur of Sharrgu only. No enchanted items. Hordes of Chaos artifacts allowed except enchanted items; god-specific items need the matching Mark. Horn of the Great Hunt: Beastlords and Wargors who are the General only. Plague Chalice: Mark of Nurgle only" } }
       ],
-      "lores": ["example-lore-1", "example-lore-2"],
-      "specialRules": {
-        "name_en": "Example Special Rule",
-        "name_es": "Ejemplo de Regla Especial"
-      }
+      "lores": ["lore-of-beasts", "lore-of-shadow", "lore-of-death", "the-lore-of-nurgle", "the-lore-of-slaanesh"],
+      "specialRules": { "name_en": "Raiders, Beastmen Ambush" },
+      "notes": { "name_en": "Chaos Undivided: Beasts, Shadow or Death; Mark of Nurgle or Slaanesh: that god's lore" }
+    },
+    {
+      "name_en": "Dragon Ogre Shaggoth Champion",
+      "id": "dragon-ogre-shaggoth-champion",
+      "points": 295,
+      "armyComposition": { "beasts-of-chaos": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Additional Hand Weapon", "id": "shaggoth-champion-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "shaggoth-champion-great-weapon", "points": 8, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3 }
+      ],
+      "options": [
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "shaggoth-champion-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "shaggoth-champion-mark-of-khorne", "points": 35, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "shaggoth-champion-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "shaggoth-champion-mark-of-slaanesh", "points": 40, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 2 Wizard)", "id": "shaggoth-champion-mark-of-tzeentch-level-2-wizard", "points": 80, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Terror, Large Target, Scaly Skin (4+), Immune to Psychology, Storm Rage, Shaggoth Champion" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Wargor",
+      "id": "wargor",
+      "points": 60,
+      "armyComposition": { "beasts-of-chaos": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 25, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "wargor-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "wargor-additional-hand-weapon", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "wargor-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "wargor-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "wargor-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "wargor-mark-of-khorne", "points": 35, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "wargor-mark-of-nurgle", "points": 40, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "wargor-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 2 Wizard)", "id": "wargor-mark-of-tzeentch-level-2-wizard", "points": 70, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Arcane items only with the Mark of Tzeentch. No enchanted items. Hordes of Chaos artifacts allowed except enchanted items; god-specific items need the matching Mark. Horn of the Great Hunt: Beastlords and Wargors who are the General only. Plague Chalice: Mark of Nurgle only" } }
+      ],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Raiders, Beastmen Ambush" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
+    },
+    {
+      "name_en": "Bray-Shaman",
+      "id": "bray-shaman",
+      "points": 75,
+      "armyComposition": { "beasts-of-chaos": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Braystaff", "id": "shaman-braystaff", "points": 6, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "shaman-additional-hand-weapon", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [{ "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },{ "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }] },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "shaman-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Nurgle", "id": "shaman-mark-of-nurgle", "points": 40, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "shaman-mark-of-slaanesh", "points": 20, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Magic armour: Chaos Armour (Beastmen), Pelt of the Dark Young or The Fur of Sharrgu only. No enchanted items. Hordes of Chaos artifacts allowed except enchanted items; god-specific items need the matching Mark. Horn of the Great Hunt: Beastlords and Wargors who are the General only. Plague Chalice: Mark of Nurgle only" } }
+      ],
+      "lores": ["lore-of-beasts", "lore-of-shadow", "lore-of-death", "the-lore-of-nurgle", "the-lore-of-slaanesh"],
+      "specialRules": { "name_en": "Raiders, Beastmen Ambush" },
+      "notes": { "name_en": "Chaos Undivided: Beasts, Shadow or Death; Mark of Nurgle or Slaanesh: that god's lore" }
+    },
+    {
+      "name_en": "Gorebull",
+      "id": "gorebull",
+      "points": 130,
+      "armyComposition": { "beasts-of-chaos": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 25, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "gorebull-great-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Additional Hand Weapon", "id": "gorebull-additional-hand-weapon", "points": 4, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "id": "gorebull-light-armour", "points": 2, "exclusive": true },
+        { "name_en": "Heavy Armour", "id": "gorebull-heavy-armour", "points": 4, "exclusive": true }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 },
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "gorebull-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "gorebull-mark-of-khorne", "points": 35, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "gorebull-mark-of-nurgle", "points": 40, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "gorebull-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch (Level 1 Wizard)", "id": "gorebull-mark-of-tzeentch-level-1-wizard", "points": 40, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "arcane-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Arcane items only with the Mark of Tzeentch. No enchanted items. Hordes of Chaos artifacts allowed except enchanted items; god-specific items need the matching Mark. Horn of the Great Hunt: Beastlords and Wargors who are the General only. Plague Chalice: Mark of Nurgle only" } }
+      ],
+      "lores": ["the-lore-of-tzeentch"],
+      "specialRules": { "name_en": "Fear, Bloodgreed, Unit Strength 3" },
+      "notes": { "name_en": "Only with the Mark of Tzeentch" }
     }
   ],
   "core": [
     {
-      "name_en": "Example Infantry Unit",
-      "name_es": "Ejemplo de Unidad de Infantería",
-      "id": "example-infantry-unit",
-      "points": 5,
-      "minimum": 10,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "Example Champion",
-          "points": 12
-        },
-        {
-          "name_en": "Standard bearer",
-          "points": 10
-        },
-        {
-          "name_en": "Musician",
-          "points": 5
-        }
-      ],
-      "melee": [
-        {
-          "name_en": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Example Melee Option",
-          "points": 0,
-          "perModel": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour, Shields",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Example Armour Option",
-          "points": 1,
-          "perModel": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Example Option",
-          "points": 5
-        }
-      ],
-      "mounts": [],
-      "specialRules": {
-        "name_en": "Example Special Rule",
-        "name_es": "Ejemplo de Regla Especial"
-      },
-      "armyComposition": {
-        "beasts-of-chaos": { // rename this key to match the actual faction key.
-          "category": "core"
-        }
-      }
-    },
-    {
-      "name_en": "Example Missile Unit",
-      "name_es": "Ejemplo de Unidad de Proyectiles",
-      "id": "example-missile-unit",
-      "points": 6,
-      "minimum": 10,
-      "maximum": 0,
-      "command": [
-        {
-          "name_en": "Example Champion",
-          "points": 5
-        },
-        {
-          "name_en": "Standard bearer",
-          "points": 10
-        },
-        {
-          "name_en": "Musician",
-          "points": 5
-        }
-      ],
-      "equipment": [],
-      "melee": [
-        {
-          "name_en": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "ranged": [
-        {
-          "name_en": "Example Ranged Weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Second Example Ranged Option",
-          "points": 2,
-          "perModel": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "No armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Light armour",
-          "points": 1,
-          "perModel": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Example Option",
-          "points": 5
-        }
-      ],
-      "mounts": [],
-      "specialRules": {
-        "name_en": "Example Special Rule",
-        "name_es": "Ejemplo de Regla Especial"
-      },
-      "armyComposition": {
-        "beasts-of-chaos": { // rename this key to match the actual faction key.
-          "category": "core"
-        }
-      }
-    },
-    {
-      "name_en": "Example Mounted Unit",
-      "name_es": "Ejemplo de Unidad Montada",
-      "id": "example-mounted-unit",
-      "points": 24,
+      "name_en": "Beast Herd",
+      "id": "beast-herd",
+      "points": 7,
       "minimum": 5,
-      "maximum": 15,
-      "armyComposition": {
-        "beasts-of-chaos": { // rename this key to match the actual faction key.
-          "category": "core"
-        }
-      },
+      "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "core", "notes": { "name_en": "Points are per Gor; at least 5 Ungors must be added" } } },
       "command": [
-        {
-          "name_en": "Example Champion",
-          "points": 0,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Standard bearer",
-          "points": 16,
-          "magic": {
-            "maxPoints": 25,
-            "types": ["banner"]
-          }
-        },
-        {
-          "name_en": "Musician",
-          "points": 8
-        }
+        { "name_en": "Foe-render", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Musician", "points": 5 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
       "melee": [
-        {
-          "name_en": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Example Melee Option",
-          "points": 4,
-          "perModel": true
-        }
+        { "name_en": "Additional Hand Weapons", "id": "herd-additional-hand-weapons", "points": 0, "exclusive": true, "perModel": true, "active": true, "notes": { "name_en": "Gors" } },
+        { "name_en": "Shields", "id": "herd-shields", "points": 0, "exclusive": true, "perModel": true, "notes": { "name_en": "Gors" } }
       ],
-      "armor": [
-        {
-          "name_en": "Heavy armour, Barding",
-          "name_es": "Armadura pesada, Barding",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Ungors", "points": 4, "stackable": true, "minimum": 5 },
+        { "name_en": "Ungor Shields", "points": 1, "stackable": true, "minimum": 0, "notes": { "name_en": "one per Ungor" } }
       ],
+      "mounts": [],
+      "specialRules": { "name_en": "Raiders, Beastmen Ambush, Unruly" }
+    },
+    {
+      "name_en": "Bestigors",
+      "id": "bestigors",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "core", "notes": { "name_en": "One unit per Beast Herd" } } },
+      "command": [
+        { "name_en": "Gouge-horn", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Great Weapons, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided. Only one Bestigor unit per army may take a god's Mark (Khorngors, Pestigors, Slaangors or Tzaangors)" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "bestigors-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "bestigors-mark-of-khorne", "points": 45, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "bestigors-mark-of-nurgle", "points": 50, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "bestigors-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch", "id": "bestigors-mark-of-tzeentch", "points": 20, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Mark of Chaos" }
+    },
+    {
+      "name_en": "Tuskgor Chariot",
+      "id": "tuskgor-chariot",
+      "points": 85,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "beasts-of-chaos": { "category": "core" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Ungor driver with spear, Bestigor crew with great weapon, two Tuskgors", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
       "options": [],
       "mounts": [],
-      "specialRules": {
-        "name_en": "Example Special Rule",
-        "name_es": "Ejemplo de Regla Especial"
-      }
+      "specialRules": { "name_en": "Chariot, Tuskgor Charge, Mark of Chaos Undivided" }
+    },
+    {
+      "name_en": "Chaos Warhounds",
+      "id": "chaos-warhounds",
+      "points": 6,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "core" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Beastmen Ambush" }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example",
-      "name_es": "Ejemplo de Caballería Rápida",
-      "id": "fast-cavalry-example",
-      "points": 15,
-      "minimum": 5,
+      "name_en": "Chaos Ogres",
+      "id": "chaos-ogres",
+      "points": 35,
+      "minimum": 3,
       "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "special" } },
       "command": [
-        {
-          "name_en": "Example Champion",
-          "points": 14
-        },
-        {
-          "name_en": "Standard bearer",
-          "points": 14
-        },
-        {
-          "name_en": "Musician",
-          "points": 7
-        }
+        { "name_en": "Big Chaos Ogre", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20 },
+        { "name_en": "Musician", "points": 10 }
       ],
       "equipment": [
-        {
-          "name_en": "Example Equipment",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        }
+        { "name_en": "Hand Weapons, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
       "melee": [
-        {
-          "name_en": "Hand weapons",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Example Melee Option",
-          "points": 1,
-          "perModel": true
-        }
+        { "name_en": "Additional Hand Weapons", "id": "ogres-additional-hand-weapons", "points": 4, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "ogres-great-weapons", "points": 6, "exclusive": true, "perModel": true }
       ],
-      "ranged": [
-        {
-          "name_en": "Example Ranged Option",
-          "points": 1,
-          "perModel": true
-        }
-      ],
+      "ranged": [],
       "armor": [
-        {
-          "name_en": "No armour",
-          "points": 0,
-          "perModel": true,
-          "active": true
-        },
-        {
-          "name_en": "Light armour",
-          "points": 2,
-          "perModel": true
-        }
+        { "name_en": "Heavy Armour", "points": 3, "perModel": true, "notes": { "name_en": "replaces the light armour" } }
       ],
       "options": [
-        {
-          "name_en": "Shields",
-          "points": 1,
-          "perModel": true
-        },
-        {
-          "name_en": "Example Option",
-          "points": 5
-        }
+        { "name_en": "Shields", "points": 3, "perModel": true }
       ],
       "mounts": [],
-      "specialRules": {
-        "name_en": "Fast Cavalry, Example Special Rule",
-        "name_es": "Caballería Rápida, Ejemplo de Regla Especial"
-      },
-      "armyComposition": {
-        "beasts-of-chaos": { // rename this key to match the actual faction key.
-          "category": "special"
-        }
-      }
+      "specialRules": { "name_en": "Fear" }
+    },
+    {
+      "name_en": "Chaos Trolls",
+      "id": "chaos-trolls",
+      "points": 55,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "special" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Regeneration, Stupidity, Troll Vomit" }
+    },
+    {
+      "name_en": "Minotaurs",
+      "id": "minotaurs",
+      "points": 40,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "special" } },
+      "command": [
+        { "name_en": "Bloodkine", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapons", "id": "minotaurs-additional-hand-weapons", "points": 4, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "minotaurs-great-weapons", "points": 6, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3, "perModel": true }
+      ],
+      "options": [
+        { "name_en": "Mark of Chaos", "points": 0, "active": true, "alwaysActive": true, "notes": { "name_en": "If the General has a god's Mark, every other Mark in the army must be that god's or Chaos Undivided" }, "options": [{ "name_en": "Mark of Chaos Undivided", "id": "minotaurs-mark-of-chaos-undivided", "points": 0, "exclusive": true, "active": true },{ "name_en": "Mark of Khorne", "id": "minotaurs-mark-of-khorne", "points": 45, "exclusive": true },{ "name_en": "Mark of Nurgle", "id": "minotaurs-mark-of-nurgle", "points": 25, "exclusive": true },{ "name_en": "Mark of Slaanesh", "id": "minotaurs-mark-of-slaanesh", "points": 20, "exclusive": true },{ "name_en": "Mark of Tzeentch", "id": "minotaurs-mark-of-tzeentch", "points": 20, "exclusive": true }] }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Bloodgreed, Mark of Chaos" }
+    },
+    {
+      "name_en": "Centigors",
+      "id": "centigors",
+      "points": 17,
+      "minimum": 5,
+      "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "special" } },
+      "command": [
+        { "name_en": "Gorehoof", "points": 14 },
+        { "name_en": "Standard Bearer", "points": 14 },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Spears, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [
+        { "name_en": "Throwing Axes", "points": 3, "perModel": true }
+      ],
+      "armor": [],
+      "options": [
+        { "name_en": "Shields", "points": 2, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Drunken" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example",
-      "name_es": "Ejemplo de Máquina de Guerra",
-      "id": "warmachine-example",
-      "points": 90,
-      "command": [
-        {
-          "name_en": "Example Commander",
-          "points": 10
-        }
-      ],
-      "armyComposition": {
-        "beasts-of-chaos": { // rename this key to match the actual faction key.
-          "category": "rare"
-        }
-      },
-      "equipment": [
-        {
-          "name_en": "War Machine, Hand weapons",
-          "points": 0,
-          "active": true
-        }
-      ],
+      "name_en": "Chaos Spawn",
+      "id": "chaos-spawn",
+      "points": 60,
+      "minimum": 1,
+      "maximum": 2,
+      "armyComposition": { "beasts-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
       "armor": [],
+      "options": [
+        { "name_en": "Beast of Nurgle", "id": "spawn-beast-of-nurgle", "points": 15, "exclusive": true, "perModel": true },
+        { "name_en": "Bloodbeast of Khorne", "id": "spawn-bloodbeast-of-khorne", "points": 15, "exclusive": true, "perModel": true },
+        { "name_en": "Fiend of Slaanesh", "id": "spawn-fiend-of-slaanesh", "points": 15, "exclusive": true, "perModel": true },
+        { "name_en": "Firewyrm of Tzeentch", "id": "spawn-firewyrm-of-tzeentch", "points": 15, "exclusive": true, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Fear, Unbreakable, Unit Strength 3, Special Movement, Special Attacks" }
+    },
+    {
+      "name_en": "Chaos Giant",
+      "id": "chaos-giant",
+      "points": 205,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "beasts-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Mutant Monstrosity", "points": 20 }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Large Target, Terror, Giant Special Attacks, Fall Over" }
+    },
+    {
+      "name_en": "Dragon Ogres",
+      "id": "dragon-ogres",
+      "points": 70,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "beasts-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapons", "id": "dragon-ogres-additional-hand-weapons", "points": 4, "exclusive": true, "perModel": true },
+        { "name_en": "Great Weapons", "id": "dragon-ogres-great-weapons", "points": 6, "exclusive": true, "perModel": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3, "perModel": true }
+      ],
       "options": [],
       "mounts": [],
-      "specialRules": {
-        "name_en": "Example Special Rule",
-        "name_es": "Ejemplo de Regla Especial"
-      }
+      "specialRules": { "name_en": "Fear, Scaly Skin (5+), Storm Rage" }
+    },
+    {
+      "name_en": "Dragon Ogre Shaggoth",
+      "id": "dragon-ogre-shaggoth",
+      "points": 295,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "beasts-of-chaos": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Hand Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [
+        { "name_en": "Additional Hand Weapon", "id": "shaggoth-additional-hand-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Great Weapon", "id": "shaggoth-great-weapon", "points": 8, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3 }
+      ],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Terror, Large Target, Scaly Skin (4+), Immune to Psychology, Storm Rage" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-

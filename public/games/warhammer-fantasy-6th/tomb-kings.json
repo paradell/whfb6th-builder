@@ -1,185 +1,365 @@
 {
   "characters": [],
-  "lords": [{
-    "name_en": "Example Lord", "name_es": "Ejemplo de Señor", "id": "example-lord", "points": 110,
-    "armyComposition": { "tomb-kings": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 3 }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 3 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 12, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 28, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 21, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Lord", "name_es": "Ejemplo de Señor Mágico", "id": "example-magic-lord", "points": 190,
-    "armyComposition": { "tomb-kings": { "category": "lords" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 3 Wizard", "name_es": "Hechicero de Nivel 3", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 4 Wizard", "name_es": "Hechicero de Nivel 4", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 15, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100 }],
-    "lores": ["example-lore-1", "example-lore-2", "example-lore-3"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
-  "heroes": [{
-    "name_en": "Example Hero", "name_es": "Ejemplo de Héroe", "id": "example-hero", "points": 60,
-    "armyComposition": { "tomb-kings": { "category": "heroes" } },
-    "command": [
-      { "name_en": "General", "name_es": "General", "points": 0 },
-      { "name_en": "Battle Standard Bearer", "points": 0, "magic": { "types": ["banner"], "maxPoints": 0 } }
-    ],
-    "melee": [
-      { "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true },
-      { "name_en": "Example Melee Option", "points": 2 },
-      { "name_en": "Example Melee Option 2", "points": 4 },
-      { "name_en": "Example Mounted Melee Option", "points": 6, "notes": { "name_en": "if appropriately mounted" } }
-    ],
-    "armor": [{ "name_en": "Heavy armour", "points": 0, "active": true }],
-    "options": [
-      { "name_en": "Shield", "points": 2 },
-      { "name_en": "Example Exclusive Option", "id": "example-exclusive-option", "points": 8, "exclusive": true },
-      { "name_en": "Example Exclusive Option 2", "id": "example-exclusive-option-2", "points": 21, "exclusive": true }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "id": "on-foot", "points": 0, "exclusive": true },
-      { "name_en": "Example Mount", "id": "example-mount", "points": 14, "active": true, "exclusive": true },
-      { "name_en": "Example Flying Mount", "id": "example-flying-mount", "points": 50, "exclusive": true }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  },
-  {
-    "name_en": "Example Magic Hero", "name_es": "Ejemplo de Héroe Mágico", "id": "example-magic-hero", "points": 70,
-    "armyComposition": { "tomb-kings": { "category": "heroes" } },
-    "command": [{ "name_en": "General", "name_es": "General", "points": 0 }],
-    "melee": [{ "name_en": "Hand weapon", "points": 0, "active": true, "alwaysActive": true }],
-    "armor": [],
-    "options": [
-      { "name_en": "Wizard", "name_es": "Hechicero", "points": 0, "active": true, "alwaysActive": true, "options": [
-        { "name_en": "Level 1 Wizard", "name_es": "Hechicero de Nivel 1", "points": 0, "exclusive": true, "active": true },
-        { "name_en": "Level 2 Wizard", "name_es": "Hechicero de Nivel 2", "points": 35, "exclusive": true }
-      ]},
-      { "name_en": "Example Option", "points": 10 }
-    ],
-    "mounts": [
-      { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-      { "name_en": "Example Mount", "points": 10, "id": "example-mount", "exclusive": true, "options": [{ "name_en": "Example Mount Option", "points": 15 }] }
-    ],
-    "items": [{ "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50 }],
-    "lores": ["example-lore-1", "example-lore-2"],
-    "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
-  }],
+  "lords": [
+    {
+      "name_en": "Tomb King",
+      "id": "tomb-king",
+      "points": 170,
+      "armyComposition": { "tomb-kings": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "king-great-weapon", "points": 6, "exclusive": true },
+        { "name_en": "Flail", "id": "king-flail", "points": 3, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 3 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 3 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Chariot", "id": "chariot", "points": 45, "exclusive": true, "options": [{ "name_en": "Spear", "points": 3 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Destroyer of Eternities: on foot only. Golden Eye of Rah-nutt, Chariot of Fire, Icon of Rulership: in a chariot only (Icon of Rulership may be taken with another Enchanted item). Cloak of the Dunes: on foot only. Amulet of Pha-stah: no other magic items. Serpent Staff: Liche Priests only" } }
+      ],
+      "specialRules": { "name_en": "Undead, Flammable, The Curse, My Will Be Done!" }
+    },
+    {
+      "name_en": "Liche High Priest",
+      "id": "liche-high-priest",
+      "points": 245,
+      "armyComposition": { "tomb-kings": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Hierophant", "points": 0, "notes": { "name_en": "the army must include one Hierophant" } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Skeletal Steed", "id": "skeletal-steed", "points": 12, "exclusive": true },
+        { "name_en": "Casket of Souls", "id": "casket-of-souls", "points": 165, "exclusive": true, "notes": { "name_en": "0-1 per army; uses one Rare choice; includes two Casket Guards" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Cloak of the Dunes: on foot only. Amulet of Pha-stah: no other magic items. Crook & Flail of Radiance: Tomb King or Tomb Prince only. Crown of Kings: Tomb King only" } }
+      ],
+      "lores": ["incantations"],
+      "specialRules": { "name_en": "Undead, Liche Priest Magic" }
+    }
+  ],
+  "heroes": [
+    {
+      "name_en": "Tomb Prince",
+      "id": "tomb-prince",
+      "points": 100,
+      "armyComposition": { "tomb-kings": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great Weapon", "id": "prince-great-weapon", "points": 4, "exclusive": true },
+        { "name_en": "Flail", "id": "prince-flail", "points": 2, "exclusive": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 2 }
+      ],
+      "options": [
+        { "name_en": "Shield", "points": 2 }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Chariot", "id": "chariot", "points": 45, "exclusive": true, "options": [{ "name_en": "Spear", "points": 2 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Golden Eye of Rah-nutt, Chariot of Fire, Icon of Rulership: in a chariot only (Icon of Rulership may be taken with another Enchanted item). Cloak of the Dunes: on foot only. Amulet of Pha-stah: no other magic items. Not available: Destroyer of Eternities, Crown of Kings (Tomb King only), Serpent Staff (Liche Priests only)" } }
+      ],
+      "specialRules": { "name_en": "Undead, Flammable, The Curse, My Will Be Done!" }
+    },
+    {
+      "name_en": "Liche Priest",
+      "id": "liche-priest",
+      "points": 115,
+      "armyComposition": { "tomb-kings": { "category": "heroes" } },
+      "command": [
+        { "name_en": "General", "name_es": "General", "points": 0 },
+        { "name_en": "Hierophant", "points": 0, "notes": { "name_en": "the army must include one Hierophant" } }
+      ],
+      "melee": [
+        { "name_en": "Hand Weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Skeletal Steed", "id": "skeletal-steed", "points": 8, "exclusive": true },
+        { "name_en": "Casket of Souls", "id": "casket-of-souls", "points": 165, "exclusive": true, "notes": { "name_en": "0-1 per army; uses one Rare choice; includes two Casket Guards" } }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Cloak of the Dunes: on foot only. Amulet of Pha-stah: no other magic items. Not available: Crook & Flail of Radiance (Tomb King or Tomb Prince only), Crown of Kings (Tomb King only)" } }
+      ],
+      "lores": ["incantations"],
+      "specialRules": { "name_en": "Undead, Liche Priest Magic" }
+    },
+    {
+      "name_en": "Icon Bearer",
+      "id": "icon-bearer",
+      "points": 65,
+      "armyComposition": { "tomb-kings": { "category": "heroes", "notes": { "name_en": "0-1" } } },
+      "command": [
+        { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 0, "active": true, "magic": { "types": ["banner"], "maxPoints": 0 } }
+      ],
+      "melee": [
+        { "name_en": "Tomb Blade", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "ranged": [],
+      "armor": [
+        { "name_en": "Light Armour", "points": 2 }
+      ],
+      "options": [],
+      "mounts": [
+        { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
+        { "name_en": "Skeletal Steed", "id": "skeletal-steed", "points": 8, "exclusive": true },
+        { "name_en": "Chariot", "id": "chariot", "points": 45, "exclusive": true, "options": [{ "name_en": "Spear", "points": 2 }] }
+      ],
+      "items": [
+        { "name_en": "Magic Items", "types": ["weapon", "armor", "talisman", "enchanted-item"], "selected": [], "maxPoints": 50, "notes": { "name_en": "Either a magic standard or up to 50 pts of other magic items, not both. Golden Eye of Rah-nutt, Chariot of Fire, Icon of Rulership: in a chariot only (Icon of Rulership may be taken with another Enchanted item). Cloak of the Dunes: on foot only. Amulet of Pha-stah: no other magic items. Not available: Destroyer of Eternities, Crook & Flail of Radiance, Crown of Kings, Serpent Staff" } }
+      ],
+      "specialRules": { "name_en": "Undead, Flammable, Tomb Blades, Battle Standard" }
+    }
+  ],
   "core": [
     {
-      "name_en": "Example Infantry Unit", "name_es": "Ejemplo de Unidad de Infantería", "id": "example-infantry-unit",
-      "points": 5, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 12 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 0, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "Light armour, Shields", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Example Armour Option", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "tomb-kings": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Missile Unit", "name_es": "Ejemplo de Unidad de Proyectiles", "id": "example-missile-unit",
-      "points": 6, "minimum": 10, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 5 }, { "name_en": "Standard bearer", "points": 10 }, { "name_en": "Musician", "points": 5 }],
-      "equipment": [],
-      "melee": [{ "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }],
-      "ranged": [
-        { "name_en": "Example Ranged Weapon", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Second Example Ranged Option", "points": 2, "perModel": true }
-      ],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 1, "perModel": true }
-      ],
-      "options": [{ "name_en": "Example Option", "points": 5 }],
-      "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" },
-      "armyComposition": { "tomb-kings": { "category": "core" } }
-    },
-    {
-      "name_en": "Example Mounted Unit", "name_es": "Ejemplo de Unidad Montada", "id": "example-mounted-unit",
-      "points": 24, "minimum": 5, "maximum": 15,
+      "name_en": "Skeleton Warriors",
+      "id": "skeleton-warriors",
+      "points": 8,
+      "minimum": 10,
+      "maximum": 40,
       "armyComposition": { "tomb-kings": { "category": "core" } },
       "command": [
-        { "name_en": "Example Champion", "points": 0, "active": true, "alwaysActive": true },
-        { "name_en": "Standard bearer", "points": 16, "magic": { "maxPoints": 25, "types": ["banner"] } },
-        { "name_en": "Musician", "points": 8 }
+        { "name_en": "Champion", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 25 } },
+        { "name_en": "Musician", "points": 5 }
       ],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 4, "perModel": true }
+      "equipment": [
+        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "armor": [{ "name_en": "Heavy armour, Barding", "name_es": "Armadura pesada, Barding", "points": 0, "perModel": true, "active": true }],
-      "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Bows", "id": "skeletons-bows", "points": 0, "exclusive": true, "perModel": true, "active": true },
+        { "name_en": "Spears and Shields", "id": "skeletons-spears-and-shields", "points": 1, "exclusive": true, "perModel": true },
+        { "name_en": "Light Armour", "points": 1, "perModel": true }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead" }
+    },
+    {
+      "name_en": "Skeleton Light Horsemen",
+      "id": "skeleton-light-horsemen",
+      "points": 14,
+      "minimum": 5,
+      "maximum": 16,
+      "armyComposition": { "tomb-kings": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 14 },
+        { "name_en": "Standard Bearer", "points": 14 },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Bows, Skeletal Steeds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Fast Cavalry" }
+    },
+    {
+      "name_en": "Skeleton Heavy Horsemen",
+      "id": "skeleton-heavy-horsemen",
+      "points": 16,
+      "minimum": 5,
+      "maximum": 16,
+      "armyComposition": { "tomb-kings": { "category": "core" } },
+      "command": [
+        { "name_en": "Champion", "points": 14 },
+        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 25 } },
+        { "name_en": "Musician", "points": 7 }
+      ],
+      "equipment": [
+        { "name_en": "Hand Weapons, Spears, Light Armour, Shields, Skeletal Steeds", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead" }
+    },
+    {
+      "name_en": "Tomb Swarms",
+      "id": "tomb-swarms",
+      "points": 45,
+      "minimum": 1,
+      "maximum": 5,
+      "armyComposition": { "tomb-kings": { "category": "core", "notes": { "name_en": "0-1" } } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Swarm, Skirmishers, Poisoned Attacks, It Came From Below..." }
     }
   ],
   "special": [
     {
-      "name_en": "Fast Cavalry Example", "name_es": "Ejemplo de Caballería Rápida", "id": "fast-cavalry-example",
-      "points": 15, "minimum": 5, "maximum": 0,
-      "command": [{ "name_en": "Example Champion", "points": 14 }, { "name_en": "Standard bearer", "points": 14 }, { "name_en": "Musician", "points": 7 }],
-      "equipment": [{ "name_en": "Example Equipment", "points": 0, "perModel": true, "active": true }],
-      "melee": [
-        { "name_en": "Hand weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Example Melee Option", "points": 1, "perModel": true }
+      "name_en": "Skeleton Chariots",
+      "id": "skeleton-chariots",
+      "points": 40,
+      "minimum": 3,
+      "maximum": 12,
+      "armyComposition": { "tomb-kings": { "category": "special", "notes": { "name_en": "Counts as a Core choice if the army includes a Tomb King" } } },
+      "command": [
+        { "name_en": "Champion", "points": 20 },
+        { "name_en": "Standard Bearer", "points": 20, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 10 }
       ],
-      "ranged": [{ "name_en": "Example Ranged Option", "points": 1, "perModel": true }],
-      "armor": [
-        { "name_en": "No armour", "points": 0, "perModel": true, "active": true },
-        { "name_en": "Light armour", "points": 2, "perModel": true }
+      "equipment": [
+        { "name_en": "Crew: Hand Weapons, Bows, Spears", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
       ],
-      "options": [{ "name_en": "Shields", "points": 1, "perModel": true }, { "name_en": "Example Option", "points": 5 }],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
       "mounts": [],
-      "specialRules": { "name_en": "Fast Cavalry, Example Special Rule", "name_es": "Caballería Rápida, Ejemplo de Regla Especial" },
-      "armyComposition": { "tomb-kings": { "category": "special" } }
+      "specialRules": { "name_en": "Undead, Chariot, Light Chariots, Chariot Units, Arrows of the Asp" }
+    },
+    {
+      "name_en": "Tomb Guard",
+      "id": "tomb-guard",
+      "points": 12,
+      "minimum": 10,
+      "maximum": 25,
+      "armyComposition": { "tomb-kings": { "category": "special" } },
+      "command": [
+        { "name_en": "Champion", "points": 12 },
+        { "name_en": "Standard Bearer", "points": 12, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Musician", "points": 6 }
+      ],
+      "equipment": [
+        { "name_en": "Tomb Blades, Light Armour, Shields", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Tomb Blades" }
+    },
+    {
+      "name_en": "Ushabti",
+      "id": "ushabti",
+      "points": 65,
+      "minimum": 3,
+      "maximum": 0,
+      "armyComposition": { "tomb-kings": { "category": "special" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead Construct" }
+    },
+    {
+      "name_en": "Carrion",
+      "id": "carrion",
+      "points": 24,
+      "minimum": 3,
+      "maximum": 10,
+      "armyComposition": { "tomb-kings": { "category": "special" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Flying Unit" }
+    },
+    {
+      "name_en": "Tomb Scorpion",
+      "id": "tomb-scorpion",
+      "points": 85,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "tomb-kings": { "category": "special" } },
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead Construct, It Came From Below..., Poisoned Attacks, Killing Blow, Magic Resistance (1)" }
     }
   ],
   "rare": [
     {
-      "name_en": "Warmachine Example", "name_es": "Ejemplo de Máquina de Guerra", "id": "warmachine-example",
+      "name_en": "Screaming Skull Catapult",
+      "id": "screaming-skull-catapult",
       "points": 90,
-      "command": [{ "name_en": "Example Commander", "points": 10 }],
+      "minimum": 1,
+      "maximum": 1,
       "armyComposition": { "tomb-kings": { "category": "rare" } },
-      "equipment": [{ "name_en": "War Machine, Hand weapons", "points": 0, "active": true }],
-      "armor": [], "options": [], "mounts": [],
-      "specialRules": { "name_en": "Example Special Rule", "name_es": "Ejemplo de Regla Especial" }
+      "command": [],
+      "equipment": [],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [
+        { "name_en": "Skulls of the Foe", "points": 20 }
+      ],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead, Stone Thrower, Screaming Skulls" }
+    },
+    {
+      "name_en": "Bone Giant",
+      "id": "bone-giant",
+      "points": 220,
+      "minimum": 1,
+      "maximum": 1,
+      "armyComposition": { "tomb-kings": { "category": "rare" } },
+      "command": [],
+      "equipment": [
+        { "name_en": "Two Hand Weapons, Heavy Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
+      ],
+      "melee": [],
+      "ranged": [],
+      "armor": [],
+      "options": [],
+      "mounts": [],
+      "specialRules": { "name_en": "Undead Construct, Large Target, Terror, Unstoppable Assault" }
     }
   ],
   "mercenaries": [],
   "allies": []
 }
-
