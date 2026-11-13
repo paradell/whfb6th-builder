@@ -5,7 +5,11 @@
       "name_en": "Vampire Lord",
       "id": "vampire-lord",
       "points": 285,
-      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "armyComposition": {
+        "vampire-counts": {
+          "category": "lords",
+          "extra_categories": ["heroes"]
+        } },
       "command": [
         { "name_en": "General", "points": 0 }
       ],
@@ -40,7 +44,7 @@
         { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
         { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }], "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
         { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
-        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] }
+        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"], "extra_categories": ["heroes"] }
       ],
       "items": [
         { "name_en": "Magic Items and Von Carstein Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "von-carstein-power"], "selected": [], "maxPoints": 100, "requiredOption": ["von-carstein"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
@@ -90,8 +94,7 @@
       "mounts": [
         { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
         { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }], "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
-        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
-        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] }
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] }
       ],
       "items": [
         { "name_en": "Magic Items and Von Carstein Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "von-carstein-power"], "selected": [], "maxPoints": 100, "requiredOption": ["von-carstein"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
@@ -127,7 +130,7 @@
         { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
         { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
         { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true },
-        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true }
+        { "name_en": "Zombie Dragon", "points": 300, "id": "zombie-dragon", "exclusive": true, "extra_categories": ["heroes"] }
       ],
       "items": [
         { "name_en": "Magic Items", "types": ["weapon", "armor", "arcane-item", "talisman", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Magic weapons: only Frostblade, Sword of Unholy Power or Tomb Blade. Magic armour: only Wailing Helm or Armour of Bone" } }
@@ -271,7 +274,7 @@
       "id": "skeletons",
       "points": 8,
       "minimum": 10,
-      "maximum": 0,
+      "maximum": 30,
       "armyComposition": { "vampire-counts": { "category": "core" } },
       "command": [
         { "name_en": "Skeleton Captain", "points": 10 },

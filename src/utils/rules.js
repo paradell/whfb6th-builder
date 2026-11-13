@@ -326,7 +326,28 @@ export const rules = {
   "orcs-and-goblins": {},
   "skaven": {},
   "tomb-kings": {},
-  "vampire-counts": {},
+  "vampire-counts": {
+    characters: {},
+    lords: { },
+    heroes: {},
+    core: {
+      units: [
+        {
+          ids: ["bat-swarm"],
+          max: 1,
+        },
+      ],
+    },
+    special: {},
+    rare: {
+      units: [
+        {
+          ids: ["black-coach"],
+          max: 1,
+        },
+      ],
+    },
+  },
   "wood-elves": {},
   // Warhammer Fantasy MdN
   "bretonnia-mdn": {
@@ -697,9 +718,14 @@ export const getMaxSlots = ({
 // For example: if Louen has extra_categories: ["heroes"] in "army-of-the-king",
 // calling countExtraCategories(list, "heroes", "army-of-the-king") returns 1
 // (because Louen is in list.lords but also counts as a heroes slot).
+// The active mount's `extra_categories` are added too (e.g. a Zombie Dragon
+// takes an extra heroes slot for its rider).
 export const countExtraCategories = (list, category, armyComposition) => {
   if (!list || !category) return 0;
   const allTypes = ["lords", "heroes", "characters", "core", "special", "rare", "mercenaries", "allies"];
+  // Count each occurrence of category in the array (supports repeated entries)
+  const countCategory = (categories) =>
+    Array.isArray(categories) ? categories.filter((c) => c === category).length : 0;
   let count = 0;
   for (const type of allTypes) {
     if (!Array.isArray(list[type])) continue;
@@ -708,14 +734,13 @@ export const countExtraCategories = (list, category, armyComposition) => {
       // Check armyComposition-specific extra_categories first
       const acData = armyComposition && unit.armyComposition && unit.armyComposition[armyComposition];
       if (acData && Array.isArray(acData.extra_categories)) {
-        // Count each occurrence of category in the array (supports repeated entries)
-        count += acData.extra_categories.filter((c) => c === category).length;
-        continue;
+        count += countCategory(acData.extra_categories);
+      } else {
+        // Fallback: global extra_categories on the unit
+        count += countCategory(unit.extra_categories);
       }
-      // Fallback: global extra_categories on the unit
-      if (Array.isArray(unit.extra_categories)) {
-        count += unit.extra_categories.filter((c) => c === category).length;
-      }
+      const activeMount = (unit.mounts || []).find((mount) => mount.active);
+      count += countCategory(activeMount?.extra_categories);
     }
   }
   return count;
