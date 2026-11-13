@@ -60,7 +60,7 @@ export const About = () => {
             id="about.text3"
             values={{
               owb: <i>Warhammer Fantasy Builder</i>,
-              datasets: <Link to="/datasets">/datasets</Link>,
+              datasets: <Link to="/custom-datasets">/custom-datasets</Link>,
               discord: (
                 <a
                   href="https://discord.gg/87nUyjUxTU"

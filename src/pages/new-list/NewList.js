@@ -13,7 +13,7 @@ import { getRandomId } from "../../utils/id";
 import { useLanguage } from "../../utils/useLanguage";
 import { setLists } from "../../state/lists";
 import { updateSetting } from "../../state/settings";
-import { RulesIndex, RuleWithIcon } from "../../components/rules-index";
+import { RulesIndex } from "../../components/rules-index";
 
 import { nameMap } from "../magic";
 
@@ -28,46 +28,22 @@ export const NewList = ({ isMobile }) => {
   const gameSystems = getGameSystems();
   const lists = useSelector((state) => state.lists);
   const game = useSelector((state) => state.settings.selectedGame);
-  const [army, setArmy] = useState("empire-of-man");
-  const [compositionRule, setCompositionRule] = useState("open-war");
+  const [army, setArmy] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [points, setPoints] = useState(2000);
-  const [armyComposition, setArmyComposition] = useState("empire-of-man");
+  const [armyComposition, setArmyComposition] = useState("");
   const [redirect, setRedirect] = useState(null);
   const armies = gameSystems
     .filter(({ id }) => id === game)[0]
     .armies.sort((a, b) => a.id.localeCompare(b.id));
-  const journalArmies = armies.find(({ id }) => army === id)?.armyComposition;
-  const compositionRules = [
-    {
-      id: "open-war",
-      name_en: intl.formatMessage({ id: "misc.open-war" }),
-    },
-    {
-      id: "grand-melee",
-      name_en: intl.formatMessage({ id: "misc.grand-melee" }),
-    },
-    {
-      id: "combined-arms",
-      name_en: intl.formatMessage({ id: "misc.combined-arms" }),
-    },
-    {
-      id: "grand-melee-combined-arms",
-      name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
-    },
-    {
-      id: "battle-march",
-      name_en: intl.formatMessage({ id: "misc.battle-march" }),
-    },
-  ];
+  const armyCompositions = armies.find(
+    ({ id }) => army === id,
+  )?.armyComposition;
   const listsPoints = [...lists.map((list) => list.points)].reverse();
-  const quickActions =
-    compositionRule === "battle-march"
-      ? [500, 600, 750]
-      : lists.length
-      ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
-      : [500, 1000, 1500, 2000, 2500];
+  const quickActions = lists.length
+    ? [...new Set([...listsPoints, 500, 1000, 1500, 2000, 2500])].slice(0, 5)
+    : [500, 1000, 1500, 2000, 2500];
   const createList = () => {
     const newId = getRandomId();
     const newList = {
@@ -93,7 +69,6 @@ export const NewList = ({ isMobile }) => {
       allies: [],
       id: newId,
       armyComposition,
-      compositionRule,
     };
     const newLists = [newList, ...lists];
 
@@ -109,19 +84,14 @@ export const NewList = ({ isMobile }) => {
     dispatch(updateSetting({ key: "selectedGame", value: newGameId }));
     setArmy(firstArmy?.id || "");
     setArmyComposition(firstArmy?.armyComposition?.[0] || firstArmy?.id || "");
-    setCompositionRule("open-war");
   };
   const handleArmyChange = (value) => {
     const selectedArmy = armies.find(({ id }) => value === id);
     setArmy(value);
     setArmyComposition(selectedArmy?.armyComposition?.[0] || value);
-    setCompositionRule("open-war");
   };
-  const handleArcaneJournalChange = (value) => {
+  const handleArmyCompositionChange = (value) => {
     setArmyComposition(value);
-  };
-  const handleCompositionRuleChange = (value) => {
-    setCompositionRule(value);
   };
   const handlePointsChange = (event) => {
     setPoints(event.target.value);
@@ -151,7 +121,6 @@ export const NewList = ({ isMobile }) => {
       const firstArmy = armies[0];
       setArmy(firstArmy.id);
       setArmyComposition(firstArmy.armyComposition?.[0] || firstArmy.id);
-      setCompositionRule("open-war");
     }
   }, [game]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -193,7 +162,6 @@ export const NewList = ({ isMobile }) => {
                 checked={id === game}
                 className="radio__input"
                 aria-label={name}
-                disabled={id === "the-old-world"}
               />
               <label htmlFor={id} className="radio__label">
                 <span className="new-list__game-name">{name}</span>
@@ -211,54 +179,28 @@ export const NewList = ({ isMobile }) => {
             spaceBottom
             required
           />
-          {journalArmies ? (
+          {armyCompositions ? (
             <>
-              <label htmlFor="arcane-journal">
+              <label htmlFor="army-composition">
                 <FormattedMessage id="new.armyComposition" />
               </label>
               <Select
-                id="arcane-journal"
+                id="army-composition"
                 options={[
-                  ...journalArmies.map((journalArmy) => ({
-                    id: journalArmy,
+                  ...armyCompositions.map((armyCompositionId) => ({
+                    id: armyCompositionId,
                     name_en:
-                      nameMap[journalArmy]?.[`name_${language}`] ||
-                      nameMap[journalArmy]?.name_en ||
+                      nameMap[armyCompositionId]?.[`name_${language}`] ||
+                      nameMap[armyCompositionId]?.name_en ||
                       "Name not found",
                   })),
                 ]}
-                onChange={handleArcaneJournalChange}
+                onChange={handleArmyCompositionChange}
                 selected={armyComposition}
                 spaceBottom
               />
             </>
           ) : null}
-          {game === "the-old-world" && (
-            <>
-              <label htmlFor="composition-rule">
-                <FormattedMessage id="new.armyCompositionRule" />
-              </label>
-              <Select
-                id="composition-rule"
-                options={compositionRules}
-                onChange={handleCompositionRuleChange}
-                selected={compositionRule}
-                spaceBottom
-              />
-              <p className="new-list__composition-description">
-                <i>
-                  <FormattedMessage
-                    id={`new.armyCompositionRuleDescription.${compositionRule}`}
-                  />
-                </i>
-                <RuleWithIcon
-                  name={compositionRule}
-                  isDark
-                  className="game-view__rule-icon"
-                />
-              </p>
-            </>
-          )}
           <label htmlFor="points">
             <FormattedMessage id="misc.points" />
           </label>

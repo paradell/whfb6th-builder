@@ -62,13 +62,6 @@ export const getArmyData = ({ data, armyComposition }) => {
       unit?.armyComposition &&
       unit.armyComposition[armyComposition].category === "rare",
   );
-  const charactersToRare = characters?.length
-    ? characters.filter(
-        (unit) =>
-          unit?.armyComposition &&
-          unit.armyComposition[armyComposition].category === "rare",
-      )
-    : [];
 
   // Remove units from old category
   const allCore = [...core, ...specialToCore, ...rareToCore].filter(
@@ -88,21 +81,10 @@ export const getArmyData = ({ data, armyComposition }) => {
         unit.armyComposition[armyComposition].category === "special") ||
       !unit.armyComposition,
   );
-  const allRare = [
-    ...rare,
-    ...specialToRare,
-    ...charactersToRare,
-    ...coreToRare,
-  ].filter(
+  const allRare = [...rare, ...specialToRare, ...coreToRare].filter(
     (unit) =>
       (unit?.armyComposition &&
         unit.armyComposition[armyComposition].category === "rare") ||
-      !unit.armyComposition,
-  );
-  const allCharacters = [...characters].filter(
-    (unit) =>
-      (unit?.armyComposition &&
-        unit.armyComposition[armyComposition].category === "characters") ||
       !unit.armyComposition,
   );
 
@@ -125,7 +107,7 @@ export const getArmyData = ({ data, armyComposition }) => {
   return {
     lords: updateIds(lords),
     heroes: updateIds(heroes),
-    characters: updateIds(allCharacters),
+    characters: updateIds(characters),
     core: updateIds(allCore),
     core_not_count: updateIds(allCoreNotCount),
     special: updateIds(allSpecial),

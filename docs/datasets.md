@@ -2,11 +2,7 @@
 
 The dataset for each army is defined in a [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) format.
 
-Datasets can be downloaded on the [Custom datasets](https://old-world-builder.com/custom-datasets) page.
-
-You can also use our [Datasets editor](https://old-world-builder.com/datasets), no coding required.
-
-> !! Attention: The Datasets Editor has not been updated for some time and no longer reflects the current format of the datasets.
+Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.vercel.app/custom-datasets) page.
 
 ## Army structure
 
@@ -14,7 +10,7 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
 
 ```javascript
 {
-  "characters": [], 
+  "characters": [], // Legacy, always an empty array
   "lords": [],
   "heroes": [],
   "core": [],
@@ -36,12 +32,11 @@ You can also use our [Datasets editor](https://old-world-builder.com/datasets), 
   "points": Number, // Points for each model
   "minimum": Number, // Minimum number of models of the unit
   "maximum": Number, // Maximum number of models of the unit
-  "magicItemsArmy": String, // Category the unit can take magic items from, optional
   "maxSignatureSpells": Number, // Number of maximum signature spells
   "army": String, // Only in mercanaries category, army ID, optional
   "armyComposition": { // Army composition specific options, optional
-    [army composition ID]: { // Example: "troll-horde"
-      "category": "characters" | "core" | "special" | "rare", // Category where the unit can be added
+    [army composition ID]: { // Example: "errantry-war"
+      "category": "core" | "core_not_count" | "special" | "rare", // Category where the unit can be added
       "notes": { // Optional
         "name_en": String,
         "name_es": String

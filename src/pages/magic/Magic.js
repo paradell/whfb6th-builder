@@ -58,7 +58,7 @@ const updateIds = (items) => {
   }));
 };
 
-export const isAllowedShield = (unit, armyComposition) => {
+export const isAllowedShield = (unit) => {
   return (
     (unit.equipment &&
       unit.equipment.some((option) =>
@@ -71,31 +71,6 @@ export const isAllowedShield = (unit, armyComposition) => {
     (unit.armor &&
       unit.armor.some((option) =>
         option.name_en.toLowerCase().includes("shield"),
-      )) ||
-    // Renegade rules allow Ironfist to act like a shield for magic shield eligibility
-    (armyComposition?.includes("renegade") && unit.equipment &&
-      unit.equipment.some((option) =>
-        option.name_en.toLowerCase().includes("ironfist"),
-      )) ||
-    (armyComposition?.includes("renegade") && unit.options &&
-      unit.options.some((option) =>
-        option.name_en.toLowerCase().includes("ironfist"),
-      )) ||
-    (unit.detachments &&
-      unit.detachments.some(
-        (option) =>
-          (option.options &&
-            option.options.some((subOption) =>
-              subOption.name_en.toLowerCase().includes("shield"),
-            )) ||
-          (option.equipment &&
-            option.equipment.some((subOption) =>
-              subOption.name_en.toLowerCase().includes("shield"),
-            )) ||
-          (option.armor &&
-            option.armor.some((subOption) =>
-              subOption.name_en.toLowerCase().includes("shield"),
-            )),
       ))
   );
 };
@@ -107,8 +82,8 @@ export const isMagicShield = (magicItem) => {
   );
 };
 
-export const isDisallowedShield = (magicItem, unit, armyComposition) => {
-  return isMagicShield(magicItem) && !isAllowedShield(unit, armyComposition);
+export const isDisallowedShield = (magicItem, unit) => {
+  return isMagicShield(magicItem) && !isAllowedShield(unit);
 };
 
 export const notEnoughPointsRemaining = (
@@ -143,18 +118,11 @@ export const Magic = ({ isMobile }) => {
     : null;
   const armyId = unit?.army || list?.army;
   const gameSystems = getGameSystems();
-  let army =
+  const army =
     list &&
     gameSystems
       .find(({ id }) => id === list.game)
-      .armies.find(
-        ({ id }) =>
-          (unit && unit.items && unit.items[group]?.magicItemsArmy === id) ||
-          (command !== undefined &&
-            unit &&
-            unit.command &&
-            unit.command[command]?.magic?.magicItemsArmy === id),
-      );
+      .armies.find(({ id }) => armyId === id);
   const [usedElsewhere, setUsedElsewhere] = useState([]);
   const [comboUsedElsewhere, setComboUsedElsewhere] = useState([]);
   const getPointsText = ({
@@ -165,9 +133,9 @@ export const Magic = ({ isMobile }) => {
   }) => {
     let points = regularPoints;
 
-    if (type !== "characters" && perUnitPoints) {
+    if (perUnitPoints) {
       points = perUnitPoints;
-    } else if (type !== "characters" && perModelPoints) {
+    } else if (perModelPoints) {
       points = perModelPoints;
     }
 
@@ -189,33 +157,12 @@ export const Magic = ({ isMobile }) => {
               })
         }`}
         {perModel &&
-          type !== "characters" &&
           ` ${intl.formatMessage({
             id: "unit.perModel",
           })}`}
       </>
     );
   };
-
-  // Fallback to list army if no specific army for items is set
-  if (!army) {
-    army =
-      list &&
-      gameSystems
-        .find(({ id }) => id === list.game)
-        .armies.find(({ id }) => armyId === id);
-  }
-
-  // Use list army for arcane journals
-  if (!army) {
-    army =
-      list &&
-      gameSystems
-        .find(({ id }) => id === list.game)
-        .armies.find(
-          ({ id }) => unit.magicItemsArmy === id || list.army === id,
-        );
-  }
 
   const items = useSelector((state) => state.items);
   let maxMagicPoints = 0;
@@ -489,18 +436,7 @@ export const Magic = ({ isMobile }) => {
       fetcher({
         url: `games/${list.game}/magic-items`,
         onSuccess: (data) => {
-          let itemCategories = army.items;
-
-          if (unit.magicItemsArmy) {
-            itemCategories = itemCategories.filter(
-              (itemCategory) => itemCategory !== army.id,
-            );
-            if (data[unit.magicItemsArmy]) {
-              itemCategories.push(unit.magicItemsArmy);
-            }
-          }
-
-          const allItems = itemCategories.map((itemCategory) => {
+          const allItems = army.items.map((itemCategory) => {
             return {
               items: data[itemCategory],
               ...namesForSpread(nameMap[itemCategory]),
@@ -584,7 +520,7 @@ export const Magic = ({ isMobile }) => {
                   unitPointsRemaining,
                 ) ||
                 isTypeLimitReached ||
-                isDisallowedShield(magicItem, unit, list.armyComposition)
+                isDisallowedShield(magicItem, unit)
               )
             }
           />
@@ -707,11 +643,6 @@ export const Magic = ({ isMobile }) => {
           ?.maxItemsPerCategory) ||
       unit.items[group].maxItemsPerCategory ||
       0;
-  }
-
-  // Backwards compatibility for runes
-  if (list.army === "dwarfen-mountain-holds") {
-    maxItemsPerCategory = 3;
   }
 
   const unitPointsRemaining = maxMagicPoints - unitMagicPoints;
@@ -850,7 +781,7 @@ export const Magic = ({ isMobile }) => {
                   comboExclusiveCategories.indexOf(magicItem.type) >= 0;
 
                 const isTypeLimitReached =
-                  magicItem.nonExclusive && magicItem.type !== "chaotic-trait"
+                  magicItem.nonExclusive
                     ? false
                     : unitSelectedItems.some(
                         (selectedItem) =>

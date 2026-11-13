@@ -19,7 +19,7 @@ export const Help = () => {
         <title>
           {`Warhammer Fantasy Builder | ${intl.formatMessage({ id: "footer.help" })}`}
         </title>
-        <link rel="canonical" href="https://old-world-builder.com/help" />
+        <link rel="canonical" href="https://whfb6th-builder.vercel.app/help" />
       </Helmet>
 
       <Header headline="Warhammer Fantasy Builder" hasMainNavigation hasHomeButton />
@@ -34,7 +34,7 @@ export const Help = () => {
             values={{
               github: (
                 <a
-                  href="https://github.com/nthiebes/old-world-builder"
+                  href="https://github.com/paradell/whfb6th-builder"
                   target="_blank"
                   rel="noreferrer"
                 >

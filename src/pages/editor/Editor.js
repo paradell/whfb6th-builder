@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import {getMaxPercentData, getMinPercentData, getMaxSlots, getMinSlots, countExtraCategories} from "../../utils/rules";
+import {getMaxPercentData, getMaxSlots, getMinSlots, countExtraCategories} from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -105,7 +105,6 @@ export const Editor = ({ isMobile }) => {
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
-  const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
@@ -137,16 +136,6 @@ export const Editor = ({ isMobile }) => {
       armyComposition,
       game: list.game,
     });
-  const charactersData =
-    list.characters &&
-    getMaxSlots({
-      type: "characters",
-      armyPoints: list.points,
-      slots: list.characters.length,
-      armyComposition,
-      game: list.game,
-    });
-
   const coreData = getMinSlots({
     type: "core",
     armyPoints: list.points,
@@ -326,7 +315,7 @@ export const Editor = ({ isMobile }) => {
               </ErrorMessage>
             ))}
         </section>
-        {list.lords && list.game !== "the-old-world" && (
+        {list.lords && (
             <section className="editor__section">
               <header className="editor__header">
                 <h2>
@@ -389,7 +378,7 @@ export const Editor = ({ isMobile }) => {
             </section>
         )}
 
-        {list.heroes && list.game !== "the-old-world" && (
+        {list.heroes && (
             <section className="editor__section">
               <header className="editor__header">
                 <h2>
@@ -450,69 +439,6 @@ export const Editor = ({ isMobile }) => {
                 <FormattedMessage id="editor.add" />
               </Button>
             </section>
-        )}
-
-        {list.characters && list.game === "the-old-world" && (
-          <section className="editor__section">
-            <header className="editor__header">
-              <h2>
-                <FormattedMessage id="editor.characters" />
-              </h2>
-              <p className="editor__points">
-                {charactersData.diff > 0 ? (
-                  <>
-                    <strong>{charactersData.diff}</strong>
-                    <FormattedMessage id="editor.tooManySlots" />
-                    <Icon symbol="error" color="red" />
-                  </>
-                ) : (
-                  <>
-                    <strong>{charactersData.maxSlots - charactersData.slots}</strong>
-                    <FormattedMessage id="editor.availableSlots" />
-                    <Icon symbol="check" />
-                  </>
-                )}
-              </p>
-            </header>
-
-            <OrderableUnitList
-              units={list.characters}
-              type="characters"
-              listId={listId}
-              armyComposition={armyComposition}
-            />
-
-            {errors
-              .filter(({ section }) => section === "characters")
-              .map(({ message, name, diff, min, max, option, mount, unit, requires, forbiddenNames }, index) => (
-                <ErrorMessage key={message + index} spaceBefore>
-                  <FormattedMessage
-                    id={message}
-                    values={{
-                      name,
-                      diff,
-                      min,
-                      max,
-                      option,
-                      mount,
-                      unit,
-                      requires,
-                      forbiddenNames,
-                    }}
-                  />
-                </ErrorMessage>
-              ))}
-
-            <Button
-              type="primary"
-              centered
-              to={`/editor/${listId}/add/characters`}
-              icon="add"
-              spaceTop
-            >
-              <FormattedMessage id="editor.add" />
-            </Button>
-          </section>
         )}
 
         <section className="editor__section">

@@ -39,7 +39,6 @@ export const getAllOptions = (
     options,
     command,
     items,
-    detachments,
     activeLore,
     lores: unitLores,
     armyComposition: unitArmyComposition,
@@ -53,19 +52,12 @@ export const getAllOptions = (
   } = {},
 ) => {
   const language = overrideLanguage || localStorage.getItem("lang");
-  const detachmentActive =
-    options?.length > 0 &&
-    Boolean(
-      options.find(
-        (option) => option.name_en === "Detachment" && option.active,
-      ),
-    );
   const lores = unitArmyComposition?.[armyComposition]?.lores || unitLores;
   const allCommand = [];
   const allMounts = [];
   const allOptions = [];
 
-  if (command && !detachmentActive) {
+  if (command) {
     command.forEach(({ active, magic, name_en, options, ...entry }) => {
       if (active) {
         let commandEntry = entry[`name_${language}`] || name_en;
@@ -162,8 +154,6 @@ export const getAllOptions = (
     options.forEach(
       ({
         active,
-        alwaysActive,
-        armyComposition: unitArmyComposition,
         name_en,
         options: subOptions,
         stackableCount,
@@ -175,7 +165,6 @@ export const getAllOptions = (
           return;
         }
         if (
-          (alwaysActive && unitArmyComposition === armyComposition) ||
           (active && !requiredMagicItem) ||
           (active &&
             requiredMagicItem &&
@@ -258,85 +247,6 @@ export const getAllOptions = (
       });
     });
   }
-  const allDetachments = detachments
-    ? detachments
-        .filter(({ strength }) => strength > 0)
-        .map(({ name_en, strength, equipment, melee, ranged, armor, options, ...item }) => {
-          let equipmentSelection = [];
-
-          if (equipment && equipment.length) {
-            equipment.forEach((option) => {
-              if (option.stackable && option.stackableCount > 0) {
-                equipmentSelection.push(
-                  `${option.stackableCount}x ${option[`name_${language}`]}` ||
-                    option.name_en,
-                );
-              } else {
-                (option.active || option.equippedDefault) &&
-                  equipmentSelection.push(
-                    `${option[`name_${language}`]}` || option.name_en,
-                  );
-              }
-            });
-          }
-
-          if (melee && melee.length) {
-            melee.forEach((option) => {
-              if (option.stackable && option.stackableCount > 0) {
-                equipmentSelection.push(
-                    `${option.stackableCount}x ${option[`name_${language}`]}` ||
-                    option.name_en,
-                );
-              } else {
-                (option.active || option.equippedDefault) &&
-                equipmentSelection.push(
-                    `${option[`name_${language}`]}` || option.name_en,
-                );
-              }
-            });
-          }
-
-          if (ranged && ranged.length) {
-            ranged.forEach((option) => {
-              if (option.stackable && option.stackableCount > 0) {
-                equipmentSelection.push(
-                    `${option.stackableCount}x ${option[`name_${language}`]}` ||
-                    option.name_en,
-                );
-              } else {
-                (option.active || option.equippedDefault) &&
-                equipmentSelection.push(
-                    `${option[`name_${language}`]}` || option.name_en,
-                );
-              }
-            });
-          }
-          if (armor && armor.length) {
-            armor.forEach((option) => {
-              option.active &&
-                equipmentSelection.push(
-                  `${option[`name_${language}`]}` || option.name_en,
-                );
-            });
-          }
-          if (options && options.length) {
-            options.forEach((option) => {
-              option.active &&
-                equipmentSelection.push(
-                  `${option[`name_${language}`]}` || option.name_en,
-                );
-            });
-          }
-
-          return `${strength}x ${item[`name_${language}`] || name_en}${
-            equipmentSelection.length
-              ? ` [${equipmentSelection
-                  .map((option) => option.replace(", ", " + "))
-                  .join(" + ")}]`
-              : ""
-          }`;
-        })
-    : [];
   const lore = [];
   if (isWizard({ options, command, mounts })) {
     if (activeLore && nameMap[activeLore].name_en !== "None") {
@@ -359,7 +269,6 @@ export const getAllOptions = (
     ...allCommand,
     ...allMounts,
     ...(!noMagic ? allItems : []),
-    ...allDetachments,
     ...lore,
   ];
 
@@ -392,30 +301,16 @@ export const getPage = (name) => {
   return page.replace(/,/g, "");
 };
 
-export const getStats = (unit, armyComposition) => {
-  const normalizedName =
-    unit.name_en.includes("renegade") && armyComposition?.includes("renegade")
-      ? normalizeRuleName(unit.name_en)
-      : normalizeRuleName(unit.name_en.replace(" {renegade}", ""));
+export const getStats = (unit) => {
+  const normalizedName = normalizeRuleName(unit.name_en);
   const synonym = synonyms[normalizedName];
   const stats = rulesMap[synonym || normalizedName]?.stats || [];
   const activeMount = unit.mounts
     ? unit.mounts.find((mount) => mount.active)
     : null;
   const mountStats = getUnitRuleData(activeMount?.name_en || "")?.stats || [];
-  const detachments = unit.detachments || [];
-  const detachmentStats = [];
 
-  detachments.forEach((detachment) => {
-    const normalizedDetachment = normalizeRuleName(detachment?.name_en || "");
-    const detachmentSynonym = synonyms[normalizedDetachment];
-
-    detachmentStats.push(
-      ...(rulesMap[detachmentSynonym || normalizedDetachment]?.stats || []),
-    );
-  });
-
-  return [...stats, ...mountStats, ...detachmentStats];
+  return [...stats, ...mountStats];
 };
 
 export const getUnitName = ({ unit, language }) => {
@@ -649,64 +544,13 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
     .split(", ")
     .filter((rule) => /^Lore of/.test(rule))
     .reduce((result, rule) => {
-      const loreId = rule
-        .toLowerCase()
-        .replace(/ /g, "-")
-        .replace("-{renegade}", "");
-
-      // If the unit has the Lore of Chaos, only the spell matching its Mark of Chaos must be available
-      if (loreId === "lore-of-chaos") {
-        const markOfChaosOption = findOption(
-          unit.options,
-          ({ active, name_en }) =>
-            active &&
-            /^Mark of (Chaos Undivided|Nurgle|Khorne|Slaanesh|Tzeentch)/.test(
-              name_en,
-            ),
-        );
-        const markOfChaos = markOfChaosOption
-          ? markOfChaosOption.name_en.slice(8).toLowerCase().replace(/ /g, "-")
-          : "chaos-undivided";
-
-        // No spell if Mark of Khorne
-        if (markOfChaos === "khorne") {
-          return result;
-        }
-
-        const loreOfChaosSpell = Object.entries(
-          loresOfMagicWithSpells[loreId],
-        ).find(
-          ([spellId, spellData]) => spellData["mark-of-chaos"] === markOfChaos,
-        );
-        return {
-          ...result,
-          [loreId]: {
-            [loreOfChaosSpell[0]]: loreOfChaosSpell[1],
-          },
-        };
-      }
+      const loreId = rule.toLowerCase().replace(/ /g, "-");
 
       return {
         ...result,
         [loreId]: loresOfMagicWithSpells[loreId],
       };
     }, {});
-
-  if (unit.id.includes("miao-ying")) {
-    specialRuleLores["miao-ying"] = loresOfMagicWithSpells["miao-ying"];
-  }
-
-  // Lores added via unit option
-  let optionsLore = findOption(
-    unit.options,
-    ({ active, name_en }) => active && /Lore of Yang|Lore of Yin/.test(name_en),
-  );
-
-  if (optionsLore) {
-    const loreId = optionsLore.name_en.toLowerCase().replace(/ /g, "-");
-
-    specialRuleLores[loreId] = loresOfMagicWithSpells[loreId];
-  }
 
   const unitLores = unit.armyComposition
     ? unit.armyComposition[armyComposition]?.lores
@@ -715,44 +559,12 @@ export const getUnitLoresWithSpells = (unit, armyComposition) => {
     : unit.lores || [];
 
   const selectedLores =
-    unitHasItem(unit, "Wizarding Hat") || unitHasItem(unit, "Arcane Familiar")
-      ? {
-          "battle-magic": loresOfMagicWithSpells["battle-magic"],
-          daemonology: loresOfMagicWithSpells["daemonology"],
-          "dark-magic": loresOfMagicWithSpells["dark-magic"],
-          elementalism: loresOfMagicWithSpells["elementalism"],
-          "high-magic": loresOfMagicWithSpells["high-magic"],
-          illusion: loresOfMagicWithSpells["illusion"],
-          necromancy: loresOfMagicWithSpells["necromancy"],
-          "waaagh-magic": loresOfMagicWithSpells["waaagh-magic"],
-          shadowlands: loresOfMagicWithSpells["shadowlands"],
-        }
-      : unitHasItem(unit, "Loremaster")
-      ? {
-          "lore-of-saphery": loresOfMagicWithSpells["lore-of-saphery"],
-          "battle-magic": loresOfMagicWithSpells["battle-magic"],
-          elementalism: loresOfMagicWithSpells["elementalism"],
-          "high-magic": loresOfMagicWithSpells["high-magic"],
-          illusion: loresOfMagicWithSpells["illusion"],
-        }
-      : findOption(
-          unit.options || [],
-          ({ active, name_en }) =>
-            active && /^Arise!, Level 1 Wizard/.test(name_en),
-        )
-      ? { necromancy: loresOfMagicWithSpells["necromancy"] }
-      : unitLores.length > 0
+    unitLores.length > 0
       ? {
           [unit.activeLore ?? unitLores[0]]:
             loresOfMagicWithSpells[unit.activeLore ?? unitLores[0]],
         }
       : {};
-
-  if (unit.arcaneFamiliar) {
-    unitLores.forEach((lore) => {
-      selectedLores[lore] = loresOfMagicWithSpells[lore];
-    });
-  }
 
   return { ...specialRuleLores, ...selectedLores };
 };
@@ -767,7 +579,7 @@ export const getUnitWizardryLevel = (unit) => {
   }
 
   const levelOptions = findAllOptions(unit?.options, (option) =>
-    /^(Arise!, )?Level [1234] Wizard/.test(option?.name_en),
+    /^Level [1234] Wizard/.test(option?.name_en),
   );
 
   let wizardryLevel = 4;
@@ -795,18 +607,7 @@ export const getUnitWizardryLevel = (unit) => {
 export const getUnitGeneratedSpellCount = (unit) => {
   let generatedSpellsCount = getUnitWizardryLevel(unit);
 
-  if (unitHasItem(unit, "Wizarding Hat")) {
-    generatedSpellsCount += 1;
-  }
-  if (unitHasItem(unit, "Spell Familiar*")) {
-    generatedSpellsCount += 1;
-  }
-  if (
-    unitHasItem(unit, "Twin Heads") ||
-    unitHasItem(unit, "Silvery Wand") ||
-    unitHasItem(unit, "Tome Of Furion") ||
-    unitHasItem(unit, "Tome Of Midnight")
-  ) {
+  if (unitHasItem(unit, "Tome Of Furion")) {
     generatedSpellsCount += 1;
   }
 

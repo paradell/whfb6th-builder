@@ -36,7 +36,6 @@ import { useLanguage } from "../../utils/useLanguage";
 import { updateLocalList } from "../../utils/list";
 import { getRandomId } from "../../utils/id";
 import { getArmyData } from "../../utils/army";
-import { namesForSpread } from "../../utils/string";
 import {
   getUnitName,
   getUnitOptionNotes,
@@ -49,11 +48,9 @@ import {getGameSystems, getCustomDatasetData, isOfficialSystem} from "../../util
 
 import "./Unit.css";
 
-export const Unit = ({ isMobile, previewData = {} }) => {
-  const isPreview = Boolean(previewData?.type);
-  const { type: previewType, unit: previewUnit } = previewData;
+export const Unit = ({ isMobile }) => {
   const MainComponent = isMobile ? Main : Fragment;
-  const { listId, type = previewType, unitId } = useParams();
+  const { listId, type, unitId } = useParams();
   const dispatch = useDispatch();
   const { language } = useLanguage();
   const [redirect, setRedirect] = useState(null);
@@ -66,21 +63,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
   const gameSystems = getGameSystems();
   const game = gameSystems.find((game) => game.id === list?.game);
   const units = list ? list[type] : null;
-  const unit = units ? units.find(({ id }) => id === unitId) : previewUnit;
+  const unit = units ? units.find(({ id }) => id === unitId) : null;
   const army = useSelector((state) => state.army);
-  const detachmentActive =
-    unit &&
-    unit?.options?.length > 0 &&
-    Boolean(
-      unit.options.find(
-        (option) => option.name_en === "Detachment" && option.active,
-      ),
-    );
-  const detachments =
-    army &&
-    [...army.core, ...army.special, ...army.rare].filter(
-      (coreUnit) => coreUnit.detachment,
-    );
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
@@ -129,138 +113,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
       }),
     );
   };
-  const handleAddDetachmentClick = ({ id }) => {
-    const detachment = detachments.find((detachment) => detachment.id === id);
-    const unitDetachments = unit.detachments ? [...unit.detachments] : [];
-
-    unitDetachments.push({
-      id: `${id}.${getRandomId()}`,
-      ...namesForSpread(detachment),
-      points: detachment.points,
-      strength: detachment.minDetachmentSize || 5,
-      minDetachmentSize: detachment.minDetachmentSize || 5,
-      maxDetachmentSize: detachment.maxDetachmentSize,
-      scaleWithUnit: detachment.scaleWithUnit,
-      equipment: detachment.equipment,
-      melee: detachment.melee,
-      ranged: detachment.ranged,
-      armor: detachment.armor,
-      options: detachment.options,
-      specialRules: detachment.specialRules,
-      armyComposition: detachment.armyComposition,
-    });
-
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      }),
-    );
-  };
-  const handleDeleteDetachmentClick = ({ id }) => {
-    const unitDetachments = [...unit.detachments].filter(
-      (detachment) => detachment.id !== id,
-    );
-
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      }),
-    );
-  };
-  const handleDetachmentStrengthClick = ({ id, strength }) => {
-    const unitDetachments = [...unit.detachments].map((detachment) =>
-      detachment.id === id ? { ...detachment, strength } : detachment,
-    );
-
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      }),
-    );
-  };
-  const handleDetachmentEquipmentChange = ({
-    detachmentId,
-    equipmentId,
-    category,
-    isCheckbox,
-  }) => {
-    const unitDetachments = [...unit.detachments].map((detachment) => {
-      if (detachment.id === detachmentId) {
-        const equipment = detachment[category].map((item) => {
-          let active = false;
-
-          if (isCheckbox && item.id === equipmentId) {
-            active = !item.active;
-          } else if (item.id === equipmentId) {
-            active = true;
-          } else if (isCheckbox) {
-            active = item.active;
-          }
-
-          return {
-            ...item,
-            active,
-          };
-        });
-
-        return { ...detachment, [category]: equipment };
-      }
-
-      return detachment;
-    });
-
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      }),
-    );
-  };
-  const handleStackableDetachmentChange = ({
-    detachmentId,
-    equipmentId,
-    category,
-    stackableCount,
-  }) => {
-    const unitDetachments = [...unit.detachments].map((detachment) => {
-      if (detachment.id === detachmentId) {
-        const equipment = detachment[category].map((item) => {
-          if (item.id === equipmentId) {
-            return {
-              ...item,
-              stackableCount,
-            };
-          }
-          return item;
-        });
-
-        return { ...detachment, [category]: equipment };
-      }
-
-      return detachment;
-    });
-
-    dispatch(
-      editUnit({
-        listId,
-        type,
-        unitId,
-        detachments: unitDetachments,
-      }),
-    );
-  };
-  // ---- Attached Units handlers ----
   const handleAddAttachedUnit = ({ attachedUnitDef }) => {
     const existing = unit.attached_units?.selected || [];
     const newSelected = [
@@ -643,7 +495,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               })
         }`}
         {perModel &&
-          type !== "characters" &&
           ` ${intl.formatMessage({
             id: "unit.perModel",
           })}`}
@@ -696,7 +547,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
     return <Redirect to={`/editor/${listId}`} />;
   }
 
-  if (!unit || (!army && !isPreview)) {
+  if (!unit || !army) {
     if (isMobile) {
       return (
         <>
@@ -784,8 +635,8 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         {!isMobile && (
           <Header
             isSection
-            to={isPreview ? "" : `/editor/${listId}`}
-            moreButton={isPreview ? null : moreButtons}
+            to={`/editor/${listId}`}
+            moreButton={moreButtons}
             headline={getUnitName({ unit, language })}
             headlineIcon={
               <RuleWithIcon
@@ -839,11 +690,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             </label>
             <NumberInput
               id="strength"
-              min={
-                detachmentActive && unit.minDetachmentSize
-                  ? unit.minDetachmentSize
-                  : unit.minimum
-              }
+              min={unit.minimum}
               max={
                 unit.armyComposition &&
                 typeof unit.armyComposition[unitArmyComposition]?.maximum ===
@@ -858,11 +705,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
         ) : null}
         {unit.command && unit.command.length > 0 && (
           <>
-            {type !== "characters" && (
-              <h2 className="unit__subline">
-                <FormattedMessage id="unit.command" />
-              </h2>
-            )}
+            <h2 className="unit__subline">
+              <FormattedMessage id="unit.command" />
+            </h2>
             {unit.command
               .filter(
                 (unitCommand) =>
@@ -901,12 +746,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
 
                   return (
                     <Fragment key={id}>
-                      <div
-                        className={classNames(
-                          "checkbox",
-                          type === "characters" && "unit__bsb",
-                        )}
-                      >
+                      <div className="checkbox">
                         <input
                           type="checkbox"
                           id={`command-${id}`}
@@ -916,18 +756,7 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                           }
                           checked={active}
                           className="checkbox__input"
-                          disabled={
-                            detachmentActive ||
-                            alwaysActive ||
-                            (type === "characters" &&
-                              exclusive &&
-                              unit.command.find(
-                                (commandUnit) =>
-                                  commandUnit.active &&
-                                  commandUnit.id !== id &&
-                                  commandUnit.exclusive !== false,
-                              ))
-                          }
+                          disabled={alwaysActive}
                         />
                         <label
                           htmlFor={`command-${id}`}
@@ -956,7 +785,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                             active={location.pathname.includes(
                               `magic/${index}`,
                             )}
-                            disabled={detachmentActive}
                           >
                             <div className="editor__list-inner">
                               <b>
@@ -1058,7 +886,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                         (exclusiveCheckedOption &&
                                           option.exclusive &&
                                           !option.active) ||
-                                        detachmentActive ||
                                         option.alwaysActive
                                       }
                                     />
@@ -1878,393 +1705,6 @@ export const Unit = ({ isMobile, previewData = {} }) => {
             })}
           </>
         )}
-        {unit.regimentalUnit && (
-          <>
-            <h2 className="unit__subline unit__detachments-headline">
-              <FormattedMessage id="unit.detachments" />
-            </h2>
-            {detachments &&
-              detachments.map(({ name_en, id, ...detachment }) => (
-                <Fragment key={id}>
-                  <div className="list">
-                    <div className="list__inner unit__detachments-header">
-                      <b className="unit__magic-headline">
-                        {detachment[`name_${language}`] || name_en}
-                        <RuleWithIcon
-                          name={name_en}
-                          isDark
-                          className="unit__rules"
-                        />
-                      </b>
-                      <Button
-                        onClick={() =>
-                          handleAddDetachmentClick({
-                            id,
-                          })
-                        }
-                        type="secondary"
-                        icon="add"
-                        label={intl.formatMessage({ id: "editor.add" })}
-                        size="small"
-                        disabled={
-                          unit?.detachments?.length >= unit.maxDetachments
-                        }
-                      />
-                    </div>
-                  </div>
-                  {getUnitOptionNotes({
-                    notes: detachment.notes,
-                    key: `options-${id}-detachment`,
-                    className:
-                      "unit__option-note unit__option-note--detachment",
-                    language,
-                  })}
-                  {unit.detachments &&
-                    unit.detachments
-                      .filter(
-                        (detachment) =>
-                          detachment.id.split(".")[0] === id.split(".")[0],
-                      )
-                      .map(
-                        ({
-                          name_en,
-                          strength,
-                          id,
-                          points,
-                          minDetachmentSize,
-                          maxDetachmentSize,
-                          scaleWithUnit,
-                          equipment: detachmentEquipment,
-                          armor: detachmentArmor,
-                          options: detachmentOptions,
-                          specialRules: detachmentSpecialRules,
-                          armyComposition: detachmentArmyComposition,
-                          ...detachment
-                        }) => {
-                          const specialRulesDetachment =
-                            detachmentArmyComposition?.[
-                              list?.armyComposition || list?.army
-                            ]?.specialRules || detachmentSpecialRules;
-
-                          if (!specialRulesDetachment) {
-                            return null;
-                          }
-
-                          return (
-                            <div
-                              className="list unit__detachments-wrapper"
-                              key={id}
-                            >
-                              <div className="list__inner unit__detachments">
-                                <NumberInput
-                                  noError
-                                  id={`strength-${id}`}
-                                  min={
-                                    (scaleWithUnit
-                                      ? minDetachmentSize * unit.strength
-                                      : minDetachmentSize) || 5
-                                  }
-                                  max={
-                                    (scaleWithUnit
-                                      ? maxDetachmentSize * unit.strength
-                                      : maxDetachmentSize) ||
-                                    Math.floor(unit.strength / 2)
-                                  }
-                                  value={strength}
-                                  onChange={(event) =>
-                                    handleDetachmentStrengthClick({
-                                      id,
-                                      strength: event.target.value,
-                                    })
-                                  }
-                                />
-                                <span>
-                                  <b>
-                                    {detachment[`name_${language}`] || name_en}{" "}
-                                  </b>
-                                  <i>{getPointsText({ points })}</i>
-                                </span>
-                                <Button
-                                  onClick={() =>
-                                    handleDeleteDetachmentClick({
-                                      id,
-                                    })
-                                  }
-                                  type="secondary"
-                                  icon="close"
-                                  label={intl.formatMessage({
-                                    id: "misc.remove",
-                                  })}
-                                  size="small"
-                                  disabled={
-                                    unit?.detachments?.length <=
-                                    unit.minDetachments
-                                  }
-                                />
-                              </div>
-                              <div className="unit__detachments-section">
-                                {detachmentEquipment &&
-                                  detachmentEquipment.length > 0 && (
-                                    <>
-                                      <h3 className="unit__subline">
-                                        <FormattedMessage id="unit.equipment" />
-                                      </h3>
-                                      {detachmentEquipment.map((equipment) => {
-                                        const stackableCount =
-                                          equipment.stackableCount ||
-                                          equipment.minimum ||
-                                          0;
-                                        let combinedStackableCount = 0;
-
-                                        detachmentEquipment.forEach((item) => {
-                                          if (item.exclusive) {
-                                            combinedStackableCount +=
-                                              item.stackableCount || 0;
-                                          }
-                                        });
-
-                                        const maxEquipmentCount =
-                                          (equipment.maximum || strength) -
-                                          combinedStackableCount +
-                                          stackableCount;
-
-                                        if (equipment.stackable) {
-                                          return (
-                                            <Fragment key={equipment.id}>
-                                              <label
-                                                htmlFor={`equipment-${id}-${equipment.id}`}
-                                                className="radio__label"
-                                              >
-                                                <span className="unit__label-text">
-                                                  <RulesWithIcon
-                                                    textObject={equipment}
-                                                  />
-                                                </span>
-                                                <i className="checkbox__points">
-                                                  {getPointsText({
-                                                    points: equipment.points,
-                                                    perModel:
-                                                      equipment.perModel,
-                                                  })}
-                                                </i>
-                                              </label>
-                                              <NumberInput
-                                                id={`equipment-${id}-${equipment.id}`}
-                                                min={equipment.minimum}
-                                                max={maxEquipmentCount}
-                                                value={stackableCount}
-                                                onChange={(event) =>
-                                                  handleStackableDetachmentChange(
-                                                    {
-                                                      detachmentId: id,
-                                                      equipmentId: equipment.id,
-                                                      category: "equipment",
-                                                      stackableCount:
-                                                        event.target.value,
-                                                    },
-                                                  )
-                                                }
-                                              />
-                                            </Fragment>
-                                          );
-                                        }
-
-                                        return (
-                                          <div
-                                            className="radio"
-                                            key={equipment.id}
-                                          >
-                                            <input
-                                              type="radio"
-                                              id={`equipment-${id}-${equipment.id}`}
-                                              name={`equipment-${id}`}
-                                              value={equipment.id}
-                                              onChange={() =>
-                                                handleDetachmentEquipmentChange(
-                                                  {
-                                                    detachmentId: id,
-                                                    equipmentId: equipment.id,
-                                                    category: "equipment",
-                                                  },
-                                                )
-                                              }
-                                              checked={
-                                                equipment.active || false
-                                              }
-                                              className="radio__input"
-                                            />
-                                            <label
-                                              htmlFor={`equipment-${id}-${equipment.id}`}
-                                              className="radio__label"
-                                            >
-                                              <span className="unit__label-text">
-                                                <RulesWithIcon
-                                                  textObject={equipment}
-                                                />
-                                              </span>
-                                              <i className="checkbox__points">
-                                                {getPointsText({
-                                                  points: equipment.points,
-                                                  perModel: equipment.perModel,
-                                                })}
-                                              </i>
-                                            </label>
-                                          </div>
-                                        );
-                                      })}
-                                    </>
-                                  )}
-                                {detachmentArmor &&
-                                  detachmentArmor.length > 0 && (
-                                    <>
-                                      <h3 className="unit__subline">
-                                        <FormattedMessage id="unit.armor" />
-                                      </h3>
-                                      {detachmentArmor.map((armor) => {
-                                        const isRadio =
-                                          armor.length > 1 ||
-                                          armor.activeDefault;
-
-                                        return (
-                                          <div className="radio" key={armor.id}>
-                                            <input
-                                              type={
-                                                isRadio ? "radio" : "checkbox"
-                                              }
-                                              id={`armor-${id}-${armor.id}`}
-                                              name={`armor-${id}`}
-                                              value={armor.id}
-                                              onChange={() =>
-                                                handleDetachmentEquipmentChange(
-                                                  {
-                                                    detachmentId: id,
-                                                    equipmentId: armor.id,
-                                                    category: "armor",
-                                                    isCheckbox: !isRadio,
-                                                  },
-                                                )
-                                              }
-                                              checked={armor.active}
-                                              className={
-                                                isRadio
-                                                  ? "radio__input"
-                                                  : "checkbox__input"
-                                              }
-                                            />
-                                            <label
-                                              htmlFor={`armor-${id}-${armor.id}`}
-                                              className={
-                                                isRadio
-                                                  ? "radio__label"
-                                                  : "checkbox__label"
-                                              }
-                                            >
-                                              <span className="unit__label-text">
-                                                <RulesWithIcon
-                                                  textObject={armor}
-                                                />
-                                              </span>
-                                              <i className="checkbox__points">
-                                                {getPointsText({
-                                                  points: armor.points,
-                                                  perModel: armor.perModel,
-                                                })}
-                                              </i>
-                                            </label>
-                                          </div>
-                                        );
-                                      })}
-                                    </>
-                                  )}
-                                {detachmentOptions &&
-                                  detachmentOptions.length > 0 && (
-                                    <>
-                                      <h3 className="unit__subline">
-                                        <FormattedMessage id="unit.options" />
-                                      </h3>
-                                      {detachmentOptions.map((option) => {
-                                        const exclusiveCheckedOption =
-                                          detachmentOptions.find(
-                                            (exclusiveOption) =>
-                                              exclusiveOption.exclusive &&
-                                              exclusiveOption.active,
-                                          );
-
-                                        return (
-                                          <Fragment key={option.id}>
-                                            <div className="checkbox">
-                                              <input
-                                                type="checkbox"
-                                                id={`options-${id}-${option.id}`}
-                                                value={option.id}
-                                                onChange={() =>
-                                                  handleDetachmentEquipmentChange(
-                                                    {
-                                                      detachmentId: id,
-                                                      equipmentId: option.id,
-                                                      category: "options",
-                                                      isCheckbox: true,
-                                                    },
-                                                  )
-                                                }
-                                                checked={option.active || false}
-                                                className="checkbox__input"
-                                                disabled={
-                                                  (exclusiveCheckedOption &&
-                                                    option.exclusive &&
-                                                    !option.active) ||
-                                                  option.alwaysActive
-                                                }
-                                              />
-                                              <label
-                                                htmlFor={`options-${id}-${option.id}`}
-                                                className="checkbox__label"
-                                              >
-                                                <span className="unit__label-text">
-                                                  <RulesWithIcon
-                                                    textObject={option}
-                                                  />
-                                                </span>
-                                                <i className="checkbox__points">
-                                                  {getPointsText({
-                                                    points: option.points,
-                                                    perModel: option.perModel,
-                                                  })}
-                                                </i>
-                                              </label>
-                                            </div>
-                                            {getUnitOptionNotes({
-                                              notes: option.notes,
-                                              key: `options-${option.id}-detachment`,
-                                              className: "unit__option-note",
-                                              language,
-                                            })}
-                                          </Fragment>
-                                        );
-                                      })}
-                                    </>
-                                  )}
-                                {specialRulesDetachment?.name_en && (
-                                  <>
-                                    <h3>
-                                      <FormattedMessage id="unit.specialRules" />
-                                    </h3>
-                                    <p className="unit__subline--space-after">
-                                      <RulesLinksText
-                                        textObject={specialRulesDetachment}
-                                      />
-                                    </p>
-                                  </>
-                                )}
-                              </div>
-                            </div>
-                          );
-                        },
-                      )}
-                </Fragment>
-              ))}
-          </>
-        )}
         {unit.mounts?.some(({ requiredOption }) =>
           hasRequiredOption(unit, requiredOption),
         ) && (
@@ -2335,10 +1775,9 @@ export const Unit = ({ isMobile, previewData = {} }) => {
                                 exclusiveOption.active,
                             );
                             const isDisabled =
-                              (exclusiveCheckedOption &&
-                                option.exclusive &&
-                                !option.active) ||
-                              detachmentActive;
+                              exclusiveCheckedOption &&
+                              option.exclusive &&
+                              !option.active;
 
                             return (
                               <Fragment
@@ -2395,68 +1834,15 @@ export const Unit = ({ isMobile, previewData = {} }) => {
               <FormattedMessage id="unit.lore" />
             </h2>
             {lores
-              .filter((lore, index) => {
-                if (
-                  lore === "troll-magic" &&
-                  unitArmyComposition !== "troll-horde" &&
-                  unit.items
-                    .find((items) => items.name_en === "Magic Items")
-                    ?.selected.find(
-                      (item) => item.name_en === "Da Hag's Brew",
-                    ) === undefined &&
-                  index !== 0
-                ) {
-                  if (unit.activeLore === "troll-magic") {
-                    handleLoresChange(lores[0]);
-                  }
-                  return false;
-                }
-                // if (
-                //   lore === "primal-magic" &&
-                //   ((unitArmyComposition !== "wild-herd" &&
-                //     unit.name_en !== "Kralmaw") ||
-                //     unit.name_en !== "Kralmaw") &&
-                //   unit.items
-                //     .find((items) => items.name_en === "Magic Items")
-                //     ?.selected.find((item) => item.name_en === "Goretooth*") ===
-                //     undefined &&
-                //   index !== 0
-                // ) {
-                //   if (unit.activeLore === "primal-magic") {
-                //     handleLoresChange(lores[0]);
-                //   }
-                //   return false;
-                // }
-                if (
-                  lore === "lore-of-the-wilds" &&
-                  unitArmyComposition !== "host-of-talsyn" &&
-                  unit.items
-                    .find((items) => items.name_en === "Magic Items")
-                    ?.selected.find(
-                      (item) => item.name_en === "Heartwood Pendant*",
-                    ) === undefined &&
-                  index !== 0
-                ) {
-                  if (unit.activeLore === "lore-of-the-wilds") {
-                    handleLoresChange(lores[0]);
-                  }
-                  return false;
-                }
-                return true;
-              })
               .map((lore) => (
                 <div className="radio" key={lore}>
                   <input
-                    type={unit.arcaneFamiliar ? "checkbox" : "radio"}
-                    disabled={unit.arcaneFamiliar}
+                    type="radio"
                     id={`lore-${lore}`}
                     name="lores"
                     value={lore}
                     onChange={() => handleLoresChange(lore)}
-                    checked={
-                      (unit.activeLore || lores[0]) === lore ||
-                      unit.arcaneFamiliar
-                    }
+                    checked={(unit.activeLore || lores[0]) === lore}
                     className="radio__input"
                   />
                   <label htmlFor={`lore-${lore}`} className="radio__label">

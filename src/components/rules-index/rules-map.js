@@ -1,6 +1,6 @@
 import rulesIndexExport from "./rules-index-export.json";
 
-const additionalOWBRules = {
+const additionalRules = {
   "throwing spears": { url: "weapons/throwing-spear" },
   halberds: { url: "weapons/halberd" },
   "additional hand weapons": {
@@ -63,23 +63,11 @@ const additionalOWBRules = {
   "armour piercing": {
     url: "the-shooting-phase/armour-piercing",
   },
-  "nuln state troops empire": {
-    url: "special-rules/nuln-state-troops",
-  },
   "crown of horns beastmen": {
     url: "magic-item/crown-of-horns-beastmen",
   },
-  "crown of horns cathay": {
-    url: "weapons/crown-of-horns-grand-cathay",
-  },
-  "engine of the gods renegade": {
-    url: "special-rules/engine-of-the-gods-renegade",
-  },
   "crown of antlers beastmen": {
     url: "special-rules/crown-of-antlers",
-  },
-  "crown of antlers wood-elf-realms": {
-    url: "magic-item/crown-of-antlers",
   },
   "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
   "helblaster volley gun weapon": {
@@ -93,21 +81,6 @@ const additionalOWBRules = {
   },
   "screaming skull catapult weapon": {
     url: "weapons/screaming-skull-catapult",
-  },
-  "open-war": {
-    url: "matched-play/open-war",
-  },
-  "grand-melee": {
-    url: "matched-play/grand-melee",
-  },
-  "combined-arms": {
-    url: "matched-play/combined-arms",
-  },
-  "grand-melee-combined-arms": {
-    url: "warhammer-armies/army-composition-lists",
-  },
-  "battle-march": {
-    url: "warhammer-armies/battle-march",
   },
   "dreadquake mortar weapon": {
     url: "weapons/dreadquake-mortar",
@@ -143,7 +116,6 @@ export const synonyms = {
   fanatics: "fanatic",
   "nasty skulkers": "nasty skulker",
   "leadbelcher guns": "leadbelcher gun",
-  "leadbelcher guns renegade": "leadbelcher gun renegade",
   "grimfrost weapons": "grimfrost weapon",
   "tiranoc chariots": "tiranoc chariot",
   "steam tank": "empire steam tank",
@@ -152,7 +124,6 @@ export const synonyms = {
   gyrocopters: "gyrocopter",
   "scout gyrocopters": "scout gyrocopter",
   ironfists: "ironfist",
-  "ironfists renegade": "ironfist renegade",
   "marauder chieftain": "champions",
   "marauder horsemaster": "champions",
   "lion guard captain": "champions",
@@ -328,5 +299,5 @@ export const synonyms = {
 
 export const rulesMap = {
   ...rulesIndexExport,
-  ...additionalOWBRules,
+  ...additionalRules,
 };

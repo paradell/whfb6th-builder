@@ -13,7 +13,6 @@ import { rulesMap, synonyms } from "./rules-map";
 import "./RulesIndex.css";
 
 const RULES_BASE_URLS = {
-  "the-old-world": "https://tow.whfb.app",
   "warhammer-fantasy-6th": "https://6th.whfb.app",
   "warhammer-fantasy-mdn": "https://6th.whfb.app",
 };
@@ -25,17 +24,13 @@ export const RulesIndex = () => {
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
-  const listArmyComposition = list?.armyComposition || list?.army;
   const listGame = list?.game || "warhammer-fantasy-6th";
   const dispatch = useDispatch();
   const handleClose = () => {
     setIsLoading(true);
     dispatch(closeRulesIndex());
   };
-  const normalizedName =
-    activeRule.includes("renegade") && listArmyComposition?.includes("renegade")
-      ? normalizeRuleName(activeRule)
-      : normalizeRuleName(activeRule.replace(" {renegade}", ""));
+  const normalizedName = normalizeRuleName(activeRule);
   const synonym = synonyms[normalizedName];
   const ruleData = rulesMap[normalizedName] || rulesMap[synonym];
   const rulePath = ruleData?.url;
@@ -52,7 +47,7 @@ export const RulesIndex = () => {
               !isLoading && "rules-index__iframe--show"
             )}
             src={`${baseUrl}/${rulePath}?minimal=true&utm_source=owb&utm_medium=referral`}
-            title="Warhammer: The Old World Online Rules Index"
+            title="Warhammer Fantasy 6th Edition Online Rules Index"
             height="500"
             width="700"
           />

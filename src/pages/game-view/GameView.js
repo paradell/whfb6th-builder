@@ -49,7 +49,6 @@ export const GameView = () => {
   const [scenarioPoints, setScenarioPoints] = useState(0);
   const [generalDead, setGeneralDead] = useState(false);
   const [BSBDead, setBSBDead] = useState(false);
-  const [detachmentsDead, setDetachmentsDead] = useState({});
   const [victoryPoints, setVictoryPoints] = useState({});
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id),
@@ -84,7 +83,6 @@ export const GameView = () => {
 
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
-  const charactersPoints = getPoints({ list, type: "characters" });
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
   const corePoints = getPoints({ list, type: "core" });
@@ -99,22 +97,11 @@ export const GameView = () => {
   const armyName = army[`name_${language}`] || army.name_en;
   const getUnitVictoryPoints = (unitId) => {
     let allPoints = 0;
-    let detachmentsSum = 0;
     const unitVictoryPoints = victoryPoints[unitId];
 
-    if (unitVictoryPoints && unitVictoryPoints["detachments"]) {
-      const detachments = Object.values(unitVictoryPoints["detachments"]);
-
-      if (detachments.length) {
-        for (let i = 0; i < detachments.length; i++) {
-          detachmentsSum += detachments[i];
-        }
-      }
-    }
     allPoints += unitVictoryPoints ? unitVictoryPoints["50"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["dead"] : 0;
     allPoints += unitVictoryPoints ? unitVictoryPoints["fleeing"] : 0;
-    allPoints += detachmentsSum;
 
     return allPoints;
   };
@@ -133,7 +120,6 @@ export const GameView = () => {
     return allVictoryPoints;
   };
   const allUnits = [
-    ...(list["characters"] || []),
     ...(list["lords"] || []),
     ...(list["heroes"] || []),
     ...(list["core"] || []),
@@ -264,7 +250,7 @@ export const GameView = () => {
     return (
       <ul>
         {units.map((unit, index) => {
-          const stats = getStats(unit, armyComposition);
+          const stats = getStats(unit);
           //TODO update for Wizards outside of standard Options (Flamers, Burning Chariots, Multi-Caster Models, etc)
           const unitGeneratedSpellCount = getUnitGeneratedSpellCount(unit);
           const specialRules =
@@ -328,37 +314,6 @@ export const GameView = () => {
                           showPageNumbers={showPageNumbers}
                         />
                       </p>
-                      {unit.detachments &&
-                        unit.detachments.map((detachment) => {
-                          const specialRulesDetachment =
-                            detachment.armyComposition?.[
-                              list?.armyComposition || list?.army
-                            ]?.specialRules || detachment.specialRules;
-
-                          if (!specialRulesDetachment) {
-                            return null;
-                          }
-
-                          return (
-                            <p
-                              className="game-view__special-rules"
-                              key={detachment.id}
-                            >
-                              <b>
-                                <i>
-                                  <FormattedMessage id="unit.specialRules" /> (
-                                  {detachment[`name_${language}`] ||
-                                    detachment.name_en}
-                                  ):
-                                </i>
-                              </b>{" "}
-                              <RulesLinksText
-                                textObject={specialRulesDetachment}
-                                showPageNumbers={showPageNumbers}
-                              />
-                            </p>
-                          );
-                        })}
                     </>
                   ) : null}
                   {showStats &&
@@ -443,12 +398,11 @@ export const GameView = () => {
       </ul>
     );
   };
-  const updateVictoryPoints = ({ unit, value, deadDetachments }) => {
+  const updateVictoryPoints = ({ unit, value }) => {
     let unitPoints = victoryPoints[unit.id] || {
       dead: 0,
       fleeing: 0,
       50: 0,
-      detachments: {},
     };
     const isGeneral = Boolean(
       unit?.command?.length &&
@@ -474,7 +428,6 @@ export const GameView = () => {
             : getUnitPoints(
                 { ...unit, type },
                 {
-                  noDetachments: true,
                   armyComposition,
                 },
               ),
@@ -499,8 +452,7 @@ export const GameView = () => {
                 getUnitPoints(
                   { ...unit, type },
                   {
-                    noDetachments: true,
-                    armyComposition,
+                      armyComposition,
                   },
                 ),
               ),
@@ -525,33 +477,12 @@ export const GameView = () => {
                 getUnitPoints(
                   { ...unit, type },
                   {
-                    noDetachments: true,
-                    armyComposition,
+                      armyComposition,
                   },
                 ) / 2,
               ),
         };
         break;
-      }
-      case "detachment": {
-        unit.detachments.forEach((detachment) => {
-          unitPoints = {
-            ...unitPoints,
-            detachments: {
-              ...unitPoints.detachments,
-              [detachment.id]:
-                deadDetachments *
-                getUnitPoints(
-                  {
-                    ...detachment,
-                    strength: 1,
-                    type,
-                  },
-                  { armyComposition },
-                ),
-            },
-          };
-        });
       }
     }
 
@@ -588,36 +519,6 @@ export const GameView = () => {
         >
           {"<50%"}
         </Button>
-        {unit.detachments &&
-          !unit.ignoreNoDetachment &&
-          unit.detachments.length &&
-          unit.detachments.map((detachment) => (
-            <span key={detachment.id} className="game-view__detachment">
-              <label
-                htmlFor={detachment.id}
-                className="game-view__detachment-label"
-              >
-                <FormattedMessage id="misc.dead" /> {detachment.name_en}
-              </label>
-              <NumberInput
-                id={detachment.id}
-                min={0}
-                max={detachment.strength}
-                value={detachmentsDead[detachment.id] || 0}
-                onChange={(event) => {
-                  setDetachmentsDead({
-                    ...detachmentsDead,
-                    [detachment.id]: event.target.value,
-                  });
-                  updateVictoryPoints({
-                    unit,
-                    value: "detachment",
-                    deadDetachments: event.target.value,
-                  });
-                }}
-              />
-            </span>
-          ))}
       </>
     );
   };
@@ -642,22 +543,6 @@ export const GameView = () => {
       />
 
       <Main className="game-view">
-        {list.characters.length > 0 && (
-          <section className="game-view__section">
-            <header className="editor__header">
-              <h2>
-                <FormattedMessage id="editor.characters" />{" "}
-                {showPoints && (
-                  <span className="game-view__points">
-                    [{charactersPoints} <FormattedMessage id="app.points" />]
-                  </span>
-                )}
-              </h2>
-            </header>
-            {getSection({ type: "characters" })}
-          </section>
-        )}
-f
         {list.lords?.length > 0 && (
           <section className="game-view__section">
             <header className="editor__header">

@@ -25,9 +25,9 @@ if (process.env.NODE_ENV !== "development") {
 }
 
 const metaDescription = {
-  en: "Army builder for Warhammer: The Old World.",
-  es: "Creador de listas de ejército para los juegos de mesa de Games Workshop, Warhammer: The Old World.",
-  ct: "Creador de llistes d'exèrcit per a Warhammer: The Old World.",
+  en: "Army builder for Warhammer Fantasy Battle 6th edition.",
+  es: "Creador de listas de ejército para Warhammer Fantasy Battle 6ª edición.",
+  ct: "Creador de llistes d'exèrcit per a Warhammer Fantasy Battle 6a edició.",
 };
 
 try {

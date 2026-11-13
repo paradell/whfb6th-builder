@@ -1,8 +1,7 @@
-import theOldWorld from "../assets/the-old-world.json";
 import WarhammerFantasy6th from "../assets/warhammer-fantasy-6th.json";
 import WarhammerFantasyMdn from "../assets/warhammer-fantasy-mdn.json";
 
-export const OFFICIAL_GAME_SYSTEMS = ["the-old-world", "warhammer-fantasy-6th", "warhammer-fantasy-mdn"];
+export const OFFICIAL_GAME_SYSTEMS = ["warhammer-fantasy-6th", "warhammer-fantasy-mdn"];
 
 export const isOfficialSystem = (gameId) => {
   return OFFICIAL_GAME_SYSTEMS.includes(gameId);
@@ -10,7 +9,7 @@ export const isOfficialSystem = (gameId) => {
 
 export const getGameSystems = () => {
   const customSystems = JSON.parse(localStorage.getItem("whfb.systems")) || [];
-  const officialSystems = [theOldWorld, WarhammerFantasy6th, WarhammerFantasyMdn];
+  const officialSystems = [WarhammerFantasy6th, WarhammerFantasyMdn];
 
   // For each custom system: if it shares the ID of an official system, merge its armies
   // into the official system instead of adding it as a duplicate.
