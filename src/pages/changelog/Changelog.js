@@ -23,7 +23,7 @@ export const Changelog = () => {
             id: "footer.changelog",
           })}`}
         </title>
-        <link rel="canonical" href="https://old-world-builder.com/changelog" />
+        <link rel="canonical" href="https://whfb6th-builder.vercel.app/changelog" />
       </Helmet>
 
       <Header headline="Warhammer Fantasy Builder" hasMainNavigation hasHomeButton />

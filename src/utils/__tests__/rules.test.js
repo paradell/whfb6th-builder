@@ -71,7 +71,7 @@ describe("slot limits by army points", () => {
       getMaxSlots({ type: "heroes", armyPoints: 3000, slots: 0, armyComposition: "bretonnia-mdn", game: "warhammer-fantasy-mdn" }).maxSlots
     ).toBe(5);
     expect(
-      getMinSlots({ type: "core", armyPoints: 1000, slots: 0, armyComposition: "grand-army", game: "the-old-world" }).minSlots
+      getMinSlots({ type: "core", armyPoints: 1000, slots: 0, armyComposition: "grand-army", game: "custom-system" }).minSlots
     ).toBe(3);
   });
 

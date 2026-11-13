@@ -15,7 +15,6 @@ import { Export } from "./pages/export";
 import { Print } from "./pages/print";
 import { DuplicateList } from "./pages/duplicate-list";
 import { Rename } from "./pages/rename";
-import { Datasets } from "./pages/datasets";
 import { NotFound } from "./pages/not-found";
 import { Privacy } from "./pages/privacy";
 import { Changelog } from "./pages/changelog";
@@ -95,7 +94,6 @@ export const App = () => {
           <Route path="/help">{<Help />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
-          <Route path="/datasets">{<Datasets isMobile />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/game-view/:listId">{<GameView />}</Route>
@@ -110,7 +108,6 @@ export const App = () => {
           <Route path="/help">{<Help />}</Route>
           <Route path="/custom-datasets">{<CustomDatasets />}</Route>
           <Route path="/privacy">{<Privacy />}</Route>
-          <Route path="/datasets">{<Datasets />}</Route>
           <Route path="/changelog">{<Changelog />}</Route>
           <Route path="/print/:listId">{<Print />}</Route>
           <Route path="/game-view/:listId">{<GameView />}</Route>

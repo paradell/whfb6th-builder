@@ -168,26 +168,6 @@ const getUnitsString = ({
           unit.specialRules[`name_${language}`] || unit.specialRules.name_en
         ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
       }
-      if (showSpecialRules && unit.detachments) {
-        unit.detachments.forEach((detachment) => {
-          const specialRulesDetachment =
-            detachment.armyComposition?.[armyComposition]?.specialRules ||
-            detachment.specialRules;
-
-          if (specialRulesDetachment?.name_en) {
-            optionsString += `${
-              isMarkdownList ? " - __" : ""
-            }${intl.formatMessage({
-              id: "unit.specialRules",
-            })} (${detachment[`name_${language}`] || detachment.name_en}):${
-              isMarkdownList ? "__ *" : " "
-            }${(
-              specialRulesDetachment[`name_${language}`] ||
-              specialRulesDetachment.name_en
-            ).replace(/ *\{[^)]*\}/g, "")}${isMarkdownList ? "*" : ""}\n`;
-          }
-        });
-      }
       if (showCustomNotes && unit.customNote) {
         optionsString += `${isMarkdownList ? " - __" : ""}${intl.formatMessage({
           id: "unit.customNote",
@@ -203,7 +183,7 @@ const getUnitsString = ({
         });
       }
       if (showStats) {
-        const stats = getStats(unit, armyComposition);
+        const stats = getStats(unit);
 
         if (!isCompactList && !isMarkdownList) {
           optionsString += "\n";
@@ -248,7 +228,6 @@ export const getListAsText = ({
   const allPoints = getAllPoints(list);
   const lordsPoints = getPoints({ list, type: "lords" });
   const heroesPoints = getPoints({ list, type: "heroes" });
-  const charactersPoints = getPoints({ list, type: "characters" });
   const corePoints = getPoints({ list, type: "core" });
   const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
@@ -268,9 +247,6 @@ export const getListAsText = ({
   const armyCompositionString = armyCompositionName
     ? `, ${armyCompositionName}`
     : "";
-  const compositionRuleString = intl.formatMessage({
-    id: `misc.${list.compositionRule || "open-war"}`,
-  });
   let listString = "";
 
   if (isSimpleList) {
@@ -279,11 +255,9 @@ export const getListAsText = ({
         ? ""
         : ` [${allPoints} ${intl.formatMessage({ id: "app.points" })}]`
     }\n`;
-    listString += `${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}\n\n`;
+    listString += `${game.name}, ${armyName}${armyCompositionString}\n\n`;
 
     const allUnits = [
-      ...(list.characters.map((unit) => ({ type: "characters", ...unit })) ||
-        []),
       ...(list.lords || []).map((unit) => ({ type: "lords", ...unit })),
       ...(list.heroes || []).map((unit) => ({ type: "heroes", ...unit })),
       ...(list.core || []).map((unit) => ({ type: "core", ...unit })),
@@ -314,7 +288,7 @@ export const getListAsText = ({
 
     listString += `\n\n---\n${intl.formatMessage({
       id: "export.createdWith",
-    })} "Warhammer Fantasy Builder"\n\n[https://old-world-builder.com]`;
+    })} "Warhammer Fantasy Builder"\n\n[https://whfb6th-builder.vercel.app]`;
 
     return listString;
   }
@@ -326,7 +300,7 @@ export const getListAsText = ({
 ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
-${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
+${game.name}, ${armyName}${armyCompositionString}
 ===
 
 `;
@@ -336,35 +310,9 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
     listString += `## ${list.name}${isShowList ? '' : ' [' + allPoints + ' ' + intl.formatMessage({
   id: "app.points",
 }) + ']'}
-${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
+${game.name}, ${armyName}${armyCompositionString}
 
 `;
-  }
-
-  // CHARACTERS
-  // prettier-ignore
-  if (list.characters?.length) {
-    listString += `++ ${intl.formatMessage({
-  id: "editor.characters",
-})}${isShowList ? '' : ' [' + charactersPoints + ' ' + intl.formatMessage({
-  id: "app.points",
-}) + ']'} ++
-`
-    listString += isCompactList || isMarkdownList ? '' : '\n';
-    
-    listString += `${getUnitsString({
-      isCompactList,
-      showSpecialRules,
-      showPageNumbers,
-      isMarkdownList,
-      showCustomNotes,
-      units: list.characters,
-      isShowList,
-      intl,
-      language,showStats,
-      armyComposition,
-      type: "characters",
-    })}`;
   }
 
   // LORDS
@@ -585,14 +533,14 @@ ${game.name}, ${armyName}${armyCompositionString}, ${compositionRuleString}
     listString += `
 *${intl.formatMessage({
       id: "export.createdWith",
-    })} "Warhammer Fantasy Builder"* - https://old-world-builder.com`;
+    })} "Warhammer Fantasy Builder"* - https://whfb6th-builder.vercel.app`;
   } else {
     listString += `---
 ${intl.formatMessage({
   id: "export.createdWith",
 })} "Warhammer Fantasy Builder"
 
-[https://old-world-builder.com]`;
+[https://whfb6th-builder.vercel.app]`;
   }
 
   if (isMarkdownList) {

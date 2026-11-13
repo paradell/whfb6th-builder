@@ -165,12 +165,6 @@
   margin-top: 1.5rem;
 }
 
-@media (max-width: 1279px) {
-  .unit__bsb {
-    margin-top: 1rem;
-  }
-}
-
 .unit__rule {
   background-color: transparent;
   font-size: 1rem;
@@ -259,8 +253,4 @@
   margin-left: 0;
   margin-bottom: 0;
   font-size: 0.9rem !important;
-}
-
-.unit__option-note--detachment {
-  margin: 0.3rem 0 0.5rem 0;
 }

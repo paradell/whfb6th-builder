@@ -51,7 +51,10 @@ export const maxAllowedOfItem = (
 export const itemsUsedElsewhere = (items, list, excludeId) => {
   const unitCategories = [
     "characters",
+    "lords",
+    "heroes",
     "core",
+    "core_not_count",
     "special",
     "rare",
     "mercenaries",
@@ -106,7 +109,7 @@ export const itemsUsedElsewhere = (items, list, excludeId) => {
 };
 
 /**
- * Combination Exculsive item categories are categories like runes and incantation scrolls where one or more
+ * Combination Exculsive item categories are categories like runes where one or more
  * items can be taken but a particular combination of items must be unique within an army.
  */
 export const comboExclusiveCategories = [
@@ -115,14 +118,11 @@ export const comboExclusiveCategories = [
   "talismanic-runes",
   "banner-runes",
   "engineering-runes",
-  "ranged-weapon-runes",
-  "runic-tattoos",
-  "incantation-scroll",
 ];
 
 /**
  * Checks if an unit's combination of items, grouped by type or category, is shared by other units.
- * Corresponds to the Rule of Pride, FoF pg 32.
+ * Dwarf rune combinations must be unique within an army.
  * We treat an item's rune loadout as synonymous with an item category, like Weapon, Armour, etc.
  *
  * @param {object[]} items Array of items to be looked for in the list
@@ -133,7 +133,10 @@ export const comboExclusiveCategories = [
 export const combosUsedElsewhere = (items, list, excludeId) => {
   const unitCategories = [
     "characters",
+    "lords",
+    "heroes",
     "core",
+    "core_not_count",
     "special",
     "rare",
     "mercenaries",

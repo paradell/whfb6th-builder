@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet-async";
 
 import { Header, Main } from "../../components/page";
 import { NumberInput } from "../../components/number-input";
-import { Select } from "../../components/select";
 import { Icon } from "../../components/icon";
 import { updateList } from "../../state/lists";
 import { updateLocalList } from "../../utils/list";
@@ -23,28 +22,6 @@ export const EditList = ({ isMobile }) => {
   const { listId } = useParams();
   const { language } = useLanguage();
   const dispatch = useDispatch();
-  const compositionRules = [
-    {
-      id: "open-war",
-      name_en: intl.formatMessage({ id: "misc.open-war" }),
-    },
-    {
-      id: "grand-melee",
-      name_en: intl.formatMessage({ id: "misc.grand-melee" }),
-    },
-    {
-      id: "combined-arms",
-      name_en: intl.formatMessage({ id: "misc.combined-arms" }),
-    },
-    {
-      id: "grand-melee-combined-arms",
-      name_en: intl.formatMessage({ id: "misc.grand-melee-combined-arms" }),
-    },
-    {
-      id: "battle-march",
-      name_en: intl.formatMessage({ id: "misc.battle-march" }),
-    },
-  ];
   const list = useSelector((state) =>
     state.lists.find(({ id }) => listId === id)
   );
@@ -73,15 +50,6 @@ export const EditList = ({ isMobile }) => {
       })
     );
   };
-  const handleCompositionRuleChange = (value) => {
-    dispatch(
-      updateList({
-        listId,
-        compositionRule: value,
-      })
-    );
-  };
-
   useEffect(() => {
     list && updateLocalList(list);
   }, [list]);
@@ -171,16 +139,6 @@ export const EditList = ({ isMobile }) => {
           onChange={handlePointsChange}
           required
           interval={50}
-        />
-        <label htmlFor="composition-rule">
-          <FormattedMessage id="new.armyCompositionRule" />
-        </label>
-        <Select
-          id="composition-rule"
-          options={compositionRules}
-          onChange={handleCompositionRuleChange}
-          selected={list.compositionRule || "open-war"}
-          spaceBottom
         />
       </MainComponent>
     </>

@@ -42,23 +42,22 @@ export const Add = ({ isMobile }) => {
   const armyData = game?.armies.find((army) => army.id === list.army);
   const allies = armyData?.allies;
   const mercenaries = armyData?.mercenaries;
-  const handleAdd = (unit, ally, unitType, magicItemsArmy) => {
+  const handleAdd = (unit, ally, unitType) => {
     const newUnit = {
       ...unit,
       army: ally,
       unitType,
       id: `${unit.id}.${getRandomId()}`,
-      magicItemsArmy: unit.magicItemsArmy || magicItemsArmy,
     };
 
     dispatch(addUnit({ listId, type, unit: newUnit }));
     setRedirect(newUnit.id);
   };
-  const getUnit = (unit, ally, unitType, magicItemsArmy) => (
+  const getUnit = (unit, ally, unitType) => (
     <li key={unit.id} className="list">
       <button
         className="list__inner add__list-inner"
-        onClick={() => handleAdd(unit, ally, unitType, magicItemsArmy)}
+        onClick={() => handleAdd(unit, ally, unitType)}
       >
         <span className="add__name">
           {unit.minimum ? `${unit.minimum} ` : null}
@@ -111,7 +110,7 @@ export const Add = ({ isMobile }) => {
       }
     } else if (list && type === "allies" && allAllies.length === 0 && allies) {
       setAlliesLoaded(false);
-      allies.forEach(({ army, armyComposition, magicItemsArmy }, index) => {
+      allies.forEach(({ army, armyComposition }, index) => {
         // Always try custom dataset first
         const customData = getCustomDatasetData(army);
 
@@ -145,7 +144,6 @@ export const Add = ({ isMobile }) => {
                   ...armyData,
                   ally: army,
                   armyComposition: armyComposition || army,
-                  magicItemsArmy: magicItemsArmy,
                 },
               ];
               setAlliesLoaded(index + 1);
@@ -286,7 +284,6 @@ export const Add = ({ isMobile }) => {
                     rare,
                     ally,
                     armyComposition,
-                    magicItemsArmy,
                   },
                   index
                 ) => {
@@ -347,33 +344,17 @@ export const Add = ({ isMobile }) => {
                       }`}
                     >
                       {tempCharacters.map((unit) =>
-                        getUnit(
-                          unit,
-                          armyComposition,
-                          "characters",
-                          magicItemsArmy
-                        )
+                        getUnit(unit, armyComposition, "characters")
                       )}
-                      {tempCore
-                        .filter((unit) => !unit.detachment)
-                        .map((unit) =>
-                          getUnit(unit, armyComposition, "core", magicItemsArmy)
-                        )}
-                      {tempSpecial
-                        .filter((unit) => !unit.detachment)
-                        .map((unit) =>
-                          getUnit(
-                            unit,
-                            armyComposition,
-                            "special",
-                            magicItemsArmy
-                          )
-                        )}
-                      {tempRare
-                        .filter((unit) => !unit.detachment)
-                        .map((unit) =>
-                          getUnit(unit, armyComposition, "rare", magicItemsArmy)
-                        )}
+                      {tempCore.map((unit) =>
+                        getUnit(unit, armyComposition, "core")
+                      )}
+                      {tempSpecial.map((unit) =>
+                        getUnit(unit, armyComposition, "special")
+                      )}
+                      {tempRare.map((unit) =>
+                        getUnit(unit, armyComposition, "rare")
+                      )}
                     </Expandable>
                   );
                 }
@@ -385,7 +366,7 @@ export const Add = ({ isMobile }) => {
           <ul>{allMercenaries.map((unit) => getUnit(unit, unit.army))}</ul>
         )}
         {type !== "allies" && type !== "mercenaries" && (
-          <ul>{army[type].map((unit) => !unit.detachment && getUnit(unit))}</ul>
+          <ul>{army[type].map((unit) => getUnit(unit))}</ul>
         )}
       </MainComponent>
     </>

@@ -45,7 +45,8 @@ export const Print = () => {
 
   const armyComposition = list.armyComposition || list.army;
   const allPoints = getAllPoints(list);
-  const charactersPoints = getPoints({ list, type: "characters" });
+  const lordsPoints = getPoints({ list, type: "lords" });
+  const heroesPoints = getPoints({ list, type: "heroes" });
   const corePoints = getPoints({ list, type: "core" });
   const coreNotCountPoints = getPoints({ list, type: "core_not_count" });
   const specialPoints = getPoints({ list, type: "special" });
@@ -165,7 +166,7 @@ export const Print = () => {
     return (
       <>
         {units.map((unit) => {
-          const stats = getStats(unit, armyComposition);
+          const stats = getStats(unit);
 
           return (
             <li key={unit.id}>
@@ -207,37 +208,6 @@ export const Print = () => {
                       )?.replace(/ *\{[^)]*\}/g, "")}
                     </i>
                   </p>
-                  {unit.detachments &&
-                    unit.detachments.map((detachment) => {
-                      const specialRulesDetachment =
-                        detachment.armyComposition?.[
-                          list?.armyComposition || list?.army
-                        ]?.specialRules || detachment.specialRules;
-
-                      if (!specialRulesDetachment?.name_en) {
-                        return null;
-                      }
-
-                      return (
-                        <p
-                          className="game-view__special-rules"
-                          key={detachment.id}
-                        >
-                          <b>
-                            <i>
-                              <FormattedMessage id="unit.specialRules" /> (
-                              {detachment[`name_${language}`] ||
-                                detachment.name_en}
-                              ):
-                            </i>
-                          </b>{" "}
-                          {(
-                            specialRulesDetachment[`name_${language}`] ||
-                            specialRulesDetachment.name_en
-                          ).replace(/ *\{[^)]*\}/g, "")}
-                        </p>
-                      );
-                    })}
                 </>
               ) : null}
               {showStats &&
@@ -331,27 +301,40 @@ export const Print = () => {
               </h1>
               <p className="print__subheader">
                 {game.name}, {armyName}
-                {armyCompositionName ? `, ${armyCompositionName}` : ""},{" "}
-                <FormattedMessage
-                  id={`misc.${list.compositionRule || "open-war"}`}
-                />
+                {armyCompositionName ? `, ${armyCompositionName}` : ""}
               </p>
             </>
           )}
 
-          {list.characters.length > 0 && (
+          {list.lords?.length > 0 && (
             <>
               {showHeadings && (
                 <h2>
-                  <FormattedMessage id="editor.characters" />{" "}
+                  <FormattedMessage id="editor.lords" />{" "}
                   {!isShowList && (
                     <span className="print__points">
-                      [{charactersPoints} <FormattedMessage id="app.points" />]
+                      [{lordsPoints} <FormattedMessage id="app.points" />]
                     </span>
                   )}
                 </h2>
               )}
-              {getSection({ type: "characters" })}
+              {getSection({ type: "lords" })}
+            </>
+          )}
+
+          {list.heroes?.length > 0 && (
+            <>
+              {showHeadings && (
+                <h2>
+                  <FormattedMessage id="editor.heroes" />{" "}
+                  {!isShowList && (
+                    <span className="print__points">
+                      [{heroesPoints} <FormattedMessage id="app.points" />]
+                    </span>
+                  )}
+                </h2>
+              )}
+              {getSection({ type: "heroes" })}
             </>
           )}
 
@@ -458,8 +441,8 @@ export const Print = () => {
             </p>
             <p>
               [
-              <a href="https://old-world-builder.com">
-                <i>old-world-builder.com</i>
+              <a href="https://whfb6th-builder.vercel.app">
+                <i>whfb6th-builder.vercel.app</i>
               </a>
               ]
             </p>

@@ -27,78 +27,6 @@
   "the fay enchantres magic": {
     "url": "special-rules/the-fay-enchantress-magic"
   },
-  "murderous renegade": {
-    "url": "special-rules/murderous-renegade",
-    "page": "TRLP, p. 18"
-  },
-  "wisdom of the old ones renegade": {
-    "url": "special-rules/wisdom-of-the-old-ones-renegade",
-    "page": "TRLP, p. 11"
-  },
-  "cold blooded renegade": {
-    "url": "special-rules/cold-blooded-renegade",
-    "page": "TRLP, p. 11"
-  },
-  "born of fire renegade": {
-    "url": "special-rules/born-of-fire-renegade",
-    "page": "TRLP, p. 7"
-  },
-  "howdah renegade": {
-    "url": "special-rules/howdah-renegade",
-    "page": "TRLP, p. 5"
-  },
-  "dragged along renegade": {
-    "url": "special-rules/dragged-along-renegade",
-    "page": "TRLP, p. 5"
-  },
-  "accursed reliquary renegade": {
-    "url": "special-rules/accursed-reliquary-renegade",
-    "page": "TRLP, p. 17"
-  },
-  "palanquin renegade": {
-    "url": "special-rules/palanquin-renegade",
-    "page": "TRLP, p. 11"
-  },
-  "arcane configuration renegade": {
-    "url": "special-rules/arcane-configuration-renegade",
-    "page": "TRLP, p. 12"
-  },
-  "monstrous ranks renegade": {
-    "url": "special-rules/monstrous-ranks-renegade",
-    "page": "TRLP, p. 16"
-  },
-  "wailing dirge renegade": {
-    "url": "special-rules/wailing-dirge-renegade",
-    "page": "TRLP, p. 17"
-  },
-  "blasphemous tome renegade": {
-    "url": "special-rules/blasphemous-tome-renegade",
-    "page": "TRLP, p. 17"
-  },
-  "guardians renegade": {
-    "url": "special-rules/guardians-renegade",
-    "page": "TRLP, p. 12"
-  },
-  "daemonic renegade": {
-    "url": "special-rules/daemonic-renegade",
-    "page": "TRLP, p. 9"
-  },
-  "running with the pack renegade": {
-    "url": "special-rules/running-with-the-pack-renegade",
-    "page": "TRLP, p. 14"
-  },
-  "dark vitality renegade": {
-    "url": "special-rules/dark-vitality-renegade",
-    "page": "TRLP, p. 17"
-  },
-  "blessings of khaine renegade": {
-    "url": "special-rules/blessings-of-khaine-renegade",
-    "page": "TRLP, p. 18"
-  },
-  "dark acolyte renegade": {
-    "url": "special-rules/dark-acolyte-renegade",
-    "page": "TRLP, p. 17"
-  },
   "forsaken by khorne": {
     "url": "special-rules/forsaken-by-khorne",
     "page": "RH, p. 63"
@@ -638,10 +566,6 @@
     "url": "special-rules/ancient-sorcery",
     "page": "AJ:BB, p. 33"
   },
-  "the outlaw & renegade": {
-    "url": "special-rules/the-outlaw-and-renegade",
-    "page": "AJ:TWoSF, p. 37"
-  },
   "solitary fighters": {
     "url": "special-rules/solitary-fighters",
     "page": "AJ:O&GT, p. 29"
@@ -686,10 +610,6 @@
   "protectors of the ancient wood": {
     "url": "special-rules/protectors-of-the-ancient-wood",
     "page": "AJ:WER, p. 33"
-  },
-  "engine of the gods renegade": {
-    "url": "special-rules/engine-of-the-gods-renegade",
-    "page": "TRLP, p. 12"
   },
   "traps & snares": { "url": "special-rules/traps-and-snares" },
   "engine of the gods": {
@@ -1191,10 +1111,6 @@
   "purebreed warhorse": {
     "url": "special-rules/purebreed-warhorse",
     "page": "AJ:KoB, p. 37"
-  },
-  "daemonic instability renegade": {
-    "url": "special-rules/daemonic-instability-renegade",
-    "page": "TRLP, p. 10"
   },
   "knights of morr": {
     "url": "special-rules/knights-of-morr",
@@ -2181,30 +2097,6 @@
   "volley fire": { "url": "special-rules/volley-fire", "page": "RB, p. 180" },
   "warband": { "url": "special-rules/warband", "page": "RB, p. 180" },
   "warp-spawned": { "url": "special-rules/warp-spawned", "page": "RB, p. 180" },
-  "leadbelcher gun renegade": {
-    "url": "weapons/leadbelcher-gun-renegade",
-    "page": "TRLP, p. 14"
-  },
-  "fiery breath renegade": {
-    "url": "weapons/fiery-breath-renegade",
-    "page": "TRLP, p. 12"
-  },
-  "cannon of khorne renegade": {
-    "url": "weapons/cannon-of-khorne-renegade",
-    "page": "TRLP, p. 9"
-  },
-  "serrated maws renegade": {
-    "url": "weapons/serrated-maws-renegade",
-    "page": "TRLP, p. 18"
-  },
-  "warp lightning cannon renegade": {
-    "url": "weapons/warp-lightning-cannon-renegade",
-    "page": "TRLP, p. 16"
-  },
-  "cannon of the sky-titans renegade": {
-    "url": "weapons/cannon-of-the-sky-titans-renegade",
-    "page": "TRLP, p. 14"
-  },
   "spear of loec": {
     "url": "weapons/spear-of-loec",
     "page": "FoF, p. 122"
@@ -3110,10 +3002,6 @@
     "url": "weapons/moonfire-shot",
     "page": "FoF, p. 147"
   },
-  "ironfist renegade": {
-    "url": "weapons/ironfist-renegade",
-    "page": "TRLP, p. 16"
-  },
   "plagueclaw catapult": {
     "url": "unit/plagueclaw-catapult",
     "stats": [
@@ -3267,10 +3155,6 @@
   "cannon": { "url": "war-machines/cannon", "page": "RB, p. 226" },
   "mortar": { "url": "war-machines/mortars", "page": "RB, p. 228" },
   "fire thrower": { "url": "war-machines/fire-throwers", "page": "RB, p. 229" },
-  "lore of naggaroth renegade": {
-    "url": "the-lores-of-magic/lore-of-naggaroth-renegade",
-    "page": "TRLP, p. 23"
-  },
   "lore of yang": {
     "url": "the-lores-of-magic/lore-of-yang",
     "page": "AJ:AoGC, p. 46"
@@ -3327,18 +3211,6 @@
     "url": "the-lores-of-magic/lore-of-beasts",
     "page": "RH, p. 117"
   },
-  "lore of undeath renegade": {
-    "url": "the-lores-of-magic/lore-of-undeath-renegade",
-    "page": "TRLP, p. 21"
-  },
-  "lore of the horned rat renegade": {
-    "url": "the-lores-of-magic/lore-of-the-horned-rat-renegade",
-    "page": "TRLP, p. 20"
-  },
-  "lore of the great maw renegade": {
-    "url": "the-lores-of-magic/lore-of-the-great-maw-renegade",
-    "page": "TRLP, p. 17"
-  },
   "spells of the little waaagh!": {
     "url": "spell-lists/spells-of-the-little-waaagh",
     "page": "O&G, p. 28"
@@ -3378,18 +3250,6 @@
   "lore of the great maw": {
     "url": "the-lores-of-magic/lore-of-the-great-maw",
     "page": "OK, p. 25"
-  },
-  "lore of lustria renegade": {
-    "url": "the-lores-of-magic/lore-of-lustria-renegade",
-    "page": "TRLP, p. 14"
-  },
-  "lore of daemons renegade": {
-    "url": "the-lores-of-magic/lore-of-daemons-renegade",
-    "page": "TRLP, p. 11"
-  },
-  "lore of hashut renegade": {
-    "url": "the-lores-of-magic/lore-of-hashut-renegade",
-    "page": "TRLP, p. 8"
   },
   "lore of primal magic": {
     "url": "the-lores-of-magic/lore-of-primal-magic",
@@ -5550,10 +5410,6 @@
     "url": "magic-item/the-plague-chalice",
     "page": "RH, p. 114"
   },
-  "the renegade knight": {
-    "url": "magic-item/the-renegade-knight",
-    "page": "AJ:TWoSF, p. 43"
-  },
   "the scarab brooch of usirian": {
     "url": "magic-item/the-scarab-brooch-of-usirian",
     "page": "AJ:TKoK, p. 37"
@@ -6439,49 +6295,6 @@
     "troopType": "HCh",
     "page": "VC, p. 19"
   },
-  "black coach renegade": {
-    "url": "unit/black-coach-renegade",
-    "stats": [
-      {
-        "A": "-",
-        "I": "-",
-        "M": "-",
-        "S": "5",
-        "T": "6",
-        "W": "4",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "-",
-        "Name": "Black Coach"
-      },
-      {
-        "A": "2",
-        "I": "2",
-        "M": "-",
-        "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "0",
-        "Ld": "5",
-        "WS": "3",
-        "Name": "Wraith (x1)"
-      },
-      {
-        "A": "1",
-        "I": "2",
-        "M": "20",
-        "S": "4",
-        "T": "-",
-        "W": "-",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "3",
-        "Name": "Nightmares (x2)"
-      }
-    ],
-    "troopType": "HCh",
-    "page": "TRLP, p. 17"
-  },
   "black dragon": {
     "url": "unit/black-dragon",
     "stats": [
@@ -6854,25 +6667,6 @@
     "troopType": "Be",
     "page": "DoC, p. 3"
   },
-  "bloodthirster renegade": {
-    "url": "unit/bloodthirster-renegade",
-    "stats": [
-      {
-        "A": "6",
-        "I": "7",
-        "M": "20",
-        "S": "6",
-        "T": "6",
-        "W": "6",
-        "BS": "5",
-        "Ld": "9",
-        "WS": "10",
-        "Name": "Bloodthirster"
-      }
-    ],
-    "troopType": "Be",
-    "page": "TRLP, p. 9"
-  },
   "bloodwrack medusa": {
     "url": "unit/bloodwrack-medusa",
     "stats": [
@@ -6965,37 +6759,6 @@
     ],
     "troopType": "RI",
     "page": "DoC, p. 20"
-  },
-  "blue horrors of tzeentch renegade": {
-    "url": "unit/blue-horrors-of-tzeentch-renegade",
-    "stats": [
-      {
-        "A": "1",
-        "I": "3",
-        "M": "10",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "BS": "3",
-        "Ld": "7",
-        "WS": "2",
-        "Name": "Blue Horror"
-      },
-      {
-        "A": "2",
-        "I": "3",
-        "M": "10",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "BS": "3",
-        "Ld": "7",
-        "WS": "2",
-        "Name": "Ectoplasmic Horror"
-      }
-    ],
-    "troopType": "RI",
-    "page": "TRLP, p. 20"
   },
   "bolt thrower dwarfs": {
     "url": "unit/bolt-thrower",
@@ -7677,37 +7440,6 @@
     ],
     "troopType": "HCh",
     "page": "DE, p. 15"
-  },
-  "cauldron of blood renegade": {
-    "url": "unit/cauldron-of-blood-renegade",
-    "stats": [
-      {
-        "A": "-",
-        "I": "-",
-        "M": "5",
-        "S": "5",
-        "T": "5",
-        "W": "5",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "-",
-        "Name": "Cauldron of Blood"
-      },
-      {
-        "A": "1",
-        "I": "5",
-        "M": "-",
-        "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "4",
-        "Ld": "9",
-        "WS": "4",
-        "Name": "Witch Elf Crew (x2)"
-      }
-    ],
-    "troopType": "HCh",
-    "page": "TRLP, p. 18"
   },
   "centigor herd": {
     "url": "unit/centigor-herd",
@@ -8443,37 +8175,6 @@
     "troopType": "RI",
     "page": "SK, p. 7"
   },
-  "clanrats renegade": {
-    "url": "unit/clanrats-renegade",
-    "stats": [
-      {
-        "A": "1",
-        "I": "4",
-        "M": "12",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "BS": "3",
-        "Ld": "4",
-        "WS": "3",
-        "Name": "Clanrat"
-      },
-      {
-        "A": "2",
-        "I": "4",
-        "M": "12",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "BS": "3",
-        "Ld": "5",
-        "WS": "3",
-        "Name": "Clawleader"
-      }
-    ],
-    "troopType": "RI",
-    "page": "TRLP, p. 16"
-  },
   "cockatrice": {
     "url": "unit/cockatrice",
     "stats": [
@@ -8864,25 +8565,6 @@
     ],
     "troopType": "MI",
     "page": "DoC, p. 24"
-  },
-  "daemon prince renegade": {
-    "url": "unit/daemon-prince-renegade",
-    "stats": [
-      {
-        "A": "5",
-        "I": "7",
-        "M": "15",
-        "S": "6",
-        "T": "5",
-        "W": "4",
-        "BS": "5",
-        "Ld": "9",
-        "WS": "7",
-        "Name": "Daemon Prince"
-      }
-    ],
-    "troopType": "MI",
-    "page": "TRLP, p. 9"
   },
   "daemon prince warriors of chaos": {
     "url": "unit/daemon-prince-warriors-of-chaos",
@@ -10716,25 +10398,6 @@
     "troopType": "HCa",
     "page": "DoC, p. 5"
   },
-  "flesh hounds of khorne renegade": {
-    "url": "unit/flesh-hounds-of-khorne-renegade",
-    "stats": [
-      {
-        "A": "2",
-        "I": "4",
-        "M": "20",
-        "S": "4",
-        "T": "4",
-        "W": "2",
-        "BS": "0",
-        "Ld": "7",
-        "WS": "5",
-        "Name": "Flesh Hound"
-      }
-    ],
-    "troopType": "HCa",
-    "page": "TRLP, p. 5"
-  },
   "forest cat": {
     "url": "unit/forest-cat",
     "stats": [
@@ -12040,25 +11703,6 @@
     "troopType": "Be",
     "page": "CD, p. 12"
   },
-  "great taurus renegade": {
-    "url": "unit/great-taurus-renegade",
-    "stats": [
-      {
-        "A": "3",
-        "I": "3",
-        "M": "15",
-        "S": "5",
-        "T": "-",
-        "W": "(+4)",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "5",
-        "Name": "Great Taurus"
-      }
-    ],
-    "troopType": "MCr",
-    "page": "TRLP, p. 8"
-  },
   "great unclean one": {
     "url": "unit/great-unclean-one",
     "stats": [
@@ -12077,25 +11721,6 @@
     ],
     "troopType": "Be",
     "page": "DoC, p. 9"
-  },
-  "great unclean one renegade": {
-    "url": "unit/great-unclean-one-renegade",
-    "stats": [
-      {
-        "A": "5",
-        "I": "4",
-        "M": "12",
-        "S": "6",
-        "T": "7",
-        "W": "7",
-        "BS": "3",
-        "Ld": "9",
-        "WS": "6",
-        "Name": "Great Unclean One"
-      }
-    ],
-    "troopType": "Be",
-    "page": "TRLP, p. 9"
   },
   "grey seer": {
     "url": "unit/grey-seer",
@@ -12454,25 +12079,6 @@
     "troopType": "Be",
     "page": "SK, p. 18"
   },
-  "hell pit abomination renegade": {
-    "url": "unit/hell-pit-abomination-renegade",
-    "stats": [
-      {
-        "A": "D6+1",
-        "I": "4",
-        "M": "3D6",
-        "S": "6",
-        "T": "6",
-        "W": "6",
-        "BS": "1",
-        "Ld": "8",
-        "WS": "3",
-        "Name": "Hell Pit Abomination"
-      }
-    ],
-    "troopType": "Be",
-    "page": "SK, p. 18"
-  },
   "hellcannon": {
     "url": "unit/hellcannon",
     "stats": [
@@ -12558,61 +12164,6 @@
     ],
     "troopType": "LCh",
     "page": "DoC, p. 16"
-  },
-  "hellflayer of slaanesh renegade": {
-    "url": "unit/hellflayer-of-slaanesh-renegade",
-    "stats": [
-      {
-        "A": "-",
-        "I": "-",
-        "M": "-",
-        "S": "4",
-        "T": "4",
-        "W": "4",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "-",
-        "Name": "Hellflayer"
-      },
-      {
-        "A": "2",
-        "I": "5",
-        "M": "-",
-        "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "3",
-        "Ld": "7",
-        "WS": "5",
-        "Name": "Exalted Alluress"
-      },
-      {
-        "A": "1",
-        "I": "5",
-        "M": "-",
-        "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "3",
-        "Ld": "7",
-        "WS": "4",
-        "Name": "Daemonette Crew (x2)"
-      },
-      {
-        "A": "1",
-        "I": "5",
-        "M": "22",
-        "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "3",
-        "Name": "Steed of Slaanesh (x2)"
-      }
-    ],
-    "troopType": "LCh",
-    "page": "TRLP, p. 16"
   },
   "herdstone": {
     "url": "unit/herdstone",
@@ -13540,37 +13091,6 @@
     "troopType": "MI",
     "page": "CD, p. 7"
   },
-  "k'daai fireborn renegade": {
-    "url": "unit/kdaai-fireborn-renegade",
-    "stats": [
-      {
-        "A": "3",
-        "I": "4",
-        "M": "15",
-        "S": "5",
-        "T": "4",
-        "W": "3",
-        "BS": "2",
-        "Ld": "7",
-        "WS": "4",
-        "Name": "K'daai Fireborn"
-      },
-      {
-        "A": "4",
-        "I": "4",
-        "M": "15",
-        "S": "5",
-        "T": "4",
-        "W": "3",
-        "BS": "2",
-        "Ld": "8",
-        "WS": "4",
-        "Name": "Manburner"
-      }
-    ],
-    "troopType": "MI",
-    "page": "TRLP, p. 7"
-  },
   "keeper of secrets": {
     "url": "unit/keeper-of-secrets",
     "stats": [
@@ -13589,25 +13109,6 @@
     ],
     "troopType": "Be",
     "page": "DoC, p. 13"
-  },
-  "keeper of secrets renegade": {
-    "url": "unit/keeper-of-secrets-renegade",
-    "stats": [
-      {
-        "A": "6",
-        "I": "7",
-        "M": "20",
-        "S": "6",
-        "T": "6",
-        "W": "6",
-        "BS": "6",
-        "Ld": "9",
-        "WS": "7",
-        "Name": "Keeper of Secrets"
-      }
-    ],
-    "troopType": "Be",
-    "page": "TRLP, p. 9"
   },
   "khainite assassin": {
     "url": "unit/khainite-assassin",
@@ -13964,37 +13465,6 @@
     "troopType": "MI",
     "page": "OK, p. 9"
   },
-  "leadbelchers renegade": {
-    "url": "unit/leadbelchers-renegade",
-    "stats": [
-      {
-        "A": "3",
-        "I": "2",
-        "M": "15",
-        "S": "4",
-        "T": "4",
-        "W": "3",
-        "BS": "3",
-        "Ld": "7",
-        "WS": "3",
-        "Name": "Leadbelcher"
-      },
-      {
-        "A": "4",
-        "I": "2",
-        "M": "15",
-        "S": "4",
-        "T": "4",
-        "W": "3",
-        "BS": "4",
-        "Ld": "7",
-        "WS": "3",
-        "Name": "Thunderfist"
-      }
-    ],
-    "troopType": "MI",
-    "page": "OK, p. 9"
-  },
   "lector of sigmar": {
     "url": "unit/lector-of-sigmar",
     "stats": [
@@ -14156,25 +13626,6 @@
     ],
     "troopType": "Be",
     "page": "DoC, p. 18"
-  },
-  "lord of change renegade": {
-    "url": "unit/lord-of-change-renegade",
-    "stats": [
-      {
-        "A": "4",
-        "I": "6",
-        "M": "15",
-        "S": "6",
-        "T": "6",
-        "W": "6",
-        "BS": "6",
-        "Ld": "9",
-        "WS": "6",
-        "Name": "Lord of Change"
-      }
-    ],
-    "troopType": "Be",
-    "page": "TRLP, p. 9"
   },
   "lothern sea guard": {
     "url": "unit/lothern-sea-guard",
@@ -14406,25 +13857,6 @@
     ],
     "troopType": "MCr",
     "page": "DE, p. 19"
-  },
-  "manticore renegade": {
-    "url": "unit/manticore-renegade",
-    "stats": [
-      {
-        "A": "4",
-        "I": "5",
-        "M": "15",
-        "S": "5",
-        "T": "(+2)",
-        "W": "(+4)",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "5",
-        "Name": "Manticore"
-      }
-    ],
-    "troopType": "MCr",
-    "page": "TRLP, p. 18"
   },
   "manticore warriors of chaos": {
     "url": "unit/manticore-warriors-of-chaos",
@@ -16252,25 +15684,6 @@
     "troopType": "MCa",
     "page": "DoC, p. 10"
   },
-  "palanquin of nurgle renegade": {
-    "url": "unit/palanquin-of-nurgle-renegade",
-    "stats": [
-      {
-        "A": "D6+1",
-        "I": "3",
-        "M": "10",
-        "S": "3",
-        "T": "-",
-        "W": "(+4)",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "3",
-        "Name": "Palanquin of Nurgle"
-      }
-    ],
-    "troopType": "MI",
-    "page": "TRLP, p. 9"
-  },
   "peasant bowmen": {
     "url": "unit/peasant-bowman",
     "stats": [
@@ -16561,37 +15974,6 @@
     ],
     "troopType": "HCh",
     "page": "SK, p. 16"
-  },
-  "plague furnace renegade": {
-    "url": "unit/plague-furnace-renegade",
-    "stats": [
-      {
-        "A": "-",
-        "I": "-",
-        "M": "5",
-        "S": "5",
-        "T": "6",
-        "W": "5",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "-",
-        "Name": "Plague Furnace"
-      },
-      {
-        "A": "2",
-        "I": "3",
-        "M": "-",
-        "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "0",
-        "Ld": "5",
-        "WS": "3",
-        "Name": "Plague Monk Crew (x3)"
-      }
-    ],
-    "troopType": "HCh",
-    "page": "TRLP, p. 16"
   },
   "plague monks": {
     "url": "unit/plague-monks",
@@ -17203,44 +16585,6 @@
     "troopType": "WM",
     "page": "DE, p. 21"
   },
-  "renegade captain": {
-    "url": "unit/renegade-captain",
-    "stats": [
-      {
-        "A": "2",
-        "I": "4",
-        "M": "10",
-        "S": "4",
-        "T": "4",
-        "W": "2",
-        "BS": "4",
-        "Ld": "7",
-        "WS": "5",
-        "Name": "Renegade Captain"
-      }
-    ],
-    "troopType": "RI",
-    "page": "AJ:TWoSF, p. 38"
-  },
-  "renegade prince": {
-    "url": "unit/renegade-prince",
-    "stats": [
-      {
-        "A": "3",
-        "I": "5",
-        "M": "10",
-        "S": "4",
-        "T": "4",
-        "W": "3",
-        "BS": "4",
-        "Ld": "8",
-        "WS": "6",
-        "Name": "Renegade Prince"
-      }
-    ],
-    "troopType": "RI",
-    "page": "AJ:TWoSF, p. 38"
-  },
   "repeater crossbowmen": {
     "url": "unit/repeater-crossbowmen",
     "stats": [
@@ -17690,37 +17034,6 @@
     ],
     "troopType": "HCh",
     "page": "SK, p. 15"
-  },
-  "screaming bell renegade": {
-    "url": "unit/screaming-bell-renegade",
-    "stats": [
-      {
-        "A": "-",
-        "I": "-",
-        "M": "5",
-        "S": "5",
-        "T": "6",
-        "W": "5",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "-",
-        "Name": "Screaming Bell"
-      },
-      {
-        "A": "3",
-        "I": "4",
-        "M": "-",
-        "S": "5",
-        "T": "-",
-        "W": "-",
-        "BS": "0",
-        "Ld": "5",
-        "WS": "3",
-        "Name": "Rat Ogre Crew (x1)"
-      }
-    ],
-    "troopType": "HCh",
-    "page": "TRLP, p. 15"
   },
   "sea guard garrison commander": {
     "url": "unit/sea-guard-garrison-commander",
@@ -18931,25 +18244,6 @@
     "troopType": "MCr",
     "page": "LM, p. 3"
   },
-  "slann mage-priest renegade": {
-    "url": "unit/slann-mage-priest-renegade",
-    "stats": [
-      {
-        "A": "1",
-        "I": "2",
-        "M": "10",
-        "S": "3",
-        "T": "4",
-        "W": "5",
-        "BS": "3",
-        "Ld": "9",
-        "WS": "2",
-        "Name": "Slann Mage-Priest"
-      }
-    ],
-    "troopType": "MI",
-    "page": "TRLP, p. 11"
-  },
   "slaughtermaster": {
     "url": "unit/slaughtermaster",
     "stats": [
@@ -19507,37 +18801,6 @@
     "troopType": "RI",
     "page": "SK, p. 7"
   },
-  "stormvermin renegade": {
-    "url": "unit/stormvermin-renegade",
-    "stats": [
-      {
-        "A": "1",
-        "I": "5",
-        "M": "12",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "BS": "3",
-        "Ld": "5",
-        "WS": "4",
-        "Name": "Stormvermin"
-      },
-      {
-        "A": "2",
-        "I": "5",
-        "M": "12",
-        "S": "3",
-        "T": "3",
-        "W": "1",
-        "BS": "3",
-        "Ld": "6",
-        "WS": "4",
-        "Name": "Fangleader"
-      }
-    ],
-    "troopType": "RI",
-    "page": "TRLP, p. 16"
-  },
   "strategist": {
     "url": "unit/strategist",
     "stats": [
@@ -19694,37 +18957,6 @@
     ],
     "troopType": "HI",
     "page": "LM, p. 6"
-  },
-  "temple guard renegade": {
-    "url": "unit/temple-guard-renegade",
-    "stats": [
-      {
-        "A": "2",
-        "I": "2",
-        "M": "10",
-        "S": "4",
-        "T": "4",
-        "W": "1",
-        "BS": "0",
-        "Ld": "8",
-        "WS": "4",
-        "Name": "Temple Guard"
-      },
-      {
-        "A": "3",
-        "I": "2",
-        "M": "10",
-        "S": "4",
-        "T": "4",
-        "W": "1",
-        "BS": "0",
-        "Ld": "8",
-        "WS": "4",
-        "Name": "Revered Guardian"
-      }
-    ],
-    "troopType": "HI",
-    "page": "TRLP, p. 12"
   },
   "terradon": {
     "url": "unit/terradon",
@@ -20571,25 +19803,6 @@
     "troopType": "RI",
     "page": "VC, p. 3"
   },
-  "vampire count renegade": {
-    "url": "unit/vampire-count-renegade",
-    "stats": [
-      {
-        "A": "4",
-        "I": "6",
-        "M": "15",
-        "S": "5",
-        "T": "5",
-        "W": "3",
-        "BS": "5",
-        "Ld": "9",
-        "WS": "7",
-        "Name": "Vampire Count"
-      }
-    ],
-    "troopType": "RI",
-    "page": "TRLP, p. 17"
-  },
   "vampire thrall": {
     "url": "unit/vampire-thrall",
     "stats": [
@@ -21270,25 +20483,6 @@
     ],
     "troopType": "RI",
     "page": "SK, p. 8"
-  },
-  "weapon team renegade": {
-    "url": "unit/weapon-team-renegade",
-    "stats": [
-      {
-        "A": "2",
-        "I": "3",
-        "M": "12",
-        "S": "3",
-        "T": "3",
-        "W": "2",
-        "BS": "3",
-        "Ld": "4",
-        "WS": "3",
-        "Name": "Weapon Team Crew"
-      }
-    ],
-    "troopType": "RI",
-    "page": "TRLP, p. 16"
   },
   "white lions of chrace": {
     "url": "unit/white-lions-of-chrace",

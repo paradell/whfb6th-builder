@@ -22,7 +22,7 @@ export const Privacy = () => {
             id: "footer.privacy",
           })}`}
         </title>
-        <link rel="canonical" href="https://old-world-builder.com/privacy" />
+        <link rel="canonical" href="https://whfb6th-builder.vercel.app/privacy" />
       </Helmet>
 
       <Header headline="Warhammer Fantasy Builder" hasMainNavigation hasHomeButton />
@@ -184,7 +184,7 @@ export const Privacy = () => {
         <p>
           If you have any questions or suggestions about my Privacy Policy, do
           not hesitate to contact me at{" "}
-          <Link to="/help">old-world-builder.com/help</Link>.
+          <Link to="/help">whfb6th-builder.vercel.app/help</Link>.
         </p>
       </Main>
     </>

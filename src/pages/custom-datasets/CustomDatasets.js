@@ -7,7 +7,6 @@ import { Header, Main } from "../../components/page";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { Expandable } from "../../components/expandable";
-//import theOldWorld from "../../assets/the-old-world.json";
 import warhammerFantasy6th from "../../assets/warhammer-fantasy-6th.json";
 
 import "./CustomDatasets.css";
@@ -140,7 +139,7 @@ export const CustomDatasets = () => {
         </title>
         <link
           rel="canonical"
-          href="https://old-world-builder.com/custom-datasets"
+          href="https://whfb6th-builder.vercel.app/custom-datasets"
         />
       </Helmet>
 
