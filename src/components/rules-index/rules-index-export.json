@@ -6261,9 +6261,9 @@
         "M": "-",
         "S": "5",
         "T": "6",
-        "W": "4",
+        "W": "5",
         "BS": "-",
-        "Ld": "-",
+        "Ld": "9",
         "WS": "-",
         "Name": "Black Coach"
       },
@@ -6275,21 +6275,21 @@
         "T": "-",
         "W": "-",
         "BS": "0",
-        "Ld": "5",
+        "Ld": "-",
         "WS": "3",
-        "Name": "Wraith (x1)"
+        "Name": "Wraith"
       },
       {
         "A": "1",
         "I": "2",
         "M": "20",
-        "S": "4",
+        "S": "3",
         "T": "-",
         "W": "-",
         "BS": "-",
         "Ld": "-",
-        "WS": "3",
-        "Name": "Nightmares (x2)"
+        "WS": "2",
+        "Name": "Nightmare (x2)"
       }
     ],
     "troopType": "HCh",
@@ -6346,43 +6346,43 @@
     "page": "DE, p. 10"
   },
   "black knights": {
-    "url": "unit/black-knights",
+    "url": "unit/black-knight",
     "stats": [
       {
         "A": "1",
         "I": "3",
-        "M": "-",
+        "M": "10",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "0",
-        "Ld": "6",
+        "BS": "3",
+        "Ld": "8",
         "WS": "3",
         "Name": "Black Knight"
       },
       {
         "A": "2",
         "I": "3",
-        "M": "-",
+        "M": "10",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "0",
-        "Ld": "6",
+        "BS": "3",
+        "Ld": "8",
         "WS": "3",
         "Name": "Hell Knight"
       },
       {
         "A": "1",
         "I": "2",
-        "M": "18",
+        "M": "20",
         "S": "3",
-        "T": "-",
-        "W": "-",
-        "BS": "-",
-        "Ld": "-",
+        "T": "3",
+        "W": "1",
+        "BS": "0",
+        "Ld": "5",
         "WS": "2",
-        "Name": "Skeletal Steed"
+        "Name": "Nightmare"
       }
     ],
     "troopType": "HCa",
@@ -9112,7 +9112,7 @@
     "page": "FoF, p. 66"
   },
   "dire wolves": {
-    "url": "unit/dire-wolves",
+    "url": "unit/dire-wolf",
     "stats": [
       {
         "A": "1",
@@ -9122,7 +9122,7 @@
         "T": "3",
         "W": "1",
         "BS": "0",
-        "Ld": "3",
+        "Ld": "6",
         "WS": "3",
         "Name": "Dire Wolf"
       },
@@ -9134,7 +9134,7 @@
         "T": "3",
         "W": "1",
         "BS": "0",
-        "Ld": "3",
+        "Ld": "6",
         "WS": "3",
         "Name": "Doom Wolf"
       }
@@ -10149,7 +10149,7 @@
     "page": "RH, p. 26"
   },
   "fell bats": {
-    "url": "unit/fell-bats",
+    "url": "unit/fell-bat",
     "stats": [
       {
         "A": "2",
@@ -10159,7 +10159,7 @@
         "T": "3",
         "W": "2",
         "BS": "0",
-        "Ld": "3",
+        "Ld": "6",
         "WS": "3",
         "Name": "Fell Bat"
       }
@@ -11557,7 +11557,7 @@
         "T": "4",
         "W": "1",
         "BS": "3",
-        "Ld": "7",
+        "Ld": "8",
         "WS": "3",
         "Name": "Grave Guard"
       },
@@ -11569,9 +11569,9 @@
         "T": "4",
         "W": "1",
         "BS": "3",
-        "Ld": "7",
+        "Ld": "8",
         "WS": "3",
-        "Name": "Seneschal"
+        "Name": "Crypt Keeper"
       }
     ],
     "troopType": "HI",
@@ -14098,7 +14098,7 @@
     "url": "unit/master-necromancer",
     "stats": [
       {
-        "A": "2",
+        "A": "1",
         "I": "3",
         "M": "10",
         "S": "3",
@@ -14963,13 +14963,13 @@
       {
         "A": "1",
         "I": "2",
-        "M": "18",
-        "S": "4",
-        "T": "-",
-        "W": "-",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "3",
+        "M": "20",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "2",
         "Name": "Nightmare"
       }
     ],
@@ -19789,13 +19789,13 @@
     "stats": [
       {
         "A": "4",
-        "I": "6",
+        "I": "7",
         "M": "15",
         "S": "5",
         "T": "5",
         "W": "3",
         "BS": "5",
-        "Ld": "8",
+        "Ld": "9",
         "WS": "7",
         "Name": "Vampire Count"
       }
@@ -19808,7 +19808,7 @@
     "stats": [
       {
         "A": "3",
-        "I": "5",
+        "I": "6",
         "M": "15",
         "S": "5",
         "T": "4",
@@ -20538,14 +20538,14 @@
     "url": "unit/wight-lord",
     "stats": [
       {
-        "A": "2",
+        "A": "3",
         "I": "4",
         "M": "10",
         "S": "4",
-        "T": "5",
+        "T": "4",
         "W": "2",
-        "BS": "0",
-        "Ld": "8",
+        "BS": "3",
+        "Ld": "9",
         "WS": "4",
         "Name": "Wight Lord"
       }
@@ -20878,15 +20878,15 @@
     "url": "unit/zombie-dragon",
     "stats": [
       {
-        "A": "5",
-        "I": "2",
+        "A": "4",
+        "I": "1",
         "M": "15",
         "S": "6",
-        "T": "(+1)",
-        "W": "(+5)",
-        "BS": "-",
-        "Ld": "-",
-        "WS": "4",
+        "T": "6",
+        "W": "6",
+        "BS": "0",
+        "Ld": "4",
+        "WS": "3",
         "Name": "Zombie Dragon"
       }
     ],
@@ -20894,11 +20894,11 @@
     "page": "VC, p. 20"
   },
   "zombies": {
-    "url": "unit/zombies",
+    "url": "unit/zombie",
     "stats": [
       {
         "A": "1",
-        "I": "1",
+        "I": "0",
         "M": "10",
         "S": "3",
         "T": "3",
@@ -20906,11 +20906,188 @@
         "BS": "0",
         "Ld": "2",
         "WS": "2",
-        "Name": "Zombies"
+        "Name": "Zombie"
       }
     ],
     "troopType": "RI",
     "page": "VC, p. 10"
+  },
+  "vampire lord": {
+    "url": "unit/vampire-lord",
+    "stats": [
+      {
+        "A": "5",
+        "I": "8",
+        "M": "15",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "6",
+        "Ld": "10",
+        "WS": "8",
+        "Name": "Vampire Lord"
+      }
+    ]
+  },
+  "necromancer": {
+    "url": "unit/necromancer",
+    "stats": [
+      {
+        "A": "1",
+        "I": "3",
+        "M": "10",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "3",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Necromancer"
+      }
+    ]
+  },
+  "wraith": {
+    "url": "unit/wraith",
+    "stats": [
+      {
+        "A": "2",
+        "I": "2",
+        "M": "15",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "0",
+        "Ld": "7",
+        "WS": "3",
+        "Name": "Wraith"
+      }
+    ]
+  },
+  "skeletons": {
+    "url": "unit/skeleton",
+    "stats": [
+      {
+        "A": "1",
+        "I": "2",
+        "M": "10",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "2",
+        "Ld": "3",
+        "WS": "2",
+        "Name": "Skeleton"
+      },
+      {
+        "A": "2",
+        "I": "2",
+        "M": "10",
+        "S": "3",
+        "T": "3",
+        "W": "1",
+        "BS": "2",
+        "Ld": "3",
+        "WS": "2",
+        "Name": "Skeleton Captain"
+      }
+    ]
+  },
+  "ghouls": {
+    "url": "unit/ghoul",
+    "stats": [
+      {
+        "A": "2",
+        "I": "3",
+        "M": "10",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "0",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Ghoul"
+      },
+      {
+        "A": "3",
+        "I": "3",
+        "M": "10",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "BS": "0",
+        "Ld": "6",
+        "WS": "3",
+        "Name": "Ghast"
+      }
+    ]
+  },
+  "bat swarm": {
+    "url": "unit/bat-swarm",
+    "stats": [
+      {
+        "A": "5",
+        "I": "1",
+        "M": "3",
+        "S": "2",
+        "T": "2",
+        "W": "5",
+        "BS": "0",
+        "Ld": "10",
+        "WS": "3",
+        "Name": "Bat Swarm"
+      }
+    ]
+  },
+  "spirit host": {
+    "url": "unit/spirit-host",
+    "stats": [
+      {
+        "A": "4",
+        "I": "1",
+        "M": "15",
+        "S": "3",
+        "T": "3",
+        "W": "4",
+        "BS": "0",
+        "Ld": "6",
+        "WS": "2",
+        "Name": "Spirit Host"
+      }
+    ]
+  },
+  "banshee": {
+    "url": "unit/banshee",
+    "stats": [
+      {
+        "A": "2",
+        "I": "4",
+        "M": "15",
+        "S": "3",
+        "T": "3",
+        "W": "2",
+        "BS": "0",
+        "Ld": "8",
+        "WS": "3",
+        "Name": "Banshee"
+      }
+    ]
+  },
+  "winged nightmare": {
+    "url": "unit/winged-nightmare",
+    "stats": [
+      {
+        "A": "3",
+        "I": "2",
+        "M": "15",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "0",
+        "Ld": "5",
+        "WS": "4",
+        "Name": "Winged Nightmare"
+      }
+    ]
   },
   "chaos warhounds warriors of chaos": {
     "url": "unit/chaos-warhounds",
