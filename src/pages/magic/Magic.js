@@ -26,8 +26,11 @@ import {
   isMultipleAllowedItem,
   itemsUsedElsewhere,
   maxAllowedOfItem,
-  comboExclusiveCategories,
   combosUsedElsewhere,
+  getRuneCategory,
+  isRuneType,
+  countRunesInCategory,
+  MAX_RUNES_PER_CATEGORY,
 } from "../../utils/magic-item-limitations";
 
 import { nameMap } from "./name-map";
@@ -413,8 +416,7 @@ export const Magic = ({ isMobile }) => {
       }
       setUsedElsewhere(itemsUsedElsewhere(items, list, unitId));
 
-      const categoryIsComboExclusive = (type) =>
-        comboExclusiveCategories.indexOf(type) >= 0;
+      const categoryIsComboExclusive = isRuneType;
       const hasComboExculsiveCategory = isAttachedMagic
         ? attachedCmd?.magic?.types?.some(categoryIsComboExclusive)
         : (unit?.items &&
@@ -475,15 +477,21 @@ export const Magic = ({ isMobile }) => {
     isConditional,
     isTypeLimitReached,
     usedElsewhereErrors,
+    remainingSlots,
   }) => {
     const isCommand = isAttachedMagic || Boolean(
       unit && commandOptions[command]?.magic?.types.length,
     );
 
-    const max = !maxMagicPoints
+    let max = !maxMagicPoints
       ? // No maximum of this item if there is no point max.
-        undefined
+        magicItem.maximum
       : maxAllowedOfItem(magicItem, selectedAmount, unitPointsRemaining);
+
+    // Runes are also limited by the free slots left in their category.
+    if (remainingSlots !== undefined) {
+      max = Math.min(max ?? Infinity, Number(selectedAmount) + remainingSlots);
+    }
 
     const usedElsewhereBy = usedElsewhereErrors?.map((error, index) => (
       <Fragment key={`${error.unit.id}-error-link`}>
@@ -570,7 +578,11 @@ export const Magic = ({ isMobile }) => {
           <NumberInput
             id={`${itemGroup.id}-${magicItem.id}-amount`}
             min={1}
-            max={isTypeLimitReached ? selectedAmount : max}
+            max={
+              isTypeLimitReached && remainingSlots === undefined
+                ? selectedAmount
+                : max
+            }
             value={selectedAmount}
             onChange={(event) => {
               handleAmountChange({
@@ -762,47 +774,58 @@ export const Magic = ({ isMobile }) => {
                       ? name === magicItem.name
                       : normalizeRuleName(name_en) === magicItem.name,
                 );
-                let itemCountInCategory = 0;
-                let masterRuneInCategory = false;
-                unitSelectedItems.forEach(
-                  ({ name_en, type: itemType, amount }) => {
-                    if (itemType === magicItem.type) {
-                      itemCountInCategory += amount ?? 1;
-
-                      if (name_en.includes("Master")) {
-                        masterRuneInCategory = true;
-                      }
-                    }
-                  },
-                );
                 const selectedAmount = selectedItem?.amount ?? 1;
                 const isChecked = Boolean(selectedItem);
-                const isComboExclusiveCategory =
-                  comboExclusiveCategories.indexOf(magicItem.type) >= 0;
+                const runeCategory = getRuneCategory(magicItem.type);
+                const isRune = Boolean(runeCategory);
+                const runeLimit =
+                  maxItemsPerCategory || MAX_RUNES_PER_CATEGORY;
+                let itemCountInCategory = 0;
+                let isTypeLimitReached = false;
+                let remainingSlots;
 
-                const isTypeLimitReached =
-                  magicItem.nonExclusive
-                    ? false
-                    : unitSelectedItems.some(
-                        (selectedItem) =>
-                          (!magicItem.stackable &&
-                            !selectedItem.stackable &&
-                            selectedItem.type === magicItem.type &&
-                            !isComboExclusiveCategory &&
-                            !maxItemsPerCategory) ||
-                          (!isComboExclusiveCategory &&
-                            maxItemsPerCategory > 0 &&
-                            itemCountInCategory >= maxItemsPerCategory) ||
-                          (isComboExclusiveCategory &&
-                            itemCountInCategory >= maxItemsPerCategory) ||
-                          (isComboExclusiveCategory &&
-                            masterRuneInCategory &&
-                            magicItem.name_en.includes("Master")) ||
-                          (isComboExclusiveCategory &&
-                            magicItem.type === selectedItem.type &&
-                            (magicItem.nonExclusive === false ||
-                              selectedItem.nonExclusive === false)), // If a rune is exclusive, it can't be combined with other runes.
-                      );
+                if (isRune) {
+                  const categoryRunes = unitSelectedItems.filter(
+                    ({ type: itemType }) =>
+                      getRuneCategory(itemType) === runeCategory,
+                  );
+                  const masterRuneInCategory = categoryRunes.some(
+                    ({ name_en }) => name_en.includes("Master"),
+                  );
+
+                  itemCountInCategory = countRunesInCategory(
+                    unitSelectedItems,
+                    magicItem.type,
+                  );
+                  remainingSlots = Math.max(runeLimit - itemCountInCategory, 0);
+                  isTypeLimitReached =
+                    itemCountInCategory >= runeLimit ||
+                    (masterRuneInCategory &&
+                      magicItem.name_en.includes("Master")) ||
+                    // If a rune is exclusive, it can't be combined with other runes.
+                    categoryRunes.some(
+                      (selectedRune) =>
+                        magicItem.nonExclusive === false ||
+                        selectedRune.nonExclusive === false,
+                    );
+                } else {
+                  unitSelectedItems.forEach(({ type: itemType, amount }) => {
+                    if (itemType === magicItem.type) {
+                      itemCountInCategory += Number(amount ?? 1);
+                    }
+                  });
+                  isTypeLimitReached =
+                    !magicItem.nonExclusive &&
+                    unitSelectedItems.some(
+                      (selectedItem) =>
+                        (!magicItem.stackable &&
+                          !selectedItem.stackable &&
+                          selectedItem.type === magicItem.type &&
+                          !maxItemsPerCategory) ||
+                        (maxItemsPerCategory > 0 &&
+                          itemCountInCategory >= maxItemsPerCategory),
+                    );
+                }
 
                 const usedElsewhereErrors = usedElsewhere.filter(
                   (e) => e.itemName === magicItem.name_en,
@@ -834,8 +857,10 @@ export const Magic = ({ isMobile }) => {
                             {nameMap[magicItem.type][`name_${language}`] ||
                               nameMap[magicItem.type].name_en}
                           </span>
-                          {maxItemsPerCategory > 0 && (
-                            <i className="magic__item-count">{`${itemCountInCategory}/${maxItemsPerCategory}`}</i>
+                          {(isRune || maxItemsPerCategory > 0) && (
+                            <i className="magic__item-count">{`${itemCountInCategory}/${
+                              isRune ? runeLimit : maxItemsPerCategory
+                            }`}</i>
                           )}
                         </h3>
                         {comboUsedBy && (
@@ -861,6 +886,7 @@ export const Magic = ({ isMobile }) => {
                       isChecked,
                       isTypeLimitReached,
                       usedElsewhereErrors,
+                      remainingSlots,
                     })}
                     {getUnitOptionNotes({
                       notes: magicItem.notes,
