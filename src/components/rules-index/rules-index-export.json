@@ -16113,6 +16113,101 @@
     "troopType": "RI",
     "page": "VC, p. 3"
   },
+  "vampire thrall (von carstein)": {
+    "url": "unit/vampire-thrall",
+    "stats": [
+      {
+        "A": "3",
+        "I": "6",
+        "M": "15",
+        "S": "5",
+        "T": "4",
+        "W": "2",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "6",
+        "Name": "Vampire Thrall (Von Carstein)"
+      }
+    ],
+    "troopType": "RI",
+    "page": "VC, p. 3"
+  },
+  "vampire thrall (blood dragon)": {
+    "url": "unit/vampire-thrall",
+    "stats": [
+      {
+        "A": "3",
+        "I": "6",
+        "M": "15",
+        "S": "5",
+        "T": "4",
+        "W": "2",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "8",
+        "Name": "Vampire Thrall (Blood Dragon)"
+      }
+    ],
+    "troopType": "RI",
+    "page": "VC, p. 3"
+  },
+  "vampire thrall (lahmia)": {
+    "url": "unit/vampire-thrall",
+    "stats": [
+      {
+        "A": "3",
+        "I": "8",
+        "M": "15",
+        "S": "5",
+        "T": "4",
+        "W": "2",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "5",
+        "Name": "Vampire Thrall (Lahmia)"
+      }
+    ],
+    "troopType": "RI",
+    "page": "VC, p. 3"
+  },
+  "vampire thrall (necrarch)": {
+    "url": "unit/vampire-thrall",
+    "stats": [
+      {
+        "A": "3",
+        "I": "6",
+        "M": "15",
+        "S": "5",
+        "T": "4",
+        "W": "2",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "4",
+        "Name": "Vampire Thrall (Necrarch)"
+      }
+    ],
+    "troopType": "RI",
+    "page": "VC, p. 3"
+  },
+  "vampire thrall (strigoi)": {
+    "url": "unit/vampire-thrall",
+    "stats": [
+      {
+        "A": "4",
+        "I": "6",
+        "M": "15",
+        "S": "5",
+        "T": "4",
+        "W": "2",
+        "BS": "4",
+        "Ld": "7",
+        "WS": "6",
+        "Name": "Vampire Thrall (Strigoi)"
+      }
+    ],
+    "troopType": "RI",
+    "page": "VC, p. 3"
+  },
   "vargheists": {
     "url": "unit/vargheists",
     "stats": [
@@ -17217,6 +17312,91 @@
         "Ld": "10",
         "WS": "8",
         "Name": "Vampire Lord"
+      }
+    ]
+  },
+  "vampire lord (von carstein)": {
+    "url": "unit/vampire-lord",
+    "stats": [
+      {
+        "A": "5",
+        "I": "8",
+        "M": "15",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "6",
+        "Ld": "10",
+        "WS": "8",
+        "Name": "Vampire Lord (Von Carstein)"
+      }
+    ]
+  },
+  "vampire lord (blood dragon)": {
+    "url": "unit/vampire-lord",
+    "stats": [
+      {
+        "A": "5",
+        "I": "8",
+        "M": "15",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "6",
+        "Ld": "10",
+        "WS": "10",
+        "Name": "Vampire Lord (Blood Dragon)"
+      }
+    ]
+  },
+  "vampire lord (lahmia)": {
+    "url": "unit/vampire-lord",
+    "stats": [
+      {
+        "A": "5",
+        "I": "10",
+        "M": "15",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "6",
+        "Ld": "10",
+        "WS": "7",
+        "Name": "Vampire Lord (Lahmia)"
+      }
+    ]
+  },
+  "vampire lord (necrarch)": {
+    "url": "unit/vampire-lord",
+    "stats": [
+      {
+        "A": "5",
+        "I": "8",
+        "M": "15",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "6",
+        "Ld": "10",
+        "WS": "6",
+        "Name": "Vampire Lord (Necrarch)"
+      }
+    ]
+  },
+  "vampire lord (strigoi)": {
+    "url": "unit/vampire-lord",
+    "stats": [
+      {
+        "A": "6",
+        "I": "8",
+        "M": "15",
+        "S": "5",
+        "T": "5",
+        "W": "4",
+        "BS": "6",
+        "Ld": "10",
+        "WS": "8",
+        "Name": "Vampire Lord (Strigoi)"
       }
     ]
   },
