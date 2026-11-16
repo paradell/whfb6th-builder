@@ -65,6 +65,33 @@ export const Unit = ({ isMobile }) => {
   const units = list ? list[type] : null;
   const unit = units ? units.find(({ id }) => id === unitId) : null;
   const army = useSelector((state) => state.army);
+  // Whether another unit in the list has an active option (or sub-option) with this name
+  const isOptionTakenElsewhere = (optionName) =>
+    [
+      "characters",
+      "lords",
+      "heroes",
+      "core",
+      "core_not_count",
+      "special",
+      "rare",
+      "mercenaries",
+      "allies",
+    ].some((category) =>
+      (list?.[category] || []).some(
+        (listUnit) =>
+          listUnit.id !== unitId &&
+          (listUnit.options || []).some(
+            (option) =>
+              option.active &&
+              (option.name_en === optionName ||
+                (option.options || []).some(
+                  (subOption) =>
+                    subOption.active && subOption.name_en === optionName,
+                )),
+          ),
+      ),
+    );
   const handleRemove = (unitId) => {
     dispatch(removeUnit({ listId, type, unitId }));
     setRedirect(true);
@@ -1208,6 +1235,7 @@ export const Unit = ({ isMobile }) => {
                   alwaysActive,
                   maxActive,
                   categoryByActiveCount,
+                  onePerArmy,
                   ...equipment
                 }) => {
                   const exclusiveUnitCheckedOption = unit.options.find(
@@ -1218,6 +1246,9 @@ export const Unit = ({ isMobile }) => {
                   if (!stackable) {
                     const isDisabled =
                       (exclusiveUnitCheckedOption && exclusive && !active) ||
+                      (onePerArmy &&
+                        !active &&
+                        isOptionTakenElsewhere(equipment.name_en)) ||
                       alwaysActive;
                     return (
                       <Fragment key={id}>

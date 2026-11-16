@@ -54,6 +54,63 @@ describe("validateList sameInArmy options", () => {
   });
 });
 
+describe("validateList onePerArmy options", () => {
+  const runeLord = (id, anvilActive, subOptions) => ({
+    id,
+    name_en: id,
+    options: [
+      { name_en: 'Anvil of Doom', active: anvilActive, onePerArmy: true, options: subOptions },
+      { name_en: 'Shield', active: true },
+    ],
+  });
+  const getList = (lords) => ({
+    game: 'warhammer-fantasy-6th',
+    army: 'dwarfs',
+    points: 2000,
+    characters: [],
+    lords,
+    heroes: [],
+    core: [],
+    special: [],
+    rare: [],
+    mercenaries: [],
+    allies: [],
+  });
+  const getOnePerArmyErrors = (list) =>
+    validateList({ list, language: 'en', intl: { formatMessage: (o) => o.id } })
+      .filter((e) => e.message === 'misc.error.optionOnePerArmy');
+
+  test("the same option on two units gives an error", () => {
+    const errors = getOnePerArmyErrors(getList([runeLord('rune-lord-1', true), runeLord('rune-lord-2', true)]));
+
+    expect(errors).toEqual([
+      { message: 'misc.error.optionOnePerArmy', section: 'global', option: 'Anvil of Doom', name: 'rune-lord-1, rune-lord-2' },
+    ]);
+  });
+
+  test("an inactive option on the second unit gives no error", () => {
+    const list = getList([runeLord('rune-lord-1', true), runeLord('rune-lord-2', false)]);
+
+    expect(getOnePerArmyErrors(list)).toEqual([]);
+  });
+
+  test("a single unit gives no error", () => {
+    expect(getOnePerArmyErrors(getList([runeLord('rune-lord-1', true)]))).toEqual([]);
+  });
+
+  test("the same sub-option on two units gives an error", () => {
+    const subOptions = () => [{ name_en: 'Unique Upgrade', active: true, onePerArmy: true }];
+    const lord = (id) => ({
+      ...runeLord(id, false),
+      options: [{ name_en: 'Upgrades', active: true, options: subOptions() }],
+    });
+
+    expect(getOnePerArmyErrors(getList([lord('rune-lord-1'), lord('rune-lord-2')]))).toEqual([
+      { message: 'misc.error.optionOnePerArmy', section: 'global', option: 'Unique Upgrade', name: 'rune-lord-1, rune-lord-2' },
+    ]);
+  });
+});
+
 describe("validateList character slots", () => {
   const hero = (id) => ({ id, name_en: id });
   const getCharacterSlotErrors = (heroesCount) =>

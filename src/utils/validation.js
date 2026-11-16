@@ -176,6 +176,49 @@ export const validateList = ({ list, language, intl }) => {
       });
   });
 
+  // Options that only one unit in the army can take (e.g. Dwarf Anvil of Doom)
+  const onePerArmyOptions = {};
+  const addOnePerArmyOption = (option, unit) => {
+    onePerArmyOptions[option.name_en] = onePerArmyOptions[option.name_en] || {
+      option: option[`name_${language}`] || option.name_en,
+      units: [],
+    };
+    onePerArmyOptions[option.name_en].units.push(
+      getUnitName({ unit, language }),
+    );
+  };
+  [
+    "characters",
+    "lords",
+    "heroes",
+    "core",
+    "core_not_count",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ].forEach((category) => {
+    (list?.[category] || []).forEach((unit) => {
+      (unit.options || [])
+        .filter((option) => option.active)
+        .forEach((option) => {
+          option.onePerArmy && addOnePerArmyOption(option, unit);
+          (option.options || [])
+            .filter((subOption) => subOption.active && subOption.onePerArmy)
+            .forEach((subOption) => addOnePerArmyOption(subOption, unit));
+        });
+    });
+  });
+  Object.values(onePerArmyOptions).forEach(({ option, units }) => {
+    units.length > 1 &&
+      errors.push({
+        message: "misc.error.optionOnePerArmy",
+        section: "global",
+        option,
+        name: units.join(", "),
+      });
+  });
+
   // Multiple BSBs
   BSBsCount > 1 &&
     errors.push({
