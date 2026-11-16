@@ -7,7 +7,7 @@ import { Button } from "../button";
 import { normalizeRuleName } from "../../utils/string";
 import { openRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { getFullNameRuleData, rulesMap, synonyms } from "./rules-map";
 import "./RuleWithIcon.css";
 
 export const RuleWithIcon = ({ name, isDark, className }) => {
@@ -21,7 +21,9 @@ export const RuleWithIcon = ({ name, isDark, className }) => {
   const normalizedName = normalizeRuleName(name);
   const synonym = synonyms[normalizedName];
 
-  return rulesMap[normalizedName] || rulesMap[synonym] ? (
+  return getFullNameRuleData(name) ||
+    rulesMap[normalizedName] ||
+    rulesMap[synonym] ? (
     <Button
       type="text"
       className={classNames("rule-icon", className && className)}

@@ -143,7 +143,7 @@ export const GeneratedSpells = ({
                             id={spellIdToFormattedMessageId(spellId)}
                           />
                           <RuleWithIcon
-                            name={spellId}
+                            name={spell.rule ?? spellId}
                             isDark
                             className="generated-spells__rule-icon"
                           />
@@ -157,11 +157,13 @@ export const GeneratedSpells = ({
           ))}
         </ul>
       ) : (
-        Object.values(generatedSpells).map((spells) =>
+        Object.entries(generatedSpells).map(([loreId, spells]) =>
           spells.map((spellId) => (
             <span className="generated-spells__spell-rule" key={spellId}>
               <LocalizedRuleLink
-                ruleName={spellId}
+                ruleName={
+                  availableLoresWithSpells[loreId][spellId].rule ?? spellId
+                }
                 formattedMessageId={spellIdToFormattedMessageId(spellId)}
                 showPageNumber={showPageNumbers}
               />

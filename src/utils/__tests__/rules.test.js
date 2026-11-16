@@ -1,4 +1,30 @@
-import { countCoreUnits, getMinSlots, getMaxSlots } from "../rules";
+import { countCoreUnits, countExtraCategories, getMinSlots, getMaxSlots } from "../rules";
+
+describe("countExtraCategories", () => {
+  const zombieDragon = (active) => ({ id: "zombie-dragon", active, extra_categories: ["heroes"] });
+  const onFoot = (active) => ({ id: "on-foot", active });
+  const vampireLord = (dragonActive) => ({
+    id: "vampire-lord",
+    armyComposition: { "vampire-counts": { category: "lords", extra_categories: ["heroes"] } },
+    mounts: [onFoot(!dragonActive), zombieDragon(dragonActive)],
+  });
+  const masterNecromancer = (dragonActive) => ({
+    id: "master-necromancer",
+    armyComposition: { "vampire-counts": { category: "lords" } },
+    mounts: [onFoot(!dragonActive), zombieDragon(dragonActive)],
+  });
+
+  test("an active mount adds its extra categories to the unit's own", () => {
+    expect(countExtraCategories({ lords: [vampireLord(true)] }, "heroes", "vampire-counts")).toBe(2);
+    expect(countExtraCategories({ lords: [masterNecromancer(true)] }, "heroes", "vampire-counts")).toBe(1);
+    expect(countExtraCategories({ lords: [vampireLord(true)] }, "lords", "vampire-counts")).toBe(0);
+  });
+
+  test("inactive mounts don't add extra categories", () => {
+    expect(countExtraCategories({ lords: [vampireLord(false)] }, "heroes", "vampire-counts")).toBe(1);
+    expect(countExtraCategories({ lords: [masterNecromancer(false)] }, "heroes", "vampire-counts")).toBe(0);
+  });
+});
 
 describe("countCoreUnits", () => {
   const baseUnit = (id, opts = {}) => ({ id, strength: opts.strength, no_count_slot: opts.no_count_slot, armyComposition: opts.armyComposition });

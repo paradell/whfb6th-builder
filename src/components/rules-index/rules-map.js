@@ -1,4 +1,5 @@
 import rulesIndexExport from "./rules-index-export.json";
+import { normalizeRuleName } from "../../utils/string";
 
 const additionalRules = {
   "throwing spears": { url: "weapons/throwing-spear" },
@@ -37,10 +38,6 @@ const additionalRules = {
   blunderbusses: { url: "weapons/blunderbuss" },
   "repeater handbows": { url: "weapons/repeater-handbow" },
   "repeater crossbows": { url: "weapons/repeater-crossbow" },
-  "daemons of khorne": { url: "special-rules/daemon-of-khorne" },
-  "daemons of tzeentch": { url: "special-rules/daemon-of-tzeentch" },
-  "daemons of nurgle": { url: "special-rules/daemon-of-nurgle" },
-  "daemons of slaanesh": { url: "special-rules/daemon-of-slaanesh" },
   "asrai spears": { url: "weapons/asrai-spear" },
   "asrai longbows": { url: "weapons/asrai-longbow" },
   general: { url: "characters/the-general-characters" },
@@ -54,20 +51,8 @@ const additionalRules = {
   "level 2 wizard": { url: "magic/wizard-levels" },
   "level 3 wizard": { url: "magic/wizard-levels" },
   "level 4 wizard": { url: "magic/wizard-levels" },
-  "storm call warriors": {
-    url: "special-rules/storm-call",
-  },
-  "doomseeker dwarfs": {
-    url: "special-rules/doomseeker",
-  },
   "armour piercing": {
     url: "the-shooting-phase/armour-piercing",
-  },
-  "crown of horns beastmen": {
-    url: "magic-item/crown-of-horns-beastmen",
-  },
-  "crown of antlers beastmen": {
-    url: "special-rules/crown-of-antlers",
   },
   "heavy infantry": { url: "troop-types-in-detail/heavy-infantry" },
   "helblaster volley gun weapon": {
@@ -88,11 +73,6 @@ const additionalRules = {
 };
 
 export const synonyms = {
-  "the witch": "suffer not...",
-  "the revenant": "suffer not...",
-  "the mutant": "suffer not...",
-  "the daemon": "suffer not...",
-  "spear of kurnous": "the spear of kurnous",
   warbows: "warbow",
   greatbows: "greatbow",
   "chracian great blades": "chracian great blade",
@@ -102,7 +82,7 @@ export const synonyms = {
   "ceremonial halberds": "ceremonial halberd",
   "wolf hammers": "wolf hammer",
   shields: "shield",
-  bellower: "bellowers & musicians",
+  bellower: "bellowers",
   "revered guardian": "champions",
   "patrol leader": "champions",
   "sky leader": "champions",
@@ -255,7 +235,6 @@ export const synonyms = {
   "bloodwrack medusas": "bloodwrack medusa",
   "snotling pump wagons": "snotling pump wagon",
   "goblin wolf chariots": "goblin wolf chariot",
-  "expeditionary marksman": "expeditionary marksmen",
   "braces of pistols": "brace of pistols",
   "troll magic": "lore of troll magic",
   "empire knights panther": "empire knights",
@@ -281,10 +260,6 @@ export const synonyms = {
   kralmaw: "kralmaw, the prophet of ruin",
   ghorros: "ghorros warhoof",
   "primal magic": "lore of primal magic",
-  "a tingle in the air": "herdstones",
-  "dark sorcery": "herdstones",
-  "fearsome edifice": "herdstones",
-  "bestial fury beastmen": "herdstones",
   "cathayan lances": "cathayan lance",
   "sky lantern crane guns": "sky lantern crane gun",
   "iron hail guns": "iron hail gun",
@@ -295,9 +270,105 @@ export const synonyms = {
   "chaos furies of slaanesh": "chaos furies",
   "chaos furies of khorne": "chaos furies",
   shadowlands: "lore of the shadowlands",
+  // Special rule names in the datasets that differ from the 6th.whfb.app ones
+  "big 'uns": "big'uns",
+  "cold blooded": "cold-blooded",
+  "favour of the fey": "favour of the fay",
+  "lance formation": "the lance formation",
+  "the fay enchantres magic": "the fay enchantress magic",
+  "magic resistance": "magic resistance 1-3",
+  fly: "flying models",
+  flying: "flying models",
+  "cause fear": "fear",
+  "hate dark elves": "hatred",
+  "hate dwarfs": "hatred",
+  "hate high elves": "hatred",
+  crazed: "crazed!",
+  "hellblaster volley gun": "helblaster volley gun",
+  "it came from below...": '"it came from below..."',
+  "my will be done!": '"my will be done!"',
+  "predatory fighters": "predatory fighter",
+  "shaggoth champion": "shaggoth champions",
+  "sic 'em boys": "sic 'em, boys!",
+  "steam tank tinker chart": "the steam tank tinker chart",
+  "thick skinned": "thick-skinned",
+  "tuskar charge": "tusker charge",
+  // Magic item names in the datasets that differ from the 6th.whfb.app ones
+  "armour of agilulf": "armour of agiluf",
+  "armour of eternity": "amour of eternity",
+  "banner of chalons": "banner of châlons",
+  "banner of ellyrion": "banner of ellryion",
+  channeler: "channeller",
+  "death's head": "deaths head",
+  "dispell scroll": "dispel scroll",
+  "eternal kindred": "eternal kindreds",
+  "scout kindred": "scout kindreds",
+  "wild rider kindred": "wild rider kindreds",
+  "gauntlets of bazhrakk the cruel": "gauntlet of bazhrakk the cruel",
+  "nibbla's 'itty ring": "nibblas 'itty ring",
+  "porko's pigstikka": "pork's pigstikka",
+  "power familiar - toad": "power familiar",
+  "silver mirror": "the silver mirror",
+  "stone of the crystal mere": "stone of the crystal merex",
+  "warpstone tokens": "warpstone token",
+  "virtue of knightly value": "virtue of knightly temper",
+  "virtue of noble desdain": "virtue of noble disdain",
+  "virtue of penitent": "virtue of the penitent",
+  "virtue of the confidence": "virtue of confidence",
+  // Repeated Bretonnian knightly virtues
+  "second virtue of audacity": "virtue of audacity",
+  "third virtue of audacity": "virtue of audacity",
+  "second virtue of discipline": "virtue of discipline",
+  "third virtue of discipline": "virtue of discipline",
+  "fourth virtue of discipline": "virtue of discipline",
+  "fifth virtue of discipline": "virtue of discipline",
+  "sixth virtue of discipline": "virtue of discipline",
+  "second virtue of duty": "virtue of duty",
+  "third virtue of duty": "virtue of duty",
+  "second virtue of empathy": "virtue of empathy",
+  "third virtue of empathy": "virtue of empathy",
+  "fourth virtue of empathy": "virtue of empathy",
+  "fifth virtue of empathy": "virtue of empathy",
+  "sixth virtue of empathy": "virtue of empathy",
+  "seventh virtue of empathy": "virtue of empathy",
+  "eighth virtue of empathy": "virtue of empathy",
+  "ninth virtue of empathy": "virtue of empathy",
+  "tenth virtue of empathy": "virtue of empathy",
+  "second virtue of heroism": "virtue of heroism",
+  "second virtue of knightly value": "virtue of knightly temper",
+  "second virtue of noble desdain": "virtue of noble disdain",
+  "third virtue of noble desdain": "virtue of noble disdain",
+  "fourth virtue of noble desdain": "virtue of noble disdain",
+  "fifth virtue of noble desdain": "virtue of noble disdain",
+  "second virtue of penitent": "virtue of the penitent",
+  "second virtue of purity": "virtue of purity",
+  "third virtue of purity": "virtue of purity",
+  "fourth virtue of purity": "virtue of purity",
+  "fifth virtue of purity": "virtue of purity",
+  "second virtue of stoicism": "virtue of stoicism",
+  "second virtue of the confidence": "virtue of confidence",
+  "third virtue of the confidence": "virtue of confidence",
+  "fourth virtue of the confidence": "virtue of confidence",
+  "second virtue of the ideal": "virtue of the ideal",
+  "second virtue of the joust": "virtue of the joust",
+  "third virtue of the joust": "virtue of the joust",
+  "fourth virtue of the joust": "virtue of the joust",
 };
 
 export const rulesMap = {
   ...rulesIndexExport,
   ...additionalRules,
+};
+
+/**
+ * Rule entry for the full name, keeping what normalizeRuleName strips, so
+ * variants like "Vampire Count (Strigoi)" can have their own entry.
+ *
+ * @param {string} name The rule or unit name
+ * @returns {object|undefined} The entry, only if the full name differs from the normalized one
+ */
+export const getFullNameRuleData = (name = "") => {
+  const fullName = name.toLowerCase().trim();
+
+  return fullName !== normalizeRuleName(name) ? rulesMap[fullName] : undefined;
 };

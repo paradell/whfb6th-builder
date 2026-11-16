@@ -155,6 +155,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "perModel": Boolean, // Optional
       "active": Boolean, // Optional
       "armyComposition": [army composition IDs], // Optional
+      "extra_categories": [String], // Optional. Extra slots the rider takes while this mount is selected (e.g. ["heroes"] for a Vampire Counts Zombie Dragon)
       "options": [ // Mount options, optional
         {
           "name_en": String,
