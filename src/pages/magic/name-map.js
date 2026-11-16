@@ -1,6 +1,7 @@
 export const nameMap = {
   dwarfs: {
-    name_en: "Runic Items",
+    name_en: "Dwarfs",
+    name_es: "Enanos",
   },
   general: {
     name_en: "Common Magic Items",
