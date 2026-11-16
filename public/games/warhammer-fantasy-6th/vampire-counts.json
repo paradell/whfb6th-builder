@@ -545,7 +545,6 @@
       "points": 80,
       "armyComposition": { "vampire-counts": { "category": "heroes" } },
       "command": [
-        { "name_en": "Battle Standard Bearer", "points": 25, "magic": { "types": ["banner"], "maxPoints": 50 } }
       ],
       "melee": [
         { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
