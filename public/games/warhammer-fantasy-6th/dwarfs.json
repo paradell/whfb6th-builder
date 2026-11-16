@@ -514,7 +514,7 @@
   ],
   "core": [
     {
-      "name_en": "Warriors",
+      "name_en": "Warriors {Dwarfs}",
       "id": "warriors",
       "points": 7,
       "minimum": 10,
@@ -582,7 +582,7 @@
       }
     },
     {
-      "name_en": "Crossbowmen",
+      "name_en": "Crossbowmen {Dwarfs}",
       "id": "crossbowmen",
       "points": 12,
       "minimum": 10,
@@ -1112,7 +1112,7 @@
       }
     },
     {
-      "name_en": "Cannon",
+      "name_en": "Cannon {Dwarfs}",
       "id": "cannon",
       "points": 100,
       "armyComposition": {
@@ -1142,7 +1142,7 @@
       }
     },
     {
-      "name_en": "Bolt Throwers",
+      "name_en": "Bolt Throwers {Dwarfs}",
       "id": "bolt-throwers",
       "points": 45,
       "minimum": 1,
@@ -1174,7 +1174,7 @@
       }
     },
     {
-      "name_en": "Stone Thrower",
+      "name_en": "Stone Thrower {Dwarfs}",
       "id": "stone-thrower",
       "points": 85,
       "armyComposition": {
