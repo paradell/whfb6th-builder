@@ -1192,6 +1192,8 @@
     "page": "DoC, p. 35"
   },
   "handgun": { "url": "weapons/handgun", "page": "RB, p. 217" },
+  "dwarf handgun": { "url": "weapons/dwarf-handgun" },
+  "gromril armour": { "url": "weapons/gromril-armour" },
   "piercing claws": {
     "url": "weapons/piercing-claws",
     "page": "DoC, p. 35"

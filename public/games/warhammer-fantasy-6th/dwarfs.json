@@ -86,7 +86,7 @@
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Royal Blood",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Sangre Real"
       },
       "mounts": []
@@ -166,7 +166,7 @@
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Rune Lore",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Señor de las Runas"
       },
       "mounts": []
@@ -210,7 +210,7 @@
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner {Dwarfs}",
         "name_es": "Agravio Ancestral, Firmeza, Avance imparable, Inmune a Desmoralización, Matador, Solitario."
       },
       "mounts": []
@@ -370,7 +370,7 @@
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Rune Lore",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Señor de las Runas"
       },
       "mounts": [],
@@ -463,7 +463,7 @@
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Artillery Master, Extra Crewman",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Artillery Master, Extra Crewman {Dwarfs}",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Maestro  Artillero, Artillero adicional"
       },
       "mounts": []
@@ -507,7 +507,7 @@
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner {Dwarfs}",
         "name_es": "Agravio Ancestral, Firmeza, Avance imparable, Inmune a Desmoralización, Matador, Solitario."
       },
       "mounts": []
@@ -517,7 +517,7 @@
     {
       "name_en": "Warriors {Dwarfs}",
       "id": "warriors",
-      "points": 7,
+      "points": 8,
       "minimum": 10,
       "maximum": 0,
       "armyComposition": {
@@ -557,16 +557,10 @@
       "ranged": [],
       "armor": [
         {
-          "name_en": "Light armour",
+          "name_en": "Heavy armour",
           "points": 0,
           "perModel": true,
           "active": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Heavy armour",
-          "points": 1,
-          "perModel": true,
           "exclusive": true
         }
       ],
@@ -665,7 +659,7 @@
           "options": [
             {
               "name_en": "Brace of pistols",
-              "points": 2
+              "points": 0
             }
           ]
         },
