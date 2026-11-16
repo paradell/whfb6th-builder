@@ -136,6 +136,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "maximum": Number, // Maximum number of this option
       "armyComposition": [army composition IDs], // Optional
       "requiredMagicItem": String, // Name of a required magic item
+      "extra_categories": [String], // Optional. Extra slots the unit takes while this option (or sub-option) is selected (e.g. ["heroes"] for the Dwarf Rune Lord's Anvil of Doom)
       "requiredOption": String | [String], // Optional. Ids of options or sub-options; the entry is only shown and counted when one of them is active. Also works on "equipment", "melee", "ranged", "armor", "mounts" and "items" entries (e.g. Vampire Counts bloodlines)
       "sameInArmy": Boolean, // Optional. For options with sub-options: every unit in the list with this option must choose the same sub-option (e.g. Vampire Counts bloodlines)
       "maxActive": Number, // Optional. For options with non-exclusive sub-options: maximum number of sub-options that can be selected at the same time (e.g. Saurus Oldblood Blessed Spawnings)
