@@ -1,94 +1,279 @@
 {
-  "battle-magic": {
-    "hammerhand": {
-      "index": "signature"
-    },
-    "fireball": {
+  "lore-of-fire": {
+    "fire ball": {
       "index": "1"
     },
-    "curse of arrow attraction": {
+    "flaming sword of rhuin": {
       "index": "2"
     },
-    "pillar of fire": {
+    "fiery blast": {
       "index": "3"
     },
-    "arcane urgency": {
+    "burning head": {
       "index": "4"
     },
-    "oaken shield": {
+    "conflagration of doom": {
       "index": "5"
     },
-    "curse of cowardly flight": {
+    "wall of fire": {
       "index": "6"
     }
   },
-  "daemonology": {
-    "the summoning": {
-      "index": "signature"
+  "lore-of-metal": {
+    "rule of burning iron": {
+      "index": "1"
     },
+    "commandment of brass": {
+      "index": "2"
+    },
+    "transmutation of lead": {
+      "index": "3"
+    },
+    "distillation of molten silver": {
+      "index": "4"
+    },
+    "law of gold": {
+      "index": "5"
+    },
+    "bane of forged steel": {
+      "index": "6"
+    }
+  },
+  "lore-of-shadow": {
     "steed of shadows": {
       "index": "1"
     },
-    "gathering darkness": {
+    "creeping death": {
       "index": "2"
     },
-    "daemonic familiars": {
-      "index": "3"
+    "pelt of midnight": {
+      "index": "3",
+      "rule": "pelt of midnight spell"
     },
-    "daemonic vessel": {
+    "shades of death": {
       "index": "4"
     },
-    "vortex of chaos": {
+    "unseen lurker": {
       "index": "5"
     },
-    "daemonic vigour": {
+    "pit of shades": {
+      "index": "6"
+    }
+  },
+  "lore-of-beasts": {
+    "the oxen stands": {
+      "index": "1"
+    },
+    "the eagle's cry": {
+      "index": "2"
+    },
+    "the bear's anger": {
+      "index": "3"
+    },
+    "the crow's feast": {
+      "index": "4"
+    },
+    "the beast cowers": {
+      "index": "5"
+    },
+    "the wolf hunts": {
+      "index": "6"
+    }
+  },
+  "lore-of-the-heavens": {
+    "second sign of amul": {
+      "index": "1"
+    },
+    "portent of far": {
+      "index": "2"
+    },
+    "forked lightning": {
+      "index": "3"
+    },
+    "uranon's thunder bolt": {
+      "index": "4"
+    },
+    "storm of cronos": {
+      "index": "5"
+    },
+    "the comet of casandora": {
+      "index": "6"
+    }
+  },
+  "lore-of-light": {
+    "pha's illumination": {
+      "index": "1"
+    },
+    "burning gaze": {
+      "index": "2"
+    },
+    "dazzling brightness": {
+      "index": "3"
+    },
+    "healing hand": {
+      "index": "4"
+    },
+    "guardian light": {
+      "index": "5"
+    },
+    "blinding light": {
+      "index": "6"
+    }
+  },
+  "lore-of-life": {
+    "mistress of the marsh": {
+      "index": "1"
+    },
+    "father of the thorn": {
+      "index": "2"
+    },
+    "the howler wind": {
+      "index": "3"
+    },
+    "master of the wood": {
+      "index": "4"
+    },
+    "master of stone": {
+      "index": "5"
+    },
+    "the rain lord": {
+      "index": "6"
+    }
+  },
+  "lore-of-death": {
+    "dark hand of death": {
+      "index": "1"
+    },
+    "death dealer": {
+      "index": "2"
+    },
+    "steal soul": {
+      "index": "3"
+    },
+    "wind of death": {
+      "index": "4"
+    },
+    "drain life": {
+      "index": "5"
+    },
+    "doom and darkness!": {
+      "index": "6"
+    }
+  },
+  "the-lore-of-nurgle": {
+    "magnificent buboes": {
+      "index": "1"
+    },
+    "favoured poxes": {
+      "index": "2"
+    },
+    "effulgent boils": {
+      "index": "3"
+    },
+    "glistening scabs": {
+      "index": "4"
+    },
+    "glorious afflictions": {
+      "index": "5"
+    },
+    "sumptuous pestilence": {
+      "index": "6"
+    }
+  },
+  "the-lore-of-tzeentch": {
+    "red fire": {
+      "index": "0"
+    },
+    "orange fire": {
+      "index": "1"
+    },
+    "yellow fire": {
+      "index": "2"
+    },
+    "green fire": {
+      "index": "3"
+    },
+    "blue fire": {
+      "index": "4"
+    },
+    "indigo fire": {
+      "index": "5"
+    },
+    "violet fire": {
+      "index": "6"
+    }
+  },
+  "the-lore-of-slaanesh": {
+    "blissful throes": {
+      "index": "1"
+    },
+    "luxurious torment": {
+      "index": "2"
+    },
+    "titillating delusions": {
+      "index": "3"
+    },
+    "delectable torture": {
+      "index": "4"
+    },
+    "enrapturing spasms": {
+      "index": "5"
+    },
+    "delicious excruciation": {
+      "index": "6"
+    }
+  },
+  "master-of-the-shadows": {
+    "bolt of dark light": {
+      "index": "1"
+    },
+    "nightmare": {
+      "index": "3",
+      "rule": "nightmare spell"
+    },
+    "curse of the dark master": {
+      "index": "4"
+    },
+    "fog of death": {
+      "index": "5"
+    },
+    "coils of the serpent": {
       "index": "6"
     }
   },
   "dark-magic": {
-    "doombolt": {
-      "index": "signature"
-    },
-    "word of pain": {
+    "chillwind": {
       "index": "1"
     },
-    "stream of corruption": {
+    "doombolt": {
       "index": "2"
     },
-    "infernal gateway": {
+    "word of pain": {
       "index": "3"
     },
-    "phantasmagoria": {
+    "soul stealer": {
       "index": "4"
     },
-    "battle lust": {
+    "dominion": {
       "index": "5"
     },
-    "soul eater": {
+    "black horror": {
       "index": "6"
     }
   },
-  "elementalism": {
-    "storm call": {
-      "index": "signature"
-    },
-    "flaming sword": {
+  "runic-powers": {
+    "rune of water": {
       "index": "1"
     },
-    "plague of rust": {
+    "rune of air": {
       "index": "2"
     },
-    "summon elemental spirit": {
-      "index": "3"
+    "rune of fire": {
+      "index": "3",
+      "rule": "rune of fire spell"
     },
-    "earthen ramparts": {
+    "rune of earth": {
       "index": "4"
-    },
-    "wind blast": {
-      "index": "5"
-    },
-    "travel mystical pathway": {
-      "index": "6"
     }
   },
   "high-magic": {
@@ -98,538 +283,50 @@
     "walk between worlds": {
       "index": "1"
     },
-    "fiery convocation": {
+    "curse of arrow attraction": {
       "index": "2"
     },
-    "tempest": {
+    "fortune is fickle": {
       "index": "3"
-    },
-    "corporeal unmaking": {
-      "index": "4"
     },
     "fury of khaine": {
-      "index": "5"
-    },
-    "shield of saphery": {
-      "index": "6"
-    }
-  },
-  "illusion": {
-    "glittering robe": {
-      "index": "signature"
-    },
-    "mind razor": {
-      "index": "1"
-    },
-    "shimmering dragon": {
-      "index": "2"
-    },
-    "column of crystal": {
-      "index": "3"
-    },
-    "confounding convocation": {
       "index": "4"
     },
-    "spectral doppelganger": {
+    "flames of the phoenix": {
       "index": "5"
-    },
-    "miasmic mirage": {
-      "index": "6"
-    }
-  },
-  "necromancy": {
-    "the dwellers below": {
-      "index": "signature"
-    },
-    "deathly cabal": {
-      "index": "1"
-    },
-    "unquiet spirits": {
-      "index": "2"
-    },
-    "spiritual vortex": {
-      "index": "3"
-    },
-    "curse of years": {
-      "index": "4"
-    },
-    "spectral steed": {
-      "index": "5"
-    },
-    "spirit leech": {
-      "index": "6"
-    }
-  },
-  "waaagh-magic": {
-    "fist of gork (or mork)": {
-      "index": "signature"
-    },
-    "vindictive glare": {
-      "index": "1"
-    },
-    "hand of mork (or gork)": {
-      "index": "2"
-    },
-    "bad moon rizin'": {
-      "index": "3"
-    },
-    "evil sun shinin'": {
-      "index": "4"
-    },
-    "'ere we go!": {
-      "index": "5"
-    },
-    "foot of gork (or mork)": {
-      "index": "6"
-    }
-  },
-  "troll-magic": {
-    "big smartz": {
-      "index": "signature"
-    },
-    "acidic bile": {
-      "index": "1"
-    },
-    "troll brainz": {
-      "index": "2"
-    },
-    "ravenous recourse": {
-      "index": "3"
-    },
-    "foetid whirlpool": {
-      "index": "4"
-    },
-    "torrent of filth": {
-      "index": "5"
-    },
-    "rapid regeneration": {
-      "index": "6"
-    }
-  },
-  "lore-of-athel-loren": {
-    "tree singing": {
-      "index": "signature"
-    },
-    "forest walker": {
-      "index": "signature"
-    },
-    "flock of doom wood elves": {
-      "index": "signature"
-    }
-  },
-  "lore-of-beasts": {
-    "viletide": {
-      "index": "signature"
-    },
-    "devolve": {
-      "index": "signature"
-    },
-    "mantle of ghorok": {
-      "index": "signature"
-    }
-  },
-  "lore-of-chaos": {
-    "winds of chaos": {
-      "index": "signature",
-      "mark-of-chaos": "chaos-undivided"
-    },
-    "acquiescence": {
-      "index": "signature",
-      "mark-of-chaos": "slaanesh"
-    },
-    "fleshy abundance": {
-      "index": "signature",
-      "mark-of-chaos": "nurgle"
-    },
-    "blue fire": {
-      "index": "signature",
-      "mark-of-chaos": "tzeentch"
-    }
-  },
-  "lore-of-daemons": {
-    "plague wind": {
-      "index": "signature"
-    },
-    "cacophonic hymn": {
-      "index": "signature"
-    },
-    "pink fire": {
-      "index": "signature"
-    },
-    "gift of mutation": {
-      "index": "signature"
-    }
-  },
-  "lore-of-gork": {
-    "brain bursta": {
-      "index": "signature"
-    },
-    "gaze of gork": {
-      "index": "signature"
-    }
-  },
-  "lore-of-hashut": {
-    "curse of hashut": {
-      "index": "signature"
-    },
-    "storm of ash": {
-      "index": "signature"
-    },
-    "flames of hashut": {
-      "index": "signature"
-    }
-  },
-  "lore-of-lustria": {
-    "apotheosis": {
-      "index": "signature"
-    },
-    "monsoon": {
-      "index": "signature"
-    }
-  },
-  "lore-of-naggaroth": {
-    "cursing word": {
-      "index": "signature"
-    },
-    "black horror": {
-      "index": "signature"
-    }
-  },
-  "lore-of-mork": {
-    "mork’s curse": {
-      "index": "signature"
-    },
-    "itchy nuisance": {
-      "index": "signature"
-    }
-  },
-  "lore-of-nehekhara": {
-    "djaf's incantation of cursed blades": {
-      "index": "signature"
-    },
-    "khsar's incantation of the desert wind": {
-      "index": "signature"
-    },
-    "usekhp's incantation of desiccation": {
-      "index": "signature"
-    }
-  },
-  "lore-of-saphery": {
-    "hand of khaine": {
-      "index": "signature"
-    },
-    "courage of aenarion": {
-      "index": "signature"
     },
     "vaul's unmaking": {
-      "index": "signature"
-    }
-  },
-  "lore-of-the-great-maw": {
-    "toothcracker": {
-      "index": "signature"
-    },
-    "trollguts": {
-      "index": "signature"
-    }
-  },
-  "lore-of-the-horned-rat": {
-    "skitterleap": {
-      "index": "signature"
-    },
-    "warp lightning": {
-      "index": "signature"
-    },
-    "cloud of corruption": {
-      "index": "signature"
-    }
-  },
-  "lore-of-the-lady": {
-    "the lady's gift": {
-      "index": "signature"
-    },
-    "burning gaze": {
-      "index": "signature"
-    },
-    "the lady's wrath": {
-      "index": "signature"
-    }
-  },
-  "lore-of-undeath": {
-    "vanhal's danse macabre": {
-      "index": "signature"
-    },
-    "hellish vigour": {
-      "index": "signature"
-    },
-    "raise dead": {
-      "index": "signature"
-    }
-  },
-  "lore-of-the-wilds": {
-    "swirling-mists": {
-      "index": "signature"
-    },
-    "fury of athel loren": {
-      "index": "1"
-    },
-    "ariel's blessing": {
-      "index": "2"
-    },
-    "spiteful torrent": {
-      "index": "3"
-    },
-    "durthu's wrath": {
-      "index": "4"
-    },
-    "hidden pathways": {
-      "index": "5"
-    },
-    "sapping blight": {
       "index": "6"
     }
   },
-  "primal-magic": {
-    "primordial gloom": {
+  "sea-patrol": {
+    "the writhing mists": {
       "index": "signature"
     },
-    "call of the wild": {
-      "index": "1"
-    },
-    "in the gloaming wildwood": {
-      "index": "2"
-    },
-    "flock of doom beastmen": {
-      "index": "3"
-    },
-    "fury of the beast": {
-      "index": "4"
-    },
-    "strangleroot": {
-      "index": "5"
-    },
-    "'neath the shaden wodespan": {
-      "index": "6"
-    }
-  },
-  "lore-of-yang": {
-    "constellation of the dragon": {
-      "index": "signature"
-    },
-    "great bastion": {
-      "index": "signature"
-    },
-    "might of heaven & earth": {
+    "mistress of the deep": {
       "index": "signature"
     }
   },
-  "lore-of-yin": {
-    "spirits of wind & shadow": {
-      "index": "signature"
-    },
-    "accursed mirror": {
-      "index": "signature"
-    },
-    "ancestral warriors": {
-      "index": "signature"
-    }
-  },
-  "miao-ying": {
-    "the storm dragons fury": {
-      "index": "signature"
-    }
-  },
-  "shadowlands": {
-    "maelstrom-of-chaos": {
-      "index": "signature"
-    },
-    "blackened-bolts": {
+  "lore-of-ice": {
+    "shardstorm": {
       "index": "1"
     },
-    "veil-of-gloom": {
+    "freezing blast": {
       "index": "2"
     },
-    "vortex-of-darkness": {
+    "form of the frostfiend": {
       "index": "3"
     },
-    "shadowed-assailants": {
+    "invocation of the ice storm": {
       "index": "4"
     },
-    "crawling-mists": {
+    "midwinter's kiss": {
       "index": "5"
     },
-    "chains-of-darkness": {
+    "glacial barrier": {
       "index": "6"
     }
   },
-  "lore-of-fire": {
-    "flaming-sword": {
-      "index": "1"
-    },
-    "fireball": {
-      "index": "2"
-    },
-    "pillar-of-fire": {
-      "index": "3"
-    },
-    "burning-head": {
-      "index": "4"
-    },
-    "meteor-storm": {
-      "index": "5"
-    },
-    "inferno": {
-      "index": "6"
-    }
-  },
-
-  "lore-of-metal": {
-    "armour-of-meteoric-iron": {
-      "index": "1"
-    },
-    "glimmering-locks": {
-      "index": "2"
-    },
-    "enchantment-of-the-ram": {
-      "index": "3"
-    },
-    "spell-of-iron": {
-      "index": "4"
-    },
-    "curse-of-anraheels": {
-      "index": "5"
-    },
-    "transmutation-of-lead": {
-      "index": "6"
-    }
-  },
-
-  "lore-of-shadow": {
-    "steed-of-shadows": {
-      "index": "1"
-    },
-    "unseen-ritual": {
-      "index": "2"
-    },
-    "shadow-warrior": {
-      "index": "3"
-    },
-    "pit-of-shades": {
-      "index": "4"
-    },
-    "okkams-mindrazor": {
-      "index": "5"
-    },
-    "sever-spirit": {
-      "index": "6"
-    }
-  },
-
-  "lore-of-beasts-revisited": {
-    "feral-pounce": {
-      "index": "1"
-    },
-    "pythons-curse": {
-      "index": "2"
-    },
-    "amber-spear": {
-      "index": "3"
-    },
-    "savage-beast": {
-      "index": "4"
-    },
-    "mantle-of-ghorok": {
-      "index": "5"
-    },
-    "transformation-of-kadon": {
-      "index": "6"
-    }
-  },
-
-  "lore-of-light": {
-    "searing-doom": {
-      "index": "1"
-    },
-    "mirror-image": {
-      "index": "2"
-    },
-    "shield-of-light": {
-      "index": "3"
-    },
-    "mystifying-miasma": {
-      "index": "4"
-    },
-    "birona-steady-hand": {
-      "index": "5"
-    },
-    "timaeus-shining-beacon": {
-      "index": "6"
-    }
-  },
-
-  "lore-of-life-revised": {
-    "regeneration": {
-      "index": "1"
-    },
-    "natures-gift": {
-      "index": "2"
-    },
-    "flock-of-doom": {
-      "index": "3"
-    },
-    "awaken-the-wood": {
-      "index": "4"
-    },
-    "thornvine-aura": {
-      "index": "5"
-    },
-    "lifebloom": {
-      "index": "6"
-    }
-  },
-
-  "lore-of-death": {
-    "purple-sun-of-shyish": {
-      "index": "1"
-    },
-    "death-frenzy": {
-      "index": "2"
-    },
-    "mortal-strike": {
-      "index": "3"
-    },
-    "drain-life": {
-      "index": "4"
-    },
-    "aspect-of-death": {
-      "index": "5"
-    },
-    "finger-of-death": {
-      "index": "6"
-    }
-  },
-
-  "lore-of-the-heavens": {
-    "second-sign-of-amul": {
-      "index": "1"
-    },
-    "portent-of-far": {
-      "index": "2"
-    },
-    "forked-lightning": {
-      "index": "3"
-    },
-    "uranons-thunder-bolt": {
-      "index": "4"
-    },
-    "storm-of-cronos": {
-      "index": "5"
-    },
-    "the-comet-of-casandora": {
-      "index": "6"
-    }
-  },
-
   "gut-magic": {
     "bloodgruel": {
       "index": "1"
@@ -650,168 +347,168 @@
       "index": "6"
     }
   },
-
   "little-waaagh": {
-    "gaze-of-mork": {
+    "gaze of mork": {
       "index": "1"
     },
-    "fists-of-gork": {
+    "fists of gork": {
       "index": "2"
     },
-    "eadbutt": {
-      "index": "3"
+    "'eadbutt": {
+      "index": "3",
+      "rule": "'eadbutt spell"
     },
-    "brain-bursta": {
+    "brain bursta": {
       "index": "4"
     },
-    "ere-we-go": {
+    "'ere we go!": {
       "index": "5"
     },
-    "the-hand-of-gork": {
+    "the hand of gork": {
       "index": "6"
     }
   },
-
   "big-waaagh": {
-    "mork-save-uz": {
+    "mork save uz!": {
       "index": "1"
     },
-    "gorkll-fix-it": {
+    "gork'll fix it": {
       "index": "2"
     },
-    "bash-em-ladz": {
+    "bash 'em ladz": {
       "index": "3"
     },
-    "the-foot-of-gork": {
+    "the foot of gork": {
       "index": "4"
     },
-    "gorks-warpath": {
+    "gork's warpath": {
       "index": "5"
     },
-    "waaagh": {
+    "waaagh!": {
+      "index": "6",
+      "rule": "waaagh! spell"
+    }
+  },
+  "dark-emissaries": {
+    "elemental power": {
+      "index": "signature"
+    },
+    "bolt of dark light": {
+      "index": "1"
+    },
+    "betrayal in death": {
+      "index": "2"
+    },
+    "nightmare": {
+      "index": "3",
+      "rule": "nightmare spell"
+    },
+    "curse of the dark master": {
+      "index": "4"
+    },
+    "fog of death": {
+      "index": "5"
+    },
+    "coils of the serpent": {
       "index": "6"
     }
   },
-
+  "truthsayers": {
+    "elemental power": {
+      "index": "signature"
+    },
+    "wings of fate": {
+      "index": "1"
+    },
+    "light of battle": {
+      "index": "2"
+    },
+    "gift of life": {
+      "index": "3"
+    },
+    "blessing of valour": {
+      "index": "4"
+    },
+    "boon of courage": {
+      "index": "5"
+    },
+    "voice of command": {
+      "index": "6"
+    }
+  },
   "skaven-magic": {
     "skitterleap": {
       "index": "1"
     },
-    "warp-lightning": {
+    "warp lightning": {
       "index": "2"
     },
     "vermintide": {
       "index": "3"
     },
-    "pestilent-breath": {
+    "pestilent breath": {
       "index": "4"
     },
-    "death-frenzy": {
+    "death frenzy": {
       "index": "5"
     },
     "plague": {
       "index": "6"
     }
   },
-
   "incantations": {
-    "sekhubis-incantation-of-vengeance": {
+    "sekhubi's incantation of vengeance": {
       "index": "1"
     },
-    "horekhahs-incantation-of-righteous-smiting": {
+    "horekhah's incantation of righteous smiting": {
       "index": "2"
     },
-    "diedras-incantation-of-summoning": {
+    "diedra's incantation of summoning": {
       "index": "3"
     },
-    "mankaras-incantation-of-urgency": {
+    "mankara's incantation of urgency": {
       "index": "4"
     }
   },
-
+  "necromancy": {
+    "invocation of nehek": {
+      "index": "1",
+      "rule": "invocation of nehek spell"
+    },
+    "hand of dust": {
+      "index": "2",
+      "rule": "hand of dust spell"
+    },
+    "hellish vigour": {
+      "index": "3"
+    },
+    "gaze of nagash": {
+      "index": "4"
+    },
+    "vanhel's danse macabre": {
+      "index": "5"
+    },
+    "curse of years": {
+      "index": "6"
+    }
+  },
   "the-lore-of-athel-loren": {
-    "tree-singing": {
+    "tree singing": {
       "index": "1"
     },
-    "fury-of-the-forest": {
+    "fury of the forest": {
       "index": "2"
     },
-    "the-hidden-path": {
+    "the hidden path": {
       "index": "3"
     },
-    "the-twilight-host": {
+    "the twilight host": {
       "index": "4"
     },
-    "ariels-blessing": {
+    "ariel's blessing": {
       "index": "5"
     },
-    "the-call-of-the-hunt": {
-      "index": "6"
-    }
-  },
-
-  "the-lore-of-nurgle": {
-    "magnificent-buboes": {
-      "index": "1"
-    },
-    "favoured-poxes": {
-      "index": "2"
-    },
-    "effulgent-boils": {
-      "index": "3"
-    },
-    "glistening-scabs": {
-      "index": "4"
-    },
-    "glorious-afflictions": {
-      "index": "5"
-    },
-    "sumptuous-pestilence": {
-      "index": "6"
-    }
-  },
-
-  "the-lore-of-tzeentch": {
-    "red-fire": {
-      "index": "0"
-    },
-    "orange-fire": {
-      "index": "1"
-    },
-    "yellow-fire": {
-      "index": "2"
-    },
-    "green-fire": {
-      "index": "3"
-    },
-    "blue-fire": {
-      "index": "4"
-    },
-    "indigo-fire": {
-      "index": "5"
-    },
-    "violet-fire": {
-      "index": "6"
-    }
-  },
-
-  "the-lore-of-slaanesh": {
-    "blissful-throes": {
-      "index": "1"
-    },
-    "luxurious-torment": {
-      "index": "2"
-    },
-    "titillating-delusions": {
-      "index": "3"
-    },
-    "delectable-torture": {
-      "index": "4"
-    },
-    "enrapturing-spasms": {
-      "index": "5"
-    },
-    "delicious-excruciation": {
+    "the call of the hunt": {
       "index": "6"
     }
   }

@@ -3156,59 +3156,59 @@
   "mortar": { "url": "war-machines/mortars", "page": "RB, p. 228" },
   "fire thrower": { "url": "war-machines/fire-throwers", "page": "RB, p. 229" },
   "lore of yang": {
-    "url": "the-lores-of-magic/lore-of-yang",
+    "url": "spell-lists/lore-of-yang",
     "page": "AJ:AoGC, p. 46"
   },
   "lore of undeath": {
-    "url": "the-lores-of-magic/lore-of-undeath",
+    "url": "spell-lists/lore-of-undeath",
     "page": "VC, p. 29"
   },
   "lore of the horned rat": {
-    "url": "the-lores-of-magic/lore-of-the-horned-rat",
+    "url": "spell-lists/lore-of-the-horned-rat",
     "page": "SK, p. 24"
   },
   "lore of lustria": {
-    "url": "the-lores-of-magic/lore-of-lustria",
+    "url": "spell-lists/lore-of-lustria",
     "page": "LM, p. 21"
   },
   "lore of naggaroth": {
-    "url": "the-lores-of-magic/lore-of-naggaroth",
+    "url": "spell-lists/lore-of-naggaroth",
     "page": "DE, p. 26"
   },
   "lore of daemons": {
-    "url": "the-lores-of-magic/lore-of-daemons",
+    "url": "spell-lists/lore-of-daemons",
     "page": "DoC, p. 34"
   },
   "lore of hashut": {
-    "url": "the-lores-of-magic/lore-of-hashut",
+    "url": "spell-lists/lore-of-hashut",
     "page": "CD, p. 21"
   },
   "lore of saphery": {
-    "url": "the-lores-of-magic/lore-of-saphery",
+    "url": "spell-lists/lore-of-saphery",
     "page": "FoF, p. 186"
   },
   "lore of athel loren": {
-    "url": "the-lores-of-magic/lore-of-athel-loren",
+    "url": "spell-lists/lore-of-athel-loren",
     "page": "FoF, p. 146"
   },
   "lore of the lady": {
-    "url": "the-lores-of-magic/lore-of-the-lady",
+    "url": "spell-lists/lore-of-the-lady",
     "page": "FoF, p. 109"
   },
   "lore of nehekhara": {
-    "url": "the-lores-of-magic/lore-of-nehekhara",
+    "url": "spell-lists/lore-of-nehekhara",
     "page": "RH, p. 155"
   },
   "lore of chaos": {
-    "url": "the-lores-of-magic/lore-of-chaos",
+    "url": "spell-lists/lore-of-chaos",
     "page": "RH, p. 83"
   },
   "lore of gork": {
-    "url": "the-lores-of-magic/lore-of-gork",
+    "url": "spell-lists/lore-of-gork",
     "page": "RH, p. 47"
   },
   "lore of beasts": {
-    "url": "the-lores-of-magic/lore-of-beasts",
+    "url": "spell-lists/the-lore-of-beasts-revised",
     "page": "RH, p. 117"
   },
   "spells of the little waaagh!": {
@@ -3248,43 +3248,43 @@
     "page": "HoC, p. 45"
   },
   "lore of the great maw": {
-    "url": "the-lores-of-magic/lore-of-the-great-maw",
+    "url": "spell-lists/lore-of-the-great-maw",
     "page": "OK, p. 25"
   },
   "lore of primal magic": {
-    "url": "the-lores-of-magic/lore-of-primal-magic",
+    "url": "spell-lists/lore-of-primal-magic",
     "page": "AJ:BB, p. 44"
   },
   "lore of the shadowlands": {
-    "url": "the-lores-of-magic/lore-of-the-shadowlands",
+    "url": "spell-lists/lore-of-the-shadowlands",
     "page": "AJ:TRoW, p. 44"
   },
   "lore of mork": {
-    "url": "the-lores-of-magic/lore-of-mork",
+    "url": "spell-lists/lore-of-mork",
     "page": "RH, p. 47"
   },
   "lore of yin": {
-    "url": "the-lores-of-magic/lore-of-yin",
+    "url": "spell-lists/lore-of-yin",
     "page": "AJ:AoGC, p. 47"
   },
   "lore of the wilds": {
-    "url": "the-lores-of-magic/lore-of-the-wilds",
+    "url": "spell-lists/lore-of-the-wilds",
     "page": "AJ:WER, p. 44"
   },
   "lore of troll magic": {
-    "url": "the-lores-of-magic/lore-of-troll-magic",
+    "url": "spell-lists/lore-of-troll-magic",
     "page": "AJ:O&GT, p. 44"
   },
   "battle magic": {
-    "url": "the-lores-of-magic/battle-magic",
+    "url": "spell-lists/battle-magic",
     "page": "RB, p. 320"
   },
   "daemonology": {
-    "url": "the-lores-of-magic/daemonology",
+    "url": "spell-lists/daemonology",
     "page": "RB, p. 322"
   },
   "dark magic": {
-    "url": "the-lores-of-magic/dark-magic",
+    "url": "spell-lists/dark-magic",
     "page": "RB, p. 324"
   },
   "lore of the heavens":
@@ -3300,10 +3300,6 @@
   "lore of shadow": {
     "url": "spell-lists/the-lore-of-shadow"
   },
-  "lore of beasts revisited":
-  {
-      "url": "spell-lists/the-lore-of-beasts-revisited"
-  },
   "lore of light": {
     "url": "spell-lists/the-lore-of-light"
   },
@@ -3314,20 +3310,20 @@
     "url": "spell-lists/the-lore-of-death"
   },
   "elementalism": {
-    "url": "the-lores-of-magic/elementalism",
+    "url": "spell-lists/elementalism",
     "page": "RB, p. 326"
   },
   "high magic": {
-    "url": "the-lores-of-magic/high-magic",
+    "url": "spell-lists/high-magic",
     "page": "RB, p. 328"
   },
-  "illusion": { "url": "the-lores-of-magic/illusion", "page": "RB, p. 330" },
+  "illusion": { "url": "spell-lists/illusion", "page": "RB, p. 330" },
   "necromancy": {
-    "url": "the-lores-of-magic/necromancy",
+    "url": "spell-lists/necromancy",
     "page": "RB, p. 332"
   },
   "waaagh! magic": {
-    "url": "the-lores-of-magic/waaagh-magic",
+    "url": "spell-lists/waaagh-magic",
     "page": "RB, p. 334"
   },
   "'eadbuttin' 'at": { "url": "magic-item/eadbuttin-at", "page": "RH, p. 44" },
@@ -21120,7 +21116,7 @@
     "troopType": "WB",
     "page": "RH, p. 70"
   },
-  "'ere we go!": { "url": "spell/ere-we-go", "page": "RB, p. 335" },
+  "'ere we go!": { "url": "spell/ere-we-go", "page": "O&G, p. 28" },
   "'neath the shaden wodespan": {
     "url": "spell/neath-the-shaden-wodespan",
     "page": "AJ:BB, p. 45"
@@ -21137,20 +21133,17 @@
   },
   "apotheosis": { "url": "spell/apotheosis", "page": "LM, p. 21" },
   "arcane urgency": { "url": "spell/arcane-urgency", "page": "RB, p. 321" },
-  "ariel's blessing": {
-    "url": "spell/ariels-blessing",
-    "page": "AJ:WER, p. 45"
-  },
+  "ariel's blessing": { "url": "spell/ariels-blessing", "page": "WE, p. 79" },
   "bad moon rizin'": { "url": "spell/bad-moon-rizin", "page": "RB, p. 335" },
   "battle lust": { "url": "spell/battle-lust", "page": "RB, p. 325" },
   "big smartz": { "url": "spell/big-smartz" },
-  "black horror": { "url": "spell/black-horror", "page": "DE, p. 26" },
+  "black horror": { "url": "spell/black-horror", "page": "DE, p. 17" },
   "blackened bolts": {
     "url": "spell/blackened-bolts",
     "page": "AJ:TRoW, p. 45"
   },
-  "blue fire": { "url": "spell/blue-fire", "page": "RH, p. 83" },
-  "brain bursta": { "url": "spell/brain-bursta", "page": "RH, p. 47" },
+  "blue fire": { "url": "spell/blue-fire", "page": "HoC, p. 44" },
+  "brain bursta": { "url": "spell/brain-bursta", "page": "O&G, p. 28" },
   "bloodgruel": { "url": "spell/bloodgruel", "page": "OK, p. 61" },
   "gaze of mork": { "url": "spell/gaze-of-mork", "page": "O&G, p. 28" },
   "fists of gork": { "url": "spell/fists-of-gork", "page": "O&G, p. 28" },
@@ -21163,7 +21156,7 @@
   "braingobbler": { "url": "spell/braingobbler", "page": "OK, p. 61" },
   "bullgorger": { "url": "spell/bullgorger", "page": "OK, p. 61" },
   "bonecruncher": { "url": "spell/bonecruncher", "page": "OK, p. 61" },
-  "burning gaze": { "url": "spell/burning-gaze", "page": "FoF, p. 109" },
+  "burning gaze": { "url": "spell/burning-gaze", "page": "RB, p. 149" },
   "cacophonic hymn": { "url": "spell/cacophonic-hymn", "page": "DoC, p. 34" },
   "call of the wild": {
     "url": "spell/call-of-the-wild",
@@ -21200,14 +21193,14 @@
   "crawling mists": { "url": "spell/crawling-mists", "page": "AJ:TRoW, p. 45" },
   "curse of arrow attraction": {
     "url": "spell/curse-of-arrow-attraction",
-    "page": "RB, p. 321"
+    "page": "HE, p. 21"
   },
   "curse of cowardly flight": {
     "url": "spell/curse-of-cowardly-flight",
     "page": "RB, p. 321"
   },
   "curse of hashut": { "url": "spell/curse-of-hashut", "page": "CD, p. 21" },
-  "curse of years": { "url": "spell/curse-of-years", "page": "RB, p. 333" },
+  "curse of years": { "url": "spell/curse-of-years", "page": "VC, p. 58" },
   "cursing word": { "url": "spell/cursing-word", "page": "DE, p. 26" },
   "daemonic familiars": {
     "url": "spell/daemonic-familiars",
@@ -21221,8 +21214,8 @@
     "url": "spell/djafs-incantation-of-cursed-blades",
     "page": "RH, p. 155"
   },
-  "doombolt": { "url": "spell/doombolt", "page": "RB, p. 324" },
-  "drain magic": { "url": "spell/drain-magic", "page": "RB, p. 328" },
+  "doombolt": { "url": "spell/doombolt", "page": "DE, p. 17" },
+  "drain magic": { "url": "spell/drain-magic", "page": "HE, p. 21" },
   "durthu's wrath": { "url": "spell/durthus-wrath", "page": "AJ:WER, p. 45" },
   "earthen ramparts": { "url": "spell/earthen-ramparts", "page": "RB, p. 327" },
   "evil sun shinin'": { "url": "spell/evil-sun-shinin", "page": "RB, p. 335" },
@@ -21250,7 +21243,7 @@
     "url": "spell/fury-of-athel-loren",
     "page": "AJ:WER, p. 45"
   },
-  "fury of khaine": { "url": "spell/fury-of-khaine", "page": "RB, p. 329" },
+  "fury of khaine": { "url": "spell/fury-of-khaine", "page": "HE, p. 21" },
   "fury of the beast": {
     "url": "spell/fury-of-the-beast",
     "page": "AJ:BB, p. 45"
@@ -21266,7 +21259,7 @@
   "hammerhand": { "url": "spell/hammerhand", "page": "RB, p. 320" },
   "hand of khaine": { "url": "spell/hand-of-khaine", "page": "FoF, p. 186" },
   "hand of mork": { "url": "spell/hand-of-mork-or-gork", "page": "RB, p. 335" },
-  "hellish vigour": { "url": "spell/hellish-vigour", "page": "VC, p. 29" },
+  "hellish vigour": { "url": "spell/hellish-vigour", "page": "VC, p. 58" },
   "hidden pathways": {
     "url": "spell/hidden-pathways",
     "page": "AJ:WER, p. 45"
@@ -21341,11 +21334,11 @@
     "url": "spell/shimmering-dragon",
     "page": "RB, p. 331"
   },
-  "skitterleap": { "url": "spell/skitterleap", "page": "SK, p. 24" },
-  "vermintide": { "url": "spell/vermintide", "page": "SK, p. 24" },
-  "pestilent breath": { "url": "spell/pestilent-breath", "page": "SK, p. 24" },
-  "death frenzy": { "url": "spell/death-frenzy", "page": "SK, p. 24" },
-  "plague": { "url": "spell/plague", "page": "SK, p. 24" },
+  "skitterleap": { "url": "spell/skitterleap", "page": "SK, p. 35" },
+  "vermintide": { "url": "spell/vermintide", "page": "SK, p. 35" },
+  "pestilent breath": { "url": "spell/pestilent-breath", "page": "SK, p. 35" },
+  "death frenzy": { "url": "spell/death-frenzy", "page": "SK, p. 35" },
+  "plague": { "url": "spell/plague", "page": "SK, p. 35" },
   "sekhubi's incantation of vengeance": { "url": "spell/sekhubis-incantation-of-vengeance", "page": "TK, p. 35" },
   "horekhah's incantation of righteous smiting": { "url": "spell/horekhahs-incantation-of-righteous-smiting", "page": "TK, p. 35" },
   "diedra's incantation of summoning": { "url": "spell/diedras-incantation-of-summoning", "page": "TK, p. 35" },
@@ -21388,7 +21381,7 @@
     "url": "spell/spiteful-torrent",
     "page": "AJ:WER, p. 45"
   },
-  "steed of shadows": { "url": "spell/steed-of-shadows", "page": "RB, p. 323" },
+  "steed of shadows": { "url": "spell/steed-of-shadows", "page": "RB, p. 146" },
   "storm of ash": { "url": "spell/storm-of-ash", "page": "CD, p. 21" },
   "strangleroot": { "url": "spell/strangleroot", "page": "AJ:BB, p. 45" },
   "stream of corruption": {
@@ -21412,15 +21405,15 @@
     "page": "AJ:AoGC, p. 27"
   },
   "the summoning": { "url": "spell/the-summoning", "page": "RB, p. 322" },
-  "toothcracker": { "url": "spell/toothcracker", "page": "OK, p. 25" },
+  "toothcracker": { "url": "spell/toothcracker", "page": "OK, p. 61" },
   "torrent of filth": { "url": "spell/torrent-of-filth" },
   "travel mystical pathway": {
     "url": "spell/travel-mystical-pathway",
     "page": "RB, p. 327"
   },
-  "tree singing": { "url": "spell/tree-singing", "page": "FoF, p. 146" },
+  "tree singing": { "url": "spell/tree-singing", "page": "WE, p. 79" },
   "troll brainz": { "url": "spell/troll-brainz" },
-  "trollguts": { "url": "spell/trollguts", "page": "OK, p. 25" },
+  "trollguts": { "url": "spell/trollguts", "page": "OK, p. 61" },
   "unquiet spirits": { "url": "spell/unquiet-spirits", "page": "RB, p. 333" },
   "usekhp's incantation of desiccation": {
     "url": "spell/usekhps-incantation-of-desiccation",
@@ -21430,7 +21423,7 @@
     "url": "spell/vanhals-danse-macabre",
     "page": "VC, p. 29"
   },
-  "vaul's unmaking": { "url": "spell/vauls-unmaking", "page": "FoF, p. 186" },
+  "vaul's unmaking": { "url": "spell/vauls-unmaking", "page": "HE, p. 21" },
   "veil of gloom": { "url": "spell/veil-of-gloom", "page": "AJ:TRoW, p. 45" },
   "viletide": { "url": "spell/viletide", "page": "RH, p. 117" },
   "vindictive glare": { "url": "spell/vindictive-glare", "page": "RB, p. 335" },
@@ -21441,10 +21434,230 @@
   },
   "walk between worlds": {
     "url": "spell/walk-between-worlds",
-    "page": "RB, p. 329"
+    "page": "HE, p. 21"
   },
-  "warp lightning": { "url": "spell/warp-lightning", "page": "SK, p. 24" },
+  "warp lightning": { "url": "spell/warp-lightning", "page": "SK, p. 35" },
   "wind blast": { "url": "spell/wind-blast", "page": "RB, p. 327" },
   "winds of chaos": { "url": "spell/winds-of-chaos", "page": "RH, p. 83" },
-  "word of pain": { "url": "spell/word-of-pain", "page": "RB, p. 325" }
+  "word of pain": { "url": "spell/word-of-pain", "page": "DE, p. 17" },
+  "fire ball": { "url": "spell/fire-ball", "page": "RB, p. 144" },
+  "flaming sword of rhuin": {
+    "url": "spell/flaming-sword-of-rhuin",
+    "page": "RB, p. 144"
+  },
+  "fiery blast": { "url": "spell/fiery-blast", "page": "RB, p. 144" },
+  "burning head": { "url": "spell/burning-head", "page": "RB, p. 144" },
+  "conflagration of doom": {
+    "url": "spell/conflagration-of-doom",
+    "page": "RB, p. 144"
+  },
+  "wall of fire": { "url": "spell/wall-of-fire", "page": "RB, p. 144" },
+  "rule of burning iron": {
+    "url": "spell/rule-of-burning-iron",
+    "page": "RB, p. 145"
+  },
+  "commandment of brass": {
+    "url": "spell/commandment-of-brass",
+    "page": "RB, p. 145"
+  },
+  "transmutation of lead": {
+    "url": "spell/transmutation-of-lead",
+    "page": "RB, p. 145"
+  },
+  "distillation of molten silver": {
+    "url": "spell/distillation-of-molten-silver",
+    "page": "RB, p. 145"
+  },
+  "law of gold": { "url": "spell/law-of-gold", "page": "RB, p. 145" },
+  "bane of forged steel": {
+    "url": "spell/bane-of-forged-steel",
+    "page": "RB, p. 145"
+  },
+  "creeping death": { "url": "spell/creeping-death", "page": "RB, p. 146" },
+  "pelt of midnight spell": {
+    "url": "spell/pelt-of-midnight",
+    "page": "RB, p. 146"
+  },
+  "shades of death": { "url": "spell/shades-of-death", "page": "RB, p. 146" },
+  "unseen lurker": { "url": "spell/unseen-lurker", "page": "RB, p. 146" },
+  "pit of shades": { "url": "spell/pit-of-shades", "page": "RB, p. 146" },
+  "the oxen stands": {
+    "url": "spell/the-oxen-stands",
+    "page": "WC 2004, p. 93"
+  },
+  "the eagle's cry": {
+    "url": "spell/the-eagles-cry-revised",
+    "page": "WC 2004, p. 93"
+  },
+  "the bear's anger": {
+    "url": "spell/the-bears-anger-revised",
+    "page": "WC 2004, p. 93"
+  },
+  "the crow's feast": {
+    "url": "spell/the-crows-feast",
+    "page": "WC 2004, p. 93"
+  },
+  "the beast cowers": {
+    "url": "spell/the-beast-cowers-revised",
+    "page": "WC 2004, p. 93"
+  },
+  "the wolf hunts": {
+    "url": "spell/the-wolf-hunts-revised",
+    "page": "WC 2004, p. 93"
+  },
+  "second sign of amul": {
+    "url": "spell/second-sign-of-amul-revised",
+    "page": "WC 2004, p. 94"
+  },
+  "portent of far": { "url": "spell/portent-of-far", "page": "WC 2004, p. 94" },
+  "forked lightning": {
+    "url": "spell/forked-lightning-revised",
+    "page": "WC 2004, p. 94"
+  },
+  "uranon's thunder bolt": {
+    "url": "spell/uranons-thunder-bolt-revised",
+    "page": "WC 2004, p. 94"
+  },
+  "storm of cronos": {
+    "url": "spell/storm-of-cronos",
+    "page": "WC 2004, p. 94"
+  },
+  "the comet of casandora": {
+    "url": "spell/the-comet-of-casandora-revised",
+    "page": "WC 2004, p. 94"
+  },
+  "pha's illumination": {
+    "url": "spell/phas-illumination",
+    "page": "RB, p. 149"
+  },
+  "dazzling brightness": {
+    "url": "spell/dazzling-brightness",
+    "page": "RB, p. 149"
+  },
+  "healing hand": { "url": "spell/healing-hand", "page": "RB, p. 149" },
+  "guardian light": { "url": "spell/guardian-light", "page": "RB, p. 149" },
+  "blinding light": { "url": "spell/blinding-light", "page": "RB, p. 149" },
+  "mistress of the marsh": {
+    "url": "spell/mistress-of-the-marsh-revised",
+    "page": "WC 2004, p. 95"
+  },
+  "father of the thorn": {
+    "url": "spell/father-of-the-thorn-revised",
+    "page": "WC 2004, p. 95"
+  },
+  "the howler wind": {
+    "url": "spell/the-howler-wind-revised",
+    "page": "WC 2004, p. 95"
+  },
+  "master of the wood": {
+    "url": "spell/master-of-the-wood-revised",
+    "page": "WC 2004, p. 95"
+  },
+  "master of stone": {
+    "url": "spell/master-of-stone-revised",
+    "page": "WC 2004, p. 95"
+  },
+  "the rain lord": {
+    "url": "spell/the-rain-lord-revised",
+    "page": "WC 2004, p. 95"
+  },
+  "dark hand of death": {
+    "url": "spell/dark-hand-of-death",
+    "page": "RB, p. 151"
+  },
+  "death dealer": { "url": "spell/death-dealer", "page": "RB, p. 151" },
+  "steal soul": { "url": "spell/steal-soul", "page": "RB, p. 151" },
+  "wind of death": { "url": "spell/wind-of-death", "page": "RB, p. 151" },
+  "drain life": { "url": "spell/drain-life", "page": "RB, p. 151" },
+  "doom and darkness!": {
+    "url": "spell/doom-and-darkness",
+    "page": "RB, p. 151"
+  },
+  "bolt of dark light": {
+    "url": "spell/bolt-of-dark-light",
+    "page": "SoC, p. 26"
+  },
+  "nightmare spell": { "url": "spell/nightmare", "page": "SoC, p. 26" },
+  "curse of the dark master": {
+    "url": "spell/curse-of-the-dark-master",
+    "page": "SoC, p. 26"
+  },
+  "fog of death": { "url": "spell/fog-of-death", "page": "SoC, p. 26" },
+  "coils of the serpent": {
+    "url": "spell/coils-of-the-serpent",
+    "page": "SoC, p. 26"
+  },
+  "chillwind": { "url": "spell/chillwind", "page": "DE, p. 17" },
+  "soul stealer": { "url": "spell/soul-stealer", "page": "DE, p. 17" },
+  "dominion": { "url": "spell/dominion", "page": "DE, p. 17" },
+  "rune of water": { "url": "spell/rune-of-water", "page": "DW, p. 9" },
+  "rune of air": { "url": "spell/rune-of-air", "page": "DW, p. 9" },
+  "rune of fire spell": { "url": "spell/rune-of-fire", "page": "DW, p. 9" },
+  "rune of earth": { "url": "spell/rune-of-earth", "page": "DW, p. 9" },
+  "fortune is fickle": {
+    "url": "spell/fortune-is-fickle",
+    "page": "HE, p. 21"
+  },
+  "flames of the phoenix": {
+    "url": "spell/flames-of-the-phoenix",
+    "page": "HE, p. 21"
+  },
+  "the writhing mists": {
+    "url": "spell/the-writhing-mists",
+    "page": "SoC, p. 95"
+  },
+  "mistress of the deep": {
+    "url": "spell/mistress-of-the-deep",
+    "page": "SoC, p. 95"
+  },
+  "shardstorm": { "url": "spell/shardstorm", "page": "KS, p. 34" },
+  "freezing blast": { "url": "spell/freezing-blast", "page": "KS, p. 34" },
+  "form of the frostfiend": {
+    "url": "spell/form-of-the-frostfiend",
+    "page": "KS, p. 34"
+  },
+  "invocation of the ice storm": {
+    "url": "spell/invocation-of-the-ice-storm",
+    "page": "KS, p. 34"
+  },
+  "midwinter's kiss": { "url": "spell/midwinters-kiss", "page": "KS, p. 34" },
+  "glacial barrier": { "url": "spell/glacial-barrier", "page": "KS, p. 34" },
+  "'eadbutt spell": { "url": "spell/eadbutt", "page": "O&G, p. 28" },
+  "waaagh! spell": { "url": "spell/waaagh", "page": "O&G, p. 29" },
+  "elemental power": {
+    "url": "spell/elemental-power",
+    "page": "WC 2003, p. 14"
+  },
+  "betrayal in death": {
+    "url": "spell/betrayal-in-death",
+    "page": "WC 2003, p. 14"
+  },
+  "wings of fate": { "url": "spell/wings-of-fate", "page": "WC 2003, p. 15" },
+  "light of battle": {
+    "url": "spell/light-of-battle",
+    "page": "WC 2003, p. 15"
+  },
+  "gift of life": { "url": "spell/gift-of-life", "page": "WC 2003, p. 15" },
+  "blessing of valour": {
+    "url": "spell/blessing-of-valour",
+    "page": "WC 2003, p. 15"
+  },
+  "boon of courage": {
+    "url": "spell/boon-of-courage",
+    "page": "WC 2003, p. 15"
+  },
+  "voice of command": {
+    "url": "spell/voice-of-command",
+    "page": "WC 2003, p. 15"
+  },
+  "invocation of nehek spell": {
+    "url": "spell/invocation-of-nehek",
+    "page": "VC, p. 58"
+  },
+  "hand of dust spell": { "url": "spell/hand-of-dust", "page": "VC, p. 58" },
+  "gaze of nagash": { "url": "spell/gaze-of-nagash", "page": "VC, p. 58" },
+  "vanhel's danse macabre": {
+    "url": "spell/vanhels-danse-macabre",
+    "page": "VC, p. 58"
+  }
 }
