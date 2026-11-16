@@ -145,6 +145,7 @@
           "name_en": "Anvil of Doom",
           "name_es": "Yunque Rúnico",
           "points": 175,
+          "onePerArmy": true,
           "extra_categories": [
             "heroes"
           ],
