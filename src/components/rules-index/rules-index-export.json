@@ -246,12 +246,9 @@
     "url": "special-rules/mastery-of-the-storm-winds",
     "page": "AJ:AoGC, p. 27"
   },
-  "cry of war": { "url": "special-rules/cry-of-war", "page": "DE, p. 6" },
-  "rune of khaine": {
-    "url": "special-rules/rune-of-khaine",
-    "page": "DE, p. 6"
-  },
-  "witchbrew": { "url": "special-rules/witchbrew", "page": "DE, p. 6" },
+  "cry of war": { "url": "magic-item/cry-of-war", "page": "DE, p. 23" },
+  "rune of khaine": { "url": "magic-item/rune-of-khaine", "page": "DE, p. 23" },
+  "witchbrew": { "url": "magic-item/witchbrew", "page": "DE, p. 23" },
   "lay in wait": {
     "url": "special-rules/lay-in-wait",
     "page": "AJ:TKoK, p. 31"
@@ -336,8 +333,8 @@
     "page": "AJ:EoM, p. 29"
   },
   "cloud of flies": {
-    "url": "special-rules/cloud-of-flies",
-    "page": "SK, p. 6"
+    "url": "magic-item/cloud-of-flies",
+    "page": "HoC, p. 49"
   },
   "borne aloft": { "url": "special-rules/borne-aloft", "page": "FoF, p. 13" },
   "invocation of nehek": {
@@ -442,18 +439,14 @@
     "url": "special-rules/expeditionary-marksmen",
     "page": "AJ:DMH, p. 33"
   },
-  "crown of antlers": {
-    "url": "magic-item/crown-of-antlers",
-    "page": "AJ:WER, p. 48"
-  },
   "king's guard": { "url": "special-rules/kings-guard", "page": "FoF, p. 163" },
   "brazen wheels": {
     "url": "special-rules/brazen-wheels",
     "page": "DoC, p. 8"
   },
-  "black lotus": { "url": "special-rules/black-lotus", "page": "DE, p. 7" },
-  "dark venom": { "url": "special-rules/dark-venom", "page": "DE, p. 7" },
-  "manbane": { "url": "special-rules/manbane", "page": "DE, p. 7" },
+  "black lotus": { "url": "magic-item/black-lotus", "page": "DE, p. 22" },
+  "dark venom": { "url": "magic-item/dark-venom", "page": "DE, p. 22" },
+  "manbane": { "url": "magic-item/manbane", "page": "DE, p. 22" },
   "strike the runes": {
     "url": "special-rules/strike-the-runes",
     "page": "FoF, p. 15"
@@ -965,7 +958,7 @@
   },
   "soporific musk": {
     "url": "magic-item/soporific-musk",
-    "page": "DoC, p. 30"
+    "page": "HoC, p. 49"
   },
   "inner circle": { "url": "special-rules/inner-circle", "page": "FoF, p. 65" },
   "soul reaper": { "url": "special-rules/soul-reaper", "page": "RH, p. 146" },
@@ -1357,8 +1350,8 @@
     "page": "CD, p. 10, FoF, p. 68"
   },
   "gaze of the gods": {
-    "url": "special-rules/gaze-of-the-gods",
-    "page": "RH, p. 81 & 116"
+    "url": "magic-item/gaze-of-the-gods",
+    "page": "HoC, p. 50"
   },
   "leader of the pack beastmen": {
     "url": "special-rules/leader-of-the-pack-beastmen",
@@ -1745,10 +1738,6 @@
   "miner's cart": {
     "url": "special-rules/miners-cart",
     "page": "AJ:DMH, p. 45"
-  },
-  "favour of the gods": {
-    "url": "magic-item/favour-of-the-gods",
-    "page": "RH, p. 80"
   },
   "warpaint": { "url": "special-rules/warpaint", "page": "RH, p. 46" },
   "deathblow": { "url": "special-rules/deathblow", "page": "FoF, p. 39" },
@@ -2187,8 +2176,8 @@
   "huge gob": { "url": "weapons/huge-gob", "page": "RH, p. 27 & 32" },
   "great axe": { "url": "weapons/great-axe", "page": "DoC, p. 3" },
   "crown of horns": {
-    "url": "weapons/crown-of-horns-grand-cathay",
-    "page": "AJ:AoGC, p. 29"
+    "url": "magic-item/crown-of-horns",
+    "page": "BoC, p. 62"
   },
   "twisted antlers": {
     "url": "weapons/twisted-antlers",
@@ -2669,10 +2658,7 @@
     "url": "weapons/infernal-incendiaries",
     "page": "CD, p. 14"
   },
-  "sword of hoeth": {
-    "url": "weapons/sword-of-hoeth",
-    "page": "FoF, p. 187"
-  },
+  "sword of hoeth": { "url": "magic-item/sword-of-hoeth", "page": "HE, p. 16" },
   "ranger's glaive": {
     "url": "weapons/rangers-glaive",
     "page": "FoF, p. 130"
@@ -2908,10 +2894,7 @@
   },
   "fireglaive": { "url": "weapons/fireglaive", "page": "CD, p. 22" },
   "venom spray": { "url": "weapons/venom-spray", "page": "LM, p. 15" },
-  "things-catcher": {
-    "url": "weapons/things-catcher",
-    "page": "SK, p. 11"
-  },
+  "things-catcher": { "url": "magic-item/things-catcher", "page": "SK, p. 36" },
   "billowing death": {
     "url": "weapons/billowing-death",
     "page": "SK, p. 16"
@@ -2942,10 +2925,7 @@
     "url": "weapons/warpstone-claws",
     "page": "SK, p. 18"
   },
-  "arcane bodkins": {
-    "url": "weapons/arcane-bodkins",
-    "page": "FoF, p. 147"
-  },
+  "arcane bodkins": { "url": "magic-item/arcane-bodkins", "page": "WE, p. 62" },
   "cavalry spear": {
     "url": "weapons/spears-cavalry",
     "page": "RB, p. 215"
@@ -3326,2376 +3306,707 @@
     "url": "spell-lists/waaagh-magic",
     "page": "RB, p. 334"
   },
-  "'eadbuttin' 'at": { "url": "magic-item/eadbuttin-at", "page": "RH, p. 44" },
   "a befuddlement of mischiefs": {
     "url": "magic-item/a-befuddlement-of-mischiefs",
-    "page": "FoF, p. 141"
+    "page": "WE, p. 60"
   },
   "a blight of terrors": {
     "url": "magic-item/a-blight-of-terrors",
-    "page": "FoF, p. 141"
+    "page": "WE, p. 60"
   },
   "a lamentation of despairs": {
     "url": "magic-item/a-lamentation-of-despairs",
-    "page": "FoF, p. 141"
+    "page": "WE, p. 60"
   },
   "a murder of spites": {
     "url": "magic-item/a-murder-of-spites",
-    "page": "FoF, p. 141"
+    "page": "WE, p. 60"
   },
   "a muster of malevolents": {
     "url": "magic-item/a-muster-of-malevolents",
-    "page": "FoF, p. 141"
+    "page": "WE, p. 60"
   },
   "a resplendence of luminescents": {
     "url": "magic-item/a-resplendence-of-luminescents",
-    "page": "FoF, p. 141"
-  },
-  "acid ichor": { "url": "magic-item/acid-ichor", "page": "RH, p. 77" },
-  "æther blade": { "url": "magic-item/aether-blade", "page": "DoC, p. 27" },
-  "alchemist's mask": {
-    "url": "magic-item/alchemists-mask",
-    "page": "AJ:AoGC, p. 44"
+    "page": "WE, p. 60"
   },
   "allure of slaanesh": {
     "url": "magic-item/allure-of-slaanesh",
-    "page": "DoC, p. 30"
-  },
-  "amulet of the serpent": {
-    "url": "magic-item/amulet-of-the-serpent",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "amulet of the tempest": {
-    "url": "magic-item/amulet-of-the-tempest",
-    "page": "AJ:HER, p. 48"
+    "page": "SoC, p. 86"
   },
   "an annoyance of netlings": {
     "url": "magic-item/an-annoyance-of-netlings",
-    "page": "FoF, p. 141"
+    "page": "WE, p. 60"
   },
   "annulian crystal": {
     "url": "magic-item/annulian-crystal",
-    "page": "FoF, p. 183"
-  },
-  "anointed armour": {
-    "url": "magic-item/anointed-armour",
-    "page": "AJ:KoB, p. 47"
-  },
-  "anointed of asuryan": {
-    "url": "magic-item/anointed-of-asuryan",
-    "page": "FoF, p. 179"
+    "page": "HE, p. 16"
   },
   "antlers of the great hunt": {
     "url": "magic-item/antlers-of-the-great-hunt",
-    "page": "FoF, p. 106"
-  },
-  "arcane familiar": {
-    "url": "magic-item/arcane-familiar",
-    "page": "RB, p. 343"
-  },
-  "arch-lightning rod": {
-    "url": "magic-item/arch-lightning-rod",
-    "page": "AJ:TRoW, p. 48"
-  },
-  "ariel's favour": {
-    "url": "magic-item/ariels-favour",
-    "page": "AJ:WER, p. 47"
-  },
-  "armour of bazherak the cruel": {
-    "url": "magic-item/armour-of-bazherak-the-cruel",
-    "page": "CD, p. 18"
-  },
-  "armour of caledor": {
-    "url": "magic-item/armour-of-caledor",
-    "page": "FoF, p. 182"
-  },
-  "armour of destiny": {
-    "url": "magic-item/armour-of-destiny",
-    "page": "RB, p. 340"
-  },
-  "armour of fortune": {
-    "url": "magic-item/armour-of-fortune",
-    "page": "FoF, p. 75"
+    "page": "BR, p. 61"
   },
   "armour of khorne": {
     "url": "magic-item/armour-of-khorne",
-    "page": "DoC, p. 28"
+    "page": "HoC, p. 49"
   },
   "armour of meteoric iron": {
     "url": "magic-item/armour-of-meteoric-iron",
-    "page": "RB, p. 340"
+    "page": "EM, p. 20"
   },
-  "armour of mork": { "url": "magic-item/armour-of-mork", "page": "RH, p. 43" },
-  "armour of silvered steel": {
-    "url": "magic-item/armour-of-silvered-steel",
-    "page": "RB, p. 340"
+  "armour of mork": {
+    "url": "magic-item/armour-of-mork",
+    "page": "O&G, p. 30"
   },
   "armour of stars": {
     "url": "magic-item/armour-of-stars",
-    "page": "AJ:HER, p. 47"
+    "page": "HE, p. 16"
   },
   "armour of tarnus": {
     "url": "magic-item/armour-of-tarnus",
-    "page": "FoF, p. 75"
+    "page": "EM, p. 20"
   },
   "armour of the ages": {
     "url": "magic-item/armour-of-the-ages",
-    "page": "RH, p. 151"
+    "page": "TK, p. 36"
   },
-  "armour of the damned": {
-    "url": "magic-item/armour-of-the-damned",
-    "page": "RH, p. 79"
-  },
-  "ashen banner": { "url": "magic-item/ashen-banner", "page": "CD, p. 18" },
-  "aspect of the bear": {
-    "url": "magic-item/aspect-of-the-bear",
-    "page": "AJ:WER, p. 42"
-  },
-  "aspect of the boar": {
-    "url": "magic-item/aspect-of-the-boar",
-    "page": "AJ:WER, p. 42"
-  },
-  "aspect of the cat": {
-    "url": "magic-item/aspect-of-the-cat",
-    "page": "AJ:WER, p. 42"
-  },
-  "aspect of the hound": {
-    "url": "magic-item/aspect-of-the-hound",
-    "page": "AJ:WER, p. 42"
-  },
-  "asyendi's bane": {
-    "url": "magic-item/asyendis-bane",
-    "page": "FoF, p. 142"
-  },
-  "aura of pain": { "url": "magic-item/aura-of-pain", "page": "RH, p. 77" },
-  "aura of quetzl": { "url": "magic-item/aura-of-quetzl", "page": "LM, p. 18" },
-  "axe of khorne": { "url": "magic-item/axe-of-khorne", "page": "DoC, p. 28" },
-  "axe of men": { "url": "magic-item/axe-of-men", "page": "RH, p. 112" },
-  "backstabber's blade": {
-    "url": "magic-item/backstabbers-blade",
-    "page": "AJ:O&GT, p. 46"
-  },
-  "banner of acquiescence": {
-    "url": "magic-item/banner-of-acquiescence",
-    "page": "DoC, p. 30"
+  "asyendi's bane": { "url": "magic-item/asyendis-bane", "page": "WE, p. 62" },
+  "aura of quetzl": { "url": "magic-item/aura-of-quetzl", "page": "LM, p. 52" },
+  "axe of khorne": {
+    "url": "magic-item/axe-of-khorne-daemonic-gifts",
+    "page": "HoC, p. 49"
   },
   "banner of arcane protection": {
     "url": "magic-item/banner-of-arcane-protection",
-    "page": "FoF, p. 182"
-  },
-  "banner of balance": {
-    "url": "magic-item/banner-of-balance",
-    "page": "AJ:HER, p. 47"
+    "page": "HE, p. 16"
   },
   "banner of châlons": {
     "url": "magic-item/banner-of-chalons",
-    "page": "FoF, p. 105"
+    "page": "BR, p. 61"
   },
-  "banner of change": {
-    "url": "magic-item/banner-of-change",
-    "page": "DoC, p. 31"
-  },
-  "banner of confidence": {
-    "url": "magic-item/banner-of-confidence",
-    "page": "AJ:HER, p. 47"
-  },
-  "banner of discord": {
-    "url": "magic-item/banner-of-discord",
-    "page": "DoC, p. 31"
-  },
-  "banner of duty": {
-    "url": "magic-item/banner-of-duty",
-    "page": "FoF, p. 75"
-  },
-  "banner of ellyrion": {
-    "url": "magic-item/banner-of-ellyrion",
-    "page": "FoF, p. 182"
-  },
-  "banner of har ganeth": {
-    "url": "magic-item/banner-of-har-ganeth",
-    "page": "DE, p. 23"
-  },
-  "banner of honourable warfare": {
-    "url": "magic-item/banner-of-honourable-warfare",
-    "page": "AJ:KoB, p. 47"
-  },
-  "banner of iron resolve": {
-    "url": "magic-item/banner-of-iron-resolve",
-    "page": "RB, p. 341"
-  },
-  "banner of midsummer's eve": {
-    "url": "magic-item/banner-of-midsummers-eve",
-    "page": "FoF, p. 143"
-  },
+  "banner of duty": { "url": "magic-item/banner-of-duty", "page": "EM, p. 20" },
   "banner of nagarythe": {
     "url": "magic-item/banner-of-nagarythe",
-    "page": "DE, p. 23"
+    "page": "DE, p. 18"
   },
-  "banner of outrage": {
-    "url": "magic-item/banner-of-outrage",
-    "page": "RH, p. 113"
-  },
-  "banner of rage": { "url": "magic-item/banner-of-rage", "page": "RH, p. 79" },
-  "banner of resilience": {
-    "url": "magic-item/banner-of-resilience",
-    "page": "AJ:HER, p. 47"
-  },
-  "banner of springtide": {
-    "url": "magic-item/banner-of-springtide",
-    "page": "AJ:WER, p. 47"
-  },
-  "banner of swirling wind": {
-    "url": "magic-item/banner-of-swirling-wind",
-    "page": "AJ:TRoW, p. 47"
+  "banner of rage": {
+    "url": "magic-item/banner-of-rage",
+    "page": "HoC, p. 50"
   },
   "banner of the barrows": {
     "url": "magic-item/banner-of-the-barrows",
-    "page": "VC, p. 25"
-  },
-  "banner of the bastion": {
-    "url": "magic-item/banner-of-the-bastion",
-    "page": "AJ:AoGC, p. 43"
-  },
-  "banner of the baying hound": {
-    "url": "magic-item/banner-of-the-baying-hound",
-    "page": "AJ:WoC, p. 47"
-  },
-  "banner of the dark powers": {
-    "url": "magic-item/banner-of-the-dark-powers",
-    "page": "AJ:WoC, p. 47"
-  },
-  "banner of the desert winds": {
-    "url": "magic-item/banner-of-the-desert-winds",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "banner of the dragon's wrath": {
-    "url": "magic-item/banner-of-the-dragons-wrath",
-    "page": "AJ:DotSD, p. 47"
-  },
-  "banner of the eternal queen": {
-    "url": "magic-item/banner-of-the-eternal-queen",
-    "page": "FoF, p. 143"
+    "page": "VC, p. 49"
   },
   "banner of the gods": {
     "url": "magic-item/banner-of-the-gods",
-    "page": "RH, p. 79"
+    "page": "HoC, p. 50"
   },
-  "banner of the hunter king": {
-    "url": "magic-item/banner-of-the-hunter-king",
-    "page": "FoF, p. 143"
-  },
-  "banner of the knights panther": {
-    "url": "magic-item/banner-of-the-knights-panther",
-    "page": "AJ:EoM, p. 47"
-  },
-  "banner of the lady's grace": {
-    "url": "magic-item/banner-of-the-ladys-grace",
-    "page": "AJ:KoB, p. 47"
-  },
-  "banner of the steadfast": {
-    "url": "magic-item/banner-of-the-steadfast",
-    "page": "AJ:TRoW, p. 47"
-  },
-  "banner of the warped moon": {
-    "url": "magic-item/banner-of-the-warped-moon",
-    "page": "AJ:BB, p. 47"
-  },
-  "banner of the wild hunt": {
-    "url": "magic-item/banner-of-the-wild-hunt",
-    "page": "AJ:WER, p. 47"
-  },
-  "banner of the wildwood": {
-    "url": "magic-item/banner-of-the-wildwood",
-    "page": "FoF, p. 143"
-  },
-  "banner of the wildz": {
-    "url": "magic-item/banner-of-the-wildz",
-    "page": "AJ:O&GT, p. 47"
-  },
-  "banner of the zealous knight": {
-    "url": "magic-item/banner-of-the-zealous-knight",
-    "page": "AJ:KoB, p. 47"
-  },
-  "banner of unholy victory": {
-    "url": "magic-item/banner-of-unholy-victory",
-    "page": "DoC, p. 27"
-  },
-  "banner of verminous scurrying": {
-    "url": "magic-item/banner-of-verminous-scurrying",
-    "page": "SK, p. 21"
-  },
-  "battle banner": { "url": "magic-item/battle-banner", "page": "FoF, p. 182" },
-  "battle hunger": {
-    "url": "magic-item/battle-hunger",
-    "page": "AJ:TRoW, p. 41"
-  },
-  "battleaxe of the last big waaagh!": {
-    "url": "magic-item/battleaxe-of-the-last-big-waaagh",
-    "page": "RH, p. 42"
-  },
-  "beast reaver": { "url": "magic-item/beast-reaver", "page": "AJ:EoM, p. 35" },
-  "beastkiller": { "url": "magic-item/beastkiller", "page": "OK, p. 20" },
-  "becalming cogitation": {
-    "url": "magic-item/becalming-cogitation",
-    "page": "LM, p. 16"
-  },
-  "becalming orb": {
-    "url": "magic-item/becalming-orb",
-    "page": "AJ:TRoW, p. 48"
-  },
-  "bedazzling helm": {
-    "url": "magic-item/bedazzling-helm",
-    "page": "RB, p. 340"
-  },
-  "beguile": { "url": "magic-item/beguile", "page": "VC, p. 23" },
-  "berserker blade": {
-    "url": "magic-item/berserker-blade",
-    "page": "RB, p. 339"
-  },
-  "big boss 'at": { "url": "magic-item/big-boss-at", "page": "RH, p. 44" },
-  "bigger, choppier axe": {
-    "url": "magic-item/bigger-choppier-axe",
-    "page": "AJ:O&GT, p. 46"
-  },
-  "biting blade": { "url": "magic-item/biting-blade", "page": "RB, p. 339" },
-  "black dragon egg": {
-    "url": "magic-item/black-dragon-egg",
-    "page": "DE, p. 24"
-  },
+  "battle banner": { "url": "magic-item/battle-banner", "page": "HE, p. 16" },
+  "beastkiller": { "url": "magic-item/beastkiller", "page": "OK, p. 58" },
+  "beguile": { "url": "magic-item/beguile", "page": "VC, p. 52" },
+  "biting blade": { "url": "magic-item/biting-blade", "page": "RB, p. 154" },
   "birth-sword of carcassonne": {
-    "url": "magic-item/birth-sword-of-carcassonne"
+    "url": "magic-item/birth-sword-of-carcassonne",
+    "page": "BR, p. 61"
   },
   "black hammer of hashut": {
     "url": "magic-item/black-hammer-of-hashut",
-    "page": "CD, p. 17"
+    "page": "RH, p. 33"
   },
-  "black staff": { "url": "magic-item/black-staff", "page": "DE, p. 24" },
-  "blade of antarhak": {
-    "url": "magic-item/blade-of-antarhak",
-    "page": "AJ:TKoK, p. 46"
-  },
+  "black staff": { "url": "magic-item/black-staff", "page": "DE, p. 18" },
   "blade of nurglitch": {
     "url": "magic-item/blade-of-nurglitch",
-    "page": "SK, p. 20"
+    "page": "SK, p. 36"
   },
   "blade of revered tzunki": {
     "url": "magic-item/blade-of-revered-tzunki",
-    "page": "LM, p. 17"
+    "page": "LM, p. 52"
   },
   "blade of sea gold": {
     "url": "magic-item/blade-of-sea-gold",
-    "page": "AJ:HER, p. 46"
+    "page": "HE, p. 16"
   },
-  "blade of silvered steel": {
-    "url": "magic-item/blade-of-silvered-steel",
-    "page": "AJ:EoM, p. 46"
-  },
-  "blades of endless flame": {
-    "url": "magic-item/blades-of-endless-flame",
-    "page": "AJ:WER, p. 46"
-  },
-  "blades of loec": {
-    "url": "magic-item/blades-of-loec",
-    "page": "FoF, p. 142"
-  },
+  "blades of loec": { "url": "magic-item/blades-of-loec", "page": "WE, p. 62" },
   "blasted standard": {
     "url": "magic-item/blasted-standard",
-    "page": "RH, p. 79"
+    "page": "HoC, p. 50"
   },
-  "blight-tipped arrows": {
-    "url": "magic-item/blight-tipped-arrows",
-    "page": "AJ:WER, p. 48"
-  },
-  "blood armour": { "url": "magic-item/blood-armour", "page": "DE, p. 23" },
-  "blood drinker": { "url": "magic-item/blood-drinker", "page": "VC, p. 24" },
-  "blood of caledor": {
-    "url": "magic-item/blood-of-caledor",
-    "page": "FoF, p. 180"
-  },
-  "blood of the shadowgave": {
-    "url": "magic-item/blood-of-the-shadowgave",
-    "page": "AJ:BB, p. 48"
-  },
-  "bloodcleaver": { "url": "magic-item/bloodcleaver", "page": "OK, p. 21" },
-  "bloodskull pendant": {
-    "url": "magic-item/bloodskull-pendant",
-    "page": "AJ:WoC, p. 48"
-  },
-  "bog-wood staff": {
-    "url": "magic-item/bog-wood-staff",
-    "page": "AJ:O&GT, p. 37"
-  },
-  "book of ashur": { "url": "magic-item/book-of-ashur", "page": "FoF, p. 76" },
-  "bow of loren": { "url": "magic-item/bow-of-loren", "page": "FoF, p. 142" },
+  "blood armour": { "url": "magic-item/blood-armour", "page": "DE, p. 18" },
+  "blood drinker": { "url": "magic-item/blood-drinker", "page": "VC, p. 49" },
+  "bloodcleaver": { "url": "magic-item/bloodcleaver", "page": "OK, p. 62" },
   "bow of the seafarer": {
     "url": "magic-item/bow-of-the-seafarer",
-    "page": "AJ:HER, p. 46"
+    "page": "HE, p. 16"
   },
-  "brass orb": { "url": "magic-item/brass-orb", "page": "SK, p. 22" },
-  "brazen collar": { "url": "magic-item/brazen-collar", "page": "RH, p. 79" },
-  "brazen will": { "url": "magic-item/brazen-will", "page": "AJ:TRoW, p. 41" },
-  "breath of hashut": {
-    "url": "magic-item/breath-of-hashut",
-    "page": "CD, p. 19"
-  },
-  "bull standard": { "url": "magic-item/bull-standard", "page": "OK, p. 22" },
-  "burning blade": { "url": "magic-item/burning-blade", "page": "RB, p. 339" },
+  "brass orb": { "url": "magic-item/brass-orb", "page": "SK, p. 36" },
+  "bull standard": { "url": "magic-item/bull-standard", "page": "OK, p. 62" },
   "buzgob's knobbly staff": {
     "url": "magic-item/buzgobs-knobbly-staff",
-    "page": "RH, p. 44"
+    "page": "O&G, p. 30"
   },
-  "cackling blade": {
-    "url": "magic-item/cackling-blade",
-    "page": "AJ:TRoW, p. 46"
-  },
-  "cacophonous dirge": {
-    "url": "magic-item/cacophonous-dirge",
-    "page": "AJ:BB, p. 48"
-  },
-  "cannibal totem": { "url": "magic-item/cannibal-totem", "page": "OK, p. 22" },
-  "cathayan jet pendant": {
-    "url": "magic-item/cathayan-jet-pendant",
-    "page": "OK, p. 22"
-  },
+  "cannibal totem": { "url": "magic-item/cannibal-totem", "page": "OK, p. 62" },
   "cautious shield": {
     "url": "magic-item/cautious-shield",
-    "page": "SK, p. 21"
-  },
-  "chalice of brionne": {
-    "url": "magic-item/chalice-of-brionne",
-    "page": "AJ:KoB, p. 41"
-  },
-  "chalice of dark rain": {
-    "url": "magic-item/chalice-of-dark-rain",
-    "page": "AJ:BB, p. 47"
+    "page": "SK, p. 36"
   },
   "chaos runesword": {
     "url": "magic-item/chaos-runesword",
-    "page": "RH, p. 78"
-  },
-  "charmed shield": {
-    "url": "magic-item/charmed-shield",
-    "page": "RB, p. 340"
-  },
-  "chayal": { "url": "magic-item/chayal", "page": "AJ:HER, p. 35" },
-  "chieftain's blade": {
-    "url": "magic-item/chieftains-blade",
-    "page": "AJ:WoC, p. 46"
-  },
-  "chracian hunter": {
-    "url": "magic-item/chracian-hunter",
-    "page": "FoF, p. 180"
-  },
-  "circlet of atrazar": {
-    "url": "magic-item/circlet-of-atrazar",
-    "page": "AJ:HER, p. 47"
+    "page": "HoC, p. 50"
   },
   "cloak of feathers": {
     "url": "magic-item/cloak-of-feathers",
-    "page": "LM, p. 19"
-  },
-  "cloak of isha": {
-    "url": "magic-item/cloak-of-isha",
-    "page": "AJ:WER, p. 35"
-  },
-  "cloak of mist & shadows": {
-    "url": "magic-item/cloak-of-mist-and-shadows",
-    "page": "VC, p. 26"
-  },
-  "cloak of po mei": {
-    "url": "magic-item/cloak-of-po-mei",
-    "page": "AJ:AoGC, p. 44"
+    "page": "LM, p. 52"
   },
   "cloak of the dunes": {
     "url": "magic-item/cloak-of-the-dunes",
-    "page": "RH, p. 152"
-  },
-  "cloak of tumbling leaves": {
-    "url": "magic-item/cloak-of-tumbling-leaves",
-    "page": "AJ:WER, p. 47"
-  },
-  "clockwork compass": {
-    "url": "magic-item/clockwork-compass",
-    "page": "AJ:DotSD, p. 48"
-  },
-  "cold-blooded banner": {
-    "url": "magic-item/cold-blooded-banner",
-    "page": "DE, p. 23"
+    "page": "TK, p. 36"
   },
   "collar of khorne": {
-    "url": "magic-item/collar-of-khorne",
-    "page": "DoC, p. 28"
+    "url": "magic-item/collar-of-khorne-daemonic-gifts",
+    "page": "HoC, p. 49"
   },
   "collar of shapesh": {
     "url": "magic-item/collar-of-shapesh",
-    "page": "RH, p. 151"
+    "page": "TK, p. 36"
   },
   "conqueror's tapestry": {
     "url": "magic-item/conquerors-tapestry",
-    "page": "FoF, p. 105"
-  },
-  "cornucopia of corpulence": {
-    "url": "magic-item/cornucopia-of-corpulence",
-    "page": "AJ:BB, p. 47"
+    "page": "BR, p. 61"
   },
   "crimson armour of dargan": {
     "url": "magic-item/crimson-armour-of-dargan",
-    "page": "RH, p. 79"
+    "page": "HoC, p. 50"
   },
   "crook & flail of radiance": {
     "url": "magic-item/crook-and-flail-of-radiance",
-    "page": "RH, p. 150"
+    "page": "TK, p. 36"
   },
   "crown of everlasting conquest": {
     "url": "magic-item/crown-of-everlasting-conquest",
-    "page": "RH, p. 79"
+    "page": "HoC, p. 50"
   },
-  "crown of horns beastmen": {
-    "url": "magic-item/crown-of-horns-beastmen",
-    "page": "RH, p. 111"
-  },
-  "crown of jade": {
-    "url": "magic-item/crown-of-jade",
-    "page": "AJ:AoGC, p. 43"
-  },
-  "crown of kings": {
-    "url": "magic-item/crown-of-kings",
-    "page": "RH, p. 151"
-  },
+  "crown of kings": { "url": "magic-item/crown-of-kings", "page": "TK, p. 36" },
   "crown of the damned": {
     "url": "magic-item/crown-of-the-damned",
-    "page": "VC, p. 25"
+    "page": "VC, p. 49"
   },
-  "crusader's clarion": {
-    "url": "magic-item/crusaders-clarion",
-    "page": "AJ:KoB, p. 48"
-  },
-  "crusader's lance": {
-    "url": "magic-item/crusaders-lance",
-    "page": "AJ:KoB, p. 46"
-  },
-  "crusader's tapestry": {
-    "url": "magic-item/crusaders-tapestry",
-    "page": "AJ:KoB, p. 47"
-  },
-  "crystal ball": { "url": "magic-item/crystal-ball", "page": "AJ:EoM, p. 48" },
-  "crystal of kunlan": {
-    "url": "magic-item/crystal-of-kunlan",
-    "page": "AJ:AoGC, p. 43"
-  },
+  "crystal ball": { "url": "magic-item/crystal-ball", "page": "EM, p. 20" },
   "cube of darkness": {
     "url": "magic-item/cube-of-darkness",
-    "page": "LM, p. 19"
+    "page": "LM, p. 52"
   },
   "cupped hands of the old ones": {
     "url": "magic-item/cupped-hands-of-the-old-ones",
-    "page": "LM, p. 19"
+    "page": "LM, p. 52"
   },
   "curse of the revenant": {
     "url": "magic-item/curse-of-the-revenant",
-    "page": "VC, p. 23"
+    "page": "VC, p. 52"
   },
-  "curse-weaver wand": {
-    "url": "magic-item/curse-weaver-wand",
-    "page": "AJ:TKoK, p. 48"
-  },
-  "da akrit axe": {
-    "url": "magic-item/da-akrit-axe",
-    "page": "AJ:O&GT, p. 46"
-  },
-  "da angry ladz flag": {
-    "url": "magic-item/da-angry-ladz-flag",
-    "page": "AJ:O&GT, p. 47"
-  },
-  "da banner of butchery": {
-    "url": "magic-item/da-banner-of-butchery",
-    "page": "RH, p. 43"
-  },
-  "da banner of da nomadz": {
-    "url": "magic-item/da-banner-of-da-nomadz",
-    "page": "AJ:O&GT, p. 47"
-  },
-  "da boss' trophy rack": {
-    "url": "magic-item/da-boss-trophy-rack",
-    "page": "AJ:O&GT, p. 35"
-  },
-  "da choppiest choppa": {
-    "url": "magic-item/da-choppiest-choppa",
-    "page": "RH, p. 42"
-  },
-  "da hag's brew": {
-    "url": "magic-item/da-hags-brew",
-    "page": "AJ:O&GT, p. 48"
-  },
-  "da skull smasha": {
-    "url": "magic-item/da-skull-smasha",
-    "page": "AJ:O&GT, p. 35"
-  },
-  "da spider banner": {
-    "url": "magic-item/da-spider-banner",
-    "page": "AJ:O&GT, p. 47"
-  },
-  "da thinkin' orc's 'at": {
-    "url": "magic-item/da-thinkin-orcs-at",
-    "page": "AJ:O&GT, p. 48"
-  },
-  "daemon flask": { "url": "magic-item/daemon-flask", "page": "CD, p. 19" },
-  "daemon heart": { "url": "magic-item/daemon-heart", "page": "AJ:BB, p. 48" },
-  "daemon-flesh": { "url": "magic-item/daemon-flesh", "page": "RH, p. 77" },
-  "daemon-forged barding": {
-    "url": "magic-item/daemon-forged-barding",
-    "page": "AJ:WoC, p. 48"
-  },
-  "daemon-slayer scars": {
-    "url": "magic-item/daemon-slayer-scars",
-    "page": "OK, p. 23"
-  },
-  "daemonic familiar": {
-    "url": "magic-item/daemonic-familiar",
-    "page": "CD, p. 19"
-  },
-  "daemonic platemail": {
-    "url": "magic-item/daemonic-platemail",
-    "page": "AJ:WoC, p. 47"
-  },
-  "daemonic robes": {
-    "url": "magic-item/daemonic-robes",
-    "page": "DoC, p. 27"
-  },
-  "daemonsword": { "url": "magic-item/daemonsword", "page": "RH, p. 78" },
-  "dagger of malice": {
-    "url": "magic-item/dagger-of-malice",
-    "page": "CD, p. 17"
-  },
-  "dagger of the dark pantheon": {
-    "url": "magic-item/dagger-of-the-dark-pantheon",
-    "page": "AJ:WoC, p. 46"
-  },
-  "daith's reaper": {
-    "url": "magic-item/daiths-reaper",
-    "page": "AJ:WER, p. 46"
-  },
-  "dark acolyte": { "url": "magic-item/dark-acolyte", "page": "VC, p. 23" },
-  "dark heart": { "url": "magic-item/dark-heart", "page": "RH, p. 113" },
-  "dark hearts": { "url": "magic-item/dark-hearts", "page": "AJ:TRoW, p. 41" },
-  "dark majesty": { "url": "magic-item/dark-majesty", "page": "RH, p. 77" },
-  "dark maul": { "url": "magic-item/dark-maul", "page": "CD, p. 17" },
-  "dawnstone": { "url": "magic-item/dawnstone", "page": "RB, p. 341" },
-  "dead 'ard armour": {
-    "url": "magic-item/dead-ard-armour",
-    "page": "AJ:O&GT, p. 47"
-  },
-  "death globe": { "url": "magic-item/death-globe", "page": "SK, p. 20" },
-  "death mask of kharnutt": {
-    "url": "magic-item/death-mask-of-kharnutt",
-    "page": "RH, p. 152"
-  },
-  "deathcheater": { "url": "magic-item/deathcheater", "page": "OK, p. 20" },
-  "deepwood sphere": {
-    "url": "magic-item/deepwood-sphere",
-    "page": "FoF, p. 144"
-  },
+  "daith's reaper": { "url": "magic-item/daiths-reaper", "page": "WE, p. 62" },
+  "dark acolyte": { "url": "magic-item/dark-acolyte", "page": "VC, p. 52" },
+  "deathcheater": { "url": "magic-item/deathcheater", "page": "OK, p. 58" },
   "destroyer of eternities": {
     "url": "magic-item/destroyer-of-eternities",
-    "page": "RH, p. 150"
-  },
-  "diabolic splendour": {
-    "url": "magic-item/diabolic-splendour",
-    "page": "RH, p. 77"
+    "page": "TK, p. 36"
   },
   "diadem of power": {
     "url": "magic-item/diadem-of-power",
-    "page": "AJ:KoB, p. 48"
+    "page": "LM, p. 52"
   },
-  "dispel scroll": { "url": "magic-item/dispel-scroll", "page": "RB, p. 343" },
-  "doom totem": { "url": "magic-item/doom-totem", "page": "RH, p. 79" },
-  "dragon bow": { "url": "magic-item/dragon-bow", "page": "FoF, p. 74" },
-  "dragon helm": { "url": "magic-item/dragon-helm", "page": "FoF, p. 182" },
-  "dragon slaying sword": {
-    "url": "magic-item/dragon-slaying-sword",
-    "page": "RB, p. 338"
-  },
-  "dragon's eye banner": {
-    "url": "magic-item/dragons-eye-banner",
-    "page": "AJ:AoGC, p. 43"
-  },
-  "dragonblade": { "url": "magic-item/dragonblade", "page": "RoR PUDC, p. 1" },
-  "dragonhide banner": {
-    "url": "magic-item/dragonhide-banner",
-    "page": "OK, p. 22"
-  },
-  "dragonhide cloak": {
-    "url": "magic-item/dragonhide-cloak",
-    "page": "AJ:KoB, p. 39"
-  },
-  "drakenhof banner": {
-    "url": "magic-item/drakenhof-banner",
-    "page": "VC, p. 25"
-  },
-  "dreadlance": { "url": "magic-item/dreadlance", "page": "VC, p. 24" },
-  "duellist's blades": {
-    "url": "magic-item/duellists-blades",
-    "page": "RB, p. 338"
-  },
-  "dwarf hide banner": {
-    "url": "magic-item/dwarf-hide-banner",
-    "page": "SK, p. 21"
-  },
-  "earthing rod": { "url": "magic-item/earthing-rod", "page": "RB, p. 343" },
+  "dispel scroll": { "url": "magic-item/dispel-scroll", "page": "RB, p. 154" },
+  "dragon bow": { "url": "magic-item/dragon-bow", "page": "EM, p. 20" },
   "effigy of mork": {
     "url": "magic-item/effigy-of-mork",
-    "page": "AJ:O&GT, p. 47"
+    "page": "O&G, p. 30"
   },
-  "enchanted rune": { "url": "magic-item/enchanted-rune" },
   "enchanted shield": {
     "url": "magic-item/enchanted-shield",
-    "page": "RB, p. 340"
-  },
-  "enchanting aura": {
-    "url": "magic-item/enchanting-aura",
-    "page": "RH, p. 77"
-  },
-  "enhanced reflexes": {
-    "url": "magic-item/enhanced-reflexes",
-    "page": "AJ:TRoW, p. 41"
+    "page": "RB, p. 154"
   },
   "enkhil's kanopi": {
     "url": "magic-item/enkhils-kanopi",
-    "page": "RH, p. 152"
-  },
-  "enrapturing gaze": {
-    "url": "magic-item/enrapturing-gaze",
-    "page": "DoC, p. 30"
+    "page": "TK, p. 36"
   },
   "errantry banner": {
     "url": "magic-item/errantry-banner",
-    "page": "FoF, p. 105"
-  },
-  "eternal kindred": {
-    "url": "magic-item/eternal-kindred",
-    "page": "AJ:WER, p. 43"
+    "page": "BR, p. 61"
   },
   "executioner's axe": {
     "url": "magic-item/executioners-axe",
-    "page": "DE, p. 22"
+    "page": "DE, p. 18"
   },
-  "extra arm": { "url": "magic-item/extra-arm", "page": "RH, p. 77" },
   "falcon-horn of fredemund": {
     "url": "magic-item/falcon-horn-of-fredemund",
-    "page": "FoF, p. 106"
+    "page": "BR, p. 61"
   },
-  "feedback scroll": {
-    "url": "magic-item/feedback-scroll",
-    "page": "RB, p. 343"
-  },
-  "filth mace": { "url": "magic-item/filth-mace", "page": "RH, p. 78" },
+  "filth mace": { "url": "magic-item/filth-mace", "page": "HoC, p. 50" },
   "fistful of laurels": {
     "url": "magic-item/fistful-of-laurels",
-    "page": "OK, p. 23"
+    "page": "OK, p. 62"
   },
   "flail of skulls": {
     "url": "magic-item/flail-of-skulls",
-    "page": "RH, p. 150"
+    "page": "TK, p. 36"
   },
-  "flamestrike wand": {
-    "url": "magic-item/flamestrike-wand",
-    "page": "AJ:KoB, p. 48"
-  },
-  "flying carpet": { "url": "magic-item/flying-carpet", "page": "RB, p. 342" },
-  "flying horror": { "url": "magic-item/flying-horror", "page": "VC, p. 23" },
   "flying cavalry": {"url": "special-rules/flying-cavalry"},
-  "focus familiar": { "url": "magic-item/focus-familiar", "page": "DE, p. 24" },
-  "foe bane": { "url": "magic-item/foe-bane", "page": "FoF, p. 181" },
-  "foebreaker": { "url": "magic-item/foebreaker", "page": "AJ:KoB, p. 46" },
-  "frontier axe": { "url": "magic-item/frontier-axe", "page": "AJ:KoB, p. 46" },
-  "frostblade": { "url": "magic-item/frostblade", "page": "VC, p. 24" },
-  "full plate chaos armour": {
-    "url": "magic-item/full-plate-chaos-armour",
-    "page": "AJ:BB, p. 47"
-  },
-  "fungus wine": { "url": "magic-item/fungus-wine", "page": "RH, p. 44" },
+  "foe bane": { "url": "magic-item/foe-bane", "page": "HE, p. 16" },
+  "frostblade": { "url": "magic-item/frostblade", "page": "VC, p. 49" },
   "gauntlet of the duel": {
     "url": "magic-item/gauntlet-of-the-duel",
-    "page": "FoF, p. 106"
+    "page": "BR, p. 61"
   },
-  "gem of courage": {
-    "url": "magic-item/gem-of-courage",
-    "page": "AJ:HER, p. 48"
-  },
-  "giant blade": { "url": "magic-item/giant-blade", "page": "RB, p. 339" },
-  "giantbreaker": { "url": "magic-item/giantbreaker", "page": "OK, p. 20" },
-  "gilded cuirass": {
-    "url": "magic-item/gilded-cuirass",
-    "page": "FoF, p. 105"
-  },
-  "glamour weave kindred": {
-    "url": "magic-item/glamour-weave-kindred",
-    "page": "AJ:WER, p. 43"
-  },
-  "glamourweave": { "url": "magic-item/glamourweave", "page": "FoF, p. 143" },
-  "glittering scales": {
-    "url": "magic-item/glittering-scales",
-    "page": "RB, p. 340"
-  },
-  "glittering wotnots": {
-    "url": "magic-item/glittering-wotnots",
-    "page": "RH, p. 44"
-  },
+  "giantbreaker": { "url": "magic-item/giantbreaker", "page": "OK, p. 58" },
+  "gilded cuirass": { "url": "magic-item/gilded-cuirass", "page": "BR, p. 61" },
+  "glamourweave": { "url": "magic-item/glamourweave", "page": "WE, p. 62" },
   "glowy green amulet": {
     "url": "magic-item/glowy-green-amulet",
-    "page": "RH, p. 43"
+    "page": "O&G, p. 30"
   },
-  "glyph necklace": { "url": "magic-item/glyph-necklace", "page": "LM, p. 18" },
-  "gnarled hide": { "url": "magic-item/gnarled-hide", "page": "RH, p. 111" },
-  "golden lion": { "url": "magic-item/golden-lion", "page": "AJ:DotSD, p. 48" },
-  "goretooth": { "url": "magic-item/goretooth", "page": "AJ:BB, p. 48" },
-  "gouge-tusks": { "url": "magic-item/gouge-tusks", "page": "RH, p. 111" },
-  "grail pendant": {
-    "url": "magic-item/grail-pendant",
-    "page": "AJ:KoB, p. 47"
-  },
-  "grand banner of superiority": {
-    "url": "magic-item/grand-banner-of-superiority",
-    "page": "SK, p. 21"
-  },
-  "great standard of sundering": {
-    "url": "magic-item/great-standard-of-sundering",
-    "page": "DoC, p. 28"
-  },
+  "glyph necklace": { "url": "magic-item/glyph-necklace", "page": "LM, p. 52" },
   "griffon standard": {
     "url": "magic-item/griffon-standard",
-    "page": "FoF, p. 75"
-  },
-  "grimoire of ogvold": {
-    "url": "magic-item/grimoire-of-ogvold",
-    "page": "AJ:WoC, p. 48"
-  },
-  "grisly trophy rack": {
-    "url": "magic-item/grisly-trophy-rack",
-    "page": "AJ:O&GT, p. 48"
+    "page": "EM, p. 20"
   },
   "gromril great helm": {
     "url": "magic-item/gromril-great-helm",
-    "page": "FoF, p. 105"
+    "page": "BR, p. 61"
   },
-  "grudge rune": { "url": "magic-item/grudge-rune", "page": "FoF, p. 34" },
-  "grudge-settler": { "url": "magic-item/grudge-settler" },
-  "grut's sickle": { "url": "magic-item/gruts-sickle", "page": "OK, p. 23" },
-  "guardian feng shi bo": {
-    "url": "magic-item/guardian-feng-shi-bo",
-    "page": "AJ:AoGC, p. 44"
-  },
-  "guff's windy banner": {
-    "url": "magic-item/guffs-windy-banner",
-    "page": "RH, p. 43"
-  },
-  "gut maw": { "url": "magic-item/gut-maw", "page": "OK, p. 22" },
-  "hagtree fetish": {
-    "url": "magic-item/hagtree-fetish",
-    "page": "RH, p. 114"
-  },
+  "grudge rune": { "url": "magic-item/grudge-rune", "page": "DW, p. 20" },
+  "grut's sickle": { "url": "magic-item/gruts-sickle", "page": "OK, p. 62" },
+  "gut maw": { "url": "magic-item/gut-maw", "page": "OK, p. 62" },
   "hail of doom arrow": {
     "url": "magic-item/hail-of-doom-arrow",
-    "page": "FoF, p. 144"
+    "page": "WE, p. 62"
   },
   "halfling cookbook": {
     "url": "magic-item/halfling-cookbook",
-    "page": "OK, p. 23"
+    "page": "OK, p. 62"
   },
-  "hammer of righteousness": {
-    "url": "magic-item/hammer-of-righteousness",
-    "page": "AJ:EoM, p. 46"
-  },
-  "hand of dust": { "url": "magic-item/hand-of-dust", "page": "VC, p. 26" },
-  "harrowing scrutiny": {
-    "url": "magic-item/harrowing-scrutiny",
-    "page": "LM, p. 16"
-  },
-  "hawk's talon": { "url": "magic-item/hawks-talon", "page": "AJ:WER, p. 35" },
-  "headsman's axe": { "url": "magic-item/headsmans-axe", "page": "RB, p. 338" },
-  "healing potion": {
-    "url": "magic-item/healing-potion",
-    "page": "RB, p. 342"
-  },
-  "heart of the wilds": {
-    "url": "magic-item/heart-of-the-wilds",
-    "page": "AJ:KoB, p. 48"
-  },
-  "heartwood lance": {
-    "url": "magic-item/heartwood-lance",
-    "page": "FoF, p. 104"
-  },
-  "heartwood pendant": {
-    "url": "magic-item/heartwood-pendant",
-    "page": "AJ:WER, p. 48"
-  },
-  "heavy chaos armour": {
-    "url": "magic-item/heavy-chaos-armour",
-    "page": "AJ:BB, p. 47"
-  },
-  "hell-forged axe": {
-    "url": "magic-item/hell-forged-axe",
-    "page": "AJ:TRoW, p. 46"
-  },
-  "hellheart": { "url": "magic-item/hellheart", "page": "OK, p. 23" },
-  "hellshard": { "url": "magic-item/hellshard", "page": "CD, p. 18" },
-  "helm of commandment": {
-    "url": "magic-item/helm-of-commandment",
-    "page": "VC, p. 26"
-  },
+  "healing potion": { "url": "magic-item/healing-potion", "page": "HE, p. 16" },
+  "hellheart": { "url": "magic-item/hellheart", "page": "OK, p. 62" },
   "helm of many eyes": {
     "url": "magic-item/helm-of-many-eyes",
-    "page": "RH, p. 80"
+    "page": "HoC, p. 50"
   },
-  "helm of the hunt": {
-    "url": "magic-item/helm-of-the-hunt",
-    "page": "FoF, p. 143"
-  },
-  "hide of the cold ones": {
-    "url": "magic-item/hide-of-the-cold-ones",
-    "page": "LM, p. 18"
-  },
-  "hieratic jar": { "url": "magic-item/hieratic-jar", "page": "RH, p. 152" },
-  "higher state of mind": {
-    "url": "magic-item/higher-state-of-mind",
-    "page": "LM, p. 16"
-  },
-  "horn of the first beast": {
-    "url": "magic-item/horn-of-the-first-beast",
-    "page": "RH, p. 114"
-  },
+  "hieratic jar": { "url": "magic-item/hieratic-jar", "page": "TK, p. 36" },
   "horn of the great hunt": {
     "url": "magic-item/horn-of-the-great-hunt",
-    "page": "AJ:BB, p. 48"
+    "page": "BoC, p. 62"
   },
-  "horn of the wild hunt": {
-    "url": "magic-item/horn-of-the-wild-hunt",
-    "page": "AJ:WER, p. 35"
-  },
-  "horned one": { "url": "magic-item/horned-one", "page": "LM, p. 19" },
-  "hunt master's pride": {
-    "url": "magic-item/hunt-masters-pride",
-    "page": "AJ:WER, p. 46"
-  },
-  "hunter's spear": { "url": "magic-item/hunters-spear", "page": "RH, p. 112" },
-  "hydra's tooth": { "url": "magic-item/hydras-tooth", "page": "DE, p. 24" },
-  "icon of darkness": {
-    "url": "magic-item/icon-of-darkness",
-    "page": "AJ:WoC, p. 47"
-  },
-  "icon of endless war": {
-    "url": "magic-item/icon-of-endless-war",
-    "page": "DoC, p. 28"
-  },
-  "icon of eternal virulence": {
-    "url": "magic-item/icon-of-eternal-virulence",
-    "page": "DoC, p. 29"
-  },
-  "icon of fortitude": {
-    "url": "magic-item/icon-of-fortitude",
-    "page": "AJ:TRoW, p. 47"
-  },
-  "icon of heavenly fury": {
-    "url": "magic-item/icon-of-heavenly-fury",
-    "page": "AJ:AoGC, p. 43"
-  },
-  "icon of morr": { "url": "magic-item/icon-of-morr", "page": "AJ:EoM, p. 47" },
-  "icon of rakaph": {
-    "url": "magic-item/icon-of-rakaph",
-    "page": "RH, p. 151"
-  },
+  "icon of rakaph": { "url": "magic-item/icon-of-rakaph", "page": "TK, p. 36" },
   "icon of rulership": {
     "url": "magic-item/icon-of-rulership",
-    "page": "RH, p. 152"
-  },
-  "icon of sorcery": {
-    "url": "magic-item/icon-of-sorcery",
-    "page": "DoC, p. 31"
+    "page": "TK, p. 36"
   },
   "icon of the sacred eye": {
     "url": "magic-item/icon-of-the-sacred-eye",
-    "page": "RH, p. 151"
+    "page": "TK, p. 36"
   },
-  "idol of gork": {
-    "url": "magic-item/idol-of-gork",
-    "page": "AJ:O&GT, p. 48"
-  },
-  "idol of mork": { "url": "magic-item/idol-of-mork", "page": "RH, p. 44" },
   "imperial banner": {
     "url": "magic-item/imperial-banner",
-    "page": "FoF, p. 75"
+    "page": "EM, p. 20"
   },
-  "infernal enrapturess": {
-    "url": "magic-item/infernal-enrapturess",
-    "page": "DoC, p. 30"
-  },
-  "infernal puppet": {
-    "url": "magic-item/infernal-puppet",
-    "page": "RH, p. 80"
-  },
-  "iridescent corona": {
-    "url": "magic-item/iridescent-corona",
-    "page": "DoC, p. 31"
-  },
-  "ironhide talisman": {
-    "url": "magic-item/ironhide-talisman",
-    "page": "AJ:TRoW, p. 47"
-  },
-  "ironspike shield": {
-    "url": "magic-item/ironspike-shield",
-    "page": "AJ:KoB, p. 47"
-  },
-  "itxi grub": { "url": "magic-item/itxi-grub", "page": "LM, p. 19" },
-  "jade amulet": { "url": "magic-item/jade-amulet", "page": "FoF, p. 75" },
-  "jade armour of beichai": {
-    "url": "magic-item/jade-armour-of-beichai",
-    "page": "AJ:DotSD, p. 47"
-  },
-  "jade blade of the great fleet": {
-    "url": "magic-item/jade-blade-of-the-great-fleet",
-    "page": "AJ:AoGC, p. 42"
-  },
-  "jade lion": { "url": "magic-item/jade-lion", "page": "OK, p. 23" },
-  "jagged dagger": { "url": "magic-item/jagged-dagger", "page": "RH, p. 114" },
+  "jade amulet": { "url": "magic-item/jade-amulet", "page": "EM, p. 20" },
+  "jade lion": { "url": "magic-item/jade-lion", "page": "OK, p. 62" },
   "jaguar standard": {
     "url": "magic-item/jaguar-standard",
-    "page": "LM, p. 18"
+    "page": "LM, p. 52"
   },
-  "judgement": { "url": "magic-item/judgement", "page": "AJ:EoM, p. 37" },
-  "kineater": { "url": "magic-item/kineater", "page": "OK, p. 20" },
+  "kineater": { "url": "magic-item/kineater", "page": "OK, p. 58" },
   "laurels of victory": {
     "url": "magic-item/laurels-of-victory",
-    "page": "FoF, p. 76"
+    "page": "EM, p. 20"
   },
-  "learned feng shi bo": {
-    "url": "magic-item/learned-feng-shi-bo",
-    "page": "AJ:AoGC, p. 44"
-  },
-  "levitating shield": {
-    "url": "magic-item/levitating-shield",
-    "page": "AJ:TRoW, p. 47"
-  },
-  "lifetaker": { "url": "magic-item/lifetaker", "page": "DE, p. 22" },
-  "lion standard": { "url": "magic-item/lion-standard", "page": "FoF, p. 182" },
-  "longstrider": { "url": "magic-item/longstrider", "page": "OK, p. 20" },
-  "longstriders": {
-    "url": "magic-item/longstriders",
-    "page": "AJ:TRoW, p. 41"
-  },
-  "lord of the night": {
-    "url": "magic-item/lord-of-the-night",
-    "page": "VC, p. 23"
-  },
-  "lore familiar": { "url": "magic-item/lore-familiar", "page": "RB, p. 343" },
-  "loremaster": { "url": "magic-item/loremaster", "page": "FoF, p. 179" },
-  "luckstone": { "url": "magic-item/luckstone", "page": "RB, p. 341" },
-  "lucky heirloom": {
-    "url": "magic-item/lucky-heirloom",
-    "page": "AJ:KoB, p. 47"
-  },
-  "mace of helsturm": {
-    "url": "magic-item/mace-of-helsturm",
-    "page": "FoF, p. 74"
-  },
-  "manbane standard": {
-    "url": "magic-item/manbane-standard",
-    "page": "RH, p. 113"
-  },
-  "mangelder": { "url": "magic-item/mangelder", "page": "RH, p. 112" },
-  "mansmasher": { "url": "magic-item/mansmasher", "page": "AJ:BB, p. 37" },
-  "mantle of rebirth": {
-    "url": "magic-item/mantle-of-rebirth",
-    "page": "AJ:WER, p. 47"
-  },
-  "mantle of stone": {
-    "url": "magic-item/mantle-of-stone",
-    "page": "CD, p. 18"
-  },
-  "mantle of the damsel elena": {
-    "url": "magic-item/mantle-of-the-damsel-elena",
-    "page": "FoF, p. 105"
-  },
-  "many arms": { "url": "magic-item/many-arms", "page": "DoC, p. 27" },
-  "many-limbed fiend": {
-    "url": "magic-item/many-limbed-fiend",
-    "page": "RH, p. 111"
-  },
-  "martog's best basha": {
-    "url": "magic-item/martogs-best-basha",
-    "page": "AJ:O&GT, p. 46"
-  },
+  "lifetaker": { "url": "magic-item/lifetaker", "page": "DE, p. 18" },
+  "lion standard": { "url": "magic-item/lion-standard", "page": "HE, p. 16" },
+  "longstrider": { "url": "magic-item/longstrider", "page": "OK, p. 58" },
+  "loremaster": { "url": "magic-item/loremaster", "page": "HE, p. 15" },
+  "luckstone": { "url": "magic-item/luckstone", "page": "EM, p. 20" },
   "master of mortals": {
     "url": "magic-item/master-of-mortals",
-    "page": "RH, p. 77"
+    "page": "HoC, p. 48"
   },
   "master of the black arts": {
     "url": "magic-item/master-of-the-black-arts",
-    "page": "VC, p. 23"
+    "page": "VC, p. 52"
   },
   "master rune of adamant": {
     "url": "magic-item/master-rune-of-adamant",
-    "page": "FoF, p. 35"
+    "page": "DW, p. 21"
   },
   "master rune of alaric the mad": {
     "url": "magic-item/master-rune-of-alaric-the-mad",
-    "page": "FoF, p. 33"
+    "page": "DW, p. 20"
   },
   "master rune of balance": {
     "url": "magic-item/master-rune-of-balance",
-    "page": "FoF, p. 36"
+    "page": "DW, p. 23"
   },
   "master rune of breaking": {
     "url": "magic-item/master-rune-of-breaking",
-    "page": "FoF, p. 33"
-  },
-  "master rune of bursting flame": {
-    "url": "magic-item/master-rune-of-bursting-flame"
-  },
-  "master rune of calm": {
-    "url": "magic-item/master-rune-of-calm",
-    "page": "FoF, p. 36"
+    "page": "DW, p. 20"
   },
   "master rune of disguise": {
     "url": "magic-item/master-rune-of-disguise",
-    "page": "FoF, p. 38"
-  },
-  "master rune of dragon slaying": {
-    "url": "magic-item/master-rune-of-dragon-slaying",
-    "page": "FoF, p. 33"
+    "page": "DW, p. 22"
   },
   "master rune of flight": {
     "url": "magic-item/master-rune-of-flight",
-    "page": "FoF, p. 33"
+    "page": "DW, p. 20"
   },
   "master rune of gromril": {
     "url": "magic-item/master-rune-of-gromril",
-    "page": "FoF, p. 35"
-  },
-  "master rune of grungni": {
-    "url": "magic-item/master-rune-of-grungni",
-    "page": "FoF, p. 37"
-  },
-  "master rune of hesitation": {
-    "url": "magic-item/master-rune-of-hesitation",
-    "page": "FoF, p. 37"
+    "page": "DW, p. 21"
   },
   "master rune of immolation": {
     "url": "magic-item/master-rune-of-immolation",
-    "page": "FoF, p. 38"
+    "page": "DW, p. 22"
   },
-  "master rune of piercing": { "url": "magic-item/master-rune-of-piercing" },
   "master rune of skalf blackhammer": {
     "url": "magic-item/master-rune-of-skalf-blackhammer",
-    "page": "FoF, p. 33"
-  },
-  "master rune of slaying": { "url": "magic-item/master-rune-of-slaying" },
-  "master rune of smiting": {
-    "url": "magic-item/master-rune-of-smiting",
-    "page": "FoF, p. 33"
+    "page": "DW, p. 20"
   },
   "master rune of spite": {
     "url": "magic-item/master-rune-of-spite",
-    "page": "FoF, p. 36"
+    "page": "DW, p. 23"
   },
   "master rune of stromni redbeard": {
     "url": "magic-item/master-rune-of-stromni-redbeard",
-    "page": "FoF, p. 37"
+    "page": "DW, p. 21"
   },
   "master rune of swiftness": {
     "url": "magic-item/master-rune-of-swiftness",
-    "page": "FoF, p. 33"
+    "page": "DW, p. 20"
   },
   "mastodon armour": {
     "url": "magic-item/mastodon-armour",
-    "page": "OK, p. 22"
+    "page": "OK, p. 62"
   },
-  "mathlann's ire": {
-    "url": "magic-item/mathlanns-ire",
-    "page": "AJ:HER, p. 37"
-  },
-  "maw shard": { "url": "magic-item/maw-shard", "page": "AJ:AoGC, p. 44" },
-  "mawseeker": { "url": "magic-item/mawseeker", "page": "OK, p. 20" },
-  "merciw's locus": {
-    "url": "magic-item/merciws-locus",
-    "page": "FoF, p. 143"
-  },
-  "meteor hammer": {
-    "url": "magic-item/meteor-hammer",
-    "page": "AJ:TRoW, p. 46"
-  },
+  "merciw's locus": { "url": "magic-item/merciws-locus", "page": "WE, p. 62" },
   "might of khorne": {
     "url": "magic-item/might-of-khorne",
-    "page": "DoC, p. 28"
-  },
-  "mighty serpent's scalemail": {
-    "url": "magic-item/mighty-serpents-scalemail",
-    "page": "AJ:WoC, p. 47"
-  },
-  "mirage banner": { "url": "magic-item/mirage-banner", "page": "RH, p. 151" },
-  "monster hunter's tapestry": {
-    "url": "magic-item/monster-hunters-tapestry",
-    "page": "AJ:TRoW, p. 47"
+    "page": "HoC, p. 49"
   },
   "moonstone of the hidden ways": {
     "url": "magic-item/moonstone-of-the-hidden-ways",
-    "page": "AJ:WER, p. 48"
+    "page": "WE, p. 62"
   },
   "morning star of fracasse": {
     "url": "magic-item/morning-star-of-fracasse",
-    "page": "FoF, p. 104"
+    "page": "BR, p. 61"
   },
-  "mountaineater": { "url": "magic-item/mountaineater", "page": "OK, p. 20" },
-  "muscular monstrosity": {
-    "url": "magic-item/muscular-monstrosity",
-    "page": "RH, p. 111"
-  },
-  "necklace of blessed teef": {
-    "url": "magic-item/necklace-of-blessed-teef",
-    "page": "AJ:O&GT, p. 48"
-  },
-  "null stone": { "url": "magic-item/null-stone", "page": "FoF, p. 183" },
-  "nurgling infestation": {
-    "url": "magic-item/nurgling-infestation",
-    "page": "DoC, p. 29"
-  },
-  "oaken stave": { "url": "magic-item/oaken-stave", "page": "FoF, p. 144" },
-  "obsidian dread-glaive": {
-    "url": "magic-item/obsidian-dread-glaive",
-    "page": "AJ:WoC, p. 46"
-  },
-  "obsidian lodestone": {
-    "url": "magic-item/obsidian-lodestone",
-    "page": "RB, p. 341"
-  },
-  "obsidian vambraces": {
-    "url": "magic-item/obsidian-vambraces",
-    "page": "CD, p. 19"
-  },
-  "ogre blade": { "url": "magic-item/ogre-blade", "page": "RB, p. 338" },
-  "opal amulet": { "url": "magic-item/opal-amulet", "page": "FoF, p. 182" },
-  "orb of midsummer": {
-    "url": "magic-item/orb-of-midsummer",
-    "page": "AJ:WER, p. 48"
-  },
-  "orb of ptra": { "url": "magic-item/orb-of-ptra", "page": "AJ:TKoK, p. 48" },
-  "order of the blazing sun": {
-    "url": "magic-item/order-of-the-blazing-sun",
-    "page": "AJ:EoM, p. 45"
-  },
-  "order of the fiery heart": {
-    "url": "magic-item/order-of-the-fiery-heart",
-    "page": "AJ:EoM, p. 45"
-  },
-  "order of the knights of morr": {
-    "url": "magic-item/order-of-the-knights-of-morr",
-    "page": "AJ:EoM, p. 45"
-  },
-  "order of the knights panther": {
-    "url": "magic-item/order-of-the-knights-panther",
-    "page": "AJ:EoM, p. 45"
-  },
-  "order of the white wolf": {
-    "url": "magic-item/order-of-the-white-wolf",
-    "page": "AJ:EoM, p. 45"
-  },
-  "orion's favour": {
-    "url": "magic-item/orions-favour",
-    "page": "AJ:WER, p. 47"
-  },
-  "overseer's sigil": {
-    "url": "magic-item/overseers-sigil",
-    "page": "CD, p. 18"
-  },
-  "paymaster's coin": {
-    "url": "magic-item/paymasters-coin",
-    "page": "RB, p. 341"
-  },
-  "pearl daggers": {
-    "url": "magic-item/pearl-daggers",
-    "page": "AJ:EoM, p. 46"
-  },
-  "pearl of infinite bleakness": {
-    "url": "magic-item/pearl-of-infinite-bleakness",
-    "page": "DE, p. 23"
-  },
-  "pelt of midnight": {
-    "url": "magic-item/pelt-of-midnight",
-    "page": "RH, p. 111"
-  },
+  "mountaineater": { "url": "magic-item/mountaineater", "page": "OK, p. 58" },
+  "null stone": { "url": "magic-item/null-stone", "page": "HE, p. 16" },
   "pelt of the dark young": {
     "url": "magic-item/pelt-of-the-dark-young",
-    "page": "RH, p. 113"
+    "page": "BoC, p. 62"
   },
-  "pendant of damnation": {
-    "url": "magic-item/pendant-of-damnation",
-    "page": "RH, p. 80"
-  },
-  "pendant of khaeleth": {
-    "url": "magic-item/pendant-of-khaeleth",
-    "page": "DE, p. 23"
-  },
-  "phakth's blades of justice": {
-    "url": "magic-item/phakths-blades-of-justice",
-    "page": "AJ:TKoK, p. 46"
-  },
-  "phâzerakt's kanopi": {
-    "url": "magic-item/phazerakts-kanopi",
-    "page": "AJ:TKoK, p. 48"
-  },
-  "piranha blade": { "url": "magic-item/piranha-blade", "page": "LM, p. 17" },
-  "poisonous slime": {
-    "url": "magic-item/poisonous-slime",
-    "page": "RH, p. 77"
-  },
-  "porko's pigstikka": {
-    "url": "magic-item/porkos-pigstikka",
-    "page": "RH, p. 42"
-  },
-  "potion of fervour": {
-    "url": "magic-item/potion-of-fervour",
-    "page": "AJ:TRoW, p. 48"
-  },
-  "potion of foolhardiness": {
-    "url": "magic-item/potion-of-foolhardiness",
-    "page": "RB, p. 342"
-  },
-  "potion of speed": {
-    "url": "magic-item/potion-of-speed",
-    "page": "RB, p. 342"
-  },
-  "potion of strength": {
-    "url": "magic-item/potion-of-strength",
-    "page": "RB, p. 342"
-  },
-  "potion of toughness": {
-    "url": "magic-item/potion-of-toughness",
-    "page": "RB, p. 342"
-  },
-  "power scroll": { "url": "magic-item/power-scroll", "page": "RB, p. 343" },
-  "power vortex": { "url": "magic-item/power-vortex", "page": "DoC, p. 31" },
+  "piranha blade": { "url": "magic-item/piranha-blade", "page": "LM, p. 52" },
+  "power vortex": { "url": "magic-item/power-vortex", "page": "HoC, p. 49" },
   "prayer icon of quenelles": {
     "url": "magic-item/prayer-icon-of-quenelles",
-    "page": "FoF, p. 106"
+    "page": "BR, p. 61"
   },
-  "primeval club": { "url": "magic-item/primeval-club", "page": "RH, p. 112" },
-  "prophetic foresight": {
-    "url": "magic-item/prophetic-foresight",
-    "page": "AJ:TRoW, p. 41"
-  },
-  "pure of heart": { "url": "magic-item/pure-of-heart", "page": "FoF, p. 180" },
+  "pure of heart": { "url": "magic-item/pure-of-heart", "page": "HE, p. 15" },
   "railarian's mantle": {
     "url": "magic-item/railarians-mantle",
-    "page": "FoF, p. 143"
-  },
-  "rampaging banner": {
-    "url": "magic-item/rampaging-banner",
-    "page": "RB, p. 341"
+    "page": "WE, p. 62"
   },
   "rapturous standard": {
     "url": "magic-item/rapturous-standard",
-    "page": "DoC, p. 30"
+    "page": "HoC, p. 50"
   },
-  "razor standard": {
-    "url": "magic-item/razor-standard",
-    "page": "RB, p. 341"
+  "reaver bow": { "url": "magic-item/reaver-bow", "page": "HE, p. 16" },
+  "ring of fury": { "url": "magic-item/ring-of-fury", "page": "HE, p. 16" },
+  "rune maw": { "url": "magic-item/rune-maw", "page": "OK, p. 62" },
+  "rune of accuracy": {
+    "url": "magic-item/rune-of-accuracy",
+    "page": "DW, p. 22"
   },
-  "reaver bow": { "url": "magic-item/reaver-bow", "page": "FoF, p. 181" },
-  "relic of the desert sun": {
-    "url": "magic-item/relic-of-the-desert-sun",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "ring of fortune": {
-    "url": "magic-item/ring-of-fortune",
-    "page": "AJ:EoM, p. 48"
-  },
-  "ring of fury": { "url": "magic-item/ring-of-fury", "page": "AJ:HER, p. 48" },
-  "ring of jet": { "url": "magic-item/ring-of-jet", "page": "AJ:DotSD, p. 48" },
-  "ring of taal": { "url": "magic-item/ring-of-taal", "page": "AJ:EoM, p. 48" },
-  "rod of the damned": {
-    "url": "magic-item/rod-of-the-damned",
-    "page": "AJ:WoC, p. 48"
-  },
-  "rotten icon": { "url": "magic-item/rotten-icon", "page": "DoC, p. 29" },
-  "royal mantle": {
-    "url": "magic-item/royal-mantle",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "royal standard of settra": {
-    "url": "magic-item/royal-standard-of-settra",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "ruby ring of ruin": {
-    "url": "magic-item/ruby-ring-of-ruin",
-    "page": "RB, p. 342"
-  },
-  "rune maw": { "url": "magic-item/rune-maw", "page": "OK, p. 22" },
-  "rune of accuracy": { "url": "magic-item/rune-of-accuracy" },
-  "rune of banishment": {
-    "url": "magic-item/rune-of-banishment",
-    "page": "FoF, p. 34"
-  },
-  "rune of battle": {
-    "url": "magic-item/rune-of-battle",
-    "page": "FoF, p. 37"
-  },
-  "rune of blazing fury": { "url": "magic-item/rune-of-blazing-fury" },
+  "rune of battle": { "url": "magic-item/rune-of-battle", "page": "DW, p. 21" },
   "rune of burning": {
     "url": "magic-item/rune-of-burning",
-    "page": "FoF, p. 38"
+    "page": "DW, p. 22"
   },
   "rune of cleaving": {
     "url": "magic-item/rune-of-cleaving",
-    "page": "FoF, p. 34"
-  },
-  "rune of concussive force": { "url": "magic-item/rune-of-concussive-force" },
-  "rune of confusion": {
-    "url": "magic-item/rune-of-confusion",
-    "page": "FoF, p. 37"
+    "page": "DW, p. 20"
   },
   "rune of courage": {
     "url": "magic-item/rune-of-courage",
-    "page": "FoF, p. 37"
+    "page": "DW, p. 21"
   },
-  "rune of endless battle": { "url": "magic-item/rune-of-endless-battle" },
-  "rune of fear": { "url": "magic-item/rune-of-fear", "page": "FoF, p. 37" },
-  "rune of fire": { "url": "magic-item/rune-of-fire", "page": "FoF, p. 34" },
+  "rune of fire": { "url": "magic-item/rune-of-fire", "page": "DW, p. 20" },
   "rune of forging": {
     "url": "magic-item/rune-of-forging",
-    "page": "FoF, p. 38"
+    "page": "DW, p. 22"
   },
   "rune of fortitude": {
     "url": "magic-item/rune-of-fortitude",
-    "page": "FoF, p. 35"
+    "page": "DW, p. 21"
   },
-  "rune of fury": { "url": "magic-item/rune-of-fury", "page": "FoF, p. 34" },
-  "rune of grit": { "url": "magic-item/rune-of-grit" },
-  "rune of iron": { "url": "magic-item/rune-of-iron", "page": "FoF, p. 35" },
-  "rune of luck": { "url": "magic-item/rune-of-luck", "page": "FoF, p. 36" },
-  "rune of might": { "url": "magic-item/rune-of-might", "page": "FoF, p. 34" },
-  "rune of molten steel": { "url": "magic-item/rune-of-molten-steel" },
-  "rune of parrying": {
-    "url": "magic-item/rune-of-parrying",
-    "page": "FoF, p. 34"
-  },
-  "rune of passage": {
-    "url": "magic-item/rune-of-passage",
-    "page": "FoF, p. 36"
-  },
-  "rune of preservation": {
-    "url": "magic-item/rune-of-preservation",
-    "page": "FoF, p. 35"
-  },
-  "rune of rapid fire": { "url": "magic-item/rune-of-rapid-fire" },
+  "rune of fury": { "url": "magic-item/rune-of-fury", "page": "DW, p. 20" },
+  "rune of iron": { "url": "magic-item/rune-of-iron", "page": "DW, p. 21" },
+  "rune of luck": { "url": "magic-item/rune-of-luck", "page": "DW, p. 23" },
+  "rune of might": { "url": "magic-item/rune-of-might", "page": "DW, p. 20" },
   "rune of reloading": {
     "url": "magic-item/rune-of-reloading",
-    "page": "FoF, p. 38"
+    "page": "DW, p. 22"
   },
   "rune of shielding": {
     "url": "magic-item/rune-of-shielding",
-    "page": "FoF, p. 35"
+    "page": "DW, p. 21"
   },
-  "rune of skewering": {
-    "url": "magic-item/rune-of-skewering",
-    "page": "FoF, p. 38"
-  },
-  "rune of speed": { "url": "magic-item/rune-of-speed", "page": "FoF, p. 34" },
+  "rune of speed": { "url": "magic-item/rune-of-speed", "page": "DW, p. 20" },
   "rune of spellbreaking": {
     "url": "magic-item/rune-of-spellbreaking",
-    "page": "FoF, p. 36"
+    "page": "DW, p. 23"
   },
-  "rune of stone": { "url": "magic-item/rune-of-stone", "page": "FoF, p. 35" },
+  "rune of stone": { "url": "magic-item/rune-of-stone", "page": "DW, p. 21" },
   "rune of striking": {
     "url": "magic-item/rune-of-striking",
-    "page": "FoF, p. 34"
+    "page": "DW, p. 20"
   },
-  "rune of the beast ascendant": {
-    "url": "magic-item/rune-of-the-beast-ascendant",
-    "page": "RH, p. 111"
-  },
-  "rune of the dauntless": { "url": "magic-item/rune-of-the-dauntless" },
-  "rune of the dishonoured": { "url": "magic-item/rune-of-the-dishonoured" },
   "rune of the furnace": {
     "url": "magic-item/rune-of-the-furnace",
-    "page": "FoF, p. 36"
+    "page": "DW, p. 23"
   },
-  "rune of the hateful": { "url": "magic-item/rune-of-the-hateful" },
-  "rune of the reckless": { "url": "magic-item/rune-of-the-reckless" },
   "rune of the true beast": {
     "url": "magic-item/rune-of-the-true-beast",
-    "page": "RH, p. 113"
+    "page": "BoC, p. 62"
   },
   "rune of warding": {
     "url": "magic-item/rune-of-warding",
-    "page": "FoF, p. 36"
+    "page": "DW, p. 23"
   },
-  "rune of wrath": { "url": "magic-item/rune-of-wrath" },
-  "runefang": { "url": "magic-item/runefang", "page": "FoF, p. 74" },
+  "runefang": { "url": "magic-item/runefang", "page": "EM, p. 20" },
   "sacrament of the lady": {
     "url": "magic-item/sacrament-of-the-lady",
-    "page": "FoF, p. 106"
+    "page": "BR, p. 61"
   },
-  "sacred incense": {
-    "url": "magic-item/sacred-incense",
-    "page": "AJ:HER, p. 47"
-  },
-  "scarab brooch": { "url": "magic-item/scarab-brooch", "page": "RH, p. 152" },
-  "sceptre of de noirot": {
-    "url": "magic-item/sceptre-of-de-noirot",
-    "page": "VC, p. 26"
-  },
-  "sceptre of power": {
-    "url": "magic-item/sceptre-of-power",
-    "page": "AJ:WoC, p. 48"
-  },
+  "sacred incense": { "url": "magic-item/sacred-incense", "page": "HE, p. 16" },
   "scimitar of skultar": {
     "url": "magic-item/scimitar-of-skultar",
-    "page": "AJ:BB, p. 46"
+    "page": "BoC, p. 62"
   },
   "scimitar of the sun resplendent": {
     "url": "magic-item/scimitar-of-the-sun-resplendent",
-    "page": "LM, p. 17"
+    "page": "LM, p. 52"
   },
-  "scourge of the burdened": {
-    "url": "magic-item/scourge-of-the-burdened",
-    "page": "AJ:BB, p. 48"
-  },
-  "scout kindred": {
-    "url": "magic-item/scout-kindred",
-    "page": "AJ:WER, p. 43"
-  },
-  "scroll of awakening": {
-    "url": "magic-item/scroll-of-awakening",
-    "page": "AJ:TWoSF, p. 33"
-  },
-  "scroll of binding": {
-    "url": "magic-item/scroll-of-binding",
-    "page": "CD, p. 19"
-  },
-  "scroll of disruption": {
-    "url": "magic-item/scroll-of-disruption",
-    "page": "AJ:TRoW, p. 48"
-  },
-  "scroll of righteous smiting": {
-    "url": "magic-item/scroll-of-righteous-smiting",
-    "page": "AJ:TWoSF, p. 33"
-  },
-  "scroll of summoning": {
-    "url": "magic-item/scroll-of-summoning",
-    "page": "AJ:TWoSF, p. 33"
-  },
-  "scroll of the outcast dead": {
-    "url": "magic-item/scroll-of-the-outcast-dead",
-    "page": "AJ:TWoSF, p. 33"
-  },
-  "scroll of transmogrification": {
-    "url": "magic-item/scroll-of-transmogrification",
-    "page": "RB, p. 343"
-  },
-  "scroll of urgency": {
-    "url": "magic-item/scroll-of-urgency",
-    "page": "AJ:TWoSF, p. 33"
-  },
-  "scroll of withering": {
-    "url": "magic-item/scroll-of-withering",
-    "page": "AJ:TWoSF, p. 33"
-  },
-  "scrolls of wei-jin": {
-    "url": "magic-item/scrolls-of-wei-jin",
-    "page": "AJ:DotSD, p. 48"
-  },
-  "sea guard": { "url": "magic-item/sea-guard", "page": "FoF, p. 180" },
-  "sea raider's crest": {
-    "url": "magic-item/sea-raiders-crest",
-    "page": "AJ:WoC, p. 47"
-  },
-  "seal of xing po": {
-    "url": "magic-item/seal-of-xing-po",
-    "page": "AJ:DotSD, p. 48"
-  },
-  "seed of rebirth": {
-    "url": "magic-item/seed-of-rebirth",
-    "page": "FoF, p. 183"
-  },
-  "serpent staff": { "url": "magic-item/serpent-staff", "page": "RH, p. 150" },
-  "shadow magnet": { "url": "magic-item/shadow-magnet", "page": "SK, p. 21" },
-  "shadow stalker": {
-    "url": "magic-item/shadow-stalker",
-    "page": "FoF, p. 179"
-  },
+  "serpent staff": { "url": "magic-item/serpent-staff", "page": "TK, p. 36" },
   "shield of ghrond": {
     "url": "magic-item/shield-of-ghrond",
-    "page": "DE, p. 23"
+    "page": "DE, p. 18"
   },
-  "shield of nan-gau": {
-    "url": "magic-item/shield-of-nan-gau",
-    "page": "AJ:AoGC, p. 43"
-  },
-  "shield of ptra": {
-    "url": "magic-item/shield-of-ptra",
-    "page": "RH, p. 151"
-  },
+  "shield of ptra": { "url": "magic-item/shield-of-ptra", "page": "TK, p. 36" },
   "shield of the gorgon": {
     "url": "magic-item/shield-of-the-gorgon",
-    "page": "AJ:EoM, p. 47"
-  },
-  "shield of the mirror pool": {
-    "url": "magic-item/shield-of-the-mirror-pool",
-    "page": "LM, p. 18"
-  },
-  "shield of the warrior true": {
-    "url": "magic-item/shield-of-the-warrior-true",
-    "page": "RB, p. 340"
-  },
-  "shroud of iron": {
-    "url": "magic-item/shroud-of-iron",
-    "page": "FoF, p. 76"
-  },
-  "shroud of the ancestor": {
-    "url": "magic-item/shroud-of-the-ancestor",
-    "page": "CD, p. 18"
+    "page": "EM, p. 20"
   },
   "sigil of asuryan": {
     "url": "magic-item/sigil-of-asuryan",
-    "page": "FoF, p. 183"
-  },
-  "sigil of centuries": {
-    "url": "magic-item/sigil-of-centuries",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "sigil of smoke & powder": {
-    "url": "magic-item/sigil-of-smoke-and-powder",
-    "page": "AJ:DotSD, p. 47"
-  },
-  "sigil of the mage queen": {
-    "url": "magic-item/sigil-of-the-mage-queen",
-    "page": "AJ:WER, p. 48"
-  },
-  "silver mirror": { "url": "magic-item/silver-mirror", "page": "FoF, p. 106" },
-  "silvery wand": { "url": "magic-item/silvery-wand", "page": "FoF, p. 183" },
-  "siren song": { "url": "magic-item/siren-song", "page": "DoC, p. 30" },
-  "siren standard": {
-    "url": "magic-item/siren-standard",
-    "page": "DoC, p. 30"
+    "page": "HE, p. 16"
   },
   "sirienne's locket": {
     "url": "magic-item/siriennes-locket",
-    "page": "FoF, p. 105"
+    "page": "BR, p. 61"
   },
-  "skalm": { "url": "magic-item/skalm", "page": "SK, p. 22" },
-  "skavenbrew": { "url": "magic-item/skavenbrew", "page": "SK, p. 22" },
-  "skavenpelt banner": {
-    "url": "magic-item/skavenpelt-banner",
-    "page": "LM, p. 18"
+  "skalm": { "url": "magic-item/skalm", "page": "SK, p. 36" },
+  "skavenbrew": { "url": "magic-item/skavenbrew", "page": "SK, p. 36" },
+  "skull of katam": {
+    "url": "magic-item/skull-of-katam",
+    "page": "HoC, p. 50"
   },
-  "skin of man": { "url": "magic-item/skin-of-man", "page": "RH, p. 114" },
-  "skull of katam": { "url": "magic-item/skull-of-katam", "page": "RH, p. 80" },
-  "skull staff": { "url": "magic-item/skull-staff", "page": "VC, p. 26" },
-  "skull totem": { "url": "magic-item/skull-totem", "page": "DoC, p. 28" },
-  "skullplucker": { "url": "magic-item/skullplucker", "page": "OK, p. 21" },
-  "slayer's hourglass": {
-    "url": "magic-item/slayers-hourglass",
-    "page": "AJ:EoM, p. 47"
-  },
-  "sloppity bilepiper": {
-    "url": "magic-item/sloppity-bilepiper",
-    "page": "DoC, p. 29"
-  },
-  "slug-skin": { "url": "magic-item/slug-skin", "page": "RH, p. 111" },
-  "sorcerous void": { "url": "magic-item/sorcerous-void", "page": "LM, p. 16" },
-  "sorrow's end": { "url": "magic-item/sorrows-end", "page": "AJ:KoB, p. 39" },
-  "soul of stone": { "url": "magic-item/soul-of-stone", "page": "LM, p. 16" },
-  "spangleshard": { "url": "magic-item/spangleshard", "page": "OK, p. 22" },
-  "sparkly wizard finda": {
-    "url": "magic-item/sparkly-wizard-finda",
-    "page": "AJ:O&GT, p. 47"
-  },
-  "spear of talsyn": {
-    "url": "magic-item/spear-of-talsyn",
-    "page": "AJ:WER, p. 37"
-  },
-  "spear of twilight": {
-    "url": "magic-item/spear-of-twilight",
-    "page": "FoF, p. 142"
-  },
-  "spell eater": { "url": "magic-item/spell-eater", "page": "DoC, p. 28" },
+  "skull staff": { "url": "magic-item/skull-staff", "page": "VC, p. 49" },
+  "skullplucker": { "url": "magic-item/skullplucker", "page": "OK, p. 62" },
+  "spangleshard": { "url": "magic-item/spangleshard", "page": "OK, p. 62" },
   "spell familiar": {
-    "url": "magic-item/spell-familiar",
-    "page": "VC, p. 26, RH, p. 80"
-  },
-  "spelleater axe": {
-    "url": "magic-item/spelleater-axe",
-    "page": "RB, p. 339"
-  },
-  "spellshield": { "url": "magic-item/spellshield", "page": "RB, p. 340" },
-  "spellthieving sword": {
-    "url": "magic-item/spellthieving-sword",
-    "page": "RH, p. 78"
-  },
-  "spirit lantern": {
-    "url": "magic-item/spirit-lantern",
-    "page": "AJ:AoGC, p. 44"
-  },
-  "spirit longma spear": {
-    "url": "magic-item/spirit-longma-spear",
-    "page": "AJ:AoGC, p. 42"
-  },
-  "spiteful shield": {
-    "url": "magic-item/spiteful-shield",
-    "page": "AJ:O&GT, p. 47"
-  },
-  "spoilpox scrivener": {
-    "url": "magic-item/spoilpox-scrivener",
-    "page": "DoC, p. 29"
-  },
-  "squintsoffen's marvellous magnifier": {
-    "url": "magic-item/squintsoffens-marvellous-magnifier",
-    "page": "AJ:EoM, p. 48"
-  },
-  "staff of aeons": {
-    "url": "magic-item/staff-of-aeons",
-    "page": "AJ:TKoK, p. 46"
-  },
-  "staff of awakening": {
-    "url": "magic-item/staff-of-awakening",
-    "page": "AJ:TKoK, p. 48"
+    "url": "magic-item/spell-familiar-hordes-of-chaos",
+    "page": "HoC, p. 50"
   },
   "staff of baduumm": {
     "url": "magic-item/staff-of-baduumm",
-    "page": "AJ:O&GT, p. 48"
+    "page": "O&G, p. 30"
   },
   "staff of change": {
     "url": "magic-item/staff-of-change",
-    "page": "DoC, p. 31"
-  },
-  "staff of quietude": {
-    "url": "magic-item/staff-of-quietude",
-    "page": "AJ:TRoW, p. 48"
+    "page": "HoC, p. 50"
   },
   "staff of solidity": {
     "url": "magic-item/staff-of-solidity",
-    "page": "AJ:HER, p. 48"
+    "page": "HE, p. 16"
   },
   "staff of the lost sun": {
     "url": "magic-item/staff-of-the-lost-sun",
-    "page": "LM, p. 17"
+    "page": "LM, p. 52"
   },
-  "stalwart rune": { "url": "magic-item/stalwart-rune", "page": "FoF, p. 38" },
-  "standard of chaotic glory": {
-    "url": "magic-item/standard-of-chaotic-glory",
-    "page": "DoC, p. 27"
-  },
-  "standard of hellish vigour": {
-    "url": "magic-item/standard-of-hellish-vigour",
-    "page": "VC, p. 25"
-  },
-  "standard of morning's chill": {
-    "url": "magic-item/standard-of-mornings-chill",
-    "page": "AJ:WER, p. 47"
-  },
-  "standard of seeping decay": {
-    "url": "magic-item/standard-of-seeping-decay",
-    "page": "DoC, p. 29"
-  },
+  "stalwart rune": { "url": "magic-item/stalwart-rune", "page": "DW, p. 22" },
   "standard of slaughter": {
     "url": "magic-item/standard-of-slaughter",
-    "page": "DE, p. 23"
+    "page": "DE, p. 18"
   },
   "standard of the cursing word": {
     "url": "magic-item/standard-of-the-cursing-word",
-    "page": "RH, p. 151"
+    "page": "TK, p. 36"
   },
-  "standard of wei-jin": {
-    "url": "magic-item/standard-of-wei-jin",
-    "page": "AJ:AoGC, p. 43"
-  },
-  "star lance": { "url": "magic-item/star-lance", "page": "AJ:HER, p. 46" },
-  "stone of spite": {
-    "url": "magic-item/stone-of-spite",
-    "page": "RH, p. 114"
-  },
-  "storm banner": { "url": "magic-item/storm-banner", "page": "SK, p. 21" },
-  "storm daemon": { "url": "magic-item/storm-daemon", "page": "SK, p. 22" },
-  "storm's wrath": {
-    "url": "magic-item/storms-wrath",
-    "page": "AJ:WoC, p. 34"
-  },
-  "stream of contagion": {
-    "url": "magic-item/stream-of-contagion",
-    "page": "DoC, p. 29"
-  },
-  "strollaz' rune": { "url": "magic-item/strollaz-rune", "page": "FoF, p. 37" },
-  "sun & moon blades": {
-    "url": "magic-item/sun-and-moon-blades",
-    "page": "AJ:AoGC, p. 42"
-  },
+  "storm banner": { "url": "magic-item/storm-banner", "page": "SK, p. 36" },
+  "storm daemon": { "url": "magic-item/storm-daemon", "page": "SK, p. 36" },
   "sun standard of chotec": {
     "url": "magic-item/sun-standard-of-chotec",
-    "page": "LM, p. 18"
-  },
-  "supernatural horror": {
-    "url": "magic-item/supernatural-horror",
-    "page": "VC, p. 23"
+    "page": "LM, p. 52"
   },
   "sword of battle": {
     "url": "magic-item/sword-of-battle",
-    "page": "RB, p. 338"
+    "page": "RB, p. 154"
   },
   "sword of heroes": {
     "url": "magic-item/sword-of-heroes",
-    "page": "FoF, p. 104"
+    "page": "BR, p. 61"
   },
   "sword of justice": {
     "url": "magic-item/sword-of-justice",
-    "page": "FoF, p. 74"
+    "page": "EM, p. 20"
   },
-  "sword of kings": { "url": "magic-item/sword-of-kings", "page": "VC, p. 24" },
   "sword of might": {
     "url": "magic-item/sword-of-might",
-    "page": "RB, p. 339"
-  },
-  "sword of ruin": { "url": "magic-item/sword-of-ruin", "page": "DE, p. 22" },
-  "sword of sorrow": {
-    "url": "magic-item/sword-of-sorrow",
-    "page": "AJ:TRoW, p. 46"
+    "page": "RB, p. 154"
   },
   "sword of striking": {
     "url": "magic-item/sword-of-striking",
-    "page": "RB, p. 339"
-  },
-  "sword of swiftness": {
-    "url": "magic-item/sword-of-swiftness",
-    "page": "RB, p. 339"
+    "page": "RB, p. 154"
   },
   "sword of the quest": {
     "url": "magic-item/sword-of-the-quest",
-    "page": "FoF, p. 104"
-  },
-  "sword of the stout hearted": {
-    "url": "magic-item/sword-of-the-stout-hearted",
-    "page": "AJ:KoB, p. 46"
-  },
-  "tablets of tahoth": {
-    "url": "magic-item/tablets-of-tahoth",
-    "page": "AJ:TKoK, p. 48"
+    "page": "BR, p. 61"
   },
   "talisman of protection": {
     "url": "magic-item/talisman-of-protection",
-    "page": "RB, p. 341"
-  },
-  "talisman of the carrion crow": {
-    "url": "magic-item/talisman-of-the-carrion-crow",
-    "page": "AJ:WoC, p. 47"
-  },
-  "talisman of the soaring eagle": {
-    "url": "magic-item/talisman-of-the-soaring-eagle",
-    "page": "AJ:WoC, p. 47"
-  },
-  "talons of the storm": {
-    "url": "magic-item/talons-of-the-storm",
-    "page": "AJ:AoGC, p. 27"
-  },
-  "tapestry of conquered lands": {
-    "url": "magic-item/tapestry-of-conquered-lands",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "tapestry of sigmar's triumph": {
-    "url": "magic-item/tapestry-of-sigmars-triumph",
-    "page": "AJ:EoM, p. 47"
-  },
-  "tapestry of talsyn": {
-    "url": "magic-item/tapestry-of-talsyn",
-    "page": "AJ:WER, p. 47"
-  },
-  "taskmaster's scourge": {
-    "url": "magic-item/taskmasters-scourge",
-    "page": "AJ:WoC, p. 46"
-  },
-  "tenderiser": { "url": "magic-item/tenderiser", "page": "OK, p. 21" },
-  "the accursed armour": {
-    "url": "magic-item/the-accursed-armour",
-    "page": "VC, p. 25"
-  },
-  "the armour of skaldour": {
-    "url": "magic-item/the-armour-of-skaldour",
-    "page": "AJ:DMH, p. 35"
-  },
-  "the armour of the warbird": {
-    "url": "magic-item/the-armour-of-the-warbird",
-    "page": "AJ:AoGC, p. 43"
-  },
-  "the axe of dargo": { "url": "magic-item/the-axe-of-dargo" },
-  "the axes of khorgor": {
-    "url": "magic-item/the-axes-of-khorgor",
-    "page": "AJ:BB, p. 46"
-  },
-  "the banner of lothern": {
-    "url": "magic-item/the-banner-of-lothern",
-    "page": "AJ:HER, p. 47"
-  },
-  "the banner of the free state of nuln": {
-    "url": "magic-item/the-banner-of-the-free-state-of-nuln",
-    "page": "AJ:EoM, p. 47"
-  },
-  "the banner of xen wun": {
-    "url": "magic-item/the-banner-of-xen-wun",
-    "page": "AJ:DotSD, p. 47"
+    "page": "RB, p. 154"
   },
   "the beast banner": {
     "url": "magic-item/the-beast-banner",
-    "page": "AJ:BB, p. 47"
-  },
-  "the big red raggedy flag": {
-    "url": "magic-item/the-big-red-raggedy-flag",
-    "page": "RH, p. 43"
+    "page": "BoC, p. 62"
   },
   "the black maul": {
     "url": "magic-item/the-black-maul",
-    "page": "AJ:BB, p. 46"
-  },
-  "the blackened plate": {
-    "url": "magic-item/the-blackened-plate",
-    "page": "RH, p. 113"
-  },
-  "the blade of leaping gold": {
-    "url": "magic-item/the-blade-of-leaping-gold",
-    "page": "FoF, p. 181"
-  },
-  "the blazing banner": {
-    "url": "magic-item/the-blazing-banner",
-    "page": "RB, p. 341"
-  },
-  "the blessed blade of ptra": {
-    "url": "magic-item/the-blessed-blade-of-ptra",
-    "page": "AJ:TKoK, p. 37"
-  },
-  "the brass cleaver": {
-    "url": "magic-item/the-brass-cleaver",
-    "page": "AJ:BB, p. 46"
-  },
-  "the brazen blade": {
-    "url": "magic-item/the-brazen-blade",
-    "page": "AJ:DotSD, p. 46"
-  },
-  "the chariot of the gods": {
-    "url": "magic-item/the-chariot-of-the-gods",
-    "page": "AJ:TKoK, p. 37"
-  },
-  "the cloak of beards": {
-    "url": "magic-item/the-cloak-of-beards",
-    "page": "FoF, p. 183"
+    "page": "BoC, p. 62"
   },
   "the collar of zorga": {
     "url": "magic-item/the-collar-of-zorga",
-    "page": "RH, p. 43"
-  },
-  "the conqueror's blade": {
-    "url": "magic-item/the-conquerors-blade",
-    "page": "AJ:TKoK, p. 46"
-  },
-  "the crown of nehekhara": {
-    "url": "magic-item/the-crown-of-nehekhara",
-    "page": "AJ:TKoK, p. 37"
-  },
-  "the dolorous blade": {
-    "url": "magic-item/the-dolorous-blade",
-    "page": "AJ:KoB, p. 37"
-  },
-  "the sword of couronne": {
-    "url": "magic-item/the-sword-of-couronne",
-    "page": "AJ:KoB, p. 37"
-  },
-  "the lion's shield": {
-    "url": "magic-item/the-lions-shield",
-    "page": "AJ:HER, p. 47"
-  },
-  "the crown of bretonnia": {
-    "url": "magic-item/the-lions-shield",
-    "page": "AJ:HER, p. 47"
-  },
-  "girdle of gold": {
-    "url": "magic-item/girdle-of-gold",
-    "page": "AJ:HER, p. 47"
-  },
-  "the chalice of potions": {
-    "url": "magic-item/the-chalice-of-potions",
-    "page": "AJ:HER, p. 47"
-  },
-  "power familiar - toad":
-  {
-    "url": "magic-item/power-familiar-toad",
-    "page": "AJ:HER, p. 47"
-  },
-  "the fellblade": { "url": "magic-item/the-fellblade", "page": "SK, p. 20" },
-  "the fires of nan-gau": {
-    "url": "magic-item/the-fires-of-nan-gau",
-    "page": "AJ:DotSD, p. 48"
-  },
-  "the flail of conquered kings": {
-    "url": "magic-item/the-flail-of-conquered-kings",
-    "page": "AJ:TKoK, p. 41"
+    "page": "O&G, p. 30"
   },
   "the flayed hauberk": {
     "url": "magic-item/the-flayed-hauberk",
-    "page": "VC, p. 25"
-  },
-  "the fur of sharggu": {
-    "url": "magic-item/the-fur-of-sharggu",
-    "page": "AJ:BB, p. 47"
-  },
-  "the gleaming pennant": {
-    "url": "magic-item/the-gleaming-pennant",
-    "page": "FoF, p. 75"
-  },
-  "the golden shield": {
-    "url": "magic-item/the-golden-shield",
-    "page": "AJ:HER, p. 47"
+    "page": "VC, p. 49"
   },
   "the gore banner": {
     "url": "magic-item/the-gore-banner",
-    "page": "AJ:BB, p. 47"
-  },
-  "the graven sceptre": {
-    "url": "magic-item/the-graven-sceptre",
-    "page": "CD, p. 17"
-  },
-  "the griffon helm": {
-    "url": "magic-item/the-griffon-helm",
-    "page": "AJ:EoM, p. 37"
-  },
-  "the guiding eye": {
-    "url": "magic-item/the-guiding-eye",
-    "page": "DE, p. 24"
-  },
-  "the jade banner": {
-    "url": "magic-item/the-jade-banner",
-    "page": "AJ:DotSD, p. 47"
-  },
-  "the lammasu's beard": {
-    "url": "magic-item/the-lammasus-beard",
-    "page": "CD, p. 18"
-  },
-  "the loremaster's cloak": {
-    "url": "magic-item/the-loremasters-cloak",
-    "page": "FoF, p. 182"
-  },
-  "the mantle of heaven": {
-    "url": "magic-item/the-mantle-of-heaven",
-    "page": "AJ:DotSD, p. 47"
-  },
-  "the mask of the furnace": {
-    "url": "magic-item/the-mask-of-the-furnace",
-    "page": "CD, p. 18"
-  },
-  "the might of miragliano": {
-    "url": "magic-item/the-might-of-miragliano",
-    "page": "AJ:TWoSF, p. 43"
-  },
-  "the monkey king's wisdom": {
-    "url": "magic-item/the-monkey-kings-wisdom",
-    "page": "AJ:AoGC, p. 42"
-  },
-  "the noble outlaw": {
-    "url": "magic-item/the-noble-outlaw",
-    "page": "AJ:TWoSF, p. 43"
-  },
-  "the pelt of charandis": {
-    "url": "magic-item/the-pelt-of-charandis",
-    "page": "AJ:HER, p. 35"
+    "page": "BoC, p. 62"
   },
   "the plague chalice": {
     "url": "magic-item/the-plague-chalice",
-    "page": "RH, p. 114"
-  },
-  "the scarab brooch of usirian": {
-    "url": "magic-item/the-scarab-brooch-of-usirian",
-    "page": "AJ:TKoK, p. 37"
-  },
-  "the screaming banner": {
-    "url": "magic-item/the-screaming-banner",
-    "page": "VC, p. 25"
-  },
-  "the seal of parravon": {
-    "url": "magic-item/the-seal-of-parravon",
-    "page": "AJ:KoB, p. 48"
-  },
-  "the shroud of shiyama": {
-    "url": "magic-item/the-shroud-of-shiyama",
-    "page": "AJ:DotSD, p. 47"
+    "page": "BoC, p. 62"
   },
   "the silver horn": {
     "url": "magic-item/the-silver-horn",
-    "page": "FoF, p. 76"
+    "page": "EM, p. 20"
   },
   "the silver lance of the blessed": {
     "url": "magic-item/the-silver-lance-of-the-blessed",
-    "page": "FoF, p. 76"
-  },
-  "the skull of the unicorn lord": {
-    "url": "magic-item/the-skull-of-the-unicorn-lord",
-    "page": "AJ:BB, p. 37"
-  },
-  "the slayer crown": { "url": "magic-item/the-slayer-crown" },
-  "the soiled tapestry": {
-    "url": "magic-item/the-soiled-tapestry",
-    "page": "AJ:BB, p. 47"
-  },
-  "the spear of kurnous": {
-    "url": "magic-item/the-spear-of-kurnous",
-    "page": "AJ:WER, p. 35"
-  },
-  "the staff of the elements": {
-    "url": "magic-item/the-staff-of-the-elements",
-    "page": "AJ:KoB, p. 41"
-  },
-  "the sword of nan-gau": {
-    "url": "magic-item/the-sword-of-nan-gau",
-    "page": "AJ:DotSD, p. 46"
-  },
-  "the sword of reason": {
-    "url": "magic-item/the-sword-of-reason",
-    "page": "AJ:DotSD, p. 46"
-  },
-  "the trickster's pendant": {
-    "url": "magic-item/the-tricksters-pendant",
-    "page": "AJ:HER, p. 48"
-  },
-  "the vortex shard": {
-    "url": "magic-item/the-vortex-shard",
-    "page": "AJ:HER, p. 48"
-  },
-  "the wandering diestro": {
-    "url": "magic-item/the-wandering-diestro",
-    "page": "AJ:TWoSF, p. 43"
+    "page": "BR, p. 61"
   },
   "the white cloak": {
     "url": "magic-item/the-white-cloak",
-    "page": "FoF, p. 75"
+    "page": "EM, p. 20"
   },
-  "the white sword": {
-    "url": "magic-item/the-white-sword",
-    "page": "FoF, p. 181"
-  },
-  "the wrath of xen yang": {
-    "url": "magic-item/the-wrath-of-xen-yang",
-    "page": "AJ:DotSD, p. 46"
-  },
-  "thundermace": { "url": "magic-item/thundermace", "page": "OK, p. 21" },
-  "tome of furion": { "url": "magic-item/tome-of-furion", "page": "DE, p. 24" },
-  "tome of midnight": {
-    "url": "magic-item/tome-of-midnight",
-    "page": "AJ:EoM, p. 48"
-  },
-  "tome of spellcraft": {
-    "url": "magic-item/tome-of-spellcraft",
-    "page": "AJ:TRoW, p. 48"
-  },
-  "tome of the dark gods": {
-    "url": "magic-item/tome-of-the-dark-gods",
-    "page": "AJ:WoC, p. 48"
-  },
-  "totem of eternal war": {
-    "url": "magic-item/totem-of-eternal-war",
-    "page": "DoC, p. 27"
-  },
+  "thundermace": { "url": "magic-item/thundermace", "page": "OK, p. 62" },
+  "tome of furion": { "url": "magic-item/tome-of-furion", "page": "DE, p. 18" },
   "totem of prophecy": {
     "url": "magic-item/totem-of-prophecy",
-    "page": "LM, p. 18"
-  },
-  "totem of rust": { "url": "magic-item/totem-of-rust", "page": "RH, p. 113" },
-  "totem of wrath": {
-    "url": "magic-item/totem-of-wrath",
-    "page": "AJ:TRoW, p. 47"
-  },
-  "trailblazer's hauberk": {
-    "url": "magic-item/trailblazers-hauberk",
-    "page": "AJ:TRoW, p. 47"
-  },
-  "transcendent healing": {
-    "url": "magic-item/transcendent-healing",
-    "page": "LM, p. 16"
-  },
-  "trappings of nurgle": {
-    "url": "magic-item/trappings-of-nurgle",
-    "page": "DoC, p. 29"
-  },
-  "trollhide shawl": {
-    "url": "magic-item/trollhide-shawl",
-    "page": "AJ:O&GT, p. 37"
-  },
-  "trollhide trousers": {
-    "url": "magic-item/trollhide-trousers",
-    "page": "RH, p. 43"
-  },
-  "twice-blessed armour": {
-    "url": "magic-item/twice-blessed-armour",
-    "page": "AJ:EoM, p. 47"
-  },
-  "twin heads": { "url": "magic-item/twin-heads", "page": "DoC, p. 31" },
-  "twin-tailed wand": {
-    "url": "magic-item/twin-tailed-wand",
-    "page": "AJ:EoM, p. 48"
-  },
-  "uncanny senses": {
-    "url": "magic-item/uncanny-senses",
-    "page": "RH, p. 111"
-  },
-  "unnatural fortitude": {
-    "url": "magic-item/unnatural-fortitude",
-    "page": "AJ:TRoW, p. 41"
+    "page": "LM, p. 52"
   },
   "valorous standard": {
     "url": "magic-item/valorous-standard",
-    "page": "FoF, p. 105"
+    "page": "BR, p. 61"
   },
-  "vaul's wrath": { "url": "magic-item/vauls-wrath", "page": "AJ:WER, p. 46" },
   "venom of the firefly frog": {
     "url": "magic-item/venom-of-the-firefly-frog",
-    "page": "LM, p. 19"
-  },
-  "vermilion quills": {
-    "url": "magic-item/vermilion-quills",
-    "page": "AJ:DotSD, p. 47"
-  },
-  "vial of lammasu blood": {
-    "url": "magic-item/vial-of-lammasu-blood",
-    "page": "CD, p. 19"
+    "page": "LM, p. 52"
   },
   "virtue of audacity": {
     "url": "magic-item/virtue-of-audacity",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
   "virtue of confidence": {
     "url": "magic-item/virtue-of-confidence",
-    "page": "FoF, p. 103"
+    "page": "BR, p. 58"
   },
   "virtue of discipline": {
     "url": "magic-item/virtue-of-discipline",
-    "page": "FoF, p. 103"
+    "page": "BR, p. 58"
   },
-  "virtue of duty": {
-    "url": "magic-item/virtue-of-duty",
-    "page": "FoF, p. 103"
-  },
+  "virtue of duty": { "url": "magic-item/virtue-of-duty", "page": "BR, p. 58" },
   "virtue of empathy": {
     "url": "magic-item/virtue-of-empathy",
-    "page": "FoF, p. 103"
+    "page": "BR, p. 58"
   },
   "virtue of heroism": {
     "url": "magic-item/virtue-of-heroism",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
   "virtue of knightly temper": {
     "url": "magic-item/virtue-of-knightly-temper",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
   "virtue of noble disdain": {
     "url": "magic-item/virtue-of-noble-disdain",
-    "page": "FoF, p. 103"
+    "page": "BR, p. 58"
   },
   "virtue of purity": {
     "url": "magic-item/virtue-of-purity",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
   "virtue of stoicism": {
     "url": "magic-item/virtue-of-stoicism",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
   "virtue of the ideal": {
     "url": "magic-item/virtue-of-the-ideal",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
   "virtue of the impetuous knight": {
     "url": "magic-item/virtue-of-the-impetuous-knight",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
   "virtue of the joust": {
     "url": "magic-item/virtue-of-the-joust",
-    "page": "FoF, p. 103"
+    "page": "BR, p. 58"
   },
   "virtue of the penitent": {
     "url": "magic-item/virtue-of-the-penitent",
-    "page": "FoF, p. 102"
+    "page": "BR, p. 58"
   },
-  "vitriolic totem": {
-    "url": "magic-item/vitriolic-totem",
-    "page": "RH, p. 113"
-  },
-  "von carstein ring": {
-    "url": "magic-item/von-carstein-ring",
-    "page": "VC, p. 25"
-  },
-  "von trickschotte's wondrous arquebus": {
-    "url": "magic-item/von-trickschottes-wondrous-arquebus",
-    "page": "AJ:EoM, p. 46"
-  },
-  "waaagh! banner": { "url": "magic-item/waaagh-banner", "page": "RH, p. 43" },
-  "wailing arrow": { "url": "magic-item/wailing-arrow", "page": "FoF, p. 144" },
-  "wand of jet": { "url": "magic-item/wand-of-jet", "page": "RB, p. 343" },
   "wand of wych elm": {
     "url": "magic-item/wand-of-wych-elm",
-    "page": "FoF, p. 144"
+    "page": "WE, p. 62"
   },
-  "wandering deliberations": {
-    "url": "magic-item/wandering-deliberations",
-    "page": "LM, p. 16"
-  },
-  "war banner": { "url": "magic-item/war-banner", "page": "RB, p. 341" },
-  "warden of saphery": {
-    "url": "magic-item/warden-of-saphery",
-    "page": "FoF, p. 180"
-  },
-  "warding splint": {
-    "url": "magic-item/warding-splint",
-    "page": "AJ:TKoK, p. 47"
-  },
-  "warp condenser": { "url": "magic-item/warp-condenser", "page": "SK, p. 22" },
+  "war banner": { "url": "magic-item/war-banner", "page": "RB, p. 154" },
   "warpstone amulet": {
     "url": "magic-item/warpstone-amulet",
-    "page": "SK, p. 21"
+    "page": "SK, p. 36"
   },
   "warpstone armour": {
     "url": "magic-item/warpstone-armour",
-    "page": "SK, p. 21"
+    "page": "SK, p. 36"
   },
-  "warpstone tokens": {
-    "url": "magic-item/warpstone-tokens",
-    "page": "SK, p. 22"
-  },
-  "warrior's rune": { "url": "magic-item/warriors-rune" },
-  "weeping blade": { "url": "magic-item/weeping-blade", "page": "SK, p. 20" },
-  "whip of agony": { "url": "magic-item/whip-of-agony", "page": "DE, p. 22" },
-  "wild rider kindred": {
-    "url": "magic-item/wild-rider-kindred",
-    "page": "AJ:WER, p. 43"
-  },
-  "will of tzeentch": {
-    "url": "magic-item/will-of-tzeentch",
-    "page": "DoC, p. 31"
-  },
-  "winged horror": { "url": "magic-item/winged-horror", "page": "DoC, p. 27" },
-  "witch hunter's ward": {
-    "url": "magic-item/witch-hunters-ward",
-    "page": "AJ:EoM, p. 47"
-  },
-  "wizard's familiar": {
-    "url": "magic-item/wizards-familiar",
-    "page": "FoF, p. 76"
-  },
-  "wizard's staff": { "url": "magic-item/wizards-staff", "page": "FoF, p. 76" },
-  "wizarding hat": { "url": "magic-item/wizarding-hat", "page": "RB, p. 342" },
+  "weeping blade": { "url": "magic-item/weeping-blade", "page": "SK, p. 36" },
+  "wizard's staff": { "url": "magic-item/wizards-staff", "page": "EM, p. 20" },
   "wollopa's one hit wunda": {
     "url": "magic-item/wollopas-one-hit-wunda",
-    "page": "RH, p. 42"
+    "page": "O&G, p. 30"
   },
-  "woodsman's axe": {
-    "url": "magic-item/woodsmans-axe",
-    "page": "AJ:HER, p. 46"
-  },
-  "wraithstone": { "url": "magic-item/wraithstone", "page": "FoF, p. 144" },
-  "wyrmbreath vial": {
-    "url": "magic-item/wyrmbreath-vial",
-    "page": "AJ:KoB, p. 48"
-  },
+  "wraithstone": { "url": "magic-item/wraithstone", "page": "WE, p. 62" },
   "abyssal terror": {
     "url": "unit/abyssal-terror",
     "stats": [
@@ -13523,37 +11834,7 @@
     "troopType": "HCh",
     "page": "FoF, p. 171"
   },
-  "lion guard": {
-    "url": "unit/lion-guard",
-    "stats": [
-      {
-        "A": "1",
-        "I": "5",
-        "M": "12",
-        "S": "4",
-        "T": "3",
-        "W": "1",
-        "BS": "4",
-        "Ld": "9",
-        "WS": "6",
-        "Name": "Lion Guard"
-      },
-      {
-        "A": "2",
-        "I": "5",
-        "M": "12",
-        "S": "4",
-        "T": "3",
-        "W": "1",
-        "BS": "4",
-        "Ld": "9",
-        "WS": "6",
-        "Name": "Lion Guard Captain"
-      }
-    ],
-    "troopType": "HI",
-    "page": "AJ:HER, p. 42"
-  },
+  "lion guard": { "url": "magic-item/lion-guard", "page": "HE, p. 15" },
   "longbeards": {
     "url": "unit/longbeards",
     "stats": [
@@ -21257,7 +19538,10 @@
   "glittering robe": { "url": "spell/glittering-robe", "page": "RB, p. 330" },
   "great bastion": { "url": "spell/great-bastion", "page": "AJ:AoGC, p. 46" },
   "hammerhand": { "url": "spell/hammerhand", "page": "RB, p. 320" },
-  "hand of khaine": { "url": "spell/hand-of-khaine", "page": "FoF, p. 186" },
+  "hand of khaine": {
+    "url": "magic-item/hand-of-khaine-artefact-and-skill",
+    "page": "DE, p. 23"
+  },
   "hand of mork": { "url": "spell/hand-of-mork-or-gork", "page": "RB, p. 335" },
   "hellish vigour": { "url": "spell/hellish-vigour", "page": "VC, p. 58" },
   "hidden pathways": {
@@ -21385,8 +19669,8 @@
   "storm of ash": { "url": "spell/storm-of-ash", "page": "CD, p. 21" },
   "strangleroot": { "url": "spell/strangleroot", "page": "AJ:BB, p. 45" },
   "stream of corruption": {
-    "url": "spell/stream-of-corruption",
-    "page": "RB, p. 325"
+    "url": "magic-item/stream-of-corruption",
+    "page": "HoC, p. 49"
   },
   "summon elemental spirit": {
     "url": "spell/summon-elemental-spirit",
@@ -21659,5 +19943,1619 @@
   "vanhel's danse macabre": {
     "url": "spell/vanhels-danse-macabre",
     "page": "VC, p. 58"
+  },
+  "staff of sorcery": {
+    "url": "magic-item/staff-of-sorcery",
+    "page": "RB, p. 154"
+  },
+  "power stone": { "url": "magic-item/power-stone", "page": "RB, p. 154" },
+  "daemon prince of tzeentch": {
+    "url": "magic-item/daemon-prince-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "doombull of tzeentch": {
+    "url": "magic-item/doombull-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "exalted daemon of tzeentch": {
+    "url": "magic-item/exalted-daemon-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "hero of tzeentch": {
+    "url": "magic-item/hero-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "lord of tzeentch": {
+    "url": "magic-item/lord-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "minotaurs of tzeentch": {
+    "url": "magic-item/minotaurs-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "regiment of tzeentch": {
+    "url": "magic-item/regiment-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "shaggoth of tzeentch": {
+    "url": "magic-item/shaggoth-of-tzeentch",
+    "page": "BoC, p. 60"
+  },
+  "chariot of khorne": {
+    "url": "magic-item/chariot-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "daemon prince of khorne": {
+    "url": "magic-item/daemon-prince-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "doombull of khorne": {
+    "url": "magic-item/doombull-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "exalted daemon of khorne": {
+    "url": "magic-item/exalted-daemon-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "hero of khorne": {
+    "url": "magic-item/hero-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "lord of khorne": {
+    "url": "magic-item/lord-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "minotaurs of khorne": {
+    "url": "magic-item/minotaurs-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "regiment of khorne": {
+    "url": "magic-item/regiment-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "shaggoth of khorne": {
+    "url": "magic-item/shaggoth-of-khorne",
+    "page": "BoC, p. 60"
+  },
+  "chariot of nurgle": {
+    "url": "magic-item/chariot-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "daemon prince of nurgle": {
+    "url": "magic-item/daemon-prince-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "doombull of nurgle": {
+    "url": "magic-item/doombull-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "exalted daemon of nurgle": {
+    "url": "magic-item/exalted-daemon-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "hero of nurgle": {
+    "url": "magic-item/hero-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "lord of nurgle": {
+    "url": "magic-item/lord-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "minotaurs of nurgle": {
+    "url": "magic-item/minotaurs-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "regiment of nurgle": {
+    "url": "magic-item/regiment-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "shaggoth of nurgle": {
+    "url": "magic-item/shaggoth-of-nurgle",
+    "page": "BoC, p. 61"
+  },
+  "chariot of slaanesh": {
+    "url": "magic-item/chariot-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "daemon prince of slaanesh": {
+    "url": "magic-item/daemon-prince-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "doombull of slaanesh": {
+    "url": "magic-item/doombull-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "exalted daemon of slaanesh": {
+    "url": "magic-item/exalted-daemon-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "hero of slaanesh": {
+    "url": "magic-item/hero-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "lord of slaanesh": {
+    "url": "magic-item/lord-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "minotaurs of slaanesh": {
+    "url": "magic-item/minotaurs-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "regiment of slaanesh": {
+    "url": "magic-item/regiment-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "shaggoth of slaanesh": {
+    "url": "magic-item/shaggoth-of-slaanesh",
+    "page": "BoC, p. 61"
+  },
+  "axes of khorgor": {
+    "url": "magic-item/axes-of-khorgor",
+    "page": "BoC, p. 62"
+  },
+  "bonecrusher mace": {
+    "url": "magic-item/bonecrusher-mace",
+    "page": "BoC, p. 62"
+  },
+  "great fang": { "url": "magic-item/great-fang", "page": "BoC, p. 62" },
+  "slaughter's blade": {
+    "url": "magic-item/slaughters-blade",
+    "page": "BoC, p. 62"
+  },
+  "trollhide armour": {
+    "url": "magic-item/trollhide-armour",
+    "page": "BoC, p. 62"
+  },
+  "the fur of sharrgu": {
+    "url": "magic-item/the-fur-of-sharrgu",
+    "page": "BoC, p. 62"
+  },
+  "chaos armour": {
+    "url": "magic-item/chaos-armour-beastmen",
+    "page": "BoC, p. 62"
+  },
+  "bloodhunt horn": {
+    "url": "magic-item/bloodhunt-horn",
+    "page": "BoC, p. 62"
+  },
+  "the dark heart": {
+    "url": "magic-item/the-dark-heart",
+    "page": "BoC, p. 62"
+  },
+  "the goretooth": { "url": "magic-item/the-goretooth", "page": "BoC, p. 62" },
+  "staff of darkoth": {
+    "url": "magic-item/staff-of-darkoth",
+    "page": "BoC, p. 62"
+  },
+  "the flesh banner": {
+    "url": "magic-item/the-flesh-banner",
+    "page": "BoC, p. 62"
+  },
+  "preyseeker": { "url": "magic-item/preyseeker", "page": "BoC, p. 62" },
+  "vitrolic totem": {
+    "url": "magic-item/vitrolic-totem",
+    "page": "BoC, p. 62"
+  },
+  "unliving idol": { "url": "magic-item/unliving-idol", "page": "BoC, p. 62" },
+  "sword of the lady's champion": {
+    "url": "magic-item/sword-of-the-ladys-champion",
+    "page": "BR, p. 61"
+  },
+  "the heartwood lance": {
+    "url": "magic-item/the-heartwood-lance",
+    "page": "BR, p. 61"
+  },
+  "the lance of artois": {
+    "url": "magic-item/the-lance-of-artois",
+    "page": "BR, p. 61"
+  },
+  "the wyrmlance": { "url": "magic-item/the-wyrmlance", "page": "BR, p. 61" },
+  "armour of the midsummer sun": {
+    "url": "magic-item/armour-of-the-midsummer-sun",
+    "page": "BR, p. 61"
+  },
+  "the grail shield": {
+    "url": "magic-item/the-grail-shield",
+    "page": "BR, p. 61"
+  },
+  "armour of agiluf": {
+    "url": "magic-item/armour-of-agiluf",
+    "page": "BR, p. 61"
+  },
+  "cuirass of fortune": {
+    "url": "magic-item/cuirass-of-fortune",
+    "page": "BR, p. 61"
+  },
+  "orcbane shield": { "url": "magic-item/orcbane-shield", "page": "BR, p. 61" },
+  "token of the damsel": {
+    "url": "magic-item/token-of-the-damsel",
+    "page": "BR, p. 61"
+  },
+  "insignia of the quest": {
+    "url": "magic-item/insignia-of-the-quest",
+    "page": "BR, p. 61"
+  },
+  "braid of bordeleaux": {
+    "url": "magic-item/braid-of-bordeleaux",
+    "page": "BR, p. 61"
+  },
+  "dragon's claw": { "url": "magic-item/dragons-claw", "page": "BR, p. 61" },
+  "mantle of damsel elena": {
+    "url": "magic-item/mantle-of-damsel-elena",
+    "page": "BR, p. 61"
+  },
+  "the silver mirror": {
+    "url": "magic-item/the-silver-mirror",
+    "page": "BR, p. 61"
+  },
+  "the verdant heart": {
+    "url": "magic-item/the-verdant-heart",
+    "page": "BR, p. 61"
+  },
+  "chalice of malfleur": {
+    "url": "magic-item/chalice-of-malfleur",
+    "page": "BR, p. 61"
+  },
+  "potion sacre": { "url": "magic-item/potion-sacre", "page": "BR, p. 61" },
+  "holy icon": { "url": "magic-item/holy-icon", "page": "BR, p. 61" },
+  "the ruby goblet": {
+    "url": "magic-item/the-ruby-goblet",
+    "page": "BR, p. 61"
+  },
+  "the mane of the purebreed": {
+    "url": "magic-item/the-mane-of-the-purebreed",
+    "page": "BR, p. 61"
+  },
+  "tress of isoulde": {
+    "url": "magic-item/tress-of-isoulde",
+    "page": "BR, p. 61"
+  },
+  "banner of the lady": {
+    "url": "magic-item/banner-of-the-lady",
+    "page": "BR, p. 61"
+  },
+  "banner of defence": {
+    "url": "magic-item/banner-of-defence",
+    "page": "BR, p. 61"
+  },
+  "twilight banner": {
+    "url": "magic-item/twilight-banner",
+    "page": "BR, p. 61"
+  },
+  "dark mace of death": {
+    "url": "magic-item/dark-mace-of-death",
+    "page": "RH, p. 33"
+  },
+  "obsidian blade": { "url": "magic-item/obsidian-blade", "page": "RH, p. 33" },
+  "armour of the furnace": {
+    "url": "magic-item/armour-of-the-furnace",
+    "page": "RH, p. 33"
+  },
+  "armour of gazrakh": {
+    "url": "magic-item/armour-of-gazrakh",
+    "page": "RH, p. 33"
+  },
+  "talisman of obsidian": {
+    "url": "magic-item/talisman-of-obsidian",
+    "page": "RH, p. 33"
+  },
+  "chalice of darkness": {
+    "url": "magic-item/chalice-of-darkness",
+    "page": "RH, p. 33"
+  },
+  "black gem of gnar": {
+    "url": "magic-item/black-gem-of-gnar",
+    "page": "RH, p. 33"
+  },
+  "gauntlet of bazhrakk the cruel": {
+    "url": "magic-item/gauntlet-of-bazhrakk-the-cruel",
+    "page": "RH, p. 33"
+  },
+  "banner of slavery": {
+    "url": "magic-item/banner-of-slavery",
+    "page": "RH, p. 33"
+  },
+  "blitzbeil": { "url": "magic-item/blitzbeil", "page": "WC 2004, p. 13" },
+  "storm hammer": {
+    "url": "magic-item/storm-hammer",
+    "page": "WC 2004, p. 13"
+  },
+  "winter's bite": {
+    "url": "magic-item/winters-bite",
+    "page": "WC 2004, p. 13"
+  },
+  "armour of skoll": {
+    "url": "magic-item/armour-of-skoll",
+    "page": "WC 2004, p. 13"
+  },
+  "wolf helm of the teutogens": {
+    "url": "magic-item/wolf-helm-of-the-teutogens",
+    "page": "WC 2004, p. 13"
+  },
+  "heart of middenheim": {
+    "url": "magic-item/heart-of-middenheim",
+    "page": "WC 2004, p. 13"
+  },
+  "cloak of anraheir": {
+    "url": "magic-item/cloak-of-anraheir",
+    "page": "WC 2004, p. 13"
+  },
+  "bane of the craven": {
+    "url": "magic-item/bane-of-the-craven",
+    "page": "WC 2004, p. 13"
+  },
+  "pelt of horros": {
+    "url": "magic-item/pelt-of-horros",
+    "page": "WC 2004, p. 13"
+  },
+  "claw totem": { "url": "magic-item/claw-totem", "page": "WC 2004, p. 13" },
+  "banner of middenheim": {
+    "url": "magic-item/banner-of-middenheim",
+    "page": "WC 2004, p. 13"
+  },
+  "standard of the white wolf": {
+    "url": "magic-item/standard-of-the-white-wolf",
+    "page": "WC 2004, p. 13"
+  },
+  "banner of the warrior true": {
+    "url": "magic-item/banner-of-the-warrior-true",
+    "page": "WC 2004, p. 13"
+  },
+  "amber fang": { "url": "magic-item/amber-fang", "page": "WC 2004, p. 9" },
+  "ice dagger": { "url": "magic-item/ice-dagger", "page": "WC 2004, p. 9" },
+  "fang of the winter wolf": {
+    "url": "magic-item/fang-of-the-winter-wolf",
+    "page": "WC 2004, p. 9"
+  },
+  "shard of skoll": {
+    "url": "magic-item/shard-of-skoll",
+    "page": "WC 2004, p. 9"
+  },
+  "wolfshead emblem": {
+    "url": "magic-item/wolfshead-emblem",
+    "page": "WC 2004, p. 9"
+  },
+  "venom sword": { "url": "magic-item/venom-sword", "page": "DE, p. 18" },
+  "gauntlet of power": {
+    "url": "magic-item/gauntlet-of-power",
+    "page": "DE, p. 18"
+  },
+  "blade of ruin": { "url": "magic-item/blade-of-ruin", "page": "DE, p. 18" },
+  "draich of dark power": {
+    "url": "magic-item/draich-of-dark-power",
+    "page": "DE, p. 18"
+  },
+  "hydra blade": { "url": "magic-item/hydra-blade", "page": "DE, p. 18" },
+  "crimson death": { "url": "magic-item/crimson-death", "page": "DE, p. 18" },
+  "blade of spite": { "url": "magic-item/blade-of-spite", "page": "DE, p. 18" },
+  "chill blade": { "url": "magic-item/chill-blade", "page": "DE, p. 18" },
+  "heartseeker": { "url": "magic-item/heartseeker", "page": "DE, p. 18" },
+  "web of shadows": { "url": "magic-item/web-of-shadows", "page": "DE, p. 18" },
+  "dark sword": { "url": "magic-item/dark-sword", "page": "DE, p. 18" },
+  "armour of living death": {
+    "url": "magic-item/armour-of-living-death",
+    "page": "DE, p. 18"
+  },
+  "armour of eternal servitude": {
+    "url": "magic-item/armour-of-eternal-servitude",
+    "page": "DE, p. 18"
+  },
+  "armour of darkness": {
+    "url": "magic-item/armour-of-darkness",
+    "page": "DE, p. 18"
+  },
+  "black amulet": { "url": "magic-item/black-amulet", "page": "DE, p. 18" },
+  "deathmask": { "url": "magic-item/deathmask", "page": "DE, p. 18" },
+  "heart-stone of darkness": {
+    "url": "magic-item/heart-stone-of-darkness",
+    "page": "DE, p. 18"
+  },
+  "mystic shield of light": {
+    "url": "magic-item/mystic-shield-of-light",
+    "page": "DE, p. 18"
+  },
+  "crown of black iron": {
+    "url": "magic-item/crown-of-black-iron",
+    "page": "DE, p. 18"
+  },
+  "seal of ghrond": { "url": "magic-item/seal-of-ghrond", "page": "DE, p. 18" },
+  "ring of hotek": { "url": "magic-item/ring-of-hotek", "page": "DE, p. 18" },
+  "soulstone": { "url": "magic-item/soulstone", "page": "DE, p. 18" },
+  "darkstar cloak": { "url": "magic-item/darkstar-cloak", "page": "DE, p. 18" },
+  "rubric of dark dimensions": {
+    "url": "magic-item/rubric-of-dark-dimensions",
+    "page": "DE, p. 18"
+  },
+  "ring of darkness": {
+    "url": "magic-item/ring-of-darkness-dark-elves",
+    "page": "DE, p. 18"
+  },
+  "wand of the kharaidon": {
+    "url": "magic-item/wand-of-the-kharaidon",
+    "page": "DE, p. 18"
+  },
+  "the cloak of dark souls": {
+    "url": "magic-item/the-cloak-of-dark-souls",
+    "page": "DE, p. 18"
+  },
+  "crystal of midnight": {
+    "url": "magic-item/crystal-of-midnight",
+    "page": "DE, p. 18"
+  },
+  "divine eye": { "url": "magic-item/divine-eye", "page": "DE, p. 18" },
+  "hydra banner": { "url": "magic-item/hydra-banner", "page": "DE, p. 18" },
+  "dread banner": { "url": "magic-item/dread-banner", "page": "DE, p. 18" },
+  "soul shadows standard": {
+    "url": "magic-item/soul-shadows-standard",
+    "page": "DE, p. 18"
+  },
+  "banner of murder": {
+    "url": "magic-item/banner-of-murder",
+    "page": "DE, p. 18"
+  },
+  "dance of doom": { "url": "magic-item/dance-of-doom", "page": "DE, p. 23" },
+  "touch of death": { "url": "magic-item/touch-of-death", "page": "DE, p. 23" },
+  "avatar of slaanesh": {
+    "url": "magic-item/avatar-of-slaanesh",
+    "page": "SoC, p. 86"
+  },
+  "quickening blood": {
+    "url": "magic-item/quickening-blood",
+    "page": "SoC, p. 86"
+  },
+  "master rune of snorri spangelhelm": {
+    "url": "magic-item/master-rune-of-snorri-spangelhelm",
+    "page": "DW, p. 20"
+  },
+  "blade of shining death": {
+    "url": "magic-item/blade-of-shining-death",
+    "page": "DW, p. 20"
+  },
+  "master rune of steel": {
+    "url": "magic-item/master-rune-of-steel",
+    "page": "DW, p. 21"
+  },
+  "rune of resistance": {
+    "url": "magic-item/rune-of-resistance",
+    "page": "DW, p. 21"
+  },
+  "master rune of valaya": {
+    "url": "magic-item/master-rune-of-valaya",
+    "page": "DW, p. 21"
+  },
+  "master rune of fear": {
+    "url": "magic-item/master-rune-of-fear",
+    "page": "DW, p. 21"
+  },
+  "master rune of taunting": {
+    "url": "magic-item/master-rune-of-taunting",
+    "page": "DW, p. 21"
+  },
+  "master rune of groth one-eye": {
+    "url": "magic-item/master-rune-of-groth-one-eye",
+    "page": "DW, p. 21"
+  },
+  "master rune of grimnir": {
+    "url": "magic-item/master-rune-of-grimnir",
+    "page": "DW, p. 21"
+  },
+  "rune of kadrin": { "url": "magic-item/rune-of-kadrin", "page": "DW, p. 21" },
+  "rune of slowness": {
+    "url": "magic-item/rune-of-slowness",
+    "page": "DW, p. 21"
+  },
+  "rune of sanctuary": {
+    "url": "magic-item/rune-of-sanctuary",
+    "page": "DW, p. 21"
+  },
+  "master rune of defence": {
+    "url": "magic-item/master-rune-of-defence",
+    "page": "DW, p. 22"
+  },
+  "flakkson's rune of seeking": {
+    "url": "magic-item/flakksons-rune-of-seeking",
+    "page": "DW, p. 22"
+  },
+  "master rune of skewering": {
+    "url": "magic-item/master-rune-of-skewering",
+    "page": "DW, p. 22"
+  },
+  "rune of fortune": {
+    "url": "magic-item/rune-of-fortune",
+    "page": "DW, p. 22"
+  },
+  "rune of penetrating": {
+    "url": "magic-item/rune-of-penetrating",
+    "page": "DW, p. 22"
+  },
+  "valiant rune": { "url": "magic-item/valiant-rune", "page": "DW, p. 22" },
+  "master rune of kingship": {
+    "url": "magic-item/master-rune-of-kingship",
+    "page": "DW, p. 23"
+  },
+  "master rune of spellbinding": {
+    "url": "magic-item/master-rune-of-spellbinding",
+    "page": "DW, p. 23"
+  },
+  "spelleater rune": {
+    "url": "magic-item/spelleater-rune",
+    "page": "DW, p. 23"
+  },
+  "master rune of dismay": {
+    "url": "magic-item/master-rune-of-dismay",
+    "page": "DW, p. 23"
+  },
+  "rune of fate": { "url": "magic-item/rune-of-fate", "page": "DW, p. 23" },
+  "skavenslayer": { "url": "magic-item/skavenslayer", "page": "SoC, p. 67" },
+  "vampireslayer": { "url": "magic-item/vampireslayer", "page": "SoC, p. 67" },
+  "beastslayer": { "url": "magic-item/beastslayer", "page": "SoC, p. 67" },
+  "the mace of helstrum": {
+    "url": "magic-item/the-mace-of-helstrum",
+    "page": "EM, p. 20"
+  },
+  "sword of fate": { "url": "magic-item/sword-of-fate", "page": "EM, p. 20" },
+  "sword of sigismund": {
+    "url": "magic-item/sword-of-sigismund",
+    "page": "EM, p. 20"
+  },
+  "sword of righteous steel": {
+    "url": "magic-item/sword-of-righteous-steel",
+    "page": "EM, p. 20"
+  },
+  "sword of power": { "url": "magic-item/sword-of-power", "page": "EM, p. 20" },
+  "hammer of judgement": {
+    "url": "magic-item/hammer-of-judgement",
+    "page": "EM, p. 20"
+  },
+  "wyrmslayer sword": {
+    "url": "magic-item/wyrmslayer-sword",
+    "page": "EM, p. 20"
+  },
+  "the gilded armour": {
+    "url": "magic-item/the-gilded-armour",
+    "page": "EM, p. 20"
+  },
+  "dawn armour": { "url": "magic-item/dawn-armour", "page": "EM, p. 20" },
+  "bronze shield": { "url": "magic-item/bronze-shield", "page": "EM, p. 20" },
+  "helm of the skaven slayer": {
+    "url": "magic-item/helm-of-the-skaven-slayer",
+    "page": "EM, p. 20"
+  },
+  "shroud of magnus": {
+    "url": "magic-item/shroud-of-magnus",
+    "page": "EM, p. 20"
+  },
+  "holy relic": { "url": "magic-item/holy-relic", "page": "EM, p. 20" },
+  "the crimson amulet": {
+    "url": "magic-item/the-crimson-amulet",
+    "page": "EM, p. 20"
+  },
+  "sigil of sigmar": {
+    "url": "magic-item/sigil-of-sigmar",
+    "page": "EM, p. 20"
+  },
+  "hexstaff": { "url": "magic-item/hexstaff", "page": "EM, p. 20" },
+  "grey wand": { "url": "magic-item/grey-wand", "page": "EM, p. 20" },
+  "seal of destruction": {
+    "url": "magic-item/seal-of-destruction",
+    "page": "EM, p. 20"
+  },
+  "rod of power": { "url": "magic-item/rod-of-power", "page": "EM, p. 20" },
+  "rod of command": { "url": "magic-item/rod-of-command", "page": "EM, p. 20" },
+  "the orb of thunder": {
+    "url": "magic-item/the-orb-of-thunder",
+    "page": "EM, p. 20"
+  },
+  "aldred's casket of sorcery": {
+    "url": "magic-item/aldreds-casket-of-sorcery",
+    "page": "EM, p. 20"
+  },
+  "icon of magnus": { "url": "magic-item/icon-of-magnus", "page": "EM, p. 20" },
+  "ring of volans": { "url": "magic-item/ring-of-volans", "page": "EM, p. 20" },
+  "doomfire ring": { "url": "magic-item/doomfire-ring", "page": "EM, p. 20" },
+  "van horstmann's speculum": {
+    "url": "magic-item/van-horstmanns-speculum",
+    "page": "EM, p. 20"
+  },
+  "banner of sigismund": {
+    "url": "magic-item/banner-of-sigismund",
+    "page": "EM, p. 20"
+  },
+  "banner of ulric": {
+    "url": "magic-item/banner-of-ulric",
+    "page": "EM, p. 20"
+  },
+  "banner of valour": {
+    "url": "magic-item/banner-of-valour",
+    "page": "EM, p. 20"
+  },
+  "standard of arcane warding": {
+    "url": "magic-item/standard-of-arcane-warding",
+    "page": "EM, p. 20"
+  },
+  "steel standard": { "url": "magic-item/steel-standard", "page": "EM, p. 20" },
+  "swordmaster": { "url": "magic-item/swordmaster", "page": "HE, p. 15" },
+  "seer": { "url": "magic-item/seer", "page": "HE, p. 15" },
+  "channeller": { "url": "magic-item/channeller", "page": "HE, p. 15" },
+  "claw of devastation": {
+    "url": "magic-item/claw-of-devastation",
+    "page": "HE, p. 16"
+  },
+  "blade of leaping gold": {
+    "url": "magic-item/blade-of-leaping-gold",
+    "page": "HE, p. 16"
+  },
+  "blade of darting steel": {
+    "url": "magic-item/blade-of-darting-steel",
+    "page": "HE, p. 16"
+  },
+  "fusil of conflagration": {
+    "url": "magic-item/fusil-of-conflagration",
+    "page": "HE, p. 16"
+  },
+  "armour of protection": {
+    "url": "magic-item/armour-of-protection",
+    "page": "HE, p. 16"
+  },
+  "armour of the gods": {
+    "url": "magic-item/armour-of-the-gods",
+    "page": "HE, p. 16"
+  },
+  "golden shield": { "url": "magic-item/golden-shield", "page": "HE, p. 16" },
+  "armour of heroes": {
+    "url": "magic-item/armour-of-heroes",
+    "page": "HE, p. 16"
+  },
+  "helm of fortune": {
+    "url": "magic-item/helm-of-fortune",
+    "page": "HE, p. 16"
+  },
+  "shadow armour": { "url": "magic-item/shadow-armour", "page": "HE, p. 16" },
+  "dragonscale shield": {
+    "url": "magic-item/dragonscale-shield",
+    "page": "HE, p. 16"
+  },
+  "vambraces of defence": {
+    "url": "magic-item/vambraces-of-defence",
+    "page": "HE, p. 16"
+  },
+  "golden crown of atrazar": {
+    "url": "magic-item/golden-crown-of-atrazar",
+    "page": "HE, p. 16"
+  },
+  "loremaster's cloak": {
+    "url": "magic-item/loremasters-cloak",
+    "page": "HE, p. 16"
+  },
+  "talisman of saphery": {
+    "url": "magic-item/talisman-of-saphery",
+    "page": "HE, p. 16"
+  },
+  "guardian phoenix": {
+    "url": "magic-item/guardian-phoenix",
+    "page": "HE, p. 16"
+  },
+  "amulet of fire": { "url": "magic-item/amulet-of-fire", "page": "HE, p. 16" },
+  "book of hoeth": { "url": "magic-item/book-of-hoeth", "page": "HE, p. 16" },
+  "starwood staff": { "url": "magic-item/starwood-staff", "page": "HE, p. 16" },
+  "jewel of the dusk": {
+    "url": "magic-item/jewel-of-the-dusk",
+    "page": "HE, p. 16"
+  },
+  "silver wand": { "url": "magic-item/silver-wand", "page": "HE, p. 16" },
+  "radiant gem of hoeth": {
+    "url": "magic-item/radiant-gem-of-hoeth",
+    "page": "HE, p. 16"
+  },
+  "cloak of beards": {
+    "url": "magic-item/cloak-of-beards",
+    "page": "HE, p. 16"
+  },
+  "ring of corin": { "url": "magic-item/ring-of-corin", "page": "HE, p. 16" },
+  "blessed tome": { "url": "magic-item/blessed-tome", "page": "HE, p. 16" },
+  "amulet of the purifying flame": {
+    "url": "magic-item/amulet-of-the-purifying-flame",
+    "page": "HE, p. 16"
+  },
+  "banner of the world dragon": {
+    "url": "magic-item/banner-of-the-world-dragon",
+    "page": "HE, p. 16"
+  },
+  "banner of sorcery": {
+    "url": "magic-item/banner-of-sorcery",
+    "page": "HE, p. 16"
+  },
+  "standard of balance": {
+    "url": "magic-item/standard-of-balance",
+    "page": "HE, p. 16"
+  },
+  "banner of ellryion": {
+    "url": "magic-item/banner-of-ellryion",
+    "page": "HE, p. 16"
+  },
+  "chaos disruption": {
+    "url": "magic-item/chaos-disruption",
+    "page": "HoC, p. 48"
+  },
+  "blade of ether": {
+    "url": "magic-item/blade-of-ether",
+    "page": "HoC, p. 48"
+  },
+  "radiance of dark glory": {
+    "url": "magic-item/radiance-of-dark-glory",
+    "page": "HoC, p. 48"
+  },
+  "soul hunger": { "url": "magic-item/soul-hunger", "page": "HoC, p. 48" },
+  "spell breaker": { "url": "magic-item/spell-breaker", "page": "HoC, p. 48" },
+  "diabolical splendour": {
+    "url": "magic-item/diabolical-splendour",
+    "page": "HoC, p. 48"
+  },
+  "tzeentch's will": {
+    "url": "magic-item/tzeentchs-will",
+    "page": "HoC, p. 49"
+  },
+  "spell destroyer": {
+    "url": "magic-item/spell-destroyer",
+    "page": "HoC, p. 49"
+  },
+  "master of sorcery": {
+    "url": "magic-item/master-of-sorcery",
+    "page": "HoC, p. 49"
+  },
+  "plague flail": { "url": "magic-item/plague-flail", "page": "HoC, p. 49" },
+  "aura of slaanesh": {
+    "url": "magic-item/aura-of-slaanesh",
+    "page": "HoC, p. 49"
+  },
+  "gaze of acquiescence": {
+    "url": "magic-item/gaze-of-acquiescence",
+    "page": "HoC, p. 49"
+  },
+  "chaos daemon sword": {
+    "url": "magic-item/chaos-daemon-sword",
+    "page": "HoC, p. 50"
+  },
+  "hellfire sword": {
+    "url": "magic-item/hellfire-sword",
+    "page": "HoC, p. 50"
+  },
+  "sword of change": {
+    "url": "magic-item/sword-of-change",
+    "page": "HoC, p. 50"
+  },
+  "whip of pleasure": {
+    "url": "magic-item/whip-of-pleasure",
+    "page": "HoC, p. 50"
+  },
+  "berserker sword": {
+    "url": "magic-item/berserker-sword",
+    "page": "HoC, p. 50"
+  },
+  "rending sword": { "url": "magic-item/rending-sword", "page": "HoC, p. 50" },
+  "blade of blood": {
+    "url": "magic-item/blade-of-blood",
+    "page": "HoC, p. 50"
+  },
+  "soul cleaver": { "url": "magic-item/soul-cleaver", "page": "HoC, p. 50" },
+  "spelleater shield": {
+    "url": "magic-item/spelleater-shield",
+    "page": "HoC, p. 50"
+  },
+  "chaos runeshield": {
+    "url": "magic-item/chaos-runeshield",
+    "page": "HoC, p. 50"
+  },
+  "armour of tortured souls": {
+    "url": "magic-item/armour-of-tortured-souls",
+    "page": "HoC, p. 50"
+  },
+  "armour of damnation": {
+    "url": "magic-item/armour-of-damnation",
+    "page": "HoC, p. 50"
+  },
+  "bane shield": { "url": "magic-item/bane-shield", "page": "HoC, p. 50" },
+  "beguiling gem": { "url": "magic-item/beguiling-gem", "page": "HoC, p. 50" },
+  "amulet of chaos": {
+    "url": "magic-item/amulet-of-chaos",
+    "page": "HoC, p. 50"
+  },
+  "golden eye of tzeentch": {
+    "url": "magic-item/golden-eye-of-tzeentch",
+    "page": "HoC, p. 50"
+  },
+  "power familiar": {
+    "url": "magic-item/power-familiar-hordes-of-chaos",
+    "page": "HoC, p. 50"
+  },
+  "warrior familiar": {
+    "url": "magic-item/warrior-familiar-hordes-of-chaos",
+    "page": "HoC, p. 50"
+  },
+  "rod of corruption": {
+    "url": "magic-item/rod-of-corruption",
+    "page": "HoC, p. 50"
+  },
+  "bindings of slaanesh": {
+    "url": "magic-item/bindings-of-slaanesh",
+    "page": "HoC, p. 50"
+  },
+  "book of secrets": {
+    "url": "magic-item/book-of-secrets",
+    "page": "HoC, p. 50"
+  },
+  "chalice of chaos": {
+    "url": "magic-item/chalice-of-chaos",
+    "page": "HoC, p. 50"
+  },
+  "deaths head": { "url": "magic-item/deaths-head", "page": "HoC, p. 50" },
+  "sceptre of domination": {
+    "url": "magic-item/sceptre-of-domination",
+    "page": "HoC, p. 50"
+  },
+  "mirror of knowledge": {
+    "url": "magic-item/mirror-of-knowledge",
+    "page": "HoC, p. 50"
+  },
+  "pendant of slaanesh": {
+    "url": "magic-item/pendant-of-slaanesh",
+    "page": "HoC, p. 50"
+  },
+  "banner of wrath": {
+    "url": "magic-item/banner-of-wrath",
+    "page": "HoC, p. 50"
+  },
+  "plague banner": { "url": "magic-item/plague-banner", "page": "HoC, p. 50" },
+  "fifth generation": {
+    "url": "magic-item/fifth-generation",
+    "page": "LM, p. 49"
+  },
+  "fourth generation": {
+    "url": "magic-item/fourth-generation",
+    "page": "LM, p. 49"
+  },
+  "third generation": {
+    "url": "magic-item/third-generation",
+    "page": "LM, p. 49"
+  },
+  "second generation": {
+    "url": "magic-item/second-generation",
+    "page": "LM, p. 49"
+  },
+  "blessed mark of the old ones": {
+    "url": "magic-item/blessed-mark-of-the-old-ones",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of quetzl": {
+    "url": "magic-item/blessed-spawning-of-quetzl",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of sotek": {
+    "url": "magic-item/blessed-spawning-of-sotek",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of tepok": {
+    "url": "magic-item/blessed-spawning-of-tepok",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of huanchi": {
+    "url": "magic-item/blessed-spawning-of-huanchi",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of chotec": {
+    "url": "magic-item/blessed-spawning-of-chotec",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of tlazcotl": {
+    "url": "magic-item/blessed-spawning-of-tlazcotl",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of tzunki": {
+    "url": "magic-item/blessed-spawning-of-tzunki",
+    "page": "LM, p. 50"
+  },
+  "blessed spawning of itzl": {
+    "url": "magic-item/blessed-spawning-of-itzl",
+    "page": "LM, p. 50"
+  },
+  "the divine plaque of protection": {
+    "url": "magic-item/the-divine-plaque-of-protection",
+    "page": "LM, p. 52"
+  },
+  "plaque of dominion": {
+    "url": "magic-item/plaque-of-dominion",
+    "page": "LM, p. 52"
+  },
+  "plaque of tepok": {
+    "url": "magic-item/plaque-of-tepok",
+    "page": "LM, p. 52"
+  },
+  "the blade of realities": {
+    "url": "magic-item/the-blade-of-realities",
+    "page": "LM, p. 52"
+  },
+  "burning blade of chotec": {
+    "url": "magic-item/burning-blade-of-chotec",
+    "page": "LM, p. 52"
+  },
+  "dagger of sotek": {
+    "url": "magic-item/dagger-of-sotek",
+    "page": "LM, p. 52"
+  },
+  "sword of the hornet": {
+    "url": "magic-item/sword-of-the-hornet",
+    "page": "LM, p. 52"
+  },
+  "sacred stegadon helm": {
+    "url": "magic-item/sacred-stegadon-helm",
+    "page": "LM, p. 52"
+  },
+  "shield of the mirrored pool": {
+    "url": "magic-item/shield-of-the-mirrored-pool",
+    "page": "LM, p. 52"
+  },
+  "the maiming shield": {
+    "url": "magic-item/the-maiming-shield",
+    "page": "LM, p. 52"
+  },
+  "amulet of itzl": { "url": "magic-item/amulet-of-itzl", "page": "LM, p. 52" },
+  "rod of the storm": {
+    "url": "magic-item/rod-of-the-storm",
+    "page": "LM, p. 52"
+  },
+  "gleaming pendant of chotec": {
+    "url": "magic-item/gleaming-pendant-of-chotec",
+    "page": "LM, p. 52"
+  },
+  "blood statuette of spite": {
+    "url": "magic-item/blood-statuette-of-spite",
+    "page": "LM, p. 52"
+  },
+  "charm of the jaguar warrior": {
+    "url": "magic-item/charm-of-the-jaguar-warrior",
+    "page": "LM, p. 52"
+  },
+  "curse-charm of tepok": {
+    "url": "magic-item/curse-charm-of-tepok",
+    "page": "LM, p. 52"
+  },
+  "bane head": { "url": "magic-item/bane-head", "page": "LM, p. 52" },
+  "dragonfly of quicksilver": {
+    "url": "magic-item/dragonfly-of-quicksilver",
+    "page": "LM, p. 52"
+  },
+  "huanchi's blessed totem": {
+    "url": "magic-item/huanchis-blessed-totem",
+    "page": "LM, p. 52"
+  },
+  "the tenderiser": { "url": "magic-item/the-tenderiser", "page": "OK, p. 62" },
+  "siegebreaker": { "url": "magic-item/siegebreaker", "page": "OK, p. 62" },
+  "greatskull": { "url": "magic-item/greatskull", "page": "OK, p. 62" },
+  "bullgut": { "url": "magic-item/bullgut", "page": "OK, p. 62" },
+  "greedy fist": { "url": "magic-item/greedy-fist", "page": "OK, p. 62" },
+  "cathayan jet": { "url": "magic-item/cathayan-jet", "page": "OK, p. 62" },
+  "wyrdstone necklace": {
+    "url": "magic-item/wyrdstone-necklace",
+    "page": "OK, p. 62"
+  },
+  "gnoblar thiefstone": {
+    "url": "magic-item/gnoblar-thiefstone",
+    "page": "OK, p. 62"
+  },
+  "bangstick": { "url": "magic-item/bangstick", "page": "OK, p. 62" },
+  "skullmantle": { "url": "magic-item/skullmantle", "page": "OK, p. 62" },
+  "brahmir statue": { "url": "magic-item/brahmir-statue", "page": "OK, p. 62" },
+  "daemon-killer scars": {
+    "url": "magic-item/daemon-killer-scars",
+    "page": "OK, p. 62"
+  },
+  "greyback pelt": { "url": "magic-item/greyback-pelt", "page": "OK, p. 62" },
+  "rock eye": { "url": "magic-item/rock-eye", "page": "OK, p. 62" },
+  "dragonhide": { "url": "magic-item/dragonhide", "page": "OK, p. 62" },
+  "ragbanner": { "url": "magic-item/ragbanner", "page": "OK, p. 62" },
+  "battleaxe of the last waaagh!": {
+    "url": "magic-item/battleaxe-of-the-last-waaagh",
+    "page": "O&G, p. 30"
+  },
+  "kleeva's cleaver of cleavage": {
+    "url": "magic-item/kleevas-cleaver-of-cleavage",
+    "page": "O&G, p. 30"
+  },
+  "basha's big axe of bashin'": {
+    "url": "magic-item/bashas-big-axe-of-bashin",
+    "page": "O&G, p. 30"
+  },
+  "krumpa's club of crumpin'": {
+    "url": "magic-item/krumpas-club-of-crumpin",
+    "page": "O&G, p. 30"
+  },
+  "hacka's sword of hackin'": {
+    "url": "magic-item/hackas-sword-of-hackin",
+    "page": "O&G, p. 30"
+  },
+  "fumpa's club of fumpin'": {
+    "url": "magic-item/fumpas-club-of-fumpin",
+    "page": "O&G, p. 30"
+  },
+  "kurbog's curmudgeonly clobbera": {
+    "url": "magic-item/kurbogs-curmudgeonly-clobbera",
+    "page": "O&G, p. 30"
+  },
+  "pork's pigstikka": {
+    "url": "magic-item/porks-pigstikka",
+    "page": "O&G, p. 30"
+  },
+  "ulag's akk'rit axe": {
+    "url": "magic-item/ulags-akkrit-axe",
+    "page": "O&G, p. 30"
+  },
+  "duffa's club of duffin'": {
+    "url": "magic-item/duffas-club-of-duffin",
+    "page": "O&G, p. 30"
+  },
+  "owzat's club of smackin'": {
+    "url": "magic-item/owzats-club-of-smackin",
+    "page": "O&G, p. 30"
+  },
+  "armour of protectyness": {
+    "url": "magic-item/armour-of-protectyness",
+    "page": "O&G, p. 30"
+  },
+  "ironskin shield": {
+    "url": "magic-item/ironskin-shield",
+    "page": "O&G, p. 30"
+  },
+  "armour of gork": {
+    "url": "magic-item/armour-of-gork",
+    "page": "O&G, p. 30"
+  },
+  "drog's dead 'ard armour": {
+    "url": "magic-item/drogs-dead-ard-armour",
+    "page": "O&G, p. 30"
+  },
+  "ugbrag's lucky shield": {
+    "url": "magic-item/ugbrags-lucky-shield",
+    "page": "O&G, p. 30"
+  },
+  "nobbla's 'elmet": {
+    "url": "magic-item/nobblas-elmet",
+    "page": "O&G, p. 30"
+  },
+  "sizzla's shiny baubles": {
+    "url": "magic-item/sizzlas-shiny-baubles",
+    "page": "O&G, p. 30"
+  },
+  "warboss umm's best big boss's 'at": {
+    "url": "magic-item/warboss-umms-best-big-bosss-at",
+    "page": "O&G, p. 30"
+  },
+  "magical warpaint": {
+    "url": "magic-item/magical-warpaint",
+    "page": "O&G, p. 30"
+  },
+  "dangly wotnotz": {
+    "url": "magic-item/dangly-wotnotz",
+    "page": "O&G, p. 30"
+  },
+  "ditto's double doin' doo-dahs": {
+    "url": "magic-item/dittos-double-doin-doo-dahs",
+    "page": "O&G, p. 30"
+  },
+  "staff of sneaky stealin'": {
+    "url": "magic-item/staff-of-sneaky-stealin",
+    "page": "O&G, p. 30"
+  },
+  "warboss imbad's iron gnashas": {
+    "url": "magic-item/warboss-imbads-iron-gnashas",
+    "page": "O&G, p. 30"
+  },
+  "bigged's 'ed kickin boots": {
+    "url": "magic-item/biggeds-ed-kickin-boots",
+    "page": "O&G, p. 30"
+  },
+  "guzzla's backbone brew": {
+    "url": "magic-item/guzzlas-backbone-brew",
+    "page": "O&G, p. 30"
+  },
+  "mad cap mushrooms": {
+    "url": "magic-item/mad-cap-mushrooms",
+    "page": "O&G, p. 30"
+  },
+  "'edbuttin' 'at": { "url": "magic-item/edbuttin-at", "page": "O&G, p. 30" },
+  "nibblas 'itty ring": {
+    "url": "magic-item/nibblas-itty-ring",
+    "page": "O&G, p. 30"
+  },
+  "mork's spirit-totem": {
+    "url": "magic-item/morks-spirit-totem",
+    "page": "O&G, p. 30"
+  },
+  "rowdy grott's big red raggedy banner": {
+    "url": "magic-item/rowdy-grotts-big-red-raggedy-banner",
+    "page": "O&G, p. 30"
+  },
+  "bad moon banner": {
+    "url": "magic-item/bad-moon-banner",
+    "page": "O&G, p. 30"
+  },
+  "night banner": { "url": "magic-item/night-banner", "page": "O&G, p. 30" },
+  "gork's waaagh! banner": {
+    "url": "magic-item/gorks-waaagh-banner",
+    "page": "O&G, p. 30"
+  },
+  "guff's flag": { "url": "magic-item/guffs-flag", "page": "O&G, p. 30" },
+  "nogg's banner of butchery": {
+    "url": "magic-item/noggs-banner-of-butchery",
+    "page": "O&G, p. 30"
+  },
+  "the bashin' flag of bork": {
+    "url": "magic-item/the-bashin-flag-of-bork",
+    "page": "O&G, p. 30"
+  },
+  "fellblade": { "url": "magic-item/fellblade", "page": "SK, p. 36" },
+  "blade of black fury": {
+    "url": "magic-item/blade-of-black-fury",
+    "page": "SK, p. 36"
+  },
+  "the gouger": { "url": "magic-item/the-gouger", "page": "SK, p. 36" },
+  "warpstone stars": {
+    "url": "magic-item/warpstone-stars",
+    "page": "SK, p. 36"
+  },
+  "cursed blade of delirium": {
+    "url": "magic-item/cursed-blade-of-delirium",
+    "page": "SK, p. 36"
+  },
+  "desolate blade": { "url": "magic-item/desolate-blade", "page": "SK, p. 36" },
+  "headsplitter": { "url": "magic-item/headsplitter", "page": "SK, p. 36" },
+  "dwarf-slayer": { "url": "magic-item/dwarf-slayer", "page": "SK, p. 36" },
+  "blade of corruption": {
+    "url": "magic-item/blade-of-corruption",
+    "page": "SK, p. 36"
+  },
+  "languisher sword": {
+    "url": "magic-item/languisher-sword",
+    "page": "SK, p. 36"
+  },
+  "death globes": { "url": "magic-item/death-globes", "page": "SK, p. 36" },
+  "rust armour": { "url": "magic-item/rust-armour", "page": "SK, p. 36" },
+  "twisted crown of the horned rat": {
+    "url": "magic-item/twisted-crown-of-the-horned-rat",
+    "page": "SK, p. 36"
+  },
+  "the foul pendant": {
+    "url": "magic-item/the-foul-pendant",
+    "page": "SK, p. 36"
+  },
+  "tenebrous cloak": {
+    "url": "magic-item/tenebrous-cloak",
+    "page": "SK, p. 36"
+  },
+  "warpstorm scroll": {
+    "url": "magic-item/warpstorm-scroll",
+    "page": "SK, p. 36"
+  },
+  "warp scroll": { "url": "magic-item/warp-scroll", "page": "SK, p. 36" },
+  "eye of the horned rat": {
+    "url": "magic-item/eye-of-the-horned-rat",
+    "page": "SK, p. 36"
+  },
+  "warpstone token": {
+    "url": "magic-item/warpstone-token",
+    "page": "SK, p. 36"
+  },
+  "cloak of shadows": {
+    "url": "magic-item/cloak-of-shadows",
+    "page": "SK, p. 36"
+  },
+  "liber bubonicus": {
+    "url": "magic-item/liber-bubonicus",
+    "page": "SK, p. 36"
+  },
+  "bands of power": { "url": "magic-item/bands-of-power", "page": "SK, p. 36" },
+  "warpstone charm": {
+    "url": "magic-item/warpstone-charm",
+    "page": "SK, p. 36"
+  },
+  "sacred standard of the horned rat": {
+    "url": "magic-item/sacred-standard-of-the-horned-rat",
+    "page": "SK, p. 36"
+  },
+  "umbranner": { "url": "magic-item/umbranner", "page": "SK, p. 36" },
+  "banner of the four black winds": {
+    "url": "magic-item/banner-of-the-four-black-winds",
+    "page": "SK, p. 36"
+  },
+  "banner of burning hatred": {
+    "url": "magic-item/banner-of-burning-hatred",
+    "page": "SK, p. 36"
+  },
+  "banner of the swarm": {
+    "url": "magic-item/banner-of-the-swarm",
+    "page": "SK, p. 36"
+  },
+  "the blade of mourning": {
+    "url": "magic-item/the-blade-of-mourning",
+    "page": "TK, p. 36"
+  },
+  "blade of setep": { "url": "magic-item/blade-of-setep", "page": "TK, p. 36" },
+  "spear of antarhak": {
+    "url": "magic-item/spear-of-antarhak",
+    "page": "TK, p. 36"
+  },
+  "amour of eternity": {
+    "url": "magic-item/amour-of-eternity",
+    "page": "TK, p. 36"
+  },
+  "scorpion armour": {
+    "url": "magic-item/scorpion-armour",
+    "page": "TK, p. 36"
+  },
+  "golden ankhra": { "url": "magic-item/golden-ankhra", "page": "TK, p. 36" },
+  "amulet of pha-stah": {
+    "url": "magic-item/amulet-of-pha-stah",
+    "page": "TK, p. 36"
+  },
+  "golden eye of rah-nutt": {
+    "url": "magic-item/golden-eye-of-rah-nutt",
+    "page": "TK, p. 36"
+  },
+  "staff of ravening": {
+    "url": "magic-item/staff-of-ravening",
+    "page": "TK, p. 36"
+  },
+  "staff of mastery": {
+    "url": "magic-item/staff-of-mastery",
+    "page": "TK, p. 36"
+  },
+  "neferra's plaques of mighty incantations": {
+    "url": "magic-item/neferras-plaques-of-mighty-incantations",
+    "page": "TK, p. 36"
+  },
+  "blue khepra": { "url": "magic-item/blue-khepra", "page": "TK, p. 36" },
+  "death mask of kharnut": {
+    "url": "magic-item/death-mask-of-kharnut",
+    "page": "TK, p. 36"
+  },
+  "brooch of the great desert": {
+    "url": "magic-item/brooch-of-the-great-desert",
+    "page": "TK, p. 36"
+  },
+  "chariot of fire": {
+    "url": "magic-item/chariot-of-fire",
+    "page": "TK, p. 36"
+  },
+  "vambraces of the sun": {
+    "url": "magic-item/vambraces-of-the-sun",
+    "page": "TK, p. 36"
+  },
+  "standard of the sands": {
+    "url": "magic-item/standard-of-the-sands",
+    "page": "TK, p. 36"
+  },
+  "banner of the hidden dead": {
+    "url": "magic-item/banner-of-the-hidden-dead",
+    "page": "TK, p. 36"
+  },
+  "mirage standard": {
+    "url": "magic-item/mirage-standard",
+    "page": "TK, p. 36"
+  },
+  "banner of the undying legion": {
+    "url": "magic-item/banner-of-the-undying-legion",
+    "page": "TK, p. 36"
+  },
+  "black axe of krell": {
+    "url": "magic-item/black-axe-of-krell",
+    "page": "VC, p. 49"
+  },
+  "sword of unholy power": {
+    "url": "magic-item/sword-of-unholy-power",
+    "page": "VC, p. 49"
+  },
+  "tomb blade": { "url": "magic-item/tomb-blade", "page": "VC, p. 49" },
+  "asp bow": { "url": "magic-item/asp-bow", "page": "VC, p. 49" },
+  "sword of the kings": {
+    "url": "magic-item/sword-of-the-kings",
+    "page": "VC, p. 49"
+  },
+  "armour of bone": { "url": "magic-item/armour-of-bone", "page": "VC, p. 49" },
+  "wailing helm": { "url": "magic-item/wailing-helm", "page": "VC, p. 49" },
+  "the cursed shield of mousillon": {
+    "url": "magic-item/the-cursed-shield-of-mousillon",
+    "page": "VC, p. 49"
+  },
+  "the carstein ring": {
+    "url": "magic-item/the-carstein-ring",
+    "page": "VC, p. 49"
+  },
+  "obsidian amulet": {
+    "url": "magic-item/obsidian-amulet",
+    "page": "VC, p. 49"
+  },
+  "ring of the night": {
+    "url": "magic-item/ring-of-the-night",
+    "page": "VC, p. 49"
+  },
+  "wristbands of black gold": {
+    "url": "magic-item/wristbands-of-black-gold",
+    "page": "VC, p. 49"
+  },
+  "the gem of blood": {
+    "url": "magic-item/the-gem-of-blood",
+    "page": "VC, p. 49"
+  },
+  "staff of damnation": {
+    "url": "magic-item/staff-of-damnation",
+    "page": "VC, p. 49"
+  },
+  "book of arkhan": { "url": "magic-item/book-of-arkhan", "page": "VC, p. 49" },
+  "black periapt": { "url": "magic-item/black-periapt", "page": "VC, p. 49" },
+  "cursed book": { "url": "magic-item/cursed-book", "page": "VC, p. 49" },
+  "rod of flaming death": {
+    "url": "magic-item/rod-of-flaming-death",
+    "page": "VC, p. 49"
+  },
+  "cloak of mist and shadows": {
+    "url": "magic-item/cloak-of-mist-and-shadows",
+    "page": "VC, p. 49"
+  },
+  "talon of death": { "url": "magic-item/talon-of-death", "page": "VC, p. 49" },
+  "casket of ages": { "url": "magic-item/casket-of-ages", "page": "VC, p. 49" },
+  "hell banner": { "url": "magic-item/hell-banner", "page": "VC, p. 49" },
+  "banner of doom": { "url": "magic-item/banner-of-doom", "page": "VC, p. 49" },
+  "the drakenhof banner": {
+    "url": "magic-item/the-drakenhof-banner",
+    "page": "VC, p. 49"
+  },
+  "summon bats": { "url": "magic-item/summon-bats", "page": "VC, p. 49" },
+  "summon wolves": { "url": "magic-item/summon-wolves", "page": "VC, p. 49" },
+  "screaming banner": {
+    "url": "magic-item/screaming-banner",
+    "page": "VC, p. 49"
+  },
+  "banner of the dead legion": {
+    "url": "magic-item/banner-of-the-dead-legion",
+    "page": "VC, p. 49"
+  },
+  "call winds": { "url": "magic-item/call-winds", "page": "VC, p. 52" },
+  "spectral attendants": {
+    "url": "magic-item/spectral-attendants",
+    "page": "VC, p. 52"
+  },
+  "walking death": { "url": "magic-item/walking-death", "page": "VC, p. 52" },
+  "aura of dark majesty": {
+    "url": "magic-item/aura-of-dark-majesty",
+    "page": "VC, p. 52"
+  },
+  "wolf form": { "url": "magic-item/wolf-form", "page": "VC, p. 52" },
+  "earthbind": { "url": "magic-item/earthbind", "page": "VC, p. 52" },
+  "wolf lord": { "url": "magic-item/wolf-lord", "page": "VC, p. 52" },
+  "nehekhara's noble blood": {
+    "url": "magic-item/nehekharas-noble-blood",
+    "page": "VC, p. 52"
+  },
+  "the awakening": { "url": "magic-item/the-awakening", "page": "VC, p. 52" },
+  "unholy cynosure": {
+    "url": "magic-item/unholy-cynosure",
+    "page": "VC, p. 52"
+  },
+  "forbidden lore": { "url": "magic-item/forbidden-lore", "page": "VC, p. 52" },
+  "blademaster": { "url": "magic-item/blademaster", "page": "VC, p. 52" },
+  "red fury": { "url": "magic-item/red-fury", "page": "VC, p. 52" },
+  "heart piercing": { "url": "magic-item/heart-piercing", "page": "VC, p. 52" },
+  "master strike": { "url": "magic-item/master-strike", "page": "VC, p. 52" },
+  "strength of steel": {
+    "url": "magic-item/strength-of-steel",
+    "page": "VC, p. 52"
+  },
+  "honour or death": {
+    "url": "magic-item/honour-or-death",
+    "page": "VC, p. 52"
+  },
+  "massive monstrosity": {
+    "url": "magic-item/massive-monstrosity",
+    "page": "VC, p. 52"
+  },
+  "bat form": { "url": "magic-item/bat-form", "page": "VC, p. 52" },
+  "infinite hatred": {
+    "url": "magic-item/infinite-hatred",
+    "page": "VC, p. 52"
+  },
+  "summon ghouls": { "url": "magic-item/summon-ghouls", "page": "VC, p. 52" },
+  "iron sinews": { "url": "magic-item/iron-sinews", "page": "VC, p. 52" },
+  "seduction": { "url": "magic-item/seduction", "page": "VC, p. 52" },
+  "domination": { "url": "magic-item/domination", "page": "VC, p. 52" },
+  "quickblood": { "url": "magic-item/quickblood", "page": "VC, p. 52" },
+  "innocence lost": { "url": "magic-item/innocence-lost", "page": "VC, p. 52" },
+  "transfix": { "url": "magic-item/transfix", "page": "VC, p. 52" },
+  "a cluster of radiants": {
+    "url": "magic-item/a-cluster-of-radiants",
+    "page": "WE, p. 60"
+  },
+  "the spirit sword": {
+    "url": "magic-item/the-spirit-sword",
+    "page": "WE, p. 62"
+  },
+  "the bow of loren": {
+    "url": "magic-item/the-bow-of-loren",
+    "page": "WE, p. 62"
+  },
+  "the dawnspear": { "url": "magic-item/the-dawnspear", "page": "WE, p. 62" },
+  "the spear of twilight": {
+    "url": "magic-item/the-spear-of-twilight",
+    "page": "WE, p. 62"
+  },
+  "the callach's claw": {
+    "url": "magic-item/the-callachs-claw",
+    "page": "WE, p. 62"
+  },
+  "the hunter's talon": {
+    "url": "magic-item/the-hunters-talon",
+    "page": "WE, p. 62"
+  },
+  "the sword of a thousand winters": {
+    "url": "magic-item/the-sword-of-a-thousand-winters",
+    "page": "WE, p. 62"
+  },
+  "rageth's wildfire blades": {
+    "url": "magic-item/rageths-wildfire-blades",
+    "page": "WE, p. 62"
+  },
+  "the oaken armour": {
+    "url": "magic-item/the-oaken-armour",
+    "page": "WE, p. 62"
+  },
+  "armour of the fey": {
+    "url": "magic-item/armour-of-the-fey",
+    "page": "WE, p. 62"
+  },
+  "the helm of the hunt": {
+    "url": "magic-item/the-helm-of-the-hunt",
+    "page": "WE, p. 62"
+  },
+  "briarsheath": { "url": "magic-item/briarsheath", "page": "WE, p. 62" },
+  "the rhymer's harp": {
+    "url": "magic-item/the-rhymers-harp",
+    "page": "WE, p. 62"
+  },
+  "amaranthine brooch": {
+    "url": "magic-item/amaranthine-brooch",
+    "page": "WE, p. 62"
+  },
+  "amber pendant": { "url": "magic-item/amber-pendant", "page": "WE, p. 62" },
+  "stone of rebirth": {
+    "url": "magic-item/stone-of-rebirth",
+    "page": "WE, p. 62"
+  },
+  "stone of the crystal merex": {
+    "url": "magic-item/stone-of-the-crystal-merex",
+    "page": "WE, p. 62"
+  },
+  "the fimbulwinter shard": {
+    "url": "magic-item/the-fimbulwinter-shard",
+    "page": "WE, p. 62"
+  },
+  "calaingor's stave": {
+    "url": "magic-item/calaingors-stave",
+    "page": "WE, p. 62"
+  },
+  "the deepwood sphere": {
+    "url": "magic-item/the-deepwood-sphere",
+    "page": "WE, p. 62"
+  },
+  "divination orb": { "url": "magic-item/divination-orb", "page": "WE, p. 62" },
+  "ranu's heartstone": {
+    "url": "magic-item/ranus-heartstone",
+    "page": "WE, p. 62"
+  },
+  "hagbane arrows": { "url": "magic-item/hagbane-arrows", "page": "WE, p. 62" },
+  "the horn of the asrai": {
+    "url": "magic-item/the-horn-of-the-asrai",
+    "page": "WE, p. 62"
+  },
+  "starfire arrows": {
+    "url": "magic-item/starfire-arrows",
+    "page": "WE, p. 62"
+  },
+  "dragontooth arrows": {
+    "url": "magic-item/dragontooth-arrows",
+    "page": "WE, p. 62"
+  },
+  "elynett's brooch": {
+    "url": "magic-item/elynetts-brooch",
+    "page": "WE, p. 62"
+  },
+  "gwythere's horn": {
+    "url": "magic-item/gwytheres-horn",
+    "page": "WE, p. 62"
+  },
+  "the royal standard of ariel": {
+    "url": "magic-item/the-royal-standard-of-ariel",
+    "page": "WE, p. 62"
+  },
+  "faoghir - the banner of dwindling": {
+    "url": "magic-item/faoghir-the-banner-of-dwindling",
+    "page": "WE, p. 62"
+  },
+  "gaemrath - the banner of midwinter": {
+    "url": "magic-item/gaemrath-the-banner-of-midwinter",
+    "page": "WE, p. 62"
+  },
+  "aech - the banner of springtide": {
+    "url": "magic-item/aech-the-banner-of-springtide",
+    "page": "WE, p. 62"
+  },
+  "saemrath - the banner of the zenith": {
+    "url": "magic-item/saemrath-the-banner-of-the-zenith",
+    "page": "WE, p. 62"
+  },
+  "the alter kindreds": {
+    "url": "magic-item/the-alter-kindreds",
+    "page": "WE, p. 66"
+  },
+  "eternal kindreds": {
+    "url": "magic-item/eternal-kindreds",
+    "page": "WE, p. 66"
+  },
+  "glamourweave kindreds": {
+    "url": "magic-item/glamourweave-kindreds",
+    "page": "WE, p. 66"
+  },
+  "scout kindreds": { "url": "magic-item/scout-kindreds", "page": "WE, p. 66" },
+  "wardancer kindreds": {
+    "url": "magic-item/wardancer-kindreds",
+    "page": "WE, p. 66"
+  },
+  "waywatcher kindreds": {
+    "url": "magic-item/waywatcher-kindreds",
+    "page": "WE, p. 66"
+  },
+  "wild rider kindreds": {
+    "url": "magic-item/wild-rider-kindreds",
+    "page": "WE, p. 66"
+  },
+  "bloody nora": { "url": "magic-item/bloody-nora", "page": "WD 306, p. 21" },
+  "dirty serpent": {
+    "url": "magic-item/dirty-serpent",
+    "page": "WD 306, p. 21"
+  },
+  "lucky levi's hook hand": {
+    "url": "magic-item/lucky-levis-hook-hand",
+    "page": "WD 306, p. 21"
+  },
+  "sloppy cruickshank's long-lost cutlass": {
+    "url": "magic-item/sloppy-cruickshanks-long-lost-cutlass",
+    "page": "WD 306, p. 21"
+  },
+  "wharf rats": { "url": "magic-item/wharf-rats", "page": "WD 306, p. 21" },
+  "bloody bill's buckler": {
+    "url": "magic-item/bloody-bills-buckler",
+    "page": "WD 306, p. 21"
+  },
+  "ex-parrot": { "url": "magic-item/ex-parrot", "page": "WD 306, p. 21" },
+  "slann gold": { "url": "magic-item/slann-gold", "page": "WD 306, p. 21" },
+  "hard stuff": { "url": "magic-item/hard-stuff", "page": "WD 306, p. 21" },
+  "gentleman jenkins's trusty compass": {
+    "url": "magic-item/gentleman-jenkinss-trusty-compass",
+    "page": "WD 306, p. 21"
+  },
+  "black buckthorn's treasure map": {
+    "url": "magic-item/black-buckthorns-treasure-map",
+    "page": "WD 306, p. 21"
+  },
+  "firewater": { "url": "magic-item/firewater", "page": "WD 306, p. 21" },
+  "moonshine": { "url": "magic-item/moonshine", "page": "WD 306, p. 21" },
+  "mad mullet's spyin' glass": {
+    "url": "magic-item/mad-mullets-spyin-glass",
+    "page": "WD 306, p. 21"
+  },
+  "ship's colors": {
+    "url": "magic-item/ships-colors",
+    "page": "WD 306, p. 21"
+  },
+  "dead man's chest": {
+    "url": "magic-item/dead-mans-chest",
+    "page": "WD 306, p. 21"
   }
 }
