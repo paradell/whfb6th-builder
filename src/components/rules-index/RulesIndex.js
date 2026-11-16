@@ -9,7 +9,7 @@ import { Spinner } from "../../components/spinner";
 import { normalizeRuleName } from "../../utils/string";
 import { closeRulesIndex } from "../../state/rules-index";
 
-import { rulesMap, synonyms } from "./rules-map";
+import { getFullNameRuleData, rulesMap, synonyms } from "./rules-map";
 import "./RulesIndex.css";
 
 const RULES_BASE_URLS = {
@@ -32,7 +32,10 @@ export const RulesIndex = () => {
   };
   const normalizedName = normalizeRuleName(activeRule);
   const synonym = synonyms[normalizedName];
-  const ruleData = rulesMap[normalizedName] || rulesMap[synonym];
+  const ruleData =
+    getFullNameRuleData(activeRule) ||
+    rulesMap[normalizedName] ||
+    rulesMap[synonym];
   const rulePath = ruleData?.url;
   const baseUrl = RULES_BASE_URLS[listGame] || RULES_BASE_URLS["warhammer-fantasy-6th"];
 

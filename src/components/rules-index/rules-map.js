@@ -1,4 +1,5 @@
 import rulesIndexExport from "./rules-index-export.json";
+import { normalizeRuleName } from "../../utils/string";
 
 const additionalRules = {
   "throwing spears": { url: "weapons/throwing-spear" },
@@ -357,4 +358,17 @@ export const synonyms = {
 export const rulesMap = {
   ...rulesIndexExport,
   ...additionalRules,
+};
+
+/**
+ * Rule entry for the full name, keeping what normalizeRuleName strips, so
+ * variants like "Vampire Count (Strigoi)" can have their own entry.
+ *
+ * @param {string} name The rule or unit name
+ * @returns {object|undefined} The entry, only if the full name differs from the normalized one
+ */
+export const getFullNameRuleData = (name = "") => {
+  const fullName = name.toLowerCase().trim();
+
+  return fullName !== normalizeRuleName(name) ? rulesMap[fullName] : undefined;
 };

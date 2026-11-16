@@ -57,8 +57,8 @@
       "specialRules": { "name_en": "Undead, Bloodlines" }
     },
     {
-      "name_en": "Vampire Count",
-      "id": "vampire-count",
+      "name_en": "Vampire Count (Von Carstein)",
+      "id": "vampire-count-von-carstein",
       "points": 205,
       "armyComposition": { "vampire-counts": { "category": "lords" } },
       "command": [
@@ -66,21 +66,56 @@
       ],
       "melee": [
         { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
-        { "name_en": "Great weapon", "points": 6, "requiredOption": ["von-carstein", "blood-dragon"] },
-        { "name_en": "Additional hand weapon", "points": 6, "requiredOption": ["von-carstein", "blood-dragon"] },
-        { "name_en": "Lance", "points": 6, "notes": { "name_en": "if mounted" }, "requiredOption": ["von-carstein", "blood-dragon"] }
+        { "name_en": "Great weapon", "points": 6 },
+        { "name_en": "Additional hand weapon", "points": 6 },
+        { "name_en": "Lance", "points": 6, "notes": { "name_en": "if mounted" } }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
+            { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true }
+          ]
+        },
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items and Von Carstein Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "von-carstein-power"], "selected": [], "maxPoints": 100, "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead, Bloodlines" }
+    },
+    {
+      "name_en": "Vampire Count (Blood Dragon)",
+      "id": "vampire-count-blood-dragon",
+      "points": 205,
+      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true },
+        { "name_en": "Great weapon", "points": 6 },
+        { "name_en": "Additional hand weapon", "points": 6 },
+        { "name_en": "Lance", "points": 6, "notes": { "name_en": "if mounted" } }
       ],
       "armor": [
-        { "name_en": "Full plate armour", "points": 0, "alwaysActive": true, "requiredOption": ["blood-dragon"] }
+        { "name_en": "Full plate armour", "points": 0, "active": true, "alwaysActive": true }
       ],
       "options": [
         {
           "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
-            { "name_en": "Von Carstein", "id": "von-carstein", "points": 0, "exclusive": true, "active": true },
-            { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true },
-            { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true },
-            { "name_en": "Necrarch", "id": "necrarch", "points": 0, "exclusive": true },
-            { "name_en": "Strigoi", "id": "strigoi", "points": 0, "exclusive": true }
+            { "name_en": "Blood Dragon", "id": "blood-dragon", "points": 0, "exclusive": true, "active": true }
           ]
         },
         {
@@ -89,19 +124,121 @@
             { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
           ]
         },
-        { "name_en": "Shield", "points": 6, "requiredOption": ["blood-dragon"] }
+        { "name_en": "Shield", "points": 6 }
       ],
       "mounts": [
         { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
-        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }], "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] },
-        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true, "requiredOption": ["von-carstein", "blood-dragon", "lahmia", "necrarch"] }
+        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true }
       ],
       "items": [
-        { "name_en": "Magic Items and Von Carstein Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "von-carstein-power"], "selected": [], "maxPoints": 100, "requiredOption": ["von-carstein"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
-        { "name_en": "Magic Items and Blood Dragon Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "blood-dragon-power"], "selected": [], "maxPoints": 100, "requiredOption": ["blood-dragon"], "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } },
-        { "name_en": "Magic Items and Lahmia Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "lahmia-power"], "selected": [], "maxPoints": 100, "requiredOption": ["lahmia"], "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No familiars (Spell, Power or Warrior Familiar)" } },
-        { "name_en": "Magic Items and Necrarch Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "necrarch-power"], "selected": [], "maxPoints": 100, "requiredOption": ["necrarch"], "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No Skull Staff" } },
-        { "name_en": "Strigoi Powers", "types": ["strigoi-power"], "selected": [], "maxPoints": 100, "requiredOption": ["strigoi"], "notes": { "name_en": "Strigoi cannot take magic items" } }
+        { "name_en": "Magic Items and Blood Dragon Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "blood-dragon-power"], "selected": [], "maxPoints": 100, "notes": { "name_en": "No familiars (Spell, Power or Warrior Familiar)" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead, Bloodlines" }
+    },
+    {
+      "name_en": "Vampire Count (Lahmia)",
+      "id": "vampire-count-lahmia",
+      "points": 205,
+      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
+            { "name_en": "Lahmia", "id": "lahmia", "points": 0, "exclusive": true, "active": true }
+          ]
+        },
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items and Lahmia Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "lahmia-power"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No familiars (Spell, Power or Warrior Familiar)" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead, Bloodlines" }
+    },
+    {
+      "name_en": "Vampire Count (Necrarch)",
+      "id": "vampire-count-necrarch",
+      "points": 205,
+      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
+            { "name_en": "Necrarch", "id": "necrarch", "points": 0, "exclusive": true, "active": true }
+          ]
+        },
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true },
+        { "name_en": "Nightmare", "points": 12, "id": "nightmare", "exclusive": true, "options": [{ "name_en": "Barding", "points": 6 }] },
+        { "name_en": "Winged Nightmare", "points": 175, "id": "winged-nightmare", "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Magic Items and Necrarch Powers", "types": ["weapon", "armor", "talisman", "arcane-item", "enchanted-item", "necrarch-power"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Magic armour: only Wailing Helm or Armour of Bone. No Skull Staff" } }
+      ],
+      "lores": ["necromancy", "lore-of-death"],
+      "specialRules": { "name_en": "Undead, Bloodlines" }
+    },
+    {
+      "name_en": "Vampire Count (Strigoi)",
+      "id": "vampire-count-strigoi",
+      "points": 205,
+      "armyComposition": { "vampire-counts": { "category": "lords" } },
+      "command": [
+        { "name_en": "General", "points": 0 }
+      ],
+      "melee": [
+        { "name_en": "Hand weapon", "points": 0, "active": true, "equippedDefault": true }
+      ],
+      "armor": [],
+      "options": [
+        {
+          "name_en": "Bloodline", "points": 0, "active": true, "alwaysActive": true, "sameInArmy": true, "options": [
+            { "name_en": "Strigoi", "id": "strigoi", "points": 0, "exclusive": true, "active": true }
+          ]
+        },
+        {
+          "name_en": "Wizard", "points": 0, "active": true, "alwaysActive": true, "options": [
+            { "name_en": "Level 1 Wizard", "points": 0, "exclusive": true, "active": true },
+            { "name_en": "Level 2 Wizard", "points": 35, "exclusive": true }
+          ]
+        }
+      ],
+      "mounts": [
+        { "name_en": "On foot", "points": 0, "id": "on-foot", "active": true, "exclusive": true }
+      ],
+      "items": [
+        { "name_en": "Strigoi Powers", "types": ["strigoi-power"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Strigoi cannot take magic items" } }
       ],
       "lores": ["necromancy", "lore-of-death"],
       "specialRules": { "name_en": "Undead, Bloodlines" }
@@ -309,7 +446,7 @@
       "armor": [],
       "options": [],
       "mounts": [],
-      "specialRules": { "name_en": "Undead, Braindead (always strike last)" }
+      "specialRules": { "name_en": "Undead, Braindead" }
     },
     {
       "name_en": "Ghouls",

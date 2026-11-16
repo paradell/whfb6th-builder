@@ -1,14 +1,20 @@
 import classNames from "classnames";
 
 import { nameMap } from "../pages/magic";
-import { rulesMap, synonyms } from "../components/rules-index";
+import {
+  getFullNameRuleData,
+  rulesMap,
+  synonyms,
+} from "../components/rules-index";
 import loresOfMagicWithSpells from "../assets/lores-of-magic-with-spells.json";
 import { normalizeRuleName } from "./string";
 
 export const getUnitRuleData = (unitName) => {
   const normalizedRuleName = normalizeRuleName(unitName);
   const synonym = synonyms[normalizedRuleName];
-  return rulesMap[synonym || normalizedRuleName];
+  return (
+    getFullNameRuleData(unitName) || rulesMap[synonym || normalizedRuleName]
+  );
 };
 
 export const getUnitLeadership = (unitName) => {
@@ -302,9 +308,7 @@ export const getPage = (name) => {
 };
 
 export const getStats = (unit) => {
-  const normalizedName = normalizeRuleName(unit.name_en);
-  const synonym = synonyms[normalizedName];
-  const stats = rulesMap[synonym || normalizedName]?.stats || [];
+  const stats = getUnitRuleData(unit.name_en)?.stats || [];
   const activeMount = unit.mounts
     ? unit.mounts.find((mount) => mount.active)
     : null;
