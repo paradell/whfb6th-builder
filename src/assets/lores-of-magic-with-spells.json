@@ -494,7 +494,8 @@
   },
   "the-lore-of-athel-loren": {
     "tree singing": {
-      "index": "1"
+      "index": "1",
+      "rule": "tree singing spell"
     },
     "fury of the forest": {
       "index": "2"
