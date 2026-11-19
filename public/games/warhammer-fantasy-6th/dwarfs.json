@@ -642,6 +642,74 @@
       }
     },
     {
+      "name_en": "Longbeards",
+      "id": "longbeards",
+      "points": 11,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Greatbeard",
+          "points": 10
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 10,
+          "magic": {
+            "types": [
+              "banner-runes"
+            ],
+            "maxPoints": 50
+          }
+        },
+        {
+          "name_en": "Musician",
+          "points": 5
+        }
+      ],
+      "equipment": [],
+      "melee": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 2,
+          "perModel": true
+        }
+      ],
+      "ranged": [],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "points": 1,
+          "perModel": true
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Old Grumblers, Immune to Panic"
+      }
+    },
+    {
       "name_en": "Thunderers",
       "id": "thunderers",
       "points": 14,
@@ -769,83 +837,6 @@
       "specialRules": {
         "name_en": "Ancestral Grudge, Relentless, Resolute, Underground Advance"
       }
-    },
-    {
-      "name_en": "Rangers",
-      "id": "rangers",
-      "points": 12,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": {
-        "dwarfs": {
-          "category": "core"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Veteran",
-          "points": 12
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 12
-        },
-        {
-          "name_en": "Musician",
-          "points": 6
-        }
-      ],
-      "equipment": [],
-      "melee": [
-        {
-          "name_en": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Great weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "ranged": [
-        {
-          "name_en": "Crossbow",
-          "points": 5,
-          "perModel": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Throwing axes",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "points": 1,
-          "perModel": true
-        }
-      ],
-      "mounts": [],
-      "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Scouts"
-      }
     }
   ],
   "special": [
@@ -917,78 +908,6 @@
       "mounts": [],
       "specialRules": {
         "name_en": "Ancestral Grudge, Relentless, Resolute, Bodyguard"
-      }
-    },
-    {
-      "name_en": "Longbeards",
-      "id": "longbeards",
-      "points": 14,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": {
-        "dwarfs": {
-          "category": "special"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Greatbeard",
-          "points": 12
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 12,
-          "magic": {
-            "types": [
-              "banner-runes"
-            ],
-            "maxPoints": 50
-          }
-        },
-        {
-          "name_en": "Musician",
-          "points": 6
-        }
-      ],
-      "equipment": [
-        {
-          "name_en": "Shield",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "melee": [
-        {
-          "name_en": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Great weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "ranged": [],
-      "armor": [
-        {
-          "name_en": "Heavy armour",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "options": [],
-      "mounts": [],
-      "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Old Grumblers"
       }
     },
     {

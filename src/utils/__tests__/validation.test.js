@@ -1,7 +1,7 @@
 import { validateList } from "../validation";
 
 jest.mock("../unit", () => ({
-  getUnitName: ({ unit }) => unit.name_en || unit.id,
+  getUnitName: ({ unit }) => unit.name || unit.name_en || unit.id,
   getUnitLeadership: () => 0,
 }));
 
@@ -139,5 +139,49 @@ describe("validateList character slots", () => {
 
   test("7 characters are too many at 3000 points", () => {
     expect(getCharacterSlotErrors(7)).toHaveLength(1);
+  });
+});
+
+describe("validateList units limited per required unit", () => {
+  const units = (id, count) =>
+    Array.from({ length: count }, (_, i) => ({ id: `${id}.${i}`, name_en: id }));
+  const getRequiresUnitsErrors = (warriorsCount, longbeardsCount) =>
+    validateList({
+      list: {
+        game: 'warhammer-fantasy-6th',
+        army: 'dwarfs',
+        armyComposition: 'dwarfs',
+        points: 2000,
+        characters: [],
+        lords: [],
+        heroes: [],
+        core: [...units('warriors', warriorsCount), ...units('longbeards', longbeardsCount)],
+        special: [],
+        rare: [],
+        mercenaries: [],
+        allies: [],
+      },
+      language: 'en',
+      intl: { formatMessage: (o) => o.id },
+    }).filter((e) => e.message === 'misc.error.requiresUnits');
+
+  test("as many Longbeards as Warriors give no error", () => {
+    expect(getRequiresUnitsErrors(1, 1)).toEqual([]);
+  });
+
+  test("Warriors without Longbeards give no error", () => {
+    expect(getRequiresUnitsErrors(2, 0)).toEqual([]);
+  });
+
+  test("more Longbeards than Warriors give an error", () => {
+    expect(getRequiresUnitsErrors(1, 2)).toEqual([
+      { message: 'misc.error.requiresUnits', section: 'core', name: 'warriors', diff: 1 },
+    ]);
+  });
+
+  test("Longbeards without Warriors give an error", () => {
+    expect(getRequiresUnitsErrors(0, 1)).toEqual([
+      { message: 'misc.error.requiresUnits', section: 'core', name: 'warriors', diff: 1 },
+    ]);
   });
 });
