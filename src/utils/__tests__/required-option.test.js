@@ -89,3 +89,55 @@ describe("getAllOptions with requiredOption", () => {
     expect(text).not.toMatch(/Great weapon|Nightmare|Frostblade|Shield/);
   });
 });
+
+describe("command magic with requiredOption", () => {
+  const warriors = (longbeards) => ({
+    points: 8,
+    strength: 10,
+    options: [
+      { name_en: "Longbeards", id: "longbeards", points: 3, perModel: true, active: longbeards },
+    ],
+    command: [
+      {
+        name_en: "Standard Bearer",
+        id: 0,
+        points: 10,
+        active: true,
+        magic: {
+          types: ["banner-runes"],
+          maxPoints: 50,
+          requiredOption: "longbeards",
+          selected: [{ name_en: "Rune of Battle", points: 25 }],
+        },
+      },
+      {
+        name_en: "Musician",
+        id: 1,
+        points: 5,
+        active: true,
+        magic: { types: ["banner-runes"], selected: [{ name_en: "Rune of Sanctuary", points: 15 }] },
+      },
+    ],
+  });
+
+  test("counts the magic items when the required option is active", () => {
+    // 10 models x (8 + 3) + standard 10 + Rune of Battle 25 + musician 5 + Rune of Sanctuary 15
+    expect(getUnitPoints(warriors(true), {})).toBe(165);
+  });
+
+  test("ignores the magic items when the required option is not active", () => {
+    // 10 models x 8 + standard 10 + musician 5 + Rune of Sanctuary 15
+    expect(getUnitPoints(warriors(false), {})).toBe(110);
+  });
+
+  test("cleanup removes the magic items only when the required option is not active", () => {
+    expect(getRequiredOptionCleanup(warriors(true)).command[0].magic.selected).toHaveLength(1);
+    expect(getRequiredOptionCleanup(warriors(false)).command[0].magic.selected).toEqual([]);
+    expect(getRequiredOptionCleanup(warriors(false)).command[1].magic.selected).toHaveLength(1);
+  });
+
+  test("only lists the magic items when the required option is active", () => {
+    expect(getAllOptions(warriors(true), { asString: true })).toMatch(/Rune of Battle/);
+    expect(getAllOptions(warriors(false), { asString: true })).not.toMatch(/Rune of Battle/);
+  });
+});

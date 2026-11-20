@@ -762,8 +762,12 @@ export const Unit = ({ isMobile }) => {
                     strength: unit.strength,
                   });
                   let commandMaxPoints = 0;
+                  const hasCommandMagic =
+                    magic?.types?.length > 0 &&
+                    active &&
+                    hasRequiredOption(unit, magic.requiredOption);
 
-                  if (magic?.types && magic.types.length && active) {
+                  if (hasCommandMagic) {
                     commandMaxPoints =
                       (magic.armyComposition &&
                         magic.armyComposition[unitArmyComposition]
@@ -803,7 +807,7 @@ export const Unit = ({ isMobile }) => {
                         className: "unit__option-note",
                         language,
                       })}
-                      {magic?.types && magic.types.length && active ? (
+                      {hasCommandMagic ? (
                         <>
                           <hr className="unit__hr" />
                           <ListItem

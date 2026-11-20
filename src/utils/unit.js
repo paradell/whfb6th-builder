@@ -64,20 +64,24 @@ export const getAllOptions = (
   const allOptions = [];
 
   if (command) {
-    command.forEach(({ active, magic, name_en, options, ...entry }) => {
+    command.forEach(({ active, magic, name_en, options: commandOptions, ...entry }) => {
       if (active) {
         let commandEntry = entry[`name_${language}`] || name_en;
         const selectedOptions = [];
 
-        if (options && options.length > 0) {
-          options.forEach((option) => {
+        if (commandOptions && commandOptions.length > 0) {
+          commandOptions.forEach((option) => {
             if (option.active) {
               selectedOptions.push(option.name_en);
             }
           });
         }
 
-        if (magic && magic?.selected?.length && !noMagic) {
+        if (
+          magic?.selected?.length &&
+          !noMagic &&
+          hasRequiredOption({ options }, magic.requiredOption)
+        ) {
           magic.selected.forEach((selectedItem) => {
             selectedOptions.push(
               selectedItem.amount > 1
@@ -480,6 +484,11 @@ export const getRequiredOptionCleanup = (unit) => {
     mounts,
     items: unit.items?.map((item) =>
       isAvailable(item) ? item : { ...item, selected: [] },
+    ),
+    command: unit.command?.map((command) =>
+      !command.magic || isAvailable(command.magic)
+        ? command
+        : { ...command, magic: { ...command.magic, selected: [] } },
     ),
   };
 };

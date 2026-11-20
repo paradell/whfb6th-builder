@@ -556,7 +556,14 @@
         },
         {
           "name_en": "Standard Bearer",
-          "points": 10
+          "points": 10,
+          "magic": {
+            "types": [
+              "banner-runes"
+            ],
+            "maxPoints": 50,
+            "requiredOption": "longbeards"
+          }
         },
         {
           "name_en": "Musician",
@@ -593,6 +600,16 @@
           "name_en": "Shield",
           "points": 1,
           "perModel": true
+        },
+        {
+          "name_en": "Longbeards",
+          "name_es": "Barbaslargas",
+          "id": "longbeards",
+          "points": 3,
+          "perModel": true,
+          "armyComposition": [
+            "dwarfs"
+          ]
         }
       ],
       "mounts": [],
