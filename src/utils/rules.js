@@ -278,15 +278,6 @@ export const rules = {
           ids: ["miners"],
           max: 1,
         },
-        {
-          ids: ["longbeards"],
-          // One unit of Longbeards per unit of Warriors
-          requires: ["warriors"],
-          requiresType: "core",
-          perUnit: true,
-          min: 0,
-          max: 1,
-        },
       ],
     },
     special: {

@@ -142,10 +142,10 @@ describe("validateList character slots", () => {
   });
 });
 
-describe.each(['dwarfs', 'dwarfs-2000'])("validateList units limited per required unit (%s)", (armyComposition) => {
+describe("validateList units limited per required unit", () => {
   const units = (id, count) =>
     Array.from({ length: count }, (_, i) => ({ id: `${id}.${i}`, name_en: id }));
-  const getRequiresUnitsErrors = (warriorsCount, longbeardsCount) =>
+  const getRequiresUnitsErrors = (warriorsCount, longbeardsCount, armyComposition = 'dwarfs') =>
     validateList({
       list: {
         game: 'warhammer-fantasy-6th',
@@ -155,8 +155,9 @@ describe.each(['dwarfs', 'dwarfs-2000'])("validateList units limited per require
         characters: [],
         lords: [],
         heroes: [],
-        core: [...units('warriors', warriorsCount), ...units('longbeards', longbeardsCount)],
-        special: [],
+        ...(armyComposition === 'dwarfs-2000'
+          ? { core: units('warriors', warriorsCount), special: units('longbeards-2000', longbeardsCount) }
+          : { core: [...units('warriors', warriorsCount), ...units('longbeards', longbeardsCount)], special: [] }),
         rare: [],
         mercenaries: [],
         allies: [],
@@ -183,5 +184,9 @@ describe.each(['dwarfs', 'dwarfs-2000'])("validateList units limited per require
     expect(getRequiresUnitsErrors(0, 1)).toEqual([
       { message: 'misc.error.requiresUnits', section: 'core', name: 'warriors', diff: 1 },
     ]);
+  });
+
+  test("Special Longbeards of the 2000 book are not limited by Warriors", () => {
+    expect(getRequiresUnitsErrors(0, 2, 'dwarfs-2000')).toEqual([]);
   });
 });
