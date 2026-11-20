@@ -238,7 +238,40 @@ export const rules = {
       ],
     },
   },
+  // Dwarfs 2005 army book
   "dwarfs": {
+    core: {
+      units: [
+        {
+          ids: ["miners"],
+          max: 1,
+        },
+        {
+          ids: ["longbeards"],
+          // One unit of Longbeards per unit of Warriors
+          requires: ["warriors"],
+          requiresType: "core",
+          perUnit: true,
+          min: 0,
+          max: 1,
+        },
+      ],
+    },
+    special: {
+      units: [
+        {
+          ids: ["hammerers"],
+          max: 1,
+        },
+        {
+          ids: ["slayers"],
+          max: 1,
+        },
+      ],
+    },
+  },
+  // Dwarfs 2000 army book
+  "dwarfs-2000": {
     core: {
       units: [
         {

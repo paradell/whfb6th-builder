@@ -56,7 +56,7 @@
       "name_en": "Dwarfs",
       "name_es": "Enanos",
       "items": ["weapon-runes", "armor-runes", "talismanic-runes", "banner-runes", "engineering-runes"],
-      "armyComposition": ["dwarfs"],
+      "armyComposition": ["dwarfs", "dwarfs-2000"],
       "allies": [],
       "mercenaries": {}
     },

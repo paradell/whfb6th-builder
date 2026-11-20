@@ -83,6 +83,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "lords"
+        },
+        "dwarfs-2000": {
+          "category": "lords"
         }
       },
       "specialRules": {
@@ -163,6 +166,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "lords"
+        },
+        "dwarfs-2000": {
+          "category": "lords"
         }
       },
       "specialRules": {
@@ -206,6 +212,9 @@
       "options": [],
       "armyComposition": {
         "dwarfs": {
+          "category": "lords"
+        },
+        "dwarfs-2000": {
           "category": "lords"
         }
       },
@@ -309,6 +318,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
+        },
+        "dwarfs-2000": {
+          "category": "heroes"
         }
       },
       "specialRules": {
@@ -366,6 +378,9 @@
       ],
       "armyComposition": {
         "dwarfs": {
+          "category": "heroes"
+        },
+        "dwarfs-2000": {
           "category": "heroes"
         }
       },
@@ -460,6 +475,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
+        },
+        "dwarfs-2000": {
+          "category": "heroes"
         }
       },
       "specialRules": {
@@ -504,6 +522,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
+        },
+        "dwarfs-2000": {
+          "category": "heroes"
         }
       },
       "specialRules": {
@@ -522,6 +543,9 @@
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "core"
+        },
+        "dwarfs-2000": {
           "category": "core"
         }
       },
@@ -579,11 +603,14 @@
     {
       "name_en": "Crossbowmen {Dwarfs}",
       "id": "crossbowmen",
-      "points": 12,
+      "points": 11,
       "minimum": 10,
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "core"
+        },
+        "dwarfs-2000": {
           "category": "core"
         }
       },
@@ -609,6 +636,11 @@
           "perModel": true,
           "active": true,
           "alwaysActive": true
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 2,
+          "perModel": true
         }
       ],
       "ranged": [
@@ -649,6 +681,9 @@
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "core"
+        },
+        "dwarfs-2000": {
           "category": "core"
         }
       },
@@ -717,6 +752,9 @@
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "core"
+        },
+        "dwarfs-2000": {
           "category": "core"
         }
       },
@@ -789,6 +827,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "core"
+        },
+        "dwarfs-2000": {
+          "category": "core"
         }
       },
       "command": [
@@ -848,6 +889,9 @@
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "special"
+        },
+        "dwarfs-2000": {
           "category": "special"
         }
       },
@@ -919,6 +963,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "special"
+        },
+        "dwarfs-2000": {
+          "category": "special"
         }
       },
       "command": [
@@ -984,6 +1031,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "special"
+        },
+        "dwarfs-2000": {
+          "category": "special"
         }
       },
       "command": [
@@ -1032,6 +1082,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "special"
+        },
+        "dwarfs-2000": {
+          "category": "special"
         }
       },
       "equipment": [
@@ -1064,6 +1117,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "special"
+        },
+        "dwarfs-2000": {
+          "category": "special"
         }
       },
       "equipment": [
@@ -1093,6 +1149,9 @@
       "points": 85,
       "armyComposition": {
         "dwarfs": {
+          "category": "special"
+        },
+        "dwarfs-2000": {
           "category": "special"
         }
       },
@@ -1126,6 +1185,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "rare"
+        },
+        "dwarfs-2000": {
+          "category": "rare"
         }
       },
       "equipment": [
@@ -1156,6 +1218,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "rare"
+        },
+        "dwarfs-2000": {
+          "category": "rare"
         }
       },
       "equipment": [
@@ -1175,6 +1240,9 @@
       "points": 140,
       "armyComposition": {
         "dwarfs": {
+          "category": "rare"
+        },
+        "dwarfs-2000": {
           "category": "rare"
         }
       },
@@ -1205,6 +1273,9 @@
       "points": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "rare"
+        },
+        "dwarfs-2000": {
           "category": "rare"
         }
       }

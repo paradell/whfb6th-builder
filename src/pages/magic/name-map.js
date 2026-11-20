@@ -210,6 +210,10 @@ export const nameMap = {
     name_en: "Army of the King",
     name_es: "El Ejército del Rey",
   },
+  "dwarfs-2000": {
+    name_en: "Dwarfs (2000)",
+    name_es: "Enanos (2000)",
+  },
   "empire":{
       name_en: "The Empire",
       name_es: "El Imperio"

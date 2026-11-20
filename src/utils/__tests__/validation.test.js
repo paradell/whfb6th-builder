@@ -142,7 +142,7 @@ describe("validateList character slots", () => {
   });
 });
 
-describe("validateList units limited per required unit", () => {
+describe.each(['dwarfs', 'dwarfs-2000'])("validateList units limited per required unit (%s)", (armyComposition) => {
   const units = (id, count) =>
     Array.from({ length: count }, (_, i) => ({ id: `${id}.${i}`, name_en: id }));
   const getRequiresUnitsErrors = (warriorsCount, longbeardsCount) =>
@@ -150,7 +150,7 @@ describe("validateList units limited per required unit", () => {
       list: {
         game: 'warhammer-fantasy-6th',
         army: 'dwarfs',
-        armyComposition: 'dwarfs',
+        armyComposition,
         points: 2000,
         characters: [],
         lords: [],
