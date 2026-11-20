@@ -438,9 +438,36 @@ export const hasRequiredOption = (unit, requiredOption) =>
   !requiredOption || unitHasOption(unit, requiredOption);
 
 /**
+ * Checks if an equipment, melee or ranged entry must be selected because the unit
+ * has one of the options of its "mandatoryOption" active (e.g. Dwarf Rangers must
+ * take great weapons).
+ *
+ * @param {object} unit
+ * @param {object} entry
+ * @returns {boolean}
+ */
+export const isMandatory = (unit, entry) =>
+  Boolean(entry.mandatoryOption) && unitHasOption(unit, entry.mandatoryOption);
+
+/**
+ * Checks if the entries of a group can't be changed because one of them is mandatory.
+ * Entries without group are mutually exclusive, so they are a group too.
+ *
+ * @param {object} unit
+ * @param {object[]} entries The unit equipment, melee or ranged entries
+ * @param {string} group
+ * @returns {boolean}
+ */
+export const isGroupLocked = (unit, entries, group) =>
+  Boolean(
+    entries?.some((entry) => entry.group === group && isMandatory(unit, entry)),
+  );
+
+/**
  * After the unit options change, deselects the entries whose "requiredOption" is no
  * longer active, so hidden equipment, mounts or magic items don't stay in the list.
- * Always active entries that become available again are reactivated.
+ * Always active entries that become available again are reactivated, and entries
+ * whose "mandatoryOption" is active are selected instead of the rest of their group.
  *
  * @param {object} unit The unit with its new options
  * @returns {object} The changed unit fields, to be passed to editUnit
@@ -460,6 +487,17 @@ export const getRequiredOptionCleanup = (unit) => {
           isAvailable(entry) && Boolean(entry.active || entry.alwaysActive),
       };
     });
+  const applyMandatory = (entries) => {
+    const mandatoryGroups = (entries || [])
+      .filter((entry) => isMandatory(unit, entry))
+      .map(({ group }) => group);
+
+    return entries?.map((entry) =>
+      mandatoryGroups.includes(entry.group)
+        ? { ...entry, active: isMandatory(unit, entry) }
+        : entry,
+    );
+  };
   let mounts = unit.mounts;
 
   if (mounts?.some((mount) => mount.active && !isAvailable(mount))) {
@@ -477,9 +515,9 @@ export const getRequiredOptionCleanup = (unit) => {
 
   return {
     options: updateActive(unit.options),
-    equipment: updateActive(unit.equipment),
-    melee: updateActive(unit.melee),
-    ranged: updateActive(unit.ranged),
+    equipment: applyMandatory(updateActive(unit.equipment)),
+    melee: applyMandatory(updateActive(unit.melee)),
+    ranged: applyMandatory(updateActive(unit.ranged)),
     armor: updateActive(unit.armor),
     mounts,
     items: unit.items?.map((item) =>

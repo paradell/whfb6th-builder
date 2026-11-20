@@ -73,6 +73,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "active": Boolean, // Wether it should be selected by default, optional
       "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
       "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+      "mandatoryOption": String | [String], // Optional. Ids of options or sub-options; while one of them is active, this entry is selected and the entries of its group can't be changed (e.g. Dwarf Warriors with Rangers must take great weapons)
       "notes": { // Optional
         "name_en": String,
         "name_es": String
@@ -88,6 +89,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
          "active": Boolean, // Wether it should be selected by default, optional
          "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
          "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+         "mandatoryOption": String | [String], // Optional. Ids of options or sub-options; while one of them is active, this entry is selected and the entries of its group can't be changed (e.g. Dwarf Warriors with Rangers must take great weapons)
          "notes": { // Optional
             "name_en": String,
             "name_es": String
@@ -103,6 +105,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
          "active": Boolean, // Wether it should be selected by default, optional
          "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
          "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+         "mandatoryOption": String | [String], // Optional. Ids of options or sub-options; while one of them is active, this entry is selected and the entries of its group can't be changed (e.g. Dwarf Warriors with Rangers must take great weapons)
          "notes": { // Optional
             "name_en": String,
             "name_es": String

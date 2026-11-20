@@ -42,6 +42,7 @@ import {
   unitHasItem,
   hasRequiredOption,
   getRequiredOptionCleanup,
+  isGroupLocked,
   isWizard,
 } from "../../utils/unit";
 import {getGameSystems, getCustomDatasetData, isOfficialSystem} from "../../utils/game-systems";
@@ -371,6 +372,10 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleEquipmentChange = ({ id, group }) => {
+    if (isGroupLocked(unit, unit.equipment, group)) {
+      return;
+    }
+
     const equipment = unit.equipment.map((item) => ({
       ...item,
       active:
@@ -391,6 +396,10 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleMeleeChange = ({ id, group }) => {
+    if (isGroupLocked(unit, unit.melee, group)) {
+      return;
+    }
+
     const melee = unit.melee.map((item) => ({
       ...item,
       active:
@@ -411,6 +420,10 @@ export const Unit = ({ isMobile }) => {
     );
   };
   const handleRangedChange = ({ id, group }) => {
+    if (isGroupLocked(unit, unit.ranged, group)) {
+      return;
+    }
+
     const ranged = unit.ranged.map((item) => ({
       ...item,
       active:
@@ -989,6 +1002,7 @@ export const Unit = ({ isMobile }) => {
                         value={group || id}
                         onChange={() => handleEquipmentChange({ id, group })}
                         checked={active}
+                        disabled={isGroupLocked(unit, unit.equipment, group)}
                         className={group ? "checkbox__input" : "radio__input"}
                       />
                       <label
@@ -1050,6 +1064,7 @@ export const Unit = ({ isMobile }) => {
                                   value={group || id}
                                   onChange={() => handleMeleeChange({ id, group })}
                                   checked={active}
+                                  disabled={isGroupLocked(unit, unit.melee, group)}
                                   className={group ? "checkbox__input" : "radio__input"}
                               />
                               <label
@@ -1111,6 +1126,7 @@ export const Unit = ({ isMobile }) => {
                                   value={group || id}
                                   onChange={() => handleRangedChange({ id, group })}
                                   checked={active}
+                                  disabled={isGroupLocked(unit, unit.ranged, group)}
                                   className={group ? "checkbox__input" : "radio__input"}
                               />
                               <label

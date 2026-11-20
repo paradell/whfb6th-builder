@@ -582,7 +582,8 @@
         {
           "name_en": "Great weapon",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "mandatoryOption": "rangers"
         }
       ],
       "ranged": [],
@@ -607,6 +608,17 @@
           "id": "longbeards",
           "points": 3,
           "perModel": true,
+          "armyComposition": [
+            "dwarfs"
+          ]
+        },
+        {
+          "name_en": "Rangers",
+          "name_es": "Montaraces",
+          "id": "rangers",
+          "points": 1,
+          "perModel": true,
+          "onePerArmy": true,
           "armyComposition": [
             "dwarfs"
           ]
