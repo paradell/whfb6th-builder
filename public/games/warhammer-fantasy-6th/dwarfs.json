@@ -669,7 +669,8 @@
         {
           "name_en": "Great weapon",
           "points": 2,
-          "perModel": true
+          "perModel": true,
+          "mandatoryOption": "rangers"
         }
       ],
       "ranged": [
@@ -695,6 +696,17 @@
           "name_en": "Shield",
           "points": 1,
           "perModel": true
+        },
+        {
+          "name_en": "Rangers",
+          "name_es": "Montaraces",
+          "id": "rangers",
+          "points": 1,
+          "perModel": true,
+          "onePerArmy": true,
+          "armyComposition": [
+            "dwarfs"
+          ]
         }
       ],
       "mounts": [],
