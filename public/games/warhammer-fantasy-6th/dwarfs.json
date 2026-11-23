@@ -432,7 +432,7 @@
           "points": 5
         },
         {
-          "name_en": "Pair of Pistols",
+          "name_en": "Brace of pistols",
           "name_es": "Par de Pistolas",
           "points": 10
         },
@@ -1134,7 +1134,7 @@
     {
       "name_en": "Cannon {Dwarfs}",
       "id": "cannon",
-      "points": 100,
+      "points": 90,
       "armyComposition": {
         "dwarfs": {
           "category": "special"
@@ -1143,6 +1143,29 @@
           "category": "special"
         }
       },
+      "command": [
+        {
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        }
+      ],
       "equipment": [
         {
           "name_en": "Crew: hand weapons, light armour",
@@ -1157,7 +1180,7 @@
             "engineering-runes"
           ],
           "selected": [],
-          "maxPoints": 0
+          "max": 3
         }
       ],
       "specialRules": {
@@ -1178,6 +1201,29 @@
           "category": "special"
         }
       },
+      "command": [
+        {
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        }
+      ],
       "equipment": [
         {
           "name_en": "Crew: hand weapons, light armour",
@@ -1192,7 +1238,7 @@
             "engineering-runes"
           ],
           "selected": [],
-          "maxPoints": 0
+          "max": 3
         }
       ],
       "specialRules": {
@@ -1202,7 +1248,7 @@
     {
       "name_en": "Stone Thrower {Dwarfs}",
       "id": "stone-thrower",
-      "points": 85,
+      "points": 80,
       "armyComposition": {
         "dwarfs": {
           "category": "special"
@@ -1211,6 +1257,29 @@
           "category": "special"
         }
       },
+      "command": [
+        {
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        }
+      ],
       "equipment": [
         {
           "name_en": "Crew: hand weapons, light armour",
@@ -1225,7 +1294,7 @@
             "engineering-runes"
           ],
           "selected": [],
-          "maxPoints": 0
+          "max": 3
         }
       ],
       "specialRules": {
