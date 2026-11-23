@@ -1193,6 +1193,10 @@
       "points": 45,
       "minimum": 1,
       "maximum": 2,
+      "modelName": {
+        "name_en": "Bolt Thrower",
+        "name_es": "Lanzavirotes"
+      },
       "armyComposition": {
         "dwarfs": {
           "category": "special"
@@ -1203,6 +1207,29 @@
       },
       "command": [
         {
+          "model": 1,
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "model": 2,
           "name_en": "Crew Engineer",
           "name_es": "Ingeniero de la dotación",
           "points": 15,
@@ -1233,6 +1260,16 @@
       ],
       "items": [
         {
+          "model": 1,
+          "name_en": "Engineering Runes",
+          "types": [
+            "engineering-runes"
+          ],
+          "selected": [],
+          "max": 3
+        },
+        {
+          "model": 2,
           "name_en": "Engineering Runes",
           "types": [
             "engineering-runes"
@@ -1306,7 +1343,7 @@
     {
       "name_en": "Organ Gun",
       "id": "organ-gun",
-      "points": 125,
+      "points": 120,
       "armyComposition": {
         "dwarfs": {
           "category": "rare"
@@ -1320,16 +1357,6 @@
           "name_en": "Crew: hand weapons, light armour",
           "points": 0,
           "active": true
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Engineering Runes",
-          "types": [
-            "engineering-runes"
-          ],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "specialRules": {
@@ -1376,16 +1403,6 @@
           "name_en": "Crew: hand weapons, light armour",
           "points": 0,
           "active": true
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Engineering Runes",
-          "types": [
-            "engineering-runes"
-          ],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "specialRules": {

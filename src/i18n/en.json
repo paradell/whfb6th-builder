@@ -166,6 +166,7 @@
   "unit.perModel": "per model",
   "unit.noOptions": "No options available.",
   "unit.unitSize": "Unit size:",
+  "unit.model": "Model",
   "unit.command": "Command:",
   "unit.equipment": "Equipment:",
   "unit.melee": "Weapons:",

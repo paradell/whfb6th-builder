@@ -62,9 +62,14 @@ export const getAllOptions = (
   const allCommand = [];
   const allMounts = [];
   const allOptions = [];
+  // Command and items entries of a single model (`model` in the dataset), by model number
+  const modelEntries = {};
+  const addModelEntry = (model, entry) => {
+    modelEntries[model] = [...(modelEntries[model] || []), entry];
+  };
 
   if (command) {
-    command.forEach(({ active, magic, name_en, options: commandOptions, ...entry }) => {
+    command.forEach(({ active, magic, name_en, model, options: commandOptions, ...entry }) => {
       if (active) {
         let commandEntry = entry[`name_${language}`] || name_en;
         const selectedOptions = [];
@@ -96,7 +101,11 @@ export const getAllOptions = (
           commandEntry += ` [${selectedOptions.join(" + ")}]`;
         }
 
-        allCommand.push(commandEntry);
+        if (model) {
+          addModelEntry(model, commandEntry);
+        } else {
+          allCommand.push(commandEntry);
+        }
       }
     });
   }
@@ -248,15 +257,23 @@ export const getAllOptions = (
       )
       .forEach((item) => {
       (item.selected || []).forEach((selectedItem) => {
-        allItems.push(
+        const itemEntry =
           selectedItem.amount > 1
             ? `${selectedItem.amount}x ` +
                 (selectedItem[`name_${language}`] || selectedItem.name_en)
-            : selectedItem[`name_${language}`] || selectedItem.name_en,
-        );
+            : selectedItem[`name_${language}`] || selectedItem.name_en;
+
+        if (!item.model) {
+          allItems.push(itemEntry);
+        } else if (!noMagic) {
+          addModelEntry(item.model, itemEntry);
+        }
       });
     });
   }
+  const allModels = Object.keys(modelEntries)
+    .sort((a, b) => a - b)
+    .map((model) => `#${model} ${modelEntries[model].join(" + ")}`);
   const lore = [];
   if (isWizard({ options, command, mounts })) {
     if (activeLore && nameMap[activeLore].name_en !== "None") {
@@ -277,6 +294,7 @@ export const getAllOptions = (
     ...allArmor,
     ...allOptions,
     ...allCommand,
+    ...allModels,
     ...allMounts,
     ...(!noMagic ? allItems : []),
     ...lore,
@@ -546,6 +564,31 @@ export const getRequiredOptionCleanup = (unit) => {
       !command.magic || isAvailable(command.magic)
         ? command
         : { ...command, magic: { ...command.magic, selected: [] } },
+    ),
+  };
+};
+
+// Clears the command and items entries of the models that are no longer in the unit
+// (`model` above the new `strength`), e.g. the second Dwarf Bolt Thrower's Crew Engineer and runes.
+export const getRemovedModelsCleanup = (unit, strength) => {
+  const isRemovedModel = ({ model }) => model > strength;
+
+  return {
+    command: unit.command?.map((command) =>
+      isRemovedModel(command)
+        ? {
+            ...command,
+            active: false,
+            options: command.options?.map((option) => ({
+              ...option,
+              active: false,
+            })),
+            magic: command.magic && { ...command.magic, selected: [] },
+          }
+        : command,
+    ),
+    items: unit.items?.map((item) =>
+      isRemovedModel(item) ? { ...item, selected: [] } : item,
     ),
   };
 };

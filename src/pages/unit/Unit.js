@@ -42,6 +42,7 @@ import {
   unitHasItem,
   hasRequiredOption,
   getRequiredOptionCleanup,
+  getRemovedModelsCleanup,
   getStackableMaximum,
   isGroupLocked,
   isWizard,
@@ -103,12 +104,15 @@ export const Unit = ({ isMobile }) => {
     setRedirect(true);
   };
   const handleStrengthChange = (event) => {
+    const strength = event.target.value;
+
     dispatch(
       editUnit({
         listId,
         type,
         unitId,
-        strength: event.target.value,
+        strength,
+        ...getRemovedModelsCleanup(unit, strength),
       }),
     );
   };
@@ -641,6 +645,329 @@ export const Unit = ({ isMobile }) => {
   const listArmyComposition = list?.armyComposition || list?.army;
   const unitArmyComposition = unit.army ? unit.army : listArmyComposition;
 
+  // Command entries available for the army composition. The magic items route
+  // uses their index in this list, also for the per-model entries.
+  const unitCommand = (unit.command || []).filter(
+    (commandEntry) =>
+      !commandEntry.armyComposition ||
+      commandEntry.armyComposition.includes(unitArmyComposition),
+  );
+  // Models with their own command and items entries (`model` in the dataset,
+  // e.g. each Dwarf Bolt Thrower has its own Crew Engineer and runes), up to the unit size
+  const modelNumbers = [
+    ...new Set(
+      [...(unit.command || []), ...(unit.items || [])]
+        .map(({ model }) => model)
+        .filter((model) => model && model <= (unit.strength || 1)),
+    ),
+  ].sort((a, b) => a - b);
+  const modelName =
+    unit.modelName?.[`name_${language}`] ||
+    unit.modelName?.name_en ||
+    intl.formatMessage({ id: "unit.model" });
+  const renderCommand = (
+    {
+      points,
+      perModel,
+      id,
+      active = false,
+      magic,
+      options,
+      exclusive = true,
+      notes,
+      alwaysActive,
+      ...command
+    },
+    index,
+  ) => {
+    const commandMagicPoints = getUnitCommandMagicPoints({
+      selected: magic?.selected,
+      strength: unit.strength,
+    });
+    let commandMaxPoints = 0;
+    const hasCommandMagic =
+      magic?.types?.length > 0 &&
+      active &&
+      hasRequiredOption(unit, magic.requiredOption);
+
+    if (hasCommandMagic) {
+      commandMaxPoints =
+        (magic.armyComposition &&
+          magic.armyComposition[unitArmyComposition]
+            ?.maxPoints) ||
+        magic.maxPoints;
+    }
+
+    return (
+      <Fragment key={id}>
+        <div className="checkbox">
+          <input
+            type="checkbox"
+            id={`command-${id}`}
+            value={id}
+            onChange={() =>
+              !alwaysActive && handleCommandChange(id)
+            }
+            checked={active}
+            className="checkbox__input"
+            disabled={alwaysActive}
+          />
+          <label
+            htmlFor={`command-${id}`}
+            className="checkbox__label"
+          >
+            <span className="unit__label-text">
+              <RulesWithIcon textObject={command} />
+            </span>
+            <i className="checkbox__points">
+              {getPointsText({ points })}
+            </i>
+          </label>
+        </div>
+        {getUnitOptionNotes({
+          notes: notes,
+          key: `options-${index}-note`,
+          className: "unit__option-note",
+          language,
+        })}
+        {hasCommandMagic ? (
+          <>
+            <hr className="unit__hr" />
+            <ListItem
+              to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
+              className="editor__list unit__link unit__command-list"
+              active={location.pathname.includes(
+                `magic/${index}`,
+              )}
+            >
+              <div className="editor__list-inner">
+                <b>
+                  {magic.types
+                    .map(
+                      (itemType) =>
+                        nameMap[itemType][`name_${language}`] ||
+                        nameMap[itemType].name_en,
+                    )
+                    .join(", ")}
+                </b>
+                <i className="checkbox__points">
+                  <span
+                    className={classNames(
+                      commandMagicPoints > commandMaxPoints &&
+                        commandMaxPoints > 0 &&
+                        "editor__error",
+                    )}
+                  >
+                    {commandMagicPoints}
+                  </span>{" "}
+                  {magic.maxPoints > 0 && (
+                    <>{` / ${commandMaxPoints}`}</>
+                  )}{" "}
+                  <FormattedMessage id="app.points" />
+                </i>
+                {commandMagicPoints > commandMaxPoints &&
+                  commandMaxPoints > 0 && (
+                    <Icon
+                      symbol="error"
+                      color="red"
+                      className="unit__magic-icon"
+                    />
+                  )}
+              </div>
+              {magic.maxItemsPerCategory &&
+                magic.maxItemsPerCategory > 0 && (
+                  <p className="unit__option-note unit__option-note--maxitems">
+                    <FormattedMessage
+                      id={
+                        magic.types.length > 1
+                          ? "unit.maxItemsPerCategory"
+                          : "unit.maxItems"
+                      }
+                      values={{
+                        maxItems: magic.maxItemsPerCategory,
+                      }}
+                    />
+                  </p>
+                )}
+              {magic?.selected && (
+                <p>
+                  {magic.selected
+                    .map((selectedItem) =>
+                      selectedItem.amount > 1
+                        ? `${selectedItem.amount}x ` +
+                          (selectedItem[`name_${language}`] ||
+                            selectedItem.name_en)
+                        : selectedItem[`name_${language}`] ||
+                          selectedItem.name_en,
+                    )
+                    .join(", ")
+                    .replace(/\*/g, "")}
+                </p>
+              )}
+            </ListItem>
+          </>
+        ) : null}
+        {options?.length > 0 && active && (
+          <Fragment>
+            {options
+              .filter(
+                (option) =>
+                  !option.armyComposition ||
+                  option.armyComposition.includes(
+                    unitArmyComposition,
+                  ),
+              )
+              .map((option, optionIndex) => {
+                const exclusiveCheckedOption = options.find(
+                  (exclusiveOption) =>
+                    exclusiveOption.exclusive &&
+                    exclusiveOption.active,
+                );
+
+                return (
+                  <Fragment key={option.name_en}>
+                    <div className="checkbox checkbox--conditional">
+                      <input
+                        type="checkbox"
+                        id={`command-${id}-option-${optionIndex}`}
+                        value={`${id}-${optionIndex}`}
+                        onChange={() =>
+                          handleCommandChange(id, optionIndex)
+                        }
+                        checked={Boolean(option.active)}
+                        className="checkbox__input"
+                        disabled={
+                          (exclusiveCheckedOption &&
+                            option.exclusive &&
+                            !option.active) ||
+                          option.alwaysActive
+                        }
+                      />
+                      <label
+                        htmlFor={`command-${id}-option-${optionIndex}`}
+                        className="checkbox__label"
+                      >
+                        <span className="unit__label-text">
+                          <RulesWithIcon textObject={option} />
+                        </span>
+                        <i className="checkbox__points">
+                          {getPointsText({
+                            points: option.points,
+                            perModel: option.perModel,
+                          })}
+                        </i>
+                      </label>
+                    </div>
+                    {getUnitOptionNotes({
+                      notes: option.notes,
+                      key: `options-${index}-${optionIndex}-note`,
+                      className: "unit__option-note",
+                      language,
+                    })}
+                  </Fragment>
+                );
+              })}
+            <hr className="unit__command-option-hr" />
+          </Fragment>
+        )}
+      </Fragment>
+    );
+  };
+  const renderItemGroup = (item, itemIndex) => {
+    const itemsPoints = getUnitMagicPoints({
+      unit: { ...unit, type },
+      item,
+    });
+    const maxPoints =
+      (item.armyComposition &&
+        item.armyComposition[unitArmyComposition]?.maxPoints) ||
+      item.maxPoints;
+
+    if (!hasRequiredOption(unit, item.requiredOption)) {
+      return null;
+    }
+
+    if (
+      item.armyComposition &&
+      ((typeof item.armyComposition === "string" &&
+        !item.armyComposition.includes(unitArmyComposition)) ||
+        (item.armyComposition.length > 0 &&
+          item.armyComposition.indexOf(unitArmyComposition) < 0))
+    ) {
+      return null;
+    }
+
+    return (
+      <ListItem
+        to={`/editor/${listId}/${type}/${unitId}/items/${itemIndex}`}
+        className="editor__list unit__link"
+        active={location.pathname.includes(`items/${itemIndex}`)}
+        key={itemIndex}
+      >
+        <div className="editor__list-inner">
+          <b className="unit__magic-headline">
+            {item[`name_${language}`] || item.name_en}
+          </b>
+          <i className="checkbox__points">
+            <span
+              className={classNames(
+                itemsPoints > maxPoints &&
+                  maxPoints > 0 &&
+                  "editor__error",
+              )}
+            >
+              {itemsPoints}
+            </span>
+            {maxPoints > 0 && <>{` / ${maxPoints}`}</>}{" "}
+            <FormattedMessage id="app.points" />
+          </i>
+          {itemsPoints > maxPoints && maxPoints > 0 && (
+            <Icon
+              symbol="error"
+              color="red"
+              className="unit__magic-icon"
+            />
+          )}
+        </div>
+        {item.maxItemsPerCategory && item.maxItemsPerCategory > 0 && (
+          <p className="unit__option-note unit__option-note--maxitems">
+            <FormattedMessage
+              id={
+                item.types.length > 1
+                  ? "unit.maxItemsPerCategory"
+                  : "unit.maxItems"
+              }
+              values={{
+                maxItems: item.maxItemsPerCategory,
+              }}
+            />
+          </p>
+        )}
+        {getUnitOptionNotes({
+          notes: item.notes,
+          key: `options-${itemIndex}-note`,
+          className: "unit__option-note unit__option-note--items",
+          language,
+        })}
+        {item.selected && (
+          <p>
+            {item.selected
+              .map((selectedItem) =>
+                selectedItem.amount > 1
+                  ? `${selectedItem.amount}x ` +
+                    (selectedItem[`name_${language}`] ||
+                      selectedItem.name_en)
+                  : selectedItem[`name_${language}`] ||
+                    selectedItem.name_en,
+              )
+              .join(", ")
+              .replace(/\*/g, "")}
+          </p>
+        )}
+      </ListItem>
+    );
+  };
+
   return (
     <>
       <Helmet>
@@ -744,229 +1071,29 @@ export const Unit = ({ isMobile }) => {
             />
           </>
         ) : null}
-        {unit.command && unit.command.length > 0 && (
+        {unitCommand.some(({ model }) => !model) && (
           <>
             <h2 className="unit__subline">
               <FormattedMessage id="unit.command" />
             </h2>
-            {unit.command
-              .filter(
-                (unitCommand) =>
-                  !unitCommand.armyComposition ||
-                  unitCommand.armyComposition.includes(unitArmyComposition),
-              )
-              .map(
-                (
-                  {
-                    points,
-                    perModel,
-                    id,
-                    active = false,
-                    magic,
-                    options,
-                    exclusive = true,
-                    notes,
-                    alwaysActive,
-                    ...command
-                  },
-                  index,
-                ) => {
-                  const commandMagicPoints = getUnitCommandMagicPoints({
-                    selected: magic?.selected,
-                    strength: unit.strength,
-                  });
-                  let commandMaxPoints = 0;
-                  const hasCommandMagic =
-                    magic?.types?.length > 0 &&
-                    active &&
-                    hasRequiredOption(unit, magic.requiredOption);
-
-                  if (hasCommandMagic) {
-                    commandMaxPoints =
-                      (magic.armyComposition &&
-                        magic.armyComposition[unitArmyComposition]
-                          ?.maxPoints) ||
-                      magic.maxPoints;
-                  }
-
-                  return (
-                    <Fragment key={id}>
-                      <div className="checkbox">
-                        <input
-                          type="checkbox"
-                          id={`command-${id}`}
-                          value={id}
-                          onChange={() =>
-                            !alwaysActive && handleCommandChange(id)
-                          }
-                          checked={active}
-                          className="checkbox__input"
-                          disabled={alwaysActive}
-                        />
-                        <label
-                          htmlFor={`command-${id}`}
-                          className="checkbox__label"
-                        >
-                          <span className="unit__label-text">
-                            <RulesWithIcon textObject={command} />
-                          </span>
-                          <i className="checkbox__points">
-                            {getPointsText({ points })}
-                          </i>
-                        </label>
-                      </div>
-                      {getUnitOptionNotes({
-                        notes: notes,
-                        key: `options-${index}-note`,
-                        className: "unit__option-note",
-                        language,
-                      })}
-                      {hasCommandMagic ? (
-                        <>
-                          <hr className="unit__hr" />
-                          <ListItem
-                            to={`/editor/${listId}/${type}/${unitId}/magic/${index}`}
-                            className="editor__list unit__link unit__command-list"
-                            active={location.pathname.includes(
-                              `magic/${index}`,
-                            )}
-                          >
-                            <div className="editor__list-inner">
-                              <b>
-                                {magic.types
-                                  .map(
-                                    (itemType) =>
-                                      nameMap[itemType][`name_${language}`] ||
-                                      nameMap[itemType].name_en,
-                                  )
-                                  .join(", ")}
-                              </b>
-                              <i className="checkbox__points">
-                                <span
-                                  className={classNames(
-                                    commandMagicPoints > commandMaxPoints &&
-                                      commandMaxPoints > 0 &&
-                                      "editor__error",
-                                  )}
-                                >
-                                  {commandMagicPoints}
-                                </span>{" "}
-                                {magic.maxPoints > 0 && (
-                                  <>{` / ${commandMaxPoints}`}</>
-                                )}{" "}
-                                <FormattedMessage id="app.points" />
-                              </i>
-                              {commandMagicPoints > commandMaxPoints &&
-                                commandMaxPoints > 0 && (
-                                  <Icon
-                                    symbol="error"
-                                    color="red"
-                                    className="unit__magic-icon"
-                                  />
-                                )}
-                            </div>
-                            {magic.maxItemsPerCategory &&
-                              magic.maxItemsPerCategory > 0 && (
-                                <p className="unit__option-note unit__option-note--maxitems">
-                                  <FormattedMessage
-                                    id={
-                                      magic.types.length > 1
-                                        ? "unit.maxItemsPerCategory"
-                                        : "unit.maxItems"
-                                    }
-                                    values={{
-                                      maxItems: magic.maxItemsPerCategory,
-                                    }}
-                                  />
-                                </p>
-                              )}
-                            {magic?.selected && (
-                              <p>
-                                {magic.selected
-                                  .map((selectedItem) =>
-                                    selectedItem.amount > 1
-                                      ? `${selectedItem.amount}x ` +
-                                        (selectedItem[`name_${language}`] ||
-                                          selectedItem.name_en)
-                                      : selectedItem[`name_${language}`] ||
-                                        selectedItem.name_en,
-                                  )
-                                  .join(", ")
-                                  .replace(/\*/g, "")}
-                              </p>
-                            )}
-                          </ListItem>
-                        </>
-                      ) : null}
-                      {options?.length > 0 && active && (
-                        <Fragment>
-                          {options
-                            .filter(
-                              (option) =>
-                                !option.armyComposition ||
-                                option.armyComposition.includes(
-                                  unitArmyComposition,
-                                ),
-                            )
-                            .map((option, optionIndex) => {
-                              const exclusiveCheckedOption = options.find(
-                                (exclusiveOption) =>
-                                  exclusiveOption.exclusive &&
-                                  exclusiveOption.active,
-                              );
-
-                              return (
-                                <Fragment key={option.name_en}>
-                                  <div className="checkbox checkbox--conditional">
-                                    <input
-                                      type="checkbox"
-                                      id={`command-${id}-option-${optionIndex}`}
-                                      value={`${id}-${optionIndex}`}
-                                      onChange={() =>
-                                        handleCommandChange(id, optionIndex)
-                                      }
-                                      checked={Boolean(option.active)}
-                                      className="checkbox__input"
-                                      disabled={
-                                        (exclusiveCheckedOption &&
-                                          option.exclusive &&
-                                          !option.active) ||
-                                        option.alwaysActive
-                                      }
-                                    />
-                                    <label
-                                      htmlFor={`command-${id}-option-${optionIndex}`}
-                                      className="checkbox__label"
-                                    >
-                                      <span className="unit__label-text">
-                                        <RulesWithIcon textObject={option} />
-                                      </span>
-                                      <i className="checkbox__points">
-                                        {getPointsText({
-                                          points: option.points,
-                                          perModel: option.perModel,
-                                        })}
-                                      </i>
-                                    </label>
-                                  </div>
-                                  {getUnitOptionNotes({
-                                    notes: option.notes,
-                                    key: `options-${index}-${optionIndex}-note`,
-                                    className: "unit__option-note",
-                                    language,
-                                  })}
-                                </Fragment>
-                              );
-                            })}
-                          <hr className="unit__command-option-hr" />
-                        </Fragment>
-                      )}
-                    </Fragment>
-                  );
-                },
-              )}
+            {unitCommand.map((commandEntry, index) =>
+              commandEntry.model ? null : renderCommand(commandEntry, index),
+            )}
           </>
         )}
+        {modelNumbers.map((model) => (
+          <Fragment key={`model-${model}`}>
+            <h2 className="unit__subline">{`${modelName} ${model}`}</h2>
+            {unitCommand.map((commandEntry, index) =>
+              commandEntry.model === model
+                ? renderCommand(commandEntry, index)
+                : null,
+            )}
+            {(unit.items || []).map((item, itemIndex) =>
+              item.model === model ? renderItemGroup(item, itemIndex) : null,
+            )}
+          </Fragment>
+        ))}
         {unit.equipment?.some(({ requiredOption }) =>
           hasRequiredOption(unit, requiredOption),
         ) && (
@@ -1910,105 +2037,12 @@ export const Unit = ({ isMobile }) => {
               ))}
           </>
         ) : null}
-        {unit.items && unit.items.length ? (
+        {unit.items?.some(({ model }) => !model) ? (
           <hr className="unit__hr unit__hr--space-top" />
         ) : null}
-        {unit.items && unit.items.length
-          ? unit.items.map((item, itemIndex) => {
-              const itemsPoints = getUnitMagicPoints({
-                unit: { ...unit, type },
-                item,
-              });
-              const maxPoints =
-                (item.armyComposition &&
-                  item.armyComposition[unitArmyComposition]?.maxPoints) ||
-                item.maxPoints;
-
-              if (!hasRequiredOption(unit, item.requiredOption)) {
-                return null;
-              }
-
-              if (
-                item.armyComposition &&
-                ((typeof item.armyComposition === "string" &&
-                  !item.armyComposition.includes(unitArmyComposition)) ||
-                  (item.armyComposition.length > 0 &&
-                    item.armyComposition.indexOf(unitArmyComposition) < 0))
-              ) {
-                return null;
-              }
-
-              return (
-                <ListItem
-                  to={`/editor/${listId}/${type}/${unitId}/items/${itemIndex}`}
-                  className="editor__list unit__link"
-                  active={location.pathname.includes(`items/${itemIndex}`)}
-                  key={itemIndex}
-                >
-                  <div className="editor__list-inner">
-                    <b className="unit__magic-headline">
-                      {item[`name_${language}`] || item.name_en}
-                    </b>
-                    <i className="checkbox__points">
-                      <span
-                        className={classNames(
-                          itemsPoints > maxPoints &&
-                            maxPoints > 0 &&
-                            "editor__error",
-                        )}
-                      >
-                        {itemsPoints}
-                      </span>
-                      {maxPoints > 0 && <>{` / ${maxPoints}`}</>}{" "}
-                      <FormattedMessage id="app.points" />
-                    </i>
-                    {itemsPoints > maxPoints && maxPoints > 0 && (
-                      <Icon
-                        symbol="error"
-                        color="red"
-                        className="unit__magic-icon"
-                      />
-                    )}
-                  </div>
-                  {item.maxItemsPerCategory && item.maxItemsPerCategory > 0 && (
-                    <p className="unit__option-note unit__option-note--maxitems">
-                      <FormattedMessage
-                        id={
-                          item.types.length > 1
-                            ? "unit.maxItemsPerCategory"
-                            : "unit.maxItems"
-                        }
-                        values={{
-                          maxItems: item.maxItemsPerCategory,
-                        }}
-                      />
-                    </p>
-                  )}
-                  {getUnitOptionNotes({
-                    notes: item.notes,
-                    key: `options-${itemIndex}-note`,
-                    className: "unit__option-note unit__option-note--items",
-                    language,
-                  })}
-                  {item.selected && (
-                    <p>
-                      {item.selected
-                        .map((selectedItem) =>
-                          selectedItem.amount > 1
-                            ? `${selectedItem.amount}x ` +
-                              (selectedItem[`name_${language}`] ||
-                                selectedItem.name_en)
-                            : selectedItem[`name_${language}`] ||
-                              selectedItem.name_en,
-                        )
-                        .join(", ")
-                        .replace(/\*/g, "")}
-                    </p>
-                  )}
-                </ListItem>
-              );
-            })
-          : null}
+        {(unit.items || []).map((item, itemIndex) =>
+          item.model ? null : renderItemGroup(item, itemIndex),
+        )}
 
         {specialRules && specialRules.name_en ? (
           <>

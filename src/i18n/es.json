@@ -166,6 +166,7 @@
   "unit.perModel": "por modelo",
   "unit.noOptions": "Sin opciones disponibles.",
   "unit.unitSize": "Tamaño de la unidad:",
+  "unit.model": "Miniatura",
   "unit.command": "Grupo de mando:",
   "unit.equipment": "Equipo:",
   "unit.melee": "Armas:",

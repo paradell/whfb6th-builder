@@ -32,6 +32,10 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
   "points": Number, // Points for each model
   "minimum": Number, // Minimum number of models of the unit
   "maximum": Number, // Maximum number of models of the unit
+  "modelName": { // Optional. Heading of each model's section for "command" and "items" entries with "model" (e.g. "Bolt Thrower 1"), "Model" by default
+    "name_en": String,
+    "name_es": String
+  },
   "maxSignatureSpells": Number, // Number of maximum signature spells
   "army": String, // Only in mercanaries category, army ID, optional
   "armyComposition": { // Army composition specific options, optional
@@ -53,6 +57,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "name_es": String,
       "points": Number,
       "alwaysActive": Boolean, // Always selected and cannot be deselected, optional
+      "model": Number, // Optional. Belongs to that model of the unit only: shown in the model's own section while the unit has that many models, and cleared when it gets smaller (e.g. a Crew Engineer for each Dwarf Bolt Thrower)
       "magic": {
         "types": [String], // Limit the available magic items (see "magic-items.json" types)
         "maxPoints": Number, // Maximum points for magic items
@@ -189,6 +194,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "types": [String],
       "maxPoints": Number, // Optional
       "requiredOption": String | [String], // Optional. Only shown when one of these option ids is active, see "options"
+      "model": Number, // Optional. Belongs to that model of the unit only, like "model" in "command" (e.g. Engineering Runes for each Dwarf Bolt Thrower)
       "notes": { // Optional
         "name_en": String,
         "name_es": String
