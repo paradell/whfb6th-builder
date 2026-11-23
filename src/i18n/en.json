@@ -72,6 +72,7 @@
   "misc.error.multipleBSBs": "Only one Battle Standard Bearer allowed",
   "misc.error.sameOptionInArmy": "All units must choose the same {option} ({name})",
   "misc.error.optionOnePerArmy": "{option} can only be taken once per army ({name})",
+  "misc.error.tooManyStackable": "{name} can have at most {max} {option}",
   "misc.error.tooManyCharacterSlots": "Too many character slots (Lords + Heroes exceed maximum)",
   "misc.error.maxUnits": "{diff} {name} too many",
   "misc.error.maxNamed": "unique {name} unit already selected",

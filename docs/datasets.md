@@ -138,6 +138,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "stackable": Boolean, // Allows multiple selections of this option
       "minimum": Number, // Minimum number of this option
       "maximum": Number, // Maximum number of this option
+      "maxByModels": Boolean, // Optional. For stackable options: the maximum is also limited by the number of models in the unit without command (e.g. Dwarf Giant Slayers)
       "armyComposition": [army composition IDs], // Optional
       "requiredMagicItem": String, // Name of a required magic item
       "onePerArmy": Boolean, // Optional. Only one unit in the army can have this option (or sub-option) selected (e.g. the Dwarf Anvil of Doom)

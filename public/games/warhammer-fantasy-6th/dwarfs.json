@@ -791,12 +791,11 @@
     {
       "name_en": "Miners",
       "id": "miners",
-      "points": 12,
-      "minimum": 10,
-      "maximum": 20,
+      "points": 1,
+      "minimum": 5,
       "armyComposition": {
         "dwarfs": {
-          "category": "core"
+          "category": "special"
         },
         "dwarfs-2000": {
           "category": "core"
@@ -805,15 +804,22 @@
       "command": [
         {
           "name_en": "Prospector",
-          "points": 12
+          "points": 10,
+          "options": [
+            {
+              "name_en": "Steam Drill",
+              "name_es": "Taladro de vapor",
+              "points": 25
+            }
+          ]
         },
         {
           "name_en": "Standard Bearer",
-          "points": 12
+          "points": 10
         },
         {
           "name_en": "Musician",
-          "points": 6
+          "points": 5
         }
       ],
       "equipment": [],
@@ -854,8 +860,8 @@
     {
       "name_en": "Hammerers",
       "id": "hammerers",
-      "points": 14,
-      "minimum": 10,
+      "points": 12,
+      "minimum": 5,
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
@@ -1000,7 +1006,7 @@
       "name_en": "Ironbreakers",
       "id": "ironbreakers",
       "points": 13,
-      "minimum": 10,
+      "minimum": 5,
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
@@ -1013,7 +1019,14 @@
       "command": [
         {
           "name_en": "Ironbeard",
-          "points": 12
+          "points": 12,
+          "options": [
+            {
+              "name_en": "Pair of Pistols",
+              "name_es": "Par de Pistolas",
+              "points": 5
+            }
+          ]
         },
         {
           "name_en": "Standard Bearer",
@@ -1068,7 +1081,7 @@
       "name_en": "Slayers",
       "id": "slayers",
       "points": 11,
-      "minimum": 10,
+      "minimum": 5,
       "maximum": 30,
       "armyComposition": {
         "dwarfs": {
@@ -1107,6 +1120,7 @@
           "stackable": true,
           "minimum": 0,
           "maximum": 30,
+          "maxByModels": true,
           "notes": {
             "name_en": "replaces a Troll Slayer"
           }

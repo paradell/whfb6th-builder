@@ -3,6 +3,7 @@ import { validateList } from "../validation";
 jest.mock("../unit", () => ({
   getUnitName: ({ unit }) => unit.name || unit.name_en || unit.id,
   getUnitLeadership: () => 0,
+  getStackableMaximum: jest.requireActual("../unit").getStackableMaximum,
 }));
 
 describe("validateList sameInArmy options", () => {
@@ -183,5 +184,46 @@ describe("validateList units limited per required unit", () => {
     expect(getRequiresUnitsErrors(0, 1)).toEqual([
       { message: 'misc.error.requiresUnits', section: 'core', name: 'mounted-knights-of-the-realm', diff: 1 },
     ]);
+  });
+});
+
+describe("validateList stackable options limited by models", () => {
+  const slayers = (giantSlayers) => ({
+    id: 'slayers.0',
+    name_en: 'Slayers',
+    strength: 10,
+    command: [{ name_en: 'Standard Bearer', active: true }],
+    options: [
+      { name_en: 'Giant Slayer', stackable: true, maximum: 30, maxByModels: true, stackableCount: giantSlayers },
+    ],
+  });
+  const getStackableErrors = (giantSlayers) =>
+    validateList({
+      list: {
+        game: 'warhammer-fantasy-6th',
+        army: 'dwarfs',
+        armyComposition: 'dwarfs',
+        points: 2000,
+        characters: [],
+        lords: [],
+        heroes: [],
+        core: [],
+        special: [slayers(giantSlayers)],
+        rare: [],
+        mercenaries: [],
+        allies: [],
+      },
+      language: 'en',
+      intl: { formatMessage: (o) => o.id },
+    }).filter((e) => e.message === 'misc.error.tooManyStackable');
+
+  test("more Giant Slayers than Slayers without command give an error", () => {
+    expect(getStackableErrors(10)).toEqual([
+      { message: 'misc.error.tooManyStackable', section: 'special', option: 'Giant Slayer', name: 'Slayers', max: 9 },
+    ]);
+  });
+
+  test("as many Giant Slayers as Slayers without command give no error", () => {
+    expect(getStackableErrors(9)).toEqual([]);
   });
 });

@@ -438,6 +438,25 @@ export const hasRequiredOption = (unit, requiredOption) =>
   !requiredOption || unitHasOption(unit, requiredOption);
 
 /**
+ * Gets the maximum count of a stackable option. With "maxByModels" it is also
+ * limited by the models of the unit without command (e.g. Dwarf Giant Slayers).
+ *
+ * @param {object} unit
+ * @param {object} option
+ * @returns {number}
+ */
+export const getStackableMaximum = (unit, option) => {
+  if (!option.maxByModels) {
+    return option.maximum;
+  }
+
+  const commandCount = (unit.command || []).filter(({ active }) => active).length;
+  const models = Math.max((Number(unit.strength) || 0) - commandCount, 0);
+
+  return option.maximum ? Math.min(option.maximum, models) : models;
+};
+
+/**
  * Checks if an equipment, melee or ranged entry must be selected because the unit
  * has one of the options of its "mandatoryOption" active (e.g. Dwarf Rangers must
  * take great weapons).

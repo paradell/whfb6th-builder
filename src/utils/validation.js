@@ -1,7 +1,7 @@
 import { rules, countExtraCategories, getMaxSlots } from "./rules";
 import { uniq } from "./collection";
 import { equalsOrIncludes } from "./string";
-import { getUnitName, getUnitLeadership } from "./unit";
+import { getUnitName, getUnitLeadership, getStackableMaximum } from "./unit";
 import { joinWithAnd, joinWithOr } from "./string";
 
 const getGenerals = (units) =>
@@ -217,6 +217,36 @@ export const validateList = ({ list, language, intl }) => {
         option,
         name: units.join(", "),
       });
+  });
+
+  // Stackable options limited by the models of the unit (e.g. Dwarf Giant Slayers)
+  [
+    "characters",
+    "lords",
+    "heroes",
+    "core",
+    "core_not_count",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ].forEach((category) => {
+    (list?.[category] || []).forEach((unit) => {
+      (unit.options || [])
+        .filter((option) => option.stackable && option.maxByModels)
+        .forEach((option) => {
+          const max = getStackableMaximum(unit, option);
+
+          Number(option.stackableCount || 0) > max &&
+            errors.push({
+              message: "misc.error.tooManyStackable",
+              section: category,
+              option: option[`name_${language}`] || option.name_en,
+              name: getUnitName({ unit, language }),
+              max,
+            });
+        });
+    });
   });
 
   // Multiple BSBs

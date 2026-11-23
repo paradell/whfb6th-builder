@@ -42,6 +42,7 @@ import {
   unitHasItem,
   hasRequiredOption,
   getRequiredOptionCleanup,
+  getStackableMaximum,
   isGroupLocked,
   isWizard,
 } from "../../utils/unit";
@@ -1246,6 +1247,7 @@ export const Unit = ({ isMobile }) => {
                   notes,
                   stackable,
                   maximum,
+                  maxByModels,
                   minimum = 0,
                   stackableCount = minimum || 0,
                   active = false,
@@ -1413,7 +1415,7 @@ export const Unit = ({ isMobile }) => {
                       <NumberInput
                         id={`options-${id}`}
                         min={minimum}
-                        max={maximum}
+                        max={getStackableMaximum(unit, { maximum, maxByModels })}
                         value={stackableCount}
                         onChange={(event) =>
                           handleStackableOptionChange({

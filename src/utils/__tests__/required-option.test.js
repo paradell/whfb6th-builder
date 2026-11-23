@@ -4,6 +4,7 @@ import {
   getRequiredOptionCleanup,
   getAllOptions,
   isGroupLocked,
+  getStackableMaximum,
 } from "../unit";
 import { getUnitPoints } from "../points";
 
@@ -181,5 +182,32 @@ describe("mandatoryOption", () => {
 
     expect(isGroupLocked(unit, unit.ranged, "missile")).toBe(false);
     expect(getRequiredOptionCleanup(unit).ranged).toEqual(unit.ranged);
+  });
+});
+
+describe("getStackableMaximum", () => {
+  const giantSlayer = { name_en: "Giant Slayer", stackable: true, maximum: 30, maxByModels: true };
+  const slayers = (strength, commandActive = []) => ({
+    strength,
+    command: [
+      { name_en: "Standard Bearer", active: commandActive.includes("standard") },
+      { name_en: "Musician", active: commandActive.includes("musician") },
+    ],
+  });
+
+  test("is limited by the models of the unit", () => {
+    expect(getStackableMaximum(slayers(10), giantSlayer)).toBe(10);
+  });
+
+  test("doesn't count command models", () => {
+    expect(getStackableMaximum(slayers(10, ["standard", "musician"]), giantSlayer)).toBe(8);
+  });
+
+  test("keeps the option maximum as the absolute limit", () => {
+    expect(getStackableMaximum(slayers(40), giantSlayer)).toBe(30);
+  });
+
+  test("returns the option maximum without maxByModels", () => {
+    expect(getStackableMaximum(slayers(10), { ...giantSlayer, maxByModels: false })).toBe(30);
   });
 });
