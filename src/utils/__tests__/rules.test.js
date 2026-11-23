@@ -24,6 +24,31 @@ describe("countExtraCategories", () => {
     expect(countExtraCategories({ lords: [vampireLord(false)] }, "heroes", "vampire-counts")).toBe(1);
     expect(countExtraCategories({ lords: [masterNecromancer(false)] }, "heroes", "vampire-counts")).toBe(0);
   });
+
+  const runeLord = (anvilActive, subOptions) => ({
+    id: "rune-lord",
+    armyComposition: { dwarfs: { category: "lords" } },
+    options: [
+      { id: "anvil-of-doom", active: anvilActive, extra_categories: ["heroes"], options: subOptions },
+      { id: "shield", active: true },
+    ],
+  });
+
+  test("an active option adds its extra categories", () => {
+    expect(countExtraCategories({ lords: [runeLord(true)] }, "heroes", "dwarfs")).toBe(1);
+    expect(countExtraCategories({ lords: [runeLord(true)] }, "lords", "dwarfs")).toBe(0);
+  });
+
+  test("inactive options don't add extra categories", () => {
+    expect(countExtraCategories({ lords: [runeLord(false)] }, "heroes", "dwarfs")).toBe(0);
+  });
+
+  test("active sub-options add their extra categories only while the option is active", () => {
+    const subOptions = [{ id: "extra", active: true, extra_categories: ["special"] }];
+
+    expect(countExtraCategories({ lords: [runeLord(true, subOptions)] }, "special", "dwarfs")).toBe(1);
+    expect(countExtraCategories({ lords: [runeLord(false, subOptions)] }, "special", "dwarfs")).toBe(0);
+  });
 });
 
 describe("countCoreUnits", () => {

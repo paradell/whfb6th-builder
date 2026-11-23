@@ -62,22 +62,31 @@ export const getAllOptions = (
   const allCommand = [];
   const allMounts = [];
   const allOptions = [];
+  // Command and items entries of a single model (`model` in the dataset), by model number
+  const modelEntries = {};
+  const addModelEntry = (model, entry) => {
+    modelEntries[model] = [...(modelEntries[model] || []), entry];
+  };
 
   if (command) {
-    command.forEach(({ active, magic, name_en, options, ...entry }) => {
+    command.forEach(({ active, magic, name_en, model, options: commandOptions, ...entry }) => {
       if (active) {
         let commandEntry = entry[`name_${language}`] || name_en;
         const selectedOptions = [];
 
-        if (options && options.length > 0) {
-          options.forEach((option) => {
+        if (commandOptions && commandOptions.length > 0) {
+          commandOptions.forEach((option) => {
             if (option.active) {
               selectedOptions.push(option.name_en);
             }
           });
         }
 
-        if (magic && magic?.selected?.length && !noMagic) {
+        if (
+          magic?.selected?.length &&
+          !noMagic &&
+          hasRequiredOption({ options }, magic.requiredOption)
+        ) {
           magic.selected.forEach((selectedItem) => {
             selectedOptions.push(
               selectedItem.amount > 1
@@ -92,7 +101,11 @@ export const getAllOptions = (
           commandEntry += ` [${selectedOptions.join(" + ")}]`;
         }
 
-        allCommand.push(commandEntry);
+        if (model) {
+          addModelEntry(model, commandEntry);
+        } else {
+          allCommand.push(commandEntry);
+        }
       }
     });
   }
@@ -244,15 +257,23 @@ export const getAllOptions = (
       )
       .forEach((item) => {
       (item.selected || []).forEach((selectedItem) => {
-        allItems.push(
+        const itemEntry =
           selectedItem.amount > 1
             ? `${selectedItem.amount}x ` +
                 (selectedItem[`name_${language}`] || selectedItem.name_en)
-            : selectedItem[`name_${language}`] || selectedItem.name_en,
-        );
+            : selectedItem[`name_${language}`] || selectedItem.name_en;
+
+        if (!item.model) {
+          allItems.push(itemEntry);
+        } else if (!noMagic) {
+          addModelEntry(item.model, itemEntry);
+        }
       });
     });
   }
+  const allModels = Object.keys(modelEntries)
+    .sort((a, b) => a - b)
+    .map((model) => `#${model} ${modelEntries[model].join(" + ")}`);
   const lore = [];
   if (isWizard({ options, command, mounts })) {
     if (activeLore && nameMap[activeLore].name_en !== "None") {
@@ -273,6 +294,7 @@ export const getAllOptions = (
     ...allArmor,
     ...allOptions,
     ...allCommand,
+    ...allModels,
     ...allMounts,
     ...(!noMagic ? allItems : []),
     ...lore,
@@ -434,9 +456,55 @@ export const hasRequiredOption = (unit, requiredOption) =>
   !requiredOption || unitHasOption(unit, requiredOption);
 
 /**
+ * Gets the maximum count of a stackable option. With "maxByModels" it is also
+ * limited by the models of the unit without command (e.g. Dwarf Giant Slayers).
+ *
+ * @param {object} unit
+ * @param {object} option
+ * @returns {number}
+ */
+export const getStackableMaximum = (unit, option) => {
+  if (!option.maxByModels) {
+    return option.maximum;
+  }
+
+  const commandCount = (unit.command || []).filter(({ active }) => active).length;
+  const models = Math.max((Number(unit.strength) || 0) - commandCount, 0);
+
+  return option.maximum ? Math.min(option.maximum, models) : models;
+};
+
+/**
+ * Checks if an equipment, melee or ranged entry must be selected because the unit
+ * has one of the options of its "mandatoryOption" active (e.g. Dwarf Rangers must
+ * take great weapons).
+ *
+ * @param {object} unit
+ * @param {object} entry
+ * @returns {boolean}
+ */
+export const isMandatory = (unit, entry) =>
+  Boolean(entry.mandatoryOption) && unitHasOption(unit, entry.mandatoryOption);
+
+/**
+ * Checks if the entries of a group can't be changed because one of them is mandatory.
+ * Entries without group are mutually exclusive, so they are a group too.
+ *
+ * @param {object} unit
+ * @param {object[]} entries The unit equipment, melee or ranged entries
+ * @param {string} group
+ * @returns {boolean}
+ */
+export const isGroupLocked = (unit, entries, group) =>
+  Boolean(
+    entries?.some((entry) => entry.group === group && isMandatory(unit, entry)),
+  );
+
+/**
  * After the unit options change, deselects the entries whose "requiredOption" is no
  * longer active, so hidden equipment, mounts or magic items don't stay in the list.
- * Always active entries that become available again are reactivated.
+ * Always active entries that become available again are reactivated, and entries
+ * whose "mandatoryOption" is active are selected instead of the rest of their group.
  *
  * @param {object} unit The unit with its new options
  * @returns {object} The changed unit fields, to be passed to editUnit
@@ -456,6 +524,17 @@ export const getRequiredOptionCleanup = (unit) => {
           isAvailable(entry) && Boolean(entry.active || entry.alwaysActive),
       };
     });
+  const applyMandatory = (entries) => {
+    const mandatoryGroups = (entries || [])
+      .filter((entry) => isMandatory(unit, entry))
+      .map(({ group }) => group);
+
+    return entries?.map((entry) =>
+      mandatoryGroups.includes(entry.group)
+        ? { ...entry, active: isMandatory(unit, entry) }
+        : entry,
+    );
+  };
   let mounts = unit.mounts;
 
   if (mounts?.some((mount) => mount.active && !isAvailable(mount))) {
@@ -473,13 +552,43 @@ export const getRequiredOptionCleanup = (unit) => {
 
   return {
     options: updateActive(unit.options),
-    equipment: updateActive(unit.equipment),
-    melee: updateActive(unit.melee),
-    ranged: updateActive(unit.ranged),
+    equipment: applyMandatory(updateActive(unit.equipment)),
+    melee: applyMandatory(updateActive(unit.melee)),
+    ranged: applyMandatory(updateActive(unit.ranged)),
     armor: updateActive(unit.armor),
     mounts,
     items: unit.items?.map((item) =>
       isAvailable(item) ? item : { ...item, selected: [] },
+    ),
+    command: unit.command?.map((command) =>
+      !command.magic || isAvailable(command.magic)
+        ? command
+        : { ...command, magic: { ...command.magic, selected: [] } },
+    ),
+  };
+};
+
+// Clears the command and items entries of the models that are no longer in the unit
+// (`model` above the new `strength`), e.g. the second Dwarf Bolt Thrower's Crew Engineer and runes.
+export const getRemovedModelsCleanup = (unit, strength) => {
+  const isRemovedModel = ({ model }) => model > strength;
+
+  return {
+    command: unit.command?.map((command) =>
+      isRemovedModel(command)
+        ? {
+            ...command,
+            active: false,
+            options: command.options?.map((option) => ({
+              ...option,
+              active: false,
+            })),
+            magic: command.magic && { ...command.magic, selected: [] },
+          }
+        : command,
+    ),
+    items: unit.items?.map((item) =>
+      isRemovedModel(item) ? { ...item, selected: [] } : item,
     ),
   };
 };

@@ -26,6 +26,10 @@ export const rules = {
   // Warhammer Fantasy 6th edition
   // Slot limits are not set here: they scale with the army points (see `slotsByPoints`).
   // Use `minSlotsModifier`/`maxSlotsModifier` for armies with extra slots.
+  // To limit a unit by the number of other units in the army (e.g. one unit of
+  // Yeomen per unit of Mounted Knights of the Realm), use `requires` (ids of the other units),
+  // `requiresType` (their category, or "all"), `perUnit: true`, `min: 0` and
+  // `max` (units allowed per required unit).
   "bretonnia": {
     characters: { maxSlotsModifier: 1 },
     lords: {
@@ -234,6 +238,7 @@ export const rules = {
       ],
     },
   },
+  // Dwarfs 2005 army book
   "dwarfs": {
     core: {
       units: [
@@ -241,8 +246,27 @@ export const rules = {
           ids: ["miners"],
           max: 1,
         },
+      ],
+    },
+    special: {
+      units: [
         {
-          ids: ["rangers"],
+          ids: ["hammerers"],
+          max: 1,
+        },
+        {
+          ids: ["slayers"],
+          max: 1,
+        },
+      ],
+    },
+  },
+  // Dwarfs 2000 army book
+  "dwarfs-2000": {
+    core: {
+      units: [
+        {
+          ids: ["miners"],
           max: 1,
         },
       ],
@@ -719,7 +743,8 @@ export const getMaxSlots = ({
 // calling countExtraCategories(list, "heroes", "army-of-the-king") returns 1
 // (because Louen is in list.lords but also counts as a heroes slot).
 // The active mount's `extra_categories` are added too (e.g. a Zombie Dragon
-// takes an extra heroes slot for its rider).
+// takes an extra heroes slot for its rider), as well as those of active options
+// and their active sub-options (e.g. a Rune Lord's Anvil of Doom takes a heroes slot).
 export const countExtraCategories = (list, category, armyComposition) => {
   if (!list || !category) return 0;
   const allTypes = ["lords", "heroes", "characters", "core", "special", "rare", "mercenaries", "allies"];
@@ -741,6 +766,13 @@ export const countExtraCategories = (list, category, armyComposition) => {
       }
       const activeMount = (unit.mounts || []).find((mount) => mount.active);
       count += countCategory(activeMount?.extra_categories);
+      for (const option of unit.options || []) {
+        if (!option.active) continue;
+        count += countCategory(option.extra_categories);
+        for (const subOption of option.options || []) {
+          if (subOption.active) count += countCategory(subOption.extra_categories);
+        }
+      }
     }
   }
   return count;

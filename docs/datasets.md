@@ -32,6 +32,10 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
   "points": Number, // Points for each model
   "minimum": Number, // Minimum number of models of the unit
   "maximum": Number, // Maximum number of models of the unit
+  "modelName": { // Optional. Heading of each model's section for "command" and "items" entries with "model" (e.g. "Bolt Thrower 1"), "Model" by default
+    "name_en": String,
+    "name_es": String
+  },
   "maxSignatureSpells": Number, // Number of maximum signature spells
   "army": String, // Only in mercanaries category, army ID, optional
   "armyComposition": { // Army composition specific options, optional
@@ -53,9 +57,11 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "name_es": String,
       "points": Number,
       "alwaysActive": Boolean, // Always selected and cannot be deselected, optional
+      "model": Number, // Optional. Belongs to that model of the unit only: shown in the model's own section while the unit has that many models, and cleared when it gets smaller (e.g. a Crew Engineer for each Dwarf Bolt Thrower)
       "magic": {
         "types": [String], // Limit the available magic items (see "magic-items.json" types)
         "maxPoints": Number, // Maximum points for magic items
+        "requiredOption": String | [String], // Optional. Magic items are only available when one of these option ids is active, see "options" (e.g. the Dwarf Warriors' Standard Bearer with the Longbeards option)
         "notes": { // Optional
           "name_en": String,
           "name_es": String
@@ -72,6 +78,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "active": Boolean, // Wether it should be selected by default, optional
       "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
       "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+      "mandatoryOption": String | [String], // Optional. Ids of options or sub-options; while one of them is active, this entry is selected and the entries of its group can't be changed (e.g. Dwarf Warriors with Rangers must take great weapons)
       "notes": { // Optional
         "name_en": String,
         "name_es": String
@@ -87,6 +94,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
          "active": Boolean, // Wether it should be selected by default, optional
          "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
          "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+         "mandatoryOption": String | [String], // Optional. Ids of options or sub-options; while one of them is active, this entry is selected and the entries of its group can't be changed (e.g. Dwarf Warriors with Rangers must take great weapons)
          "notes": { // Optional
             "name_en": String,
             "name_es": String
@@ -102,6 +110,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
          "active": Boolean, // Wether it should be selected by default, optional
          "equippedDefault": Boolean, // Weather it should always show up, even if deselected (e.g. for Hand weapons), optional
          "armyComposition": [army composition IDs], // Only available for those army compositions, optional
+         "mandatoryOption": String | [String], // Optional. Ids of options or sub-options; while one of them is active, this entry is selected and the entries of its group can't be changed (e.g. Dwarf Warriors with Rangers must take great weapons)
          "notes": { // Optional
             "name_en": String,
             "name_es": String
@@ -134,9 +143,12 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "stackable": Boolean, // Allows multiple selections of this option
       "minimum": Number, // Minimum number of this option
       "maximum": Number, // Maximum number of this option
+      "maxByModels": Boolean, // Optional. For stackable options: the maximum is also limited by the number of models in the unit without command (e.g. Dwarf Giant Slayers)
       "armyComposition": [army composition IDs], // Optional
       "requiredMagicItem": String, // Name of a required magic item
-      "requiredOption": String | [String], // Optional. Ids of options or sub-options; the entry is only shown and counted when one of them is active. Also works on "equipment", "melee", "ranged", "armor", "mounts" and "items" entries (e.g. Vampire Counts bloodlines)
+      "onePerArmy": Boolean, // Optional. Only one unit in the army can have this option (or sub-option) selected (e.g. the Dwarf Anvil of Doom)
+      "extra_categories": [String], // Optional. Extra slots the unit takes while this option (or sub-option) is selected (e.g. ["heroes"] for the Dwarf Rune Lord's Anvil of Doom)
+      "requiredOption": String | [String], // Optional. Ids of options or sub-options; the entry is only shown and counted when one of them is active. Also works on "equipment", "melee", "ranged", "armor", "mounts", "items" and "command" "magic" entries (e.g. Vampire Counts bloodlines)
       "sameInArmy": Boolean, // Optional. For options with sub-options: every unit in the list with this option must choose the same sub-option (e.g. Vampire Counts bloodlines)
       "maxActive": Number, // Optional. For options with non-exclusive sub-options: maximum number of sub-options that can be selected at the same time (e.g. Saurus Oldblood Blessed Spawnings)
       "categoryByActiveCount": [String], // Optional. For options with sub-options: category the unit moves to depending on how many sub-options are active (index = number of active sub-options, the last entry is used for higher counts). E.g. ["core", "special", "rare"] for Lizardmen Saurus Warriors with Blessed Spawnings
@@ -182,6 +194,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "types": [String],
       "maxPoints": Number, // Optional
       "requiredOption": String | [String], // Optional. Only shown when one of these option ids is active, see "options"
+      "model": Number, // Optional. Belongs to that model of the unit only, like "model" in "command" (e.g. Engineering Runes for each Dwarf Bolt Thrower)
       "notes": { // Optional
         "name_en": String,
         "name_es": String

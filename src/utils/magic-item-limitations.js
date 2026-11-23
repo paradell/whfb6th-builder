@@ -121,6 +121,52 @@ export const comboExclusiveCategories = [
 ];
 
 /**
+ * Maximum number of runes of the same category (weapon, armour, talisman...) a single item can carry.
+ */
+export const MAX_RUNES_PER_CATEGORY = 3;
+
+/**
+ * Rune types restricted to some characters that still belong to a main rune category.
+ */
+const runeCategoryAliases = {
+  "lord-talismanic-runes": "talismanic-runes",
+  "runesmith-talismanic-runes": "talismanic-runes",
+};
+
+/**
+ * Returns the rune category of an item type, or null if the type is not a rune.
+ *
+ * @param {string} type
+ * @returns {string|null}
+ */
+export const getRuneCategory = (type) => {
+  const category = runeCategoryAliases[type] || type;
+
+  return comboExclusiveCategories.includes(category) ? category : null;
+};
+
+export const isRuneType = (type) => Boolean(getRuneCategory(type));
+
+/**
+ * Counts the selected runes (including stacked amounts) in the same rune category as the given type.
+ *
+ * @param {object[]} selectedItems
+ * @param {string} type
+ * @returns {number}
+ */
+export const countRunesInCategory = (selectedItems, type) => {
+  const category = getRuneCategory(type);
+
+  if (!category) {
+    return 0;
+  }
+
+  return selectedItems
+    .filter((item) => getRuneCategory(item.type) === category)
+    .reduce((count, { amount }) => count + Number(amount ?? 1), 0);
+};
+
+/**
  * Checks if an unit's combination of items, grouped by type or category, is shared by other units.
  * Dwarf rune combinations must be unique within an army.
  * We treat an item's rune loadout as synonymous with an item category, like Weapon, Armour, etc.
@@ -144,10 +190,13 @@ export const combosUsedElsewhere = (items, list, excludeId) => {
   ];
   let errors = [];
   let groupedByType = {};
+  const matchesType = (targetItem, itemType) =>
+    (getRuneCategory(targetItem.type) || targetItem.type) === itemType;
   for (let i in items) {
     let item = items[i];
-    groupedByType[item.type] = groupedByType[item.type] || [];
-    groupedByType[item.type].push(item);
+    let itemType = getRuneCategory(item.type) || item.type;
+    groupedByType[itemType] = groupedByType[itemType] || [];
+    groupedByType[itemType].push(item);
   }
   for (let itemType in groupedByType) {
     let categoryItems = groupedByType[itemType];
@@ -161,7 +210,7 @@ export const combosUsedElsewhere = (items, list, excludeId) => {
           for (let itemGroup in unit.items) {
             // get all items that match the current item's category
             let targetCategoryItems = unit.items[itemGroup].selected.filter(
-              (targetItem) => targetItem.type === itemType
+              (targetItem) => matchesType(targetItem, itemType)
             );
             if (targetCategoryItems.length > 0) {
               collectedItemCombos.push({
@@ -178,7 +227,7 @@ export const combosUsedElsewhere = (items, list, excludeId) => {
               let targetCategoryItems = unit.command[
                 commandGroup
               ].magic?.selected.filter(
-                (targetItem) => targetItem.type === itemType
+                (targetItem) => matchesType(targetItem, itemType)
               );
               if (targetCategoryItems.length > 0) {
                 collectedItemCombos.push({

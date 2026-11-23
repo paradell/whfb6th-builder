@@ -83,10 +83,13 @@
       "armyComposition": {
         "dwarfs": {
           "category": "lords"
+        },
+        "dwarfs-2000": {
+          "category": "lords"
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Royal Blood",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Sangre Real"
       },
       "mounts": []
@@ -145,6 +148,7 @@
           "name_en": "Anvil of Doom",
           "name_es": "Yunque Rúnico",
           "points": 175,
+          "onePerArmy": true,
           "extra_categories": [
             "heroes"
           ],
@@ -162,10 +166,13 @@
       "armyComposition": {
         "dwarfs": {
           "category": "lords"
+        },
+        "dwarfs-2000": {
+          "category": "lords"
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Rune Lore",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Señor de las Runas"
       },
       "mounts": []
@@ -206,10 +213,13 @@
       "armyComposition": {
         "dwarfs": {
           "category": "lords"
+        },
+        "dwarfs-2000": {
+          "category": "lords"
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner {Dwarfs}",
         "name_es": "Agravio Ancestral, Firmeza, Avance imparable, Inmune a Desmoralización, Matador, Solitario."
       },
       "mounts": []
@@ -308,6 +318,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
+        },
+        "dwarfs-2000": {
+          "category": "heroes"
         }
       },
       "specialRules": {
@@ -366,10 +379,13 @@
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
+        },
+        "dwarfs-2000": {
+          "category": "heroes"
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Rune Lore",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Señor de las Runas"
       },
       "mounts": [],
@@ -416,7 +432,7 @@
           "points": 5
         },
         {
-          "name_en": "Pair of Pistols",
+          "name_en": "Brace of pistols",
           "name_es": "Par de Pistolas",
           "points": 10
         },
@@ -459,10 +475,13 @@
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
+        },
+        "dwarfs-2000": {
+          "category": "heroes"
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Artillery Master, Extra Crewman",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Artillery Master, Extra Crewman {Dwarfs}",
         "name_es": "Agravio Ancestral, Firmeza, Avance Imparable, Maestro  Artillero, Artillero adicional"
       },
       "mounts": []
@@ -503,10 +522,13 @@
       "armyComposition": {
         "dwarfs": {
           "category": "heroes"
+        },
+        "dwarfs-2000": {
+          "category": "heroes"
         }
       },
       "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner",
+        "name_en": "Ancestral Grudge, Relentless, Resolute, Unbreakable, Slayer, Loner {Dwarfs}",
         "name_es": "Agravio Ancestral, Firmeza, Avance imparable, Inmune a Desmoralización, Matador, Solitario."
       },
       "mounts": []
@@ -514,13 +536,110 @@
   ],
   "core": [
     {
-      "name_en": "Warriors",
+      "name_en": "Warriors {Dwarfs}",
       "id": "warriors",
-      "points": 7,
+      "points": 8,
       "minimum": 10,
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "core"
+        },
+        "dwarfs-2000": {
+          "category": "core"
+        }
+      },
+      "command": [
+        {
+          "name_en": "Veteran",
+          "points": 10
+        },
+        {
+          "name_en": "Standard Bearer",
+          "points": 10,
+          "magic": {
+            "types": [
+              "banner-runes"
+            ],
+            "maxPoints": 50,
+            "requiredOption": "longbeards"
+          }
+        },
+        {
+          "name_en": "Musician",
+          "points": 5
+        }
+      ],
+      "equipment": [],
+      "melee": [
+        {
+          "name_en": "Hand weapon",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "alwaysActive": true
+        },
+        {
+          "name_en": "Great weapon",
+          "points": 2,
+          "perModel": true,
+          "mandatoryOption": "rangers"
+        }
+      ],
+      "ranged": [],
+      "armor": [
+        {
+          "name_en": "Heavy armour",
+          "points": 0,
+          "perModel": true,
+          "active": true,
+          "exclusive": true
+        }
+      ],
+      "options": [
+        {
+          "name_en": "Shield",
+          "points": 1,
+          "perModel": true
+        },
+        {
+          "name_en": "Longbeards",
+          "name_es": "Barbaslargas",
+          "id": "longbeards",
+          "points": 3,
+          "perModel": true,
+          "armyComposition": [
+            "dwarfs"
+          ]
+        },
+        {
+          "name_en": "Rangers",
+          "name_es": "Montaraces",
+          "id": "rangers",
+          "points": 1,
+          "perModel": true,
+          "onePerArmy": true,
+          "armyComposition": [
+            "dwarfs"
+          ]
+        }
+      ],
+      "mounts": [],
+      "specialRules": {
+        "name_en": "Ancestral Grudge, Relentless, Resolute"
+      }
+    },
+    {
+      "name_en": "Crossbowmen {Dwarfs}",
+      "id": "crossbowmen",
+      "points": 11,
+      "minimum": 10,
+      "maximum": 0,
+      "armyComposition": {
+        "dwarfs": {
+          "category": "core"
+        },
+        "dwarfs-2000": {
           "category": "core"
         }
       },
@@ -550,70 +669,8 @@
         {
           "name_en": "Great weapon",
           "points": 2,
-          "perModel": true
-        }
-      ],
-      "ranged": [],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "points": 0,
           "perModel": true,
-          "active": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Heavy armour",
-          "points": 1,
-          "perModel": true,
-          "exclusive": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "points": 1,
-          "perModel": true
-        }
-      ],
-      "mounts": [],
-      "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute"
-      }
-    },
-    {
-      "name_en": "Crossbowmen",
-      "id": "crossbowmen",
-      "points": 12,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": {
-        "dwarfs": {
-          "category": "core"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Veteran",
-          "points": 10
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 10
-        },
-        {
-          "name_en": "Musician",
-          "points": 5
-        }
-      ],
-      "equipment": [],
-      "melee": [
-        {
-          "name_en": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
+          "mandatoryOption": "rangers"
         }
       ],
       "ranged": [
@@ -639,6 +696,17 @@
           "name_en": "Shield",
           "points": 1,
           "perModel": true
+        },
+        {
+          "name_en": "Rangers",
+          "name_es": "Montaraces",
+          "id": "rangers",
+          "points": 1,
+          "perModel": true,
+          "onePerArmy": true,
+          "armyComposition": [
+            "dwarfs"
+          ]
         }
       ],
       "mounts": [],
@@ -655,6 +723,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "core"
+        },
+        "dwarfs-2000": {
+          "category": "core"
         }
       },
       "command": [
@@ -664,7 +735,7 @@
           "options": [
             {
               "name_en": "Brace of pistols",
-              "points": 2
+              "points": 0
             }
           ]
         },
@@ -720,26 +791,35 @@
     {
       "name_en": "Miners",
       "id": "miners",
-      "points": 12,
-      "minimum": 10,
-      "maximum": 20,
+      "points": 1,
+      "minimum": 5,
       "armyComposition": {
         "dwarfs": {
+          "category": "special"
+        },
+        "dwarfs-2000": {
           "category": "core"
         }
       },
       "command": [
         {
           "name_en": "Prospector",
-          "points": 12
+          "points": 10,
+          "options": [
+            {
+              "name_en": "Steam Drill",
+              "name_es": "Taladro de vapor",
+              "points": 25
+            }
+          ]
         },
         {
           "name_en": "Standard Bearer",
-          "points": 12
+          "points": 10
         },
         {
           "name_en": "Musician",
-          "points": 6
+          "points": 5
         }
       ],
       "equipment": [],
@@ -774,94 +854,20 @@
       "specialRules": {
         "name_en": "Ancestral Grudge, Relentless, Resolute, Underground Advance"
       }
-    },
-    {
-      "name_en": "Rangers",
-      "id": "rangers",
-      "points": 12,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": {
-        "dwarfs": {
-          "category": "core"
-        }
-      },
-      "command": [
-        {
-          "name_en": "Veteran",
-          "points": 12
-        },
-        {
-          "name_en": "Standard Bearer",
-          "points": 12
-        },
-        {
-          "name_en": "Musician",
-          "points": 6
-        }
-      ],
-      "equipment": [],
-      "melee": [
-        {
-          "name_en": "Hand weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        },
-        {
-          "name_en": "Great weapon",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "ranged": [
-        {
-          "name_en": "Crossbow",
-          "points": 5,
-          "perModel": true,
-          "exclusive": true
-        },
-        {
-          "name_en": "Throwing axes",
-          "points": 3,
-          "perModel": true,
-          "exclusive": true
-        }
-      ],
-      "armor": [
-        {
-          "name_en": "Light armour",
-          "points": 0,
-          "perModel": true,
-          "active": true,
-          "alwaysActive": true
-        }
-      ],
-      "options": [
-        {
-          "name_en": "Shield",
-          "points": 1,
-          "perModel": true
-        }
-      ],
-      "mounts": [],
-      "specialRules": {
-        "name_en": "Ancestral Grudge, Relentless, Resolute, Scouts"
-      }
     }
   ],
   "special": [
     {
       "name_en": "Hammerers",
       "id": "hammerers",
-      "points": 14,
-      "minimum": 10,
+      "points": 12,
+      "minimum": 5,
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "special"
+        },
+        "dwarfs-2000": {
           "category": "special"
         }
       },
@@ -926,12 +932,12 @@
     },
     {
       "name_en": "Longbeards",
-      "id": "longbeards",
+      "id": "longbeards-2000",
       "points": 14,
       "minimum": 10,
       "maximum": 0,
       "armyComposition": {
-        "dwarfs": {
+        "dwarfs-2000": {
           "category": "special"
         }
       },
@@ -1000,17 +1006,27 @@
       "name_en": "Ironbreakers",
       "id": "ironbreakers",
       "points": 13,
-      "minimum": 10,
+      "minimum": 5,
       "maximum": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "special"
+        },
+        "dwarfs-2000": {
           "category": "special"
         }
       },
       "command": [
         {
           "name_en": "Ironbeard",
-          "points": 12
+          "points": 12,
+          "options": [
+            {
+              "name_en": "Pair of Pistols",
+              "name_es": "Par de Pistolas",
+              "points": 5
+            }
+          ]
         },
         {
           "name_en": "Standard Bearer",
@@ -1065,10 +1081,13 @@
       "name_en": "Slayers",
       "id": "slayers",
       "points": 11,
-      "minimum": 10,
+      "minimum": 5,
       "maximum": 30,
       "armyComposition": {
         "dwarfs": {
+          "category": "special"
+        },
+        "dwarfs-2000": {
           "category": "special"
         }
       },
@@ -1101,6 +1120,7 @@
           "stackable": true,
           "minimum": 0,
           "maximum": 30,
+          "maxByModels": true,
           "notes": {
             "name_en": "replaces a Troll Slayer"
           }
@@ -1112,14 +1132,40 @@
       }
     },
     {
-      "name_en": "Cannon",
+      "name_en": "Cannon {Dwarfs}",
       "id": "cannon",
-      "points": 100,
+      "points": 90,
       "armyComposition": {
         "dwarfs": {
           "category": "special"
+        },
+        "dwarfs-2000": {
+          "category": "special"
         }
       },
+      "command": [
+        {
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        }
+      ],
       "equipment": [
         {
           "name_en": "Crew: hand weapons, light armour",
@@ -1134,7 +1180,7 @@
             "engineering-runes"
           ],
           "selected": [],
-          "maxPoints": 0
+          "max": 3
         }
       ],
       "specialRules": {
@@ -1142,16 +1188,69 @@
       }
     },
     {
-      "name_en": "Bolt Throwers",
+      "name_en": "Bolt Throwers {Dwarfs}",
       "id": "bolt-throwers",
       "points": 45,
       "minimum": 1,
       "maximum": 2,
+      "modelName": {
+        "name_en": "Bolt Thrower",
+        "name_es": "Lanzavirotes"
+      },
       "armyComposition": {
         "dwarfs": {
           "category": "special"
+        },
+        "dwarfs-2000": {
+          "category": "special"
         }
       },
+      "command": [
+        {
+          "model": 1,
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        },
+        {
+          "model": 2,
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        }
+      ],
       "equipment": [
         {
           "name_en": "Crew: hand weapons, light armour",
@@ -1161,12 +1260,22 @@
       ],
       "items": [
         {
+          "model": 1,
           "name_en": "Engineering Runes",
           "types": [
             "engineering-runes"
           ],
           "selected": [],
-          "maxPoints": 0
+          "max": 3
+        },
+        {
+          "model": 2,
+          "name_en": "Engineering Runes",
+          "types": [
+            "engineering-runes"
+          ],
+          "selected": [],
+          "max": 3
         }
       ],
       "specialRules": {
@@ -1174,14 +1283,40 @@
       }
     },
     {
-      "name_en": "Stone Thrower",
+      "name_en": "Stone Thrower {Dwarfs}",
       "id": "stone-thrower",
-      "points": 85,
+      "points": 80,
       "armyComposition": {
         "dwarfs": {
           "category": "special"
+        },
+        "dwarfs-2000": {
+          "category": "special"
         }
       },
+      "command": [
+        {
+          "name_en": "Crew Engineer",
+          "name_es": "Ingeniero de la dotación",
+          "points": 15,
+          "notes": {
+            "name_en": "Artillery Master",
+            "name_es": "Maestro Artillero"
+          },
+          "options": [
+            {
+              "name_en": "Dwarf Handgun",
+              "name_es": "Arcabuz Enano",
+              "points": 5
+            },
+            {
+              "name_en": "Brace of pistols",
+              "name_es": "Par de pistolas",
+              "points": 5
+            }
+          ]
+        }
+      ],
       "equipment": [
         {
           "name_en": "Crew: hand weapons, light armour",
@@ -1196,7 +1331,7 @@
             "engineering-runes"
           ],
           "selected": [],
-          "maxPoints": 0
+          "max": 3
         }
       ],
       "specialRules": {
@@ -1208,9 +1343,12 @@
     {
       "name_en": "Organ Gun",
       "id": "organ-gun",
-      "points": 125,
+      "points": 120,
       "armyComposition": {
         "dwarfs": {
+          "category": "rare"
+        },
+        "dwarfs-2000": {
           "category": "rare"
         }
       },
@@ -1219,16 +1357,6 @@
           "name_en": "Crew: hand weapons, light armour",
           "points": 0,
           "active": true
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Engineering Runes",
-          "types": [
-            "engineering-runes"
-          ],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "specialRules": {
@@ -1241,6 +1369,9 @@
       "points": 140,
       "armyComposition": {
         "dwarfs": {
+          "category": "rare"
+        },
+        "dwarfs-2000": {
           "category": "rare"
         }
       },
@@ -1262,6 +1393,9 @@
       "armyComposition": {
         "dwarfs": {
           "category": "rare"
+        },
+        "dwarfs-2000": {
+          "category": "rare"
         }
       },
       "equipment": [
@@ -1269,16 +1403,6 @@
           "name_en": "Crew: hand weapons, light armour",
           "points": 0,
           "active": true
-        }
-      ],
-      "items": [
-        {
-          "name_en": "Engineering Runes",
-          "types": [
-            "engineering-runes"
-          ],
-          "selected": [],
-          "maxPoints": 0
         }
       ],
       "specialRules": {
@@ -1291,6 +1415,9 @@
       "points": 0,
       "armyComposition": {
         "dwarfs": {
+          "category": "rare"
+        },
+        "dwarfs-2000": {
           "category": "rare"
         }
       }

@@ -2,7 +2,9 @@ import {
   isMultipleAllowedItem,
   maxAllowedOfItem,
   itemsUsedElsewhere,
-  combosUsedElsewhere
+  combosUsedElsewhere,
+  getRuneCategory,
+  countRunesInCategory,
 } from "./magic-item-limitations";
 import magicItems from "../../public/games/warhammer-fantasy-6th/magic-items.json";
 
@@ -169,6 +171,54 @@ describe("itemsUsedElsewhere", () => {
 
     expect(itemsUsedElsewhere(items, list, kingId)).toHaveLength(0);
   });
+
+  test("Non-master runes can be used by more than one character", () => {
+    const list = getList();
+    const items = [findItem("banner-runes", "Rune of Courage")];
+
+    list.heroes[0].items[0].selected.push(
+      findItem("banner-runes", "Rune of Courage")
+    );
+
+    expect(itemsUsedElsewhere(items, list, kingId)).toHaveLength(0);
+  });
+});
+
+describe("getRuneCategory", () => {
+  test("Character restricted talismanic runes belong to the talismanic category", () => {
+    expect(getRuneCategory("lord-talismanic-runes")).toBe("talismanic-runes");
+    expect(getRuneCategory("runesmith-talismanic-runes")).toBe("talismanic-runes");
+    expect(getRuneCategory("weapon-runes")).toBe("weapon-runes");
+  });
+
+  test("Non rune types have no rune category", () => {
+    expect(getRuneCategory("weapon")).toBeNull();
+    expect(getRuneCategory("arcane-item")).toBeNull();
+  });
+});
+
+describe("countRunesInCategory", () => {
+  test("Counts stacked runes of the same category only", () => {
+    const selected = [
+      { ...findItem("weapon-runes", "Rune of Striking"), amount: 2 },
+      findItem("weapon-runes", "Rune of Cleaving"),
+      findItem("armor-runes", "Rune of Iron"),
+    ];
+
+    expect(countRunesInCategory(selected, "weapon-runes")).toBe(3);
+    expect(countRunesInCategory(selected, "armor-runes")).toBe(1);
+    expect(countRunesInCategory(selected, "talismanic-runes")).toBe(0);
+  });
+
+  test("Lord talismanic runes count towards the talismanic runes", () => {
+    const selected = [
+      { ...findItem("talismanic-runes", "Rune of Luck"), amount: 2 },
+      findItem("talismanic-runes", "Master Rune of Kingship"),
+    ];
+
+    expect(countRunesInCategory(selected, "talismanic-runes")).toBe(3);
+    expect(countRunesInCategory(selected, "lord-talismanic-runes")).toBe(3);
+  });
 });
 
 describe("combosUsedElsewhere", () => {
@@ -254,5 +304,24 @@ describe("combosUsedElsewhere", () => {
     thaneRunes[0] = { ...thaneRunes[0], amount: 1 };
     thaneRunes[1] = { ...thaneRunes[1], amount: 2 };
     expect(combosUsedElsewhere(items, list, kingId)).toHaveLength(0);
+  });
+
+  test("Lord talismanic runes are part of the talismanic rune loadout", () => {
+    const list = getList();
+    const kingRunes = [
+      findItem("talismanic-runes", "Rune of Luck"),
+      findItem("talismanic-runes", "Master Rune of Kingship"),
+    ];
+    list.lords[0].items[0].selected = kingRunes;
+
+    list.heroes[0].items[0].selected = [
+      findItem("talismanic-runes", "Rune of Luck"),
+    ];
+    expect(combosUsedElsewhere(kingRunes, list, kingId)).toHaveLength(0);
+
+    list.heroes[0].items[0].selected.push(
+      findItem("talismanic-runes", "Master Rune of Kingship")
+    );
+    expect(combosUsedElsewhere(kingRunes, list, kingId)).toHaveLength(1);
   });
 });

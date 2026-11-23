@@ -1,6 +1,7 @@
 export const nameMap = {
   dwarfs: {
-    name_en: "Runic Items",
+    name_en: "Dwarfs",
+    name_es: "Enanos",
   },
   general: {
     name_en: "Common Magic Items",
@@ -208,6 +209,10 @@ export const nameMap = {
   "army-of-the-king": {
     name_en: "Army of the King",
     name_es: "El Ejército del Rey",
+  },
+  "dwarfs-2000": {
+    name_en: "Dwarfs (2000)",
+    name_es: "Enanos (2000)",
   },
   "empire":{
       name_en: "The Empire",

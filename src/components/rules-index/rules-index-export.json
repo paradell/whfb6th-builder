@@ -1192,6 +1192,8 @@
     "page": "DoC, p. 35"
   },
   "handgun": { "url": "weapons/handgun", "page": "RB, p. 217" },
+  "dwarf handgun": { "url": "weapons/dwarf-handgun" },
+  "gromril armour": { "url": "weapons/gromril-armour" },
   "piercing claws": {
     "url": "weapons/piercing-claws",
     "page": "DoC, p. 35"
@@ -3156,36 +3158,34 @@
     "troopType": "RI",
     "page": "DoC, p. 20"
   },
-  "bolt thrower dwarfs": {
+  "bolt throwers dwarfs": {
     "url": "unit/bolt-thrower",
     "stats": [
       {
-        "A": "-",
-        "I": "-",
         "M": "-",
-        "S": "-",
-        "T": "6",
-        "W": "3",
-        "BS": "-",
-        "Ld": "-",
         "WS": "-",
+        "BS": "-",
+        "S": "-",
+        "T": "7",
+        "W": "3",
+        "I": "-",
+        "A": "-",
+        "Ld": "-",
         "Name": "Bolt Thrower"
       },
       {
-        "A": "3",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
-        "W": "3",
-        "BS": "3",
+        "W": "1",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "3",
         "Name": "Dwarf Crew"
       }
-    ],
-    "troopType": "WM",
-    "page": "FoF, p. 30"
+    ]
   },
   "bonegrinder giant": {
     "url": "unit/bonegrinder-giant",
@@ -3619,35 +3619,33 @@
     "page": "VC, p. 6"
   },
   "cannon dwarfs": {
-    "url": "unit/cannon",
+    "url": "unit/cannon-dwarfs",
     "stats": [
       {
-        "A": "-",
-        "I": "-",
         "M": "-",
+        "WS": "-",
+        "BS": "-",
         "S": "-",
         "T": "7",
         "W": "3",
-        "BS": "-",
+        "I": "-",
+        "A": "-",
         "Ld": "-",
-        "WS": "-",
         "Name": "Cannon"
       },
       {
-        "A": "3",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
-        "W": "3",
-        "BS": "3",
+        "W": "1",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "3",
         "Name": "Dwarf Crew"
       }
-    ],
-    "troopType": "WM",
-    "page": "FoF, p. 31"
+    ]
   },
   "captain of the empire": {
     "url": "unit/captain-of-the-empire",
@@ -4958,20 +4956,18 @@
     "url": "unit/daemon-slayer",
     "stats": [
       {
-        "A": "4",
-        "I": "5",
         "M": "8",
+        "WS": "7",
+        "BS": "3",
         "S": "4",
         "T": "5",
         "W": "3",
-        "BS": "3",
+        "I": "5",
+        "A": "4",
         "Ld": "10",
-        "WS": "7",
         "Name": "Daemon Slayer"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 17"
+    ]
   },
   "daemonettes of slaanesh": {
     "url": "unit/daemonettes-of-slaanesh",
@@ -5767,20 +5763,18 @@
     "url": "unit/dragon-slayer",
     "stats": [
       {
-        "A": "3",
-        "I": "4",
         "M": "8",
-        "S": "4",
-        "T": "5",
-        "W": "2",
-        "BS": "3",
-        "Ld": "10",
         "WS": "6",
+        "BS": "3",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "I": "4",
+        "A": "3",
+        "Ld": "10",
         "Name": "Dragon Slayer"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 17"
+    ]
   },
   "dryads": {
     "url": "unit/dryads",
@@ -6325,20 +6319,18 @@
     "url": "unit/engineer",
     "stats": [
       {
-        "A": "2",
-        "I": "2",
         "M": "8",
-        "S": "4",
+        "WS": "4",
+        "BS": "4",
+        "S": "3",
         "T": "4",
         "W": "2",
-        "BS": "5",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "4",
         "Name": "Engineer"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 18"
+    ]
   },
   "engineer sapper": {
     "url": "unit/engineer-sapper",
@@ -6598,32 +6590,30 @@
     "url": "unit/flame-cannon",
     "stats": [
       {
-        "A": "-",
-        "I": "-",
         "M": "-",
-        "S": "-",
-        "T": "6",
-        "W": "3",
-        "BS": "-",
-        "Ld": "-",
         "WS": "-",
+        "BS": "-",
+        "S": "-",
+        "T": "7",
+        "W": "3",
+        "I": "-",
+        "A": "-",
+        "Ld": "-",
         "Name": "Flame Cannon"
       },
       {
-        "A": "3",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
-        "W": "3",
-        "BS": "3",
+        "W": "1",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "3",
         "Name": "Dwarf Crew"
       }
-    ],
-    "troopType": "WM",
-    "page": "FoF, p. 31"
+    ]
   },
   "flamers of tzeentch": {
     "url": "unit/flamers-of-tzeentch",
@@ -8222,51 +8212,59 @@
     "url": "unit/gyrocopter",
     "stats": [
       {
-        "A": "2",
-        "I": "2",
-        "M": "3",
-        "S": "4",
+        "M": "-",
+        "WS": "-",
+        "BS": "-",
+        "S": "-",
         "T": "5",
         "W": "3",
-        "BS": "3",
-        "Ld": "9",
-        "WS": "4",
+        "I": "-",
+        "A": "-",
+        "Ld": "-",
         "Name": "Gyrocopter"
+      },
+      {
+        "M": "-",
+        "WS": "4",
+        "BS": "-",
+        "S": "3",
+        "T": "-",
+        "W": "-",
+        "I": "2",
+        "A": "1",
+        "Ld": "9",
+        "Name": "Pilot"
       }
-    ],
-    "troopType": "MCa",
-    "page": "FoF, p. 28"
+    ]
   },
   "hammerers": {
-    "url": "unit/hammerers",
+    "url": "unit/hammerer",
     "stats": [
       {
-        "A": "1",
-        "I": "3",
         "M": "8",
+        "WS": "5",
+        "BS": "3",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "5",
         "Name": "Hammerer"
       },
       {
-        "A": "2",
-        "I": "3",
         "M": "8",
+        "WS": "5",
+        "BS": "3",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "2",
         "Ld": "9",
-        "WS": "5",
-        "Name": "Royal Champion"
+        "Name": "Gate Keeper"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 23"
+    ]
   },
   "handmaiden of the everqueen": {
     "url": "unit/handmaiden-of-the-everqueen",
@@ -9145,35 +9143,33 @@
     "page": "OK, p. 13"
   },
   "ironbreakers": {
-    "url": "unit/ironbreakers",
+    "url": "unit/ironbreaker",
     "stats": [
       {
-        "A": "1",
-        "I": "2",
         "M": "8",
+        "WS": "5",
+        "BS": "3",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "5",
         "Name": "Ironbreaker"
       },
       {
-        "A": "2",
-        "I": "2",
         "M": "8",
+        "WS": "5",
+        "BS": "3",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "2",
         "Ld": "9",
-        "WS": "5",
         "Name": "Ironbeard"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 24"
+    ]
   },
   "irondrakes": {
     "url": "unit/irondrakes",
@@ -9856,35 +9852,33 @@
   },
   "lion guard": { "url": "magic-item/lion-guard", "page": "HE, p. 15" },
   "longbeards": {
-    "url": "unit/longbeards",
+    "url": "unit/longbeard",
     "stats": [
       {
-        "A": "1",
-        "I": "2",
         "M": "8",
+        "WS": "5",
+        "BS": "3",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "5",
         "Name": "Longbeard"
       },
       {
-        "A": "2",
-        "I": "2",
         "M": "8",
+        "WS": "5",
+        "BS": "3",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "2",
         "Ld": "9",
-        "WS": "5",
-        "Name": "Elder"
+        "Name": "Greatbeard"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 20"
+    ]
   },
   "lord magistrate": {
     "url": "unit/lord-magistrate",
@@ -10504,35 +10498,33 @@
     "page": "AJ:AoGC, p. 26"
   },
   "miners": {
-    "url": "unit/miners",
+    "url": "unit/miner",
     "stats": [
       {
-        "A": "1",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "4",
         "Name": "Miner"
       },
       {
-        "A": "2",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "2",
         "Ld": "9",
-        "WS": "4",
         "Name": "Prospector"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 26"
+    ]
   },
   "minotaur herd": {
     "url": "unit/minotaur-herd",
@@ -11761,32 +11753,30 @@
     "url": "unit/organ-gun",
     "stats": [
       {
-        "A": "-",
-        "I": "-",
         "M": "-",
+        "WS": "-",
+        "BS": "-",
         "S": "-",
         "T": "7",
         "W": "3",
-        "BS": "-",
+        "I": "-",
+        "A": "-",
         "Ld": "-",
-        "WS": "-",
         "Name": "Organ Gun"
       },
       {
-        "A": "3",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
-        "W": "3",
-        "BS": "3",
+        "W": "1",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "3",
         "Name": "Dwarf Crew"
       }
-    ],
-    "troopType": "WM",
-    "page": "FoF, p. 31"
+    ]
   },
   "orion, the king in the woods": {
     "url": "unit/orion-the-king-in-the-woods",
@@ -12624,35 +12614,33 @@
     "page": "FoF, p. 96"
   },
   "rangers": {
-    "url": "unit/rangers",
+    "url": "unit/ranger",
     "stats": [
       {
-        "A": "1",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
         "W": "1",
-        "BS": "4",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "4",
         "Name": "Ranger"
       },
       {
-        "A": "2",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
         "W": "1",
-        "BS": "4",
+        "I": "2",
+        "A": "2",
         "Ld": "9",
-        "WS": "4",
-        "Name": "Ol' Deadeye"
+        "Name": "Veteran (Ranger)"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 22"
+    ]
   },
   "rat ogres": {
     "url": "unit/rat-ogres",
@@ -13021,43 +13009,143 @@
     "troopType": "MCr",
     "page": "FoF, p. 90"
   },
+  "dwarf lord": {
+    "url": "unit/dwarf-lord",
+    "stats": [
+      {
+        "M": "8",
+        "WS": "7",
+        "BS": "4",
+        "S": "4",
+        "T": "5",
+        "W": "3",
+        "I": "4",
+        "A": "4",
+        "Ld": "10",
+        "Name": "Dwarf Lord"
+      }
+    ]
+  },
+  "warriors dwarfs": {
+    "url": "unit/dwarf-warrior",
+    "stats": [
+      {
+        "M": "8",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "2",
+        "A": "1",
+        "Ld": "9",
+        "Name": "Dwarf Warrior"
+      },
+      {
+        "M": "8",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "2",
+        "A": "2",
+        "Ld": "9",
+        "Name": "Veteran"
+      }
+    ]
+  },
+  "crossbowmen dwarfs": {
+    "url": "unit/crossbowman-dwarfs",
+    "stats": [
+      {
+        "M": "8",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "2",
+        "A": "1",
+        "Ld": "9",
+        "Name": "Crossbowman"
+      },
+      {
+        "M": "8",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "2",
+        "A": "2",
+        "Ld": "9",
+        "Name": "Veteran"
+      }
+    ]
+  },
+  "stone thrower dwarfs": {
+    "url": "unit/stone-thrower",
+    "stats": [
+      {
+        "M": "-",
+        "WS": "-",
+        "BS": "-",
+        "S": "-",
+        "T": "7",
+        "W": "3",
+        "I": "-",
+        "A": "-",
+        "Ld": "-",
+        "Name": "Stone Thrower"
+      },
+      {
+        "M": "8",
+        "WS": "4",
+        "BS": "3",
+        "S": "3",
+        "T": "4",
+        "W": "1",
+        "I": "2",
+        "A": "1",
+        "Ld": "9",
+        "Name": "Dwarf Crew"
+      }
+    ]
+  },
   "runelord": {
     "url": "unit/runelord",
     "stats": [
       {
-        "A": "3",
-        "I": "3",
         "M": "8",
+        "WS": "6",
+        "BS": "4",
         "S": "4",
         "T": "5",
         "W": "3",
-        "BS": "4",
-        "Ld": "9",
-        "WS": "6",
+        "I": "3",
+        "A": "2",
+        "Ld": "10",
         "Name": "Runelord"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 16"
+    ]
   },
   "runesmith": {
     "url": "unit/runesmith",
     "stats": [
       {
-        "A": "2",
-        "I": "2",
         "M": "8",
+        "WS": "5",
+        "BS": "4",
         "S": "4",
         "T": "4",
         "W": "2",
-        "BS": "4",
+        "I": "2",
+        "A": "2",
         "Ld": "9",
-        "WS": "5",
         "Name": "Runesmith"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 16"
+    ]
   },
   "sabretusk pack": {
     "url": "unit/sabretusk-pack",
@@ -14492,35 +14580,33 @@
     "page": "OK, p. 4"
   },
   "slayers": {
-    "url": "unit/slayers",
+    "url": "unit/troll-slayer",
     "stats": [
       {
-        "A": "1",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "1",
         "Ld": "10",
-        "WS": "4",
         "Name": "Troll Slayer"
       },
       {
-        "A": "2",
-        "I": "3",
         "M": "8",
+        "WS": "5",
+        "BS": "3",
         "S": "4",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "3",
+        "A": "2",
         "Ld": "10",
-        "WS": "5",
         "Name": "Giant Slayer"
       }
-    ],
-    "troopType": "RI",
-    "page": "FoF, p. 27"
+    ]
   },
   "sneaky gits": { "url": "special-rules/sneaky-gits", "page": "RH, p. 33" },
   "snotling mob": {
@@ -15291,20 +15377,18 @@
     "url": "unit/thane",
     "stats": [
       {
-        "A": "3",
-        "I": "3",
         "M": "8",
-        "S": "4",
-        "T": "5",
-        "W": "2",
-        "BS": "4",
-        "Ld": "9",
         "WS": "6",
+        "BS": "4",
+        "S": "4",
+        "T": "4",
+        "W": "2",
+        "I": "3",
+        "A": "3",
+        "Ld": "9",
         "Name": "Thane"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 12"
+    ]
   },
   "the green knight": {
     "url": "unit/the-green-knight",
@@ -15352,35 +15436,33 @@
     "page": "AJ:DMH, p. 35"
   },
   "thunderers": {
-    "url": "unit/thunderers",
+    "url": "unit/thunderer",
     "stats": [
       {
-        "A": "1",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
         "W": "1",
-        "BS": "3",
+        "I": "2",
+        "A": "1",
         "Ld": "9",
-        "WS": "3",
         "Name": "Thunderer"
       },
       {
-        "A": "1",
-        "I": "2",
         "M": "8",
+        "WS": "4",
+        "BS": "3",
         "S": "3",
         "T": "4",
         "W": "1",
-        "BS": "4",
+        "I": "2",
+        "A": "2",
         "Ld": "9",
-        "WS": "3",
-        "Name": "Veteran"
+        "Name": "Veteran (Thunderer)"
       }
-    ],
-    "troopType": "HI",
-    "page": "FoF, p. 21"
+    ]
   },
   "thundertusk": {
     "url": "unit/thundertusk",

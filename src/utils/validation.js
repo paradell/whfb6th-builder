@@ -1,7 +1,7 @@
 import { rules, countExtraCategories, getMaxSlots } from "./rules";
 import { uniq } from "./collection";
 import { equalsOrIncludes } from "./string";
-import { getUnitName, getUnitLeadership } from "./unit";
+import { getUnitName, getUnitLeadership, getStackableMaximum } from "./unit";
 import { joinWithAnd, joinWithOr } from "./string";
 
 const getGenerals = (units) =>
@@ -174,6 +174,79 @@ export const validateList = ({ list, language, intl }) => {
         option,
         name: names.join(", "),
       });
+  });
+
+  // Options that only one unit in the army can take (e.g. Dwarf Anvil of Doom)
+  const onePerArmyOptions = {};
+  const addOnePerArmyOption = (option, unit) => {
+    onePerArmyOptions[option.name_en] = onePerArmyOptions[option.name_en] || {
+      option: option[`name_${language}`] || option.name_en,
+      units: [],
+    };
+    onePerArmyOptions[option.name_en].units.push(
+      getUnitName({ unit, language }),
+    );
+  };
+  [
+    "characters",
+    "lords",
+    "heroes",
+    "core",
+    "core_not_count",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ].forEach((category) => {
+    (list?.[category] || []).forEach((unit) => {
+      (unit.options || [])
+        .filter((option) => option.active)
+        .forEach((option) => {
+          option.onePerArmy && addOnePerArmyOption(option, unit);
+          (option.options || [])
+            .filter((subOption) => subOption.active && subOption.onePerArmy)
+            .forEach((subOption) => addOnePerArmyOption(subOption, unit));
+        });
+    });
+  });
+  Object.values(onePerArmyOptions).forEach(({ option, units }) => {
+    units.length > 1 &&
+      errors.push({
+        message: "misc.error.optionOnePerArmy",
+        section: "global",
+        option,
+        name: units.join(", "),
+      });
+  });
+
+  // Stackable options limited by the models of the unit (e.g. Dwarf Giant Slayers)
+  [
+    "characters",
+    "lords",
+    "heroes",
+    "core",
+    "core_not_count",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ].forEach((category) => {
+    (list?.[category] || []).forEach((unit) => {
+      (unit.options || [])
+        .filter((option) => option.stackable && option.maxByModels)
+        .forEach((option) => {
+          const max = getStackableMaximum(unit, option);
+
+          Number(option.stackableCount || 0) > max &&
+            errors.push({
+              message: "misc.error.tooManyStackable",
+              section: category,
+              option: option[`name_${language}`] || option.name_en,
+              name: getUnitName({ unit, language }),
+              max,
+            });
+        });
+    });
   });
 
   // Multiple BSBs

@@ -1368,6 +1368,7 @@
       "points": 25,
       "type": "weapon-runes",
       "stackable": true,
+      "maximum": 3,
       "name": "rune of fury"
     },
     {
@@ -1443,14 +1444,12 @@
       "name_en": "Rune of Shielding",
       "points": 30,
       "type": "armor-runes",
-      "onePerArmy": true,
       "name": "rune of shielding"
     },
     {
       "name_en": "Rune of Resistance",
       "points": 25,
       "type": "armor-runes",
-      "onePerArmy": true,
       "name": "rune of resistance"
     },
     {
@@ -1585,21 +1584,18 @@
       "name_en": "Rune of Courage",
       "points": 50,
       "type": "banner-runes",
-      "onePerArmy": true,
       "name": "rune of courage"
     },
     {
       "name_en": "Rune of Kadrin",
       "points": 50,
       "type": "banner-runes",
-      "onePerArmy": true,
       "name": "rune of kadrin"
     },
     {
       "name_en": "Rune of Battle",
       "points": 25,
       "type": "banner-runes",
-      "onePerArmy": true,
       "name": "rune of battle"
     },
     {
@@ -1649,28 +1645,24 @@
       "name_en": "Rune of Reloading",
       "points": 30,
       "type": "engineering-runes",
-      "onePerArmy": true,
       "name": "rune of reloading"
     },
     {
       "name_en": "Rune of Accuracy",
       "points": 25,
       "type": "engineering-runes",
-      "onePerArmy": true,
       "name": "rune of accuracy"
     },
     {
       "name_en": "Rune of Fortune",
       "points": 25,
       "type": "engineering-runes",
-      "onePerArmy": true,
       "name": "rune of fortune"
     },
     {
       "name_en": "Valiant Rune",
       "points": 25,
       "type": "engineering-runes",
-      "onePerArmy": true,
       "name": "valiant rune"
     },
     {

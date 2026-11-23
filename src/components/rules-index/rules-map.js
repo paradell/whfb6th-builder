@@ -78,6 +78,8 @@ export const synonyms = {
   "chracian great blades": "chracian great blade",
   "swords of hoeth": "sword of hoeth",
   "gromril great axes": "gromril great axe",
+  "rune lord": "runelord",
+  "rune smith": "runesmith",
   "bows of avelorn": "bow of avelorn",
   "ceremonial halberds": "ceremonial halberd",
   "wolf hammers": "wolf hammer",

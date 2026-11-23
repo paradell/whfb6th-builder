@@ -186,7 +186,11 @@ export const getUnitPoints = (unit, settings) => {
       if (option.active) {
         unitPoints += option.points;
       }
-      if (option.active && option.magic && option.magic?.selected?.length) {
+      if (
+        option.active &&
+        option.magic?.selected?.length &&
+        hasRequiredOption(unit, option.magic.requiredOption)
+      ) {
         option.magic.selected.forEach((selected) => {
           unitPoints += selected.amount
             ? selected.amount * selected.points
