@@ -27,7 +27,7 @@ export const rules = {
   // Slot limits are not set here: they scale with the army points (see `slotsByPoints`).
   // Use `minSlotsModifier`/`maxSlotsModifier` for armies with extra slots.
   // To limit a unit by the number of other units in the army (e.g. one unit of
-  // Longbeards per unit of Warriors), use `requires` (ids of the other units),
+  // Yeomen per unit of Mounted Knights of the Realm), use `requires` (ids of the other units),
   // `requiresType` (their category, or "all"), `perUnit: true`, `min: 0` and
   // `max` (units allowed per required unit).
   "bretonnia": {
@@ -244,15 +244,6 @@ export const rules = {
       units: [
         {
           ids: ["miners"],
-          max: 1,
-        },
-        {
-          ids: ["longbeards"],
-          // One unit of Longbeards per unit of Warriors
-          requires: ["warriors"],
-          requiresType: "core",
-          perUnit: true,
-          min: 0,
           max: 1,
         },
       ],

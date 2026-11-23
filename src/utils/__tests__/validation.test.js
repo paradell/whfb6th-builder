@@ -145,19 +145,18 @@ describe("validateList character slots", () => {
 describe("validateList units limited per required unit", () => {
   const units = (id, count) =>
     Array.from({ length: count }, (_, i) => ({ id: `${id}.${i}`, name_en: id }));
-  const getRequiresUnitsErrors = (warriorsCount, longbeardsCount, armyComposition = 'dwarfs') =>
+  const getRequiresUnitsErrors = (knightsCount, yeomenCount) =>
     validateList({
       list: {
-        game: 'warhammer-fantasy-6th',
-        army: 'dwarfs',
-        armyComposition,
+        game: 'warhammer-fantasy-mdn',
+        army: 'bretonnia-mdn',
+        armyComposition: 'bretonnia-mdn',
         points: 2000,
         characters: [],
         lords: [],
         heroes: [],
-        ...(armyComposition === 'dwarfs-2000'
-          ? { core: units('warriors', warriorsCount), special: units('longbeards-2000', longbeardsCount) }
-          : { core: [...units('warriors', warriorsCount), ...units('longbeards', longbeardsCount)], special: [] }),
+        core: [...units('mounted-knights-of-the-realm', knightsCount), ...units('yeomen', yeomenCount)],
+        special: [],
         rare: [],
         mercenaries: [],
         allies: [],
@@ -166,27 +165,23 @@ describe("validateList units limited per required unit", () => {
       intl: { formatMessage: (o) => o.id },
     }).filter((e) => e.message === 'misc.error.requiresUnits');
 
-  test("as many Longbeards as Warriors give no error", () => {
+  test("as many Yeomen as Knights give no error", () => {
     expect(getRequiresUnitsErrors(1, 1)).toEqual([]);
   });
 
-  test("Warriors without Longbeards give no error", () => {
+  test("Knights without Yeomen give no error", () => {
     expect(getRequiresUnitsErrors(2, 0)).toEqual([]);
   });
 
-  test("more Longbeards than Warriors give an error", () => {
+  test("more Yeomen than Knights give an error", () => {
     expect(getRequiresUnitsErrors(1, 2)).toEqual([
-      { message: 'misc.error.requiresUnits', section: 'core', name: 'warriors', diff: 1 },
+      { message: 'misc.error.requiresUnits', section: 'core', name: 'mounted-knights-of-the-realm', diff: 1 },
     ]);
   });
 
-  test("Longbeards without Warriors give an error", () => {
+  test("Yeomen without Knights give an error", () => {
     expect(getRequiresUnitsErrors(0, 1)).toEqual([
-      { message: 'misc.error.requiresUnits', section: 'core', name: 'warriors', diff: 1 },
+      { message: 'misc.error.requiresUnits', section: 'core', name: 'mounted-knights-of-the-realm', diff: 1 },
     ]);
-  });
-
-  test("Special Longbeards of the 2000 book are not limited by Warriors", () => {
-    expect(getRequiresUnitsErrors(0, 2, 'dwarfs-2000')).toEqual([]);
   });
 });
