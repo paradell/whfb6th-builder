@@ -37,7 +37,7 @@
       "name_en": "Black Orc Warboss",
       "id": "black-orc-warboss",
       "points": 135,
-      "armyComposition": { "orcs-and-goblins": { "category": "lords" } },
+      "armyComposition": { "orcs-and-goblins": { "category": "lords", "extra_categories": ["heroes"] } },
       "command": [
         { "name_en": "General", "name_es": "General", "points": 0 }
       ],
@@ -114,7 +114,8 @@
       "mounts": [
         { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
         { "name_en": "Boar", "id": "boar", "points": 24, "exclusive": true },
-        { "name_en": "Orc Boar Chariot", "id": "orc-boar-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Orc Boar Chariot must be bought as a Special choice; the character replaces one of its crew" } }
+        { "name_en": "Orc Boar Chariot", "id": "orc-boar-chariot", "points": 0, "exclusive": true, "notes": { "name_en": "The Orc Boar Chariot must be bought as a Special choice; the character replaces one of its crew" } },
+        { "name_en": "Wyvern", "id": "wyvern", "points": 230, "exclusive": true }
       ],
       "items": [
         { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Orcs only: Drog's Dead 'Ard Armour, Warboss Imbad's Iron Gnashas, 'Edbuttin' 'At" } }
@@ -141,7 +142,8 @@
       ],
       "mounts": [
         { "name_en": "On foot", "id": "on-foot", "points": 0, "active": true, "exclusive": true },
-        { "name_en": "Boar", "id": "boar", "points": 24, "exclusive": true }
+        { "name_en": "Boar", "id": "boar", "points": 24, "exclusive": true },
+        { "name_en": "Wyvern", "id": "wyvern", "points": 230, "exclusive": true }
       ],
       "items": [
         { "name_en": "Magic Items", "types": ["weapon", "talisman", "arcane-item", "enchanted-item"], "selected": [], "maxPoints": 100, "notes": { "name_en": "Orcs only: Drog's Dead 'Ard Armour, Warboss Imbad's Iron Gnashas, 'Edbuttin' 'At. Savage Orcs only: Magical Warpaint, Effigy of Mork" } }
@@ -163,7 +165,9 @@
         { "name_en": "Great Weapon", "id": "gob-warboss-great-weapon", "points": 6, "exclusive": true },
         { "name_en": "Spear", "id": "gob-warboss-spear", "points": 3, "exclusive": true, "notes": { "name_en": "if mounted" } }
       ],
-      "ranged": [],
+      "ranged": [
+        { "name_en": "Short Bow", "points": 6 }
+      ],
       "armor": [
         { "name_en": "Light Armour", "points": 3 }
       ],
@@ -193,7 +197,9 @@
         { "name_en": "Additional Hand Weapon", "id": "ng-warboss-additional-hand-weapon", "points": 6, "exclusive": true },
         { "name_en": "Great Weapon", "id": "ng-warboss-great-weapon", "points": 6, "exclusive": true }
       ],
-      "ranged": [],
+      "ranged": [
+        { "name_en": "Short Bow", "points": 6 }
+      ],
       "armor": [
         { "name_en": "Light Armour", "points": 3 }
       ],
