@@ -300,7 +300,7 @@
       "name_en": "Black Orc Big Boss",
       "id": "black-orc-big-boss",
       "points": 80,
-      "armyComposition": { "orcs-and-goblins": { "category": "heroes" } },
+      "armyComposition": { "orcs-and-goblins": { "category": "heroes", "extra_categories": ["heroes"] } },
       "command": [
         { "name_en": "General", "name_es": "General", "points": 0 },
         { "name_en": "Battle Standard Bearer", "name_es": "Portaestandarte de Batalla", "points": 0, "magic": { "types": ["banner"], "maxPoints": 50 } }
