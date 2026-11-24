@@ -1,4 +1,4 @@
-import { countCoreUnits, countExtraCategories, getMinSlots, getMaxSlots } from "../rules";
+import { countCoreUnits, countExtraCategories, countFreeSlots, getMinSlots, getMaxSlots } from "../rules";
 
 describe("countExtraCategories", () => {
   const zombieDragon = (active) => ({ id: "zombie-dragon", active, extra_categories: ["heroes"] });
@@ -48,6 +48,52 @@ describe("countExtraCategories", () => {
 
     expect(countExtraCategories({ lords: [runeLord(true, subOptions)] }, "special", "dwarfs")).toBe(1);
     expect(countExtraCategories({ lords: [runeLord(false, subOptions)] }, "special", "dwarfs")).toBe(0);
+  });
+});
+
+describe("countFreeSlots", () => {
+  const unit = (id) => ({ id: `${id}.abc123` });
+
+  test("one Goblin Big Boss is free when all characters are goblins", () => {
+    const list = {
+      lords: [unit("goblin-warboss")],
+      heroes: [unit("goblin-big-boss"), unit("night-goblin-shaman")],
+    };
+
+    expect(countFreeSlots(list, "heroes", "orcs-and-goblins")).toBe(1);
+    expect(countFreeSlots(list, "lords", "orcs-and-goblins")).toBe(0);
+  });
+
+  test("only one Big Boss is free", () => {
+    const list = {
+      lords: [unit("night-goblin-warboss")],
+      heroes: [unit("goblin-big-boss"), unit("night-goblin-big-boss")],
+    };
+
+    expect(countFreeSlots(list, "heroes", "orcs-and-goblins")).toBe(1);
+  });
+
+  test("no Big Boss is free when an orc character is in the army", () => {
+    expect(
+      countFreeSlots(
+        { lords: [unit("orc-warboss")], heroes: [unit("goblin-big-boss")] },
+        "heroes",
+        "orcs-and-goblins",
+      ),
+    ).toBe(0);
+    expect(
+      countFreeSlots(
+        { lords: [unit("goblin-warboss")], heroes: [unit("goblin-big-boss"), unit("orc-big-boss")] },
+        "heroes",
+        "orcs-and-goblins",
+      ),
+    ).toBe(0);
+  });
+
+  test("compositions without free slots return 0", () => {
+    expect(
+      countFreeSlots({ heroes: [unit("goblin-big-boss")] }, "heroes", "vampire-counts"),
+    ).toBe(0);
   });
 });
 

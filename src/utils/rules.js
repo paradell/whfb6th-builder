@@ -30,6 +30,8 @@ export const rules = {
   // Yeomen per unit of Mounted Knights of the Realm), use `requires` (ids of the other units),
   // `requiresType` (their category, or "all"), `perUnit: true`, `min: 0` and
   // `max` (units allowed per required unit).
+  // Units that don't use a slot go in `freeSlots` (`ids`, optional `max`, and
+  // `allCharactersIn`: ids that every lord and hero must have for the rule to apply).
   "bretonnia": {
     characters: { maxSlotsModifier: 1 },
     lords: {
@@ -347,7 +349,28 @@ export const rules = {
     },
   },
   "ogre-kingdoms": {},
-  "orcs-and-goblins": {},
+  "orcs-and-goblins": {
+    heroes: {
+      // If all characters are goblins, one Goblin or Night Goblin Big Boss
+      // doesn't use a hero/character slot
+      freeSlots: [
+        {
+          ids: ["goblin-big-boss", "night-goblin-big-boss"],
+          max: 1,
+          allCharactersIn: [
+            "goblin-warboss",
+            "night-goblin-warboss",
+            "goblin-great-shaman",
+            "night-goblin-great-shaman",
+            "goblin-big-boss",
+            "night-goblin-big-boss",
+            "goblin-shaman",
+            "night-goblin-shaman",
+          ],
+        },
+      ],
+    },
+  },
   "skaven": {},
   "tomb-kings": {},
   "vampire-counts": {
@@ -774,6 +797,34 @@ export const countExtraCategories = (list, category, armyComposition) => {
         }
       }
     }
+  }
+  return count;
+};
+
+// Counts the units of `category` that don't use a slot thanks to the
+// composition's `freeSlots` rules (e.g. an Orcs & Goblins Goblin Big Boss
+// when all characters are goblins).
+export const countFreeSlots = (list, category, armyComposition) => {
+  const freeSlots = rules[armyComposition]?.[category]?.freeSlots;
+  if (!list || !Array.isArray(freeSlots)) return 0;
+  const baseId = (unit) => unit.id.split(".")[0];
+  const characters = [
+    ...(list.lords || []),
+    ...(list.heroes || []),
+    ...(list.characters || []),
+  ];
+  let count = 0;
+  for (const rule of freeSlots) {
+    if (
+      rule.allCharactersIn &&
+      !characters.every((unit) => rule.allCharactersIn.includes(baseId(unit)))
+    ) {
+      continue;
+    }
+    const matching = (list[category] || []).filter((unit) =>
+      rule.ids.includes(baseId(unit)),
+    ).length;
+    count += Math.min(rule.max ?? Infinity, matching);
   }
   return count;
 };

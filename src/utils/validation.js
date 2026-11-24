@@ -1,4 +1,9 @@
-import { rules, countExtraCategories, getMaxSlots } from "./rules";
+import {
+  rules,
+  countExtraCategories,
+  countFreeSlots,
+  getMaxSlots,
+} from "./rules";
 import { uniq } from "./collection";
 import { equalsOrIncludes } from "./string";
 import { getUnitName, getUnitLeadership, getStackableMaximum } from "./unit";
@@ -88,7 +93,8 @@ export const validateList = ({ list, language, intl }) => {
   const lordsSlots = list.lords?.length || 0;
   const heroesSlots =
     (list.heroes?.length || 0) +
-    countExtraCategories(list, "heroes", list.armyComposition);
+    countExtraCategories(list, "heroes", list.armyComposition) -
+    countFreeSlots(list, "heroes", list.armyComposition);
   const totalCharacterSlots = lordsSlots + heroesSlots;
 
   const totalMaxCharacterSlots =

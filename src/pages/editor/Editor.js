@@ -5,7 +5,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import classNames from "classnames";
 import { Helmet } from "react-helmet-async";
 
-import {getMaxPercentData, getMaxSlots, getMinSlots, countExtraCategories} from "../../utils/rules";
+import {getMaxPercentData, getMaxSlots, getMinSlots, countExtraCategories, countFreeSlots} from "../../utils/rules";
 import { Button } from "../../components/button";
 import { Icon } from "../../components/icon";
 import { OrderableList } from "../../components/list";
@@ -123,7 +123,7 @@ export const Editor = ({ isMobile }) => {
     getMaxSlots({
       type: "lords",
       armyPoints: list.points,
-      slots: list.lords.length + countExtraCategories(list, "lords", armyComposition),
+      slots: list.lords.length + countExtraCategories(list, "lords", armyComposition) - countFreeSlots(list, "lords", armyComposition),
       armyComposition,
       game: list.game,
     });
@@ -132,7 +132,7 @@ export const Editor = ({ isMobile }) => {
     getMaxSlots({
       type: "heroes",
       armyPoints: list.points,
-      slots: list.heroes.length + countExtraCategories(list, "heroes", armyComposition),
+      slots: list.heroes.length + countExtraCategories(list, "heroes", armyComposition) - countFreeSlots(list, "heroes", armyComposition),
       armyComposition,
       game: list.game,
     });
