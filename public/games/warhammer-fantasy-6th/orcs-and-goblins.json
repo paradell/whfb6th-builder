@@ -533,7 +533,7 @@
       "armyComposition": { "orcs-and-goblins": { "category": "core" } },
       "command": [
         { "name_en": "Boss", "points": 13 },
-        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50, "requiredOption": "big-uns" } },
         { "name_en": "Musician", "points": 5 }
       ],
       "equipment": [
@@ -547,38 +547,11 @@
       "ranged": [],
       "armor": [],
       "options": [
-        { "name_en": "Shields", "points": 1, "perModel": true }
+        { "name_en": "Shields", "points": 1, "perModel": true },
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
       ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Choppa, Ignore Goblin Panic" }
-    },
-    {
-      "name_en": "Orc Big 'Uns",
-      "id": "orc-big-uns",
-      "points": 7,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": { "orcs-and-goblins": { "category": "core", "notes": { "name_en": "One unit per unit of Orc Boyz" } } },
-      "command": [
-        { "name_en": "Boss", "points": 13 },
-        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50 } },
-        { "name_en": "Musician", "points": 5 }
-      ],
-      "equipment": [
-        { "name_en": "Choppas, Light Armour", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
-      ],
-      "melee": [
-        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Additional Hand Weapons", "id": "big-uns-additional-hand-weapons", "points": 2, "exclusive": true, "perModel": true },
-        { "name_en": "Spears", "id": "big-uns-spears", "points": 2, "exclusive": true, "perModel": true }
-      ],
-      "ranged": [],
-      "armor": [],
-      "options": [
-        { "name_en": "Shields", "points": 1, "perModel": true }
-      ],
-      "mounts": [],
-      "specialRules": { "name_en": "Animosity, Big 'Uns, Choppa, Ignore Goblin Panic" }
     },
     {
       "name_en": "Orc Arrer Boyz",
@@ -630,41 +603,11 @@
       "armor": [],
       "options": [
         { "name_en": "Shields", "points": 1, "perModel": true },
-        { "name_en": "Warpaint", "points": 1, "perModel": true }
+        { "name_en": "Warpaint", "points": 1, "perModel": true },
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
       ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Choppa, Frenzy, Ignore Goblin Panic, Warpaint" }
-    },
-    {
-      "name_en": "Savage Orc Big 'Uns",
-      "id": "savage-orc-big-uns",
-      "points": 8,
-      "minimum": 10,
-      "maximum": 0,
-      "armyComposition": { "orcs-and-goblins": { "category": "core", "notes": { "name_en": "One unit per unit of Savage Orc Boyz" } } },
-      "command": [
-        { "name_en": "Boss", "points": 13 },
-        { "name_en": "Standard Bearer", "points": 10 },
-        { "name_en": "Musician", "points": 5 }
-      ],
-      "equipment": [
-        { "name_en": "Choppas", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
-      ],
-      "melee": [
-        { "name_en": "Hand Weapons", "points": 0, "perModel": true, "active": true, "alwaysActive": true },
-        { "name_en": "Additional Hand Weapons", "id": "savage-big-uns-additional-hand-weapons", "points": 2, "exclusive": true, "perModel": true },
-        { "name_en": "Spears", "id": "savage-big-uns-spears", "points": 1, "exclusive": true, "perModel": true }
-      ],
-      "ranged": [
-        { "name_en": "Bows", "points": 3, "perModel": true }
-      ],
-      "armor": [],
-      "options": [
-        { "name_en": "Shields", "points": 1, "perModel": true },
-        { "name_en": "Warpaint", "points": 1, "perModel": true }
-      ],
-      "mounts": [],
-      "specialRules": { "name_en": "Animosity, Big 'Uns, Choppa, Frenzy, Ignore Goblin Panic, Warpaint" }
     },
     {
       "name_en": "Goblins",
@@ -815,31 +758,11 @@
       "melee": [],
       "ranged": [],
       "armor": [],
-      "options": [],
+      "options": [
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
+      ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Ignore Goblin Panic, Tuskar Charge" }
-    },
-    {
-      "name_en": "Orc Boar Boy Big 'Uns",
-      "id": "orc-boar-boy-big-uns",
-      "points": 22,
-      "minimum": 5,
-      "maximum": 0,
-      "armyComposition": { "orcs-and-goblins": { "category": "special", "notes": { "name_en": "One unit per unit of Orc Boar Boyz" } } },
-      "command": [
-        { "name_en": "Boss", "points": 17 },
-        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 50 } },
-        { "name_en": "Musician", "points": 7 }
-      ],
-      "equipment": [
-        { "name_en": "Hand Weapons, Spears, Light Armour, Shields", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
-      ],
-      "melee": [],
-      "ranged": [],
-      "armor": [],
-      "options": [],
-      "mounts": [],
-      "specialRules": { "name_en": "Animosity, Big 'Uns, Ignore Goblin Panic, Tuskar Charge" }
     },
     {
       "name_en": "Savage Orc Boar Boyz",
@@ -862,36 +785,11 @@
       "ranged": [],
       "armor": [],
       "options": [
-        { "name_en": "Warpaint", "points": 3, "perModel": true }
+        { "name_en": "Warpaint", "points": 3, "perModel": true },
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
       ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Frenzy, Ignore Goblin Panic, Tuskar Charge, Warpaint" }
-    },
-    {
-      "name_en": "Savage Orc Boar Boy Big 'Uns",
-      "id": "savage-orc-boar-boy-big-uns",
-      "points": 21,
-      "minimum": 5,
-      "maximum": 0,
-      "armyComposition": { "orcs-and-goblins": { "category": "special", "notes": { "name_en": "One unit per unit of Savage Orc Boar Boyz" } } },
-      "command": [
-        { "name_en": "Boss", "points": 17 },
-        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 50 } },
-        { "name_en": "Musician", "points": 7 }
-      ],
-      "equipment": [
-        { "name_en": "Hand Weapons, Shields", "points": 0, "perModel": true, "active": true, "alwaysActive": true }
-      ],
-      "melee": [
-        { "name_en": "Spears", "points": 1, "perModel": true }
-      ],
-      "ranged": [],
-      "armor": [],
-      "options": [
-        { "name_en": "Warpaint", "points": 3, "perModel": true }
-      ],
-      "mounts": [],
-      "specialRules": { "name_en": "Animosity, Big 'Uns, Frenzy, Ignore Goblin Panic, Tuskar Charge, Warpaint" }
     },
     {
       "name_en": "Night Goblin Squig Herd",
