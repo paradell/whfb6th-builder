@@ -586,7 +586,7 @@
       "armyComposition": { "orcs-and-goblins": { "category": "core" } },
       "command": [
         { "name_en": "Boss", "points": 13 },
-        { "name_en": "Standard Bearer", "points": 10 },
+        { "name_en": "Standard Bearer", "points": 10, "magic": { "types": ["banner"], "maxPoints": 50, "requiredOption": "big-uns" } },
         { "name_en": "Musician", "points": 5 }
       ],
       "equipment": [
@@ -749,7 +749,7 @@
       "armyComposition": { "orcs-and-goblins": { "category": "special" } },
       "command": [
         { "name_en": "Boss", "points": 17 },
-        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 50, "requiredOption": "big-uns" } },
         { "name_en": "Musician", "points": 7 }
       ],
       "equipment": [
@@ -773,7 +773,7 @@
       "armyComposition": { "orcs-and-goblins": { "category": "special" } },
       "command": [
         { "name_en": "Boss", "points": 17 },
-        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 50 } },
+        { "name_en": "Standard Bearer", "points": 14, "magic": { "types": ["banner"], "maxPoints": 50, "requiredOption": "big-uns" } },
         { "name_en": "Musician", "points": 7 }
       ],
       "equipment": [
