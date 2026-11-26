@@ -370,6 +370,18 @@ export const rules = {
         },
       ],
     },
+    special: {
+      units: [
+        {
+          ids: ["black-orcs"],
+          max: 1,
+        },
+        {
+          ids: ["night-goblin-squig-herd"],
+          max: 1,
+        },
+      ],
+    },
   },
   "skaven": {},
   "tomb-kings": {},
