@@ -147,6 +147,7 @@ Datasets can be downloaded on the [Custom datasets](https://whfb6th-builder.verc
       "armyComposition": [army composition IDs], // Optional
       "requiredMagicItem": String, // Name of a required magic item
       "onePerArmy": Boolean, // Optional. Only one unit in the army can have this option (or sub-option) selected (e.g. the Dwarf Anvil of Doom)
+      "limitedByUnitsWithout": Boolean, // Optional. In the whole army, the models of this unit type with this option selected cannot be more than the models of the same unit type without it (e.g. Orcs & Goblins Big 'Uns)
       "extra_categories": [String], // Optional. Extra slots the unit takes while this option (or sub-option) is selected (e.g. ["heroes"] for the Dwarf Rune Lord's Anvil of Doom)
       "requiredOption": String | [String], // Optional. Ids of options or sub-options; the entry is only shown and counted when one of them is active. Also works on "equipment", "melee", "ranged", "armor", "mounts", "items" and "command" "magic" entries (e.g. Vampire Counts bloodlines)
       "sameInArmy": Boolean, // Optional. For options with sub-options: every unit in the list with this option must choose the same sub-option (e.g. Vampire Counts bloodlines)

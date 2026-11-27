@@ -72,6 +72,7 @@
   "misc.error.multipleBSBs": "Només es permet un Portaestendard de batalla",
   "misc.error.sameOptionInArmy": "Totes les unitats han de triar la mateixa opció de {option} ({name})",
   "misc.error.optionOnePerArmy": "{option} només es pot triar una vegada per exèrcit ({name})",
+  "misc.error.tooManyModelsWithOption": "{name} amb {option} ({count} miniatures) no pot tenir més miniatures que {name} sense aquesta opció ({max})",
   "misc.error.tooManyStackable": "{name} pot tenir com a màxim {max} {option}",
   "misc.error.tooManyCharacterSlots": "Massa slots de personatge (Comandants + Herois superen el màxim)",
   "misc.error.maxUnits": "{diff} unitats {name} de més",

@@ -552,7 +552,7 @@
       ],
       "options": [
         { "name_en": "Shields", "points": 1, "perModel": true },
-        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true, "limitedByUnitsWithout": true }
       ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Choppa, Ignore Goblin Panic" }
@@ -609,7 +609,7 @@
       "options": [
         { "name_en": "Shields", "points": 1, "perModel": true },
         { "name_en": "Warpaint", "points": 1, "perModel": true },
-        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true, "limitedByUnitsWithout": true }
       ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Choppa, Frenzy, Ignore Goblin Panic, Warpaint" }
@@ -764,7 +764,7 @@
       "ranged": [],
       "armor": [],
       "options": [
-        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true, "limitedByUnitsWithout": true }
       ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Ignore Goblin Panic, Tuskar Charge" }
@@ -791,7 +791,7 @@
       "armor": [],
       "options": [
         { "name_en": "Warpaint", "points": 3, "perModel": true },
-        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true }
+        { "name_en": "Big 'Uns", "id": "big-uns", "points": 2, "perModel": true, "onePerArmy": true, "limitedByUnitsWithout": true }
       ],
       "mounts": [],
       "specialRules": { "name_en": "Animosity, Frenzy, Ignore Goblin Panic, Tuskar Charge, Warpaint" }

@@ -225,6 +225,56 @@ export const validateList = ({ list, language, intl }) => {
       });
   });
 
+  // Options whose models can't outnumber the models of the same unit type
+  // without them (e.g. Orcs & Goblins Big 'Uns)
+  const limitedByUnitsWithoutOptions = {};
+  [
+    "characters",
+    "lords",
+    "heroes",
+    "core",
+    "core_not_count",
+    "special",
+    "rare",
+    "mercenaries",
+    "allies",
+  ].forEach((category) => {
+    (list?.[category] || []).forEach((unit) => {
+      (unit.options || [])
+        .filter((option) => option.limitedByUnitsWithout)
+        .forEach((option) => {
+          const key = `${unit.id.split(".")[0]}|${option.name_en}`;
+          const models = Number(unit.strength) || 0;
+
+          limitedByUnitsWithoutOptions[key] = limitedByUnitsWithoutOptions[
+            key
+          ] || {
+            option: option[`name_${language}`] || option.name_en,
+            // Unit type name, not the custom name of the unit
+            name: getUnitName({ unit: { ...unit, name: null }, language }),
+            withOption: 0,
+            withoutOption: 0,
+          };
+          option.active
+            ? (limitedByUnitsWithoutOptions[key].withOption += models)
+            : (limitedByUnitsWithoutOptions[key].withoutOption += models);
+        });
+    });
+  });
+  Object.values(limitedByUnitsWithoutOptions).forEach(
+    ({ option, name, withOption, withoutOption }) => {
+      withOption > withoutOption &&
+        errors.push({
+          message: "misc.error.tooManyModelsWithOption",
+          section: "global",
+          option,
+          name,
+          count: withOption,
+          max: withoutOption,
+        });
+    },
+  );
+
   // Stackable options limited by the models of the unit (e.g. Dwarf Giant Slayers)
   [
     "characters",

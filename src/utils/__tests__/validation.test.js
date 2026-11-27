@@ -112,6 +112,61 @@ describe("validateList onePerArmy options", () => {
   });
 });
 
+describe("validateList limitedByUnitsWithout options", () => {
+  let unitCount = 0;
+  const boyz = (type, strength, bigUns) => ({
+    id: `${type}.${unitCount++}`,
+    name_en: type,
+    name: `Custom name ${unitCount}`,
+    strength,
+    options: [
+      { name_en: "Big 'Uns", active: bigUns, limitedByUnitsWithout: true },
+    ],
+  });
+  const getList = (core) => ({
+    game: 'warhammer-fantasy-6th',
+    army: 'orcs-and-goblins',
+    points: 2000,
+    characters: [],
+    lords: [],
+    heroes: [],
+    core,
+    special: [],
+    rare: [],
+    mercenaries: [],
+    allies: [],
+  });
+  const getBigUnsErrors = (core) =>
+    validateList({ list: getList(core), language: 'en', intl: { formatMessage: (o) => o.id } })
+      .filter((e) => e.message === 'misc.error.tooManyModelsWithOption');
+
+  test("the same models with and without the option give no error", () => {
+    expect(getBigUnsErrors([boyz('orc-boyz', 10, true), boyz('orc-boyz', 10, false)])).toEqual([]);
+  });
+
+  test("models without the option can be split in several units", () => {
+    const core = [boyz('orc-boyz', 20, true), boyz('orc-boyz', 10, false), boyz('orc-boyz', 10, false)];
+
+    expect(getBigUnsErrors(core)).toEqual([]);
+  });
+
+  test("more models with the option give an error", () => {
+    expect(getBigUnsErrors([boyz('orc-boyz', 20, true), boyz('orc-boyz', 10, false)])).toEqual([
+      { message: 'misc.error.tooManyModelsWithOption', section: 'global', option: "Big 'Uns", name: 'orc-boyz', count: 20, max: 10 },
+    ]);
+  });
+
+  test("models of another unit type don't count", () => {
+    expect(getBigUnsErrors([boyz('orc-boyz', 10, true), boyz('savage-orc-boyz', 10, false)])).toEqual([
+      { message: 'misc.error.tooManyModelsWithOption', section: 'global', option: "Big 'Uns", name: 'orc-boyz', count: 10, max: 0 },
+    ]);
+  });
+
+  test("units without the option selected give no error", () => {
+    expect(getBigUnsErrors([boyz('orc-boyz', 10, false), boyz('savage-orc-boyz', 20, false)])).toEqual([]);
+  });
+});
+
 describe("validateList character slots", () => {
   const hero = (id) => ({ id, name_en: id });
   const getCharacterSlotErrors = (heroesCount) =>
